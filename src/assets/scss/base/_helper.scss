@@ -1,0 +1,31 @@
+.row-lg-reverse {
+  flex-direction: column-reverse;
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+  }
+}
+
+.color-primary {
+  color: $primary;
+}
+
+.color-white {
+  color: $white !important;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mt-60 {
+  margin-top: 60px;
+}
+
+.mt-70 {
+  margin-top: 70px;
+}
+
+.mt-100 {
+  margin-top: 70px;
+}

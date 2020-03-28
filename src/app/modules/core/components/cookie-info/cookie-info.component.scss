@@ -1,0 +1,39 @@
+@import '~src/assets/scss/utils';
+
+.cookie-window {
+  z-index: 999;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: $primary;
+  height: auto;
+  padding: 15px;
+
+  a {
+    text-decoration: underline;
+  }
+
+  .text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: white;
+    margin: 0;
+  }
+
+  .primary-button {
+    background-color: $secondary;
+    color: $primary;
+    border: 0;
+    padding: 15px;
+  }
+
+  .secondary-button {
+    background-color: transparent;
+    border-color: $secondary;
+    color: $secondary;
+    border: 1;
+  }
+}
