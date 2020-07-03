@@ -10,6 +10,8 @@ import { MatchHeightDirective } from './directives/match-height.directive';
 import { EllipsesPipe } from './pipes/ellipses.pipe';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ContextMenuDirective } from './directives/context-menu.directive';
+import { ResizableDirective } from './directives/resizable.directive';
 
 @NgModule({
   imports: [
@@ -28,6 +30,8 @@ import { FooterComponent } from './components/footer/footer.component';
     // Directives
     LazyLoadDirective,
     MatchHeightDirective,
+    ContextMenuDirective,
+    ResizableDirective,
 
     // Pipes
     EllipsesPipe,

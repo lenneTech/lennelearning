@@ -1,17 +1,17 @@
 {
   "name": "angular-website-template",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
-    "dev:ssr": "ng run angular-website-template:serve-ssr",
-    "serve:ssr": "node dist/angular-website-template/server/main.js",
-    "build:ssr": "ng build --prod && ng run angular-website-template:server:production",
-    "prerender": "ng run angular-website-template:prerender"
+    "ng": "npx ng",
+    "start": "npx ng serve",
+    "build": "npx ng build",
+    "test": "npx ng test",
+    "lint": "npx ng lint",
+    "e2e": "npx ng e2e",
+    "dev:ssr": "npx ng run angular-website-template:serve-ssr",
+    "serve:ssr": "npx node dist/angular-website-template/server/main.js",
+    "build:ssr": "npx ng build --prod && npx ng run angular-website-template:server:production",
+    "prerender": "npx ng run angular-website-template:prerender"
   },
   "private": true,
   "dependencies": {
