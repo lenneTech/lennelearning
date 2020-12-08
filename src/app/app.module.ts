@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { CoreModule } from './modules/core/core.module';
 import { AppRoutingModule } from './app-routing.module';
@@ -27,9 +26,6 @@ import { MainComponent } from './pages/main/main.component';
 
     // Intern
     CoreModule,
-
-    // Extern
-    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

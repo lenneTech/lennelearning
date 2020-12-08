@@ -18,6 +18,7 @@ const routes: Routes = [
       onSameUrlNavigation: 'reload',
       scrollPositionRestoration: 'enabled',
       initialNavigation: 'enabled',
+      relativeLinkResolution: 'legacy',
     }),
   ],
   exports: [RouterModule],
