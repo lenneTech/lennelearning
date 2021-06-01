@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {DataService} from './modules/core/services/data.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-website-template';
+  constructor(private dateService: DataService) {
+    this.dateService.getBlog(2);
+  }
 }

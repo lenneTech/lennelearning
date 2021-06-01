@@ -1,5 +1,5 @@
 <header class="header fixed-top">
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
     <div class="container">
       <a class="navbar-brand" routerLink="/">
         <small class="font-weight-bold mb-0 text-uppercase color-primary ml-3">Logo</small>
@@ -9,7 +9,7 @@
       </button>
 
       <div #navBar class="collapse navbar-collapse" [ngClass]="{ show: collapse }">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item">
             <a class="nav-link scroll-link" [ngClass]="{ active: activeId === 'home' }" (click)="scrollTo('home')"
               >Home</a

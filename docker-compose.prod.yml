@@ -1,0 +1,51 @@
+version: "3.7"
+
+services:
+  cache:
+    image: redis:latest
+    volumes:
+      - ./redis/config/redis.conf:/usr/local/etc/redis/redis.conf:ro
+    entrypoint: redis-server /usr/local/etc/redis/redis.conf
+
+  mysql:
+    image: mysql
+    volumes:
+      - ./mysql/data/:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: pimcore
+      MYSQL_DATABASE: pimcore
+      MYSQL_USER: pimcore
+      MYSQL_PASSWORD: pimcore
+    command: ['mysqld', '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci']
+
+  pimcore:
+    image: pimcore/pimcore:PHP8.0-apache
+    volumes:
+      - ./pimcore/config/php/php.ini:/usr/local/etc/php/php.ini
+      - ./pimcore/logs/apache/:/var/log/apache2
+      - ./pimcore/www/:/var/www/html
+    ports:
+      - "7080:80"
+
+  website:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: website-prod
+    restart: unless-stopped
+    container_name: website-prod
+    volumes:
+      - .:/var/www/app
+      - node_modules:/var/www/app/node_modules
+    entrypoint: ["/bin/sh","-c"]
+    ports:
+      - "4200:4200"
+    command:
+      - |
+        npm install
+        npm run build:ssr
+        npm run serve:ssr
+        nginx -g "daemon off;"
+
+volumes:
+  node_modules:
