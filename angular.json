@@ -22,13 +22,18 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": true,
             "stylePreprocessorOptions": {
               "includePaths": ["src/assets/scss"]
             },
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/assets/scss/main.scss"],
-            "scripts": ["node_modules/jquery/dist/jquery.min.js", "node_modules/bootstrap/dist/js/bootstrap.min.js"]
+            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.min.js"],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -140,7 +145,9 @@
           "options": {
             "outputPath": "dist/angular-website-template/server",
             "main": "server.ts",
-            "tsConfig": "tsconfig.server.json"
+            "tsConfig": "tsconfig.server.json",
+            "sourceMap": true,
+            "optimization": false
           },
           "configurations": {
             "production": {
