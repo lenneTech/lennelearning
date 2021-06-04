@@ -7,6 +7,8 @@ import { CoreModule } from './modules/core/core.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainComponent } from './pages/main/main.component';
+import { BaseModule } from '@lenne.tech/ng-base';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { MainComponent } from './pages/main/main.component';
   imports: [
     // Angular
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BaseModule.forRoot(environment),
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,

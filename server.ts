@@ -1,6 +1,5 @@
 import 'zone.js/node';
 
-import { ngExpressEngine } from '@nguniversal/express-engine';
 import * as express from 'express';
 import { join } from 'path';
 
@@ -9,6 +8,7 @@ import * as compression from 'compression';
 import { AppServerModule } from './src/main.server';
 import { APP_BASE_HREF } from '@angular/common';
 import { existsSync } from 'fs';
+import { ngFlavrHubExpressEngine } from './ssr-cache';
 // import { MailHelper } from './server/mail-helper';
 
 // ----------------------------------------------
@@ -33,11 +33,19 @@ export function app() {
 
   server.use(compression());
 
+  const routeCaches = [
+    {
+      path: '/',
+      ttl: 86400,
+    },
+  ];
+
   // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
   server.engine(
     'html',
-    ngExpressEngine({
+    ngFlavrHubExpressEngine({
       bootstrap: AppServerModule,
+      routeCaches,
     })
   );
 
