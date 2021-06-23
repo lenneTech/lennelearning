@@ -10,7 +10,7 @@ import { Request, Response } from 'express';
 import * as fs from 'fs';
 
 import { NgModuleFactory, StaticProvider, Type } from '@angular/core';
-import { ɵCommonEngine as CommonEngine } from '@nguniversal/common/engine';
+import { CommonEngine } from '@nguniversal/common/engine';
 import { REQUEST, RESPONSE } from '@nguniversal/express-engine/tokens';
 
 const cacheManager = require('cache-manager');

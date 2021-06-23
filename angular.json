@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-website-template": {
+    "academy": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-website-template/browser",
+            "outputPath": "dist/academy/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -95,18 +95,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-website-template:build"
+            "browserTarget": "academy:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-website-template:build:production"
+              "browserTarget": "academy:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-website-template:build"
+            "browserTarget": "academy:build"
           }
         },
         "test": {
@@ -132,18 +132,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-website-template:serve"
+            "devServerTarget": "academy:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-website-template:serve:production"
+              "devServerTarget": "academy:serve:production"
             }
           }
         },
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/angular-website-template/server",
+            "outputPath": "dist/academy/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json",
             "sourceMap": true,
@@ -166,21 +166,21 @@
         "serve-ssr": {
           "builder": "@nguniversal/builders:ssr-dev-server",
           "options": {
-            "browserTarget": "angular-website-template:build",
-            "serverTarget": "angular-website-template:server"
+            "browserTarget": "academy:build",
+            "serverTarget": "academy:server"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-website-template:build:production",
-              "serverTarget": "angular-website-template:server:production"
+              "browserTarget": "academy:build:production",
+              "serverTarget": "academy:server:production"
             }
           }
         },
         "prerender": {
           "builder": "@nguniversal/builders:prerender",
           "options": {
-            "browserTarget": "angular-website-template:build:production",
-            "serverTarget": "angular-website-template:server:production",
+            "browserTarget": "academy:build:production",
+            "serverTarget": "academy:server:production",
             "routes": ["/"]
           },
           "configurations": {
@@ -190,5 +190,5 @@
       }
     }
   },
-  "defaultProject": "angular-website-template"
+  "defaultProject": "academy"
 }

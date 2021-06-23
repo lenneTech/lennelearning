@@ -1,48 +1,48 @@
 version: "3.7"
 
 services:
-  cache:
-    image: redis:latest
-    volumes:
-      - ./redis/config/redis.conf:/usr/local/etc/redis/redis.conf:ro
-    entrypoint: redis-server /usr/local/etc/redis/redis.conf
-
-  mysql:
-    image: mysql
-    volumes:
-      - ./mysql/data/:/var/lib/mysql
-    ports:
-      - "7307:3306"
-    environment:
-      MYSQL_ROOT_PASSWORD: pimcore
-      MYSQL_DATABASE: pimcore
-      MYSQL_USER: pimcore
-      MYSQL_PASSWORD: pimcore
-    command: ['mysqld', '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci']
-
-  pimcore:
-    image: pimcore/pimcore:PHP8.0-apache
-    volumes:
-      - ./pimcore/config/php/php.ini:/usr/local/etc/php/php.ini
-      - ./pimcore/logs/apache/:/var/log/apache2
-      - ./pimcore/www/:/var/www/html
-    ports:
-      - "7080:80"
-
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    ports:
-      - "7081:80"
-    environment:
-      PMA_HOST: mysql
-      PMA_USERNAME: root
-      PMA_PASSWORD: pimcore
-
-
-  mailcatcher:
-    image: schickling/mailcatcher
-    ports:
-      - "1080:1080"
+#  cache:
+#    image: redis:latest
+#    volumes:
+#      - ./redis/config/redis.conf:/usr/local/etc/redis/redis.conf:ro
+#    entrypoint: redis-server /usr/local/etc/redis/redis.conf
+#
+#  mysql:
+#    image: mysql
+#    volumes:
+#      - ./mysql/data/:/var/lib/mysql
+#    ports:
+#      - "7307:3306"
+#    environment:
+#      MYSQL_ROOT_PASSWORD: pimcore
+#      MYSQL_DATABASE: pimcore
+#      MYSQL_USER: pimcore
+#      MYSQL_PASSWORD: pimcore
+#    command: ['mysqld', '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci']
+#
+#  pimcore:
+#    image: pimcore/pimcore:PHP8.0-apache
+#    volumes:
+#      - ./pimcore/config/php/php.ini:/usr/local/etc/php/php.ini
+#      - ./pimcore/logs/apache/:/var/log/apache2
+#      - ./pimcore/www/:/var/www/html
+#    ports:
+#      - "7080:80"
+#
+#  phpmyadmin:
+#    image: phpmyadmin/phpmyadmin
+#    ports:
+#      - "7081:80"
+#    environment:
+#      PMA_HOST: mysql
+#      PMA_USERNAME: root
+#      PMA_PASSWORD: pimcore
+#
+#
+#  mailcatcher:
+#    image: schickling/mailcatcher
+#    ports:
+#      - "1080:1080"
 
   website:
     build:
