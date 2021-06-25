@@ -27,19 +27,34 @@ services:
 #    ports:
 #      - "7080:80"
 
-  website:
+  academy-preview:
     build:
       context: .
       dockerfile: Dockerfile
-    image: website-prod
+    image: academy-preview
     restart: unless-stopped
     container_name: website-prod
+    networks:
+      - traefik-public
     volumes:
       - .:/var/www/app
       - node_modules:/var/www/app/node_modules
     entrypoint: ["/bin/sh","-c"]
     ports:
       - "4200:4200"
+    deploy:
+      labels:
+        - traefik.enable=true
+        - traefik.docker.network=traefik-public
+        - traefik.constraint-label=traefik-public
+        - traefik.http.routers.academy-http.rule=Host(`preview.academy.lenne.tech`)
+        - traefik.http.routers.academy-http.entrypoints=http
+        - traefik.http.routers.academy-http.middlewares=https-redirect
+        - traefik.http.routers.academy-https.rule=Host(`preview.academy.lenne.tech`)
+        - traefik.http.routers.academy-https.entrypoints=https
+        - traefik.http.routers.academy-https.tls=true
+        - traefik.http.routers.academy-https.tls.certresolver=le
+        - traefik.http.services.academy.loadbalancer.server.port=8080
     command:
       - |
         npm install
@@ -49,3 +64,7 @@ services:
 
 volumes:
   node_modules:
+
+networks:
+  traefik-public:
+    external: true
