@@ -1,6 +1,6 @@
 export const environment = {
   name: 'prod',
   production: true,
-  prefix: 'prod',
+  prefix: 'academy-prod',
   apiUrl: '',
 };

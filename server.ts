@@ -38,6 +38,10 @@ export function app() {
       path: '/',
       ttl: 86400,
     },
+    {
+      path: '/academy',
+      ttl: 86400,
+    },
   ];
 
   // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)

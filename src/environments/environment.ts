@@ -1,8 +1,8 @@
 export const environment = {
   name: 'dev',
   production: false,
-  prefix: 'awt-dev',
-  apiUrl: 'http://localhost:7080/pimcore-graphql-webservices/main?apikey=fba0312231466da0504a457391bf6e3f',
+  prefix: 'academy-dev',
+  apiUrl: '',
 };
 
 /*

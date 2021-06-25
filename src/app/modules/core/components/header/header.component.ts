@@ -1,6 +1,6 @@
 import { Component, HostListener, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { ScrollService } from '../../services/scroll.service';
+import { ScrollService } from '@lenne.tech/ng-base';
 
 @Component({
   selector: 'app-header',

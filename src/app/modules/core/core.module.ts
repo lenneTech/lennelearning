@@ -4,14 +4,7 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
-import { LazyLoadDirective } from './directives/lazy-load.directive';
-import { CookieInfoComponent } from './components/cookie-info/cookie-info.component';
-import { MatchHeightDirective } from './directives/match-height.directive';
-import { EllipsesPipe } from './pipes/ellipses.pipe';
 import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { ContextMenuDirective } from './directives/context-menu.directive';
-import { ResizableDirective } from './directives/resizable.directive';
 
 @NgModule({
   imports: [
@@ -24,30 +17,10 @@ import { ResizableDirective } from './directives/resizable.directive';
   declarations: [
     // Components
     HeaderComponent,
-    FooterComponent,
-    CookieInfoComponent,
-
-    // Directives
-    LazyLoadDirective,
-    MatchHeightDirective,
-    ContextMenuDirective,
-    ResizableDirective,
-
-    // Pipes
-    EllipsesPipe,
   ],
   exports: [
     // Components
     HeaderComponent,
-    FooterComponent,
-    CookieInfoComponent,
-
-    // Directives
-    LazyLoadDirective,
-    MatchHeightDirective,
-
-    // Pipes
-    EllipsesPipe,
   ],
 })
 export class CoreModule {}
