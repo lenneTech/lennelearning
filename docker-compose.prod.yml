@@ -37,8 +37,6 @@ services:
     networks:
       - traefik-public
     entrypoint: ["/bin/sh","-c"]
-    ports:
-      - "4000:4000"
     deploy:
       labels:
         - traefik.enable=true
