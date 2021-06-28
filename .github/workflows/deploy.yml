@@ -9,5 +9,7 @@ jobs:
   deploy:
     runs-on: self-hosted
     steps:
+      - name: DEBUG
+        run: ls -al
       - name: Deploy to Docker swarm
         run: docker stack deploy -c docker-compose.prod.yml --with-registry-auth academy-preview
