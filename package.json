@@ -1,5 +1,5 @@
 {
-  "name": "acaedmy",
+  "name": "academy",
   "version": "0.0.1",
   "scripts": {
     "ng": "npx ng",
@@ -8,10 +8,10 @@
     "test": "npx ng test",
     "lint": "npx ng lint",
     "e2e": "npx ng e2e",
-    "dev:ssr": "npx ng run acaedmy:serve-ssr",
-    "serve:ssr": "npx node dist/acaedmy/server/main.js",
+    "dev:ssr": "npx ng run academy:serve-ssr",
+    "serve:ssr": "npx node dist/academy/server/main.js",
     "build:ssr": "npx ng build --configuration production && npx ng run academy:server:production",
-    "prerender": "npx ng run acaedmy:prerender"
+    "prerender": "npx ng run academy:prerender"
   },
   "private": true,
   "dependencies": {

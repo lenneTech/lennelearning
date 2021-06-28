@@ -30,18 +30,15 @@ services:
   academy-preview:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.prod
     image: academy-preview
     restart: unless-stopped
     container_name: academy-preview
-    networks:
-      - traefik-public
-    volumes:
-      - .:/var/www/app
-      - node_modules:/var/www/app/node_modules
+#    networks:
+#      - traefik-public
     entrypoint: ["/bin/sh","-c"]
     ports:
-      - "4200:4200"
+      - "4000:4000"
     deploy:
       labels:
         - traefik.enable=true
@@ -57,14 +54,11 @@ services:
         - traefik.http.services.academy.loadbalancer.server.port=8080
     command:
       - |
-        npm install
-        npm run build:ssr
-        npm run serve:ssr
-        nginx -g "daemon off;"
+        npx node main.js
 
 volumes:
   node_modules:
 
-networks:
-  traefik-public:
-    external: true
+#networks:
+#  traefik-public:
+#    external: true

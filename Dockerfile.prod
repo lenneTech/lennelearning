@@ -1,0 +1,9 @@
+FROM mhart/alpine-node:14
+
+RUN mkdir -p /var/www/
+
+COPY ./dist/academy ./var/www
+
+WORKDIR /var/www/server
+
+EXPOSE 4200

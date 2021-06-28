@@ -9,6 +9,8 @@ import { AppServerModule } from './src/main.server';
 import { APP_BASE_HREF } from '@angular/common';
 import { existsSync } from 'fs';
 import { ngFlavrHubExpressEngine } from './ssr-cache';
+import { ngExpressEngine } from '@nguniversal/express-engine';
+//import { ngFlavrHubExpressEngine } from './ssr-cache';
 // import { MailHelper } from './server/mail-helper';
 
 // ----------------------------------------------
@@ -17,8 +19,7 @@ import { ngFlavrHubExpressEngine } from './ssr-cache';
 /* eslint-disable */
 const domino = require('domino');
 const fs = require('fs');
-const path = require('path');
-const template = fs.readFileSync(path.join(__dirname, '../browser', 'index.html')).toString();
+const template = fs.readFileSync(join(__dirname, '../browser', 'index.html')).toString();
 const win = domino.createWindow(template);
 global['window'] = win;
 global['document'] = win.document;
@@ -30,26 +31,13 @@ export function app() {
   const server = express();
   const distFolder = join(__dirname, '../browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
-
   server.use(compression());
-
-  const routeCaches = [
-    {
-      path: '/',
-      ttl: 86400,
-    },
-    {
-      path: '/academy',
-      ttl: 86400,
-    },
-  ];
 
   // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
   server.engine(
     'html',
-    ngFlavrHubExpressEngine({
+    ngExpressEngine({
       bootstrap: AppServerModule,
-      routeCaches,
     })
   );
 
