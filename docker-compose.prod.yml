@@ -31,11 +31,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.prod
-    image: academy-preview
+    image: academy-preview:latest
     restart: unless-stopped
     container_name: academy-preview
-#    networks:
-#      - traefik-public
+    networks:
+      - traefik-public
     entrypoint: ["/bin/sh","-c"]
     ports:
       - "4000:4000"
@@ -59,6 +59,6 @@ services:
 volumes:
   node_modules:
 
-#networks:
-#  traefik-public:
-#    external: true
+networks:
+  traefik-public:
+    external: true
