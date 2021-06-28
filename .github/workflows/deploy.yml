@@ -14,7 +14,5 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.8
-      - name: DEBUG
-        run: ls -al
       - name: Deploy to Docker swarm
         run: docker stack deploy -c docker-compose.prod.yml --with-registry-auth academy-preview

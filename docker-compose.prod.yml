@@ -33,7 +33,7 @@ services:
       dockerfile: Dockerfile
     image: academy-preview
     restart: unless-stopped
-    container_name: website-prod
+    container_name: academy-preview
     networks:
       - traefik-public
     volumes:
