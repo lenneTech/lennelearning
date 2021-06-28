@@ -9,6 +9,11 @@ jobs:
   deploy:
     runs-on: self-hosted
     steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12.8
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.8
       - name: DEBUG
         run: ls -al
       - name: Deploy to Docker swarm
