@@ -19,6 +19,6 @@ jobs:
       - name: Build app
         run: npm run build:ssr
       - name: Build docker
-        run: docker-compose -f docker-compose.prod.yml build
+        run: docker-compose -f docker-compose.prod.yml build --pull
       - name: Deploy
         run: docker stack deploy -c docker-compose.prod.yml --with-registry-auth academy-preview
