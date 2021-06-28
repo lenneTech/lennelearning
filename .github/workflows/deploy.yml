@@ -16,7 +16,5 @@ jobs:
           node-version: 12.8
       - name: Build
         run: docker-compose -f docker-compose.prod.yml build
-      - name: Push
-        run: docker-compose -f docker-compose.prod.yml push
       - name: Deploy to Docker swarm
         run: docker stack deploy -c docker-compose.prod.yml --with-registry-auth academy-preview
