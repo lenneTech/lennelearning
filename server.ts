@@ -8,9 +8,7 @@ import * as compression from 'compression';
 import { AppServerModule } from './src/main.server';
 import { APP_BASE_HREF } from '@angular/common';
 import { existsSync } from 'fs';
-import { ngFlavrHubExpressEngine } from './ssr-cache';
 import { ngExpressEngine } from '@nguniversal/express-engine';
-//import { ngFlavrHubExpressEngine } from './ssr-cache';
 // import { MailHelper } from './server/mail-helper';
 
 // ----------------------------------------------
@@ -38,6 +36,7 @@ export function app() {
     'html',
     ngExpressEngine({
       bootstrap: AppServerModule,
+      inlineCriticalCss: false,
     })
   );
 

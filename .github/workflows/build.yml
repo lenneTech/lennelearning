@@ -1,0 +1,17 @@
+name: Build
+
+on: pull_request
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 14.17
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.17.1
+      - name: Install
+        run: npm install
+      - name: Build app
+        run: npm run build:ssr
