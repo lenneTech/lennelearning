@@ -1,5 +1,7 @@
 <nb-layout>
-  <nb-sidebar>sidebar works!</nb-sidebar>
+  <nb-sidebar>
+    <div *ngFor="let section of sections">{{ section }}</div>
+  </nb-sidebar>
 
   <nb-layout-column class="colored-column-success">
     <p>academy works!</p>
