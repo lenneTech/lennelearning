@@ -21,4 +21,4 @@ jobs:
       - name: Build docker
         run: docker-compose -f docker-compose.prod.yml build --pull
       - name: Deploy
-        run: docker stack deploy -c docker-compose.prod.yml --with-registry-auth academy-preview
+        run: docker stack deploy --with-registry-auth --resolve-image=always -c docker-compose.prod.yml academy-preview
