@@ -20,7 +20,5 @@ jobs:
         run: npm run build:ssr
       - name: Build docker
         run: docker-compose -f docker-compose.prod.yml build
-      - name: Push docker
-        run: docker-compose -f docker-compose.prod.yml push
       - name: Deploy
         run: docker stack deploy --with-registry-auth --resolve-image=always -c docker-compose.prod.yml academy-preview
