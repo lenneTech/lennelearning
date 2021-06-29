@@ -35,7 +35,7 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
 
     // Theme
     BrowserAnimationsModule,
-    NbThemeModule.forRoot({ name: 'default' }),
+    NbThemeModule.forRoot({ name: 'corporate' }),
     NbLayoutModule,
     NbEvaIconsModule,
   ],

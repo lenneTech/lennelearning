@@ -1,18 +1,54 @@
 @import '~@nebular/theme/styles/theming';
-@import '~@nebular/theme/styles/themes/default';
-
+@import '~@nebular/theme/styles/themes/corporate';
+$nb-enable-css-custom-properties: true;
 $nb-themes: nb-register-theme((
 
   // add your variables here like:
+  color-info-100: #CCDCFA,
+  color-info-200: #9BB8F6,
+  color-info-300: #668BE4,
+  color-info-400: #3E64C9,
+  color-info-500: #0D33A6,
+  color-info-600: #09278E,
+  color-info-700: #061C77,
+  color-info-800: #041360,
+  color-info-900: #020D4F,
+  color-info-transparent-100: rgba(13, 51, 166, 0.08),
+  color-info-transparent-200: rgba(13, 51, 166, 0.16),
+  color-info-transparent-300: rgba(13, 51, 166, 0.24),
+  color-info-transparent-400: rgba(13, 51, 166, 0.32),
+  color-info-transparent-500: rgba(13, 51, 166, 0.4),
+  color-info-transparent-600: rgba(13, 51, 166, 0.48),
+  color-success-100: #CBFDE6,
+  color-success-200: #98FBD6,
+  color-success-300: #64F3CB,
+  color-success-400: #3DE8C7,
+  color-success-500: #04D9C4,
+  color-success-600: #02BAB9,
+  color-success-700: #028F9C,
+  color-success-800: #01687D,
+  color-success-900: #004C68,
+  color-success-transparent-100: rgba(4, 217, 196, 0.08),
+  color-success-transparent-200: rgba(4, 217, 196, 0.16),
+  color-success-transparent-300: rgba(4, 217, 196, 0.24),
+  color-success-transparent-400: rgba(4, 217, 196, 0.32),
+  color-success-transparent-500: rgba(4, 217, 196, 0.4),
+  color-success-transparent-600: rgba(4, 217, 196, 0.48),
+  color-primary-100: #CBFCFD,
+  color-primary-200: #98F3FB,
+  color-primary-300: #64DEF3,
+  color-primary-400: #3DC3E8,
+  color-primary-500: #049DD9,
+  color-primary-600: #027ABA,
+  color-primary-700: #025B9C,
+  color-primary-800: #01417D,
+  color-primary-900: #002E68,
+  color-primary-transparent-100: rgba(4, 157, 217, 0.08),
+  color-primary-transparent-200: rgba(4, 157, 217, 0.16),
+  color-primary-transparent-300: rgba(4, 157, 217, 0.24),
+  color-primary-transparent-400: rgba(4, 157, 217, 0.32),
+  color-primary-transparent-500: rgba(4, 157, 217, 0.4),
+  color-primary-transparent-600: rgba(4, 157, 217, 0.48),
+  background-basic-color-3: #fff
 
-  // color-primary-100: #f2f6ff,
-  // color-primary-200: #d9e4ff,
-  // color-primary-300: #a6c1ff,
-  // color-primary-400: #598bff,
-  // color-primary-500: #3366ff,
-  // color-primary-600: #274bdb,
-  // color-primary-700: #1a34b8,
-  // color-primary-800: #102694,
-  // color-primary-900: #091c7a,
-
-), default, default);
+), corporate, corporate);
