@@ -2,7 +2,38 @@
   <nb-sidebar>sidebar works!</nb-sidebar>
 
   <nb-layout-column class="colored-column-success">
-    <p>academy works!</p>
     <button nbButton status="primary" routerLink="/"><< Zurück zum Start</button>
+
+    <h1>Sektion HTML</h1>
+
+    <task>
+      <div title>Video</div>
+      <div description>Schaue dir diese Videoabschnitte an und komme danach wieder hier hin</div>
+      <task-video [link]="'https://www.udemy.com/course/web-entwickler-masterclass/learn/lecture/12164112#overview'">
+        <div videolist>Abschnitt 1: Einführung</div>
+        <div videolist>Abschnitt 2: Einrichtung</div>
+        <div videolist>Abschnitt 3: HTML Grundlagen</div>
+      </task-video>
+    </task>
+
+    <task>
+      <div title>Text</div>
+      <div description>Bearbeite die unten angegebene Aufgabe</div>
+      <!-- Später anstatt div task-text -->
+      <div>
+        <div excercise>
+          Zu diesem Zeitpunkt solltest du die HTML Grundlagen kennengelernt haben. Jetzt ist es an der Zeit, diese zu
+          vertiefen und in der Praxis anzuwenden. Dazu hättest du jetzt die Aufgabe einen Lebenslauf von dir oder einer
+          ausgedachten Person anzufertigen. Dadurch lernen wir dich eventuell besser kennen und du kannst deine neu
+          erlernten Fähigkeiten direkt mal testen. Den Lebenslauf solltest du wie folgt strukturieren:
+        </div>
+        <div exerciselist>
+          Aufgabe 1 <br />
+          Aufgabe 2 <br />
+          Aufgabe 3 <br />
+          Aufgabe 4 <br />
+        </div>
+      </div>
+    </task>
   </nb-layout-column>
 </nb-layout>

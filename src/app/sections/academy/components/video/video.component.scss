@@ -1,0 +1,18 @@
+.center {
+  position: absolute;
+  top: 50%;
+  font-size: 2.5em;
+}
+
+img {
+  max-width: 100%;
+  transition: 0.3s;
+  &:hover {
+    transition: 0.3s;
+    border-radius: 5px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
