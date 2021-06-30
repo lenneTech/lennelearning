@@ -5,6 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { HeaderComponent } from './components/header/header.component';
+import { NbButtonModule, NbCardModule } from '@nebular/theme';
+import { TaskComponent } from './components/task/task.component';
 
 @NgModule({
   imports: [
@@ -13,14 +15,18 @@ import { HeaderComponent } from './components/header/header.component';
     CommonModule,
     HttpClientModule,
     FormsModule,
+    NbCardModule,
+    NbButtonModule,
   ],
   declarations: [
     // Components
     HeaderComponent,
+    TaskComponent,
   ],
   exports: [
     // Components
     HeaderComponent,
+    TaskComponent,
   ],
 })
 export class CoreModule {}

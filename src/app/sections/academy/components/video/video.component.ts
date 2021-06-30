@@ -9,7 +9,5 @@ export class VideoComponent implements OnInit {
   @Input() link: string;
   constructor() {}
 
-  ngOnInit(): void {
-    console.log(this.link);
-  }
+  ngOnInit(): void {}
 }
