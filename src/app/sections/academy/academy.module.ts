@@ -7,22 +7,10 @@ import { VideoComponent } from './components/video/video.component';
 import { TitleDirective } from './services/title.directive';
 import { DescriptionDirective } from './services/description.directive';
 import { VideolistDirective } from './services/videolist.directive';
-import { TextComponent } from './components/text/text.component';
-import { ExerciseListDirective } from './services/exerciselist.directive';
-import { ExerciseDirective } from './services/exercise.directive';
 import { CoreModule } from 'src/app/modules/core/core.module';
 
 @NgModule({
-  declarations: [
-    AcademyComponent,
-    VideoComponent,
-    TitleDirective,
-    DescriptionDirective,
-    VideolistDirective,
-    TextComponent,
-    ExerciseListDirective,
-    ExerciseDirective,
-  ],
+  declarations: [AcademyComponent, VideoComponent, TitleDirective, DescriptionDirective, VideolistDirective],
   imports: [
     AcademyRoutingModule,
     CommonModule,
