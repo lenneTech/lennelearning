@@ -67,8 +67,7 @@ export class EntryPointService {
 
   set selectedEntryPoint(value: EntryPoint) {
     this._selectedEntryPoint.next(value);
-    console.log(this.storageService.save('selectedEntryPoint', value));
-    console.log(this.storageService.load('selectedEntryPoint'));
+    this.storageService.save('selectedEntryPoint', value);
   }
 
   get selectedEntryPointObservable(): Observable<EntryPoint> {
