@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { StorageService } from '@lenne.tech/ng-base';
 import { EntryPoint } from '../interfaces/entry-point.interface';
+import { SectionService } from './section.service';
 
 @Injectable({
   providedIn: 'root',
@@ -47,7 +48,7 @@ export class EntryPointService {
     },
   ];
 
-  constructor(private storageService: StorageService) {
+  constructor(private storageService: StorageService, private sectionService: SectionService) {
     this.selectedEntryPoint = this.storageService.load('selectedEntryPoint') as EntryPoint;
   }
 
@@ -75,7 +76,6 @@ export class EntryPointService {
   }
 
   selectedEntryPointSections(): string[] {
-    // if no entryPoint is selected, return all sections (later)
-    return this.selectedEntryPoint?.sections ? this.selectedEntryPoint?.sections : [];
+    return this.selectedEntryPoint?.sections ? this.selectedEntryPoint?.sections : this.sectionService.sections;
   }
 }

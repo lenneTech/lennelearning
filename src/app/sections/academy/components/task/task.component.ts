@@ -11,7 +11,7 @@ export class TaskComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onComplete() {
+  onComplete(): void {
     this.completed = !this.completed;
   }
 }

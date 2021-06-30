@@ -5,6 +5,6 @@ import { Directive, ElementRef } from '@angular/core';
 })
 export class TitleDirective {
   constructor(el: ElementRef) {
-    el.nativeElement.classList.add('title');
+    el.nativeElement.classList.add('task-title');
   }
 }

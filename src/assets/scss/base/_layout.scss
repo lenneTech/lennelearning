@@ -6,11 +6,18 @@ body {
   min-height: 100vh;
 }
 
-.content {
-  padding-top: $header-heigt;
-}
-
 .section {
   margin-top: 4%;
   margin-bottom: 4%;
+}
+
+.header {
+  .title {
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+
+  .header-title-colored {
+    color: var(--color-info-500);
+  }
 }
