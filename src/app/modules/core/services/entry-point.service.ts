@@ -40,7 +40,7 @@ export class EntryPointService {
   ];
 
   constructor(private storageService: StorageService) {
-    this.selectedEntryPoint = this.storageService.load('selectedEntryPoint');
+    this.selectedEntryPoint = this.storageService.load('selectedEntryPoint') as EntryPoint;
   }
 
   // #################################################################
