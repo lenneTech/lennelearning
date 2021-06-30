@@ -4,16 +4,25 @@ import { AcademyComponent } from './academy.component';
 import { AcademyRoutingModule } from './academy-routing.module';
 import { NbButtonModule, NbCardModule, NbLayoutModule, NbSidebarModule, NbSidebarService } from '@nebular/theme';
 import { VideoComponent } from './components/video/video.component';
-import { TitleDirective } from './services/title.directive';
-import { DescriptionDirective } from './services/description.directive';
-import { VideolistDirective } from './services/videolist.directive';
+import { DescriptionDirective } from './directives/description.directive';
 import { CoreModule } from 'src/app/modules/core/core.module';
 import { TextComponent } from './components/text/text.component';
-import { ExerciseListDirective } from './services/exerciselist.directive';
-import { ExerciseDirective } from './services/exercise.directive';
+import { TitleDirective } from './directives/title.directive';
+import { VideolistDirective } from './directives/videolist.directive';
+import { ExerciseListDirective } from './directives/exerciselist.directive';
+import { ExerciseDirective } from './directives/exercise.directive';
 
 @NgModule({
-  declarations: [AcademyComponent, VideoComponent, TitleDirective, DescriptionDirective, VideolistDirective],
+  declarations: [
+    AcademyComponent,
+    VideoComponent,
+    TitleDirective,
+    DescriptionDirective,
+    VideolistDirective,
+    TextComponent,
+    ExerciseListDirective,
+    ExerciseDirective,
+  ],
   imports: [
     AcademyRoutingModule,
     CommonModule,
@@ -22,9 +31,6 @@ import { ExerciseDirective } from './services/exercise.directive';
     NbButtonModule,
     NbCardModule,
     CoreModule,
-    TextComponent,
-    ExerciseListDirective,
-    ExerciseDirective,
   ],
   providers: [NbSidebarService],
 })
