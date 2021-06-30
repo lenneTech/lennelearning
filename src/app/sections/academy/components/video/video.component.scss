@@ -1,14 +1,25 @@
-img {
-  max-width: 100%;
-  transition: 0.4s;
-
-  &:hover {
+::ng-deep.task-video {
+  img {
+    max-width: 100%;
     transition: 0.4s;
-    border-radius: 5px;
-    box-shadow: 1px -1px 3px 0px black;
-  }
-}
 
-a {
-  text-decoration: none;
+    &:hover {
+      transition: 0.4s;
+      border-radius: 5px;
+      box-shadow: 1px -1px 3px 0px black;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .videolist {
+    margin-left: 30px;
+    display: list-item;
+    list-style-type: square;
+    list-style-position: outside;
+    font-size: 1.4rem;
+    line-height: 2em;
+  }
 }

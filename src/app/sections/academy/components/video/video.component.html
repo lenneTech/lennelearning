@@ -1,9 +1,9 @@
-<div class="row mt-4">
+<div class="row mt-4 task-video">
   <div class="col-lg-6">
     <ng-content select="[videolist]"></ng-content>
   </div>
   <div class="col-lg-6 d-flex justify-content-center">
-    <a href="{{ link }}" target="_blank">
+    <a [href]="link" target="_blank">
       <img src="../../../../../assets/images/HTML-Kurs.PNG" alt="" class="d-none d-lg-flex" />
       <button class="d-lg-none" nbButton size="giant">Zum Kurs</button>
     </a>
