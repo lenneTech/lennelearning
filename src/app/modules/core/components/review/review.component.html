@@ -1,0 +1,12 @@
+<div class="container">
+  <div class = "row align-items-center">
+    <div [ngClass]="{ 'col-4': true, 'order-last' : reversed, 'd-flex justify-content-end': reversed }">
+        <img class="img-circle" alt="Foto von Reviewer" [src]="imageUrl">
+    </div>
+    <div class="col-8">
+      <div class="review-text text-muted">
+        <span class="quotation-mark">„</span>{{ review }}<span class="quotation-mark">“</span>
+      </div>
+    </div>
+  </div>
+</div>

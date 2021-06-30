@@ -1,0 +1,35 @@
+<nb-reveal-card>
+  <nb-card-front>
+    <nb-card class="card">
+      <nb-card-body>
+        <div class="d-flex justify-content-around">
+          <img class="card-img" [src]="imageUrl">
+        </div>
+      </nb-card-body>
+      <nb-card-footer>
+        <div class="card-title">
+          {{ title }}
+        </div>
+      </nb-card-footer>
+    </nb-card>
+  </nb-card-front>
+  <nb-card-back>
+    <nb-card class="card">
+      <nb-card-header>
+        <div class="card-title">
+          {{ backTitle }}
+        </div>
+      </nb-card-header>
+      <nb-card-body>
+        <div class="card-text">
+          {{ description }}
+        </div>
+      </nb-card-body>
+      <nb-card-footer>
+        <div class="link" [routerLink]="route">
+          {{ linkText }}
+        </div>
+      </nb-card-footer>
+    </nb-card>
+  </nb-card-back>
+</nb-reveal-card>
