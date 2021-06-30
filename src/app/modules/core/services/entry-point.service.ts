@@ -11,30 +11,38 @@ export class EntryPointService {
   private _entryPoints: EntryPoint[] = [
     {
       id: 'berufserkunder',
-      title: 'Berufserkunder',
-      image: '',
-      description: 'Für alle Berufseinsteiger die gerne mal in den Beruf reinschnuppern wollen.',
-      sections: ['html', 'css', 'javascript'],
+      title: 'Berufserkunder/in',
+      cardBackTitle: 'Was machen Webentwickler?',
+      image: '../../assets/images/berufserkunder.png',
+      description:
+        'An alle die sich für die Web- und Appentwicklung interessieren und einen Einblick in die Berufswelt von Softwareentwicklern bekommen wollen. Der Kurs beginnt dabei mit einer Berufsfeldserkundung, in der dir zunächst die verschiedenen Berufe rund um die Softwareentwiclkung sowie deren Berufslltag und Aufgabenfelder vorgestellt werden. Danach lernst du schon die Grundlagen der Webentwicklung, um schon eigene Webseiten erstellen zu können',
+      sections: ['beruf', 'html', 'css', 'javascript'],
     },
     {
       id: 'schulpraktikant',
-      title: 'Schulpraktikant',
-      image: '',
-      description: 'Für alle Schüler die gerne mal programmieren möchte.',
-      sections: ['html', 'css', 'javascript', 'typescript'],
+      title: 'Schulpraktikant/in',
+      cardBackTitle: 'Du bist Schüler/in?',
+      image: '../../assets/images/schulpraktikant.png',
+      description:
+        'Du bist Schüler/in und suchst noch ein Praktikum? Wir helfen dir gerne einen praktischen Einblick in die Web- und Appentwicklung zu bekommen. Dabei wirst du in unseren Kursen die grundlegenden Konzepte der Webentwicklung lernen, um so schon erste eigene Webseiten programmieren zu können. Das Praktikum geht dabei 2-3 Wochen, meld dich gerne bei uns!',
+      sections: ['beruf', 'html', 'css', 'javascript'],
     },
     {
-      id: 'bootcamp',
-      title: 'Bootcamp Hero',
-      image: '',
-      description: 'Teilnehmer des Bootcamps',
-      sections: ['html', 'css', 'javascript', 'typescript', 'angular', 'ionic'],
+      id: 'praktikant',
+      title: 'Praktikant/in',
+      cardBackTitle: 'Du suchst ein Praktikum?',
+      image: '../../assets/images/praktikant.png',
+      description:
+        'Du bist Student, befindest dich in einer Weiterbildung oder suchst aus anderen Gründen noch ein Praktikum? Wir bieten dir die Möglichkeit in bis zu 12 Wochen die Web- und Appentwicklung in der Praxis kennenzulernen. Zunächst arbeitest du in einer Vorbereitungsphase unsere Kurse durch, um im Praktikum direkt mit deinem eigenen Projekt durchstarten zu können. Wenn du schon Vorkenntnisse hast, kannst du natürlich unter Absprache verschiedene Teile überspringen und sofort loslegen.',
+      sections: ['beruf', 'html', 'css', 'javascript', 'typescript', 'angular', 'ionic'],
     },
     {
       id: 'dojo',
       title: 'Dojo Mitglied',
-      image: '',
-      description: 'Teilnehmer des Coding Dojos',
+      cardBackTitle: 'Tritt unserem Coding-Dojo bei!',
+      image: '../../assets/images/dojo.png',
+      description:
+        'Du interessierst dich privat für Web- und Appentwicklung oder generell für neue Technologien und möchtest dich austauschen? Dann tritt unserem Coding Dojo bei. Lass uns zusammen in Workshops, Hackathons oder im wöchentlichen Treffen über Ideen, neue Technologien, Projekte, etc sprechen und neue Innovationen ausprobieren.',
       sections: ['html', 'css', 'javascript', 'typescript', 'angular', 'ionic'],
     },
   ];

@@ -30,40 +30,20 @@
   height: auto;
 }
 
-
-.card-title {
-  font-size:1.15rem;
-  font-weight: 700;
-  margin-bottom: 0;
-}
-
-.card-img {
-  height: 300px;
-  width: auto;
-}
-
 .vertical-stripe {
   width: 100%;
-  height:  160px;
-  background-color: var(--color-info-500);
-  //transform: rotate(2.5deg)
-}
-
-.academy-link {
-  font-size: 1.15rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.card-text {
-  font-size: 1rem;
-  line-height: 2rem;
+  height:  360px;
+  background-color: var(--color-info-300);
 }
 
 .header-title-colored {
   color: var(--color-info-500);
 }
 
-.path-card {
-  height: 400px;
+.section-title {
+  font-size: 3.25rem;
+  font-family: Open Sans, sans-serif;
+  font-weight: 700;
+  line-height: 5rem;
 }
+
