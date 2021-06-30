@@ -31,7 +31,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.prod
-    image: academy-preview:preview
+    image: localhost:5000/academy-preview:preview
     restart: unless-stopped
     container_name: academy-preview
     networks:
