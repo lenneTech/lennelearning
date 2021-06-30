@@ -8,6 +8,9 @@ import { TitleDirective } from './services/title.directive';
 import { DescriptionDirective } from './services/description.directive';
 import { VideolistDirective } from './services/videolist.directive';
 import { CoreModule } from 'src/app/modules/core/core.module';
+import { TextComponent } from './components/text/text.component';
+import { ExerciseListDirective } from './services/exerciselist.directive';
+import { ExerciseDirective } from './services/exercise.directive';
 
 @NgModule({
   declarations: [AcademyComponent, VideoComponent, TitleDirective, DescriptionDirective, VideolistDirective],
@@ -19,6 +22,9 @@ import { CoreModule } from 'src/app/modules/core/core.module';
     NbButtonModule,
     NbCardModule,
     CoreModule,
+    TextComponent,
+    ExerciseListDirective,
+    ExerciseDirective,
   ],
   providers: [NbSidebarService],
 })
