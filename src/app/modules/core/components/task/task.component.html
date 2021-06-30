@@ -6,7 +6,7 @@
     <ng-content select="[description]"></ng-content>
     <ng-content></ng-content>
   </nb-card-body>
-  <nb-card-footer>
+  <nb-card-footer [ngClass]="{ completed: completed }">
     <button nbButton status="success" (click)="onComplete()">{{ completed ? '&#x2713;' : 'Erledigt' }}</button>
   </nb-card-footer>
 </nb-card>
