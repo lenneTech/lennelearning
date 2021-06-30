@@ -12,8 +12,8 @@
   </nb-layout-header>
 
   <nb-layout-column class="p-0">
-    <div class="container">
-      <div class="row mb-5">
+    <div class="container section">
+      <div class="row">
         <div class="col-12 col-xl-6">
           <div class="banner-text">
             <div class="title">Willkommen in der lenne.Tech Academy</div>
@@ -28,61 +28,37 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-12 col-xl-3">
-          <app-entry-point-card [title]="'Berufserforscher/in'" [imageUrl]="'../../assets/images/analyst.png'"
-                                [description]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua.'"
-                                [backTitle]="'Was erwartet dich?'" [linkText]="'Zur Akademie'"
-                                [route]="'/academy'">
-          </app-entry-point-card>
-        </div>
-        <div class="col-12 col-xl-3">
-          <app-entry-point-card [title]="'Schüler/in'" [imageUrl]="'../../assets/images/analyst.png'"
-                                [description]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua.'"
-                                [backTitle]="'Was erwartet dich?'" [linkText]="'Zur Akademie'"
-                                [route]="'/academy'">
-          </app-entry-point-card>
-        </div>
-        <div class="col-12 col-xl-3">
-          <app-entry-point-card [title]="'Student/in'" [imageUrl]="'../../assets/images/analyst.png'"
-                                [description]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua.'"
-                                [backTitle]="'Was erwartet dich?'" [linkText]="'Zur Akademie'"
-                                [route]="'/academy'">
-          </app-entry-point-card>
-        </div>
-        <div class="col-12 col-xl-3">
-          <app-entry-point-card [title]="'Fortzubildene/r'" [imageUrl]="'../../assets/images/analyst.png'"
-                                [description]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua.'"
-                                [backTitle]="'Was erwartet dich?'" [linkText]="'Zur Akademie'"
-                                [route]="'/academy'">
-          </app-entry-point-card>
-        </div>
-        <div class="col-12 col-xl-3">
-          <app-entry-point-card [title]="'Dojo Mitglied'" [imageUrl]="'../../assets/images/analyst.png'"
-                                [description]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua.'"
-                                [backTitle]="'Was erwartet dich?'" [linkText]="'Zur Akademie'"
-                                [route]="'/academy'">
+        <div class="col-12 col-xl-3" *ngFor="let entryPoint of entryPoints">
+          <app-entry-point-card [title]="entryPoint.title" [imageUrl]="entryPoint.image"
+                                [description]="entryPoint.description"
+                                [backTitle]="entryPoint.cardBackTitle" [linkText]="'Zur Akademie'"
+                                [route]="'/academy'" (linkClickEvent)="setSelectedEntryPoint(entryPoint)">
           </app-entry-point-card>
         </div>
       </div>
     </div>
-    <div class="container-fluid p-0">
+    <div class="container-fluid p-0 section">
       <div class="vertical-stripe">
       </div>
+      </div>
+
+    <div class="container section">
       <div class="d-flex justify-content-around banner-text">
-        <div class="title">
+        <div class="section-title">
           Das sagen unsere Absolventen
         </div>
       </div>
-        <app-review [imageUrl]="'https://lenne.tech/assets/images/team/pascal-klesse.png'" [review]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua'">
-        </app-review>
+      <app-review [imageUrl]="'https://lenne.tech/assets/images/team/pascal-klesse.png'" [review]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua'">
+      </app-review>
       <app-review [imageUrl]="'https://lenne.tech/assets/images/team/florian-steinhanses.png'" [reversed]="true" [review]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua'">
       </app-review>
-      </div>
+    </div>
 
   </nb-layout-column>
   <nb-layout-footer fixed>
     <!-- Insert footer here -->
     Erschaffen mit ganz viel ❤️ von <a class="ms-1" href="https://lenne.tech">lenne.Tech</a>
     <!--<a href='https://pngtree.com/so/can-be-used-for-landing-pages'>can be used for landing pages png from pngtree.com</a>-->
+    <!--    <a href="https://dribbble.com/nunodias"></a>-->
   </nb-layout-footer>
 </nb-layout>

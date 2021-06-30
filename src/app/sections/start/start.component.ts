@@ -19,4 +19,8 @@ export class StartComponent implements OnInit {
   getAllEntryPoints() {
     this.entryPoints = this.entryPointService.entryPoints();
   }
+
+  setSelectedEntryPoint(entryPoint) {
+    this.entryPointService.selectedEntryPoint = entryPoint;
+  }
 }

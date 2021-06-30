@@ -1,8 +1,8 @@
-<nb-reveal-card>
+<nb-reveal-card class="card">
   <nb-card-front>
     <nb-card class="card">
-      <nb-card-body>
-        <div class="d-flex justify-content-around">
+      <nb-card-body class="d-flex align-items-center justify-content-around">
+        <div>
           <img class="card-img" [src]="imageUrl">
         </div>
       </nb-card-body>
@@ -26,7 +26,7 @@
         </div>
       </nb-card-body>
       <nb-card-footer>
-        <div class="link" [routerLink]="route">
+        <div class="link" [routerLink]="route" (click)="onLinkClicked()">
           {{ linkText }}
         </div>
       </nb-card-footer>
