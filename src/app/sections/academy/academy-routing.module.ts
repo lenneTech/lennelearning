@@ -9,6 +9,7 @@ import { JobComponent } from './sections/job/job.component';
 import { IonicComponent } from './sections/ionic/ionic.component';
 import { AngularComponent } from './sections/angular/angular.component';
 import { SectionGuard } from '../../modules/core/guards/section.guard';
+import { BootstrapComponent } from './sections/bootstrap/bootstrap.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,11 @@ const routes: Routes = [
       {
         path: 'css',
         component: CssComponent,
+        canActivate: [SectionGuard],
+      },
+      {
+        path: 'bootstrap',
+        component: BootstrapComponent,
         canActivate: [SectionGuard],
       },
       {
