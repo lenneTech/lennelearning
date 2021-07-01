@@ -1,1 +1,58 @@
-<p>helper-dialog works!</p>
+<app-dialog [title]="title" [dialogBtnOptions]="DialogBtnOptionsEnum.SINGLE" [cardWidth]="cardWidth"
+            [cardHeight]="cardHeight">
+  <ng-container helper-dialog>
+    <div class="card-text">
+      Bevor du dich bei deinem Tutor meldest, versuche das Problem erst einmal selber zu lösen.
+    </div>
+    <nb-accordion>
+      <nb-accordion-item *ngIf="videoReference">
+        <nb-accordion-item-header>Video Verweis</nb-accordion-item-header>
+        <nb-accordion-item-body>
+          <div class="accordion-text" *ngIf="videoReference">
+            Wenn Google dir nicht weiterhelfen kann, dann schau dir folgenden Abschnitt noch einmal an: <br>
+            <b>{{ videoReference }}</b>
+            <br>
+            An dieser Stelle sollte alles erklärt werden, was du für diese Aufgabe brauchst.
+          </div>
+        </nb-accordion-item-body>
+      </nb-accordion-item>
+      <nb-accordion-item *ngIf="hint">
+        <nb-accordion-item-header>
+          Hinweis
+        </nb-accordion-item-header>
+        <nb-accordion-item-body>
+          <div class="accordion-text">
+            Vielleicht kommmst du ja mit diesem Hinweis weiter: <br>
+            <b>{{ hint }}</b>
+          </div>
+        </nb-accordion-item-body>
+      </nb-accordion-item>
+      <nb-accordion-item>
+        <nb-accordion-item-header>
+          FAQ und Kontakt
+        </nb-accordion-item-header>
+        <nb-accordion-item-body>
+          <div>
+            <div class="accordion-text">
+              Du kommst immer noch nicht weiter? <br>
+              Dann schau in unser FAQ, ob deine oder eine ähnliche Frage schon einmal beantwortet wurde. <br>
+              Wenn alle Stränge reißen, kannst du dich natürlich auch in unseren Akademie Channel schreiben oder im
+              nächsten
+              Akademie Meeting deine Frage stellen.
+            </div>
+          </div>
+        </nb-accordion-item-body>
+      </nb-accordion-item>
+      <nb-accordion-item *ngIf="solutionLink">
+        <nb-accordion-item-header>
+          Lösung
+        </nb-accordion-item-header>
+        <nb-accordion-item-body>
+          <div class="accordion-text">
+            Im Notfall kannst du auch <a [href]="solutionLink">hier</a> eine Musterlösung zu dieser Aufgabe finden.
+          </div>
+        </nb-accordion-item-body>
+      </nb-accordion-item>
+    </nb-accordion>
+  </ng-container>
+</app-dialog>

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { DialogBtnOptionsEnum } from '../../enumerators/dialog-btn-options.enum';
 
 @Component({
   selector: 'app-helper-dialog',
@@ -7,8 +8,12 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class HelperDialogComponent implements OnInit {
   @Input() title: string;
-  @Input() hint?: string;
+  @Input() cardWidth: string;
+  @Input() cardHeight: string;
   @Input() videoReference?: string;
+  @Input() hint?: string;
+  @Input() solutionLink?: string;
+  DialogBtnOptionsEnum = DialogBtnOptionsEnum;
 
   constructor() {}
 
