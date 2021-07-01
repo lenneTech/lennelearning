@@ -18,6 +18,21 @@
     background-color: var(--color-success-500);
     color: white;
   }
+
+  .link {
+    text-decoration: underline;
+    color: var(--card-text-color);
+
+    &:hover {
+      text-decoration: none;
+      color: var(--color-info-500);
+    }
+  }
+}
+
+.completedtop {
+  box-sizing: border-box;
+  border-top: 5px solid var(--color-success-500);
 }
 
 nb-card-footer {
@@ -29,4 +44,11 @@ nb-card-header {
 
 nb-card {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border: none;
+}
+
+button:focus {
+  box-shadow: none;
+  background-color: var(--color-success-500) !important;
+  border: none !important;
 }

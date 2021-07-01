@@ -30,6 +30,7 @@ import { SectionComponent } from './components/section/section.component';
 import { QuestionsComponent } from './components/questions/questions.component';
 import { QuestionListDirective } from './directives/questionlist.directive';
 import { ExtraQuestionDirective } from './directives/extraquestion.directive';
+import { LinkDirective } from './directives/link.directive';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { ExtraQuestionDirective } from './directives/extraquestion.directive';
     SectionComponent,
     QuestionListDirective,
     QuestionsComponent,
-    ExtraQuestionDirective
+    ExtraQuestionDirective,
+    LinkDirective
   ],
   imports: [
     AcademyRoutingModule,

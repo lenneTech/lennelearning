@@ -17,5 +17,9 @@
   .exercise-done {
     text-decoration: line-through;
     color: var(--color-success-500);
+
+    .link {
+      color: var(--color-success-500);
+    }
   }
 }
