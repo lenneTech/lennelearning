@@ -1,5 +1,5 @@
 ::ng-deep.task {
-  .title {
+  &-title {
     display: flex;
     justify-content: center;
     font-size: 2.7rem;
@@ -10,7 +10,7 @@
     line-height: 1.3em;
   }
 
-  
+
   .completed {
     background-color: var(--color-success-500);
     color: white;

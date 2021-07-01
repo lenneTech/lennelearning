@@ -1,12 +1,11 @@
 <nb-layout>
   <nb-layout-header fixed>
-    <!-- Insert header here -->
     <div class="container">
-      <div class="d-flex justify-content-start header">
+      <div class="d-flex justify-content-between header">
         <div class="title">lt<span class="header-title-colored">academy</span></div>
-      </div>
-      <div class="d-flex justify-content-end">
-        <!--   <div class='title'>lenne.Tech Academy</div>-->
+        <div>
+          <!--   <div class='title'>lenne.Tech Academy</div>-->
+        </div>
       </div>
     </div>
   </nb-layout-header>
@@ -17,43 +16,55 @@
         <div class="col-12 col-xl-6">
           <div class="banner-text">
             <div class="title">Willkommen in der lenne.Tech Academy</div>
-            <div class="subtitle">Wir bieten Lernangebote für Webinteressierte, Schüler, Studenten bishin zu
-              Berufserfahrenen. <br> Schau welches unserer Profile am besten auf dich zutrifft und beginne deinen
-              Lernpfad.
+            <div class="subtitle">
+              Wir bieten Lernangebote für Webinteressierte, Schüler, Studenten bishin zu Berufserfahrenen. <br />
+              Schau welches unserer Profile am besten auf dich zutrifft und beginne deinen Lernpfad.
             </div>
           </div>
         </div>
         <div class="d-none col-xl-6 d-xl-flex justify-content-end">
-          <img class="banner-img" src="../../assets/images/sample-banner-2.png">
+          <img class="banner-img" src="../../assets/images/sample-banner-2.png" />
         </div>
       </div>
       <div class="row">
         <div class="col-12 col-xl-3" *ngFor="let entryPoint of entryPoints">
-          <app-entry-point-card [title]="entryPoint.title" [imageUrl]="entryPoint.image"
-                                [description]="entryPoint.description"
-                                [backTitle]="entryPoint.cardBackTitle" [linkText]="'Zur Akademie'"
-                                [route]="'/academy'" (linkClickEvent)="setSelectedEntryPoint(entryPoint)">
+          <app-entry-point-card
+            [title]="entryPoint.title"
+            [imageUrl]="entryPoint.image"
+            [description]="entryPoint.description"
+            [backTitle]="entryPoint.cardBackTitle"
+            [linkText]="'Zur Akademie'"
+            [route]="'/academy'"
+            (linkClickEvent)="setSelectedEntryPoint(entryPoint)"
+          >
           </app-entry-point-card>
         </div>
       </div>
     </div>
     <div class="container-fluid p-0 section">
-      <div class="vertical-stripe">
-      </div>
-      </div>
+      <div class="vertical-stripe"></div>
+    </div>
 
     <div class="container section">
       <div class="d-flex justify-content-around banner-text">
-        <div class="section-title">
-          Das sagen unsere Absolventen
-        </div>
+        <div class="section-title">Das sagen unsere Absolventen</div>
       </div>
-      <app-review [imageUrl]="'https://lenne.tech/assets/images/team/pascal-klesse.png'" [review]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua'">
+      <app-review
+        [imageUrl]="'https://lenne.tech/assets/images/team/pascal-klesse.png'"
+        [review]="
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua'
+        "
+      >
       </app-review>
-      <app-review [imageUrl]="'https://lenne.tech/assets/images/team/florian-steinhanses.png'" [reversed]="true" [review]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua'">
+      <app-review
+        [imageUrl]="'https://lenne.tech/assets/images/team/florian-steinhanses.png'"
+        [reversed]="true"
+        [review]="
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua'
+        "
+      >
       </app-review>
     </div>
-
   </nb-layout-column>
   <nb-layout-footer fixed>
     <!-- Insert footer here -->

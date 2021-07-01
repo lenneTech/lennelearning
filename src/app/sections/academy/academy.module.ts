@@ -2,26 +2,50 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AcademyComponent } from './academy.component';
 import { AcademyRoutingModule } from './academy-routing.module';
-import { NbButtonModule, NbCardModule, NbLayoutModule, NbSidebarModule, NbSidebarService } from '@nebular/theme';
-import { VideoComponent } from './components/video/video.component';
+import {
+  NbButtonModule,
+  NbCardModule,
+  NbLayoutModule,
+  NbMenuModule,
+  NbMenuService,
+  NbSidebarModule,
+  NbSidebarService,
+} from '@nebular/theme';
+import { TaskVideoComponent } from './components/task-video/task-video.component';
 import { DescriptionDirective } from './directives/description.directive';
 import { CoreModule } from 'src/app/modules/core/core.module';
-import { TextComponent } from './components/text/text.component';
+import { HtmlComponent } from './sections/html/html.component';
+import { CssComponent } from './sections/css/css.component';
+import { JavascriptComponent } from './sections/javascript/javascript.component';
+import { TypescriptComponent } from './sections/typescript/typescript.component';
+import { JobComponent } from './sections/job/job.component';
+import { IonicComponent } from './sections/ionic/ionic.component';
+import { AngularComponent } from './sections/angular/angular.component';
+import { TaskTextComponent } from './components/task-text/task-text.component';
 import { TitleDirective } from './directives/title.directive';
 import { VideolistDirective } from './directives/videolist.directive';
-import { ExerciseListDirective } from './directives/exerciselist.directive';
 import { ExerciseDirective } from './directives/exercise.directive';
+import { ExerciseListDirective } from './directives/exerciselist.directive';
+import { SectionComponent } from './components/section/section.component';
 
 @NgModule({
   declarations: [
     AcademyComponent,
-    VideoComponent,
-    TitleDirective,
-    DescriptionDirective,
+    HtmlComponent,
+    CssComponent,
+    JavascriptComponent,
+    TypescriptComponent,
+    JobComponent,
+    IonicComponent,
+    AngularComponent,
+    TaskTextComponent,
     VideolistDirective,
-    TextComponent,
-    ExerciseListDirective,
+    TitleDirective,
+    TaskVideoComponent,
+    DescriptionDirective,
     ExerciseDirective,
+    ExerciseListDirective,
+    SectionComponent,
   ],
   imports: [
     AcademyRoutingModule,
@@ -31,7 +55,8 @@ import { ExerciseDirective } from './directives/exercise.directive';
     NbButtonModule,
     NbCardModule,
     CoreModule,
+    NbMenuModule.forRoot(),
   ],
-  providers: [NbSidebarService],
+  providers: [NbSidebarService, NbMenuService],
 })
 export class AcademyModule {}
