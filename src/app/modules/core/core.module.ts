@@ -3,13 +3,11 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { HeaderComponent } from './components/header/header.component';
 import { EntryPointCardComponent } from './components/entry-point-card/entry-point-card.component';
 import { NbAccordionModule, NbButtonModule, NbCardModule, NbLayoutModule } from '@nebular/theme';
 import { ReviewComponent } from './components/review/review.component';
 import { HelperDialogComponent } from './components/helper-dialog/helper-dialog.component';
 import { DialogComponent } from './components/dialog/dialog.component';
-import { TaskComponent } from '../../sections/academy/components/task/task.component';
 
 @NgModule({
   imports: [
@@ -18,6 +16,8 @@ import { TaskComponent } from '../../sections/academy/components/task/task.compo
     CommonModule,
     HttpClientModule,
     FormsModule,
+
+    // Nebular
     NbLayoutModule,
     NbButtonModule,
     NbCardModule,
@@ -26,19 +26,17 @@ import { TaskComponent } from '../../sections/academy/components/task/task.compo
   ],
   declarations: [
     // Components
-    HeaderComponent,
     EntryPointCardComponent,
     ReviewComponent,
-    TaskComponent,
+
+    // Dialogs
     HelperDialogComponent,
     DialogComponent,
   ],
   exports: [
     // Components
-    HeaderComponent,
     EntryPointCardComponent,
     ReviewComponent,
-    TaskComponent,
   ],
 })
 export class CoreModule {}

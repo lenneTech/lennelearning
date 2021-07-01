@@ -9,7 +9,7 @@ import { HelperDialogComponent } from '../components/helper-dialog/helper-dialog
 export class DialogService {
   constructor(private nbDialogService: NbDialogService) {}
 
-  openDialog() {
+  openDialog(): void {
     this.nbDialogService.open(DialogComponent, { closeOnBackdropClick: true });
   }
 
@@ -20,7 +20,7 @@ export class DialogService {
     solutionLink?: string,
     width?: string,
     height?: string
-  ) {
+  ): void {
     const dialog = this.nbDialogService.open(HelperDialogComponent, { closeOnBackdropClick: true });
     const instance = dialog.componentRef.instance;
     instance.title = title;

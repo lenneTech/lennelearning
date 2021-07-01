@@ -23,39 +23,48 @@ import { IonicComponent } from './sections/ionic/ionic.component';
 import { AngularComponent } from './sections/angular/angular.component';
 import { TaskTextComponent } from './components/task-text/task-text.component';
 import { TitleDirective } from './directives/title.directive';
-import { VideolistDirective } from './directives/videolist.directive';
+import { VideoListDirective } from './directives/video-list.directive';
 import { ExerciseDirective } from './directives/exercise.directive';
-import { ExerciseListDirective } from './directives/exerciselist.directive';
+import { ExerciseListDirective } from './directives/exercise-list.directive';
 import { SectionComponent } from './components/section/section.component';
 import { QuestionsComponent } from './components/questions/questions.component';
-import { QuestionListDirective } from './directives/questionlist.directive';
-import { ExtraQuestionDirective } from './directives/extraquestion.directive';
+import { QuestionListDirective } from './directives/question-list.directive';
+import { ExtraQuestionDirective } from './directives/extra-question.directive';
 import { BootstrapComponent } from './sections/bootstrap/bootstrap.component';
 import { LinkDirective } from './directives/link.directive';
+import { TaskComponent } from './components/task/task.component';
 
 @NgModule({
   declarations: [
+    // Pages
     AcademyComponent,
+
+    // Sections
+    JobComponent,
     HtmlComponent,
     CssComponent,
+    BootstrapComponent,
     JavascriptComponent,
     TypescriptComponent,
-    JobComponent,
-    IonicComponent,
     AngularComponent,
+    IonicComponent,
+
+    // Components
+    SectionComponent,
+    TaskComponent,
     TaskTextComponent,
-    VideolistDirective,
-    TitleDirective,
     TaskVideoComponent,
+    QuestionsComponent,
+
+    // Directives
+    VideoListDirective,
+    TitleDirective,
     DescriptionDirective,
     ExerciseDirective,
     ExerciseListDirective,
-    SectionComponent,
     QuestionListDirective,
-    QuestionsComponent,
     ExtraQuestionDirective,
     LinkDirective,
-    BootstrapComponent,
   ],
   imports: [
     AcademyRoutingModule,

@@ -19,7 +19,7 @@ export class EntryPointCardComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onLinkClicked() {
+  onLinkClicked(): void {
     this.linkClickEvent.emit(true);
   }
 }
