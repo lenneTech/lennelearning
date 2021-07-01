@@ -1,6 +1,7 @@
 ::ng-deep.task-text {
   .exerciselist {
-    margin-left: 30px;
+    cursor: pointer;
+    margin-left: 1.5em;
     display: list-item;
     list-style-type: decimal;
     list-style-position: outside;
@@ -11,5 +12,10 @@
     margin: 2em 0;
     font-size: 1.4rem;
     line-height: 1.5em;
+  }
+
+  .exercise-done {
+    text-decoration: line-through;
+    color: var(--color-success-500);
   }
 }
