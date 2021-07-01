@@ -30,6 +30,7 @@ import { SectionComponent } from './components/section/section.component';
 import { QuestionsComponent } from './components/questions/questions.component';
 import { QuestionListDirective } from './directives/questionlist.directive';
 import { ExtraQuestionDirective } from './directives/extraquestion.directive';
+import { BootstrapComponent } from './sections/bootstrap/bootstrap.component';
 import { LinkDirective } from './directives/link.directive';
 
 @NgModule({
@@ -53,7 +54,8 @@ import { LinkDirective } from './directives/link.directive';
     QuestionListDirective,
     QuestionsComponent,
     ExtraQuestionDirective,
-    LinkDirective
+    LinkDirective,
+    BootstrapComponent
   ],
   imports: [
     AcademyRoutingModule,

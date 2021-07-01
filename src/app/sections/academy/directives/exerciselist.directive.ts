@@ -6,13 +6,12 @@ export class ExerciseListDirective {
     el.nativeElement.classList.add('exerciselist');
   }
 
-  @HostListener('click') onClick() {
+  @HostListener('click') onClick(): void {
     const classList = this.el.nativeElement.classList.value;
-    if (classList.includes("exercise-done")) {
-      this.el.nativeElement.classList.remove('exercise-done')
+    if (classList.includes('exercise-done')) {
+      this.el.nativeElement.classList.remove('exercise-done');
     } else {
       this.el.nativeElement.classList.add('exercise-done');
     }
-
   }
 }
