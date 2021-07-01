@@ -6,7 +6,9 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./helper-dialog.component.scss'],
 })
 export class HelperDialogComponent implements OnInit {
-  @Input() test: any;
+  @Input() title: string;
+  @Input() hint?: string;
+  @Input() videoReference?: string;
 
   constructor() {}
 

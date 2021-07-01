@@ -13,8 +13,10 @@ export class DialogService {
     this.nbDialogService.open(DialogComponent, { closeOnBackdropClick: true });
   }
 
-  openHelperDialog(test: any) {
+  openHelperDialog(title: string, hint?: string, videoReference?: string) {
     const dialog = this.nbDialogService.open(HelperDialogComponent, { closeOnBackdropClick: true });
-    dialog.componentRef.instance.test = test;
+    const instance = dialog.componentRef.instance;
+    instance.title = title;
+    instance.videoReference = videoReference;
   }
 }
