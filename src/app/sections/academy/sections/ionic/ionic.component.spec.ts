@@ -8,9 +8,8 @@ describe('IonicComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ IonicComponent ]
-    })
-    .compileComponents();
+      declarations: [IonicComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

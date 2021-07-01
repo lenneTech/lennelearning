@@ -8,9 +8,8 @@ describe('TypescriptComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TypescriptComponent ]
-    })
-    .compileComponents();
+      declarations: [TypescriptComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

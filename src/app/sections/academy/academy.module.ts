@@ -55,7 +55,7 @@ import { LinkDirective } from './directives/link.directive';
     QuestionsComponent,
     ExtraQuestionDirective,
     LinkDirective,
-    BootstrapComponent
+    BootstrapComponent,
   ],
   imports: [
     AcademyRoutingModule,
@@ -69,4 +69,4 @@ import { LinkDirective } from './directives/link.directive';
   ],
   providers: [NbSidebarService, NbMenuService],
 })
-export class AcademyModule { }
+export class AcademyModule {}

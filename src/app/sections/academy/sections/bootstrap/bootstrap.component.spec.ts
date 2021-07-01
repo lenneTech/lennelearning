@@ -11,9 +11,8 @@ describe('BootstrapComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BootstrapComponent ]
-    })
-    .compileComponents();
+      declarations: [BootstrapComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

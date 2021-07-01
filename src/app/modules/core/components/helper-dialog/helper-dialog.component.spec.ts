@@ -8,9 +8,8 @@ describe('HelperDialogComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HelperDialogComponent ]
-    })
-    .compileComponents();
+      declarations: [HelperDialogComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
