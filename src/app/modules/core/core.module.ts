@@ -8,6 +8,7 @@ import { EntryPointCardComponent } from './components/entry-point-card/entry-poi
 import { NbButtonModule, NbCardModule, NbLayoutModule } from '@nebular/theme';
 import { ReviewComponent } from './components/review/review.component';
 import { HelperDialogComponent } from './components/helper-dialog/helper-dialog.component';
+import { DialogComponent } from './components/dialog/dialog.component';
 import { TaskComponent } from '../../sections/academy/components/task/task.component';
 
 @NgModule({
@@ -29,6 +30,7 @@ import { TaskComponent } from '../../sections/academy/components/task/task.compo
     ReviewComponent,
     TaskComponent,
     HelperDialogComponent,
+    DialogComponent,
   ],
   exports: [
     // Components
@@ -36,6 +38,7 @@ import { TaskComponent } from '../../sections/academy/components/task/task.compo
     EntryPointCardComponent,
     ReviewComponent,
     TaskComponent,
+    DialogComponent,
   ],
 })
 export class CoreModule {}
