@@ -27,6 +27,9 @@ import { VideolistDirective } from './directives/videolist.directive';
 import { ExerciseDirective } from './directives/exercise.directive';
 import { ExerciseListDirective } from './directives/exerciselist.directive';
 import { SectionComponent } from './components/section/section.component';
+import { QuestionsComponent } from './components/questions/questions.component';
+import { QuestionListDirective } from './directives/questionlist.directive';
+import { ExtraQuestionDirective } from './directives/extraquestion.directive';
 
 @NgModule({
   declarations: [
@@ -46,6 +49,9 @@ import { SectionComponent } from './components/section/section.component';
     ExerciseDirective,
     ExerciseListDirective,
     SectionComponent,
+    QuestionListDirective,
+    QuestionsComponent,
+    ExtraQuestionDirective
   ],
   imports: [
     AcademyRoutingModule,
@@ -59,4 +65,4 @@ import { SectionComponent } from './components/section/section.component';
   ],
   providers: [NbSidebarService, NbMenuService],
 })
-export class AcademyModule {}
+export class AcademyModule { }
