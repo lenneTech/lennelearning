@@ -15,7 +15,7 @@
     "contextual-lifecycle": true,
     "directive-class-suffix": true,
     "directive-selector": false,
-    "component-selector": [true, "element", "app", "kebab-case"],
+    "component-selector": false,
     "eofline": true,
     "import-blacklist": [true, "rxjs/Rx"],
     "import-spacing": true,
