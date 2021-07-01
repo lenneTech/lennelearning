@@ -23,11 +23,11 @@ export class StartComponent implements OnInit {
     this.getAllEntryPoints();
   }
 
-  getAllEntryPoints() {
+  getAllEntryPoints(): void {
     this.entryPoints = this.entryPointService.entryPoints();
   }
 
-  setSelectedEntryPoint(entryPoint) {
+  setSelectedEntryPoint(entryPoint: EntryPoint): void {
     this.entryPointService.selectedEntryPoint = entryPoint;
   }
 }

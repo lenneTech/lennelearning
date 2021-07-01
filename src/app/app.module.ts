@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { BaseModule } from '@lenne.tech/ng-base';
 import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
+import { NbThemeModule, NbLayoutModule, NbDialogModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 
 @NgModule({
@@ -38,6 +38,9 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
     NbThemeModule.forRoot({ name: 'corporate' }),
     NbLayoutModule,
     NbEvaIconsModule,
+
+    // Dialog
+    NbDialogModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],
