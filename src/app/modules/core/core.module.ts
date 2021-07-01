@@ -39,7 +39,6 @@ import { TaskComponent } from '../../sections/academy/components/task/task.compo
     EntryPointCardComponent,
     ReviewComponent,
     TaskComponent,
-    DialogComponent,
   ],
 })
 export class CoreModule {}
