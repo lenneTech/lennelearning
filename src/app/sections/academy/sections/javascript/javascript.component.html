@@ -4,5 +4,161 @@
   [seoDescription]="'Lerne JavaScript mithilfe der ltacademy.'"
   [seoKeywords]="'javascript, academy, online, learning, platform'"
 >
-  <p>javascript works!</p>
+  <task id="task-1">
+    <div title>Video</div>
+    <div description>Schaue dir diese Videoabschnitte an und komme danach wieder hier hin</div>
+    <task-video [link]="'https://www.udemy.com/course/javascript-komplett/learn/lecture/15031424#overview'">
+      <div videolist>Abschnitt 1: Einleitung</div>
+      <div videolist>Abschnitt 2: Erste Schritte mit JavaScript</div>
+      <div videolist>Abschnitt 3: Weitere Grundlagen in JavaScript</div>
+      <div videolist>Abschnitt 4: Listen verwalten: Arrays in JavaScript</div>
+    </task-video>
+  </task>
+
+  <task id="task-2">
+    <div title>Fragen</div>
+    <div description>Beantworte die Fragen so gut wie möglich und am Besten, ohne Hilfe.</div>
+    <task-questions>
+      <div questionlist>Nenne und erläutere die verschiedenen Datentypen, die du im Kurs kennengelernt hast</div>
+      <div questionlist>
+        Vergleiche die verschiedenen Typen von Variablen und erkläre wann man welchen Typen einsetzt. Warum wird „var“
+        heutzutage nicht mehr verwendet?
+      </div>
+      <div questionlist>Wie kannst du in JavaScript kommentieren?</div>
+      <div questionlist>Was ist ein Array und wofür verwendet man es?</div>
+      <div questionlist>
+        Ist dieses Array: const testArray = [„Dies“, „ist“, 1, „Array“, true] in JavaScript gültig?
+      </div>
+      <div questionlist>Wie kannst du auf die einzelnen Elemente dieses Arrays zugreifen?</div>
+      <div questionlist>Mit welcher Methode kannst du den Wert „ist“ aus dem testArray entfernen?</div>
+      <div questionlist>
+        Mit welcher Methode kannst du zum Beispiel das Array const zahlenArray = [1,5,2,6,3] sortieren und wie kannst du
+        es umkehren?
+      </div>
+      <div questionlist>Wie lang ist das zahlenArray, mit welchem Index beginnt und mit welchem endet es?</div>
+      <div questionlist>Wie kannst du zum Beispiel eine Matrix oder eine Tabelle mithilfe von Arrays abbilden?</div>
+    </task-questions>
+  </task>
+
+  <task id="task-3">
+    <div title>String Methoden</div>
+    <task-text>
+      <div exercise>Gegeben ist der String „JavaScript macht Spaß“:</div>
+      <div exerciselist>Nutze eine Methode, um den String nur in Kleinbuchstaben auszugeben.</div>
+      <div exerciselist>Nutze eine Methode, um nur den vierten Buchstaben des Strings auszugeben.</div>
+      <div exerciselist>Nutze eine Methode, um im String das Teilwort „Java“ mit „Type“ zu erstetzen.</div>
+      <div exerciselist>Nutze eine Methode, um die Länge des Strings auszugeben.</div>
+    </task-text>
+  </task>
+
+  <task id="task-4">
+    <div title>Video</div>
+    <div description>Schaue dir diese Videoabschnitte an und komme danach wieder hier hin</div>
+    <task-video [link]="'https://www.udemy.com/course/javascript-komplett/learn/lecture/15031646#overview'">
+      <div videolist>Abschnitt 5: Kontrollstrukturen (Teil 1: if, else)</div>
+      <div videolist>Abschnitt 6: Kontrollstrukturen (Teil 2: Schleifen)</div>
+      <div videolist>Abschnitt 7: Funktionen</div>
+    </task-video>
+  </task>
+
+  <task id="task-5">
+    <div title>Fragen</div>
+    <div description>Beantworte die Fragen so gut wie möglich und am Besten, ohne Hilfe.</div>
+    <task-questions>
+      <div questionlist>Nenne und Erkläre die verschiedenen Arten von Schleifen, die du im Kurs kennengelernt hast</div>
+      <div questionlist>Erkläre den Unterschied zwischen einer for-in und for-of Schleife</div>
+      <div questionlist>
+        Durchlaufe das Array const temp = [‚Banane‘, ‚Erdbeere‘, ‚Apfel‘, ‚Birne‘] mithilfe einer der oben genannten
+        Schleifen und gib jeden Wert aus. Welche Schleife bietet sich am Besten an?
+      </div>
+      <div questionlist>
+        Der Softwareentwickler Thomas stellt die Behauptung auf: „If-Schleifen sind viel praktischer als for-Schleifen
+        oder while-Schleifen!“ &#10140; Hat er recht?
+      </div>
+      <div questionlist>Erkläre die verschiedenen Bestandteile des Kopfes einer Funktion</div>
+      <div questionlist>Was sind optionale Übergabeparameter und wie werden sie gekennzeichnet?</div>
+      <div questionlist>Was sind Standardparameter und welchen Nutzen haben sie?</div>
+    </task-questions>
+  </task>
+
+  <task id="task-6">
+    <div title>Schachbrett</div>
+    <task-text>
+      <div exercise>
+        Stelle mit Hilfe eines zweidimensionalen Arrays ein
+        <a href="https://www.schach-tipps.de/schachregeln-schach-lernen/grundlagen/schach-aufstellung" taskLink
+          >Schachbrett</a
+        >
+        dar (8x8). Lass dir das Array nach jedem Schritt mithilfe von console.logs ausgeben, schreibe dafür eine extra
+        Funktion, die dir das Array formatiert in der Konsole ausgibt. Gehe wie folgt vor:
+      </div>
+      <div exerciselist>Initialisiere das Brett mit 8x8 leeren Feldern</div>
+      <div exerciselist>
+        Füge daraufhin die einzelnen Figuren an die Startpositionen ein (Bauer = ‚B‘, Königin=‘Q‘, König=‘K‘, etc.)
+      </div>
+      <div exerciselist>
+        Stelle die <a href="https://de.wikipedia.org/wiki/Spanische_Partie" taskLink>„Spanische Eröffnung“</a> (siehe
+        Abbildung) in deinem Schachbrett dar, indem du die Werte an den passenden Indizes änderst
+      </div>
+    </task-text>
+  </task>
+
+  <task id="task-7">
+    <div title>Video</div>
+    <div description>Schaue dir diese Videoabschnitte an und komme danach wieder hier hin</div>
+    <task-video [link]="'https://www.udemy.com/course/javascript-komplett/learn/lecture/15031870#overview'">
+      <div videolist>Abschnitt 8: Objekte in JavaScript</div>
+      <div videolist>Abschnitt 9: JSON: JavaScript Object Notation</div>
+      <div videolist>Abschnitt 10: Funktionen: Anonyme Funktionen, Callbacks, ...</div>
+      <div videolist>(Abschnitt 12: JavaScript im Browser (Teil 1))</div>
+      <div videolist>(Abschnitt 13: JavaScript im Browser (Teil 2))</div>
+      <div videolist>(Abschnitt 14: JavaScript im Browser (Teil 3))</div>
+      <div videolist>Abschnitt 15: Projekt: TODO-Liste entwickeln</div>
+      <div videolist>Abschnitt 16: Objekte in JavaScript (Teil 2)</div>
+      <div videolist>Abschnitt 24: Asynchrones JavaScript</div>
+      <div videolist>Abschnitt 25: Projekt: Asynchrones JavaScript anwenden, Promises</div>
+      <div videolist>Abschnitt 31: Moderne JavaScript-Features</div>
+      <div videolist>Abschnitt 32: Moderne JavaScript-Features: Array-Funktionen</div>
+    </task-video>
+  </task>
+
+  <task id="task-8">
+    <div title>Quiz</div>
+    <task-text>
+      <div exercise>
+        Entwickle ein Quiz basierend auf den theoretischen Fragen, die du zu JavaScript in der letzten Zeit beantwortet
+        hast. Du kannst natürlich auch ein Quiz für eine anderes Thema (z.B. ein Tierquiz) erstellen.
+      </div>
+      <div exerciselist>Gib dem Nutzer eine Wahlmöglichkeit von 4 Antworten pro Frage.</div>
+      <div exerciselist>
+        Die einzelnen Fragen sollen Punkte geben (z.B. jede richtige Antwort +2 und jede falsche -1)
+      </div>
+      <div exerciselist>
+        Überlege dir eine Gewichtung der Fragen. Vielleicht gibt die ein oder andere Frage mehr Punkte, weil sie
+        schwieriger ist.
+      </div>
+
+      <div exerciselist>
+        Die richtigen bzw falschen Antworten sollen nach der Abgabe entweder grün oder rot gekennzeichnet werden.
+      </div>
+      <div exerciselist>
+        Am Ende soll der Nutzer eine Endpunktzahl bekommen, die je, nach ihrer Größe, anders farbig markiert ist.
+      </div>
+    </task-text>
+  </task>
+
+  <task id="task-9">
+    <div title>Zusatzaufgabe</div>
+    <task-text>
+      <div exercise>
+        Entwickle ein kleines Webcam Programm, um asynchrone Methoden und Promises besser zu verstehen.
+      </div>
+      <div exerciselist>Die Website soll zunächst die User Permissions für die Audio und Video Aufnahme abragen.</div>
+      <div exerciselist>Daraufhin soll die Webcam des Users in einem Video Player übertragen werden.</div>
+      <div exerciselist>
+        Es soll einen Start- und Stopp-Button geben, der die Übertragung startet oder beendet und den jeweiligen Status
+        in der Konsole ausgibt.
+      </div>
+    </task-text>
+  </task>
 </section>
