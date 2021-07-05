@@ -7,7 +7,10 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TaskCodeComponent implements OnInit {
   @Input() url: string;
+  snippetUrl: string;
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.snippetUrl = window.location.origin + this.url;
+  }
 }

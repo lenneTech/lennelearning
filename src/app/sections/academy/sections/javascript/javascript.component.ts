@@ -7,6 +7,5 @@ import { HighlightResult } from 'ngx-highlightjs';
   styleUrls: ['./javascript.component.scss'],
 })
 export class JavascriptComponent {
-  origin = window.location.origin;
   constructor() {}
 }
