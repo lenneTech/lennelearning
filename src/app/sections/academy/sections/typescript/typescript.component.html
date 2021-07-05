@@ -4,5 +4,40 @@
   [seoDescription]="'Lerne TypeScript mithilfe der ltacademy.'"
   [seoKeywords]="'typescript, academy, online, learning, platform'"
 >
-  <p>typescript works!</p>
+  <task id="task-1">
+    <div title>Video</div>
+    <div description>Schaue dir diese Videoabschnitte an und komme danach wieder hier hin</div>
+    <task-video
+      [link]="'https://www.udemy.com/course/typescript-the-complete-developers-guide/learn/lecture/14504488#overview'"
+    >
+      <div videolist>Abschnitt 1: Getting Started with Typescript</div>
+      <div videolist>Abschnitt 2: What i a Type System</div>
+      <div videolist>Abschnitt 3: Type Annotations in Action</div>
+      <div videolist>Abschnitt 4: Annotations With Functions and Objects</div>
+      <div videolist>Abschnitt 5: Typed Arrays</div>
+      <div videolist>Abschnitt 6: Tuples in Typescript</div>
+      <div videolist>Abschnitt 7: The All-Important Interface</div>
+      <div videolist>Abschnitt 8: Building Functionality with Classes</div>
+      <div videolist>(Abschnitt 9: Design Patterns with Typescript)</div>
+      <div videolist>(Abschnitt 10: More on Design Patterns)</div>
+      <div videolist>(Abschnitt 11: Reusable Code)</div>
+      <div videolist>(Abschnitt 12: Advanced Generics)</div>
+    </task-video>
+  </task>
+
+  <task id="task-2">
+    <div title>Fragen</div>
+    <div description>Beantworte die Fragen so gut wie möglich und am Besten, ohne Hilfe.</div>
+    <task-questions>
+      <div questionlist>Worin unterscheidet sich TypeScript zu JavaScript? Was sind die Vor- und Nachteile?</div>
+      <div questionlist>Was bedeutet der „any“ Type? Wofür kann er verwendet werden?</div>
+      <div questionlist>Lassen sich TypeScript Dateien direkt im Browser ausführen? Was muss bedacht werden?</div>
+    </task-questions>
+  </task>
+
+  <task id="task-3">
+    <div title>Code</div>
+    <div description>Erweitere die folgende JavaScript Funktion mit der Typisierung von TypeScript:</div>
+    <task-code [url]="'/assets/snippets/ts-task-1.js'"></task-code>
+  </task>
 </section>
