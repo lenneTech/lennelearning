@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": ["highlight.js"],
             "outputPath": "dist/academy/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -26,7 +27,7 @@
               "includePaths": ["src/assets/scss"]
             },
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/assets/scss/main.scss"],
+            "styles": ["src/assets/scss/main.scss", "node_modules/highlight.js/styles/monokai.css"],
             "scripts": ["node_modules/bootstrap/dist/js/bootstrap.min.js"],
             "vendorChunk": true,
             "extractLicenses": false,

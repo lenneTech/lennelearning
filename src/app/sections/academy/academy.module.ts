@@ -33,6 +33,9 @@ import { ExtraQuestionDirective } from './directives/extra-question.directive';
 import { BootstrapComponent } from './sections/bootstrap/bootstrap.component';
 import { LinkDirective } from './directives/link.directive';
 import { TaskComponent } from './components/task/task.component';
+import { HighlightPlusModule } from 'ngx-highlightjs/plus';
+import { HighlightModule } from 'ngx-highlightjs';
+import { TaskCodeComponent } from './components/task-code/task-code.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +57,7 @@ import { TaskComponent } from './components/task/task.component';
     TaskComponent,
     TaskTextComponent,
     TaskVideoComponent,
+    TaskCodeComponent,
     QuestionsComponent,
 
     // Directives
@@ -75,6 +79,8 @@ import { TaskComponent } from './components/task/task.component';
     NbCardModule,
     CoreModule,
     NbMenuModule.forRoot(),
+    HighlightModule,
+    HighlightPlusModule,
   ],
   providers: [NbSidebarService, NbMenuService],
 })
