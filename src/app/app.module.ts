@@ -11,6 +11,7 @@ import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbThemeModule, NbLayoutModule, NbDialogModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
+import { HighlightOptions, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,16 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
     // Dialog
     NbDialogModule.forRoot(),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: <HighlightOptions>{
+        fullLibraryLoader: () => import('highlight.js'),
+        lineNumbersLoader: () => import('highlightjs-line-numbers.js'),
+        lineNumbers: true,
+      },
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
