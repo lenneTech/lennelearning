@@ -12,22 +12,11 @@
 
   <nb-layout-column class="p-0">
     <div class="container section">
+      <app-banner [title]="title" [subtitle]="subtitle" [imageUrl]="imageUrl"></app-banner>
+    </div>
+    <div class="container section">
       <div class="row">
-        <div class="col-12 col-xl-6">
-          <div class="banner-text">
-            <div class="title">Willkommen in der lenne.Tech Academy</div>
-            <div class="subtitle">
-              Wir bieten Lernangebote für Webinteressierte, Schüler, Studenten bishin zu Berufserfahrenen. <br />
-              Schau welches unserer Profile am besten auf dich zutrifft und beginne deinen Lernpfad.
-            </div>
-          </div>
-        </div>
-        <div class="d-none col-xl-6 d-xl-flex justify-content-end">
-          <img class="banner-img" src="../../assets/images/sample-banner-2.png" alt="Illustration" />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12 col-xl-3" *ngFor="let entryPoint of entryPoints">
+        <div class="col-12 col-md-6 col-xl-3 d-md-flex justify-content-center" *ngFor="let entryPoint of entryPoints">
           <app-entry-point-card
             [title]="entryPoint.title"
             [imageUrl]="entryPoint.image"
@@ -42,17 +31,24 @@
       </div>
     </div>
     <div class="container-fluid p-0 section">
-      <div class="vertical-stripe"></div>
+      <div class="vertical-stripe">
+        <app-carousel
+          [imageHeight]="'280px'"
+          [imageWidth]="'280px'"
+          [imageAsCircle]="true"
+          [reviews]="companyReviews"
+        ></app-carousel>
+      </div>
     </div>
 
     <div class="container section">
-      <div class="d-flex justify-content-around banner-text">
+      <div class="d-flex justify-content-around">
         <div class="section-title">Das sagen unsere Absolventen</div>
       </div>
       <app-review
         [imageUrl]="'https://lenne.tech/assets/images/team/pascal-klesse.png'"
         [review]="
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua'
+          'Ich hatte schon ein wenig Vorwissen und konnte somit die ersten Kurse überspringen. Wenn ich schwierigere Fragen hatte, die ich nicht alleine mit Google lösen konnte, bekam ich schnell Hilfe von meinem Tutor und wir konnten das Problem gemeinsam lösen. Mir hat die Akademie sehr viel gebracht und ich kann sie jedem, der sich für das Web und dessen Technologien interessiert, nur empfehlen.'
         "
       >
       </app-review>

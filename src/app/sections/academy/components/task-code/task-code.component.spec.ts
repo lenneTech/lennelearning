@@ -11,9 +11,8 @@ describe('TaskCodeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TaskCodeComponent ]
-    })
-    .compileComponents();
+      declarations: [TaskCodeComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
