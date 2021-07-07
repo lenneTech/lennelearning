@@ -35,7 +35,7 @@ export class EntryPointService {
       image: '../../assets/images/praktikant.png',
       description:
         'Du bist Student, befindest dich in einer Weiterbildung oder suchst aus anderen Gründen noch ein Praktikum? Wir bieten dir die Möglichkeit in bis zu 12 Wochen die Web- und Appentwicklung in der Praxis kennenzulernen. Zunächst arbeitest du in einer Vorbereitungsphase unsere Kurse durch, um im Praktikum direkt mit deinem eigenen Projekt durchstarten zu können. Wenn du schon Vorkenntnisse hast, kannst du natürlich unter Absprache verschiedene Teile überspringen und sofort loslegen.',
-      sections: ['beruf', 'html', 'css', 'bootstrap', 'javascript', 'typescript', 'angular', 'ionic'],
+      sections: ['beruf', 'html', 'css', 'bootstrap', 'javascript', 'typescript', 'angular', 'ionic', 'nestjs'],
     },
     {
       id: 'dojo',
@@ -44,7 +44,7 @@ export class EntryPointService {
       image: '../../assets/images/dojo.png',
       description:
         'Du interessierst dich privat für Web- und Appentwicklung oder generell für neue Technologien und möchtest dich austauschen? Dann tritt unserem Coding Dojo bei. Lass uns zusammen in Workshops, Hackathons oder im wöchentlichen Treffen über Ideen, neue Technologien, Projekte, etc sprechen und neue Innovationen ausprobieren.',
-      sections: ['html', 'css', 'bootstrap', 'javascript', 'typescript', 'angular', 'ionic'],
+      sections: ['html', 'css', 'bootstrap', 'javascript', 'typescript', 'angular', 'ionic', 'nestjs'],
     },
   ];
 

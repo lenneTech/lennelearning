@@ -1,0 +1,80 @@
+<section
+  [pageTitle]="'NestJS'"
+  [seoTitle]="'ltacademy - NestJS'"
+  [seoDescription]="'Lerne NestJS mithilfe der ltacademy.'"
+  [seoKeywords]="'nestjs, academy, online, learning, platform'"
+>
+  <task id="task-1">
+    <div title>Video</div>
+    <div description>Schaue dir diese Videoabschnitte an und komme danach wieder hier hin</div>
+    <task-video [link]="'https://www.udemy.com/course/javascript-komplett/learn/lecture/15031424#overview'">
+      <div videolist>Abschnitt 1: Introduction to NestJS & Pre-requisites</div>
+      <div videolist>Abschnitt 2: Task Management Application (REST API)</div>
+      <div videolist>Abschnitt 3: Validation and Error Handling</div>
+      <div videolist>Abschnitt 4: Data Persistence - PostgreSQL</div>
+      <div videolist>Abschnitt 5: Auth Part 1 - Authentication</div>
+      <div videolist>Abschnitt 6: Auth Part 2 - Task Ownership and Restrictions</div>
+      <div videolist>(Abschnitt 8: Logging)</div>
+      <div videolist>(Abschnitt 12: Unit Testing)</div>
+    </task-video>
+  </task>
+
+  <task id="task-2">
+    <div title>Projekt</div>
+    <task-text>
+      <div exercise>
+        Mit dem nächstem Abschnitt des Udemy Kurses wollen wir, dass du neben dem Lernen mit den Videos praktisch aktiv
+        wirst. Setze beim Schauen des nächsten Abschnitts ein Backend für dein Frontend-Projekt auf und passe es an
+        deine individuellen Ansprüche an. Hier kann dir dein Tutor helfen, die Anforderungen deines Backends zu
+        bestimmen. Wenn du im Abschnitt Angular am Lennetaler-Projekt gearbeitet hast, findest du
+        <a href="academy/nestjs#task-4" pageLink>hier die Anforderungen</a>.
+      </div>
+    </task-text>
+  </task>
+
+  <task id="task-3">
+    <div title>Video</div>
+    <div description>
+      Schaue dir die Videos dieses Abschnitts nach und nach an und versuche parallel dein eigenes Backend aufzubauen
+    </div>
+    <task-video [link]="'https://www.udemy.com/course/javascript-komplett/learn/lecture/15031424#overview'">
+      <div videolist>Abschnitt 13: GraphQL + MongoDB</div>
+    </task-video>
+  </task>
+
+  <task id="task-4">
+    <div title>Lennetaler</div>
+    <task-text>
+      <div exercise>
+        Diese Aufgabe bearbeitest du nur, wenn du kein eigenes Projekt hast. Die Anforderungen stehen hier drunter.
+        Manche Teilaufgaben kannst du nicht von Anfang an bearbeiten, daher komm immer mal wieder hier hin und schau,
+        was du in den einzelnen Videos gelernt hast. Gerne kannst du auch noch weitere Ideen mit einbringen und
+        ergänzen.
+      </div>
+      <div exerciselist>
+        Erstelle einen ProductType mit name, imgUrl, description und price und gib die Möglichkeit neue Produkte zu
+        erstellen, zu bearbeiten und zu löschen
+      </div>
+      <div exerciselist>
+        Erstelle einen UserType mit username, password und productsInCart und gib die Möglichkeit neue User zu erstellen
+        und Produkte in den Warenkorb hinzuzufügen
+      </div>
+      <div exerciselist>
+        Verknüpfe anschließend das Frontend mit dem Backend mit Hilfe von
+        <a href="https://apollo-angular.com/docs/get-started" taskLink>Apollo</a>
+      </div>
+      <div exerciselist>
+        Modifiziere dein Frontend soweit, dass sich der User einen echten Account erstellen und sich damit einloggen
+        kann
+      </div>
+      <div exerciselist>
+        Die Produkte werden nun nicht mehr im Frontend, sondern in einer Datenbank im Backend gespeichert
+      </div>
+      <div exerciselist>
+        Der User soll die Möglichkeit bekommen, Produkte in seinen Warenkorb (productsInCart) zu legen und diese dann
+        entweder zu löschen oder aber zu kaufen.
+      </div>
+      <div exerciselist>Nach dem Kauf soll der Warenkorb geleert werden</div>
+    </task-text>
+  </task>
+</section>
