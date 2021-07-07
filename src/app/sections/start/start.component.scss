@@ -1,12 +1,14 @@
-.vertical-stripe {
-  width: 100%;
-  height: 400px;
-  background-color: var(--color-info-300);
-}
-
 .section-title {
   font-size: 3.25rem;
   font-family: Open Sans, sans-serif;
   font-weight: 700;
   line-height: 5rem;
+}
+
+.bg-individual-cyan {
+  background-color: #008bda;
+}
+
+.bg-individual-blue {
+  background-color: #0046ca;
 }

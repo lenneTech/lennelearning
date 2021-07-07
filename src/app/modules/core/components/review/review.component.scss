@@ -1,18 +1,24 @@
 .img-circle {
-  height: 400px;
-  width: 400px;
+  height: 340px;
+  width: 340px;
   border-radius: 50%;
   display: inline-block;
   box-shadow: 0 0 8px 1px #b3b3b3;
+  object-fit: cover;
 }
 
 .review-text {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-family: Open Sans, sans-serif;
   font-weight: 200;
   line-height: 2.25rem;
   text-align: right;
   font-style: italic;
+}
+
+.reviewer-text {
+  font-size: 1rem;
+  text-align: center;
 }
 
 .quotation-mark {

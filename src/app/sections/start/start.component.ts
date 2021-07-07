@@ -13,21 +13,34 @@ export class StartComponent implements OnInit {
   title = 'Willkommen in der lenne.Tech Academy';
   subtitle =
     'Wir bieten Lernangebote für Webinteressierte, Schüler, Studenten bishin zu Berufserfahrenen.\n Schau welches unserer Profile am besten auf dich zutrifft und beginne deinen Lernpfad.';
-  imageUrl = '../../assets/images/sample-banner-2.png';
+  imageUrl = '../../assets/images/banner-images/start-banner.svg';
   entryPoints: EntryPoint[] = [];
-  studentReviews: Review[] = [];
+  studentReviews: Review[] = [
+    {
+      imageUrl: '../../../assets/images/people-images/daniel_review.jpg',
+      text: 'Ich hatte schon ein wenig Vorwissen und konnte somit die ersten Kurse überspringen. Wenn ich schwierigere Fragen hatte, die ich nicht alleine mit Google lösen konnte, bekam ich schnell Hilfe von meinem Tutor und wir konnten das Problem gemeinsam lösen. Mir hat die Akademie sehr viel gebracht und ich kann sie jedem, der sich für das Web und dessen Technologien interessiert, nur empfehlen.',
+      reviewerTitle: 'Daniel König',
+      reviewerSubtitle: 'Praktikant - lenne.Tech GmbH',
+    },
+    {
+      imageUrl: 'https://lenne.tech/assets/images/team/florian-steinhanses.png',
+      text: 'Ich hatte schon ein wenig Vorwissen und konnte somit die ersten Kurse überspringen. Wenn ich schwierigere Fragen hatte, die ich nicht alleine mit Google lösen konnte, bekam ich schnell Hilfe von meinem Tutor und wir konnten das Problem gemeinsam lösen. Mir hat die Akademie sehr viel gebracht und ich kann sie jedem, der sich für das Web und dessen Technologien interessiert, nur empfehlen.',
+      reviewerTitle: 'Florian Steinhanses',
+      reviewerSubtitle: 'Werkstudent - lenne.Tech GmbH',
+    },
+  ];
   companyReviews: Review[] = [
     {
       imageUrl: 'https://cdn.pixabay.com/photo/2018/07/25/08/58/business-3560916_960_720.jpg',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua',
       reviewerTitle: 'Marie Musterfrau',
-      reviewerSubTitle: 'CEO Muster GmbH',
+      reviewerSubtitle: 'CEO - Muster GmbH',
     },
     {
       imageUrl: 'https://cdn.pixabay.com/photo/2018/07/25/08/58/business-3560916_960_720.jpg',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua',
       reviewerTitle: 'Marie Musterfrau',
-      reviewerSubTitle: 'CEO Muster GmbH',
+      reviewerSubtitle: 'CEO - Muster GmbH',
     },
   ];
 
