@@ -36,6 +36,7 @@ import { TaskComponent } from './components/task/task.component';
 import { HighlightPlusModule } from 'ngx-highlightjs/plus';
 import { HighlightModule } from 'ngx-highlightjs';
 import { TaskCodeComponent } from './components/task-code/task-code.component';
+import { PageLinkDirective } from './directives/page-link.directive';
 
 @NgModule({
   declarations: [
@@ -69,6 +70,7 @@ import { TaskCodeComponent } from './components/task-code/task-code.component';
     QuestionListDirective,
     ExtraQuestionDirective,
     LinkDirective,
+    PageLinkDirective,
   ],
   imports: [
     AcademyRoutingModule,
