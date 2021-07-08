@@ -39,6 +39,7 @@ import { TaskCodeComponent } from './components/task-code/task-code.component';
 import { PageLinkDirective } from './directives/page-link.directive';
 import { NestjsComponent } from './sections/nestjs/nestjs.component';
 import { GitBasicsComponent } from './sections/git-basics/git-basics.component';
+import { GitExpertComponent } from './sections/git-expert/git-expert.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { GitBasicsComponent } from './sections/git-basics/git-basics.component';
     GitBasicsComponent,
     JavascriptComponent,
     TypescriptComponent,
+    GitExpertComponent,
     AngularComponent,
     IonicComponent,
     NestjsComponent,

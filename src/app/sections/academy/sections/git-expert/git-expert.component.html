@@ -1,0 +1,83 @@
+<section
+  [pageTitle]="'Git-Expert'"
+  [seoTitle]="'ltacademy - Git-Expert'"
+  [seoDescription]="'Lerne Git mithilfe der ltacademy.'"
+  [seoKeywords]="'git, academy, online, learning, platform'"
+>
+  <task id="task-1">
+    <div title>Inhalt</div>
+    <task-text>
+      <div exercise>
+        Jetzt bist du soweit, dass du große Projekte auf die Beine stellen könntest. Da ist es häufig sinnvoll in einem
+        Team zu arbeiten und gemeinsam am Code zu werkeln. Spätestens im Beruf in einem IT-Team wirst du darauf stoßen,
+        mit mehreren Entwicklern am gleichen Code zu sitzen. Dabei können viele Probleme auftreten: Meherere arbeiten am
+        gleichen Problem und damit verliert man Zeit oder du hast noch gar nicht den neusten Stand des Projekts. Um
+        diese Probleme zu vermeiden nutzen wir Git und die damit kommenden Funktionen. In den nächsten Abschnitten
+        erfährst du unter anderem, wie du Branches (Abzweigungen) des Hauptcodes erstellst, damit arbeitest und diese
+        später wieder zum Hauptstrang hinzufügst.
+      </div>
+    </task-text>
+  </task>
+
+  <task id="task-2">
+    <div title>Video</div>
+    <div description>Schaue dir dieses Video an und komme danach wieder hier hin</div>
+    <task-video [link]="'https://www.youtube.com/watch?v=ZVoSBA03Tdc'"> </task-video>
+  </task>
+
+  <task id="task-3">
+    <div title>Oh My Git</div>
+    <div description>
+      Lade dir das Spiel <a href="https://ohmygit.org/" taskLink>Oh My Git</a> herunter, falls noch nicht geschehen und
+      spiele die Kapitel 'Branches' und 'Merge'. Du kannst natürlich auch die weiteren Übungen machen, wenn du noch mehr
+      lernen willst und es dir Spaß macht.
+    </div>
+  </task>
+
+  <task id="task-4">
+    <div title>Gästebuch</div>
+    <task-text>
+      <div exercise>
+        Setze die gelernten Inhalte in die Praxis um. Deine Aufgabe ist es, einen Eintrag in unserem Gästebuch zu
+        hinterlassen. Hier eine kurze Anleitung:
+      </div>
+      <div exerciselist>
+        Klone das <a href="https://github.com/DKoenig9/test" taskLink>Github-Repository</a> vom Gästebuch
+      </div>
+      <div exerciselist>Erstelle einen neuen Branch mit dem Namen 'student/[DeinName]'.</div>
+      <div exerciselist>Schreibe in das Gästebuch einen Eintrag mit deinem Namen.</div>
+      <div exerciselist>Führe 'git add .' aus.</div>
+      <div exerciselist>Führe 'git commit -m "rezension von [DeinName]"' aus.</div>
+      <div exerciselist>
+        Bevor du pushst solltest du schauen, ob sich, während du gearbeitet hast, etwas an dem Hauptstrang geändert hat.
+        Es könnte zum Beispiel sein, dass ein anderes Akademiemitglied gleichzeitig eine Rezension schreibt. Dafür
+        machst du folgendes:
+      </div>
+      <div exerciselist>Führe 'git checkout main' aus, um in den Hauptzweig zu wechseln.</div>
+      <div exerciselist>
+        Führe 'git fetch' aus, um zu prüfen, ob Daten, die nicht in deinem Ordner sind, auf Github liegen.
+      </div>
+      <div exerciselist>
+        Führe 'git pull' aus, um die Daten, die nicht in deinem Ordner sind, von Github herunterzuladen.
+      </div>
+      <div exerciselist>Danach gehst du mit 'git checkout student/[DeinName]' in deinen Branch</div>
+      <div exerciselist>
+        Und checkst mit 'git rebase main' ob deine Änderungen ohne Konflikte bestehen bleiben können.
+      </div>
+      <div exerciselist>Wenn hier Konflikte auftreten, solltest du diese beheben.</div>
+      <div exerciselist>Danach mit 'git push' das ganze in Github pushen.</div>
+      <div exerciselist>
+        Jetzt gehst du in Github auf das Repository, gehst in den Tab Pull requests und forderst ein Review von deinem
+        Tutor an.
+      </div>
+      <div exerciselist>
+        Wenn alles in Ordnung ist, bekommst du eine Bestätigungsmail ansonsten eine Mail mit Änderungswünschen - das
+        alles siehst du auch auf Github.
+      </div>
+      <div exerciselist>
+        Wenn Änderungswünsche vorliegen, solltest du diese vollziehen und ein neues Review fordern.
+      </div>
+      <div exerciselist>Wenn alles bestätigt ist und gemerged wurde, bist du fertig.</div>
+    </task-text>
+  </task>
+</section>
