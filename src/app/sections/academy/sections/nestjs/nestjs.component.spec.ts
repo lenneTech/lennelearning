@@ -11,9 +11,8 @@ describe('NestjsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NestjsComponent ]
-    })
-    .compileComponents();
+      declarations: [NestjsComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

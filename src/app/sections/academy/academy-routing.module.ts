@@ -41,7 +41,7 @@ const routes: Routes = [
       {
         path: 'gitbasics',
         component: GitBasicsComponent,
-        canActivate: [SectionGuard]
+        canActivate: [SectionGuard],
       },
       {
         path: 'javascript',

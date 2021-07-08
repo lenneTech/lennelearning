@@ -8,7 +8,6 @@ import { EventEmitter } from '@angular/core';
 })
 export class EntryPointCardComponent implements OnInit {
   @Input() title: string;
-  @Input() backTitle: string;
   @Input() description: string;
   @Input() imageUrl: string;
   @Input() linkText: string;
