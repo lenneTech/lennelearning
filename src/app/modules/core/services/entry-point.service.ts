@@ -14,7 +14,7 @@ export class EntryPointService {
       id: 'berufserkunder',
       title: 'Berufsinteressierte',
       cardBackTitle: 'Was machen Webentwickler?',
-      image: '../../assets/images/entry-point-images/berufseinsteiger.svg',
+      image: '../../assets/images/entry-point-images/berufsinteressent.svg',
       description:
         'An alle die sich für die Web- und Appentwicklung interessieren und einen Einblick in die Berufswelt von Softwareentwicklern bekommen wollen. Der Kurs beginnt dabei mit einer Berufsfeldserkundung, in der dir zunächst die verschiedenen Berufe rund um die Softwareentwiclkung sowie deren Berufslltag und Aufgabenfelder vorgestellt werden. Danach lernst du schon die Grundlagen der Webentwicklung, um schon eigene Webseiten erstellen zu können',
       sections: ['beruf', 'html', 'css', 'bootstrap', 'gitbasics', 'javascript'],
@@ -23,7 +23,7 @@ export class EntryPointService {
       id: 'praktikant',
       title: 'Praktikanten',
       cardBackTitle: 'Du suchst ein Praktikum?',
-      image: '../../assets/images/entry-point-images/praktikant.svg', // identify customers
+      image: '../../assets/images/entry-point-images/praktikant.svg',
       description:
         'Du bist Schüler, Student, befindest dich in einer Weiterbildung oder suchst aus anderen Gründen noch ein Praktikum? Wir bieten dir die Möglichkeit in bis zu 12 Wochen die Web- und Appentwicklung in der Praxis kennenzulernen. Zunächst arbeitest du in einer Vorbereitungsphase unsere Kurse durch, um im Praktikum direkt mit deinem eigenen Projekt durchstarten zu können. Wenn du schon Vorkenntnisse hast, kannst du natürlich unter Absprache verschiedene Teile überspringen und sofort loslegen.',
       sections: ['beruf', 'html', 'css', 'bootstrap', 'gitbasics', 'javascript', 'typescript', 'angular', 'ionic', 'nestjs'],
@@ -32,7 +32,7 @@ export class EntryPointService {
       id: 'unternehmen',
       title: 'Unternehmen',
       cardBackTitle: 'Dein Unternehmen braucht fähige Webentwickler?',
-      image: '../../assets/images/entry-point-images/company.svg', // data modern illustrations
+      image: '../../assets/images/entry-point-images/company.svg',
       description:
         'Wir bieten deinem Unternehmen Weiterbildungsmöglichkeiten in der App- und Webentwicklung. Dabei bieten wir eine umfassende Betreuung mit wöchentlichen Meetings an. Dabei schätzen wir ebenso das Potenzial der einzelnen Akademie Teilnehmer ein, um die bestmöglichen Webentwickler für dein Unternehmen zu finden.',
       sections: ['html', 'css', 'bootstrap', 'gitbasics', 'javascript', 'typescript', 'angular', 'ionic', 'nestjs'],

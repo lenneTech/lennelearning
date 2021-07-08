@@ -1,14 +1,27 @@
-.section-title {
-  font-size: 3.25rem;
-  font-family: Open Sans, sans-serif;
-  font-weight: 700;
-  line-height: 5rem;
-}
-
 .bg-individual-cyan {
   background-color: #008bda;
 }
 
 .bg-individual-blue {
   background-color: #0046ca;
+}
+
+.technology-img {
+  filter: grayscale(100%);
+  opacity: 30%;
+  height: 95px;
+  width: auto;
+  padding: 30px;
+}
+
+@media (max-width: 1610px) {
+  .technology-img {
+    height: 90px;
+  }
+}
+
+@media (max-width: 1405px) {
+  .technology-img {
+    display: none;
+  }
 }

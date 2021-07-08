@@ -10,6 +10,7 @@ import { HelperDialogComponent } from './components/helper-dialog/helper-dialog.
 import { DialogComponent } from './components/dialog/dialog.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { TextImageListComponent } from './components/text-image-list/text-image-list.component';
 
 @NgModule({
   imports: [
@@ -36,6 +37,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     DialogComponent,
     BannerComponent,
     CarouselComponent,
+    TextImageListComponent,
   ],
   exports: [
     // Components
@@ -43,6 +45,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     ReviewComponent,
     BannerComponent,
     CarouselComponent,
+    TextImageListComponent,
   ],
 })
 export class CoreModule {}

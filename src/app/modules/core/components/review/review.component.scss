@@ -1,3 +1,5 @@
+@import 'src/assets/scss/utils';
+
 .img-circle {
   height: 340px;
   width: 340px;
@@ -5,6 +7,9 @@
   display: inline-block;
   box-shadow: 0 0 8px 1px #b3b3b3;
   object-fit: cover;
+}
+
+.reviewer-block {
 }
 
 .review-text {
@@ -24,4 +29,31 @@
 .quotation-mark {
   font-size: 2.5rem;
   font-style: italic;
+}
+
+@media (max-width: 1405px) {
+  .img-circle {
+    height: 260px;
+    width: 260px;
+  }
+  .review-text {
+    font-size: 1.25rem;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .img-circle {
+    height: 180px;
+    width: 180px;
+  }
+  .review-text {
+    font-size: 1rem;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .img-circle {
+    height: 140px;
+    width: 140px;
+  }
 }
