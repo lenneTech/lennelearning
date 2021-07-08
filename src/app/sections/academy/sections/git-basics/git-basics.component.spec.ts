@@ -11,9 +11,8 @@ describe('GitBasicsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GitBasicsComponent ]
-    })
-    .compileComponents();
+      declarations: [GitBasicsComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
