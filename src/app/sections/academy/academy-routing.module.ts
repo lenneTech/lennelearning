@@ -11,6 +11,7 @@ import { AngularComponent } from './sections/angular/angular.component';
 import { SectionGuard } from '../../modules/core/guards/section.guard';
 import { BootstrapComponent } from './sections/bootstrap/bootstrap.component';
 import { NestjsComponent } from './sections/nestjs/nestjs.component';
+import { GitBasicsComponent } from './sections/git-basics/git-basics.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,11 @@ const routes: Routes = [
         path: 'bootstrap',
         component: BootstrapComponent,
         canActivate: [SectionGuard],
+      },
+      {
+        path: 'gitbasics',
+        component: GitBasicsComponent,
+        canActivate: [SectionGuard]
       },
       {
         path: 'javascript',

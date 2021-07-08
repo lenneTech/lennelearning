@@ -17,7 +17,7 @@ export class EntryPointService {
       image: '../../assets/images/berufserkunder.png',
       description:
         'An alle die sich für die Web- und Appentwicklung interessieren und einen Einblick in die Berufswelt von Softwareentwicklern bekommen wollen. Der Kurs beginnt dabei mit einer Berufsfeldserkundung, in der dir zunächst die verschiedenen Berufe rund um die Softwareentwiclkung sowie deren Berufslltag und Aufgabenfelder vorgestellt werden. Danach lernst du schon die Grundlagen der Webentwicklung, um schon eigene Webseiten erstellen zu können',
-      sections: ['beruf', 'html', 'css', 'bootstrap', 'javascript'],
+      sections: ['beruf', 'html', 'css', 'bootstrap', 'gitbasics', 'javascript'],
     },
     {
       id: 'schulpraktikant',
@@ -26,7 +26,7 @@ export class EntryPointService {
       image: '../../assets/images/schulpraktikant.png',
       description:
         'Du bist Schüler/in und suchst noch ein Praktikum? Wir helfen dir gerne einen praktischen Einblick in die Web- und Appentwicklung zu bekommen. Dabei wirst du in unseren Kursen die grundlegenden Konzepte der Webentwicklung lernen, um so schon erste eigene Webseiten programmieren zu können. Das Praktikum geht dabei 2-3 Wochen, meld dich gerne bei uns!',
-      sections: ['beruf', 'html', 'css', 'bootstrap', 'javascript'],
+      sections: ['beruf', 'html', 'css', 'bootstrap', 'gitbasics', 'javascript'],
     },
     {
       id: 'praktikant',
@@ -35,7 +35,7 @@ export class EntryPointService {
       image: '../../assets/images/praktikant.png',
       description:
         'Du bist Student, befindest dich in einer Weiterbildung oder suchst aus anderen Gründen noch ein Praktikum? Wir bieten dir die Möglichkeit in bis zu 12 Wochen die Web- und Appentwicklung in der Praxis kennenzulernen. Zunächst arbeitest du in einer Vorbereitungsphase unsere Kurse durch, um im Praktikum direkt mit deinem eigenen Projekt durchstarten zu können. Wenn du schon Vorkenntnisse hast, kannst du natürlich unter Absprache verschiedene Teile überspringen und sofort loslegen.',
-      sections: ['beruf', 'html', 'css', 'bootstrap', 'javascript', 'typescript', 'angular', 'ionic', 'nestjs'],
+      sections: ['beruf', 'html', 'css', 'bootstrap', 'gitbasics', 'javascript', 'typescript', 'angular', 'ionic', 'nestjs'],
     },
     {
       id: 'dojo',
@@ -44,7 +44,7 @@ export class EntryPointService {
       image: '../../assets/images/dojo.png',
       description:
         'Du interessierst dich privat für Web- und Appentwicklung oder generell für neue Technologien und möchtest dich austauschen? Dann tritt unserem Coding Dojo bei. Lass uns zusammen in Workshops, Hackathons oder im wöchentlichen Treffen über Ideen, neue Technologien, Projekte, etc sprechen und neue Innovationen ausprobieren.',
-      sections: ['html', 'css', 'bootstrap', 'javascript', 'typescript', 'angular', 'ionic', 'nestjs'],
+      sections: ['html', 'css', 'bootstrap', 'gitbasics', 'javascript', 'typescript', 'angular', 'ionic', 'nestjs'],
     },
   ];
 

@@ -1,0 +1,92 @@
+<section
+  [pageTitle]="'Git-Basics'"
+  [seoTitle]="'ltacademy - Git-Basics'"
+  [seoDescription]="'Lerne Git mithilfe der ltacademy.'"
+  [seoKeywords]="'git, academy, online, learning, platform'"
+>
+  <task id="task-1">
+    <div title>Inhalt</div>
+    <task-text>
+      <div exercise>
+        Im letzten Abschnitt hast du ein eigenes Projekt auf die Beine gestellt. Dies liegt nun auf deinem Computer und
+        somit bist du der einzige, dem der Quellcode vorliegt. Jetzt kommt Git ins Spiel. Mit Git kannst du für dein
+        Projekt Backups erstellen, zu denen du jederzeit Zugriff hast und diese sogar online stellen. Wenn sich also ein
+        Fehler in deinen Code einschleicht, kannst du einfach zu einer früheren Version deines Projekts zurückkehren und
+        dort weitermachen. Wie das ganze funktioniert, erklären wir dir jetzt.
+      </div>
+    </task-text>
+  </task>
+
+  <task id="task-2">
+    <div title>Video</div>
+    <div description>Schaue dir die ersten beiden Videos der Playlist an und komme danach wieder hier hin</div>
+    <task-video [link]="'https://www.youtube.com/watch?v=9RbU-h0NH0A&list=PLNmsVeXQZj7rbmmqb1Lt_RGU4DEhelTrR'">
+      <div videolist><a href="https://git-scm.com/downloads" taskLink>Git Download</a></div>
+      <div videolist>Anstelle von "git add *" kann auch "git add ." verwendet werden.</div>
+    </task-video>
+  </task>
+
+  <task id="task-3">
+    <div title>Oh My Git</div>
+    <div description>
+      Lade dir das Spiel <a href="https://ohmygit.org/" taskLink>Oh My Git</a> herunter und spiele bis zum Ende von
+      Abschnitt 'files', um die gelernten Inhalte spielerisch zu vertiefen.
+    </div>
+  </task>
+
+  <task id="task-4">
+    <div title>Hochladen</div>
+    <task-text>
+      <div exercise>
+        Jetzt bist du an der Reihe dein eigenes Projekt in Github hochzuladen. Befolge dabei diesen Leitfaden:
+      </div>
+      <div exerciselist>
+        Lade dir <a href="https://git-scm.com/downloads" taskLink>Git</a> herunter und installiere es
+      </div>
+      <div exerciselist>Öffne Git Bash</div>
+      <div exerciselist>
+        Mit dem Befehl 'cd [Ordnername]' bzw. 'cd ..' wechselst du in der Konsole die Ordner. Gehe in den Ordner, in dem
+        dein Projekt liegt.
+      </div>
+      <div exerciselist>Führe 'git init' aus</div>
+      <div exerciselist>Führe 'git add .' aus</div>
+      <div exerciselist>Führe 'git commit -m "deine Nachricht" ' aus</div>
+      <div exerciselist>Erstelle dir einen Github-Account, sofern das noch nicht geschehen ist.</div>
+      <div exerciselist>Erstelle ein neues Projekt in Github, welches den Namen deines eigenen Projekts trägt</div>
+      <div exerciselist>
+        Führe 'git remote add origin git@github.com:[DeinName]/[DeinProjekt].git' aus, um deinen Ordner mit dem git
+        Repository zu verknüpfen.
+      </div>
+      <div exerciselist>Führe 'git branch -M main' aus.</div>
+      <div exerciselist>
+        Führe 'git push -u origin main' aus, um alle Daten aus deinem Ordner nach Github hochzuladen.
+      </div>
+      <div exerciselist>
+        Wenn alle Dateien in deinem Github-Repository angezeigt werden, hast du alles richtig gemacht!
+      </div>
+    </task-text>
+  </task>
+
+  <task id="task-5">
+    <div title>Herunterladen</div>
+    <task-text>
+      <div exercise>
+        Dein Projekt sollte jetzt bei Github vorliegen. Nun möchtest du es von z.B. einem anderen PC aus herunterladen.
+        Wir imitieren das ganze mit einem anderen Ordner.
+      </div>
+      <div exerciselist>Erstelle einen neuen Ordner und führe 'git init' aus.</div>
+      <div exerciselist>
+        Führe 'git remote add origin git@github.com:[DeinName]/[DeinProjekt].git' aus, um deinen Ordner mit dem git
+        Repository zu verknüpfen.
+      </div>
+      <div exerciselist>
+        Führe 'git fetch' aus, um zu prüfen, ob Daten, die nicht in deinem Ordner sind, auf Github liegen.
+      </div>
+      <div exerciselist>
+        Führe 'git pull' aus, um die Daten, die nicht in deinem Ordner sind, von Github herunterzuladen.
+      </div>
+      <div exerciselist>Eventuell musst du noch den Branch wechseln. Das geht mit 'git branch main'.</div>
+      <div exerciselist>Wenn alle Dateien im neu erstellten Ordner angezeigt werden, hat alles funktioniert.</div>
+    </task-text>
+  </task>
+</section>
