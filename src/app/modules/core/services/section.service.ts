@@ -14,6 +14,7 @@ export class SectionService {
     'gitbasics',
     'javascript',
     'typescript',
+    'gitexpert',
     'angular',
     'ionic',
     'nestjs',

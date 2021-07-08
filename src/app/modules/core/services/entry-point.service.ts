@@ -34,6 +34,7 @@ export class EntryPointService {
         'gitbasics',
         'javascript',
         'typescript',
+        'gitexpert',
         'angular',
         'ionic',
         'nestjs',
@@ -46,7 +47,18 @@ export class EntryPointService {
         'Du bist Gründer, Unternehmer oder suchst aus anderen Gründen noch fähige App- und Webentwickler für dein Unternehmen?',
       image: '../../assets/images/entry-point-images/company.svg',
       text: 'Wir bieten deinem Unternehmen Weiterbildungsmöglichkeiten in der App- und Webentwicklung. Dabei bieten wir eine umfassende Betreuung mit wöchentlichen Meetings an. Dabei schätzen wir ebenso das Potenzial der einzelnen Akademie Teilnehmer ein, um die bestmöglichen Webentwickler für dein Unternehmen zu finden.',
-      sections: ['html', 'css', 'bootstrap', 'gitbasics', 'javascript', 'typescript', 'angular', 'ionic', 'nestjs'],
+      sections: [
+        'html',
+        'css',
+        'bootstrap',
+        'gitbasics',
+        'javascript',
+        'typescript',
+        'gitexpert',
+        'angular',
+        'ionic',
+        'nestjs',
+      ],
     },
   ];
 
