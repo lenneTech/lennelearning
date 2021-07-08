@@ -8,6 +8,9 @@ import { NbAccordionModule, NbButtonModule, NbCardModule, NbLayoutModule } from 
 import { ReviewComponent } from './components/review/review.component';
 import { HelperDialogComponent } from './components/helper-dialog/helper-dialog.component';
 import { DialogComponent } from './components/dialog/dialog.component';
+import { BannerComponent } from './components/banner/banner.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { TextImageListComponent } from './components/text-image-list/text-image-list.component';
 
 @NgModule({
   imports: [
@@ -32,11 +35,17 @@ import { DialogComponent } from './components/dialog/dialog.component';
     // Dialogs
     HelperDialogComponent,
     DialogComponent,
+    BannerComponent,
+    CarouselComponent,
+    TextImageListComponent,
   ],
   exports: [
     // Components
     EntryPointCardComponent,
     ReviewComponent,
+    BannerComponent,
+    CarouselComponent,
+    TextImageListComponent,
   ],
 })
 export class CoreModule {}

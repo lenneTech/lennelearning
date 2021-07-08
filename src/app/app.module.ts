@@ -46,11 +46,11 @@ import { HighlightOptions, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
   providers: [
     {
       provide: HIGHLIGHT_OPTIONS,
-      useValue: <HighlightOptions>{
+      useValue: {
         fullLibraryLoader: () => import('highlight.js'),
         lineNumbersLoader: () => import('highlightjs-line-numbers.js'),
         lineNumbers: true,
-      },
+      } as HighlightOptions,
     },
   ],
   bootstrap: [AppComponent],

@@ -12,38 +12,29 @@ export class EntryPointService {
   private _entryPoints: EntryPoint[] = [
     {
       id: 'berufserkunder',
-      title: 'Berufserkunder/in',
+      title: 'Berufsinteressierte',
       cardBackTitle: 'Was machen Webentwickler?',
-      image: '../../assets/images/berufserkunder.png',
+      image: '../../assets/images/entry-point-images/berufsinteressent.svg',
       description:
         'An alle die sich für die Web- und Appentwicklung interessieren und einen Einblick in die Berufswelt von Softwareentwicklern bekommen wollen. Der Kurs beginnt dabei mit einer Berufsfeldserkundung, in der dir zunächst die verschiedenen Berufe rund um die Softwareentwiclkung sowie deren Berufslltag und Aufgabenfelder vorgestellt werden. Danach lernst du schon die Grundlagen der Webentwicklung, um schon eigene Webseiten erstellen zu können',
       sections: ['beruf', 'html', 'css', 'bootstrap', 'gitbasics', 'javascript'],
     },
     {
-      id: 'schulpraktikant',
-      title: 'Schulpraktikant/in',
-      cardBackTitle: 'Du bist Schüler/in?',
-      image: '../../assets/images/schulpraktikant.png',
-      description:
-        'Du bist Schüler/in und suchst noch ein Praktikum? Wir helfen dir gerne einen praktischen Einblick in die Web- und Appentwicklung zu bekommen. Dabei wirst du in unseren Kursen die grundlegenden Konzepte der Webentwicklung lernen, um so schon erste eigene Webseiten programmieren zu können. Das Praktikum geht dabei 2-3 Wochen, meld dich gerne bei uns!',
-      sections: ['beruf', 'html', 'css', 'bootstrap', 'gitbasics', 'javascript'],
-    },
-    {
       id: 'praktikant',
-      title: 'Praktikant/in',
+      title: 'Praktikanten',
       cardBackTitle: 'Du suchst ein Praktikum?',
-      image: '../../assets/images/praktikant.png',
+      image: '../../assets/images/entry-point-images/praktikant.svg',
       description:
-        'Du bist Student, befindest dich in einer Weiterbildung oder suchst aus anderen Gründen noch ein Praktikum? Wir bieten dir die Möglichkeit in bis zu 12 Wochen die Web- und Appentwicklung in der Praxis kennenzulernen. Zunächst arbeitest du in einer Vorbereitungsphase unsere Kurse durch, um im Praktikum direkt mit deinem eigenen Projekt durchstarten zu können. Wenn du schon Vorkenntnisse hast, kannst du natürlich unter Absprache verschiedene Teile überspringen und sofort loslegen.',
+        'Du bist Schüler, Student, befindest dich in einer Weiterbildung oder suchst aus anderen Gründen noch ein Praktikum? Wir bieten dir die Möglichkeit in bis zu 12 Wochen die Web- und Appentwicklung in der Praxis kennenzulernen. Zunächst arbeitest du in einer Vorbereitungsphase unsere Kurse durch, um im Praktikum direkt mit deinem eigenen Projekt durchstarten zu können. Wenn du schon Vorkenntnisse hast, kannst du natürlich unter Absprache verschiedene Teile überspringen und sofort loslegen.',
       sections: ['beruf', 'html', 'css', 'bootstrap', 'gitbasics', 'javascript', 'typescript', 'angular', 'ionic', 'nestjs'],
     },
     {
-      id: 'dojo',
-      title: 'Dojo Mitglied',
-      cardBackTitle: 'Tritt unserem Coding-Dojo bei!',
-      image: '../../assets/images/dojo.png',
+      id: 'unternehmen',
+      title: 'Unternehmen',
+      cardBackTitle: 'Dein Unternehmen braucht fähige Webentwickler?',
+      image: '../../assets/images/entry-point-images/company.svg',
       description:
-        'Du interessierst dich privat für Web- und Appentwicklung oder generell für neue Technologien und möchtest dich austauschen? Dann tritt unserem Coding Dojo bei. Lass uns zusammen in Workshops, Hackathons oder im wöchentlichen Treffen über Ideen, neue Technologien, Projekte, etc sprechen und neue Innovationen ausprobieren.',
+        'Wir bieten deinem Unternehmen Weiterbildungsmöglichkeiten in der App- und Webentwicklung. Dabei bieten wir eine umfassende Betreuung mit wöchentlichen Meetings an. Dabei schätzen wir ebenso das Potenzial der einzelnen Akademie Teilnehmer ein, um die bestmöglichen Webentwickler für dein Unternehmen zu finden.',
       sections: ['html', 'css', 'bootstrap', 'gitbasics', 'javascript', 'typescript', 'angular', 'ionic', 'nestjs'],
     },
   ];

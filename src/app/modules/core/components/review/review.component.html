@@ -1,10 +1,17 @@
 <div class="row align-items-center">
-  <div [ngClass]="{ 'col-4': true, 'order-last': reversed, 'd-flex justify-content-end': reversed }">
-    <img class="img-circle" alt="Foto von Reviewer" [src]="imageUrl" />
+  <div class="reviewer-block" [ngClass]="{ 'col-12 col-md-4': true, 'order-md-last': reversed }">
+    <div class="d-flex justify-content-center">
+      <img class="img-circle" alt="Foto von Reviewer" [src]="review.imageUrl" />
+    </div>
+    <div class="reviewer-text mt-3">
+      <b>{{ review.reviewerTitle }}</b
+      ><br />
+      {{ review.reviewerSubtitle }}
+    </div>
   </div>
-  <div class="col-8">
+  <div class="col-12 col-md-8">
     <div class="review-text text-muted">
-      <span class="quotation-mark">„</span>{{ review }}<span class="quotation-mark">“</span>
+      <span class="quotation-mark">„</span>{{ review.text }}<span class="quotation-mark">“</span>
     </div>
   </div>
 </div>

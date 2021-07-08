@@ -1,3 +1,4 @@
+import { Review } from './../../interfaces/review.interface';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -6,8 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./review.component.scss'],
 })
 export class ReviewComponent implements OnInit {
-  @Input() review: string;
-  @Input() imageUrl: string;
+  @Input() review: Review;
   @Input() reversed: boolean;
 
   constructor() {}
