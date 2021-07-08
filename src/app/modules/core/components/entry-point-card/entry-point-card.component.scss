@@ -1,5 +1,5 @@
 .card {
-  height: 500px;
+  height: 520px;
   width: 400px;
   box-shadow: 0 0 4px 0 #bdbdbd;
   border: none;
@@ -7,23 +7,39 @@
 }
 
 .link {
-  font-size: 1.15rem;
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: bold;
   cursor: pointer;
+  text-align: center;
+}
+
+.learn-more {
+  text-align: center;
+  color: var(--color-primary-500);
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-decoration: underline;
 }
 
 .card-text {
   font-size: 1rem;
-  line-height: 2rem;
+  line-height: 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  text-align: center;
 }
 
 .card-title {
-  font-size: 1.15rem;
-  font-weight: 700;
-  margin-bottom: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .card-img {
-  height: 100%;
-  width: 100%;
+  width: 340px;
+  height: 260px;
+  object-fit: cover;
 }

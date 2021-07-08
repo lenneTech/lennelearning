@@ -1,35 +1,37 @@
-<nb-reveal-card class="card">
-  <nb-card-front>
-    <nb-card class="card">
-      <nb-card-body class="d-flex align-items-center justify-content-around">
-        <div>
-          <img class="card-img" [src]="imageUrl" />
-        </div>
-      </nb-card-body>
-      <nb-card-footer>
-        <div class="card-title">
-          {{ title }}
-        </div>
-      </nb-card-footer>
-    </nb-card>
-  </nb-card-front>
-  <nb-card-back>
-    <nb-card class="card">
-      <nb-card-header>
-        <div class="card-title">
-          {{ backTitle }}
-        </div>
-      </nb-card-header>
-      <nb-card-body>
-        <div class="card-text">
-          {{ description }}
-        </div>
-      </nb-card-body>
-      <nb-card-footer>
-        <div class="link" [routerLink]="route" (click)="onLinkClicked()">
-          {{ linkText }}
-        </div>
-      </nb-card-footer>
-    </nb-card>
-  </nb-card-back>
-</nb-reveal-card>
+<!--<nb-reveal-card class="card">-->
+<!--  <nb-card-front>-->
+<!--   -->
+<!--  </nb-card-front>-->
+<!--  <nb-card-back>-->
+<!--    <nb-card class="card">-->
+<!--      <nb-card-header>-->
+<!--        <div class="card-title">-->
+<!--          {{ backTitle }}-->
+<!--        </div>-->
+<!--      </nb-card-header>-->
+<!--      <nb-card-body>-->
+<!--        <div class="card-text">-->
+<!--          {{ description }}-->
+<!--        </div>-->
+<!--      </nb-card-body>-->
+<!--      <nb-card-footer>-->
+<!--        <div class="link" [routerLink]="route" (click)="onLinkClicked()">-->
+<!--          {{ linkText }}-->
+<!--        </div>-->
+<!--      </nb-card-footer>-->
+<!--    </nb-card>-->
+<!--  </nb-card-back>-->
+<!--</nb-reveal-card>-->
+<nb-card class="card">
+  <nb-card-body class="d-flex align-items-top justify-content-around">
+    <div>
+      <img class="card-img" [src]="imageUrl" />
+      <h3 class="card-title">{{ title }}</h3>
+      <div class="card-text">{{ description }}</div>
+      <div class="learn-more">Erfahre hier mehr...</div>
+    </div>
+  </nb-card-body>
+  <nb-card-footer>
+    <div class="link" [routerLink]="route">Jetzt Durchstarten! 🚀</div>
+  </nb-card-footer>
+</nb-card>
