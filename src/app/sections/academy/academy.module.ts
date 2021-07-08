@@ -37,6 +37,7 @@ import { HighlightPlusModule } from 'ngx-highlightjs/plus';
 import { HighlightModule } from 'ngx-highlightjs';
 import { TaskCodeComponent } from './components/task-code/task-code.component';
 import { PageLinkDirective } from './directives/page-link.directive';
+import { NestjsComponent } from './sections/nestjs/nestjs.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { PageLinkDirective } from './directives/page-link.directive';
     TypescriptComponent,
     AngularComponent,
     IonicComponent,
+    NestjsComponent,
 
     // Components
     SectionComponent,

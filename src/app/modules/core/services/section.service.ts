@@ -6,7 +6,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class SectionService {
-  private _sections: string[] = ['beruf', 'html', 'css', 'bootstrap', 'javascript', 'typescript', 'angular', 'ionic'];
+  private _sections: string[] = ['beruf', 'html', 'css', 'bootstrap', 'javascript', 'typescript', 'angular', 'ionic', 'nestjs'];
   private _currentSectionMenuItems: BehaviorSubject<NbMenuItem[]> = new BehaviorSubject<NbMenuItem[]>(null);
   currentSection: string;
 

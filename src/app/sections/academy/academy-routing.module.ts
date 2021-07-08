@@ -10,6 +10,7 @@ import { IonicComponent } from './sections/ionic/ionic.component';
 import { AngularComponent } from './sections/angular/angular.component';
 import { SectionGuard } from '../../modules/core/guards/section.guard';
 import { BootstrapComponent } from './sections/bootstrap/bootstrap.component';
+import { NestjsComponent } from './sections/nestjs/nestjs.component';
 
 const routes: Routes = [
   {
@@ -54,6 +55,11 @@ const routes: Routes = [
       {
         path: 'ionic',
         component: IonicComponent,
+        canActivate: [SectionGuard],
+      },
+      {
+        path: 'nestjs',
+        component: NestjsComponent,
         canActivate: [SectionGuard],
       },
     ],
