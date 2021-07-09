@@ -51,3 +51,12 @@ button:focus {
   background-color: var(--color-success-500) !important;
   border: none !important;
 }
+
+.bi {
+  font-size: 18px;
+}
+
+.bi-question-circle:hover {
+  color: var(--color-primary-500);
+  transition: 0.3s;
+}
