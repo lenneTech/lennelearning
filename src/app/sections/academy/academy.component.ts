@@ -27,7 +27,9 @@ export class AcademyComponent implements OnInit {
       }
 
       const menuItem: NbMenuItem = this.items.find((item) => item.title === this.sectionService.currentSection);
-      menuItem.children = items;
+      if (menuItem) {
+        menuItem.children = items;
+      }
     });
   }
 
