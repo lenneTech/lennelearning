@@ -1,6 +1,10 @@
 <nb-card class="task">
-  <nb-card-header [ngClass]="{ completedtop: completed }">
+  <nb-card-header
+    [ngClass]="{ completedtop: completed }"
+    class="d-flex justify-content-between align-items-center flex-row"
+  >
     <ng-content select="[title]"></ng-content>
+    <i *ngIf="hint" class="bi bi-question-circle cursor-pointer" (click)="openHelp()"></i>
   </nb-card-header>
   <nb-card-body>
     <ng-content select="[description]"></ng-content>
