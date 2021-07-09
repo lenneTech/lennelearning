@@ -40,6 +40,8 @@ import { PageLinkDirective } from './directives/page-link.directive';
 import { NestjsComponent } from './sections/nestjs/nestjs.component';
 import { GitBasicsComponent } from './sections/git-basics/git-basics.component';
 import { GitExpertComponent } from './sections/git-expert/git-expert.component';
+import { InfoDirective } from './directives/info.directive';
+import { InfoListDirective } from './directives/info-list.directive';
 
 @NgModule({
   declarations: [
@@ -77,6 +79,8 @@ import { GitExpertComponent } from './sections/git-expert/git-expert.component';
     ExtraQuestionDirective,
     LinkDirective,
     PageLinkDirective,
+    InfoDirective,
+    InfoListDirective,
   ],
   imports: [
     AcademyRoutingModule,

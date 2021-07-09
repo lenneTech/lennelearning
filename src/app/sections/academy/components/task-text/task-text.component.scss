@@ -22,4 +22,19 @@
       color: var(--color-success-500);
     }
   }
+
+  .info {
+    margin-bottom: 1em;
+    font-size: 1.4rem;
+    line-height: 1.5em;
+  }
+
+  .infolist {
+    margin-left: 1.5em;
+    display: list-item;
+    list-style-type: decimal;
+    list-style-position: outside;
+    font-size: 1.2rem;
+    line-height: 2em;
+  }
 }
