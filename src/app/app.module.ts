@@ -12,11 +12,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbThemeModule, NbLayoutModule, NbDialogModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { HighlightOptions, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+import { InprintComponent } from './pages/inprint/inprint.component';
+import { PrivacyComponent } from './pages/privacy/privacy.component';
 
 @NgModule({
   declarations: [
     // Components
     AppComponent,
+
+    // Pages
+    InprintComponent,
+    PrivacyComponent,
   ],
   imports: [
     // Angular

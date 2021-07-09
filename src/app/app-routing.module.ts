@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { InprintComponent } from './pages/inprint/inprint.component';
+import { PrivacyComponent } from './pages/privacy/privacy.component';
 
 const routes: Routes = [
   {
@@ -9,6 +11,14 @@ const routes: Routes = [
   {
     path: 'academy',
     loadChildren: () => import('./sections/academy/academy.module').then((m) => m.AcademyModule),
+  },
+  {
+    path: 'impressum',
+    component: InprintComponent,
+  },
+  {
+    path: 'datenschutz',
+    component: PrivacyComponent,
   },
 ];
 
