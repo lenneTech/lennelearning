@@ -14,6 +14,7 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { HighlightOptions, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { InprintComponent } from './pages/inprint/inprint.component';
 import { PrivacyComponent } from './pages/privacy/privacy.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { PrivacyComponent } from './pages/privacy/privacy.component';
     // Pages
     InprintComponent,
     PrivacyComponent,
+    NotFoundComponent,
   ],
   imports: [
     // Angular
