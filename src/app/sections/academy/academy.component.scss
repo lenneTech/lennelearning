@@ -7,3 +7,14 @@
 a {
   text-decoration: none;
 }
+
+.bi-door-open {
+  margin-left: 10px;
+  font-size: 18px;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--color-primary-500);
+    transition: 0.3s;
+  }
+}
