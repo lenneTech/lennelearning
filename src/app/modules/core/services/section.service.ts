@@ -1,6 +1,5 @@
 import { ElementRef, Injectable } from '@angular/core';
 import { NbMenuItem } from '@nebular/theme';
-import { NbMenuBadgeConfig } from '@nebular/theme/components/menu/menu.service';
 import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
