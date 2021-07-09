@@ -1,7 +1,7 @@
 <nb-card class="card">
   <nb-card-body class="d-flex align-items-top justify-content-around">
     <div>
-      <img class="card-img" [src]="imageUrl" />
+      <img loading="lazy" class="card-img" [src]="imageUrl" alt="Einstiegspunkt Illustration" />
       <h3 class="card-title">{{ title }}</h3>
       <div class="card-text">{{ description }}</div>
       <div class="learn-more" [routerLink]="showMoreRoute">Erfahre hier mehr...</div>
