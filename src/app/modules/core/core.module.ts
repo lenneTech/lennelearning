@@ -11,6 +11,8 @@ import { DialogComponent } from './components/dialog/dialog.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { TextImageListComponent } from './components/text-image-list/text-image-list.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
 import { BrandBannerComponent } from './components/brand-banner/brand-banner.component';
 import { HtmlSvgComponent } from './components/svg-components/html-svg/html-svg.component';
 import { CssSvgComponent } from './components/svg-components/css-svg/css-svg.component';
@@ -58,6 +60,12 @@ import { NestSvgComponent } from './components/svg-components/nest-svg/nest-svg.
     BootstrapSvgComponent,
     IonicSvgComponent,
     NestSvgComponent,
+    FooterComponent,
+    HeaderComponent,
+
+    // Dialogs
+    HelperDialogComponent,
+    DialogComponent,
   ],
   exports: [
     // Components
@@ -66,6 +74,8 @@ import { NestSvgComponent } from './components/svg-components/nest-svg/nest-svg.
     BannerComponent,
     CarouselComponent,
     TextImageListComponent,
+    FooterComponent,
+    HeaderComponent,
     BrandBannerComponent,
     HtmlSvgComponent,
     CssSvgComponent,
