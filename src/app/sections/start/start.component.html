@@ -15,20 +15,11 @@
       <div class="section">
         <app-banner [title]="title" [subtitle]="subtitle" [imageUrl]="imageUrl"></app-banner>
       </div>
-      <div class="section">
-        <div class="row">
-          <div class="d-none d-md-flex col-lg-12 justify-content-center">
-            <img class="technology-img" src="../../assets/images/logos/html.svg" />
-            <img class="technology-img" src="../../assets/images/logos/css.svg" />
-            <img class="technology-img" src="../../assets/images/logos/javascript.svg" />
-            <img class="technology-img" src="../../assets/images/logos/typescript.svg" />
-            <img class="technology-img" src="../../assets/images/logos/bootstrap.svg" />
-            <img class="technology-img" src="../../assets/images/logos/angular.svg" />
-            <img class="technology-img" src="../../assets/images/logos/ionic.svg" />
-            <img class="technology-img" src="../../assets/images/logos/nest.svg" />
-          </div>
-        </div>
-      </div>
+    </div>
+    <div class="container-fluid pe-0 ps-0 pb-3 pt-3 bg-brand-banner">
+      <app-brand-banner></app-brand-banner>
+    </div>
+    <div class="container">
       <div class="section">
         <h2 class="section-title">Das ist der Ablauf</h2>
         <app-text-image-list [listElements]="academyExplanations"></app-text-image-list>
@@ -49,20 +40,22 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="container-fluid p-0">
+      <div class="vertical-stripe bg-individual-blue">
+        <app-carousel [imageHeight]="'240px'" [imageWidth]="'240px'" [imageAsCircle]="true" [reviews]="companyReviews">
+        </app-carousel>
+      </div>
+    </div>
+
+    <div class="container">
       <div class="section">
         <h2 class="section-title">Das sagen unsere Absolventen</h2>
         <app-review *ngFor="let review of studentReviews; let i = index" [review]="review" [reversed]="i % 2 === 1">
         </app-review>
       </div>
     </div>
-
-    <!--    <div class="container-fluid p-0">-->
-    <!--      <div class="vertical-stripe bg-individual-cyan">-->
-    <!--        <app-carousel [imageHeight]="'280px'" [imageWidth]="'280px'" [imageAsCircle]="true" [reviews]="companyReviews">-->
-    <!--        </app-carousel>-->
-    <!--      </div>-->
-    <!--    </div>-->
-
     <!--    <div class="container-fluid p-0 section">-->
     <!--      <div class="vertical-stripe bg-individual-blue"></div>-->
     <!--    </div>-->
