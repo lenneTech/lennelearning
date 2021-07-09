@@ -11,9 +11,8 @@ describe('GitExpertComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GitExpertComponent ]
-    })
-    .compileComponents();
+      declarations: [GitExpertComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

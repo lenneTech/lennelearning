@@ -1,0 +1,19 @@
+.technology-img {
+  height: 95px;
+  width: auto;
+  padding: 30px;
+}
+
+.horizontal-scroll {
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+
+::ng-deep svg {
+  height: 100%;
+  width: auto;
+
+  path {
+    fill: #a4a4a4;
+  }
+}

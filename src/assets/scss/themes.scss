@@ -5,6 +5,8 @@ $nb-enable-css-custom-properties: true;
 
 $nb-themes: nb-register-theme(
   (
+    layout-text-font-size: 18px,
+    layout-text-line-height: 30px,
     color-info-100: #ccdcfa,
     color-info-200: #9bb8f6,
     color-info-300: #668be4,
