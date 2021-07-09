@@ -1,5 +1,6 @@
 import { ElementRef, Injectable } from '@angular/core';
 import { NbMenuItem } from '@nebular/theme';
+import { NbMenuBadgeConfig } from '@nebular/theme/components/menu/menu.service';
 import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
@@ -50,18 +51,33 @@ export class SectionService {
 
     sectionRef.nativeElement.querySelectorAll('[id^=task-]').forEach((node) => {
       const taskTitle = node.querySelector('.task-title').textContent;
+      const color = this.getTaskType(node);
       result.push({
         title: taskTitle,
         link: `/academy/${this.currentSection}`,
         fragment: node.id,
         badge: {
           dotMode: true,
-          status: 'primary',
+          status: color,
         },
       });
     });
 
     this.currentSectionMenuItems = result;
+  }
+
+  getTaskType(node) {
+    if (node.querySelectorAll('task-text')[0]) {
+      return 'success';
+    } else if (node.querySelectorAll('task-video')[0]) {
+      return 'info';
+    } else if (node.querySelectorAll('task-questions')[0]) {
+      return 'primary';
+    } else if (node.querySelectorAll('task-code')[0]) {
+      return 'warning';
+    } else {
+      return 'danger';
+    }
   }
 
   setCurrentSection(section: string): boolean {
