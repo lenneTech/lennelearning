@@ -22,6 +22,7 @@ import { AngularSvgComponent } from './components/svg-components/angular-svg/ang
 import { BootstrapSvgComponent } from './components/svg-components/bootstrap-svg/bootstrap-svg.component';
 import { IonicSvgComponent } from './components/svg-components/ionic-svg/ionic-svg.component';
 import { NestSvgComponent } from './components/svg-components/nest-svg/nest-svg.component';
+import { ContactCardComponent } from './components/contact-card/contact-card.component';
 
 @NgModule({
   imports: [
@@ -60,6 +61,7 @@ import { NestSvgComponent } from './components/svg-components/nest-svg/nest-svg.
     BootstrapSvgComponent,
     IonicSvgComponent,
     NestSvgComponent,
+    ContactCardComponent,
     FooterComponent,
     HeaderComponent,
 
@@ -85,6 +87,7 @@ import { NestSvgComponent } from './components/svg-components/nest-svg/nest-svg.
     BootstrapSvgComponent,
     IonicSvgComponent,
     NestSvgComponent,
+    ContactCardComponent,
   ],
 })
 export class CoreModule {}

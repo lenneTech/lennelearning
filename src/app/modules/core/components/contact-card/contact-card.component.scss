@@ -1,0 +1,33 @@
+.contact-card {
+  width: 800px;
+  height: 330px;
+  background-color: var(--color-primary-500);
+  overflow: hidden;
+
+  &-title {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  &-text {
+    color: #dddddd;
+    font-size: 1.15rem;
+    line-height: 1.75rem;
+    white-space: pre-line;
+  }
+
+  &-image {
+    height: 300px;
+    width: auto;
+  }
+
+  &-left {
+    padding-left: 3rem;
+    padding-top: 2rem;
+  }
+}
+
+nb-card-body {
+  overflow: hidden;
+}

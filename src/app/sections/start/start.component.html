@@ -48,6 +48,15 @@
         <app-review *ngFor="let review of studentReviews; let i = index" [review]="review" [reversed]="i % 2 === 1">
         </app-review>
       </div>
+      <div class="section">
+        <app-contact-card
+          [title]="'Melde dich bei uns!'"
+          [text]="
+            'Haben wir dein Interesse geweckt?\n Dann meld dich doch bei uns und erzähl uns mehr über dich.\n Wir freuen uns dich kennenzulernen!'
+          "
+          [image]="'../../assets/images/banner-images/contact.svg'"
+        ></app-contact-card>
+      </div>
     </div>
     <!--    <div class="container-fluid p-0 section">-->
     <!--      <div class="vertical-stripe bg-individual-blue"></div>-->
