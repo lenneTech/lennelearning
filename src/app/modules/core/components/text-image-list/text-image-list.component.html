@@ -1,5 +1,8 @@
 <div class="row" *ngFor="let element of listElements; let i = index">
-  <div class="col-12 col-lg-7 d-flex align-items-center" [ngClass]="{ 'order-last': i % 2 === 0 }">
+  <div
+    class="col-12 col-lg-7 d-flex align-items-center order-last order-lg-first"
+    [ngClass]="{ 'order-lg-last': i % 2 === 0 }"
+  >
     <div>
       <h3 class="title">{{ element.title }}</h3>
       <div class="text">{{ element.text }}</div>
