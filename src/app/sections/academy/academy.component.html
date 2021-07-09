@@ -1,10 +1,15 @@
 <nb-layout>
   <nb-layout-header fixed>
     <div class="container">
-      <div class="d-flex justify-content-start header">
+      <div class="d-flex justify-content-between header">
         <a routerLink="/">
           <div class="title">lt<span class="header-title-colored">academy</span></div>
         </a>
+
+        <div class="d-flex align-items-center" *ngIf="currentEntryPoint">
+          Als <b class="me-1 ms-1 color-primary">{{ currentEntryPoint?.address }}</b> eingecheckt.
+          <i class="bi bi-door-open" (click)="resetEntryPoint()"></i>
+        </div>
       </div>
     </div>
   </nb-layout-header>

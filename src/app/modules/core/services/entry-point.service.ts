@@ -13,6 +13,7 @@ export class EntryPointService {
     {
       id: 'berufserkunder',
       title: 'Berufsinteressierte',
+      address: 'Berufsinteressierter',
       description:
         'Du interessierst dich für Web- und Apptechnologien, weißt aber noch nicht was dich im Beruf erwartet?',
       image: '../../assets/images/entry-point-images/berufsinteressent.svg',
@@ -22,6 +23,7 @@ export class EntryPointService {
     {
       id: 'praktikant',
       title: 'Praktikanten',
+      address: 'Praktikant',
       description:
         'Du bist Schüler, Student, befindest dich in einer Weiterbildung oder suchst aus anderen Gründen noch ein Praktikum?',
       image: '../../assets/images/entry-point-images/praktikant.svg',
@@ -43,6 +45,7 @@ export class EntryPointService {
     {
       id: 'unternehmen',
       title: 'Unternehmen',
+      address: 'Unternehmer',
       description:
         'Du bist Gründer, Unternehmer oder suchst aus anderen Gründen noch fähige App- und Webentwickler für dein Unternehmen?',
       image: '../../assets/images/entry-point-images/company.svg',
@@ -91,5 +94,9 @@ export class EntryPointService {
 
   selectedEntryPointSections(): string[] {
     return this.selectedEntryPoint?.sections ? this.selectedEntryPoint?.sections : this.sectionService.sections;
+  }
+
+  reset(): void {
+    this.storageService.remove('selectedEntryPoint');
   }
 }
