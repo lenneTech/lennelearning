@@ -10,7 +10,7 @@ export class EntryPointCardComponent implements OnInit {
   @Input() title: string;
   @Input() description: string;
   @Input() imageUrl: string;
-  @Input() linkText: string;
+  @Input() showMoreRoute: string;
   @Input() route: string;
   @Output() linkClickEvent = new EventEmitter<boolean>();
 

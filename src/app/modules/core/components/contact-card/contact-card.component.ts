@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-contact-card',
@@ -9,8 +9,14 @@ export class ContactCardComponent implements OnInit {
   @Input() image: string;
   @Input() title: string;
   @Input() text: string;
+  @Input() buttonText: string;
+  @Output() buttonClicked = new EventEmitter<boolean>();
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  onButtonClicked(): void {
+    this.buttonClicked.emit(true);
+  }
 }

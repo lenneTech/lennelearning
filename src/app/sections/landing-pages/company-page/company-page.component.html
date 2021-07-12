@@ -17,22 +17,6 @@
         <h2 class="section-title">Das ist der Ablauf</h2>
         <app-text-image-list></app-text-image-list>
       </div>
-      <div class="section">
-        <h2 class="section-title">An wen richten wir uns?</h2>
-        <div class="row">
-          <div class="col-12 col-xl-4 d-flex justify-content-center" *ngFor="let entryPoint of entryPoints">
-            <app-entry-point-card
-              [title]="entryPoint.title"
-              [imageUrl]="entryPoint.image"
-              [description]="entryPoint.description"
-              [showMoreRoute]="entryPoint.landingRoute"
-              [route]="'/academy'"
-              (linkClickEvent)="setSelectedEntryPoint(entryPoint)"
-            >
-            </app-entry-point-card>
-          </div>
-        </div>
-      </div>
     </div>
 
     <div class="container-fluid p-0">
@@ -43,24 +27,17 @@
 
     <div class="container">
       <div class="section">
-        <h2 class="section-title">Das sagen unsere Absolventen</h2>
-        <app-review-list></app-review-list>
-      </div>
-      <div class="section">
         <app-contact-card
           [title]="'Melde dich bei uns!'"
           [text]="
             'Haben wir dein Interesse geweckt?\n Dann melde dich doch bei uns und erzähl uns mehr über dich.\n Wir freuen uns dich kennenzulernen!'
           "
           [image]="'../../assets/images/banner-images/contact.svg'"
-          [buttonText]="'Kontakt'"
-          (buttonClicked)="openMail()"
+          [buttonText]="'Angebot Anfordern'"
+          (buttonClicked)="sendOffer()"
         ></app-contact-card>
       </div>
     </div>
-    <!--    <div class="container-fluid p-0 section">-->
-    <!--      <div class="vertical-stripe bg-individual-blue"></div>-->
-    <!--    </div>-->
   </nb-layout-column>
   <nb-layout-footer fixed>
     <app-footer></app-footer>
