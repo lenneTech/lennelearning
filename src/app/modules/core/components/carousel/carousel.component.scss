@@ -1,37 +1,9 @@
-:host {
-  height: inherit;
-}
-
-.container {
-  height: inherit;
-}
-
-.row {
-  height: inherit;
-}
-
-.col {
-  height: inherit;
-}
-
-.carousel {
-  height: inherit;
-}
-
-.carousel-inner {
-  height: inherit;
-}
-
+@import 'src/assets/scss/utils';
 .carousel-item {
   position: relative;
   height: 100%;
-}
-
-.carousel-image {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .image-circle {
@@ -71,8 +43,6 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    position: absolute;
-    bottom: 35px;
   }
 
   &-image {
@@ -90,5 +60,12 @@
     font-size: 16px;
     color: white;
     text-align: center;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .image-circle {
+    height: 100px !important;
+    width: 100px !important;
   }
 }

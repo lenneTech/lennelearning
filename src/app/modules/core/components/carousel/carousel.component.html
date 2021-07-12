@@ -8,8 +8,8 @@
         data-bs-interval="10000"
       >
         <div class="row">
-          <div class="col-12 col-lg-4 d-none d-lg-flex justify-content-center">
-            <div class="carousel-image">
+          <div class="col-12 col-lg-4 d-flex justify-content-center">
+            <div class="d-flex flex-column align-items-center p-2">
               <img
                 [src]="review.imageUrl"
                 class="d-block"
@@ -23,18 +23,8 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-lg-8 d-flex align-items-center justify-content-center">
-            <div class="review-text">„{{ review.text }}“</div>
-          </div>
-        </div>
-        <div class="reviewer-sm-container">
-          <div class="d-flex d-lg-none align-items-center reviewer-sm">
-            <img class="reviewer-sm-image" [src]="review.imageUrl" />
-            <div class="reviewer-sm-text">
-              <b>{{ review.reviewerTitle }}</b
-              ><br />
-              {{ review.reviewerSubtitle }}
-            </div>
+          <div class="col-12 flex-column col-lg-8 d-flex align-items-center justify-content-center">
+            <div class="review-text text-center">„{{ review.text }}“</div>
           </div>
         </div>
       </div>
