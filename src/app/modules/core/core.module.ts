@@ -23,6 +23,7 @@ import { BootstrapSvgComponent } from './components/svg-components/bootstrap-svg
 import { IonicSvgComponent } from './components/svg-components/ionic-svg/ionic-svg.component';
 import { NestSvgComponent } from './components/svg-components/nest-svg/nest-svg.component';
 import { ContactCardComponent } from './components/contact-card/contact-card.component';
+import { ReviewListComponent } from './components/review-list/review-list.component';
 
 @NgModule({
   imports: [
@@ -68,6 +69,7 @@ import { ContactCardComponent } from './components/contact-card/contact-card.com
     // Dialogs
     HelperDialogComponent,
     DialogComponent,
+    ReviewListComponent,
   ],
   exports: [
     // Components
@@ -88,6 +90,7 @@ import { ContactCardComponent } from './components/contact-card/contact-card.com
     IonicSvgComponent,
     NestSvgComponent,
     ContactCardComponent,
+    ReviewListComponent,
   ],
 })
 export class CoreModule {}

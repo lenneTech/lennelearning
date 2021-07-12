@@ -4,7 +4,7 @@
       <img class="card-img" [src]="imageUrl" />
       <h3 class="card-title">{{ title }}</h3>
       <div class="card-text">{{ description }}</div>
-      <div class="learn-more">Erfahre hier mehr...</div>
+      <div class="learn-more" [routerLink]="showMoreRoute">Erfahre hier mehr...</div>
     </div>
   </nb-card-body>
   <nb-card-footer>
