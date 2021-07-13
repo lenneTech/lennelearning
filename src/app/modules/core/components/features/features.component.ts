@@ -7,23 +7,38 @@ import { TextImageInterface } from '../../interfaces/text-image.interface';
   styleUrls: ['./features.component.scss'],
 })
 export class FeaturesComponent implements OnInit {
-  @Input() listElements: TextImageInterface[] = [
+  @Input() imageUrl = '../../assets/images/banner-images/features.svg';
+  @Input() features: TextImageInterface[] = [
     {
-      title: 'Persönliche Betreuung',
-      text: '',
-      imageUrl: '../../assets/images/explanation-images/academy.svg',
+      title: 'Betreuung',
+      text:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut\n' +
+        'labore et dolore magna aliqua. Ut enim ad minim veniam',
+      iconClass: 'bi-person-fill',
     },
     {
-      title: 'Wöchentliche Meetings',
-      text: '',
-      imageUrl: '../../assets/images/explanation-images/projekt.svg',
+      title: 'Community',
+      text:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut\n' +
+        'labore et dolore magna aliqua. Ut enim ad minim veniam',
+      iconClass: 'bi-people-fill',
     },
     {
-      title: 'Lorem Ipsum',
-      text: '',
-      imageUrl: '../../assets/images/explanation-images/kooperation.svg',
+      title: 'MeetUps',
+      text:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut\n' +
+        'labore et dolore magna aliqua. Ut enim ad minim veniam',
+      iconClass: 'bi-calendar-week',
+    },
+    {
+      title: 'Lernplan',
+      text:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut\n' +
+        'labore et dolore magna aliqua. Ut enim ad minim veniam',
+      iconClass: 'bi-layout-text-sidebar-reverse',
     },
   ];
+
   constructor() {}
 
   ngOnInit(): void {}

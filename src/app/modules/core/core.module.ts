@@ -96,6 +96,7 @@ import { StepsComponent } from './components/steps/steps.component';
     ContactCardComponent,
     ReviewListComponent,
     StepsComponent,
+    FeaturesComponent,
   ],
 })
 export class CoreModule {}
