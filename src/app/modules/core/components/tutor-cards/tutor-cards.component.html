@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-12 col-lg-4 d-flex justify-content-center" *ngFor="let tutor of tutors">
+    <nb-card class="card">
+      <nb-card-body class="d-flex align-items-top justify-content-around">
+        <div class="d-flex flex-column align-items-center">
+          <img class="card-img" [src]="tutor.imageUrl" />
+          <h3 class="card-title">{{ tutor.title }}</h3>
+          <h4 class="card-subtitle">{{ tutor.subtitle }}</h4>
+          <div class="card-text">{{ tutor.text }}</div>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
