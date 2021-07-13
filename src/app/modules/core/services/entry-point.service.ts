@@ -19,7 +19,7 @@ export class EntryPointService {
       image: '../../assets/images/entry-point-images/berufsinteressent.svg',
       text: 'Dieser Kurs ist für alle die sich für die Web- und Appentwicklung interessieren und einen Einblick in die Berufswelt von Softwareentwicklern bekommen wollen. Der Kurs beginnt dabei mit einer Berufsfeldserkundung, in der dir zunächst die verschiedenen Berufe rund um die Softwareentwiclkung sowie deren Berufslltag und Aufgabenfelder vorgestellt werden. Danach lernst du schon die Grundlagen der Webentwicklung, um schon eigene Webseiten erstellen zu können',
       sections: ['beruf', 'html', 'css', 'bootstrap', 'gitbasics', 'javascript'],
-      landingRoute: '/job-explorer',
+      landingRoute: '/job-interested',
     },
     {
       id: 'praktikant',
@@ -42,7 +42,7 @@ export class EntryPointService {
         'ionic',
         'nestjs',
       ],
-      landingRoute: '/intern',
+      landingRoute: '/interns',
     },
     {
       id: 'unternehmen',

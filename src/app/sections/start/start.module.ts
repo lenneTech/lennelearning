@@ -5,9 +5,11 @@ import { StartRoutingModule } from './start-routing.module';
 import { NbButtonModule, NbCardModule, NbLayoutModule } from '@nebular/theme';
 import { CoreModule } from '../../modules/core/core.module';
 import { CompanyPageComponent } from '../landing-pages/company-page/company-page.component';
+import { InternPageComponent } from '../landing-pages/intern-page/intern-page.component';
+import { JobInterestedPageComponent } from '../landing-pages/job-interested-page/job-interested-page.component';
 
 @NgModule({
-  declarations: [StartComponent, CompanyPageComponent],
+  declarations: [StartComponent, CompanyPageComponent, InternPageComponent, JobInterestedPageComponent],
   imports: [StartRoutingModule, CommonModule, CoreModule, NbLayoutModule, NbButtonModule, NbCardModule],
 })
 export class StartModule {}
