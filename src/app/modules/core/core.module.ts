@@ -26,6 +26,7 @@ import { ContactCardComponent } from './components/contact-card/contact-card.com
 import { ReviewListComponent } from './components/review-list/review-list.component';
 import { FeaturesComponent } from './components/features/features.component';
 import { StepsComponent } from './components/steps/steps.component';
+import { TutorCardsComponent } from './components/tutor-cards/tutor-cards.component';
 
 @NgModule({
   imports: [
@@ -74,6 +75,7 @@ import { StepsComponent } from './components/steps/steps.component';
     ReviewListComponent,
     StepsComponent,
     FeaturesComponent,
+    TutorCardsComponent,
   ],
   exports: [
     // Components
@@ -97,6 +99,7 @@ import { StepsComponent } from './components/steps/steps.component';
     ReviewListComponent,
     StepsComponent,
     FeaturesComponent,
+    TutorCardsComponent,
   ],
 })
 export class CoreModule {}
