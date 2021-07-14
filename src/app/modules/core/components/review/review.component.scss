@@ -1,8 +1,8 @@
 @import 'src/assets/scss/utils';
 
 .img-circle {
-  height: 320px;
-  width: 320px;
+  height: 220px;
+  width: 220px;
   border-radius: 50%;
   display: inline-block;
   box-shadow: 0 0 8px 1px #b3b3b3;
@@ -10,11 +10,10 @@
 }
 
 .review-text {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-family: Open Sans, sans-serif;
   font-weight: 200;
   line-height: 2.25rem;
-  text-align: right;
   font-style: italic;
 }
 
@@ -31,8 +30,8 @@
 
 @media (max-width: 1405px) {
   .img-circle {
-    height: 260px;
-    width: 260px;
+    height: 180px;
+    width: 180px;
   }
   .review-text {
     font-size: 1rem;
@@ -41,8 +40,8 @@
 
 @include media-breakpoint-down(lg) {
   .img-circle {
-    height: 180px;
-    width: 180px;
+    height: 160px;
+    width: 160px;
   }
   .review-text {
     font-size: 1rem;
