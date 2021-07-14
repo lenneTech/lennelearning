@@ -42,6 +42,7 @@ import { GitBasicsComponent } from './sections/git-basics/git-basics.component';
 import { GitExpertComponent } from './sections/git-expert/git-expert.component';
 import { InfoDirective } from './directives/info.directive';
 import { InfoListDirective } from './directives/info-list.directive';
+import { SidebarTitleDirective } from './directives/sidebar-title.directive';
 
 @NgModule({
   declarations: [
@@ -81,6 +82,7 @@ import { InfoListDirective } from './directives/info-list.directive';
     PageLinkDirective,
     InfoDirective,
     InfoListDirective,
+    SidebarTitleDirective,
   ],
   imports: [
     AcademyRoutingModule,
