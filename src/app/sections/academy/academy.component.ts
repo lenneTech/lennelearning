@@ -1,4 +1,4 @@
-import { AfterViewChecked, Component, HostListener, OnDestroy, OnInit } from '@angular/core';
+import { AfterContentChecked, ChangeDetectorRef, Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { EntryPointService } from '../../modules/core/services/entry-point.service';
 import { Router } from '@angular/router';
 import { NbMenuItem } from '@nebular/theme';
@@ -12,7 +12,7 @@ import { NbSidebarService } from '@nebular/theme';
   templateUrl: './academy.component.html',
   styleUrls: ['./academy.component.scss'],
 })
-export class AcademyComponent implements OnInit, OnDestroy {
+export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked {
   sections: string[] = [];
   items: NbMenuItem[] = [];
   currentEntryPoint: EntryPoint;
@@ -23,7 +23,8 @@ export class AcademyComponent implements OnInit, OnDestroy {
     private entryPointService: EntryPointService,
     private router: Router,
     private sectionService: SectionService,
-    private sidebarService: NbSidebarService
+    private sidebarService: NbSidebarService,
+    private ref: ChangeDetectorRef
   ) {
     // Get current entry point
     this.subscriptions.add(
@@ -63,6 +64,10 @@ export class AcademyComponent implements OnInit, OnDestroy {
     if (!window.location.href.includes('/academy/')) {
       this.router.navigate([`/academy/${this.sections[0]}`]);
     }
+  }
+
+  ngAfterContentChecked() {
+    this.ref.detectChanges();
   }
 
   ngOnDestroy(): void {
