@@ -66,7 +66,7 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     }
   }
 
-  ngAfterContentChecked() {
+  ngAfterContentChecked(): void {
     this.ref.detectChanges();
   }
 
@@ -74,17 +74,17 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     this.subscriptions.unsubscribe();
   }
 
-  toggleSidebar() {
+  toggleSidebar(): void {
     this.sidebarService.toggle(false, 'left');
     this.sidebarCollapsed = !this.sidebarCollapsed;
   }
 
-  closeSidebar() {
+  closeSidebar(): void {
     this.sidebarService.collapse();
     this.sidebarCollapsed = true;
   }
 
-  openSidebar() {
+  openSidebar(): void {
     this.sidebarService.expand();
     this.sidebarCollapsed = false;
   }
@@ -107,7 +107,7 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     this.router.navigate(['/']);
   }
 
-  initSidebarCollapse() {
+  initSidebarCollapse(): void {
     // closed on mobile
     this.sidebarCollapsed = false;
     if (window.screen.width < 768) {
