@@ -49,7 +49,13 @@ export class SectionService {
     }
 
     sectionRef.nativeElement.querySelectorAll('[id^=task-]').forEach((node) => {
-      const taskTitle = node.querySelector('.task-title').textContent;
+      let taskTitle;
+      if (node.querySelector('.sidebar-title')) {
+        taskTitle = node.querySelector('.sidebar-title').textContent;
+      } else {
+        taskTitle = node.querySelector('.task-title').textContent;
+      }
+
       const color = this.getTaskType(node);
       result.push({
         title: taskTitle,
