@@ -11,31 +11,28 @@ export class FeaturesComponent implements OnInit {
   @Input() features: TextImageInterface[] = [
     {
       title: 'Betreuung',
-      text:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut\n' +
-        'labore et dolore magna aliqua. Ut enim ad minim veniam',
+      text: 'Als Mitglied unserer Akademie bekommst du eine individuelle Betreuung von unseren Tutoren. Wir helfen dir gerne, wenn du mal nicht weiterkommst oder Fragen hast.',
       iconClass: 'bi-person-fill',
     },
     {
       title: 'Community',
-      text:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut\n' +
-        'labore et dolore magna aliqua. Ut enim ad minim veniam',
+      text: 'Tausch dich mit anderen Teilnehmern oder Absolventen der Akademie aus, entwickelt gemeinsam Ideen und unterstützt euch gegenseitig.',
       iconClass: 'bi-people-fill',
     },
     {
       title: 'MeetUps',
-      text:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut\n' +
-        'labore et dolore magna aliqua. Ut enim ad minim veniam',
+      text: 'Im wöchentlichen Akademie Treffen kannst du deinen derzeitigen Lernstand vorstellen, Probleme und Fragen ansprechen und dich inspirieren lassen.',
       iconClass: 'bi-calendar-week',
     },
     {
       title: 'Lernplan',
-      text:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut\n' +
-        'labore et dolore magna aliqua. Ut enim ad minim veniam',
+      text: 'Zusätzlich zu den Video Kursen, haben wir einen eigenen Aufgabenkatalog mit Tipps und Musterlösungen angefertigt, um dich auf deinen Lernpfad noch besser zu unterstützen.',
       iconClass: 'bi-layout-text-sidebar-reverse',
+    },
+    {
+      title: 'Netzwerk',
+      text: 'In den letzten Jahren konnten wir mit einigen Unternehmen zusammenarbeiten und unser Netzwerk erweitern. Wenn du in der Akademie erfolgreich bist, empfehlen wir dich gerne in unserer Kooperative.',
+      iconClass: 'bi-globe',
     },
   ];
 
