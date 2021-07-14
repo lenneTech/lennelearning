@@ -3,13 +3,17 @@ import { CommonModule } from '@angular/common';
 import { AcademyComponent } from './academy.component';
 import { AcademyRoutingModule } from './academy-routing.module';
 import {
+  NbActionsModule,
   NbButtonModule,
   NbCardModule,
   NbLayoutModule,
   NbMenuModule,
   NbMenuService,
+  NbRouteTabsetComponent,
+  NbRouteTabsetModule,
   NbSidebarModule,
   NbSidebarService,
+  NbTabsetModule,
 } from '@nebular/theme';
 import { TaskVideoComponent } from './components/task-video/task-video.component';
 import { DescriptionDirective } from './directives/description.directive';
@@ -93,6 +97,8 @@ import { SidebarTitleDirective } from './directives/sidebar-title.directive';
     NbCardModule,
     CoreModule,
     NbMenuModule.forRoot(),
+    NbTabsetModule,
+    NbRouteTabsetModule,
     HighlightModule,
     HighlightPlusModule,
   ],
