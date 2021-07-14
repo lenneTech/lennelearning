@@ -1,3 +1,4 @@
+@import 'src/assets/scss/utils';
 .section-list-item {
   cursor: pointer;
   text-transform: uppercase;
@@ -8,6 +9,19 @@ a {
   text-decoration: none;
 }
 
+.bi-list {
+  font-size: 32px;
+}
+
+.bi-x {
+  font-size: 36px;
+}
+
+::ng-deep .route-tabset {
+  overflow: scroll;
+  margin-bottom: 3rem !important;
+}
+
 .bi-door-open {
   margin-left: 10px;
   font-size: 18px;
@@ -16,5 +30,20 @@ a {
   &:hover {
     color: var(--color-primary-500);
     transition: 0.3s;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  ::ng-deep .expanded {
+    width: 100% !important;
+    .main-container {
+      width: 100%;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  ::ng-deep .layout-container .fixed {
+    position: relative !important;
   }
 }
