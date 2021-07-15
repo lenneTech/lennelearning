@@ -11,3 +11,10 @@
 a {
   color: var(--link-text-color);
 }
+
+@media screen and (max-width: 576px) {
+  nb-accordion {
+    overflow: scroll;
+    position: absolute;
+  }
+}
