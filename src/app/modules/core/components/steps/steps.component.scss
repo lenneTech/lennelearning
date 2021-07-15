@@ -1,6 +1,5 @@
-.mt-180 {
-  margin-top: 180px;
-}
+@import 'src/assets/scss/utils';
+
 .title {
   font-size: 22px;
   font-weight: bold;
@@ -13,6 +12,16 @@
   font-size: 16px;
   line-height: 150%;
   text-align: center;
+}
+
+.step-space-top {
+  @include media-breakpoint-up('lg') {
+    margin-top: 180px;
+  }
+}
+
+.step-image {
+  max-width: 400px;
 }
 
 .outer-circle {

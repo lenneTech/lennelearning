@@ -1,20 +1,18 @@
-.banner-text {
-  margin-top: 5%;
-  white-space: pre-line;
+@import 'src/assets/scss/utils';
 
+.banner-text {
   .title {
-    font-size: 3.25rem;
+    font-size: 45px;
     font-family: Open Sans, sans-serif;
     font-weight: 700;
-    line-height: 5rem;
     margin-bottom: 3rem;
   }
 
   .subtitle {
-    font-size: 1.5rem;
+    font-size: 18px;
     font-family: Open Sans, sans-serif;
     font-weight: 200;
-    line-height: 2.25rem;
+    line-height: 30px;
   }
 }
 
@@ -22,4 +20,20 @@
   margin-top: -15%;
   width: 100%;
   height: auto;
+}
+
+@include media-breakpoint-up('md') {
+  .banner-text {
+    margin-top: 50px;
+    white-space: pre-line;
+
+    .title {
+      font-size: 50px;
+    }
+
+    .subtitle {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
 }

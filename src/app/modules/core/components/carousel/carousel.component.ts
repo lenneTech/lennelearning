@@ -21,8 +21,8 @@ export class CarouselComponent implements OnInit {
       reviewerSubtitle: 'CEO - Muster GmbH',
     },
   ];
-  @Input() imageWidth: string;
-  @Input() imageHeight: string;
+  @Input() imageWidth = '150px';
+  @Input() imageHeight = '150px';
   @Input() imageAsCircle: boolean;
 
   constructor() {}
