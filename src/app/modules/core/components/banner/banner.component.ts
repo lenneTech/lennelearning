@@ -9,6 +9,7 @@ export class BannerComponent implements OnInit {
   @Input() title: string;
   @Input() subtitle: string;
   @Input() imageUrl: string;
+  @Input() showAcademyBtn: boolean;
 
   constructor() {}
 

@@ -27,7 +27,7 @@ export class TutorCardsComponent implements OnInit {
     {
       title: 'Florian Steinhanses',
       subtitle: 'Werkstudent lenne.Tech GmbH',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      text: 'Ich begeister mich für die Entwicklung von Usability Komponenten und dabei insbesondere für mobile Applikationen mit minimalistischem Design.',
       imageUrl: 'https://lenne.tech/assets/images/team/florian-steinhanses.png',
       alt: 'Bild von Florian Steinhanses',
       contact: 'florian.steinhanses@lenne.tech',
