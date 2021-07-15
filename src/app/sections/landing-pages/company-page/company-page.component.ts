@@ -16,16 +16,19 @@ export class CompanyPageComponent implements OnInit {
       title: 'Vorbereitung',
       text: 'Im Rahmen der Akademie bereiten wir eure Kandidaten optimal auf ihr Praktikum vor, sodass sie euch schnellstmöglich bei euren Projekten unterstützen können.',
       imageUrl: '../../assets/images/explanation-images/academy.svg',
+      alt: 'Bild von einem Menschen der auf Büchern steht.',
     },
     {
       title: 'Evaluation',
       text: 'Durch die persönliche Betreuung und die wöchentlichen Meetings können wir den Lernstand der Akademie Teilnehmer gut einschätzen und evaluieren, inwiefern sich ein Kandidat für euer Unternehmen eignet.',
       imageUrl: '../../assets/images/explanation-images/strategy.svg',
+      alt: 'Bild von zwei diskutierenden Menschen.',
     },
     {
       title: 'Übernahme',
       text: 'Auch nach der Übernahme in euer Unternehmen können die Absolventen Teil der Community bleiben und unsere Akademie nutzen. Wir bleiben gerne in Kontakt und helfen euch bei euren Projekten.',
       imageUrl: '../../assets/images/explanation-images/community.svg',
+      alt: 'Bild von Menschen die Blöcke in einem Smartphone aufbauen.',
     },
   ];
   features: TextImageInterface[] = [
@@ -33,7 +36,6 @@ export class CompanyPageComponent implements OnInit {
       title: 'Einfach',
       text: 'Wir übernehmen die Vorbereitung auf das Praktikum für euch. So könnt ihr Zeit sparen und euch aufs Wesentliche konzentrieren.',
       iconClass: 'bi-x-diamond-fill',
-      alt: 'Bild von einem Menschen der auf Büchern steht.',
     },
     {
       title: 'Individuell',
