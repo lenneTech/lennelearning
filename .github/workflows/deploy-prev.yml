@@ -1,9 +1,9 @@
 name: Deploy
 
 on:
-  release:
-    types:
-      - released
+  push:
+    branches:
+      - main
 
 jobs:
   deploy:
@@ -19,8 +19,8 @@ jobs:
       - name: Build app
         run: npm run build:ssr
       - name: Build docker
-        run: docker-compose -f docker-compose.prod.yml build
+        run: docker-compose -f docker-compose.prev.yml build
       - name: Push docker
-        run: docker-compose -f docker-compose.prod.yml push
+        run: docker-compose -f docker-compose.prev.yml push
       - name: Deploy
-        run: docker stack deploy -c docker-compose.prod.yml --with-registry-auth academy-prod
+        run: docker stack deploy -c docker-compose.prev.yml --with-registry-auth academy-preview
