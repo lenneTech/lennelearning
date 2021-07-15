@@ -9,9 +9,11 @@
         <app-banner [title]="title" [subtitle]="subtitle" [imageUrl]="imageUrl"></app-banner>
       </div>
     </div>
+
     <div class="container-fluid pe-0 ps-0 pb-3 pt-3 bg-brand-banner">
       <app-brand-banner></app-brand-banner>
     </div>
+
     <div class="container">
       <div class="section">
         <h2 class="section-title">An wen richten wir uns?</h2>
@@ -33,27 +35,32 @@
         </div>
       </div>
     </div>
+
     <div class="container-fluid p-0">
       <div class="vertical-stripe bg-primary-500">
-        <app-carousel [imageHeight]="'180px'" [imageWidth]="'180px'" [imageAsCircle]="true"> </app-carousel>
+        <app-carousel [imageAsCircle]="true"> </app-carousel>
       </div>
     </div>
+
     <div class="container">
       <div class="section">
         <h2 class="section-title">Das erwartet dich bei uns</h2>
         <app-steps></app-steps>
       </div>
     </div>
+
     <div class="container-fluid p-0 overflow-hidden bg-primary-500">
       <div class="section">
         <app-features></app-features>
       </div>
     </div>
+
     <div class="container">
       <div class="section">
         <h2 class="section-title">Das sagen unsere Absolventen</h2>
         <app-review-list></app-review-list>
       </div>
+
       <div class="section">
         <app-contact-card
           [title]="'Melde dich bei uns!'"

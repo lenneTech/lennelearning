@@ -7,15 +7,14 @@ body {
 }
 
 .section {
-  margin-top: 4%;
-  margin-bottom: 4%;
+  margin-top: 80px;
+  margin-bottom: 80px;
 
   &-title {
     font-size: 42px;
     font-family: Open Sans, sans-serif;
     font-weight: 700;
-    line-height: 5rem;
-    margin-bottom: 4%;
+    margin-bottom: 50px;
     text-align: center;
   }
 }
