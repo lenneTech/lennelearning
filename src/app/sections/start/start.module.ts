@@ -7,9 +7,10 @@ import { CoreModule } from '../../modules/core/core.module';
 import { CompanyPageComponent } from '../landing-pages/company-page/company-page.component';
 import { InternPageComponent } from '../landing-pages/intern-page/intern-page.component';
 import { JobInterestedPageComponent } from '../landing-pages/job-interested-page/job-interested-page.component';
+import { BaseModule } from '@lenne.tech/ng-base';
 
 @NgModule({
   declarations: [StartComponent, CompanyPageComponent, InternPageComponent, JobInterestedPageComponent],
-  imports: [StartRoutingModule, CommonModule, CoreModule, NbLayoutModule, NbButtonModule, NbCardModule],
+  imports: [StartRoutingModule, CommonModule, CoreModule, NbLayoutModule, NbButtonModule, NbCardModule, BaseModule],
 })
 export class StartModule {}

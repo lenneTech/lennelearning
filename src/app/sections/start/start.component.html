@@ -15,8 +15,11 @@
     <div class="container">
       <div class="section">
         <h2 class="section-title">An wen richten wir uns?</h2>
-        <div class="row">
-          <div class="col-12 col-xl-4 d-flex justify-content-center" *ngFor="let entryPoint of entryPoints">
+        <div class="row" [ltMatchHeight]="['card-container', 'card']">
+          <div
+            class="col-12 col-xl-4 d-flex justify-content-center card-container"
+            *ngFor="let entryPoint of entryPoints"
+          >
             <app-entry-point-card
               [title]="entryPoint.title"
               [imageUrl]="entryPoint.image"
