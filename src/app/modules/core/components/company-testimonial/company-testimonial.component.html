@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col-8 d-flex flex-column align-items-center">
+      <img
+        class="layout-svg mb-3"
+        src="../../assets/images/quote%20illust.svg"
+        alt="Illustration von Anführungszeichen"
+        loading="lazy"
+      />
+      <div class="review-text mb-1">„{{ review.text }}“</div>
+      <div class="d-flex flex-column align-items-center p-2 mb-1">
+        <img loading="lazy" [src]="review.imageUrl" class="d-block image-circle" alt="Bild von einem Menschen" />
+        <div class="reviewer-text mt-3">
+          <b>{{ review.reviewerTitle }}</b
+          ><br />
+          {{ review.reviewerSubtitle }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
