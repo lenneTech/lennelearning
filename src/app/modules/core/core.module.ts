@@ -27,6 +27,7 @@ import { ReviewListComponent } from './components/review-list/review-list.compon
 import { FeaturesComponent } from './components/features/features.component';
 import { StepsComponent } from './components/steps/steps.component';
 import { TutorCardsComponent } from './components/tutor-cards/tutor-cards.component';
+import { CompanyTestimonialComponent } from './components/company-testimonial/company-testimonial.component';
 
 @NgModule({
   imports: [
@@ -76,6 +77,7 @@ import { TutorCardsComponent } from './components/tutor-cards/tutor-cards.compon
     StepsComponent,
     FeaturesComponent,
     TutorCardsComponent,
+    CompanyTestimonialComponent,
   ],
   exports: [
     // Components
@@ -100,6 +102,7 @@ import { TutorCardsComponent } from './components/tutor-cards/tutor-cards.compon
     StepsComponent,
     FeaturesComponent,
     TutorCardsComponent,
+    CompanyTestimonialComponent,
   ],
 })
 export class CoreModule {}

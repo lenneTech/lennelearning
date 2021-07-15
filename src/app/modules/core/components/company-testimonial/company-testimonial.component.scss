@@ -1,0 +1,59 @@
+@import 'src/assets/scss/utils';
+.layout-svg {
+  max-width: 250px;
+}
+
+.image-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: inline-block;
+  object-fit: cover;
+}
+
+.review-text {
+  color: #252525;
+  font-family: Open Sans, sans-serif;
+  font-weight: 200;
+  line-height: 2.25rem;
+  text-align: center;
+}
+
+.reviewer-text {
+  line-height: 20px;
+  font-size: 16px;
+  color: #252525;
+  text-align: center;
+  font-family: Open Sans, sans-serif;
+}
+
+.reviewer-sm {
+  &-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &-image {
+    border-radius: 50%;
+    display: inline-block;
+    object-fit: cover;
+    height: 80px;
+    width: 80px;
+    margin-right: 20px;
+  }
+
+  &-text {
+    line-height: 20px;
+    font-size: 16px;
+    color: #252525;
+    text-align: center;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .image-circle {
+    height: 100px !important;
+    width: 100px !important;
+  }
+}
