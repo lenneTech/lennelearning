@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { EntryPointService } from '../../services/entry-point.service';
 
 @Component({
   selector: 'app-banner',
@@ -9,8 +10,13 @@ export class BannerComponent implements OnInit {
   @Input() title: string;
   @Input() subtitle: string;
   @Input() imageUrl: string;
+  @Input() showAcademyBtn: boolean;
+  @Input() entryPointId: string;
 
-  constructor() {}
+  constructor(private entryPointService: EntryPointService) {}
 
+  setSelectedEntryPoint() {
+    this.entryPointService.setEntryPointById(this.entryPointId);
+  }
   ngOnInit(): void {}
 }

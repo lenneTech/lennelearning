@@ -3,6 +3,16 @@
     <div class="banner-text">
       <h1 class="title">{{ title }}</h1>
       <h2 class="subtitle">{{ subtitle }}</h2>
+      <button
+        class="mt-3"
+        nbButton
+        status="primary"
+        *ngIf="showAcademyBtn"
+        (click)="setSelectedEntryPoint()"
+        routerLink="/academy"
+      >
+        Zur Akademie
+      </button>
     </div>
   </div>
   <div class="d-none col-xl-6 d-xl-flex justify-content-end">
