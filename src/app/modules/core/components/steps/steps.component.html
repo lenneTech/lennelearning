@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-12 col-lg-4" *ngFor="let step of steps; let i = index">
     <div class="p-4" [ngClass]="{ 'mt-180': i % 2 === 0 }">
-      <div><img [src]="step.imageUrl" /></div>
+      <div><img loading="lazy" [alt]="step.alt" [src]="step.imageUrl" /></div>
       <div class="d-flex justify-content-center m-3">
         <div class="outer-circle">
           <div class="circle">{{ i + 1 }}</div>

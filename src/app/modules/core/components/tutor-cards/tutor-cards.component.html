@@ -3,7 +3,7 @@
     <nb-card class="card">
       <nb-card-body class="d-flex align-items-top justify-content-around">
         <div class="d-flex flex-column align-items-center">
-          <img class="card-img" [src]="tutor.imageUrl" />
+          <img class="card-img" loading="lazy" [alt]="tutor.alt" [src]="tutor.imageUrl" />
           <h3 class="card-title">{{ tutor.title }}</h3>
           <h4 class="card-subtitle">{{ tutor.subtitle }}</h4>
           <div class="card-text">{{ tutor.text }}</div>

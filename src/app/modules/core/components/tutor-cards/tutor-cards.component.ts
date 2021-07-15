@@ -13,6 +13,7 @@ export class TutorCardsComponent implements OnInit {
       subtitle: 'CEO lenne.Tech GmbH',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       imageUrl: 'https://lenne.tech/assets/images/team/kai.png',
+      alt: 'Bild von Kai Haase',
       contact: 'kai.haase@lenne.tech',
     },
     {
@@ -20,6 +21,7 @@ export class TutorCardsComponent implements OnInit {
       subtitle: 'CTO lenne.Tech GmbH',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       imageUrl: 'https://lenne.tech/assets/images/team/pascal-klesse.png',
+      alt: 'Bild von Pascal Klesse',
       contact: 'pascal.klesse@lenne.tech',
     },
     {
@@ -27,6 +29,7 @@ export class TutorCardsComponent implements OnInit {
       subtitle: 'Werkstudent lenne.Tech GmbH',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       imageUrl: 'https://lenne.tech/assets/images/team/florian-steinhanses.png',
+      alt: 'Bild von Florian Steinhanses',
       contact: 'florian.steinhanses@lenne.tech',
     },
   ];
