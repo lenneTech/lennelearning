@@ -54,7 +54,7 @@ export class SectionService {
     sectionRef.nativeElement.querySelectorAll('[id^=task-]').forEach((node) => {
       let taskTitle;
 
-      // checks if there is a explicit sidebar-title to put inside the menu
+      // Checks if there is a explicit sidebar-title to put inside the menu
       if (node.querySelector('.sidebar-title')) {
         taskTitle = node.querySelector('.sidebar-title').textContent;
       } else {
@@ -63,7 +63,7 @@ export class SectionService {
 
       const color = this.getTaskType(node);
 
-      // generates the sub-items for the sections
+      // Generates the sub-items for the sections
       result.push({
         title: taskTitle,
         link: `/academy/${this.currentSection}`,
@@ -78,7 +78,9 @@ export class SectionService {
     this.currentSectionMenuItems = result;
   }
 
-  // checks which tasktype is used and generates a specific color for it
+  /**
+   * Checks which tasktype is used and generates a specific color for it
+   */
   getTaskType(node): string {
     if (node.querySelectorAll('task-text')[0]) {
       return 'success';
