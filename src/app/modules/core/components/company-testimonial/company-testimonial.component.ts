@@ -8,10 +8,10 @@ import { Review } from '../../interfaces/review.interface';
 })
 export class CompanyTestimonialComponent implements OnInit {
   @Input() review: Review = {
-    imageUrl: 'https://cdn.pixabay.com/photo/2018/07/25/08/58/business-3560916_960_720.jpg',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua',
-    reviewerTitle: 'Marie Musterfrau',
-    reviewerSubtitle: 'CEO - Muster GmbH',
+    imageUrl: '../../../../assets/images/testimonials/buuk.png',
+    text: 'Was uns an lenne.Tech und der Akademie besonders beeindruckt hat, ist die Effektivität in der Umsetzung. Die natürliche Auslese beim Durchlaufen der Akademie sorgt für den höchstmöglichen Eignungsgrad der Bewerber*innen. Wir haben uns so nicht nur etliche Stunden Aufwand bei der Evaluierung von Bewerbern gespart, sondern auch jede Menge Nerven beim Onboarding.',
+    reviewerTitle: 'Christopher Klein & Jens Helbig',
+    reviewerSubtitle: 'Gründer der Buuk GmbH',
   };
 
   constructor() {}

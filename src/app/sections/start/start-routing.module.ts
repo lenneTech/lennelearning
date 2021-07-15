@@ -12,17 +12,17 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: 'companies',
+    path: 'unternehmen',
     component: CompanyPageComponent,
     pathMatch: 'full',
   },
   {
-    path: 'interns',
+    path: 'praktikanten',
     component: InternPageComponent,
     pathMatch: 'full',
   },
   {
-    path: 'job-interested',
+    path: 'berufsinteressierte',
     component: JobInterestedPageComponent,
     pathMatch: 'full',
   },

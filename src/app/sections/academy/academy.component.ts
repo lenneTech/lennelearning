@@ -61,8 +61,8 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
 
   ngOnInit(): void {
     this.setSections();
-    if (!window.location.href.includes('/academy/')) {
-      this.router.navigate([`/academy/${this.sections[0]}`]);
+    if (!window.location.href.includes('/lernpfad/')) {
+      this.router.navigate([`/lernpfad/${this.sections[0]}`]);
     }
   }
 
@@ -96,7 +96,7 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     for (const section of this.sections) {
       this.items.push({
         title: section,
-        link: `/academy/${section}`,
+        link: `/lernpfad/${section}`,
         expanded: true,
       });
     }

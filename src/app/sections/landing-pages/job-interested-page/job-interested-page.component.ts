@@ -36,6 +36,6 @@ export class JobInterestedPageComponent implements OnInit {
   ngOnInit(): void {}
 
   sendApplication(): void {
-    window.open('mailto:bewerbung@lenne.tech');
+    window.open('mailto:info@lenne.tech');
   }
 }

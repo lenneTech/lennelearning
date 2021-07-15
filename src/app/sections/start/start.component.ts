@@ -9,17 +9,17 @@ import { SEOService } from '@lenne.tech/ng-base';
   styleUrls: ['./start.component.scss'],
 })
 export class StartComponent implements OnInit {
-  title = 'Willkommen in der lenne.Tech Academy';
+  title = 'Willkommen in der lenne.Tech Akademie';
   subtitle =
-    'Wir bieten Lernangebote für Webinteressierte, Schüler, Studenten bishin zu Berufserfahrenen.\n Schau welches unserer Profile am besten auf dich zutrifft und beginne deinen Lernpfad.';
+    'Wir bieten Lernangebote für Webinteressierte, Schüler, Studenten bis hin zu Berufserfahrenen.\n Wir bringen dich von 0 auf 100, du benötigst kein Vorwissen!\n Such dir den Lernpfad aus, der am besten zu dir passt.';
   imageUrl = '../../assets/images/banner-images/start-banner.svg';
   entryPoints: EntryPoint[] = [];
 
   constructor(private entryPointService: EntryPointService, private seoService: SEOService) {
     this.seoService.initPageForSEO(
-      'ltacademy - Die online Akademie für Webtechnologien',
+      'ltakademie - Die online Akademie für Webtechnologien',
       'Die online Akademie für Webtechnologien',
-      'academy, online, akademie, web, ltacademy'
+      'academy, online, akademie, web, ltakademie'
     );
   }
 

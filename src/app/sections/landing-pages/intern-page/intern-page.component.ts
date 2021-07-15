@@ -21,7 +21,7 @@ export class InternPageComponent implements OnInit {
   constructor() {}
 
   sendApplication(): void {
-    window.open('mailto:bewerbung@lenne.tech');
+    window.open('mailto:info@lenne.tech');
   }
 
   ngOnInit(): void {}

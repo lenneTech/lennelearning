@@ -11,7 +11,7 @@ export class TutorCardsComponent implements OnInit {
     {
       title: 'Kai Haase',
       subtitle: 'CEO lenne.Tech GmbH',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      text: 'Als Full-Stack Entwickler bewege ich mich am Liebsten zwischen Client und Server. Dabei fokussiere ich mich auf Buisnesslogik und Architektur.',
       imageUrl: 'https://lenne.tech/assets/images/team/kai.png',
       alt: 'Bild von Kai Haase',
       contact: 'kai.haase@lenne.tech',
@@ -19,7 +19,7 @@ export class TutorCardsComponent implements OnInit {
     {
       title: 'Pascal Klesse',
       subtitle: 'CTO lenne.Tech GmbH',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      text: 'Morgens flirte ich mit CSS/SCSS, in der Nacht kuschel ich mit Ubuntu und denke dabei an Angular.',
       imageUrl: 'https://lenne.tech/assets/images/team/pascal-klesse.png',
       alt: 'Bild von Pascal Klesse',
       contact: 'pascal.klesse@lenne.tech',

@@ -10,7 +10,7 @@ const routes: Routes = [
     loadChildren: () => import('./sections/start/start.module').then((m) => m.StartModule),
   },
   {
-    path: 'academy',
+    path: 'lernpfad',
     loadChildren: () => import('./sections/academy/academy.module').then((m) => m.AcademyModule),
   },
   {

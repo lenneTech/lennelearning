@@ -16,17 +16,17 @@ export class FeaturesComponent implements OnInit {
     },
     {
       title: 'Community',
-      text: 'Tausch dich mit anderen Teilnehmern oder Absolventen der Akademie aus, entwickelt gemeinsam Ideen und unterstützt euch gegenseitig.',
+      text: 'Tausche dich mit anderen Teilnehmern oder Absolventen der Akademie aus, entwickelt gemeinsam Ideen und unterstützt euch gegenseitig.',
       iconClass: 'bi-people-fill',
     },
     {
       title: 'MeetUps',
-      text: 'Im wöchentlichen Akademie Treffen kannst du deinen derzeitigen Lernstand vorstellen, Probleme und Fragen ansprechen und dich inspirieren lassen.',
+      text: 'Im wöchentlichen Akademietreffen kannst du deinen derzeitigen Lernstand vorstellen, Probleme und Fragen ansprechen und dich inspirieren lassen.',
       iconClass: 'bi-calendar-week',
     },
     {
-      title: 'Lernplan',
-      text: 'Zusätzlich zu den Video Kursen, haben wir einen eigenen Aufgabenkatalog mit Tipps und Musterlösungen angefertigt, um dich auf deinen Lernpfad noch besser zu unterstützen.',
+      title: 'Lernpfad',
+      text: 'Zusätzlich zu den Videokursen, haben wir einen eigenen Aufgabenkatalog mit Tipps und Musterlösungen angefertigt, um dich auf deinen Lernpfad noch besser zu unterstützen.',
       iconClass: 'bi-layout-text-sidebar-reverse',
     },
     {

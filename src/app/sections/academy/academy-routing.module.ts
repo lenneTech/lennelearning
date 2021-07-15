@@ -43,7 +43,7 @@ const routes: Routes = [
         canActivate: [SectionGuard],
       },
       {
-        path: 'gitbasics',
+        path: 'git-basics',
         component: GitBasicsComponent,
         canActivate: [SectionGuard],
       },
@@ -58,7 +58,7 @@ const routes: Routes = [
         canActivate: [SectionGuard],
       },
       {
-        path: 'gitexpert',
+        path: 'git-experte',
         component: GitExpertComponent,
         canActivate: [SectionGuard],
       },

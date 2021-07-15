@@ -66,7 +66,7 @@ export class SectionService {
       // Generates the sub-items for the sections
       result.push({
         title: taskTitle,
-        link: `/academy/${this.currentSection}`,
+        link: `/lernpfad/${this.currentSection}`,
         fragment: node.id,
         badge: {
           dotMode: true,

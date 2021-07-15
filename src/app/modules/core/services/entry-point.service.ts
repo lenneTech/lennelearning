@@ -19,11 +19,11 @@ export class EntryPointService {
       title: 'Berufsinteressierte',
       address: 'Berufsinteressierter',
       description:
-        'Du interessierst dich für Web- und Apptechnologien, weißt aber noch nicht was dich im Beruf erwartet?',
+        'Du interessierst dich für Web- und Apptechnologien, weißt aber noch nicht, was dich im Beruf erwartet?',
       image: '../../assets/images/entry-point-images/berufsinteressent.svg',
       text: 'Dieser Kurs ist für alle die sich für die Web- und Appentwicklung interessieren und einen Einblick in die Berufswelt von Softwareentwicklern bekommen wollen. Der Kurs beginnt dabei mit einer Berufsfeldserkundung, in der dir zunächst die verschiedenen Berufe rund um die Softwareentwiclkung sowie deren Berufslltag und Aufgabenfelder vorgestellt werden. Danach lernst du schon die Grundlagen der Webentwicklung, um schon eigene Webseiten erstellen zu können',
       sections: ['beruf', 'html', 'css', 'bootstrap', 'gitbasics', 'javascript'],
-      landingRoute: '/job-interested',
+      landingRoute: '/berufsinteressierte',
     },
     {
       id: 'praktikant',
@@ -45,18 +45,18 @@ export class EntryPointService {
         'angular',
         'nestjs',
       ],
-      landingRoute: '/interns',
+      landingRoute: '/praktikanten',
     },
     {
       id: 'unternehmen',
       title: 'Unternehmen',
       address: 'Unternehmer',
       description:
-        'Du bist Gründer, Unternehmer oder suchst aus anderen Gründen noch fähige App- und Webentwickler für dein Unternehmen?',
+        'Dein Unternehmen sucht fähige App- und Webentwickler? Oder ihr möchtet gerne Anwendungsentwickler ausbilden?',
       image: '../../assets/images/entry-point-images/company.svg',
       text: 'Wir bieten deinem Unternehmen Weiterbildungsmöglichkeiten in der App- und Webentwicklung. Dabei bieten wir eine umfassende Betreuung mit wöchentlichen Meetings an. Dabei schätzen wir ebenso das Potenzial der einzelnen Akademie Teilnehmer ein, um die bestmöglichen Webentwickler für dein Unternehmen zu finden.',
       sections: ['html', 'css', 'bootstrap', 'gitbasics', 'javascript', 'typescript', 'gitexpert', 'angular', 'nestjs'],
-      landingRoute: '/companies',
+      landingRoute: '/unternehmen',
     },
   ];
 
