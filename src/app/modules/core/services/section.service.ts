@@ -6,6 +6,9 @@ import { BehaviorSubject, Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class SectionService {
+  // #######################################################
+  // If you got a new section, add it to the _sections-array
+  // #######################################################
   private _sections: string[] = [
     'beruf',
     'html',
@@ -50,6 +53,8 @@ export class SectionService {
 
     sectionRef.nativeElement.querySelectorAll('[id^=task-]').forEach((node) => {
       let taskTitle;
+
+      // checks if there is a explicit sidebar-title to put inside the menu
       if (node.querySelector('.sidebar-title')) {
         taskTitle = node.querySelector('.sidebar-title').textContent;
       } else {
@@ -57,6 +62,8 @@ export class SectionService {
       }
 
       const color = this.getTaskType(node);
+
+      // generates the sub-items for the sections
       result.push({
         title: taskTitle,
         link: `/academy/${this.currentSection}`,
@@ -71,7 +78,8 @@ export class SectionService {
     this.currentSectionMenuItems = result;
   }
 
-  getTaskType(node) {
+  // checks which tasktype is used and generates a specific color for it
+  getTaskType(node): string {
     if (node.querySelectorAll('task-text')[0]) {
       return 'success';
     } else if (node.querySelectorAll('task-video')[0]) {

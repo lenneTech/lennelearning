@@ -49,7 +49,7 @@ import { SidebarTitleDirective } from './directives/sidebar-title.directive';
     // Pages
     AcademyComponent,
 
-    // Sections
+    // Sections -> add a new section below the last section-component
     JobComponent,
     HtmlComponent,
     CssComponent,

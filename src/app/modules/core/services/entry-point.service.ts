@@ -9,6 +9,10 @@ import { SectionService } from './section.service';
 })
 export class EntryPointService {
   private _selectedEntryPoint: BehaviorSubject<EntryPoint> = new BehaviorSubject<EntryPoint>(null);
+
+  // #################################################################################
+  // If you got a new section, add it to the sections-array in the wanted entryPoints
+  // #################################################################################
   private _entryPoints: EntryPoint[] = [
     {
       id: 'berufserkunder',

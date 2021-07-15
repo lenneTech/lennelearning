@@ -12,6 +12,7 @@ export class TaskComponent implements OnInit {
   @Input() solutionLink?: string;
 
   completed = false;
+
   constructor(private dialogService: DialogService) {}
 
   ngOnInit(): void {}
