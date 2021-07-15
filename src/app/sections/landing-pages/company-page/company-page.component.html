@@ -13,9 +13,13 @@
       <app-brand-banner></app-brand-banner>
     </div>
 
-    <div class="container-fluid p-0">
-      <div class="vertical-stripe bg-primary-500">
-        <app-carousel [imageHeight]="'240px'" [imageWidth]="'240px'" [imageAsCircle]="true"> </app-carousel>
+    <div class="container">
+      <app-steps [steps]="steps"></app-steps>
+    </div>
+
+    <div class="container-fluid p-0 overflow-hidden bg-primary-500">
+      <div class="section">
+        <app-features [features]="features"></app-features>
       </div>
     </div>
 
