@@ -33,6 +33,7 @@ export class CompanyPageComponent implements OnInit {
       title: 'Einfach',
       text: 'Wir übernehmen die Vorbereitung auf das Praktikum für euch. So könnt ihr Zeit sparen und euch aufs Wesentliche konzentrieren.',
       iconClass: 'bi-x-diamond-fill',
+      alt: 'Bild von einem Menschen der auf Büchern steht.',
     },
     {
       title: 'Individuell',
