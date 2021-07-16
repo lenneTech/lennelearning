@@ -9,12 +9,12 @@ import { TextImageInterface } from '../../../modules/core/interfaces/text-image.
 export class CompanyPageComponent implements OnInit {
   title = 'Du suchst fähige Entwickler für dein Unternehmen?';
   subtitle =
-    'Wir betreuen und evaluieren deine potenziellen Entwickler im Web und App Bereich.\n In unserer Akademie lernen sie wie man mit aktuellen Technologien agile Web- und Appanwendungen entwickelt.';
+    'Wir betreuen und evaluieren deine potenziellen Softwareentwickler im Web und App Bereich.\n\n In unserer Akademie lernen sie, wie man mit aktuellen Technologien agile Web- und Appanwendungen professionell entwickelt und im Team effizient zusammenarbeitet.';
   imageUrl = '../../assets/images/entry-point-images/company.svg';
   steps: TextImageInterface[] = [
     {
       title: 'Vorbereitung',
-      text: 'Im Rahmen der Akademie bereiten wir deine Kandidaten optimal auf ihr Praktikum vor, sodass sie dir schnellstmöglich bei deinen Projekten unterstützen können.',
+      text: 'Im Rahmen der Akademie bereiten wir deine Kandidaten optimal auf ihr Praktikum oder den direkten Einstieg ins Team vor, sodass sie dich schnellstmöglich bei deinen Projekten unterstützen können.',
       imageUrl: '../../assets/images/explanation-images/academy.svg',
       alt: 'Bild von einem Menschen der auf Büchern steht.',
     },
@@ -26,7 +26,7 @@ export class CompanyPageComponent implements OnInit {
     },
     {
       title: 'Übernahme',
-      text: 'Auch nach der Übernahme in dein Unternehmen können die Absolventen Teil der Community bleiben und unsere Akademie nutzen. Wir bleiben gerne in Kontakt und helfen dir bei deinen Projekten.',
+      text: 'Auch nach der Übernahme in dein Unternehmen können die Absolventen Teil der Community bleiben und unsere Akademie nutzen. Wir bleiben gerne in Kontakt und unterstützen euch bei euren Projekten.',
       imageUrl: '../../assets/images/explanation-images/community.svg',
       alt: 'Bild von Menschen die Blöcke in einem Smartphone aufbauen.',
     },
@@ -34,22 +34,22 @@ export class CompanyPageComponent implements OnInit {
   features: TextImageInterface[] = [
     {
       title: 'Einfach',
-      text: 'Wir übernehmen die Vorbereitung auf das Praktikum für dich. So kannst du Zeit sparen und dich aufs Wesentliche konzentrieren.',
+      text: 'Wir übernehmen die Vorbereitung auf das Praktikum oder den direkten Einstieg ins Team für dich. So kannst du Zeit sparen und dich aufs Wesentliche konzentrieren.',
       iconClass: 'bi-x-diamond-fill',
     },
     {
       title: 'Individuell',
-      text: 'Wir erstellen auch individuell Kurse für die Technologien mit denen ihr arbeitet. So werden die Lernpläne der Kandidaten für deine Ziele zugeschnitten.',
+      text: 'Wir erstellen auch individuell Kurse für die Technologien, mit denen ihr arbeitet. So werden die Lernpläne der Kandidaten auf deine Ziele zugeschnitten.',
       iconClass: 'bi-person-lines-fill',
     },
     {
       title: 'Flexibel',
-      text: 'Die Akademie ist monatlich kündbar. So kannst du auch schon frühzeitig Kandidaten ins Praktikum überführen, sobald sie bereit sind.',
+      text: 'Die Akademie ist monatlich kündbar. So kannst du schon frühzeitig Kandidaten ins Team überführen, sobald sie bereit sind.',
       iconClass: 'bi-calendar2-week-fill',
     },
     {
       title: 'Ausbildung',
-      text: 'Wir bilden unabhängig von der Akademie auch im Bereich der Anwendungsentwicklung aus. Wenn dein Unternehmen Fachinformatiker benötigt, können wir die Ausbildung übernehmen.',
+      text: 'Wir bilden unabhängig von der Akademie auch im Bereich der Anwendungsentwicklung aus. Wenn dein Unternehmen Fachinformatiker benötigt, können wir die Ausbildung begleiten.',
       iconClass: 'bi-briefcase-fill',
     },
     {
