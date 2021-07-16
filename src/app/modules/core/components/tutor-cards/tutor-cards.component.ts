@@ -11,7 +11,7 @@ export class TutorCardsComponent implements OnInit {
     {
       title: 'Kai Haase',
       subtitle: 'CEO lenne.Tech GmbH',
-      text: 'Als Full-Stack Entwickler bewege ich mich am Liebsten zwischen Client und Server. Dabei fokussiere ich mich auf Buisnesslogik und Architektur.',
+      text: 'Als Full-Stack Entwickler bewege ich mich am Liebsten zwischen Client und Server. Dabei fokussiere ich mich auf Business Logic und Architektur.',
       imageUrl: 'https://lenne.tech/assets/images/team/kai.png',
       alt: 'Bild von Kai Haase',
       contact: 'kai.haase@lenne.tech',
@@ -27,7 +27,7 @@ export class TutorCardsComponent implements OnInit {
     {
       title: 'Florian Steinhanses',
       subtitle: 'Werkstudent lenne.Tech GmbH',
-      text: 'Ich begeister mich für die Entwicklung von Usability Komponenten und dabei insbesondere für mobile Applikationen mit minimalistischem Design.',
+      text: 'Ich begeistere mich für die Entwicklung von Usability Komponenten und dabei insbesondere für mobile Applikationen mit minimalistischem Design.',
       imageUrl: 'https://lenne.tech/assets/images/team/florian-steinhanses.png',
       alt: 'Bild von Florian Steinhanses',
       contact: 'florian.steinhanses@lenne.tech',
