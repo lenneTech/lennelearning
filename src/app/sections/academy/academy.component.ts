@@ -67,21 +67,20 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     if (!window.location.href.includes('/lernpfad/')) {
       this.router.navigate([`/lernpfad/${this.sections[0]}`]);
     }
-    console.log(this.currentEntryPoint.id);
 
     switch (this.currentEntryPoint.id) {
       case 'praktikant':
-        this.imgAlt = 'Bild für Praktikanten';
+        this.imgAlt = 'Illustration für Praktikanten';
         this.imgSrc = '../../../assets/images/entry-point-images/praktikant.svg';
         break;
 
       case 'berufserkunder':
-        this.imgAlt = 'Bild für Berufsinteressierte';
+        this.imgAlt = 'Illustration für Berufsinteressierte';
         this.imgSrc = '../../../assets/images/entry-point-images/berufsinteressent.svg';
         break;
 
       case 'unternehmen':
-        this.imgAlt = 'Bild für Unternehmen';
+        this.imgAlt = 'Illustration für Unternehmen';
         this.imgSrc = '../../../assets/images/entry-point-images/company.svg';
         break;
 
