@@ -68,25 +68,7 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
       this.router.navigate([`/lernpfad/${this.sections[0]}`]);
     }
 
-    switch (this.currentEntryPoint.id) {
-      case 'praktikant':
-        this.imgAlt = 'Illustration für Praktikanten';
-        this.imgSrc = '../../../assets/images/entry-point-images/praktikant.svg';
-        break;
-
-      case 'berufserkunder':
-        this.imgAlt = 'Illustration für Berufsinteressierte';
-        this.imgSrc = '../../../assets/images/entry-point-images/berufsinteressent.svg';
-        break;
-
-      case 'unternehmen':
-        this.imgAlt = 'Illustration für Unternehmen';
-        this.imgSrc = '../../../assets/images/entry-point-images/company.svg';
-        break;
-
-      default:
-        break;
-    }
+    this.checkEntryPoint();
   }
 
   ngAfterContentChecked(): void {
@@ -123,6 +105,28 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
         link: `/lernpfad/${section}`,
         expanded: true,
       });
+    }
+  }
+
+  checkEntryPoint(): void {
+    switch (this.currentEntryPoint.id) {
+      case 'praktikant':
+        this.imgAlt = 'Illustration für Praktikanten';
+        this.imgSrc = '../../../assets/images/entry-point-images/praktikant.svg';
+        break;
+
+      case 'berufserkunder':
+        this.imgAlt = 'Illustration für Berufsinteressierte';
+        this.imgSrc = '../../../assets/images/entry-point-images/berufsinteressent.svg';
+        break;
+
+      case 'unternehmen':
+        this.imgAlt = 'Illustration für Unternehmen';
+        this.imgSrc = '../../../assets/images/entry-point-images/company.svg';
+        break;
+
+      default:
+        break;
     }
   }
 
