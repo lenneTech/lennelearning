@@ -18,6 +18,9 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
   currentEntryPoint: EntryPoint;
   subscriptions = new Subscription();
   sidebarCollapsed = false;
+  onlyParentRoute: boolean;
+  imgSrc: string;
+  imgAlt: string;
 
   constructor(
     private entryPointService: EntryPointService,
@@ -64,10 +67,13 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     if (!window.location.href.includes('/lernpfad/')) {
       this.router.navigate([`/lernpfad/${this.sections[0]}`]);
     }
+
+    this.checkEntryPoint();
   }
 
   ngAfterContentChecked(): void {
     this.ref.detectChanges();
+    this.onlyParentRoute = window.location.href.endsWith('lernpfad');
   }
 
   ngOnDestroy(): void {
@@ -99,6 +105,28 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
         link: `/lernpfad/${section}`,
         expanded: true,
       });
+    }
+  }
+
+  checkEntryPoint(): void {
+    switch (this.currentEntryPoint.id) {
+      case 'praktikant':
+        this.imgAlt = 'Illustration für Praktikanten';
+        this.imgSrc = '../../../assets/images/entry-point-images/praktikant.svg';
+        break;
+
+      case 'berufserkunder':
+        this.imgAlt = 'Illustration für Berufsinteressierte';
+        this.imgSrc = '../../../assets/images/entry-point-images/berufsinteressent.svg';
+        break;
+
+      case 'unternehmen':
+        this.imgAlt = 'Illustration für Unternehmen';
+        this.imgSrc = '../../../assets/images/entry-point-images/company.svg';
+        break;
+
+      default:
+        break;
     }
   }
 
