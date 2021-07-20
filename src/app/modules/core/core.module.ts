@@ -28,6 +28,7 @@ import { FeaturesComponent } from './components/features/features.component';
 import { StepsComponent } from './components/steps/steps.component';
 import { TutorCardsComponent } from './components/tutor-cards/tutor-cards.component';
 import { CompanyTestimonialComponent } from './components/company-testimonial/company-testimonial.component';
+import { DialogConfirmComponent } from './components/dialog-confirm/dialog-confirm.component';
 
 @NgModule({
   imports: [
@@ -54,6 +55,7 @@ import { CompanyTestimonialComponent } from './components/company-testimonial/co
 
     // Dialogs
     HelperDialogComponent,
+    DialogConfirmComponent,
     DialogComponent,
     BannerComponent,
 

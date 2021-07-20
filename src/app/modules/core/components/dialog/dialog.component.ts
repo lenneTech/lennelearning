@@ -22,13 +22,15 @@ export class DialogComponent implements OnInit {
 
   onAcceptBtnClick() {
     this.acceptBtnClicked.emit(true);
+    this.dialogRef.close(true);
   }
 
   onAbortBtnClick() {
     this.abortBtnClicked.emit(true);
+    this.dialogRef.close(false);
   }
 
   close() {
-    this.dialogRef.close();
+    this.dialogRef.close(false);
   }
 }

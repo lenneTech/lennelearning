@@ -112,5 +112,6 @@ export class EntryPointService {
 
   reset(): void {
     this.storageService.remove('selectedEntryPoint');
+    localStorage.removeItem('sections');
   }
 }
