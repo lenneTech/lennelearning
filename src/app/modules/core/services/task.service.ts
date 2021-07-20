@@ -58,7 +58,7 @@ export class TaskService {
   }
 
   uncompleteTask(id, section) {
-    let sections: Sections[] = JSON.parse(localStorage.getItem('sections'));
+    const sections: Sections[] = JSON.parse(localStorage.getItem('sections'));
     sections.forEach((element) => {
       if (element[section]) {
         element[section].forEach((tasks) => {

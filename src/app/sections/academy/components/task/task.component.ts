@@ -26,8 +26,8 @@ export class TaskComponent implements OnInit {
         if (element[this.section]) {
           const sectionTasks = element[this.section];
           if (sectionTasks) {
-            sectionTasks.forEach((element) => {
-              if (element[this.id]?.completed) {
+            sectionTasks.forEach((tasks) => {
+              if (tasks[this.id]?.completed) {
                 this.completed = true;
               }
             });
