@@ -7,8 +7,6 @@ import { Tasks } from '../interfaces/tasks.interface';
   providedIn: 'root',
 })
 export class TaskService {
-  currTask: Task;
-  currSection;
   constructor() {}
 
   /**
@@ -23,53 +21,39 @@ export class TaskService {
       // if there is no section at all
       sections = [{ [section]: [{ [id]: { completed: true, completedAt: new Date() } }] }];
     } else {
-      sections.forEach((element) => {
-        if (element[section]) {
-          // if the section already exists
+      const currSection = sections.find((oneSection) => oneSection[section]);
 
-          element[section].forEach((tasks) => {
-            if (tasks[id]) {
-              // if the task already exists
+      if (currSection) {
+        // if the section already exists
+        const currTask = currSection[section].find((oneTask) => oneTask[id]);
 
-              this.currTask = tasks[id];
-            } else {
-              // if the task does not exists
-
-              this.currSection = element;
-            }
-          });
+        if (currTask) {
+          // if the task already exists
+          currTask[id].completed = true;
+          currTask[id].completedAt = new Date();
+        } else {
+          // if the task does not exists
+          currSection[section].push({ [id]: { completed: true, completedAt: new Date() } });
         }
-      });
-
-      if (this.currTask) {
-        // if the task already exists
-        this.currTask.completed = true;
-        this.currTask.completedAt = new Date();
-      } else if (!this.currTask && this.currSection) {
-        // if the task does not exists
-        this.currSection[section].push({ [id]: { completed: true, completedAt: new Date() } });
-      } else if (!this.currSection) {
+      } else {
         // if the section does not exists
         sections.push({ [section]: [{ [id]: { completed: true, completedAt: new Date() } }] });
       }
     }
-
     localStorage.setItem('sections', JSON.stringify(sections));
   }
 
   uncompleteTask(id, section) {
     const sections: Sections[] = JSON.parse(localStorage.getItem('sections'));
-    sections.forEach((element) => {
-      if (element[section]) {
-        element[section].forEach((tasks) => {
-          if (tasks[id]) {
-            this.currTask = tasks[id];
-          }
-        });
-      }
-    });
+    const currSection = sections.find((oneSection) => oneSection[section]);
 
-    this.currTask.completed = false;
-    localStorage.setItem('sections', JSON.stringify(sections));
+    if (currSection) {
+      const currTask = currSection[section].find((oneTask) => oneTask[id]);
+
+      if (currTask) {
+        currTask[id].completed = false;
+        localStorage.setItem('sections', JSON.stringify(sections));
+      }
+    }
   }
 }
