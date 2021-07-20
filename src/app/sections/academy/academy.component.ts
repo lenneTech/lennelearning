@@ -22,6 +22,7 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
   onlyParentRoute: boolean;
   imgSrc: string;
   imgAlt: string;
+  currentIndex: number;
 
   constructor(
     private entryPointService: EntryPointService,
@@ -41,6 +42,7 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     // Listen to menu changes and set task in menu
     this.subscriptions.add(
       this.sectionService.currentSectionMenuItemsObservable.subscribe((items) => {
+        this.currentIndex = this.sections.indexOf(this.sectionService.currentSection);
         // Refresh items and reset old children
         this.setSections();
         if (!items) {
@@ -134,8 +136,6 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
 
   resetEntryPoint(): void {
     const confirm = this.dialogService.openConfirmDialog();
-    // this.entryPointService.reset();
-    // this.router.navigate(['/']);
   }
 
   initSidebarCollapse(): void {
@@ -144,5 +144,13 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     if (window.screen.width < 768) {
       this.closeSidebar();
     }
+  }
+
+  onForward() {
+    this.router.navigate([`/lernpfad/${this.sections[this.sections.indexOf(this.sectionService.currentSection) + 1]}`]);
+  }
+
+  onBack() {
+    this.router.navigate([`/lernpfad/${this.sections[this.sections.indexOf(this.sectionService.currentSection) - 1]}`]);
   }
 }
