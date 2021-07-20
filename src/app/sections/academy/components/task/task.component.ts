@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { StorageService } from '@lenne.tech/ng-base';
 import { TaskService } from 'src/app/modules/core/services/task.service';
 import { DialogService } from '../../../../modules/core/services/dialog.service';
 
@@ -16,10 +17,15 @@ export class TaskComponent implements OnInit {
 
   completed = false;
 
-  constructor(private dialogService: DialogService, private taskService: TaskService) {}
+  constructor(
+    private dialogService: DialogService,
+    private taskService: TaskService,
+    private storageService: StorageService
+  ) {}
 
   ngOnInit(): void {
-    const sections = JSON.parse(localStorage.getItem('sections'));
+    // const sections = JSON.parse(localStorage.getItem('sections'));
+    const sections = this.storageService.load('sections');
 
     if (sections) {
       sections.forEach((element) => {

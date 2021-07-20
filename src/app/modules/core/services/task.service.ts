@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { StorageService } from '@lenne.tech/ng-base';
 import { Sections } from '../interfaces/sections.interface';
 import { Task } from '../interfaces/task.interface';
 import { Tasks } from '../interfaces/tasks.interface';
@@ -7,7 +8,7 @@ import { Tasks } from '../interfaces/tasks.interface';
   providedIn: 'root',
 })
 export class TaskService {
-  constructor() {}
+  constructor(private storageService: StorageService) {}
 
   /**
    * @param id e.g 'task-1'
@@ -15,7 +16,7 @@ export class TaskService {
    * Stores the completed Tasks in local storage
    */
   completeTask(id, section) {
-    let sections: Sections[] = JSON.parse(localStorage.getItem('sections'));
+    let sections = this.storageService.load('sections');
 
     if (!sections) {
       // if there is no section at all
@@ -40,11 +41,11 @@ export class TaskService {
         sections.push({ [section]: [{ [id]: { completed: true, completedAt: new Date() } }] });
       }
     }
-    localStorage.setItem('sections', JSON.stringify(sections));
+    this.storageService.save('sections', sections);
   }
 
   uncompleteTask(id, section) {
-    const sections: Sections[] = JSON.parse(localStorage.getItem('sections'));
+    const sections = this.storageService.load('sections');
     const currSection = sections.find((oneSection) => oneSection[section]);
 
     if (currSection) {
@@ -52,7 +53,7 @@ export class TaskService {
 
       if (currTask) {
         currTask[id].completed = false;
-        localStorage.setItem('sections', JSON.stringify(sections));
+        this.storageService.save('sections', sections);
       }
     }
   }
