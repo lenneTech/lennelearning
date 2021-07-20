@@ -91,6 +91,9 @@ export class EntryPointService {
   }
 
   set selectedEntryPoint(value: EntryPoint) {
+    if (this.selectedEntryPoint) {
+      this.storageService.remove('sections');
+    }
     this._selectedEntryPoint.next(value);
     this.storageService.save('selectedEntryPoint', value);
   }
@@ -112,5 +115,6 @@ export class EntryPointService {
 
   reset(): void {
     this.storageService.remove('selectedEntryPoint');
+    this.storageService.remove('sections');
   }
 }

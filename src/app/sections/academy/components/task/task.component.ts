@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { StorageService } from '@lenne.tech/ng-base';
+import { TaskService } from 'src/app/modules/core/services/task.service';
 import { DialogService } from '../../../../modules/core/services/dialog.service';
 
 @Component({
@@ -10,14 +12,43 @@ export class TaskComponent implements OnInit {
   @Input() hint?: string;
   @Input() videoReference?: string;
   @Input() solutionLink?: string;
+  @Input() id: string;
+  @Input() section: string;
 
   completed = false;
 
-  constructor(private dialogService: DialogService) {}
+  constructor(
+    private dialogService: DialogService,
+    private taskService: TaskService,
+    private storageService: StorageService
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // const sections = JSON.parse(localStorage.getItem('sections'));
+    const sections = this.storageService.load('sections');
+
+    if (sections) {
+      sections.forEach((element) => {
+        if (element[this.section]) {
+          const sectionTasks = element[this.section];
+          if (sectionTasks) {
+            sectionTasks.forEach((tasks) => {
+              if (tasks[this.id]?.completed) {
+                this.completed = true;
+              }
+            });
+          }
+        }
+      });
+    }
+  }
 
   onComplete(): void {
+    if (!this.completed) {
+      this.taskService.completeTask(this.id, this.section);
+    } else {
+      this.taskService.uncompleteTask(this.id, this.section);
+    }
     this.completed = !this.completed;
   }
 

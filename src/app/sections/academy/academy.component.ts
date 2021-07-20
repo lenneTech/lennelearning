@@ -6,6 +6,7 @@ import { SectionService } from '../../modules/core/services/section.service';
 import { EntryPoint } from '../../modules/core/interfaces/entry-point.interface';
 import { Subscription } from 'rxjs';
 import { NbSidebarService } from '@nebular/theme';
+import { DialogService } from 'src/app/modules/core/services/dialog.service';
 
 @Component({
   selector: 'app-academy',
@@ -27,7 +28,8 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     private router: Router,
     private sectionService: SectionService,
     private sidebarService: NbSidebarService,
-    private ref: ChangeDetectorRef
+    private ref: ChangeDetectorRef,
+    private dialogService: DialogService
   ) {
     // Get current entry point
     this.subscriptions.add(
@@ -131,8 +133,9 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
   }
 
   resetEntryPoint(): void {
-    this.entryPointService.reset();
-    this.router.navigate(['/']);
+    const confirm = this.dialogService.openConfirmDialog();
+    // this.entryPointService.reset();
+    // this.router.navigate(['/']);
   }
 
   initSidebarCollapse(): void {
