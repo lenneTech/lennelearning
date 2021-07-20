@@ -1,6 +1,6 @@
 {
   "name": "academy",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "lenne.Tech <info@lenne.tech> (https://lenne.tech)",
   "homepage": "https://github.com/lenneTech/academy",
   "license": "MIT",
@@ -18,6 +18,7 @@
     "dev:ssr": "npx ng run academy:serve-ssr",
     "serve:ssr": "npx node dist/academy/server/main.js",
     "build:ssr": "npx ng build --configuration production && npx ng run academy:server:production",
+    "build:test:ssr": "npx ng build --configuration test && npx ng run academy:server:production",
     "prerender": "npx ng run academy:prerender",
     "prepare": "husky install"
   },

@@ -10,21 +10,25 @@ const routes: Routes = [
     path: '',
     component: StartComponent,
     pathMatch: 'full',
+    data: { matomoTitle: 'Home' },
   },
   {
     path: 'unternehmen',
     component: CompanyPageComponent,
     pathMatch: 'full',
+    data: { matomoTitle: 'Unternehmen' },
   },
   {
     path: 'praktikanten',
     component: InternPageComponent,
     pathMatch: 'full',
+    data: { matomoTitle: 'Praktikum' },
   },
   {
     path: 'berufsinteressierte',
     component: JobInterestedPageComponent,
     pathMatch: 'full',
+    data: { matomoTitle: 'Berufsinteressiert' },
   },
 ];
 

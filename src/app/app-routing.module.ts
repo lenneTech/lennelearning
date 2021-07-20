@@ -16,12 +16,14 @@ const routes: Routes = [
   {
     path: 'impressum',
     component: InprintComponent,
+    data: { matomoTitle: 'Impressum' },
   },
   {
     path: 'datenschutz',
     component: PrivacyComponent,
+    data: { matomoTitle: 'Datenschutz' },
   },
-  { path: '404', component: NotFoundComponent },
+  { path: '404', component: NotFoundComponent, data: { matomoTitle: '404' } },
   { path: '**', redirectTo: '/404' },
 ];
 
