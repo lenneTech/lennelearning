@@ -3,4 +3,5 @@ export const environment = {
   production: true,
   prefix: 'academy-test',
   apiUrl: '',
+  matomoConfig: {},
 };

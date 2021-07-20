@@ -3,6 +3,7 @@ export const environment = {
   production: false,
   prefix: 'academy-dev',
   apiUrl: '',
+  matomoConfig: {},
 };
 
 /*

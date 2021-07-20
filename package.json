@@ -1,6 +1,6 @@
 {
   "name": "academy",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "lenne.Tech <info@lenne.tech> (https://lenne.tech)",
   "homepage": "https://github.com/lenneTech/academy",
   "license": "MIT",
@@ -52,6 +52,7 @@
     "eva-icons": "^1.1.2",
     "express": "^4.17.1",
     "ngx-highlightjs": "^4.1.4",
+    "ngx-matomo": "1.0.0-rc.1",
     "nodemailer": "^6.6.1",
     "rxjs": "^7.1.0",
     "tslib": "^2.2.0",
