@@ -90,7 +90,6 @@ import { SidebarTitleDirective } from './directives/sidebar-title.directive';
     CommonModule,
     NbLayoutModule,
     NbSidebarModule,
-    NbAccordionModule,
     NbButtonModule,
     NbCardModule,
     CoreModule,
