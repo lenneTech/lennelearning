@@ -8,12 +8,18 @@
     <div title>Video</div>
     <div description>Schaue dir diese Videoabschnitte an und komme danach wieder hier hin</div>
 
-    <task-video [link]="'https://www.udemy.com/course/web-entwickler-masterclass/learn/lecture/12164112#overview'">
+    <task-video
+      [link]="'https://www.udemy.com/course/web-entwickler-masterclass/learn/lecture/12164112#overview'"
+      [videoPreview]="'../../../../../assets/images/html-1.PNG'"
+    >
       <div videolist>Abschnitt 1: Einführung</div>
       <div videolist>Abschnitt 2: Einrichtung</div>
       <div videolist>Abschnitt 3: HTML Grundlagen</div>
     </task-video>
   </task>
+
+  <img src="assets/images/udemy/video-player.svg" alt="helo" />
+  <img src="assets/images/udemy/html-1.PNG" alt="help" />
 
   <task id="task-2" videoReference="Abschnitt 3 - HTML Grundlagen" section="html">
     <div title>Fragen</div>

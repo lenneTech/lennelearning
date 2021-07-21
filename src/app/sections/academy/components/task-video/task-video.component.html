@@ -6,11 +6,22 @@
     <a [href]="link" target="_blank">
       <img
         loading="lazy"
-        src="../../../../../assets/images/video-player.svg"
+        src="{{ videoPreview ? videoPreview : '../../../../../../../assets/images/video-player.svg' }}"
         alt="Illustration eines Videos"
         class="d-none d-lg-flex"
       />
       <button class="d-lg-none mt-4" nbButton size="giant">Zum Kurs</button>
     </a>
+
+    <iframe
+      *ngIf="youtubelink"
+      width="560"
+      height="315"
+      [src]="youtubelink | video"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
   </div>
 </div>

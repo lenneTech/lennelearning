@@ -7,6 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class TaskVideoComponent {
   @Input() link: string;
+  @Input() youtubelink: string;
+  @Input() videoPreview: string;
 
   constructor() {}
 }
