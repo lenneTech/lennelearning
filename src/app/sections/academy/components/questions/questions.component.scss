@@ -5,8 +5,8 @@
     display: list-item;
     list-style-type: decimal;
     list-style-position: outside;
-    font-size: 1.2rem;
-    line-height: 2em;
+    font-size: 1.1rem;
+    line-height: 2.5rem;
 
     &.question-done {
       text-decoration: line-through;
@@ -17,16 +17,19 @@
   .extraquestion {
     cursor: pointer;
     margin-top: 1em;
-    border: 3px solid var(--color-primary-500);
-    border-radius: 10px;
-
     padding: 2em;
-    font-size: 1.2rem;
-    line-height: 2em;
+    font-size: 1.1rem;
+    line-height: 2rem;
+    color: #5e5e5e;
+    font-weight: bold;
 
     &.question-done {
       text-decoration: line-through;
-      color: var(--color-success-500);
     }
+  }
+
+  .bi-question-diamond {
+    font-size: 48px;
+    color: #5e5e5e;
   }
 }

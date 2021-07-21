@@ -1,4 +1,11 @@
 <div class="task-questions">
   <ng-content select="[questionlist]"></ng-content>
-  <ng-content select="[extraquestion]"></ng-content>
+  <div class="d-flex align-items-center">
+    <div class="d-none d-md-block mt-3" *ngIf="extraQuestion.childNodes.length > 0">
+      <i class="bi bi-question-diamond"></i>
+    </div>
+    <div #extraQuestion>
+      <ng-content select="[extraquestion]"></ng-content>
+    </div>
+  </div>
 </div>
