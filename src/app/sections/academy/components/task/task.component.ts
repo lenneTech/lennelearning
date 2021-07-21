@@ -2,11 +2,20 @@ import { Component, Input, OnInit } from '@angular/core';
 import { StorageService } from '@lenne.tech/ng-base';
 import { TaskService } from 'src/app/modules/core/services/task.service';
 import { DialogService } from '../../../../modules/core/services/dialog.service';
+import { animate, AUTO_STYLE, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'task',
   templateUrl: './task.component.html',
   styleUrls: ['./task.component.scss'],
+  animations: [
+    trigger('collapse', [
+      state('false', style({ height: AUTO_STYLE, visibility: AUTO_STYLE })),
+      state('true', style({ height: '0', visibility: 'hidden' })),
+      transition('false => true', animate(400 + 'ms ease-in')),
+      transition('true => false', animate(400 + 'ms ease-out')),
+    ]),
+  ],
 })
 export class TaskComponent implements OnInit {
   @Input() hint?: string;
@@ -14,6 +23,7 @@ export class TaskComponent implements OnInit {
   @Input() solutionLink?: string;
   @Input() id: string;
   @Input() section: string;
+  @Input() imageUrl: string;
 
   completed = false;
 

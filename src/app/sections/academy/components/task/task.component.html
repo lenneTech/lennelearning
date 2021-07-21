@@ -1,20 +1,34 @@
-<nb-card class="task">
-  <nb-card-header
-    [ngClass]="{ completedtop: completed }"
-    class="d-flex justify-content-between align-items-center flex-row"
-  >
-    <ng-content select="[title]"></ng-content>
-    <i
-      *ngIf="hint || videoReference || solutionLink"
-      class="bi bi-question-circle cursor-pointer"
-      (click)="openHelp()"
-    ></i>
+<nb-card class="task" [ngClass]="{ completed: completed }">
+  <nb-card-header>
+    <div class="row">
+      <div class="col-7 d-flex align-items-center">
+        <ng-content select="[title]"></ng-content>
+      </div>
+      <div class="col-5 d-flex justify-content-end align-items-center">
+        <i
+          *ngIf="(hint || videoReference || solutionLink) && !completed"
+          class="bi bi-question-circle cursor-pointer p-1"
+          (click)="openHelp()"
+        ></i>
+        <i
+          class="bi p-1 cursor-pointer"
+          [ngClass]="{ 'bi-check-circle': !completed, 'bi-check': completed }"
+          (click)="onComplete()"
+        ></i>
+      </div>
+    </div>
   </nb-card-header>
-  <nb-card-body>
-    <ng-content select="[description]"></ng-content>
-    <ng-content></ng-content>
+  <nb-card-body class="p-0">
+    <div class="overflow-hidden" [@collapse]="completed">
+      <div class="row mt-3">
+        <div class="col-12 col-lg-7">
+          <ng-content select="[description]"></ng-content>
+          <ng-content></ng-content>
+        </div>
+        <div class="col-12 col-lg-5 overflow-hidden" *ngIf="imageUrl">
+          <img [src]="imageUrl" />
+        </div>
+      </div>
+    </div>
   </nb-card-body>
-  <nb-card-footer [ngClass]="{ completed: completed }" class="d-flex justify-content-center">
-    <button nbButton status="success" (click)="onComplete()">{{ completed ? '&#x2713;' : 'Erledigt' }}</button>
-  </nb-card-footer>
 </nb-card>
