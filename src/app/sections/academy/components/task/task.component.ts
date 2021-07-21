@@ -34,7 +34,6 @@ export class TaskComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // const sections = JSON.parse(localStorage.getItem('sections'));
     const sections = this.storageService.load('sections');
 
     if (sections) {

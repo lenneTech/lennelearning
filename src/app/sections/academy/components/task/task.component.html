@@ -21,11 +21,11 @@
   <nb-card-body class="p-0">
     <div class="overflow-hidden" [@collapse]="completed">
       <div class="row mt-3">
-        <div class="col-12 col-lg-7">
+        <div class="col-12 col-xl-7">
           <ng-content select="[description]"></ng-content>
           <ng-content></ng-content>
         </div>
-        <div class="col-12 col-lg-5 overflow-hidden" *ngIf="imageUrl">
+        <div class="col-12 col-xl-5 overflow-hidden d-flex justify-content-center" *ngIf="imageUrl">
           <img [src]="imageUrl" />
         </div>
       </div>
