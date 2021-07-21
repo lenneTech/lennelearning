@@ -45,6 +45,7 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
       this.sectionService.currentSectionMenuItemsObservable.subscribe((items) => {
         this.prevSection = this.sectionService.getPrevSection();
         this.nextSection = this.sectionService.getNextSection();
+
         // Refresh items and reset old children
         this.setSections();
         if (!items) {
@@ -149,10 +150,10 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
   }
 
   onForward() {
-    this.sectionService.goForward();
+    this.router.navigate([`/lernpfad/${this.nextSection}`]);
   }
 
   onBack() {
-    this.sectionService.goBack();
+    this.router.navigate([`/lernpfad/${this.prevSection}`]);
   }
 }

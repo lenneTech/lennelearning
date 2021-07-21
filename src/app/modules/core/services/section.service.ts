@@ -101,18 +101,13 @@ export class SectionService {
     return true;
   }
 
-  goBack(): void {
-    this.router.navigate([`/lernpfad/${this.sections[this.sections.indexOf(this.currentSection) - 1]}`]);
-  }
-  goForward(): void {
-    this.router.navigate([`/lernpfad/${this.sections[this.sections.indexOf(this.currentSection) + 1]}`]);
-  }
-
   getPrevSection(): string {
-    return this.sections[this.sections.indexOf(this.currentSection) - 1];
+    const prevSection = this.sections[this.sections.indexOf(this.currentSection) - 1];
+    return prevSection ? prevSection : null;
   }
 
   getNextSection(): string {
-    return this.sections[this.sections.indexOf(this.currentSection) + 1];
+    const nextSection = this.sections[this.sections.indexOf(this.currentSection) + 1];
+    return nextSection ? nextSection : null;
   }
 }
