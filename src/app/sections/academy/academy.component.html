@@ -35,16 +35,9 @@
     </div>
     <router-outlet class="d-none d-md-block"></router-outlet>
     <div class="d-flex justify-content-between">
-      <button nbButton outline status="dark" (click)="onBack()" *ngIf="currentIndex > 0">❮ Zurück</button>
-      <button
-        nbButton
-        outline
-        status="dark"
-        class="ms-auto"
-        (click)="onForward()"
-        *ngIf="currentIndex < sections.length - 1"
-      >
-        Vor ❯
+      <button nbButton outline status="dark" (click)="onBack()" *ngIf="prevSection">❮ {{ prevSection }}</button>
+      <button nbButton outline status="dark" class="ms-auto" (click)="onForward()" *ngIf="nextSection">
+        {{ nextSection }} ❯
       </button>
     </div>
   </nb-layout-column>

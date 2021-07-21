@@ -1,4 +1,5 @@
 import { ElementRef, Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { NbMenuItem } from '@nebular/theme';
 import { BehaviorSubject, Observable } from 'rxjs';
 
@@ -25,7 +26,7 @@ export class SectionService {
   private _currentSectionMenuItems: BehaviorSubject<NbMenuItem[]> = new BehaviorSubject<NbMenuItem[]>(null);
   currentSection: string;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   get sections(): string[] {
     return this._sections;
@@ -98,5 +99,20 @@ export class SectionService {
   setCurrentSection(section: string): boolean {
     this.currentSection = section;
     return true;
+  }
+
+  goBack(): void {
+    this.router.navigate([`/lernpfad/${this.sections[this.sections.indexOf(this.currentSection) - 1]}`]);
+  }
+  goForward(): void {
+    this.router.navigate([`/lernpfad/${this.sections[this.sections.indexOf(this.currentSection) + 1]}`]);
+  }
+
+  getPrevSection(): string {
+    return this.sections[this.sections.indexOf(this.currentSection) - 1];
+  }
+
+  getNextSection(): string {
+    return this.sections[this.sections.indexOf(this.currentSection) + 1];
   }
 }
