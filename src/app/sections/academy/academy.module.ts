@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { AcademyComponent } from './academy.component';
 import { AcademyRoutingModule } from './academy-routing.module';
 import {
-  NbAccordionModule,
   NbButtonModule,
   NbCardModule,
   NbLayoutModule,
