@@ -2,15 +2,15 @@
   <div class="col-lg-6 mt-5">
     <ng-content select="[videolist]"></ng-content>
   </div>
-  <div class="col-lg-6 d-flex justify-content-center mt-5">
-    <a [href]="link" target="_blank">
-      <img
-        loading="lazy"
-        src="{{ videoPreview ? videoPreview : '../../../../../../../assets/images/udemy/video-player.svg' }}"
-        alt="Illustration eines Videos"
-        class="d-none d-lg-flex"
-      />
-      <button class="d-lg-none mt-4" nbButton size="giant">Zum Kurs</button>
+  <div class="col-lg-6 d-flex justify-content-end mt-5">
+    <a [href]="link" target="_blank" *ngIf="link">
+      <div class="thumbnail d-none d-lg-flex" *ngIf="videoPreview">
+        <i class="bi bi-play-circle"></i>
+        <img loading="lazy" [src]="videoPreview" alt="Illustration eines Videos" />
+      </div>
+      <button class="mt-4" nbButton size="giant" [ngClass]="{ 'd-lg-flex': !videoPreview, 'd-lg-none': videoPreview }">
+        Zum Kurs
+      </button>
     </a>
 
     <iframe
