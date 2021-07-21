@@ -19,7 +19,7 @@
     </task-video>
   </task>
 
-  <task id="task-2" section="javascript">
+  <task id="task-2" section="javascript" [imageUrl]="'../../assets/images/academy-images/product-documentation.svg'">
     <div title>Fragen</div>
     <div description>Beantworte die Fragen so gut wie möglich und am Besten, ohne Hilfe.</div>
 
@@ -107,7 +107,12 @@
     <task-code [url]="'/assets/snippets/js-task-2.js'"></task-code>
   </task>
 
-  <task id="task-7" solutionLink="https://stackblitz.com/edit/js-chessboard36456?file=index.js" section="javascript">
+  <task
+    id="task-7"
+    solutionLink="https://stackblitz.com/edit/js-chessboard36456?file=index.js"
+    section="javascript"
+    [imageUrl]="'https://chessfox.com/wp-content/uploads/2020/03/Ruy-Lopez-Closed-Defense.png'"
+  >
     <div title>Schachbrett</div>
 
     <task-text>
@@ -124,8 +129,8 @@
         Füge daraufhin die einzelnen Figuren an die Startpositionen ein (Bauer = ‚B‘, Königin=‘Q‘, König=‘K‘, etc.).
       </div>
       <div exerciselist>
-        Stelle die <a href="https://de.wikipedia.org/wiki/Spanische_Partie" taskLink>„Spanische Eröffnung“</a> (siehe
-        Abbildung) in deinem Schachbrett dar, indem du die Werte an den passenden Indizes änderst.
+        Stelle die „Spanische Eröffnung“ (siehe Abbildung) in deinem Schachbrett dar, indem du die Werte an den
+        passenden Indizes änderst.
       </div>
     </task-text>
   </task>
