@@ -20,15 +20,15 @@
     padding: 2em;
     font-size: 1.1rem;
     line-height: 2rem;
-    color: #cccccc;
+    color: #5e5e5e;
+    font-weight: bold;
 
     &.question-done {
       text-decoration: line-through;
-      color: var(--color-success-500);
     }
   }
   .bi-question-diamond {
     font-size: 48px;
-    color: #dddddd;
+    color: #5e5e5e;
   }
 }
