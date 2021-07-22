@@ -6,7 +6,9 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./task-video.component.scss'],
 })
 export class TaskVideoComponent {
-  @Input() link: string;
+  @Input() link?: string;
+  @Input() youtubelink?: string;
+  @Input() videoPreview?: string;
 
   constructor() {}
 }

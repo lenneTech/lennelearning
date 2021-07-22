@@ -43,6 +43,7 @@ import { GitExpertComponent } from './sections/git-expert/git-expert.component';
 import { InfoDirective } from './directives/info.directive';
 import { InfoListDirective } from './directives/info-list.directive';
 import { SidebarTitleDirective } from './directives/sidebar-title.directive';
+import { VideoPipe } from './pipes/video.pipe';
 
 @NgModule({
   declarations: [
@@ -83,6 +84,9 @@ import { SidebarTitleDirective } from './directives/sidebar-title.directive';
     InfoDirective,
     InfoListDirective,
     SidebarTitleDirective,
+
+    // Pipes
+    VideoPipe,
   ],
   imports: [
     AcademyRoutingModule,
