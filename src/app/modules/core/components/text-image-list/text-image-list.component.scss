@@ -13,4 +13,14 @@
   white-space: pre-line;
   font-family: Open Sans, sans-serif;
   font-weight: 200;
+
+  .link {
+    text-decoration: underline;
+    color: var(--card-text-color);
+
+    &:hover {
+      text-decoration: none;
+      color: var(--color-info-500);
+    }
+  }
 }
