@@ -1,10 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { TextImageInterface } from '../../interfaces/text-image.interface';
 
 @Component({
   selector: 'app-text-image-list',
   templateUrl: './text-image-list.component.html',
   styleUrls: ['./text-image-list.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class TextImageListComponent implements OnInit {
   @Input() listElements: TextImageInterface[] = [
@@ -16,6 +17,7 @@ export class TextImageListComponent implements OnInit {
         'Unser Anliegen ist es, mit der Akademie jedem den idealen Einstieg in den Bereich der Softwareentwicklung zu bieten. Ganz ohne Vorkenntnisse. Um diesem Ziel gerecht zu werden, entwickeln wir die Akademie ständig weiter und freuen uns auf dein Feedback.\n' +
         '\n' +
         'Es wäre toll, wenn du uns bei der Weiterentwicklung unserer Akademie unterstützen würdest. Alles was du dafür brauchst, lernst du in der Akademie und kannst dein Wissen direkt anwenden, denn die Akademie ist selbst eine kleine Webanwendung.\n' +
+        'Das Repository der Akademie findest du <a class="link" href="https://github.com/lenneTech/academy" target="_blank">hier</a>.\n' +
         '\n' +
         'Wir freuen uns auf Deine Ideen, Optimierungsvorschläge und deinen Quellcode. Lass dich dabei von den vorhandenen Quellen inspirieren, aber bitte kopiere nichts. Auch wenn viele Dinge im Internet frei zugänglich sind, unterliegen sie dennoch dem Urheberrecht und dürfen nicht einfach auf anderen Seiten übernommen werden. Dies gilt für Bilder, Texte, Videos und andere urheberrechtlich geschützte Inhalte. Es gibt einige Seiten, die Inhalte zur freien Verwendung zur Verfügung stellen (z. B. Unsplash). Bitte prüfe, bevor du Inhalte einreichst die Lizenzbedingungen. Wenn du dir unsicher bist, spreche gerne deinen Tutor an.',
       imageUrl: '../../assets/images/explanation-images/academy.svg',
