@@ -77,14 +77,4 @@ export class SectionService {
     this.currentSection = section;
     return true;
   }
-
-  getPrevSection(): string {
-    const prevSection = this.sections[this.sections.indexOf(this.currentSection) - 1];
-    return prevSection ? prevSection : null;
-  }
-
-  getNextSection(): string {
-    const nextSection = this.sections[this.sections.indexOf(this.currentSection) + 1];
-    return nextSection ? nextSection : null;
-  }
 }

@@ -43,8 +43,8 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     // Listen to menu changes and set task in menu
     this.subscriptions.add(
       this.sectionService.currentSectionMenuItemsObservable.subscribe((items) => {
-        this.prevSection = this.sectionService.getPrevSection();
-        this.nextSection = this.sectionService.getNextSection();
+        this.prevSection = this.entryPointService.getPrevSectionByEntryPoint();
+        this.nextSection = this.entryPointService.getNextSectionByEntryPoint();
 
         // Refresh items and reset old children
         this.setSections();
