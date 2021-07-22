@@ -117,4 +117,22 @@ export class EntryPointService {
     this.storageService.remove('selectedEntryPoint');
     this.storageService.remove('sections');
   }
+
+  getPrevSectionByEntryPoint(): string {
+    const prevSection =
+      this.selectedEntryPoint.sections[
+        this.selectedEntryPoint.sections.indexOf(this.sectionService.currentSection) - 1
+      ];
+
+    return prevSection ? prevSection : null;
+  }
+
+  getNextSectionByEntryPoint(): string {
+    const nextSection =
+      this.selectedEntryPoint.sections[
+        this.selectedEntryPoint.sections.indexOf(this.sectionService.currentSection) + 1
+      ];
+
+    return nextSection ? nextSection : null;
+  }
 }
