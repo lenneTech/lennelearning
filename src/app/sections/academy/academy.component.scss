@@ -32,6 +32,14 @@ a {
     transition: 0.3s;
   }
 }
+.nav-btn {
+  border: none;
+  background: transparent;
+}
+
+.nav-btn:focus {
+  box-shadow: none;
+}
 
 @include media-breakpoint-down(md) {
   ::ng-deep .expanded {
