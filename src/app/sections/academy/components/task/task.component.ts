@@ -23,7 +23,7 @@ export class TaskComponent implements OnInit {
   @Input() solutionLink?: string;
   @Input() id: string;
   @Input() section: string;
-  @Input() imageUrl: string;
+  @Input() image: { url: string; alt: string };
 
   completed = false;
 
@@ -34,7 +34,6 @@ export class TaskComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // const sections = JSON.parse(localStorage.getItem('sections'));
     const sections = this.storageService.load('sections');
 
     if (sections) {
