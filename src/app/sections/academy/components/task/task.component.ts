@@ -23,7 +23,7 @@ export class TaskComponent implements OnInit {
   @Input() solutionLink?: string;
   @Input() id: string;
   @Input() section: string;
-  @Input() imageUrl: string;
+  @Input() image: { url: string; alt: string };
 
   completed = false;
 

@@ -25,8 +25,8 @@
           <ng-content select="[description]"></ng-content>
           <ng-content></ng-content>
         </div>
-        <div class="col-12 col-xl-5 overflow-hidden d-flex justify-content-center" *ngIf="imageUrl">
-          <img [src]="imageUrl" />
+        <div class="col-12 col-xl-5 overflow-hidden d-flex justify-content-center" *ngIf="image">
+          <img [src]="image.url" [alt]="image.alt" />
         </div>
       </div>
     </div>

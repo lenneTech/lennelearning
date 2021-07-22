@@ -19,7 +19,14 @@
     </task-video>
   </task>
 
-  <task id="task-2" section="javascript" [imageUrl]="'../../assets/images/academy-images/product-documentation.svg'">
+  <task
+    id="task-2"
+    section="javascript"
+    [image]="{
+      url: '../../assets/images/academy-images/product-documentation.svg',
+      alt: 'Illustration einer Person vor einem Karton und einem Checkmarker'
+    }"
+  >
     <div title>Fragen</div>
     <div description>Beantworte die Fragen so gut wie möglich und am Besten, ohne Hilfe.</div>
 
@@ -111,7 +118,10 @@
     id="task-7"
     solutionLink="https://stackblitz.com/edit/js-chessboard36456?file=index.js"
     section="javascript"
-    [imageUrl]="'https://chessfox.com/wp-content/uploads/2020/03/Ruy-Lopez-Closed-Defense.png'"
+    [image]="{
+      url: 'https://chessfox.com/wp-content/uploads/2020/03/Ruy-Lopez-Closed-Defense.png',
+      alt: 'Illustration eines Schachbrettes, auf dem die spanische Eröffnung gespielt wird'
+    }"
   >
     <div title>Schachbrett</div>
 

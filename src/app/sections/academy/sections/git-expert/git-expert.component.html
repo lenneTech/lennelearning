@@ -4,7 +4,14 @@
   [seoDescription]="'Lerne Git mithilfe der ltakademie.'"
   [seoKeywords]="'git, academy, online, learning, platform, akademie'"
 >
-  <task id="task-1" section="gitExpert" [imageUrl]="'../../assets/images/academy-images/sprint-planning.svg'">
+  <task
+    id="task-1"
+    section="gitExpert"
+    [image]="{
+      url: '../../assets/images/academy-images/sprint-planning.svg',
+      alt: 'Illustration von drei Personen die zusammen vor einem Board ein Projekt planen'
+    }"
+  >
     <div title>Inhalt</div>
 
     <task-text>
@@ -45,7 +52,10 @@
     id="task-4"
     hint="Bei Fehlern werden dir in der Konsole häufig Lösungen angezeigt, die du verwenden kannst."
     section="gitExpert"
-    [imageUrl]="'../../assets/images/academy-images/newsletter.svg'"
+    [image]="{
+      url: '../../assets/images/academy-images/newsletter.svg',
+      alt: 'Illustration einer Frau, die vor einem Board mit einem Brief steht'
+    }"
   >
     <div title>Gästebuch</div>
 
