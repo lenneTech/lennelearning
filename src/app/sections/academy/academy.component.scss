@@ -33,6 +33,15 @@ a {
   }
 }
 
+.nav-btn {
+  border: none;
+  background: transparent;
+}
+
+.nav-btn:focus {
+  box-shadow: none;
+}
+
 @include media-breakpoint-down(md) {
   ::ng-deep .expanded {
     width: 100% !important;
