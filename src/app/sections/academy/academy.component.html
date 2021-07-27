@@ -34,7 +34,7 @@
       <img class="mx-auto d-block img-fluid" [src]="imgSrc" [alt]="imgAlt" />
     </div>
     <router-outlet class="d-none d-md-block"></router-outlet>
-    <div class="d-flex justify-content-between mt-4 mb-4">
+    <div class="d-flex justify-content-between mt-4 mb-4" *ngIf="!onlyParentRoute">
       <button nbButton status="dark" class="nav-btn" (click)="onBack()" *ngIf="prevSection">❮ {{ prevSection }}</button>
       <button nbButton status="dark" class="nav-btn ms-auto" (click)="onForward()" *ngIf="nextSection">
         {{ nextSection }} ❯

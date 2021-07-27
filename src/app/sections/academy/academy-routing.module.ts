@@ -13,6 +13,7 @@ import { BootstrapComponent } from './sections/bootstrap/bootstrap.component';
 import { NestjsComponent } from './sections/nestjs/nestjs.component';
 import { GitBasicsComponent } from './sections/git-basics/git-basics.component';
 import { GitExpertComponent } from './sections/git-expert/git-expert.component';
+import { MilestoneComponent } from './components/milestone/milestone.component';
 
 // ####################################################################
 // If you got a new section, add it to the routes-array like the others
@@ -87,6 +88,12 @@ const routes: Routes = [
         component: NestjsComponent,
         canActivate: [SectionGuard],
         data: { matomoTitle: 'NestJS' },
+      },
+      {
+        path: 'meilenstein/:id',
+        component: MilestoneComponent,
+        canActivate: [SectionGuard],
+        data: { matomoTitle: 'Meilenstein' },
       },
     ],
   },

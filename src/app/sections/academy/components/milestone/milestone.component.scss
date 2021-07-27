@@ -1,0 +1,46 @@
+app-trophy {
+  position: absolute;
+  opacity: 100%;
+  width: 600px;
+  top: 300px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+}
+.relative {
+  position: relative;
+}
+
+.example-image {
+  width: 80%;
+}
+
+.example-text {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 25px;
+}
+
+h1 {
+  margin-bottom: 50px;
+}
+
+h2 {
+  margin: 50px 0;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.blur {
+  -webkit-filter: brightness(20%) blur(4px);
+  filter: brightness(20%) blur(4px);
+}
+
+.noblur {
+  opacity: 100%;
+  filter: none;
+  transition: 1.5s;
+}
