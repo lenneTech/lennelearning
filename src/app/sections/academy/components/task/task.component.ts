@@ -4,7 +4,6 @@ import { TaskService } from 'src/app/modules/core/services/task.service';
 import { DialogService } from '../../../../modules/core/services/dialog.service';
 import { animate, AUTO_STYLE, state, style, transition, trigger } from '@angular/animations';
 import { SectionService } from 'src/app/modules/core/services/section.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'task',
@@ -33,8 +32,7 @@ export class TaskComponent implements OnInit {
     private dialogService: DialogService,
     private taskService: TaskService,
     private storageService: StorageService,
-    private sectionService: SectionService,
-    private router: Router
+    private sectionService: SectionService
   ) {}
 
   ngOnInit(): void {
@@ -74,8 +72,5 @@ export class TaskComponent implements OnInit {
 
   openMileStone(): void {
     this.sectionService.setCurrentMileStone(this.section);
-    setTimeout(() => {
-      this.router.navigate([`/lernpfad/meilenstein/${this.section}`]);
-    }, 800);
   }
 }

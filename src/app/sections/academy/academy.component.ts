@@ -24,6 +24,7 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
   imgAlt: string;
   prevSection: string;
   nextSection: string;
+  currentMileStoneUrl: string;
 
   constructor(
     private entryPointService: EntryPointService,
@@ -40,12 +41,25 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
       })
     );
 
+    this.subscriptions.add(
+      this.sectionService.currentMileStone.subscribe((item) => {
+        if (item) {
+          this.currentMileStoneUrl = `/lernpfad/meilenstein/${item}`;
+        }
+      })
+    );
+
     // Listen to menu changes and set task in menu
     this.subscriptions.add(
       this.sectionService.currentSectionMenuItemsObservable.subscribe((items) => {
         this.prevSection = this.entryPointService.getPrevSectionByEntryPoint();
         this.nextSection = this.entryPointService.getNextSectionByEntryPoint();
-
+        // Timingproblem beim Laden aus Local-Storage (bei Reload der Seite) - mit 1ms Timeout funktionierts
+        setTimeout(() => {
+          if (this.sectionService.checkMileStone()) {
+            this.sectionService.setCurrentMileStone(this.sectionService.currentSection);
+          }
+        }, 1);
         // Refresh items and reset old children
         this.setSections();
         if (!items) {
@@ -155,5 +169,10 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
 
   onBack() {
     this.router.navigate([`/lernpfad/${this.prevSection}`]);
+  }
+
+  onMileStone() {
+    this.router.navigate([this.currentMileStoneUrl]);
+    this.currentMileStoneUrl = '';
   }
 }

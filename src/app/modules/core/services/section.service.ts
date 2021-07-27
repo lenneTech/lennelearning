@@ -29,7 +29,7 @@ export class SectionService {
   private _currentSectionMenuItems: BehaviorSubject<NbMenuItem[]> = new BehaviorSubject<NbMenuItem[]>(null);
   currentSection: string;
   mileStoneCheck = true;
-  currentMileStone: string;
+  currentMileStone = new BehaviorSubject('');
 
   constructor(private router: Router, private storageService: StorageService) {}
 
@@ -85,22 +85,23 @@ export class SectionService {
 
   checkMileStone(): boolean {
     const sections: Sections[] = this.storageService.load('sections');
+    if (sections) {
+      const currSection = sections.find((oneSection: Sections) => oneSection[this.currentSection]);
 
-    const currSection = sections.find((oneSection: Sections) => oneSection[this.currentSection]);
-
-    if (currSection[this.currentSection].length === this.currentSectionMenuItems.length) {
-      this.mileStoneCheck = true;
-      currSection[this.currentSection].find((task: Tasks, index) => {
-        if (task[`task-${index + 1}`] && task[`task-${index + 1}`].completed === false) {
-          this.mileStoneCheck = false;
-        }
-      });
-      return this.mileStoneCheck ? true : false;
+      if (currSection && currSection[this.currentSection].length === this.currentSectionMenuItems.length) {
+        this.mileStoneCheck = true;
+        currSection[this.currentSection].find((task: Tasks, index) => {
+          if (task[`task-${index + 1}`] && task[`task-${index + 1}`].completed === false) {
+            this.mileStoneCheck = false;
+          }
+        });
+        return this.mileStoneCheck ? true : false;
+      }
     }
   }
 
   setCurrentMileStone(section: string): boolean {
-    this.currentMileStone = section;
+    this.currentMileStone.next(section);
     return true;
   }
 }
