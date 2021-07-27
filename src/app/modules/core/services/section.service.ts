@@ -89,6 +89,7 @@ export class SectionService {
     const currSection = sections.find((oneSection: Sections) => oneSection[this.currentSection]);
 
     if (currSection[this.currentSection].length === this.currentSectionMenuItems.length) {
+      this.mileStoneCheck = true;
       currSection[this.currentSection].find((task: Tasks, index) => {
         if (task[`task-${index + 1}`] && task[`task-${index + 1}`].completed === false) {
           this.mileStoneCheck = false;

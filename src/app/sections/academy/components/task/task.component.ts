@@ -74,6 +74,8 @@ export class TaskComponent implements OnInit {
 
   openMileStone(): void {
     this.sectionService.setCurrentMileStone(this.section);
-    this.router.navigate([`/lernpfad/meilenstein/${this.section}`]);
+    setTimeout(() => {
+      this.router.navigate([`/lernpfad/meilenstein/${this.section}`]);
+    }, 800);
   }
 }

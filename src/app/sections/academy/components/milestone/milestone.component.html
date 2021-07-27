@@ -14,16 +14,19 @@
       </div>
       <h2 class="text-center">Herzlichen Glückwunsch!</h2>
       <div class="d-flex justify-content-center">
-        <p class="text-center w-50">{{ mileStoneSection.description }}</p>
+        <p class="text-center w-md-50">{{ mileStoneSection.description }}</p>
       </div>
     </div>
     <div *ngIf="mileStoneSection.exampleList">
       <h2 class="text-center">Was du jetzt schon kannst</h2>
       <div *ngFor="let item of mileStoneSection.exampleList; let i = index" class="row mb-5">
-        <div class="col-6 d-flex justify-content-center align-items-center" [ngClass]="{ 'order-last': i % 2 !== 0 }">
-          <p class="text-center w-50 example-text">{{ item.text }}</p>
+        <div
+          class="col-md-6 d-flex justify-content-center align-items-center"
+          [ngClass]="{ 'order-md-last': i % 2 !== 0 }"
+        >
+          <p class="text-center w-md-50 example-text">{{ item.text }}</p>
         </div>
-        <div class="col-6 d-flex justify-content-center align-items-center">
+        <div class="col-md-6 d-flex justify-content-center align-items-center">
           <img [src]="item.img" alt="" class="img-fluid example-image" />
         </div>
       </div>
