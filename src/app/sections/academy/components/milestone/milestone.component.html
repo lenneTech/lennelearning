@@ -1,6 +1,6 @@
 <div class="container relative">
-  <app-trophy (loopComplete)="check($event)"></app-trophy>
-  <div [ngClass]="{ blur: visible, noblur: !visible }">
+  <app-trophy (loopComplete)="check()"></app-trophy>
+  <div class="blur" #content>
     <div class="container">
       <h1 class="text-center">
         <span class="fw-bold">{{ mileStoneSection.sectionTitle.toUpperCase() }}</span> abgeschlossen

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Milestone } from 'src/app/modules/core/interfaces/milestone.interface';
 import { SectionService } from 'src/app/modules/core/services/section.service';
@@ -10,7 +10,7 @@ import { SectionService } from 'src/app/modules/core/services/section.service';
 export class MilestoneComponent implements OnInit {
   id: string;
   mileStoneSection: Milestone = {};
-  visible = true;
+  @ViewChild('content') content: ElementRef;
   milestones: Milestone[] = [
     {
       sectionTitle: 'beruf',
@@ -171,7 +171,6 @@ export class MilestoneComponent implements OnInit {
       ],
     },
   ];
-
   constructor(private sectionService: SectionService, private route: ActivatedRoute) {}
 
   ngOnInit() {
@@ -187,10 +186,7 @@ export class MilestoneComponent implements OnInit {
     });
   }
 
-  check(event) {
-    this.visible = false;
-
-    // Workaround, weil blur erst nach Scrollen weg geht
-    window.scrollBy(0, 1);
+  check() {
+    this.content.nativeElement.classList.add('noblur');
   }
 }
