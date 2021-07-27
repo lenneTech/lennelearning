@@ -1,8 +1,8 @@
-import { Example } from './example.interface';
+import { TextImageInterface } from './text-image.interface';
 
 export interface Milestone {
   sectionTitle?: string;
   logo?: string;
   description?: string;
-  exampleList?: Example[];
+  exampleList?: TextImageInterface[];
 }
