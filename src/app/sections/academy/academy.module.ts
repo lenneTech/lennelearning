@@ -44,6 +44,14 @@ import { InfoDirective } from './directives/info.directive';
 import { InfoListDirective } from './directives/info-list.directive';
 import { SidebarTitleDirective } from './directives/sidebar-title.directive';
 import { VideoPipe } from './pipes/video.pipe';
+import { MilestoneComponent } from './components/milestone/milestone.component';
+import { TrophyComponent } from 'src/app/modules/core/components/trophy/trophy.component';
+import { LottieModule } from 'ngx-lottie';
+import player from 'lottie-web';
+
+export function playerFactory() {
+  return player;
+}
 
 @NgModule({
   declarations: [
@@ -62,6 +70,7 @@ import { VideoPipe } from './pipes/video.pipe';
     AngularComponent,
     IonicComponent,
     NestjsComponent,
+    MilestoneComponent,
 
     // Components
     SectionComponent,
@@ -70,6 +79,7 @@ import { VideoPipe } from './pipes/video.pipe';
     TaskVideoComponent,
     TaskCodeComponent,
     QuestionsComponent,
+    TrophyComponent,
 
     // Directives
     VideoListDirective,
@@ -99,6 +109,7 @@ import { VideoPipe } from './pipes/video.pipe';
     NbMenuModule.forRoot(),
     HighlightModule,
     HighlightPlusModule,
+    LottieModule.forRoot({ player: playerFactory }),
   ],
   providers: [NbSidebarService, NbMenuService],
 })

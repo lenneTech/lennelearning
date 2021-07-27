@@ -3,6 +3,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { StorageService } from '@lenne.tech/ng-base';
 import { EntryPoint } from '../interfaces/entry-point.interface';
 import { SectionService } from './section.service';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
@@ -72,7 +73,7 @@ export class EntryPointService {
     },
   ];
 
-  constructor(private storageService: StorageService, private sectionService: SectionService) {
+  constructor(private storageService: StorageService, private sectionService: SectionService, private router: Router) {
     this.selectedEntryPoint = this.storageService.load('selectedEntryPoint') as EntryPoint;
   }
 
@@ -119,19 +120,37 @@ export class EntryPointService {
   }
 
   getPrevSectionByEntryPoint(): string {
-    const prevSection =
-      this.selectedEntryPoint.sections[
-        this.selectedEntryPoint.sections.indexOf(this.sectionService.currentSection) - 1
-      ];
+    let prevSection;
+    if (this.sectionService.currentSection === 'meilenstein/:id') {
+      const url = this.router.url;
+
+      const section = url.substring(url.lastIndexOf('/') + 1, url.length);
+
+      prevSection = this.selectedEntryPoint.sections[this.selectedEntryPoint.sections.indexOf(section) - 1];
+    } else {
+      prevSection =
+        this.selectedEntryPoint.sections[
+          this.selectedEntryPoint.sections.indexOf(this.sectionService.currentSection) - 1
+        ];
+    }
 
     return prevSection ? prevSection : null;
   }
 
   getNextSectionByEntryPoint(): string {
-    const nextSection =
-      this.selectedEntryPoint.sections[
-        this.selectedEntryPoint.sections.indexOf(this.sectionService.currentSection) + 1
-      ];
+    let nextSection;
+    if (this.sectionService.currentSection === 'meilenstein/:id') {
+      const url = this.router.url;
+
+      const section = url.substring(url.lastIndexOf('/') + 1, url.length);
+
+      nextSection = this.selectedEntryPoint.sections[this.selectedEntryPoint.sections.indexOf(section) + 1];
+    } else {
+      nextSection =
+        this.selectedEntryPoint.sections[
+          this.selectedEntryPoint.sections.indexOf(this.sectionService.currentSection) + 1
+        ];
+    }
 
     return nextSection ? nextSection : null;
   }

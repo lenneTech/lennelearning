@@ -1,0 +1,32 @@
+<div class="container relative">
+  <app-trophy (loopComplete)="check($event)"></app-trophy>
+  <div [ngClass]="{ blur: visible, noblur: !visible }">
+    <div class="container">
+      <h1 class="text-center">
+        <span class="fw-bold">{{ mileStoneSection.sectionTitle.toUpperCase() }}</span> abgeschlossen
+      </h1>
+      <div class="d-flex justify-content-center">
+        <img
+          [src]="mileStoneSection.logo"
+          class="img-fluid brand-img"
+          alt="Illustration des abgeschlossenen Abschnitts"
+        />
+      </div>
+      <h2 class="text-center">Herzlichen Glückwunsch!</h2>
+      <div class="d-flex justify-content-center">
+        <p class="text-center w-50">{{ mileStoneSection.description }}</p>
+      </div>
+    </div>
+    <div *ngIf="mileStoneSection.exampleList">
+      <h2 class="text-center">Was du jetzt schon kannst</h2>
+      <div *ngFor="let item of mileStoneSection.exampleList; let i = index" class="row mb-5">
+        <div class="col-6 d-flex justify-content-center align-items-center" [ngClass]="{ 'order-last': i % 2 !== 0 }">
+          <p class="text-center w-50 example-text">{{ item.text }}</p>
+        </div>
+        <div class="col-6 d-flex justify-content-center align-items-center">
+          <img [src]="item.img" alt="" class="img-fluid example-image" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
