@@ -1,6 +1,6 @@
-import { Component, EventEmitter, NgZone, OnDestroy, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { AnimationItem } from 'lottie-web';
-import { AnimationOptions, BMCompleteLoopEvent } from 'ngx-lottie';
+import { AnimationOptions } from 'ngx-lottie';
 
 @Component({
   selector: 'app-trophy',
