@@ -3,6 +3,7 @@ import { StorageService } from '@lenne.tech/ng-base';
 import { TaskService } from 'src/app/modules/core/services/task.service';
 import { DialogService } from '../../../../modules/core/services/dialog.service';
 import { animate, AUTO_STYLE, state, style, transition, trigger } from '@angular/animations';
+import { SectionService } from 'src/app/modules/core/services/section.service';
 
 @Component({
   selector: 'task',
@@ -12,8 +13,8 @@ import { animate, AUTO_STYLE, state, style, transition, trigger } from '@angular
     trigger('collapse', [
       state('false', style({ height: AUTO_STYLE, visibility: AUTO_STYLE })),
       state('true', style({ height: '0', visibility: 'hidden' })),
-      transition('false => true', animate(400 + 'ms ease-in')),
-      transition('true => false', animate(400 + 'ms ease-out')),
+      transition('false => true', animate(`${400}ms ease-in`)),
+      transition('true => false', animate(`${400}ms ease-out`)),
     ]),
   ],
 })
@@ -30,7 +31,8 @@ export class TaskComponent implements OnInit {
   constructor(
     private dialogService: DialogService,
     private taskService: TaskService,
-    private storageService: StorageService
+    private storageService: StorageService,
+    private sectionService: SectionService
   ) {}
 
   ngOnInit(): void {
@@ -55,6 +57,9 @@ export class TaskComponent implements OnInit {
   onComplete(): void {
     if (!this.completed) {
       this.taskService.completeTask(this.id, this.section);
+      if (this.sectionService.checkMileStone()) {
+        this.openMileStone();
+      }
     } else {
       this.taskService.uncompleteTask(this.id, this.section);
     }
@@ -63,5 +68,9 @@ export class TaskComponent implements OnInit {
 
   openHelp(): void {
     this.dialogService.openHelperDialog('Hilfe', this.hint, this.videoReference, this.solutionLink);
+  }
+
+  openMileStone(): void {
+    this.sectionService.setCurrentMileStone(this.section);
   }
 }

@@ -1,7 +1,10 @@
 import { ElementRef, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { StorageService } from '@lenne.tech/ng-base';
 import { NbMenuItem } from '@nebular/theme';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { Sections } from '../interfaces/sections.interface';
+import { Tasks } from '../interfaces/tasks.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -25,8 +28,10 @@ export class SectionService {
   ];
   private _currentSectionMenuItems: BehaviorSubject<NbMenuItem[]> = new BehaviorSubject<NbMenuItem[]>(null);
   currentSection: string;
+  mileStoneCheck = true;
+  currentMileStone = new BehaviorSubject('');
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private storageService: StorageService) {}
 
   get sections(): string[] {
     return this._sections;
@@ -75,6 +80,28 @@ export class SectionService {
 
   setCurrentSection(section: string): boolean {
     this.currentSection = section;
+    return true;
+  }
+
+  checkMileStone(): boolean {
+    const sections: Sections[] = this.storageService.load('sections');
+    if (sections) {
+      const currSection = sections.find((oneSection: Sections) => oneSection[this.currentSection]);
+
+      if (currSection && currSection[this.currentSection].length === this.currentSectionMenuItems.length) {
+        this.mileStoneCheck = true;
+        currSection[this.currentSection].find((task: Tasks, index) => {
+          if (task[`task-${index + 1}`] && task[`task-${index + 1}`].completed === false) {
+            this.mileStoneCheck = false;
+          }
+        });
+        return this.mileStoneCheck ? true : false;
+      }
+    }
+  }
+
+  setCurrentMileStone(section: string): boolean {
+    this.currentMileStone.next(section);
     return true;
   }
 }
