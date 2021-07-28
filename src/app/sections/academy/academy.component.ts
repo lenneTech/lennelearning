@@ -54,7 +54,7 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
       this.sectionService.currentSectionMenuItemsObservable.subscribe((items) => {
         this.prevSection = this.entryPointService.getPrevSectionByEntryPoint();
         this.nextSection = this.entryPointService.getNextSectionByEntryPoint();
-        // Timingproblem beim Laden aus Local-Storage (bei Reload der Seite) - mit 1ms Timeout funktionierts
+        // Timingproblem with loading from localstorage (when reloading the page) - 1ms Timeout works
         setTimeout(() => {
           if (this.sectionService.checkMileStone()) {
             this.sectionService.setCurrentMileStone(this.sectionService.currentSection);
