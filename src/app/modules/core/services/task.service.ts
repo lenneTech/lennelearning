@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { StorageService } from '@lenne.tech/ng-base';
-import { Sections } from '../interfaces/sections.interface';
-import { Task } from '../interfaces/task.interface';
-import { Tasks } from '../interfaces/tasks.interface';
+import { Section } from '../interfaces/section.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -22,7 +20,7 @@ export class TaskService {
       // if there is no section at all
       sections = [{ [section]: [{ [id]: { completed: true, completedAt: new Date() } }] }];
     } else {
-      const currSection = sections.find((oneSection) => oneSection[section]);
+      const currSection = sections.find((oneSection: Section) => oneSection[section]);
 
       if (currSection) {
         // if the section already exists

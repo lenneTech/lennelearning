@@ -55,11 +55,11 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
         this.prevSection = this.entryPointService.getPrevSectionByEntryPoint();
         this.nextSection = this.entryPointService.getNextSectionByEntryPoint();
         // Timingproblem with loading from localstorage (when reloading the page) - 1ms Timeout works
-        setTimeout(() => {
-          if (this.sectionService.checkMileStone()) {
-            this.sectionService.setCurrentMileStone(this.sectionService.currentSection);
-          }
-        }, 1);
+        if (this.sectionService.checkMileStone()) {
+          this.sectionService.setCurrentMileStone(this.sectionService.currentSection);
+        } else {
+          this.currentMileStoneUrl = '';
+        }
         // Refresh items and reset old children
         this.setSections();
         if (!items) {
