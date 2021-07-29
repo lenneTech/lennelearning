@@ -7,7 +7,7 @@
   <task id="task-1" section="ionic">
     <div title>Video</div>
     <div description>
-      Schaue dir diese Videoabschnitte an, um zu erfahren was Ionic überhaupt ist und welche Komponenten für die
+      Schaue dir diese Videoabschnitte an, um zu erfahren, was Ionic überhaupt ist und welche Komponenten für die
       Entwicklung wichtig sind
     </div>
 
@@ -27,7 +27,7 @@
     }"
   >
     <div title>Fragen</div>
-    <div description>Beantworte die Fragen so gut wie möglich und am Besten, ohne Hilfe.</div>
+    <div description>Beantworte die Fragen so gut wie möglich und am besten ohne Hilfe.</div>
 
     <task-questions>
       <div questionlist>Was ist Ionic?</div>
@@ -48,8 +48,8 @@
     </div>
     <task-text>
       <div info>
-        Klick dich mal durch die verschiedenen Komponenten durch und schau wie die Ionic Komponenten für IOS und Android
-        aussehen.<br />
+        Klick dich mal durch die verschiedenen Komponenten durch und schau, wie die Ionic Komponenten für IOS und
+        Android aussehen.<br />
         Dabei kannst du dich inspirieren lassen und Ideen für dein Ionic Projekt sammeln.
       </div>
     </task-text>
@@ -67,16 +67,16 @@
         installiert werden können, müssen sie für die einzelnen Plattformen kompiliert werden. Dazu benötigst du
         <a href="https://developer.android.com/studio" taskLink>Android Studio</a> für Android Applikationen und
         <a href="https://apps.apple.com/us/app/xcode/id497799835?mt=12" taskLink>XCode</a> für IOS Applikationen. Wenn
-        du auf Windows entwickelst, kannst du XCode leider nicht verwenden. Teste deine Anwendung dann erstmal für
+        du auf Windows entwickelst, kannst du XCode leider nicht verwenden. Teste deine Anwendung dann erst mal für
         Android Geräte. Nachdem du Android Studio und/oder XCode erfolgreich installiert hast, gehe wie folgt vor:
       </div>
       <div infolist>
         Öffne Android Studio, klicke unten rechts auf <b>Configure</b> und wähle <b>SDK Manager</b> aus. Hier können
-        alle SDK (Softwware Development Kit) Versionen eingesehen, installiert oder deinstalliert werden. Installiere am
-        besten verschiedene SDKs mit einem Api Level von mindestens 21. Je höher das Api Level desto aktueller ist die
+        alle SDK (Software Development Kit) Versionen eingesehen, installiert oder deinstalliert werden. Installiere am
+        besten verschiedene SDKs mit einem Api Level von mindestens 21. Je höher das Api Level, desto aktueller ist die
         Version des SDKs.
       </div>
-      <div infolist>Darufhin kannst du die Ionic CLI mit <code>npm install -g @ionic/cli</code> installieren</div>
+      <div infolist>Daraufhin kannst du die Ionic CLI mit <code>npm install -g @ionic/cli</code> installieren</div>
     </task-text>
   </task>
   <task
@@ -92,24 +92,27 @@
       <div info>Erstelle dein eigenes Projekt wie folgt:</div>
       <div infolist>
         Gehe in den Texteditor deiner Wahl (VSCode, PhpStorm, etc), öffne das Terminal und navigiere an den Ort, an dem
-        du deine App speichern möchtest
+        du deine App speichern möchtest.
       </div>
-      <div infolist>Führe <code>ionic start</code> aus, um dein eigenes Projekt zu initialisieren</div>
-      <div infolist>Wähle hier <b>angular</b> aus, um in deinem Projekt mit dem Angular Framework zu arbeiten</div>
-      <div infolist>Gib dem Projekt einen Namen</div>
+      <div infolist>Führe <code>ionic start</code> aus, um dein eigenes Projekt zu initialisieren.</div>
+      <div infolist>Wähle hier <b>angular</b> aus, um in deinem Projekt mit dem Angular Framework zu arbeiten.</div>
+      <div infolist>Gib dem Projekt einen Namen.</div>
       <div infolist>
         Als Nächstes solltest du zwischen verschiedenen Starter Optionen auswählen können. Wähle hier den
         <b>Tabs Starter</b> aus, um mit einem Template zu starten, das schon eine Tabbar mit Navigation implementiert
-        hat
+        hat.
       </div>
       <div infolist>
         Bei der Frage, ob du Capacitor einbinden möchtest, solltest du <b>n</b> eingeben, da wir diesen Schritt gleich
-        manuell übernehmen
+        manuell übernehmen.
       </div>
-      <div infolist>Mit <code>ionic serve</code> solltest du jetzt schon deine Anwendung im Browser starten können</div>
       <div infolist>
-        Für das Enbinden von nativen Funktionen verwenden wir <a href="https://capacitorjs.com/" taskLink>Capacitor</a>.
-        Um es in deine erstellte Anwendung einzubinden führe folgende Befehle in deinem Projekt aus:
+        Mit <code>ionic serve</code> solltest du jetzt schon deine Anwendung im Browser starten können.
+      </div>
+      <div infolist>
+        Für das Einbinden von nativen Funktionen verwenden wir
+        <a href="https://capacitorjs.com/" taskLink>Capacitor</a>. Um es in deine erstellte Anwendung einzubinden, führe
+        folgende Befehle in deinem Projekt aus:
       </div>
       <div infolist>
         <code>npm install @capacitor/core @capacitor/cli</code>
@@ -128,13 +131,13 @@
         Um deine erstellte Ionic App auf Android Geräten installieren zu können, gehe im Terminal deines Texteditors
         (VSCode, PhpStorm, etc) wie folgt vor:
       </div>
-      <div infolist><code>npm install @capacitor/android</code> installiert das Paket</div>
+      <div infolist><code>npm install @capacitor/android</code> installiert das Paket.</div>
       <div infolist>
-        <code>npx cap add android</code> erstellt Android als Platform in deinem Projekt und erstellt einen Android
-        Ordner
+        <code>npx cap add android</code> erstellt Android als Plattform in deinem Projekt und erstellt einen Android
+        Ordner.
       </div>
-      <div infolist><code>npx cap open android</code> öffnet den Android Ordner in Android Studio</div>
-      <div infolist>Mit <code>ionic build</code> Wird dein Projekt kompiliert im <b>www</b> Ordner kompiliert</div>
+      <div infolist><code>npx cap open android</code> öffnet den Android Ordner in Android Studio.</div>
+      <div infolist>Mit <code>ionic build</code> Wird dein Projekt kompiliert im <b>www</b> Ordner kompiliert.</div>
       <div infolist>
         Führe danach immer <code>npx cap sync</code> aus, um den aktuellen Build auch auf die nativen Plattformen zu
         übertragen.
@@ -156,12 +159,12 @@
         Um deine App auf IOS Geräten installieren zu können (MAC OS Nutzer), gehe im Terminal deines Texteditors
         (VSCode, PhpStorm, etc) wie folgt vor:
       </div>
-      <div infolist><code>npm install @capacitor/ios</code> installiert das Paket</div>
+      <div infolist><code>npm install @capacitor/ios</code> installiert das Paket.</div>
       <div infolist>
-        <code>npx cap add ios</code> erstellt IOS als Platform in deinem Projekt und erstellt einen IOS Ordner
+        <code>npx cap add ios</code> erstellt IOS als Plattform in deinem Projekt und erstellt einen IOS Ordner.
       </div>
-      <div infolist><code>npx cap open ios</code> öffnet den IOS Ordner in Xcode</div>
-      <div infolist>Mit <code>ionic build</code> Wird dein Projekt kompiliert im <b>www</b> Ordner kompiliert</div>
+      <div infolist><code>npx cap open ios</code> öffnet den IOS Ordner in Xcode.</div>
+      <div infolist>Mit <code>ionic build</code> Wird dein Projekt kompiliert im <b>www</b> Ordner kompiliert.</div>
       <div infolist>
         Führe danach immer <code>npx cap sync</code> aus, um den aktuellen Build auch auf die nativen Plattformen zu
         übertragen.
@@ -178,49 +181,49 @@
     <div title>Projekt</div>
     <task-text>
       <div exercise>
-        Nach der Installation und Initilisierung deines Projektes bist du nun bereit deine eigene App zu entwickeln. An
-        dieser Stelle kannst du auch gerne deine eigenen Ideen entwickeln und unter Absprache mit deinem Tutor deinen
+        Nach der Installation und Initialisierung deines Projektes bist du nun bereit, deine eigene App zu entwickeln.
+        An dieser Stelle kannst du auch gerne deine eigenen Ideen entwickeln und unter Absprache mit deinem Tutor deinen
         eigenen Projektrahmen festlegen.<br />
-        Wenn du keine eigene Idee hast kannst du unser Musterprojekt entwickeln, um Ionic und die nativen Funktionen
-        besser zu verstehen. Dazu sollst du eine App entwickeln mit der man eigene Rezepte erstellen und digitalisiert
+        Wenn du keine eigene Idee hast, kannst du unser Musterprojekt entwickeln, um Ionic und die nativen Funktionen
+        besser zu verstehen. Dazu sollst du eine App entwickeln, mit der man eigene Rezepte erstellen und digitalisiert
         abspeichern kann.<br />
         Deine zuvor erstellte App hat standardmäßig drei verschiedene Menü Tabs. Wir brauchen für unsere Anwendung nur
         zwei Tabs, wirf dementsprechend einen raus.<br />
-        Der linke Tab soll eine Rezeptliste beinhalten und im rechten Tab sollen neue Rezepte angelegt werden können
+        Der linke Tab soll eine Rezeptliste beinhalten und im rechten Tab sollen neue Rezepte angelegt werden können.
       </div>
       <div exercise>
         <b>Rezepterstellung</b>
-        <div exerciselist>Mache dich zunächst mit der Fotofunktion (Ionic MediaCapture) vertraut</div>
+        <div exerciselist>Mache dich zunächst mit der Fotofunktion (Ionic MediaCapture) vertraut.</div>
         <div exerciselist>
           Implementiere ein Formular, in dem der Rezept Titel, eine Zutatenliste sowie eine kurze Kochanleitung
-          angegeben werden kann (Nutze dafür Ionic Components)
+          angegeben werden kann (Nutze dafür Ionic Components).
         </div>
         <div exerciselist>
-          Unter dem Formular soll es einen Button geben mit dem ein Foto von dem Gericht aufgenommen werden kann
+          Unter dem Formular soll es einen Button geben, mit dem ein Foto von dem Gericht aufgenommen werden kann.
         </div>
         <div exerciselist>
-          Wenn ein Foto aufgenommen wurde soll es über dem Button zentriert angezeigt werden. Wenn der Button nochmal
-          betätigt wird soll das neu aufgenommene Foto das alte Foto überschreiben.
+          Wenn ein Foto aufgenommen wurde, soll es über dem Button zentriert angezeigt werden. Wenn der Button noch mal
+          betätigt wird, soll das neu aufgenommene Foto das alte Foto überschreiben.
         </div>
         <div exerciselist>
-          Wenn das Formal komplett ist, soll ein Speicher Button erscheinen mit dem das Rezept zunächst im Local Storage
-          abgespeichert wird
+          Wenn das Formal komplett ist, soll ein Speicher Button erscheinen, mit dem das Rezept zunächst im Local
+          Storage abgespeichert wird.
         </div>
       </div>
       <div exercise>
         <b>Rezeptliste</b>
         <div exerciselist>
           Die Rezeptliste soll die Rezepte aus dem Local Storage in einer Ionic List darstellen. Dabei sollen in dieser
-          Liste zu jedem Rezept das Bild (als Avatar) und der Titel angezeigt werden
+          Liste zu jedem Rezept das Bild (als Avatar) und der Titel angezeigt werden.
         </div>
         <div exerciselist>
           Beim Klick auf ein Rezept soll auf eine neue Seite navigiert werden, auf der das gesamte Rezept (Titel,
-          Zutatenliste, Anleitung und Bild) angezeigt werden
+          Zutatenliste, Anleitung und Bild) angezeigt werden.
         </div>
-        <div exerciselist>Abgespeicherte Rezepte sollen dabei sowohl bearbeitet als auch gelöscht werden können</div>
+        <div exerciselist>Abgespeicherte Rezepte sollen dabei sowohl bearbeitet als auch gelöscht werden können.</div>
         <div exerciselist>
-          Zusatzaufgabe: Binde die Ionic Share Api ein und implementiere eine Funktion mit der Rezepte zum Beispiel über
-          Whatsapp oder andere Social Media Plattformen versendet werden können
+          Zusatzaufgabe: Binde die Ionic Share Api ein und implementiere eine Funktion, mit der Rezepte zum Beispiel
+          über Whatsapp oder andere Social Media Plattformen versendet werden können.
         </div>
       </div>
     </task-text>

@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { SEOService } from '@lenne.tech/ng-base';
 import { SectionService } from '../../../../modules/core/services/section.service';
 
@@ -17,20 +18,20 @@ export class SectionComponent implements OnInit, AfterViewInit {
 
   links = [
     {
-      'Der Beruf Webentwickler': [
+      beruf: [
         { title: 'VSCode', url: 'https://code.visualstudio.com/' },
         { title: 'Slack', url: 'https://slack.com/intl/en-de/' },
         { title: 'Google Chrome', url: 'https://www.google.de/chrome/' },
       ],
     },
     {
-      HTML: [
+      html: [
         { title: 'Unsplash', url: 'https://unsplash.com/' },
         { title: 'Pixabay', url: 'https://pixabay.com/de/' },
       ],
     },
     {
-      CSS: [
+      css: [
         { title: 'Unsplash', url: 'https://unsplash.com/' },
         { title: 'Pixabay', url: 'https://pixabay.com/de/' },
         { title: 'Coolors', url: 'https://coolors.co/' },
@@ -39,7 +40,7 @@ export class SectionComponent implements OnInit, AfterViewInit {
       ],
     },
     {
-      Bootstrap: [
+      bootstrap: [
         { title: 'Bootstrap', url: 'https://getbootstrap.com/docs/5.0/getting-started/introduction/' },
         { title: 'Bootstrap-Icons', url: 'https://icons.getbootstrap.com/' },
         { title: 'SASS', url: 'https://sass-lang.com/documentation' },
@@ -47,44 +48,44 @@ export class SectionComponent implements OnInit, AfterViewInit {
       ],
     },
     {
-      'Git-Basics': [
+      'git-basics': [
         { title: 'Git', url: 'https://git-scm.com/downloads' },
         { title: 'GitHub', url: 'https://github.com/' },
       ],
     },
     {
-      JavaScript: [
+      javascript: [
         { title: 'MDN', url: 'https://developer.mozilla.org/de/' },
         { title: 'Stackoverflow', url: 'https://stackoverflow.com/' },
       ],
     },
     {
-      TypeScript: [
+      typescript: [
         { title: 'MDN', url: 'https://developer.mozilla.org/de/' },
         { title: 'Stackoverflow', url: 'https://stackoverflow.com/' },
       ],
     },
     {
-      'Git-Experte': [
+      'git-experte': [
         { title: 'Git', url: 'https://git-scm.com/downloads' },
         { title: 'GitHub', url: 'https://github.com/' },
       ],
     },
     {
-      Angular: [
+      angular: [
         { title: 'Angular Docs', url: 'https://angular.io/docs' },
         { title: 'ngBootstrap', url: 'https://ng-bootstrap.github.io/#/getting-started' },
       ],
     },
     {
-      Ionic: [
+      ionic: [
         { title: 'Ionic Docs', url: 'https://ionicframework.com/docs/angular/overview	' },
         { title: 'Ionicons', url: 'https://ionic.io/ionicons' },
         { title: 'Capacitor', url: 'https://capacitorjs.com/docs' },
       ],
     },
     {
-      NestJS: [
+      nestjs: [
         { title: 'NestJS Docs', url: 'https://docs.nestjs.com/' },
         { title: 'Docker', url: 'https://www.docker.com/' },
         { title: 'Postman', url: 'https://www.postman.com/' },
@@ -94,46 +95,47 @@ export class SectionComponent implements OnInit, AfterViewInit {
     },
   ];
   cheatSheet = [
-    { 'Der Beruf Webentwickler': [] },
-    { HTML: [{ url: 'https://cheatography.com//karionis/cheat-sheets/html5-deutsch/pdf/' }] },
-    { CSS: [{ url: 'https://cheatography.com//karionis/cheat-sheets/css2-1-deutsch/pdf/' }] },
+    { beruf: [] },
+    { html: [{ url: 'https://cheatography.com//karionis/cheat-sheets/html5-deutsch/pdf/' }] },
+    { css: [{ url: 'https://cheatography.com//karionis/cheat-sheets/css2-1-deutsch/pdf/' }] },
     {
-      Bootstrap: [
+      bootstrap: [
         { url: 'https://cheatography.com//the-exilant/cheat-sheets/flex-box-german/pdf/' },
         { url: 'https://css-tricks.com/snippets/css/a-guide-to-flexbox/' },
         { url: 'https://getbootstrap.com/docs/5.0/examples/cheatsheet/' },
       ],
     },
     {
-      'Git-Basics': [
+      'git-basics': [
         { url: 'https://www.badfv.de/files/Dokumente/tower_cheatsheet_dark_DE.pdf' },
         { url: 'https://training.github.com/downloads/github-git-cheat-sheet.pdf' },
       ],
     },
-    { JavaScript: [] },
-    { TypeScript: [] },
+    { javascript: [] },
+    { typescript: [] },
     {
-      'Git-Experte': [
+      'git-experte': [
         { url: 'https://www.badfv.de/files/Dokumente/tower_cheatsheet_dark_DE.pdf' },
         { url: 'https://training.github.com/downloads/github-git-cheat-sheet.pdf' },
       ],
     },
-    { Angular: [{ url: 'https://angular.io/guide/cheatsheet' }] },
-    { Ionic: [] },
-    { NestJS: [] },
+    { angular: [{ url: 'https://angular.io/guide/cheatsheet' }] },
+    { ionic: [] },
+    { nestjs: [] },
   ];
   linkList;
   cheatSheetList;
 
-  constructor(private seoService: SEOService, private sectionService: SectionService) {}
+  constructor(private seoService: SEOService, private sectionService: SectionService, private router: Router) {}
 
   ngOnInit(): void {
     this.seoService.initPageForSEO(this.seoTitle, this.seoDescription, this.seoKeywords);
 
-    this.linkList = this.links.find((links) => links[this.pageTitle]);
-    this.linkList = this.linkList[this.pageTitle];
-    this.cheatSheetList = this.cheatSheet.find((sheet) => sheet[this.pageTitle]);
-    this.cheatSheetList = this.cheatSheetList[this.pageTitle];
+    const url = this.router.url.split('#')[0].split('/');
+    const section = url[url.length - 1];
+
+    this.linkList = this.links.find((links) => links[section])[section];
+    this.cheatSheetList = this.cheatSheet.find((sheet) => sheet[section])[section];
   }
 
   ngAfterViewInit(): void {
