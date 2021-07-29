@@ -1,42 +1,50 @@
 <div class="container relative">
   <app-trophy (loopComplete)="check()"></app-trophy>
   <div class="blur" #content>
-    <div class="container">
-      <h1 class="text-center">
-        <span class="fw-bold">{{ mileStoneSection.sectionTitle.toUpperCase() }}</span> abgeschlossen
-      </h1>
-      <div class="d-flex justify-content-center">
-        <img
-          [src]="mileStoneSection.logo"
-          class="img-fluid brand-img"
-          alt="Illustration des abgeschlossenen Abschnitts"
-          loading="lazy"
-        />
-      </div>
-      <h2 class="text-center">Herzlichen Glückwunsch!</h2>
-      <div class="d-flex justify-content-center">
-        <p class="text-center w-md-50">{{ mileStoneSection.description }}</p>
-      </div>
-    </div>
-    <div *ngIf="mileStoneSection.exampleList">
-      <h2 class="text-center">Was du jetzt schon kannst</h2>
-      <div *ngFor="let item of mileStoneSection.exampleList; let i = index" class="row mb-5">
-        <div
-          class="col-md-6 d-flex justify-content-center align-items-center"
-          [ngClass]="{ 'order-md-last': i % 2 !== 0 }"
-        >
-          <p class="text-center w-md-50 example-text">{{ item.text }}</p>
-        </div>
-        <div class="col-md-6 d-flex justify-content-center align-items-center">
-          <img
-            [src]="item.imageUrl"
-            [alt]="item.alt"
-            loading="lazy"
-            class="img-fluid example-image"
-            *ngIf="item.imageUrl"
-          />
-        </div>
-      </div>
+    <div class="container card">
+      <nb-stepper orientation="horizontal">
+        <nb-step>
+          <div class="d-flex justify-content-center">
+            <img
+              [src]="mileStoneSection.logo"
+              class="img-fluid brand-img"
+              alt="Illustration des abgeschlossenen Abschnitts"
+              loading="lazy"
+            />
+          </div>
+          <h2 class="text-center title">Herzlichen Glückwunsch!</h2>
+          <div class="d-flex justify-content-center">
+            <p class="milestone-text text-center w-md-50">{{ mileStoneSection.description }}</p>
+          </div>
+          <div class="d-flex justify-content-center button-bar">
+            <button nbButton nbStepperNext *ngIf="mileStoneSection.exampleList">Weiter</button>
+          </div>
+        </nb-step>
+
+        <nb-step *ngFor="let item of mileStoneSection.exampleList; let i = index">
+          <h2 class="text-center example-title">Was du jetzt schon kannst</h2>
+          <div class="row mb-5">
+            <div
+              class="col-md-6 d-flex justify-content-center align-items-center"
+              [ngClass]="{ 'order-md-last': i % 2 !== 0 }"
+            >
+              <p class="text-center w-md-50 example-text">{{ item.text }}</p>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center align-items-center">
+              <img
+                [src]="item.imageUrl"
+                [alt]="item.alt"
+                loading="lazy"
+                class="img-fluid example-image"
+                *ngIf="item.imageUrl"
+              />
+            </div>
+          </div>
+          <div class="d-flex justify-content-center button-bar">
+            <button nbButton nbStepperNext *ngIf="i < mileStoneSection.exampleList.length - 1">Weiter</button>
+          </div>
+        </nb-step>
+      </nb-stepper>
     </div>
   </div>
 </div>

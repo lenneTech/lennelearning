@@ -26,8 +26,15 @@ h1 {
   margin-bottom: 50px;
 }
 
-h2 {
+.title {
   margin: 50px 0;
+  font-weight: 600;
+}
+
+.example-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-weight: 600;
 }
 
 p {
@@ -44,4 +51,33 @@ p {
   opacity: 100%;
   filter: none;
   transition: 1.5s;
+}
+
+.card {
+  max-width: 650px;
+  min-height: 700px;
+  padding-top: 50px;
+  border: none;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.milestone-text {
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: lighter;
+}
+
+.button-bar {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+}
+
+::ng-deep {
+  nb-stepper .header {
+    display: none !important;
+  }
 }

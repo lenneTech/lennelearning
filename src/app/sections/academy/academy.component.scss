@@ -41,8 +41,8 @@ a {
 }
 
 .nav-btn {
-  border: none;
-  background: transparent;
+  border: none !important;
+  background: transparent !important;
 }
 
 .nav-btn:focus {
