@@ -10,6 +10,7 @@ import {
   NbMenuService,
   NbSidebarModule,
   NbSidebarService,
+  NbStepperModule,
 } from '@nebular/theme';
 import { TaskVideoComponent } from './components/task-video/task-video.component';
 import { DescriptionDirective } from './directives/description.directive';
@@ -107,6 +108,8 @@ export function playerFactory() {
     NbCardModule,
     CoreModule,
     NbMenuModule.forRoot(),
+    NbCardModule,
+    NbStepperModule,
     HighlightModule,
     HighlightPlusModule,
     LottieModule.forRoot({ player: playerFactory }),

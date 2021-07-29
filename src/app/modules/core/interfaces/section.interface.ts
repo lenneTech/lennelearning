@@ -1,5 +1,5 @@
 import { Tasks } from './tasks.interface';
 
-export interface Sections {
+export interface Section {
   [key: string]: Tasks[];
 }

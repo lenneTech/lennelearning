@@ -1,7 +1,10 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Milestone } from 'src/app/modules/core/interfaces/milestone.interface';
 import { SectionService } from 'src/app/modules/core/services/section.service';
+import { NbStepperComponent } from '@nebular/theme';
+import { EntryPointService } from '../../../../modules/core/services/entry-point.service';
+
 @Component({
   selector: 'app-milestone',
   templateUrl: './milestone.component.html',
@@ -11,23 +14,34 @@ export class MilestoneComponent implements OnInit {
   id: string;
   mileStoneSection: Milestone = {};
   @ViewChild('content') content: ElementRef;
+  @ViewChild('stepper') stepper: NbStepperComponent;
   milestones: Milestone[] = [
     {
       sectionTitle: 'beruf',
-      logo: '../../../../../assets/images/brand-images/logos_google-developers.svg',
+      logo: '../../../../../assets/images/explanation-images/strategy.svg',
       description:
-        'Du hast den Beruf Webentwickler nun schon einmal kennengelernt. Jetzt ist es an der Zeit, dir die einzelnen Fertigkeiten anzueignen. Dazu zählen unter anderem die Grundlagen des Frontends, die in den nächsten Sektionen auf dich zukommen.',
+        'Du hast den Beruf des Webentwicklers nun schon einmal kennengelernt. Jetzt ist es an der Zeit, dir die einzelnen Fertigkeiten anzueignen.',
+      exampleList: [
+        {
+          text: 'Du hast den Alltag von Softwareentwicklern kennengelernt und kannst dir vorstellen was ein Softwareentwickler für Aufgaben hat.',
+        },
+        {
+          text: 'Du hast gelernt wie man ein Softwareentwickler wird, mit welchen Gehältern man durchschnittlich rechnen kann und in welchen Branchen du später tätig sein kannst.',
+        },
+        {
+          text: 'Du hast die Softwareentwicklung im App und Web Bereich kennengelernt und hast verstanden, was Frontend, Backend und Full Stack sind.',
+        },
+      ],
     },
     {
       sectionTitle: 'html',
       logo: '../../../../../assets/images/brand-images/logos_html-5.svg',
       description:
-        'Super, jetzt kennst du schon Html mit all seinen Tags. In der nächsten Sektion geht es weiter mit dem Styling einer Webseite',
+        'Super, du hast Html verstanden und kannst jetzt schon eigene kleine Websiten erstellen. In der nächsten Sektion geht es weiter mit dem Styling deiner Webseite.',
       exampleList: [
-        { title: '', text: 'Webseiten erstellen, die noch kein Styling besitzen aber die Grundstruktur bieten' },
+        { text: 'Webseiten erstellen und die Grundstruktur fürs Layout und Styling vorgeben.' },
         {
-          title: '',
-          text: 'Die im Browser eingebauten Entwicklertools nutzen, um den Aufbau einer Seite zu verstehen',
+          text: 'Die im Browser eingebauten Entwicklertools nutzen, um den Aufbau einer Seite zu verstehen und andere Websiten zu analysieren.',
         },
       ],
     },
@@ -38,8 +52,7 @@ export class MilestoneComponent implements OnInit {
         'Klasse Leistung! Mit dieser Sektion bist du deiner eigenen wunderschönen Webseite ein Stück näher gekommen.',
       exampleList: [
         {
-          title: '',
-          text: 'Schöne Seiten mit Bildern, Texten und vielem mehr darstellen',
+          text: 'Du kannst jetzt Html Elemente stylen und somit Webseiten nach deinen Wünschen gestalten.',
           imageUrl:
             'https://cdn.dribbble.com/users/1615584/screenshots/14947408/media/b9701a4bb0c77c22a8a3150bd91ac80e.jpg?compress=1&resize=1200x900',
           alt: 'Bild einer Webseite',
@@ -50,17 +63,15 @@ export class MilestoneComponent implements OnInit {
       sectionTitle: 'bootstrap',
       logo: '../../../../../assets/images/brand-images/logos_bootstrap.svg',
       description:
-        'Jetzt hast du eine Möglichkeit kennengelernt ein Framework zu verwenden, dass dir viel Arbeit beim Stylen abnehmen kann.',
+        'Jetzt hast du eine Möglichkeit kennengelernt eines der meist genutzten CSS Framework zu verwenden, dass dir viel Arbeit beim Stylen abnehmen kann.',
       exampleList: [
         {
-          title: '',
-          text: 'In kurzer Zeit einen Blog kreieren',
+          text: 'Eigenschaften von Bootstrap überschreiben und für deine Webseite anpassen.',
           imageUrl: 'https://themes.getbootstrap.com/wp-content/uploads/2021/06/preview-screenshot-540x405.jpg',
           alt: 'Bild einer Webseite',
         },
         {
-          title: '',
-          text: 'Moderne Dashboards designen',
+          text: 'Mithilfe von Bootstrap Klassen deinen Webseiten in kurzer Zeit einen professionellen Look geben.',
           imageUrl: 'https://themes.getbootstrap.com/wp-content/uploads/2021/06/bubbly-react-1200x900-540x405.jpg',
           alt: 'Bild eines Dashboards',
         },
@@ -70,24 +81,34 @@ export class MilestoneComponent implements OnInit {
       sectionTitle: 'git-basics',
       logo: '../../../../../assets/images/brand-images/logos_git.svg',
       description:
-        'Du hast nun die Grundlagen von Git kennengelernt. Wenn sich nun also unauffindbare Fehler in deinem Code einnisten, weißt du was zu tun ist.',
+        'Du hast nun die Grundlagen von Git kennengelernt. Grundlegende Versionsverwaltung ist für dich kein Problem mehr und du bist in der Lage deine Projekte remote abzusichern.',
+      exampleList: [
+        {
+          text: 'Mithilfe von Commits kannst du neuen Code strukturiert in dein Projekt Repository pushen.',
+        },
+        {
+          text: 'Du kannst von jedem Rechner aus an deinem Code weiterarbeiten, da du jeder Zeit dein Projekt clonen und Änderungen vornehmen kannnst.',
+        },
+        {
+          text: 'Wenn du mal Probleme hast kannst du nun einfach dein GitHub Repository an andere Softwareentwickler weitergeben, die dir helfen können.',
+        },
+      ],
     },
     {
       sectionTitle: 'javascript',
       logo: '../../../../../assets/images/brand-images/logos_javascript.svg',
       description:
-        'Top! Jetzt kannst du mit Html, Css, und Javascript deine eigene Webseite bauen, die sowohl optisch schick aussehen kann und zusätzlich dem Nutzer Interaktionsmöglichkeiten bietet.',
+        'Super Leistung! Jetzt kannst du mit Html, CSS, Bootstrap und Javascript deine eigene Webseite mit Styling und Funktionalität entwickeln. Damit hast du bereits die wichtigsten Bausteine der Webentwicklung kennengelernt.',
       exampleList: [
         {
-          title: '',
-          text: 'Jegliche Art von Programm schreiben, dass dir in irgendeiner Hinsicht nützlich ist',
+          text: 'Webseiten für Probleme aller Art entwickeln.',
           imageUrl:
             'https://images.unsplash.com/photo-1527427337751-fdca2f128ce5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
           alt: 'Bild von Programmcode',
         },
         {
           title: '',
-          text: 'Deine eigene Seite funktionfähig machen ',
+          text: 'Deine eigenen Ideen umsetzen, Prototypen entwickeln oder schon vollständige Webprojekte fürs Frontend umsetzen.',
           imageUrl:
             'https://cdn.dribbble.com/users/1774675/screenshots/15392711/media/f27039dc27a65c1d2d2f9bb7a36975da.png?compress=1&resize=1200x900',
           alt: 'Bild eines Logins',
@@ -98,32 +119,50 @@ export class MilestoneComponent implements OnInit {
       sectionTitle: 'typescript',
       logo: '../../../../../assets/images/brand-images/logos_typescript-icon.svg',
       description:
-        'Du hast jetzt eine Erweiterung von Javascript kennengelernt, die dir unter anderem mit Typisierungen das Leben erleichtern soll. Darauf aufbauend kannst das Framework Angular verwenden, welches bei uns ständig Gebrauch findet. Dies lernst du in der übernächsten Sektion kennen.',
+        'Du hast jetzt eine Erweiterung von Javascript kennengelernt, die dir unter anderem mit Typisierungen das Leben erleichtern soll und strukturierteres Coden ermöglicht.',
+      exampleList: [
+        {
+          text: 'Mithilfe von Typescript hast du die Grundlage für moderne Web Frameworks wie Angular gelernt und kannst nun voll durchstarten.',
+        },
+      ],
     },
     {
       sectionTitle: 'git-experte',
       logo: '../../../../../assets/images/brand-images/logos_github-icon.svg',
       description:
-        'Sehr gut! Du hast jetzt die volle Kontrolle über deinen Code und kannst sehr gut mit anderen zusammenarbeiten.',
+        'Sehr gut! Du hast jetzt die volle Kontrolle über deinen Code und kannst kooperativ mit anderen Softwareentwicklern zusammenarbeiten.',
+      exampleList: [
+        {
+          text: 'Du kannst nun für verschiedene Aufgaben Branches auschecken und somit separiert an deinen Projektaufgaben arbeiten.',
+        },
+        {
+          text: 'Mithilfe von Pull Requests kannst du deine Änderungen am Code kontrollieren und in den Main Branch eingliedern lassen.',
+        },
+        {
+          text: 'Mithilfe von Rebases kannst du deine Branches aktuell halten und gegebenenfalls Merge Konflikte lösen.',
+        },
+      ],
     },
     {
       sectionTitle: 'angular',
       logo: '../../../../../assets/images/brand-images/logos_angular-icon.svg',
-      description: 'Du bist jetzt ein zertifizierter Angular Entwickler und kannst Frontend Anwendungen entwickeln.',
+      description:
+        'Du bist jetzt ein zertifizierter Angular Entwickler und kannst agile Single Page Anwendungen entwickeln.',
       exampleList: [
         {
-          title: '',
-          text: 'Dynamische Webseiten mit mehreren Pages, Routing, Animationen und vielem mehr erstellen',
+          text: 'Dynamische Webseiten mit mehreren Pages, Routing, Animationen und vielem mehr erstellen.',
           imageUrl:
             'https://cdn.dribbble.com/users/5994307/screenshots/16110304/media/1e1444082bb06481fbf7da53efdcc1da.png?compress=1&resize=1200x900',
           alt: 'Bild einer Webseite',
         },
         {
-          title: '',
-          text: 'Erstellung von modernen Layouts, Formularen sowie Validierungen, um alles rund ums Frontend abzudecken',
+          text: 'Erstellung von modernen Layouts, Formularen sowie Validierungen, um alles rund ums Frontend abzudecken.',
           imageUrl:
             'https://cdn.dribbble.com/users/3515564/screenshots/16110175/media/bf51c714a92e9fa6e3f2cc2b99a75c62.png?compress=1&resize=1200x900',
           alt: 'Bild einer Webseite',
+        },
+        {
+          text: 'Du hast eins der meist gefragtesten Frontend Frameworks erlernt und kannst als Frontend Entwickler in Unternehmen arbeiten.',
         },
       ],
     },
@@ -131,18 +170,19 @@ export class MilestoneComponent implements OnInit {
       sectionTitle: 'ionic',
       logo: '../../../../../assets/images/brand-images/logos_ionic-icon.svg',
       description:
-        'Der Appentwicklung steht nun nichts mehr im Wege. Den Bereich Frontend hast du nun komplett abgeschlossen. Das einzige, was dir jetzt noch fehlt, ist das Backend.',
+        'Der Appentwicklung steht nun nichts mehr im Wege. Den Bereich Frontend hast du nun komplett abgeschlossen. Das Einzige, was dir jetzt noch fehlt, ist das Backend.',
       exampleList: [
         {
-          title: '',
-          text: 'Apps designen und funktional gestalten',
+          text: 'Du kannst Apps designen und funktional gestalten.',
           imageUrl:
             'https://cdn.dribbble.com/users/4140236/screenshots/14397265/media/4b57fe4cedb678b2ce1b47172ac5c999.png?compress=1&resize=1200x900',
           alt: 'Bilder einer App',
         },
         {
-          title: '',
-          text: 'Apps sowohl auf Android als auch auf IOS publishen',
+          text: 'Du kannst native Funktionen von Smartphones nutzen, um zum Beispiel Kamera-, Audio- oder GPS-Sensoren einzubinden.',
+        },
+        {
+          text: 'Du hast gelernt wie man Apps hybrid entwickelt und sowohl für Android als auch für IOS konzipiert.',
           imageUrl:
             'https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1192&q=80',
           alt: 'Bild von zwei Smartphones',
@@ -153,29 +193,36 @@ export class MilestoneComponent implements OnInit {
       sectionTitle: 'nestjs',
       logo: '../../../../../assets/images/brand-images/logos_nestjs.svg',
       description:
-        'Du weißt jetzt auch, wie man ein Backend erstellt. Damit kannst du dich selbst nun einen Fullstack-Developer nennen.',
+        'Du weißt jetzt auch, wie man ein Backend mit einer Datenbank und Endpunkten erstellt. Damit kannst du dich selbst nun einen Fullstack-Developer nennen.',
       exampleList: [
         {
-          title: '',
-          text: 'Datenbanken an dein Frontend anbinden, um Daten abzuspeichern und zu analysieren',
+          text: 'Du kannst jetzt Datenbanken an dein Frontend anbinden, um Daten abzuspeichern und zu analysieren.',
           imageUrl:
             'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
           alt: 'Bild einer Analyse-Webseite',
         },
         {
-          title: '',
-          text: 'Eigene vollwertige Webapplikationen erstellen, wie es auch die Big-Player machen',
+          text: 'Du hast gelernt wie man moderne vollwertige Webapplikationen mit eigener Serverarchitektur wie die Big Player entwickelt.',
           imageUrl: 'https://cdn.pixabay.com/photo/2015/12/11/09/30/mobile-phone-1087845_960_720.jpg',
           alt: 'Bild mit mehreren Logos bekannter Unternehmen',
         },
       ],
     },
   ];
-  constructor(private sectionService: SectionService, private route: ActivatedRoute) {}
+  currentIndex = 0;
+  nextSection;
+
+  constructor(
+    private sectionService: SectionService,
+    private router: Router,
+    private route: ActivatedRoute,
+    private entryPointService: EntryPointService
+  ) {}
 
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id');
     this.setMileStoneContent();
+    this.nextSection = this.entryPointService.getNextSectionByEntryPoint();
   }
 
   setMileStoneContent() {
@@ -186,7 +233,35 @@ export class MilestoneComponent implements OnInit {
     });
   }
 
+  nextStep() {
+    this.stepper.next();
+    this.currentIndex++;
+    console.log(this.currentIndex);
+  }
+
+  prevStep() {
+    this.stepper.previous();
+    this.currentIndex--;
+    console.log(this.currentIndex);
+  }
+
+  checkPrev() {
+    return this.currentIndex > 0;
+  }
+
+  checkNext() {
+    if (this.stepper) {
+      return this.currentIndex < this.stepper.steps.length - 1;
+    }
+  }
+
   check() {
-    this.content.nativeElement.classList.add('noblur');
+    if (this.stepper) {
+      this.content.nativeElement.classList.add('noblur');
+    }
+  }
+
+  navigateToNextSection() {
+    this.router.navigate([`/lernpfad/${this.nextSection}`]);
   }
 }

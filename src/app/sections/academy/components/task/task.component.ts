@@ -54,11 +54,11 @@ export class TaskComponent implements OnInit {
     }
   }
 
-  onComplete(): void {
+  onComplete() {
     if (!this.completed) {
       this.taskService.completeTask(this.id, this.section);
       if (this.sectionService.checkMileStone()) {
-        this.openMileStone();
+        this.showMilestoneBtn();
       }
     } else {
       this.taskService.uncompleteTask(this.id, this.section);
@@ -70,7 +70,7 @@ export class TaskComponent implements OnInit {
     this.dialogService.openHelperDialog('Hilfe', this.hint, this.videoReference, this.solutionLink);
   }
 
-  openMileStone(): void {
+  showMilestoneBtn(): void {
     this.sectionService.setCurrentMileStone(this.section);
   }
 }
