@@ -12,8 +12,9 @@ app-trophy {
 }
 
 .example-image {
-  width: 80%;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 90%;
+  border: 1px solid #ececec;
+  border-radius: 5px;
 }
 
 .example-text {
@@ -33,7 +34,7 @@ h1 {
 
 .example-title {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   font-weight: 600;
 }
 
@@ -43,8 +44,8 @@ p {
 }
 
 .blur {
-  -webkit-filter: brightness(20%) blur(4px);
-  filter: brightness(20%) blur(4px);
+  -webkit-filter: brightness(10%);
+  filter: brightness(10%);
 }
 
 .noblur {
@@ -54,11 +55,13 @@ p {
 }
 
 .card {
-  max-width: 650px;
-  min-height: 700px;
-  padding-top: 50px;
   border: none;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.card-res {
+  width: 650px;
+  height: 800px;
 }
 
 .milestone-text {
@@ -76,8 +79,29 @@ p {
   width: 100%;
 }
 
+.full-res {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.nav-btn {
+  border: none !important;
+  background: transparent !important;
+}
+
+.nav-btn:focus {
+  box-shadow: none;
+}
+
 ::ng-deep {
   nb-stepper .header {
     display: none !important;
+  }
+
+  nb-card-footer {
+    border-top: none;
   }
 }

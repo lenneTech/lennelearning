@@ -163,9 +163,7 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     }
   }
 
-  onForward() {
-    this.router.navigate([`/lernpfad/${this.nextSection}`]);
-  }
+  onForward() {}
 
   onBack() {
     this.router.navigate([`/lernpfad/${this.prevSection}`]);
@@ -174,5 +172,9 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
   onMileStone() {
     this.router.navigate([this.currentMileStoneUrl]);
     this.currentMileStoneUrl = '';
+  }
+
+  checkBottomNavbar() {
+    return !window.location.href.includes('meilenstein');
   }
 }

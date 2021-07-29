@@ -1,5 +1,5 @@
 export interface TextImageInterface {
-  title: string;
+  title?: string;
   text: string;
   subtitle?: string;
   contact?: string;

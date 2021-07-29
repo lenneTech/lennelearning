@@ -1,50 +1,59 @@
 <div class="container relative">
   <app-trophy (loopComplete)="check()"></app-trophy>
-  <div class="blur" #content>
-    <div class="container card">
-      <nb-stepper orientation="horizontal">
-        <nb-step>
-          <div class="d-flex justify-content-center">
-            <img
-              [src]="mileStoneSection.logo"
-              class="img-fluid brand-img"
-              alt="Illustration des abgeschlossenen Abschnitts"
-              loading="lazy"
-            />
-          </div>
-          <h2 class="text-center title">Herzlichen Glückwunsch!</h2>
-          <div class="d-flex justify-content-center">
-            <p class="milestone-text text-center w-md-50">{{ mileStoneSection.description }}</p>
-          </div>
-          <div class="d-flex justify-content-center button-bar">
-            <button nbButton nbStepperNext *ngIf="mileStoneSection.exampleList">Weiter</button>
-          </div>
-        </nb-step>
-
-        <nb-step *ngFor="let item of mileStoneSection.exampleList; let i = index">
-          <h2 class="text-center example-title">Was du jetzt schon kannst</h2>
-          <div class="row mb-5">
-            <div
-              class="col-md-6 d-flex justify-content-center align-items-center"
-              [ngClass]="{ 'order-md-last': i % 2 !== 0 }"
-            >
-              <p class="text-center w-md-50 example-text">{{ item.text }}</p>
-            </div>
-            <div class="col-md-6 d-flex justify-content-center align-items-center">
+  <div class="blur d-flex justify-content-center" #content>
+    <nb-card class="card card-res">
+      <nb-card-body class="d-flex align-items-center justify-content-center">
+        <nb-stepper #stepper orientation="horizontal">
+          <nb-step>
+            <div class="d-flex justify-content-center">
               <img
-                [src]="item.imageUrl"
-                [alt]="item.alt"
+                [src]="mileStoneSection.logo"
+                class="img-fluid brand-img"
+                alt="Illustration des abgeschlossenen Abschnitts"
                 loading="lazy"
-                class="img-fluid example-image"
-                *ngIf="item.imageUrl"
               />
             </div>
-          </div>
-          <div class="d-flex justify-content-center button-bar">
-            <button nbButton nbStepperNext *ngIf="i < mileStoneSection.exampleList.length - 1">Weiter</button>
-          </div>
-        </nb-step>
-      </nb-stepper>
-    </div>
+            <h2 class="text-center title">Herzlichen Glückwunsch!</h2>
+            <div class="d-flex justify-content-center">
+              <p class="milestone-text text-center w-md-50">{{ mileStoneSection.description }}</p>
+            </div>
+          </nb-step>
+          <nb-step>
+            <div class="d-flex justify-content-center align-items-center">
+              <h2 class="text-center example-title">Was kannst du jetzt schon?</h2>
+            </div>
+          </nb-step>
+          <nb-step *ngFor="let item of mileStoneSection.exampleList; let i = index">
+            <div class="row">
+              <div class="col-12 d-flex justify-content-center align-items-center">
+                <img
+                  [src]="item.imageUrl"
+                  [alt]="item.alt"
+                  loading="lazy"
+                  class="img-fluid example-image"
+                  *ngIf="item.imageUrl"
+                />
+              </div>
+              <div class="col-12 d-flex ps-5 pe-5 justify-content-center align-items-center mt-4">
+                <p class="milestone-text text-center">{{ item.text }}</p>
+              </div>
+            </div>
+          </nb-step>
+        </nb-stepper>
+      </nb-card-body>
+      <nb-card-footer>
+        <div class="d-flex justify-content-between">
+          <button nbButton class="nav-btn" (click)="prevStep()" [ngClass]="{ invisible: !checkPrev() }">
+            ❮ Zurück
+          </button>
+          <button nbButton class="nav-btn" (click)="nextStep()" [ngClass]="{ invisible: !checkNext() }">
+            Weiter ❯
+          </button>
+          <button nbButton class="nav-btn" (click)="navigateToNextSection()" *ngIf="!checkNext() && nextSection">
+            Zu {{ nextSection }} ❯
+          </button>
+        </div>
+      </nb-card-footer>
+    </nb-card>
   </div>
 </div>

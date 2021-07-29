@@ -108,6 +108,7 @@ export function playerFactory() {
     NbCardModule,
     CoreModule,
     NbMenuModule.forRoot(),
+    NbCardModule,
     NbStepperModule,
     HighlightModule,
     HighlightPlusModule,
