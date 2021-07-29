@@ -163,7 +163,9 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     }
   }
 
-  onForward() {}
+  onForward() {
+    this.router.navigate([`/lernpfad/${this.nextSection}`]);
+  }
 
   onBack() {
     this.router.navigate([`/lernpfad/${this.prevSection}`]);
