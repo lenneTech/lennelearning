@@ -26,7 +26,7 @@ export class FeaturesComponent implements OnInit {
     },
     {
       title: 'Lernpfad',
-      text: 'Zusätzlich zu den Videokursen, haben wir einen eigenen Aufgabenkatalog mit Tipps und Musterlösungen angefertigt, um dich auf deinen Lernpfad noch besser zu unterstützen.',
+      text: 'Zusätzlich zu den Videokursen haben wir einen eigenen Aufgabenkatalog mit Tipps und Musterlösungen angefertigt, um dich auf deinen Lernpfad noch besser zu unterstützen.',
       iconClass: 'bi-layout-text-sidebar-reverse',
     },
     {
