@@ -100,3 +100,13 @@ button:focus {
   color: var(--color-warning-500);
   transition: 0.3s;
 }
+
+.pop-link {
+  margin-right: 10px;
+  font-weight: normal;
+  color: var(--color-warning-500);
+  padding: 6px 16px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  border-radius: 5px;
+  display: none;
+}
