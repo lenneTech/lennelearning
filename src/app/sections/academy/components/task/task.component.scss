@@ -90,3 +90,13 @@ button:focus {
   color: var(--color-success-500);
   transition: 0.3s;
 }
+
+.bi-clipboard-check {
+  color: var(--color-warning-500);
+}
+
+.bi-clipboard:hover,
+.bi-clipboard-check:hover {
+  color: var(--color-warning-500);
+  transition: 0.3s;
+}

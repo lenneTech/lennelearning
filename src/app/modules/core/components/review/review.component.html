@@ -1,7 +1,8 @@
 <div class="row align-items-center mt-5 mb-5">
   <div class="reviewer-block" [ngClass]="{ 'col-12 col-md-4': true, 'order-md-last': reversed }">
     <div class="d-flex justify-content-center">
-      <img loading="lazy" class="img-circle" alt="Foto von Reviewer" [src]="review.imageUrl" />
+      <academy-picture [image]="review.imageUrl" alt="Foto von Reviewer" imgClass="img-review-circle"></academy-picture>
+      <!-- <img loading="lazy" class="img-circle" alt="Foto von Reviewer" [src]="review.imageUrl" /> -->
     </div>
     <div class="reviewer-text mt-3">
       <b>{{ review.reviewerTitle }}</b

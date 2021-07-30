@@ -29,6 +29,7 @@ import { StepsComponent } from './components/steps/steps.component';
 import { TutorCardsComponent } from './components/tutor-cards/tutor-cards.component';
 import { CompanyTestimonialComponent } from './components/company-testimonial/company-testimonial.component';
 import { DialogConfirmComponent } from './components/dialog-confirm/dialog-confirm.component';
+import { AcademyPictureComponent } from './components/academy-picture/academy-picture.component';
 
 @NgModule({
   imports: [
@@ -80,6 +81,8 @@ import { DialogConfirmComponent } from './components/dialog-confirm/dialog-confi
     FeaturesComponent,
     TutorCardsComponent,
     CompanyTestimonialComponent,
+
+    AcademyPictureComponent,
   ],
   exports: [
     // Components
@@ -105,6 +108,7 @@ import { DialogConfirmComponent } from './components/dialog-confirm/dialog-confi
     FeaturesComponent,
     TutorCardsComponent,
     CompanyTestimonialComponent,
+    AcademyPictureComponent,
   ],
 })
 export class CoreModule {}
