@@ -77,8 +77,6 @@ export class TaskComponent implements OnInit {
 
   share() {
     const shareUrl = `${window.location.href.split('#')[0]}#${this.id}`;
-    console.log(shareUrl);
-
     const selBox = document.createElement('textarea');
     selBox.style.position = 'fixed';
     selBox.style.left = '0';

@@ -53,6 +53,7 @@ import { AcademyPictureComponent } from './components/academy-picture/academy-pi
     CarouselComponent,
     TextImageListComponent,
     BrandBannerComponent,
+    AcademyPictureComponent,
 
     // Dialogs
     HelperDialogComponent,
@@ -81,8 +82,6 @@ import { AcademyPictureComponent } from './components/academy-picture/academy-pi
     FeaturesComponent,
     TutorCardsComponent,
     CompanyTestimonialComponent,
-
-    AcademyPictureComponent,
   ],
   exports: [
     // Components
