@@ -18,7 +18,7 @@
               <p class="milestone-text text-center w-md-50">{{ mileStoneSection.description }}</p>
             </div>
           </nb-step>
-          <nb-step>
+          <nb-step *ngIf="mileStoneSection.exampleList">
             <div class="d-flex justify-content-center align-items-center">
               <h2 class="text-center example-title">Was kannst du jetzt schon?</h2>
             </div>

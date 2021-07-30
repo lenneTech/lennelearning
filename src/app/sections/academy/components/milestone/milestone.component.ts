@@ -208,6 +208,12 @@ export class MilestoneComponent implements OnInit {
         },
       ],
     },
+    {
+      sectionTitle: 'packages',
+      logo: '../../../../../assets/images/brand-images/logos_npm.svg',
+      description:
+        'Jetzt weißt du Bescheid, nach welchen Kriterien man Packages auswählen sollte und kannst zukünftig in deinen Projekten bedachter Pakete einbinden.',
+    },
   ];
   currentIndex = 0;
   nextSection;
