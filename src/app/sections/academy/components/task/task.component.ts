@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { StorageService } from '@lenne.tech/ng-base';
 import { TaskService } from 'src/app/modules/core/services/task.service';
 import { DialogService } from '../../../../modules/core/services/dialog.service';
@@ -25,6 +25,7 @@ export class TaskComponent implements OnInit {
   @Input() id: string;
   @Input() section: string;
   @Input() image: { url: string; alt: string };
+  @ViewChild('popLink') popLink: ElementRef;
 
   completed = false;
   check = false;
@@ -77,6 +78,7 @@ export class TaskComponent implements OnInit {
 
   share() {
     const shareUrl = `${window.location.href.split('#')[0]}#${this.id}`;
+    this.popLink.nativeElement.style.display = 'block';
     const selBox = document.createElement('textarea');
     selBox.style.position = 'fixed';
     selBox.style.left = '0';
@@ -91,6 +93,7 @@ export class TaskComponent implements OnInit {
     this.check = true;
     setTimeout(() => {
       this.check = false;
+      this.popLink.nativeElement.style.display = 'none';
     }, 5000);
   }
 }
