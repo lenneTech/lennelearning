@@ -49,6 +49,7 @@ import { MilestoneComponent } from './components/milestone/milestone.component';
 import { TrophyComponent } from 'src/app/modules/core/components/trophy/trophy.component';
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
+import { PackagesComponent } from './sections/packages/packages.component';
 
 export function playerFactory() {
   return player;
@@ -72,6 +73,7 @@ export function playerFactory() {
     IonicComponent,
     NestjsComponent,
     MilestoneComponent,
+    PackagesComponent,
 
     // Components
     SectionComponent,
@@ -98,6 +100,7 @@ export function playerFactory() {
 
     // Pipes
     VideoPipe,
+    PackagesComponent,
   ],
   imports: [
     AcademyRoutingModule,

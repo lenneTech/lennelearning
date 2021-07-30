@@ -93,6 +93,9 @@ export class SectionComponent implements OnInit, AfterViewInit {
         { title: 'MongoDB', url: 'https://docs.mongodb.com/manual/tutorial/getting-started/' },
       ],
     },
+    {
+      packages: [],
+    },
   ];
   cheatSheet = [
     { beruf: [] },
@@ -122,6 +125,7 @@ export class SectionComponent implements OnInit, AfterViewInit {
     { angular: [{ url: 'https://angular.io/guide/cheatsheet' }] },
     { ionic: [] },
     { nestjs: [] },
+    { packages: [] },
   ];
   linkList;
   cheatSheetList;

@@ -20,11 +20,12 @@ export class SectionService {
     'bootstrap',
     'git-basics',
     'javascript',
-    'typescript',
     'git-experte',
+    'typescript',
     'angular',
     'ionic',
     'nestjs',
+    'packages',
   ];
   private _currentSectionMenuItems: BehaviorSubject<NbMenuItem[]> = new BehaviorSubject<NbMenuItem[]>(null);
   currentSection: string;
