@@ -26,13 +26,12 @@
           <nb-step *ngFor="let item of mileStoneSection.exampleList; let i = index">
             <div class="row">
               <div class="col-12 d-flex justify-content-center align-items-center">
-                <img
-                  [src]="item.imageUrl"
+                <academy-picture
+                  [image]="item.imageUrl"
                   [alt]="item.alt"
-                  loading="lazy"
-                  class="img-fluid example-image"
+                  imgClass="img-fluid example-image"
                   *ngIf="item.imageUrl"
-                />
+                ></academy-picture>
               </div>
               <div class="col-12 d-flex ps-5 pe-5 justify-content-center align-items-center mt-4">
                 <p class="milestone-text text-center">{{ item.text }}</p>

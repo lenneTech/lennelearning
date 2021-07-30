@@ -53,8 +53,7 @@ export class MilestoneComponent implements OnInit {
       exampleList: [
         {
           text: 'Du kannst jetzt Html Elemente stylen und somit Webseiten nach deinen Wünschen gestalten.',
-          imageUrl:
-            'https://cdn.dribbble.com/users/1615584/screenshots/14947408/media/b9701a4bb0c77c22a8a3150bd91ac80e.jpg?compress=1&resize=1200x900',
+          imageUrl: '../../../../../assets/images/milestone-images/css-1.png',
           alt: 'Bild einer Webseite',
         },
       ],
@@ -67,13 +66,13 @@ export class MilestoneComponent implements OnInit {
       exampleList: [
         {
           text: 'Eigenschaften von Bootstrap überschreiben und für deine Webseite anpassen.',
-          imageUrl: 'https://themes.getbootstrap.com/wp-content/uploads/2021/06/preview-screenshot-540x405.jpg',
+          imageUrl: '../../../../../assets/images/milestone-images/Bootstrap-1.png',
           alt: 'Bild einer Webseite',
         },
         {
           text: 'Mithilfe von Bootstrap Klassen deinen Webseiten in kurzer Zeit einen professionellen Look geben.',
-          imageUrl: 'https://themes.getbootstrap.com/wp-content/uploads/2021/06/bubbly-react-1200x900-540x405.jpg',
-          alt: 'Bild eines Dashboards',
+          imageUrl: '../../../../../assets/images/milestone-images/Bootstrap-2.png',
+          alt: 'Bild einer Website',
         },
       ],
     },
@@ -109,9 +108,8 @@ export class MilestoneComponent implements OnInit {
         {
           title: '',
           text: 'Deine eigenen Ideen umsetzen, Prototypen entwickeln oder schon vollständige Webprojekte fürs Frontend umsetzen.',
-          imageUrl:
-            'https://cdn.dribbble.com/users/1774675/screenshots/15392711/media/f27039dc27a65c1d2d2f9bb7a36975da.png?compress=1&resize=1200x900',
-          alt: 'Bild eines Logins',
+          imageUrl: '../../../../../assets/images/milestone-images/Javascript-1.png',
+          alt: 'Bild von Amazon',
         },
       ],
     },
@@ -151,14 +149,12 @@ export class MilestoneComponent implements OnInit {
       exampleList: [
         {
           text: 'Dynamische Webseiten mit mehreren Pages, Routing, Animationen und vielem mehr erstellen.',
-          imageUrl:
-            'https://cdn.dribbble.com/users/5994307/screenshots/16110304/media/1e1444082bb06481fbf7da53efdcc1da.png?compress=1&resize=1200x900',
+          imageUrl: '../../../../../assets/images/milestone-images/Angular-1.png',
           alt: 'Bild einer Webseite',
         },
         {
           text: 'Erstellung von modernen Layouts, Formularen sowie Validierungen, um alles rund ums Frontend abzudecken.',
-          imageUrl:
-            'https://cdn.dribbble.com/users/3515564/screenshots/16110175/media/bf51c714a92e9fa6e3f2cc2b99a75c62.png?compress=1&resize=1200x900',
+          imageUrl: '../../../../../assets/images/milestone-images/Angular-2.png',
           alt: 'Bild einer Webseite',
         },
         {
@@ -175,7 +171,7 @@ export class MilestoneComponent implements OnInit {
         {
           text: 'Du kannst Apps designen und funktional gestalten.',
           imageUrl:
-            'https://cdn.dribbble.com/users/4140236/screenshots/14397265/media/4b57fe4cedb678b2ce1b47172ac5c999.png?compress=1&resize=1200x900',
+            'https://images.unsplash.com/photo-1551650975-87deedd944c3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80',
           alt: 'Bilder einer App',
         },
         {
@@ -242,13 +238,11 @@ export class MilestoneComponent implements OnInit {
   nextStep() {
     this.stepper.next();
     this.currentIndex++;
-    console.log(this.currentIndex);
   }
 
   prevStep() {
     this.stepper.previous();
     this.currentIndex--;
-    console.log(this.currentIndex);
   }
 
   checkPrev() {
