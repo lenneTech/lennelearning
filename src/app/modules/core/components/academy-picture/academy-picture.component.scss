@@ -1,0 +1,24 @@
+.image-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: inline-block;
+  object-fit: cover;
+}
+
+.img-review-circle {
+  height: 220px;
+  width: 220px;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 8px 1px #b3b3b3;
+  object-fit: cover;
+}
+
+.card-img {
+  height: 240px;
+  width: 240px;
+  border-radius: 50%;
+  display: inline-block;
+  object-fit: cover;
+}

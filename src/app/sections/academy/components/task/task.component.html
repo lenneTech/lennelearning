@@ -6,6 +6,11 @@
       </div>
       <div class="col-5 d-flex justify-content-end align-items-center">
         <i
+          class="bi cursor-pointer p-1"
+          (click)="share()"
+          [ngClass]="{ 'bi-clipboard': !check, 'bi-clipboard-check': check }"
+        ></i>
+        <i
           *ngIf="(hint || videoReference || solutionLink) && !completed"
           class="bi bi-question-circle cursor-pointer p-1"
           (click)="openHelp()"

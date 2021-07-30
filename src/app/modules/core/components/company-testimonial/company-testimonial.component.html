@@ -9,7 +9,11 @@
       />
       <div class="review-text mb-1">„{{ review.text }}“</div>
       <div class="d-flex flex-column align-items-center p-2 mb-1">
-        <img loading="lazy" [src]="review.imageUrl" class="d-block image-circle" alt="Bild von einem Menschen" />
+        <academy-picture
+          [image]="review.imageUrl"
+          alt="Bild von einem Menschen"
+          imgClass="d-block image-circle"
+        ></academy-picture>
         <div class="reviewer-text mt-3">
           <b>{{ review.reviewerTitle }}</b
           ><br />

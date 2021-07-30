@@ -6,7 +6,7 @@
     <a [href]="link" target="_blank" *ngIf="link">
       <div class="thumbnail d-none d-lg-flex" *ngIf="videoPreview">
         <i class="bi bi-play-circle"></i>
-        <img loading="lazy" [src]="videoPreview" alt="Illustration eines Videos" />
+        <academy-picture [image]="videoPreview" alt="Illustration eines Videos"></academy-picture>
       </div>
       <button class="mt-4" nbButton size="giant" [ngClass]="{ 'd-lg-flex': !videoPreview, 'd-lg-none': videoPreview }">
         Zum Kurs
