@@ -5,6 +5,9 @@ on:
     types:
       - released
 
+env:
+  SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
 jobs:
   deploy:
     runs-on: self-hosted
@@ -24,3 +27,12 @@ jobs:
         run: docker-compose -f docker-compose.prod.yml push
       - name: Deploy
         run: docker stack deploy -c docker-compose.prod.yml --with-registry-auth academy-prod
+      - name: Deploy notification
+        if: always()
+        uses: adamkdean/simple-slack-notify@master
+        with:
+          channel: '#akademie-tutoren'
+          status: ${{ job.status }}
+          success_text: 'Version (#${github.event.release.tag_name}) der Akademie wurde erfolgreich released.'
+          failure_text: 'Release (#${github.event.release.tag_name}) failed'
+          cancelled_text: 'Release (#${github.event.release.tag_name}) was cancelled'
