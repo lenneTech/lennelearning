@@ -26,6 +26,7 @@ export class SectionService {
     'ionic',
     'nestjs',
     'packages',
+    'design',
   ];
   private _currentSectionMenuItems: BehaviorSubject<NbMenuItem[]> = new BehaviorSubject<NbMenuItem[]>(null);
   currentSection: string;

@@ -1,0 +1,116 @@
+<section
+  [pageTitle]="'Design'"
+  [seoTitle]="'ltakademie - Design'"
+  [seoDescription]="'Lerne Design mithilfe der ltakademie.'"
+  [seoKeywords]="'design, academy, online, learning, platform, akademie'"
+>
+  <task
+    id="task-1"
+    section="design"
+    [image]="{
+      url: '../../assets/images/academy-images/error.svg',
+      alt: 'Illustration einer Frau, die vor einem explodierenden Laptop steht'
+    }"
+  >
+    <div title>Inhalt</div>
+
+    <task-text>
+      <div info>
+        Im letzten Abschnitt hast du ein eigenes Projekt auf die Beine gestellt. Dies liegt nun auf deinem Computer und
+        somit bist du der Einzige, dem der Quellcode vorliegt. Jetzt kommt Git ins Spiel. Mit Git kannst du für dein
+        Projekt Back-ups erstellen, zu denen du jederzeit Zugriff hast und diese sogar online stellen. Wenn sich also
+        ein Fehler in deinen Code einschleicht, kannst du einfach zu einer früheren Version deines Projekts zurückkehren
+        und dort weitermachen. Wie das Ganze funktioniert, erklären wir dir jetzt.
+      </div>
+    </task-text>
+  </task>
+
+  <task id="task-2" section="design">
+    <div title>Video</div>
+    <div description>Schaue dir die ersten beiden Videos der Playlist an und komme danach wieder hier hin</div>
+
+    <task-video [youtubelink]="'https://www.youtube.com/embed/videoseries?list=PLNmsVeXQZj7rbmmqb1Lt_RGU4DEhelTrR'">
+      <div videolist><a href="https://git-scm.com/downloads" taskLink>Git Download</a></div>
+      <div videolist>Anstelle von <code>git add *</code> kann auch <code>git add .</code> verwendet werden.</div>
+    </task-video>
+  </task>
+
+  <task
+    id="task-3"
+    solutionLink="https://youtu.be/dnAy6aIbIWo"
+    hint="Manche Aufgabenstellungen im Spiel sind wirklich nicht eindeutig, daher ist es nicht schlimm danach zu googeln."
+    section="design"
+  >
+    <div title>Oh My Git</div>
+    <div description>
+      Lade dir das Spiel <a href="https://ohmygit.org/" taskLink>Oh My Git</a> herunter und spiele bis zum Ende von
+      Abschnitt 'files', um die gelernten Inhalte spielerisch zu vertiefen.
+    </div>
+  </task>
+
+  <task
+    id="task-4"
+    hint="Du kannst auch mit 'Rechtsklick' auf den Ordner drücken und darüber ein Git Bash Fenster öffnen."
+    section="design"
+  >
+    <div title>Hochladen</div>
+
+    <task-text>
+      <div exercise>
+        Jetzt bist du an der Reihe, dein eigenes Projekt in GitHub hochzuladen. Befolge dabei diesen Leitfaden:
+      </div>
+      <div exerciselist>
+        Lade dir <a href="https://git-scm.com/downloads" taskLink>Git</a> herunter und installiere es.
+      </div>
+      <div exerciselist>Öffne Git Bash.</div>
+      <div exerciselist>
+        Mit dem Befehl <code>cd [Ordnername]' bzw. 'cd ..</code> wechselst du in der Konsole die Ordner. Gehe in den
+        Ordner, in dem dein Projekt liegt.
+      </div>
+      <div exerciselist>Führe <code>git init</code> aus.</div>
+      <div exerciselist>Führe <code>git add .</code> aus.</div>
+      <div exerciselist>Führe <code>git commit -m "deine Nachricht"</code> aus.</div>
+      <div exerciselist>Erstelle dir einen GitHub-Account, sofern das noch nicht geschehen ist.</div>
+      <div exerciselist>Erstelle ein neues Projekt in GitHub, welches den Namen deines eigenen Projekts trägt.</div>
+      <div exerciselist>
+        Führe <code>git remote add origin git@GitHub.com:[DeinName]/[DeinProjekt].git</code> aus, um deinen Ordner mit
+        dem git Repository zu verknüpfen.
+      </div>
+      <div exerciselist>Führe <code>git branch -M main</code> aus.</div>
+      <div exerciselist>
+        Führe <code>git push -u origin main</code> aus, um alle Daten aus deinem Ordner nach GitHub hochzuladen.
+      </div>
+      <div exerciselist>
+        Wenn alle Dateien in deinem GitHub-Repository angezeigt werden, hast du alles richtig gemacht!
+      </div>
+    </task-text>
+  </task>
+
+  <task
+    id="task-5"
+    hint="Bei Fehlern werden dir in der Konsole häufig Lösungen angezeigt, die du verwenden kannst."
+    section="design"
+  >
+    <div title>Herunterladen</div>
+
+    <task-text>
+      <div exercise>
+        Dein Projekt sollte jetzt bei GitHub vorliegen. Nun möchtest du es von z. B. einem anderen PC aus herunterladen.
+        Wir imitieren das Ganze mit einem anderen Ordner.
+      </div>
+      <div exerciselist>Erstelle einen neuen Ordner und führe <code>git init</code> aus.</div>
+      <div exerciselist>
+        Führe <code>git remote add origin git@GitHub.com:[DeinName]/[DeinProjekt].git</code> aus, um deinen Ordner mit
+        dem git Repository zu verknüpfen.
+      </div>
+      <div exerciselist>
+        Führe <code>git fetch</code> aus, um zu prüfen, ob Daten, die nicht in deinem Ordner sind, auf GitHub liegen.
+      </div>
+      <div exerciselist>
+        Führe <code>git pull</code> aus, um die Daten, die nicht in deinem Ordner sind, von GitHub herunterzuladen.
+      </div>
+      <div exerciselist>Eventuell musst du noch den Branch wechseln. Das geht mit <code>git branch main</code> .</div>
+      <div exerciselist>Wenn alle Dateien im neu erstellten Ordner angezeigt werden, hat alles funktioniert.</div>
+    </task-text>
+  </task>
+</section>
