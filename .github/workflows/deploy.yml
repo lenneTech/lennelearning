@@ -33,6 +33,6 @@ jobs:
         with:
           channel: '#akademie-tutoren'
           status: ${{ job.status }}
-          success_text: 'Version (#${github.event.release.tag_name}) der Akademie wurde erfolgreich released.'
-          failure_text: 'Release (#${github.event.release.tag_name}) failed'
-          cancelled_text: 'Release (#${github.event.release.tag_name}) was cancelled'
+          success_text: 'Version (#${{github.event.release.tag_name}}) der Akademie wurde erfolgreich released.'
+          failure_text: 'Release (#${{github.event.release.tag_name}}) failed'
+          cancelled_text: 'Release (#${{github.event.release.tag_name}}) was cancelled'
