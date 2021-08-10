@@ -75,7 +75,6 @@ export function playerFactory() {
     NestjsComponent,
     MilestoneComponent,
     PackagesComponent,
-    PackagesComponent,
     DesignComponent,
 
     // Components
