@@ -8,109 +8,174 @@
     id="task-1"
     section="design"
     [image]="{
-      url: '../../assets/images/academy-images/error.svg',
-      alt: 'Illustration einer Frau, die vor einem explodierenden Laptop steht'
+      url: '../../assets/images/academy-images/flat-design.png',
+      alt: 'Screenshot der Microsoft Webseite'
     }"
   >
-    <div title>Inhalt</div>
-
+    <div title>Flat Design</div>
     <task-text>
       <div info>
-        Im letzten Abschnitt hast du ein eigenes Projekt auf die Beine gestellt. Dies liegt nun auf deinem Computer und
-        somit bist du der Einzige, dem der Quellcode vorliegt. Jetzt kommt Git ins Spiel. Mit Git kannst du für dein
-        Projekt Back-ups erstellen, zu denen du jederzeit Zugriff hast und diese sogar online stellen. Wenn sich also
-        ein Fehler in deinen Code einschleicht, kannst du einfach zu einer früheren Version deines Projekts zurückkehren
-        und dort weitermachen. Wie das Ganze funktioniert, erklären wir dir jetzt.
+        Die Idee des Flat-Design ist eine der wenigen Designerrungenschaften von Microsoft und wurde erstmalig mit dem
+        Erscheinen von Windows 8 für breite Massen eingesetzt. Es zeichnet sich durch folgende Eigenschaften aus:
       </div>
+      <div infolist>Graphisch minimalistischer Gestaltungsstil</div>
+      <div infolist>Fokus auf die wesentlichen Inhalte</div>
+      <div infolist>Offensive Farbgestaltung</div>
+      <div infolist>Keine Effekte</div>
+      <div infolist>Einfache, zweckerfüllende Elemente</div>
+      <div infolist>Schwerpunkt auf Typographie und Farbe</div>
     </task-text>
   </task>
 
-  <task id="task-2" section="design">
-    <div title>Video</div>
-    <div description>Schaue dir die ersten beiden Videos der Playlist an und komme danach wieder hier hin</div>
-
-    <task-video [youtubelink]="'https://www.youtube.com/embed/videoseries?list=PLNmsVeXQZj7rbmmqb1Lt_RGU4DEhelTrR'">
-      <div videolist><a href="https://git-scm.com/downloads" taskLink>Git Download</a></div>
-      <div videolist>Anstelle von <code>git add *</code> kann auch <code>git add .</code> verwendet werden.</div>
-    </task-video>
+  <task
+    id="task-2"
+    section="design"
+    [image]="{
+      url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Material_Design.svg/250px-Material_Design.svg.png',
+      alt: 'Beispiel von Material Design in Form eines App Designs'
+    }"
+  >
+    <div title>Material Design</div>
+    <task-text>
+      <div info>
+        Material Design ist eine Designsprache, die von Google 2014 entwickelt wurde und dessen Ziel es ist, die
+        klassischen Prinzipien von gutem Design mit der Innovation von Technologie und Wissenschaft zu verknüpfen. Es
+        zeichnet sich durch folgende Aspekte aus:
+      </div>
+      <div infolist>Bezug auf Material</div>
+      <div infolist>Fett, graphisch, intuitiv</div>
+      <div infolist>Bewegung mit Animationen</div>
+      <div infolist>Technologische Flexibilität</div>
+      <div infolist>Plattformübergreifender Ansatz</div>
+      <div infolist>Tiefeneffekte durch Schatten oder Licht</div>
+    </task-text>
   </task>
 
   <task
     id="task-3"
-    solutionLink="https://youtu.be/dnAy6aIbIWo"
-    hint="Manche Aufgabenstellungen im Spiel sind wirklich nicht eindeutig, daher ist es nicht schlimm danach zu googeln."
     section="design"
+    [image]="{
+      url: '../../assets/images/academy-images/minimalistic-design.png',
+      alt: 'Screenshot einer Website mit minimalistischem Design'
+    }"
   >
-    <div title>Oh My Git</div>
-    <div description>
-      Lade dir das Spiel <a href="https://ohmygit.org/" taskLink>Oh My Git</a> herunter und spiele bis zum Ende von
-      Abschnitt 'files', um die gelernten Inhalte spielerisch zu vertiefen.
-    </div>
+    <div title>Minimalistisches Design</div>
+    <task-text>
+      <div info>
+        Minimalismus beschreibt auch im Webdesign die Kunst des Weniger, die Kunst des Bewussten. Minimalistisches
+        Webdesign ist beliebt und (nach wie vor) modern. Allem voran bedeutet Minimalismus im Webdesign den Verzicht auf
+        unnötige Elemente. Es zeichnet sich insbesondere durch diese Eigenschaften aus:
+      </div>
+      <div infolist>wenig oder keine Farbverläufe (Gradienten), Schatten oder Texturen</div>
+      <div infolist>geringes Maß an Detailliertheit</div>
+      <div infolist>versteckte bzw. verdeckte Navigation</div>
+      <div infolist>ausreichend Weißraum</div>
+      <div infolist>Reduktion der Farben. (Faustregel: Nicht mehr als 3 Gleichzeitig)</div>
+      <div infolist>keine unnötigen Buttons oder Bedienelemente</div>
+      <div infolist>zum Teil riesige Überschriften</div>
+    </task-text>
   </task>
-
   <task
     id="task-4"
-    hint="Du kannst auch mit 'Rechtsklick' auf den Ordner drücken und darüber ein Git Bash Fenster öffnen."
     section="design"
+    [image]="{
+      url: '../../assets/images/academy-images/featured-image.png',
+      alt: 'Screenshot einer Website mit einem Featured Image'
+    }"
   >
-    <div title>Hochladen</div>
-
+    <div title>Featured Image</div>
     <task-text>
-      <div exercise>
-        Jetzt bist du an der Reihe, dein eigenes Projekt in GitHub hochzuladen. Befolge dabei diesen Leitfaden:
-      </div>
-      <div exerciselist>
-        Lade dir <a href="https://git-scm.com/downloads" taskLink>Git</a> herunter und installiere es.
-      </div>
-      <div exerciselist>Öffne Git Bash.</div>
-      <div exerciselist>
-        Mit dem Befehl <code>cd [Ordnername]' bzw. 'cd ..</code> wechselst du in der Konsole die Ordner. Gehe in den
-        Ordner, in dem dein Projekt liegt.
-      </div>
-      <div exerciselist>Führe <code>git init</code> aus.</div>
-      <div exerciselist>Führe <code>git add .</code> aus.</div>
-      <div exerciselist>Führe <code>git commit -m "deine Nachricht"</code> aus.</div>
-      <div exerciselist>Erstelle dir einen GitHub-Account, sofern das noch nicht geschehen ist.</div>
-      <div exerciselist>Erstelle ein neues Projekt in GitHub, welches den Namen deines eigenen Projekts trägt.</div>
-      <div exerciselist>
-        Führe <code>git remote add origin git@GitHub.com:[DeinName]/[DeinProjekt].git</code> aus, um deinen Ordner mit
-        dem git Repository zu verknüpfen.
-      </div>
-      <div exerciselist>Führe <code>git branch -M main</code> aus.</div>
-      <div exerciselist>
-        Führe <code>git push -u origin main</code> aus, um alle Daten aus deinem Ordner nach GitHub hochzuladen.
-      </div>
-      <div exerciselist>
-        Wenn alle Dateien in deinem GitHub-Repository angezeigt werden, hast du alles richtig gemacht!
+      <div info>
+        Ein Featured Image repräsentiert den Inhalt, die Stimmung oder das Thema eines Beitrags oder einer Seite. Es
+        gibt verschiedene Art und Weisen Featured Images zu gestalten oder textuell zu untermauern. Einige Beispiele
+        sind <a taskLink href="https://applecartlane.com/blog-featured-image/">hier</a> aufgeführt.
       </div>
     </task-text>
   </task>
-
   <task
     id="task-5"
-    hint="Bei Fehlern werden dir in der Konsole häufig Lösungen angezeigt, die du verwenden kannst."
     section="design"
+    [image]="{
+      url: '../../assets/images/academy-images/gitter.png',
+      alt: 'Screenshot einer Website mit einem Gitter'
+    }"
   >
-    <div title>Herunterladen</div>
-
+    <div title>Gitter</div>
     <task-text>
-      <div exercise>
-        Dein Projekt sollte jetzt bei GitHub vorliegen. Nun möchtest du es von z. B. einem anderen PC aus herunterladen.
-        Wir imitieren das Ganze mit einem anderen Ordner.
+      <div info>
+        Das Gitter-Layout erweitert das Featured Image, indem mehrere Blöcke verschiedener Größen unter dem Featured
+        Image Platz für diverse Inhalte bieten. Dabei können diese Felder zum Beispiel Produktbilder, Textfelder,
+        Blogartikel, etc beinhalten.
       </div>
-      <div exerciselist>Erstelle einen neuen Ordner und führe <code>git init</code> aus.</div>
-      <div exerciselist>
-        Führe <code>git remote add origin git@GitHub.com:[DeinName]/[DeinProjekt].git</code> aus, um deinen Ordner mit
-        dem git Repository zu verknüpfen.
+    </task-text>
+  </task>
+  <task
+    id="task-6"
+    section="design"
+    [image]="{
+      url: '../../assets/images/academy-images/power-gitter.png',
+      alt: 'Screenshot einer Website mit einem Power Gitter'
+    }"
+  >
+    <div title>Power Gitter</div>
+    <task-text>
+      <div info>
+        Das Power-Gitter-Layout ist ein erweitertes Gitter-Layout, in dem noch mehr verschiedene Kacheln kombiniert
+        werden und manche Felder frei bleiben. Dabei kann der Inhalt in Kacheln mit verschiedenen Größen, Formen, etc
+        eingebettet werden.
       </div>
-      <div exerciselist>
-        Führe <code>git fetch</code> aus, um zu prüfen, ob Daten, die nicht in deinem Ordner sind, auf GitHub liegen.
+    </task-text>
+  </task>
+  <task
+    id="task-7"
+    section="design"
+    [image]="{
+      url: '../../assets/images/academy-images/power-gitter.png',
+      alt: 'Screenshot einer Website mit einem Power Gitter'
+    }"
+  >
+    <div title>Power Gitter</div>
+    <task-text>
+      <div info>
+        Das Power-Gitter-Layout ist ein erweitertes Gitter-Layout, in dem noch mehr verschiedene Kacheln kombiniert
+        werden und manche Felder frei bleiben. Dabei kann der Inhalt in Kacheln mit verschiedenen Größen, Formen, etc
+        eingebettet werden.
       </div>
-      <div exerciselist>
-        Führe <code>git pull</code> aus, um die Daten, die nicht in deinem Ordner sind, von GitHub herunterzuladen.
+      <div info>
+        <b>Symmetrie</b>
+        <div infolist>Struktur</div>
+        <div infolist>Ordnung</div>
+        <div infolist>Vollkommenheit</div>
+        <div infolist>Sterilität</div>
+        <div infolist>Langeweile</div>
       </div>
-      <div exerciselist>Eventuell musst du noch den Branch wechseln. Das geht mit <code>git branch main</code> .</div>
-      <div exerciselist>Wenn alle Dateien im neu erstellten Ordner angezeigt werden, hat alles funktioniert.</div>
+      <div info>
+        <b>Asymmetrie</b>
+        <div infolist>Chaos</div>
+        <div infolist>Kreativität</div>
+        <div infolist>Leben</div>
+        <div infolist>Unordnung</div>
+        <div infolist>Spannung</div>
+      </div>
+    </task-text>
+  </task>
+  <task
+    id="task-8"
+    section="design"
+    [image]="{
+      url: '../../assets/images/academy-images/farbschemas.png',
+      alt: 'Gegenüberstellung von Farbschemas'
+    }"
+  >
+    <div title>Farbschemas</div>
+    <task-text>
+      <div info>
+        In der Abbildung Links siehst du die grundlegende Unterscheidung von Farbschemata. In der Link Sammlung findest
+        du Tools, um ein Farbschema zu generieren oder dich inspirieren zu lassen. Wenn du mehr über Farben und wie sie
+        auf Menschen wirken lernen möchtest, kannst du
+        <a taskLink href="https://visme.co/blog/website-color-schemes/">hier</a>
+        vorbeischauen.
+      </div>
     </task-text>
   </task>
 </section>
