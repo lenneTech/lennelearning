@@ -50,6 +50,7 @@ import { TrophyComponent } from 'src/app/modules/core/components/trophy/trophy.c
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 import { PackagesComponent } from './sections/packages/packages.component';
+import { DesignComponent } from './sections/design/design.component';
 
 export function playerFactory() {
   return player;
@@ -74,6 +75,7 @@ export function playerFactory() {
     NestjsComponent,
     MilestoneComponent,
     PackagesComponent,
+    DesignComponent,
 
     // Components
     SectionComponent,
@@ -100,7 +102,6 @@ export function playerFactory() {
 
     // Pipes
     VideoPipe,
-    PackagesComponent,
   ],
   imports: [
     AcademyRoutingModule,
