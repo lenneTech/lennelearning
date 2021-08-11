@@ -14,13 +14,15 @@
     "build": "npx ng build",
     "test": "npx ng test",
     "lint": "npx ng lint",
-    "e2e": "npx ng e2e",
+    "e2e": "ng e2e",
     "dev:ssr": "npx ng run academy:serve-ssr",
     "serve:ssr": "npx node dist/academy/server/main.js",
     "build:ssr": "npx ng build --configuration production && npx ng run academy:server:production",
     "build:test:ssr": "npx ng build --configuration test && npx ng run academy:server:production",
     "prerender": "npx ng run academy:prerender",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "repository": {
     "type": "git",
@@ -66,6 +68,7 @@
     "@angular/cli": "~12.0.2",
     "@angular/compiler-cli": "~12.0.2",
     "@angular/language-service": "~12.0.2",
+    "@cypress/schematic": "^1.5.0",
     "@lenne.tech/npm-package-helper": "0.0.10",
     "@nguniversal/builders": "^12.0.1",
     "@schematics/angular": "~12.0.2",
@@ -91,6 +94,7 @@
     "protractor": "~7.0.0",
     "ts-node": "~8.10.2",
     "tslint": "^6.1.3",
-    "typescript": "~4.2.4"
+    "typescript": "~4.2.4",
+    "cypress": "8.2.0"
   }
 }
