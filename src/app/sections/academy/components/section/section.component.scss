@@ -4,6 +4,12 @@ h1 {
   font-size: 72px;
 }
 
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
+}
+
 h2 {
   font-size: 20px;
   margin-bottom: 20px;
