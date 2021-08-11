@@ -41,16 +41,16 @@
         </nb-stepper>
       </nb-card-body>
       <nb-card-footer>
-        <div class="d-flex justify-content-between">
-          <button nbButton class="nav-btn" (click)="prevStep()" [ngClass]="{ invisible: !checkPrev() }">
-            ❮ Zurück
-          </button>
-          <button nbButton class="nav-btn" (click)="nextStep()" [ngClass]="{ invisible: !checkNext() }">
-            Weiter ❯
-          </button>
-          <button nbButton class="nav-btn" (click)="navigateToNextSection()" *ngIf="!checkNext() && nextSection">
-            Zu {{ nextSection }} ❯
-          </button>
+        <div class="row d-flex justify-content-between">
+          <div class="col-6">
+            <button nbButton class="nav-btn" (click)="prevStep()" *ngIf="checkPrev()">❮ Zurück</button>
+          </div>
+          <div class="col-6 d-flex justify-content-end">
+            <button nbButton class="nav-btn" (click)="nextStep()" *ngIf="checkNext()">Weiter ❯</button>
+            <button nbButton class="nav-btn" (click)="navigateToNextSection()" *ngIf="!checkNext() && nextSection">
+              Zu {{ nextSection }} ❯
+            </button>
+          </div>
         </div>
       </nb-card-footer>
     </nb-card>
