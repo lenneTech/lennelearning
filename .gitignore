@@ -48,3 +48,7 @@ Thumbs.db
 # pimcore
 mysql/*
 redis/*
+
+# cypress media
+cypress/videos/*
+cypress/screenshots/*
