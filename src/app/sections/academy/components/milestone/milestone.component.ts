@@ -210,6 +210,12 @@ export class MilestoneComponent implements OnInit {
       description:
         'Jetzt weißt du Bescheid, nach welchen Kriterien man Packages auswählen sollte und kannst zukünftig in deinen Projekten bedachter Pakete einbinden.',
     },
+    {
+      sectionTitle: 'design',
+      logo: '../../../../../assets/images/brand-images/logos_figma.svg',
+      description:
+        'Jetzt hast du gelernt, wie man designtechnisch an ein Projekt herangeht. Mit Figma oder anderen Tools kannst du deine Webseite also nun schon vorab designen.',
+    },
   ];
   currentIndex = 0;
   nextSection;
