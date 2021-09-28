@@ -216,6 +216,12 @@ export class MilestoneComponent implements OnInit {
       description:
         'Jetzt hast du gelernt, wie man designtechnisch an ein Projekt herangeht. Mit Figma oder anderen Tools kannst du deine Webseite also nun schon vorab designen.',
     },
+    {
+      sectionTitle: 'cypress',
+      logo: '../../../../../assets/images/brand-images/logos_cypress.svg',
+      description:
+        'Du weißt jetzt, wie man mit Cypress blöde Fehler vorbeugen kann und zu jederzeit Bescheid weiß, ob das eigene System noch vollständig funktionsfähig ist.',
+    },
   ];
   currentIndex = 0;
   nextSection;

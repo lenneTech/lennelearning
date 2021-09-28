@@ -95,6 +95,8 @@ export class SectionComponent implements OnInit, AfterViewInit {
     },
     {
       packages: [],
+    },
+    {
       design: [
         { title: 'Design Stile', url: 'https://www.exovia.de/journal/webdesign-stile-und-richtungen/' },
         { title: 'Farbschema Tool', url: 'https://color.adobe.com/de/create/color-wheel' },
@@ -102,6 +104,14 @@ export class SectionComponent implements OnInit, AfterViewInit {
         { title: 'Tipps für Featured Images', url: 'https://applecartlane.com/blog-featured-image/' },
         { title: 'Mehr zu Layouts', url: 'https://99designs.de/blog/design-tipps/effektives-website-layout/' },
         { title: 'Wie wirken Farben auf Menschen?', url: 'https://visme.co/blog/website-color-schemes/' },
+      ],
+    },
+    {
+      cypress: [
+        {
+          title: 'Cypress Docs',
+          url: 'https://docs.cypress.io/guides/getting-started/installing-cypress',
+        },
       ],
     },
   ];
@@ -135,6 +145,7 @@ export class SectionComponent implements OnInit, AfterViewInit {
     { nestjs: [] },
     { packages: [] },
     { design: [] },
+    { cypress: [] },
   ];
   linkList;
   cheatSheetList;
