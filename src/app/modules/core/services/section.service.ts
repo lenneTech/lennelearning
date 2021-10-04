@@ -28,6 +28,7 @@ export class SectionService {
     'packages',
     'design',
     'cypress',
+    'docker-basics',
   ];
   private _currentSectionMenuItems: BehaviorSubject<NbMenuItem[]> = new BehaviorSubject<NbMenuItem[]>(null);
   currentSection: string;

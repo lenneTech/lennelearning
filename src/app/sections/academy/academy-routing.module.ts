@@ -17,6 +17,7 @@ import { MilestoneComponent } from './components/milestone/milestone.component';
 import { PackagesComponent } from './sections/packages/packages.component';
 import { DesignComponent } from './sections/design/design.component';
 import { CypressComponent } from './sections/cypress/cypress.component';
+import { DockerBasicsComponent } from './sections/docker-basics/docker-basics.component';
 
 // ####################################################################
 // If you got a new section, add it to the routes-array like the others
@@ -85,6 +86,12 @@ const routes: Routes = [
         component: IonicComponent,
         canActivate: [SectionGuard],
         data: { matomoTitle: 'Ionic' },
+      },
+      {
+        path: 'docker-basics',
+        component: DockerBasicsComponent,
+        canActivate: [SectionGuard],
+        data: { matomoTitle: 'Docker Basics' },
       },
       {
         path: 'nestjs',

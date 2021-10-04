@@ -85,6 +85,9 @@ export class SectionComponent implements OnInit, AfterViewInit {
       ],
     },
     {
+      'docker-basics': [],
+    },
+    {
       nestjs: [
         { title: 'NestJS Docs', url: 'https://docs.nestjs.com/' },
         { title: 'Docker', url: 'https://www.docker.com/' },
@@ -142,6 +145,7 @@ export class SectionComponent implements OnInit, AfterViewInit {
     },
     { angular: [{ url: 'https://angular.io/guide/cheatsheet' }] },
     { ionic: [] },
+    { 'docker-basics': [] },
     { nestjs: [] },
     { packages: [] },
     { design: [] },
