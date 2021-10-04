@@ -16,6 +16,7 @@ import { GitExpertComponent } from './sections/git-expert/git-expert.component';
 import { MilestoneComponent } from './components/milestone/milestone.component';
 import { PackagesComponent } from './sections/packages/packages.component';
 import { DesignComponent } from './sections/design/design.component';
+import { CypressComponent } from './sections/cypress/cypress.component';
 
 // ####################################################################
 // If you got a new section, add it to the routes-array like the others
@@ -102,6 +103,12 @@ const routes: Routes = [
         component: DesignComponent,
         canActivate: [SectionGuard],
         data: { matomoTitle: 'Design' },
+      },
+      {
+        path: 'cypress',
+        component: CypressComponent,
+        canActivate: [SectionGuard],
+        data: { matomoTitle: 'Cypress' },
       },
       {
         path: 'meilenstein/:id',

@@ -27,6 +27,7 @@ export class SectionService {
     'nestjs',
     'packages',
     'design',
+    'cypress',
   ];
   private _currentSectionMenuItems: BehaviorSubject<NbMenuItem[]> = new BehaviorSubject<NbMenuItem[]>(null);
   currentSection: string;

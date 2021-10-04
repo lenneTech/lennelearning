@@ -51,6 +51,7 @@ import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 import { PackagesComponent } from './sections/packages/packages.component';
 import { DesignComponent } from './sections/design/design.component';
+import { CypressComponent } from './sections/cypress/cypress.component';
 
 export function playerFactory() {
   return player;
@@ -76,6 +77,7 @@ export function playerFactory() {
     MilestoneComponent,
     PackagesComponent,
     DesignComponent,
+    CypressComponent,
 
     // Components
     SectionComponent,
