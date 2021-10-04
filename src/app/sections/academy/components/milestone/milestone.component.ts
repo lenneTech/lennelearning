@@ -198,7 +198,7 @@ export class MilestoneComponent implements OnInit {
           alt: 'Bild einer Analyse-Webseite',
         },
         {
-          text: 'Du hast gelernt, wie man moderne vollwertige Webapplikationen mit eigener Serverarchitektur wie die Big Player entwickelt.',
+          text: 'Du hast gelernt, wie man moderne vollwertige Webapplikationen mit eigener Serverarchitektur wie die Big Player      entwickelt.',
           imageUrl: 'https://cdn.pixabay.com/photo/2015/12/11/09/30/mobile-phone-1087845_960_720.jpg',
           alt: 'Bild mit mehreren Logos bekannter Unternehmen',
         },
