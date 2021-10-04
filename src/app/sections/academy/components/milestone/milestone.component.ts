@@ -23,10 +23,10 @@ export class MilestoneComponent implements OnInit {
         'Du hast den Beruf des Webentwicklers nun schon einmal kennengelernt. Jetzt ist es an der Zeit, dir die einzelnen Fertigkeiten anzueignen.',
       exampleList: [
         {
-          text: 'Du hast den Alltag von Softwareentwicklern kennengelernt und kannst dir vorstellen was ein Softwareentwickler für Aufgaben hat.',
+          text: 'Du hast den Alltag von Softwareentwicklern kennengelernt und kannst dir vorstellen, was ein Softwareentwickler für Aufgaben hat.',
         },
         {
-          text: 'Du hast gelernt wie man ein Softwareentwickler wird, mit welchen Gehältern man durchschnittlich rechnen kann und in welchen Branchen du später tätig sein kannst.',
+          text: 'Du hast gelernt, wie man ein Softwareentwickler wird, mit welchen Gehältern man durchschnittlich rechnen kann und in welchen Branchen du später tätig sein kannst.',
         },
         {
           text: 'Du hast die Softwareentwicklung im App und Web Bereich kennengelernt und hast verstanden, was Frontend, Backend und Full Stack sind.',
@@ -37,11 +37,11 @@ export class MilestoneComponent implements OnInit {
       sectionTitle: 'html',
       logo: '../../../../../assets/images/brand-images/logos_html-5.svg',
       description:
-        'Super, du hast Html verstanden und kannst jetzt schon eigene kleine Websiten erstellen. In der nächsten Sektion geht es weiter mit dem Styling deiner Webseite.',
+        'Super, du hast HTML verstanden und kannst jetzt schon eigene kleine Webseiten erstellen. In der nächsten Sektion geht es weiter mit dem Styling deiner Webseite.',
       exampleList: [
         { text: 'Webseiten erstellen und die Grundstruktur fürs Layout und Styling vorgeben.' },
         {
-          text: 'Die im Browser eingebauten Entwicklertools nutzen, um den Aufbau einer Seite zu verstehen und andere Websiten zu analysieren.',
+          text: 'Die im Browser eingebauten Entwicklertools nutzen, um den Aufbau einer Seite zu verstehen und andere Webseiten zu analysieren.',
         },
       ],
     },
@@ -52,7 +52,7 @@ export class MilestoneComponent implements OnInit {
         'Klasse Leistung! Mit dieser Sektion bist du deiner eigenen wunderschönen Webseite ein Stück näher gekommen.',
       exampleList: [
         {
-          text: 'Du kannst jetzt Html Elemente stylen und somit Webseiten nach deinen Wünschen gestalten.',
+          text: 'Du kannst jetzt HTML Elemente stylen und somit Webseiten nach deinen Wünschen gestalten.',
           imageUrl: '../../../../../assets/images/milestone-images/css-1.png',
           alt: 'Bild einer Webseite',
         },
@@ -62,7 +62,7 @@ export class MilestoneComponent implements OnInit {
       sectionTitle: 'bootstrap',
       logo: '../../../../../assets/images/brand-images/logos_bootstrap.svg',
       description:
-        'Jetzt hast du eine Möglichkeit kennengelernt eines der meist genutzten CSS Framework zu verwenden, dass dir viel Arbeit beim Stylen abnehmen kann.',
+        'Jetzt hast du eine Möglichkeit kennengelernt, eines der meist genutzten CSS-Frameworks zu verwenden, dass dir viel Arbeit beim Stylen abnehmen kann.',
       exampleList: [
         {
           text: 'Eigenschaften von Bootstrap überschreiben und für deine Webseite anpassen.',
@@ -80,16 +80,16 @@ export class MilestoneComponent implements OnInit {
       sectionTitle: 'git-basics',
       logo: '../../../../../assets/images/brand-images/logos_git.svg',
       description:
-        'Du hast nun die Grundlagen von Git kennengelernt. Grundlegende Versionsverwaltung ist für dich kein Problem mehr und du bist in der Lage deine Projekte remote abzusichern.',
+        'Du hast nun die Grundlagen von Git kennengelernt. Grundlegende Versionsverwaltung ist für dich kein Problem mehr und du bist in der Lage, deine Projekte remote abzusichern.',
       exampleList: [
         {
           text: 'Mithilfe von Commits kannst du neuen Code strukturiert in dein Projekt Repository pushen.',
         },
         {
-          text: 'Du kannst von jedem Rechner aus an deinem Code weiterarbeiten, da du jeder Zeit dein Projekt clonen und Änderungen vornehmen kannnst.',
+          text: 'Du kannst von jedem Rechner aus an deinem Code weiterarbeiten, da du jeder Zeit dein Projekt klonen und Änderungen vornehmen kannst.',
         },
         {
-          text: 'Wenn du mal Probleme hast kannst du nun einfach dein GitHub Repository an andere Softwareentwickler weitergeben, die dir helfen können.',
+          text: 'Wenn du mal Probleme hast, kannst du nun einfach dein GitHub Repository an andere Softwareentwickler weitergeben, die dir helfen können.',
         },
       ],
     },
@@ -97,7 +97,7 @@ export class MilestoneComponent implements OnInit {
       sectionTitle: 'javascript',
       logo: '../../../../../assets/images/brand-images/logos_javascript.svg',
       description:
-        'Super Leistung! Jetzt kannst du mit Html, CSS, Bootstrap und Javascript deine eigene Webseite mit Styling und Funktionalität entwickeln. Damit hast du bereits die wichtigsten Bausteine der Webentwicklung kennengelernt.',
+        'Super Leistung! Jetzt kannst du mit HTML, CSS, Bootstrap und Javascript deine eigene Webseite mit Styling und Funktionalität entwickeln. Damit hast du bereits die wichtigsten Bausteine der Webentwicklung kennengelernt.',
       exampleList: [
         {
           text: 'Webseiten für Probleme aller Art entwickeln.',
@@ -120,7 +120,7 @@ export class MilestoneComponent implements OnInit {
         'Du hast jetzt eine Erweiterung von Javascript kennengelernt, die dir unter anderem mit Typisierungen das Leben erleichtern soll und strukturierteres Coden ermöglicht.',
       exampleList: [
         {
-          text: 'Mithilfe von Typescript hast du die Grundlage für moderne Web Frameworks wie Angular gelernt und kannst nun voll durchstarten.',
+          text: 'Mithilfe von Typescript hast du die Grundlage für moderne Webframeworks wie Angular gelernt und kannst nun voll durchstarten.',
         },
       ],
     },
@@ -145,7 +145,7 @@ export class MilestoneComponent implements OnInit {
       sectionTitle: 'angular',
       logo: '../../../../../assets/images/brand-images/logos_angular-icon.svg',
       description:
-        'Du bist jetzt ein zertifizierter Angular Entwickler und kannst agile Single Page Anwendungen entwickeln.',
+        'Du bist jetzt ein zertifizierter Angularentwickler und kannst agile Single Page Anwendungen entwickeln.',
       exampleList: [
         {
           text: 'Dynamische Webseiten mit mehreren Pages, Routing, Animationen und vielem mehr erstellen.',
@@ -158,7 +158,7 @@ export class MilestoneComponent implements OnInit {
           alt: 'Bild einer Webseite',
         },
         {
-          text: 'Du hast eins der meist gefragtesten Frontend Frameworks erlernt und kannst als Frontend Entwickler in Unternehmen arbeiten.',
+          text: 'Du hast eins der meist gefragten Frontend Frameworks erlernt und kannst als Frontend Entwickler in Unternehmen arbeiten.',
         },
       ],
     },
@@ -178,7 +178,7 @@ export class MilestoneComponent implements OnInit {
           text: 'Du kannst native Funktionen von Smartphones nutzen, um zum Beispiel Kamera-, Audio- oder GPS-Sensoren einzubinden.',
         },
         {
-          text: 'Du hast gelernt wie man Apps hybrid entwickelt und sowohl für Android als auch für IOS konzipiert.',
+          text: 'Du hast gelernt, wie man Apps hybrid entwickelt und sowohl für Android als auch für IOS konzipiert.',
           imageUrl:
             'https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1192&q=80',
           alt: 'Bild von zwei Smartphones',
@@ -198,7 +198,7 @@ export class MilestoneComponent implements OnInit {
           alt: 'Bild einer Analyse-Webseite',
         },
         {
-          text: 'Du hast gelernt wie man moderne vollwertige Webapplikationen mit eigener Serverarchitektur wie die Big Player entwickelt.',
+          text: 'Du hast gelernt, wie man moderne vollwertige Webapplikationen mit eigener Serverarchitektur wie die Big Player      entwickelt.',
           imageUrl: 'https://cdn.pixabay.com/photo/2015/12/11/09/30/mobile-phone-1087845_960_720.jpg',
           alt: 'Bild mit mehreren Logos bekannter Unternehmen',
         },
