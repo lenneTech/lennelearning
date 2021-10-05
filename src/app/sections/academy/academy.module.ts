@@ -52,6 +52,7 @@ import player from 'lottie-web';
 import { PackagesComponent } from './sections/packages/packages.component';
 import { DesignComponent } from './sections/design/design.component';
 import { CypressComponent } from './sections/cypress/cypress.component';
+import { DockerBasicsComponent } from './sections/docker-basics/docker-basics.component';
 
 export function playerFactory() {
   return player;
@@ -78,6 +79,7 @@ export function playerFactory() {
     PackagesComponent,
     DesignComponent,
     CypressComponent,
+    DockerBasicsComponent,
 
     // Components
     SectionComponent,
