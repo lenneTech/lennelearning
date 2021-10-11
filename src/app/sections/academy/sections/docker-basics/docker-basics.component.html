@@ -10,36 +10,26 @@
     <task-text>
       <div info>
         Nun kommen wir in den Bereich des Backends. Eine sehr hilfreiche Software hierbei ist Docker. Was sind Container
-        und Images und wofür werden sie verwendet? Das alles lernst du hier.
+        und Images und wofür werden sie verwendet? Das bringen wir dir in diesem Abschnit bei. <br />
+        Da für die kommende Sektion nur ein Kleinteil von Docker verwendet wird, wollen wir hier auch noch nicht zu viel
+        abarbeiten. Wir klären nur die Basics.
       </div>
     </task-text>
   </task>
-
   <task id="task-2" section="docker-basics">
-    <div title>Video</div>
-    <div description>Schaue dir diese Videoreihe an, um einen näheren Einblick zu Docker zu bekommen.</div>
-
-    <task-video [youtubelink]="'https://www.youtube.com/embed/videoseries?list=PL6QrD7_cU23li4myvLoicA663wx1bmzQi'">
-      <div videolist>Folge 1: Grundkonzepte</div>
-      <div videolist>Folge 2: Docker installieren (auf deiner Plattform)</div>
-      <div videolist>Folge 3: Container verwenden</div>
-      <div videolist>Folge 4: Images bauen</div>
-    </task-video>
-  </task>
-  <task id="task-3" section="docker-basics">
-    <div title>Hochladen</div>
+    <div title>Was ist Docker</div>
 
     <task-text>
-      <div exercise>Jetzt bist du an der Reihe mit Docker ein wenig herumzuspielen. Was du dafür machen musst:</div>
-      <div exerciselist>Installiere Docker Desktop, sofern noch nicht geschehen.</div>
-      <div exerciselist>Führe in deiner Konsole <code>docker run -dp 80:80 docker/getting-started</code> aus.</div>
-      <div exerciselist>Öffne im Browser <code>http://localhost</code> und folge den Anweisungen der Seite.</div>
+      <div info>
+        Docker ist eine Möglichkeit Software so zu verpacken, dass sie in jeder Umgebung laufen kann. Unterteilt wird
+        dies in drei Teile: Dockerfile, Image und Container <br />
+        Ein Dockerfile ist eine Entwurf, um Images zu bauen. Ein Image ist ein Template, um Container laufen zu lassen.
+        Ein Container ist ein laufender Prozess. <br />
+        Lässt du zum Beispiel auf deinem Laptop oder Pc eine Anwendung laufen, die einwandfrei funktioniert, heißt das
+        nicht, dass sie auf allen Geräten funktioniert. Da kommen unterschiedliche Versionen von Paketen aber auch
+        andere Betriebsysteme als Grund für auf. Durch Docker können solche Fehler vorgebeugt werden, da die Anwendung
+        nun in der selben Umgebung läuft.
+      </div>
     </task-text>
-  </task>
-  <task id="task-4" section="docker-basics">
-    <div title>Zusammenfassung</div>
-    <div description>Hier nochmal eine kurze Zusammenfassung von dem, was du gelernt hast.</div>
-
-    <task-video [youtubelink]="'https://www.youtube.com/embed/Gjnup-PuquQ'"> </task-video>
   </task>
 </section>
