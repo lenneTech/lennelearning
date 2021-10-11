@@ -33,7 +33,11 @@
           <ng-content></ng-content>
         </div>
         <div class="col-12 col-xl-5 overflow-hidden d-flex justify-content-center mt-xl-0 mt-3" *ngIf="image">
-          <img [src]="image.url" [alt]="image.alt" loading="lazy" />
+          <div *ngIf="image.reference" class="d-flex flex-column">
+            <img [src]="image.url" [alt]="image.alt" loading="lazy" />
+            <a [href]="image.reference" class="reference-link" target="_blank">Quelle: {{ image.reference }}</a>
+          </div>
+          <img [src]="image.url" [alt]="image.alt" loading="lazy" *ngIf="!image.reference" />
         </div>
       </div>
     </div>

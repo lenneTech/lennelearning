@@ -1,5 +1,13 @@
-<picture>
+<picture *ngIf="!reference">
   <source [srcset]="webpImage" type="image/webp" />
   <source [srcset]="image" [type]="imageType" />
   <img loading="lazy" [src]="image" [alt]="alt" [class]="imgClass" (error)="changeSource()" />
 </picture>
+<div *ngIf="reference" class="text-center">
+  <picture>
+    <source [srcset]="webpImage" type="image/webp" />
+    <source [srcset]="image" [type]="imageType" />
+    <img loading="lazy" [src]="image" [alt]="alt" [class]="imgClass" (error)="changeSource()" />
+  </picture>
+  <a [href]="reference" target="_blank" class="reference-link">Quelle: {{ reference }}</a>
+</div>
