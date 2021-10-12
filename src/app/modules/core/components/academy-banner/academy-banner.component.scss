@@ -1,14 +1,14 @@
 @import 'src/assets/scss/utils';
 .academy-banner {
   background-color: var(--color-primary-700);
-  padding: 30px;
+  padding: 10px 0;
 }
 
 .hover-img {
-  width: 165px;
+  width: 175px;
   position: relative;
   right: -16px;
-  top: 22px;
+  top: 32px;
 }
 
 .banner-text {
@@ -19,9 +19,8 @@
 
 .rocket-img {
   position: relative;
-  right: 13px;
-  top: -30px;
-  width: 260px;
+  top: -40px;
+  width: 280px;
 }
 
 .banner-btn {
