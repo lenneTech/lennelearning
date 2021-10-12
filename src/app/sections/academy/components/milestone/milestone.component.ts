@@ -186,6 +186,12 @@ export class MilestoneComponent implements OnInit {
       ],
     },
     {
+      sectionTitle: 'docker-basics',
+      logo: '../../../../../assets/images/brand-images/logos_docker.svg',
+      description:
+        'Jetzt hast du Docker kennengelernt. Du weißt jetzt zum Beispiel, was Container und Images sind. Das reicht erstmal für die nächsten Sektionen. Der Expertenteil folgt.',
+    },
+    {
       sectionTitle: 'nestjs',
       logo: '../../../../../assets/images/brand-images/logos_nestjs.svg',
       description:
