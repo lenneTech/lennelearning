@@ -1,5 +1,7 @@
+@import 'src/assets/scss/utils';
 .academy-banner {
-  background-color: #003083;
+  background-color: var(--color-primary-700);
+  padding: 30px;
 }
 
 .hover-img {
@@ -10,8 +12,6 @@
 }
 
 .banner-text {
-  position: relative;
-  right: 100px;
   & a {
     text-decoration: none;
   }
@@ -26,4 +26,12 @@
 
 .banner-btn {
   cursor: pointer;
+  padding: 10px 10px 10px 0;
+}
+
+@include media-breakpoint-up('xl') {
+  .banner-text {
+    right: 100px;
+    position: relative;
+  }
 }

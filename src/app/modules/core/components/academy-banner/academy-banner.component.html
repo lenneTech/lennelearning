@@ -1,12 +1,22 @@
 <div class="container-fluid academy-banner">
-  <div class="container d-flex justify-content-between">
-    <img src="../../../../../assets/images/banner-images/spaceboard.svg" alt="" class="hover-img" />
+  <div class="container d-flex justify-content-around justify-content-md-between">
+    <img
+      src="../../../../../assets/images/banner-images/spaceboard.svg"
+      alt="Illustration einer Person auf einer Hoverboard-Rakete"
+      class="hover-img d-none d-xl-block"
+    />
     <div class="banner-text align-self-center">
       <h2 class="color-white">Worfauf wartest Du?</h2>
       <p class="color-white fs-5 fw-light mb-5">Starte jetzt in unserer Akademie durch</p>
-      <a class="color-white mt-5 fs-5 banner-btn p-1">zur Akademie ❯</a>
+      <a class="color-white mt-5 fs-5 banner-btn" (click)="setSelectedEntryPoint()" routerLink="/lernpfad"
+        >zur Akademie ❯</a
+      >
     </div>
 
-    <img src="../../../../../assets/images/banner-images/singlerocket.svg" alt="" class="rocket-img" />
+    <img
+      src="../../../../../assets/images/banner-images/singlerocket.svg"
+      alt="Illustration einer Person auf einer Rakete"
+      class="rocket-img d-none d-md-block"
+    />
   </div>
 </div>

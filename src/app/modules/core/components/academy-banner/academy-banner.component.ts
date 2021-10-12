@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { EntryPointService } from '../../services/entry-point.service';
 
 @Component({
   selector: 'app-academy-banner',
@@ -6,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./academy-banner.component.scss'],
 })
 export class AcademyBannerComponent implements OnInit {
-  constructor() {}
-
+  @Input() entryPointId: string;
+  constructor(private entryPointService: EntryPointService) {}
+  setSelectedEntryPoint() {
+    this.entryPointService.setEntryPointById(this.entryPointId);
+  }
   ngOnInit() {}
 }
