@@ -12,6 +12,9 @@
 .banner-text {
   position: relative;
   right: 100px;
+  & a {
+    text-decoration: none;
+  }
 }
 
 .rocket-img {
