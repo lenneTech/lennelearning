@@ -6,4 +6,5 @@ export interface TextImageInterface {
   imageUrl?: string;
   alt?: string;
   iconClass?: string;
+  reference?: string;
 }

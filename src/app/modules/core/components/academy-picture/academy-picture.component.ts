@@ -9,6 +9,7 @@ export class AcademyPictureComponent implements OnInit {
   @Input() image: string;
   @Input() alt: string;
   @Input() imgClass: string;
+  @Input() reference: string;
   webpImage: string;
   imageType: string;
   constructor() {}
