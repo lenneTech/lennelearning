@@ -8,7 +8,6 @@ import { EntryPointService } from '../../services/entry-point.service';
 })
 export class AcademyBannerComponent implements OnInit {
   @Input() entryPointId: string;
-  @Input() bannerColor: string;
   constructor(private entryPointService: EntryPointService) {}
   setSelectedEntryPoint() {
     this.entryPointService.setEntryPointById(this.entryPointId);
