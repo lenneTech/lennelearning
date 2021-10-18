@@ -146,6 +146,11 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
         this.imgSrc = '../../../assets/images/entry-point-images/company.svg';
         break;
 
+      case 'standard':
+        this.imgAlt = 'Illustration für Standardnutzer';
+        this.imgSrc = '../../../assets/images/explanation-images/community.svg';
+        break;
+
       default:
         break;
     }
