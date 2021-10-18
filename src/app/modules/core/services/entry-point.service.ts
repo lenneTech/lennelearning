@@ -108,6 +108,31 @@ export class EntryPointService {
       image: '../../assets/images/explanation-images/strategy.svg',
       sections: ['html', 'css', 'bootstrap', 'git-basics', 'javascript', 'typescript', 'angular', 'ionic', 'nestjs'],
     },
+    {
+      id: 'standard',
+      title: 'Standard',
+      address: 'Nutzer',
+      description: 'Das hier ist der Standard-Einstiegspunkt.',
+      image: '',
+      text: '',
+      sections: [
+        'html',
+        'css',
+        'bootstrap',
+        'git-basics',
+        'javascript',
+        'git-experte',
+        'typescript',
+        'angular',
+        'ionic',
+        'docker-basics',
+        'nestjs',
+        'packages',
+        'design',
+        'cypress',
+      ],
+      landingRoute: '',
+    },
   ];
 
   constructor(private storageService: StorageService, private sectionService: SectionService, private router: Router) {
