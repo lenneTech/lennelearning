@@ -30,6 +30,7 @@ import { TutorCardsComponent } from './components/tutor-cards/tutor-cards.compon
 import { CompanyTestimonialComponent } from './components/company-testimonial/company-testimonial.component';
 import { DialogConfirmComponent } from './components/dialog-confirm/dialog-confirm.component';
 import { AcademyPictureComponent } from './components/academy-picture/academy-picture.component';
+import { AcademyBannerComponent } from './components/academy-banner/academy-banner.component';
 
 @NgModule({
   imports: [
@@ -54,6 +55,7 @@ import { AcademyPictureComponent } from './components/academy-picture/academy-pi
     TextImageListComponent,
     BrandBannerComponent,
     AcademyPictureComponent,
+    AcademyBannerComponent,
 
     // Dialogs
     HelperDialogComponent,
@@ -108,6 +110,7 @@ import { AcademyPictureComponent } from './components/academy-picture/academy-pi
     TutorCardsComponent,
     CompanyTestimonialComponent,
     AcademyPictureComponent,
+    AcademyBannerComponent,
   ],
 })
 export class CoreModule {}
