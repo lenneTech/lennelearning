@@ -6,7 +6,7 @@ import { EventEmitter } from '@angular/core';
   templateUrl: './entry-point-card.component.html',
   styleUrls: ['./entry-point-card.component.scss'],
 })
-export class EntryPointCardComponent implements OnInit {
+export class EntryPointCardComponent {
   @Input() title: string;
   @Input() description: string;
   @Input() imageUrl: string;
@@ -15,8 +15,6 @@ export class EntryPointCardComponent implements OnInit {
   @Output() linkClickEvent = new EventEmitter<boolean>();
 
   constructor() {}
-
-  ngOnInit(): void {}
 
   onLinkClicked(): void {
     this.linkClickEvent.emit(true);

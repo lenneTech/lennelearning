@@ -5,9 +5,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
   templateUrl: './questions.component.html',
   styleUrls: ['./questions.component.scss'],
 })
-export class QuestionsComponent implements OnInit {
+export class QuestionsComponent {
   @ViewChild('extraQuestion') extraQuestion;
   constructor() {}
-
-  ngOnInit(): void {}
 }

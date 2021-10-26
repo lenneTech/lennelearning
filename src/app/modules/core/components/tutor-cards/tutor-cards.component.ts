@@ -6,7 +6,7 @@ import { TextImageInterface } from '../../interfaces/text-image.interface';
   templateUrl: './tutor-cards.component.html',
   styleUrls: ['./tutor-cards.component.scss'],
 })
-export class TutorCardsComponent implements OnInit {
+export class TutorCardsComponent {
   @Input() tutors: TextImageInterface[] = [
     {
       title: 'Kai Haase',
@@ -35,6 +35,4 @@ export class TutorCardsComponent implements OnInit {
   ];
 
   constructor() {}
-
-  ngOnInit(): void {}
 }

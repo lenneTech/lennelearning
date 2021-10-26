@@ -5,8 +5,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './cypress.component.html',
   styleUrls: ['./cypress.component.scss'],
 })
-export class CypressComponent implements OnInit {
+export class CypressComponent {
   constructor() {}
-
-  ngOnInit() {}
 }

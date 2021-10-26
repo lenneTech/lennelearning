@@ -3,7 +3,7 @@
     <div class="carousel-inner">
       <div
         class="carousel-item"
-        [ngClass]="{ active: i == 0 }"
+        [ngClass]="{ active: i === 0 }"
         *ngFor="let review of reviews; let i = index"
         data-bs-interval="10000"
       >

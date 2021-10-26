@@ -5,8 +5,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './brand-banner.component.html',
   styleUrls: ['./brand-banner.component.scss'],
 })
-export class BrandBannerComponent implements OnInit {
+export class BrandBannerComponent {
   constructor() {}
-
-  ngOnInit(): void {}
 }

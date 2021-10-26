@@ -5,7 +5,7 @@ import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
   templateUrl: './contact-card.component.html',
   styleUrls: ['./contact-card.component.scss'],
 })
-export class ContactCardComponent implements OnInit {
+export class ContactCardComponent {
   @Input() image: string;
   @Input() title: string;
   @Input() text: string;
@@ -13,8 +13,6 @@ export class ContactCardComponent implements OnInit {
   @Output() buttonClicked = new EventEmitter<boolean>();
 
   constructor() {}
-
-  ngOnInit(): void {}
 
   onButtonClicked(): void {
     this.buttonClicked.emit(true);

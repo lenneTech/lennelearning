@@ -6,7 +6,7 @@ import { Review } from '../../interfaces/review.interface';
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss'],
 })
-export class CarouselComponent implements OnInit {
+export class CarouselComponent {
   @Input() reviews: Review[] = [
     {
       imageUrl: 'https://cdn.pixabay.com/photo/2018/07/25/08/58/business-3560916_960_720.jpg',
@@ -26,6 +26,4 @@ export class CarouselComponent implements OnInit {
   @Input() imageAsCircle: boolean;
 
   constructor() {}
-
-  ngOnInit(): void {}
 }

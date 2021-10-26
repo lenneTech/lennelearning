@@ -6,7 +6,7 @@ import { TextImageInterface } from '../../../modules/core/interfaces/text-image.
   templateUrl: './company-page.component.html',
   styleUrls: ['./company-page.component.scss'],
 })
-export class CompanyPageComponent implements OnInit {
+export class CompanyPageComponent {
   title = 'Du suchst fähige Entwickler für dein Unternehmen?';
   subtitle =
     'Wir betreuen und evaluieren deine potenziellen Softwareentwickler im Web und App Bereich oder fördern dein Start-up.\n\n In unserer Akademie lernen sie, wie man mit aktuellen Technologien agile Web- und Appanwendungen professionell entwickelt und im Team effizient zusammenarbeitet.';
@@ -64,6 +64,4 @@ export class CompanyPageComponent implements OnInit {
   sendOffer(): void {
     window.open('mailto:info@lenne.tech');
   }
-
-  ngOnInit(): void {}
 }

@@ -6,11 +6,9 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './review.component.html',
   styleUrls: ['./review.component.scss'],
 })
-export class ReviewComponent implements OnInit {
+export class ReviewComponent {
   @Input() review: Review;
   @Input() reversed: boolean;
 
   constructor() {}
-
-  ngOnInit(): void {}
 }

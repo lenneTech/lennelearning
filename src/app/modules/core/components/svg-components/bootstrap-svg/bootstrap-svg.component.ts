@@ -4,8 +4,6 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-bootstrap-svg',
   templateUrl: './bootstrap.svg',
 })
-export class BootstrapSvgComponent implements OnInit {
+export class BootstrapSvgComponent {
   constructor() {}
-
-  ngOnInit(): void {}
 }

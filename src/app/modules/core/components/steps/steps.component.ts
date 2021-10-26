@@ -6,7 +6,7 @@ import { TextImageInterface } from '../../interfaces/text-image.interface';
   templateUrl: './steps.component.html',
   styleUrls: ['./steps.component.scss'],
 })
-export class StepsComponent implements OnInit {
+export class StepsComponent {
   @Input() steps: TextImageInterface[] = [
     {
       title: 'Akademie',
@@ -29,6 +29,4 @@ export class StepsComponent implements OnInit {
   ];
 
   constructor() {}
-
-  ngOnInit(): void {}
 }

@@ -4,8 +4,6 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-ionic-svg',
   templateUrl: './ionic.svg',
 })
-export class IonicSvgComponent implements OnInit {
+export class IonicSvgComponent {
   constructor() {}
-
-  ngOnInit(): void {}
 }

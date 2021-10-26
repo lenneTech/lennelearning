@@ -4,8 +4,6 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-html-svg',
   templateUrl: './html.svg',
 })
-export class HtmlSvgComponent implements OnInit {
+export class HtmlSvgComponent {
   constructor() {}
-
-  ngOnInit(): void {}
 }

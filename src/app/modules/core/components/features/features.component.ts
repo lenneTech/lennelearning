@@ -6,7 +6,7 @@ import { TextImageInterface } from '../../interfaces/text-image.interface';
   templateUrl: './features.component.html',
   styleUrls: ['./features.component.scss'],
 })
-export class FeaturesComponent implements OnInit {
+export class FeaturesComponent {
   @Input() imageUrl = '../../assets/images/banner-images/features.svg';
   @Input() features: TextImageInterface[] = [
     {
@@ -37,6 +37,4 @@ export class FeaturesComponent implements OnInit {
   ];
 
   constructor() {}
-
-  ngOnInit(): void {}
 }
