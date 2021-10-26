@@ -6,7 +6,7 @@ import { Review } from '../../../modules/core/interfaces/review.interface';
   templateUrl: './intern-page.component.html',
   styleUrls: ['./intern-page.component.scss'],
 })
-export class InternPageComponent implements OnInit {
+export class InternPageComponent {
   title = 'Du suchst noch ein Praktikum?';
   subtitle =
     'Wir bieten Schülern, Studenten oder Webinteressierten die Möglichkeit, Web- und Appentwicklung in der Praxis zu erleben und mitzugestalten.\n\n Lerne in der Akademie die Grundlagen, setze dein eigenes Projekt um und arbeite mit an unseren Projekten.';
@@ -23,6 +23,4 @@ export class InternPageComponent implements OnInit {
   sendApplication(): void {
     window.open('mailto:info@lenne.tech');
   }
-
-  ngOnInit(): void {}
 }

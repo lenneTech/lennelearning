@@ -7,7 +7,7 @@ import { DialogBtnOptionsEnum } from '../../enumerators/dialog-btn-options.enum'
   templateUrl: './dialog.component.html',
   styleUrls: ['./dialog.component.scss'],
 })
-export class DialogComponent implements OnInit {
+export class DialogComponent {
   @Input() title;
   @Input() cardWidth;
   @Input() cardHeight;
@@ -17,8 +17,6 @@ export class DialogComponent implements OnInit {
   DialogBntOptionsEnum = DialogBtnOptionsEnum;
 
   constructor(protected dialogRef: NbDialogRef<any>) {}
-
-  ngOnInit(): void {}
 
   onAcceptBtnClick() {
     this.acceptBtnClicked.emit(true);

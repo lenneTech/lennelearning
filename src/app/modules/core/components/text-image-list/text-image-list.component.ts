@@ -7,7 +7,7 @@ import { TextImageInterface } from '../../interfaces/text-image.interface';
   styleUrls: ['./text-image-list.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class TextImageListComponent implements OnInit {
+export class TextImageListComponent {
   @Input() listElements: TextImageInterface[] = [
     {
       title: 'Akademie',
@@ -41,6 +41,4 @@ export class TextImageListComponent implements OnInit {
   ];
 
   constructor() {}
-
-  ngOnInit(): void {}
 }

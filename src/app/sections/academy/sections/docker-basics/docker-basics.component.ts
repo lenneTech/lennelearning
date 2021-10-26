@@ -5,8 +5,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './docker-basics.component.html',
   styleUrls: ['./docker-basics.component.scss'],
 })
-export class DockerBasicsComponent implements OnInit {
+export class DockerBasicsComponent {
   constructor() {}
-
-  ngOnInit() {}
 }

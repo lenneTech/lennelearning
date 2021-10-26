@@ -6,13 +6,11 @@ import { DialogBtnOptionsEnum } from '../../enumerators/dialog-btn-options.enum'
   templateUrl: './dialog-confirm.component.html',
   styleUrls: ['./dialog-confirm.component.scss'],
 })
-export class DialogConfirmComponent implements OnInit {
+export class DialogConfirmComponent {
   @Input() title: string;
   @Input() cardWidth: string;
   @Input() cardHeight: string;
 
   DialogBtnOptionsEnum = DialogBtnOptionsEnum;
   constructor() {}
-
-  ngOnInit() {}
 }

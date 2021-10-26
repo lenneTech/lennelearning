@@ -5,8 +5,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './inprint.component.html',
   styleUrls: ['./inprint.component.scss'],
 })
-export class InprintComponent implements OnInit {
+export class InprintComponent {
   constructor() {}
-
-  ngOnInit(): void {}
 }

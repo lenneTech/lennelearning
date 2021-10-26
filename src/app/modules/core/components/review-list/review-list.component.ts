@@ -6,7 +6,7 @@ import { Review } from '../../interfaces/review.interface';
   templateUrl: './review-list.component.html',
   styleUrls: ['./review-list.component.scss'],
 })
-export class ReviewListComponent implements OnInit {
+export class ReviewListComponent {
   @Input() reviews: Review[] = [
     {
       imageUrl: '../../../assets/images/people-images/daniel_review.jpg',
@@ -23,6 +23,4 @@ export class ReviewListComponent implements OnInit {
   ];
 
   constructor() {}
-
-  ngOnInit(): void {}
 }

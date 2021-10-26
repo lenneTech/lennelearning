@@ -4,10 +4,8 @@ import { Component, Input, OnInit } from '@angular/core';
   selector: 'app-typescript-svg',
   templateUrl: './typescript.svg',
 })
-export class TypescriptSvgComponent implements OnInit {
+export class TypescriptSvgComponent {
   @Input() iconOnly: boolean;
 
   constructor() {}
-
-  ngOnInit(): void {}
 }

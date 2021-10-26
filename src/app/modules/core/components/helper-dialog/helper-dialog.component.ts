@@ -6,7 +6,7 @@ import { DialogBtnOptionsEnum } from '../../enumerators/dialog-btn-options.enum'
   templateUrl: './helper-dialog.component.html',
   styleUrls: ['./helper-dialog.component.scss'],
 })
-export class HelperDialogComponent implements OnInit {
+export class HelperDialogComponent {
   @Input() title: string;
   @Input() cardWidth: string;
   @Input() cardHeight: string;
@@ -16,6 +16,4 @@ export class HelperDialogComponent implements OnInit {
   DialogBtnOptionsEnum = DialogBtnOptionsEnum;
 
   constructor() {}
-
-  ngOnInit(): void {}
 }

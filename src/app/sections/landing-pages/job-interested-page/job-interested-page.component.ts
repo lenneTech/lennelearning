@@ -6,7 +6,7 @@ import { TextImageInterface } from '../../../modules/core/interfaces/text-image.
   templateUrl: './job-interested-page.component.html',
   styleUrls: ['./job-interested-page.component.scss'],
 })
-export class JobInterestedPageComponent implements OnInit {
+export class JobInterestedPageComponent {
   title = 'Du interessierst dich für App- und Webentwicklung?';
   subtitle =
     'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.\n\n Gewinne in deinem Praktikum einen Einblick in den Berufsalltag im Bereich der Softwareentwicklung und entdecke dabei die grundlegenden Aspekte der Webentwicklung.';
@@ -32,8 +32,6 @@ export class JobInterestedPageComponent implements OnInit {
     },
   ];
   constructor() {}
-
-  ngOnInit(): void {}
 
   sendApplication(): void {
     window.open('mailto:info@lenne.tech');

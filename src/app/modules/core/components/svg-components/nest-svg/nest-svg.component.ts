@@ -4,8 +4,6 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-nest-svg',
   templateUrl: './nest.svg',
 })
-export class NestSvgComponent implements OnInit {
+export class NestSvgComponent {
   constructor() {}
-
-  ngOnInit(): void {}
 }

@@ -6,11 +6,10 @@ import { EntryPointService } from '../../services/entry-point.service';
   templateUrl: './academy-banner.component.html',
   styleUrls: ['./academy-banner.component.scss'],
 })
-export class AcademyBannerComponent implements OnInit {
+export class AcademyBannerComponent {
   @Input() entryPointId: string;
   constructor(private entryPointService: EntryPointService) {}
   setSelectedEntryPoint() {
     this.entryPointService.setEntryPointById(this.entryPointId);
   }
-  ngOnInit() {}
 }

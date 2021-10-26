@@ -5,8 +5,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './git-basics.component.html',
   styleUrls: ['./git-basics.component.scss'],
 })
-export class GitBasicsComponent implements OnInit {
+export class GitBasicsComponent {
   constructor() {}
-
-  ngOnInit() {}
 }

@@ -6,7 +6,7 @@ import { EntryPointService } from '../../services/entry-point.service';
   templateUrl: './banner.component.html',
   styleUrls: ['./banner.component.scss'],
 })
-export class BannerComponent implements OnInit {
+export class BannerComponent {
   @Input() title: string;
   @Input() subtitle: string;
   @Input() imageUrl: string;
@@ -18,5 +18,4 @@ export class BannerComponent implements OnInit {
   setSelectedEntryPoint() {
     this.entryPointService.setEntryPointById(this.entryPointId);
   }
-  ngOnInit(): void {}
 }

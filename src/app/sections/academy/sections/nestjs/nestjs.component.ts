@@ -5,8 +5,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './nestjs.component.html',
   styleUrls: ['./nestjs.component.scss'],
 })
-export class NestjsComponent implements OnInit {
+export class NestjsComponent {
   constructor() {}
-
-  ngOnInit() {}
 }
