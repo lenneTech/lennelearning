@@ -4,7 +4,5 @@ export interface EntryPoint {
   address: string;
   description: string;
   image: string;
-  text: string;
   sections: string[];
-  landingRoute?: string;
 }

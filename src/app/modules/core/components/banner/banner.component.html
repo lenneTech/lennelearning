@@ -3,15 +3,8 @@
     <div class="banner-text">
       <h1 class="title">{{ title }}</h1>
       <h2 class="subtitle">{{ subtitle }}</h2>
-      <button
-        class="mt-3"
-        nbButton
-        status="primary"
-        *ngIf="showAcademyBtn"
-        (click)="setSelectedEntryPoint()"
-        routerLink="/lernpfad"
-      >
-        Zur Akademie
+      <button class="mt-3" nbButton status="primary" *ngIf="showAcademyBtn" routerLink="/lernpfade">
+        Wähle deinen Lernpfad aus
       </button>
     </div>
   </div>

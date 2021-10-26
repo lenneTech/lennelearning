@@ -1,0 +1,12 @@
+<nb-card class="card entry-point" [routerLink]="showMoreRoute">
+  <nb-card-body class="d-flex align-items-top justify-content-around">
+    <div>
+      <img loading="lazy" class="card-img" [src]="imageUrl" alt="Illustration für die angesprochenden Gruppen" />
+      <h3 class="card-title">{{ title }}</h3>
+      <div class="card-text">{{ description }}</div>
+    </div>
+  </nb-card-body>
+  <nb-card-footer>
+    <div class="link" [routerLink]="showMoreRoute">Weitere Informationen</div>
+  </nb-card-footer>
+</nb-card>

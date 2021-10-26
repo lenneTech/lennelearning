@@ -130,30 +130,8 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
   }
 
   checkEntryPoint(): void {
-    switch (this.currentEntryPoint.id) {
-      case 'praktikant':
-        this.imgAlt = 'Illustration für Praktikanten';
-        this.imgSrc = '../../../assets/images/entry-point-images/praktikant.svg';
-        break;
-
-      case 'berufserkunder':
-        this.imgAlt = 'Illustration für Berufsinteressierte';
-        this.imgSrc = '../../../assets/images/entry-point-images/berufsinteressent.svg';
-        break;
-
-      case 'unternehmen':
-        this.imgAlt = 'Illustration für Unternehmen';
-        this.imgSrc = '../../../assets/images/entry-point-images/company.svg';
-        break;
-
-      case 'standard':
-        this.imgAlt = 'Illustration für Standardnutzer';
-        this.imgSrc = '../../../assets/images/explanation-images/community.svg';
-        break;
-
-      default:
-        break;
-    }
+    this.imgAlt = this.currentEntryPoint.description;
+    this.imgSrc = this.currentEntryPoint.image;
   }
 
   resetEntryPoint(): void {

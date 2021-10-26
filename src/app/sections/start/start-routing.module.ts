@@ -4,6 +4,7 @@ import { StartComponent } from './start.component';
 import { CompanyPageComponent } from '../landing-pages/company-page/company-page.component';
 import { InternPageComponent } from '../landing-pages/intern-page/intern-page.component';
 import { JobInterestedPageComponent } from '../landing-pages/job-interested-page/job-interested-page.component';
+import { EntryPointsComponent } from '../landing-pages/entry-points/entry-points.component';
 
 const routes: Routes = [
   {
@@ -29,6 +30,12 @@ const routes: Routes = [
     component: JobInterestedPageComponent,
     pathMatch: 'full',
     data: { matomoTitle: 'Berufsinteressiert' },
+  },
+  {
+    path: 'lernpfade',
+    component: EntryPointsComponent,
+    pathMatch: 'full',
+    data: { matomoTitle: 'Lernpfade' },
   },
 ];
 
