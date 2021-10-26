@@ -25,6 +25,7 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
   prevSection: string;
   nextSection: string;
   currentMileStoneUrl: string;
+  entryPoints: EntryPoint[];
 
   constructor(
     private entryPointService: EntryPointService,
@@ -88,7 +89,7 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     if (!window.location.href.includes('/lernpfad/')) {
       this.router.navigate([`/lernpfad/${this.sections[0]}`]);
     }
-
+    this.entryPoints = this.entryPointService.entryPoints();
     this.checkEntryPoint();
   }
 
@@ -161,5 +162,15 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
 
   checkBottomNavbar() {
     return !window.location.href.includes('meilenstein');
+  }
+
+  switchEntryPoint(entryPoint: EntryPoint): void {
+    this.entryPointService.selectedEntryPoint = entryPoint;
+
+    this.router.navigate([`/lernpfad/${entryPoint.sections[0]}`]);
+
+    setTimeout(() => {
+      window.location.reload();
+    }, 200);
   }
 }
