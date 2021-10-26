@@ -8,9 +8,16 @@ import { CompanyPageComponent } from '../landing-pages/company-page/company-page
 import { InternPageComponent } from '../landing-pages/intern-page/intern-page.component';
 import { JobInterestedPageComponent } from '../landing-pages/job-interested-page/job-interested-page.component';
 import { BaseModule } from '@lenne.tech/ng-base';
+import { EntryPointsComponent } from '../landing-pages/entry-points/entry-points.component';
 
 @NgModule({
-  declarations: [StartComponent, CompanyPageComponent, InternPageComponent, JobInterestedPageComponent],
+  declarations: [
+    StartComponent,
+    CompanyPageComponent,
+    InternPageComponent,
+    JobInterestedPageComponent,
+    EntryPointsComponent,
+  ],
   imports: [StartRoutingModule, CommonModule, CoreModule, NbLayoutModule, NbButtonModule, NbCardModule, BaseModule],
 })
 export class StartModule {}

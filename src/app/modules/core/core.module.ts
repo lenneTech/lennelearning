@@ -31,6 +31,7 @@ import { CompanyTestimonialComponent } from './components/company-testimonial/co
 import { DialogConfirmComponent } from './components/dialog-confirm/dialog-confirm.component';
 import { AcademyPictureComponent } from './components/academy-picture/academy-picture.component';
 import { AcademyBannerComponent } from './components/academy-banner/academy-banner.component';
+import { InfoCardComponent } from './components/info-card/info-card.component';
 
 @NgModule({
   imports: [
@@ -50,6 +51,7 @@ import { AcademyBannerComponent } from './components/academy-banner/academy-bann
   declarations: [
     // Components
     EntryPointCardComponent,
+    InfoCardComponent,
     ReviewComponent,
     CarouselComponent,
     TextImageListComponent,
@@ -88,6 +90,7 @@ import { AcademyBannerComponent } from './components/academy-banner/academy-bann
   exports: [
     // Components
     EntryPointCardComponent,
+    InfoCardComponent,
     ReviewComponent,
     BannerComponent,
     CarouselComponent,

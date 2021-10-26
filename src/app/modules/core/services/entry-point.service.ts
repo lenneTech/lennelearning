@@ -16,24 +16,45 @@ export class EntryPointService {
   // #################################################################################
   private _entryPoints: EntryPoint[] = [
     {
+      id: 'standard',
+      title: 'Standard',
+      address: 'Nutzer',
+      description:
+        'Das hier ist der Standard-Einstiegspunkt. Wenn du nicht weißt, was auf dich zukommt oder was dich interessiert, wähle diesen Lernpfad. Hier wird dir alles gezeigt.',
+      image: '../../assets/images/explanation-images/discovery.svg',
+      sections: [
+        'html',
+        'css',
+        'bootstrap',
+        'git-basics',
+        'javascript',
+        'git-experte',
+        'typescript',
+        'angular',
+        'ionic',
+        'docker-basics',
+        'nestjs',
+        'packages',
+        'design',
+        'cypress',
+      ],
+    },
+    {
       id: 'berufserkunder',
       title: 'Berufsinteressierte',
       address: 'Berufsinteressierter',
       description:
         'Du interessierst dich für Web- und Apptechnologien, weißt aber noch nicht, was dich im Beruf erwartet?',
       image: '../../assets/images/entry-point-images/berufsinteressent.svg',
-      text: 'Dieser Kurs ist für alle die sich für die Web- und Appentwicklung interessieren und einen Einblick in die Berufswelt von Softwareentwicklern bekommen wollen. Der Kurs beginnt dabei mit einer Berufsfeldserkundung, in der dir zunächst die verschiedenen Berufe rund um die Softwareentwiclkung sowie deren Berufslltag und Aufgabenfelder vorgestellt werden. Danach lernst du schon die Grundlagen der Webentwicklung, um schon eigene Webseiten erstellen zu können',
       sections: ['beruf', 'html', 'css', 'bootstrap', 'git-basics', 'javascript'],
-      landingRoute: '/berufsinteressierte',
     },
     {
       id: 'praktikant',
       title: 'Praktikanten',
       address: 'Praktikant',
       description:
-        'Du bist Schüler, Student, befindest dich in einer Weiterbildung oder suchst aus anderen Gründen noch ein Praktikum?',
+        'Du bist Schüler, Student, befindest dich in einer Weiterbildung und willst ein Praktikum bei uns machen? Dieser Lernpfad bereitet dich bestens darauf vor.',
       image: '../../assets/images/entry-point-images/praktikant.svg',
-      text: 'Wir bieten dir die Möglichkeit in bis zu 12 Wochen die Web- und Appentwicklung in der Praxis kennenzulernen. Zunächst arbeitest du in einer Vorbereitungsphase unsere Kurse durch, um im Praktikum direkt mit deinem eigenen Projekt durchstarten zu können. Wenn du schon Vorkenntnisse hast, kannst du natürlich unter Absprache verschiedene Teile überspringen und sofort loslegen.',
       sections: [
         'beruf',
         'html',
@@ -51,16 +72,13 @@ export class EntryPointService {
         'design',
         'cypress',
       ],
-      landingRoute: '/praktikanten',
     },
     {
-      id: 'unternehmen',
-      title: 'Unternehmen',
-      address: 'Unternehmer',
-      description:
-        'Dein Unternehmen sucht fähige App- und Webentwickler? Oder ihr möchtet gerne Anwendungsentwickler ausbilden?',
-      image: '../../assets/images/entry-point-images/company.svg',
-      text: 'Wir bieten deinem Unternehmen Weiterbildungsmöglichkeiten in der App- und Webentwicklung. Dabei bieten wir eine umfassende Betreuung mit wöchentlichen Meetings an. Dabei schätzen wir ebenso das Potenzial der einzelnen Akademie Teilnehmer ein, um die bestmöglichen Webentwickler für dein Unternehmen zu finden.',
+      id: 'frontend',
+      title: 'Frontend',
+      address: 'Frontend-Entwickler',
+      description: 'Frontend ist dein Ding und hier willst du Neues lernen? Wähle diesen Lernpfad aus.',
+      image: '../../assets/images/explanation-images/community.svg',
       sections: [
         'html',
         'css',
@@ -71,13 +89,24 @@ export class EntryPointService {
         'typescript',
         'angular',
         'ionic',
-        'docker-basics',
-        'nestjs',
-        'packages',
-        'design',
-        'cypress',
       ],
-      landingRoute: '/unternehmen',
+    },
+    {
+      id: 'backend',
+      title: 'Backend',
+      address: 'Backend-Entwickler',
+      description: 'Du möchtest dich größtenteils im Bereich Backend weiterbilden. Dann wähle diesen Lernpfad aus.',
+      image: '../../assets/images/entry-point-images/company.svg',
+      sections: ['git-basics', 'git-experte', 'docker-basics', 'nestjs', 'packages', 'cypress'],
+    },
+    {
+      id: 'sprint',
+      title: 'Sprint',
+      address: 'Sprinter',
+      description:
+        'Du möchtest nicht vollkommen ins Detail gehen aber mitreden können, wenn es um Webdevelopement geht.',
+      image: '../../assets/images/explanation-images/strategy.svg',
+      sections: ['html', 'css', 'bootstrap', 'git-basics', 'javascript', 'typescript', 'angular', 'ionic', 'nestjs'],
     },
   ];
 
