@@ -126,14 +126,14 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     this.sections = this.entryPointService.selectedEntryPointSections();
     this.items = [];
 
-    // TODO: Check for children from service and set if there
-
-    for (const section of this.sections) {
-      this.items.push({
-        title: section,
-        link: `/lernpfad/${section}`,
-        expanded: true,
-      });
+    if (this.sections) {
+      for (const section of this.sections) {
+        this.items.push({
+          title: section,
+          link: `/lernpfad/${section}`,
+          expanded: true,
+        });
+      }
     }
 
     return this.items;
