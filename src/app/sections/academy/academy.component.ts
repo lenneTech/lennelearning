@@ -148,6 +148,10 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
   }
 
   checkEntryPoint(): void {
+    //If there is no Entrypoint, navigate to the selectionpage
+    if (!this.currentEntryPoint) {
+      this.router.navigate([`/lernpfade`]);
+    }
     this.imgAlt = this.currentEntryPoint.description;
     this.imgSrc = this.currentEntryPoint.image;
   }
