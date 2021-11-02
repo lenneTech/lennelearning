@@ -25,6 +25,7 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
   prevSection: string;
   nextSection: string;
   currentMileStoneUrl: string;
+  entryPoints: EntryPoint[];
 
   constructor(
     private entryPointService: EntryPointService,
@@ -65,10 +66,9 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
         if (!items) {
           return;
         }
-        const menuItem: NbMenuItem = this.items.find((item) => item.title === this.sectionService.currentSection);
-        if (menuItem && window.screen.width >= 768) {
-          menuItem.children = items;
-        }
+
+        const menuItem = this.setMenuItem(items);
+
         this.initSidebarCollapse();
       })
     );
@@ -84,11 +84,17 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
   }
 
   ngOnInit(): void {
+    this.subscriptions.add(
+      this.entryPointService.selectedEntryPointObservable.subscribe(() => {
+        const items = this.setSections();
+        this.router.navigate([`${items[0].link}`]);
+      })
+    );
     this.setSections();
     if (!window.location.href.includes('/lernpfad/')) {
       this.router.navigate([`/lernpfad/${this.sections[0]}`]);
     }
-
+    this.entryPoints = this.entryPointService.entryPoints();
     this.checkEntryPoint();
   }
 
@@ -116,16 +122,28 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     this.sidebarCollapsed = false;
   }
 
-  setSections(): void {
+  setSections(): NbMenuItem[] {
     this.sections = this.entryPointService.selectedEntryPointSections();
     this.items = [];
 
-    for (const section of this.sections) {
-      this.items.push({
-        title: section,
-        link: `/lernpfad/${section}`,
-        expanded: true,
-      });
+    if (this.sections) {
+      for (const section of this.sections) {
+        this.items.push({
+          title: section,
+          link: `/lernpfad/${section}`,
+          expanded: true,
+        });
+      }
+    }
+
+    return this.items;
+  }
+
+  setMenuItem(items: NbMenuItem[]): NbMenuItem {
+    const menuItem: NbMenuItem = this.items.find((item) => item.title === this.sectionService.currentSection);
+    if (menuItem && window.screen.width >= 768) {
+      menuItem.children = items;
+      return menuItem;
     }
   }
 
@@ -161,5 +179,10 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
 
   checkBottomNavbar() {
     return !window.location.href.includes('meilenstein');
+  }
+
+  switchEntryPoint(entryPoint: EntryPoint): void {
+    this.entryPointService.selectedEntryPoint = entryPoint;
+    this.setMenuItem(this.sectionService.currentSectionMenuItems);
   }
 }

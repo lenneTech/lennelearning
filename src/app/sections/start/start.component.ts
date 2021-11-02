@@ -6,7 +6,7 @@ import { SEOService } from '@lenne.tech/ng-base';
   templateUrl: './start.component.html',
   styleUrls: ['./start.component.scss'],
 })
-export class StartComponent implements OnInit {
+export class StartComponent {
   title = 'Willkommen in der lenne.Tech Akademie';
   subtitle =
     'Wir bieten Lernangebote für Webinteressierte, Schüler, Studenten bis hin zu Berufserfahrenen.\n Wir bringen dich von 0 auf 100, du benötigst kein Vorwissen!\n Such dir den Lernpfad aus, der am besten zu dir passt.';
@@ -50,8 +50,6 @@ export class StartComponent implements OnInit {
       'academy, online, akademie, web, ltakademie'
     );
   }
-
-  ngOnInit(): void {}
 
   openMail(): void {
     window.open('mailto:info@lenne.tech');
