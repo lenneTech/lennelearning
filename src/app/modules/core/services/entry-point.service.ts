@@ -114,7 +114,6 @@ export class EntryPointService {
       address: 'Nutzer',
       description: 'Das hier ist der Standard-Einstiegspunkt.',
       image: '',
-      text: '',
       sections: [
         'html',
         'css',
@@ -131,7 +130,6 @@ export class EntryPointService {
         'design',
         'cypress',
       ],
-      landingRoute: '',
     },
   ];
 
