@@ -5,13 +5,11 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './info-card.component.html',
   styleUrls: ['./info-card.component.scss'],
 })
-export class InfoCardComponent implements OnInit {
+export class InfoCardComponent {
   @Input() title: string;
   @Input() description: string;
   @Input() imageUrl: string;
   @Input() showMoreRoute: string;
 
   constructor() {}
-
-  ngOnInit(): void {}
 }
