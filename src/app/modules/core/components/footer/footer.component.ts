@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import packageInfo from '../../../../../../package.json';
 
 @Component({
   selector: 'app-footer',
@@ -6,5 +7,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent {
+  version: string = packageInfo.version;
   constructor() {}
 }
