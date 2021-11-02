@@ -9,11 +9,11 @@ export class EntryPointCardComponent {
   @Input() title: string;
   @Input() description: string;
   @Input() imageUrl: string;
+  @Input() highlight: boolean;
   @Input() route: string;
   @Output() linkClickEvent = new EventEmitter<boolean>();
 
   constructor() {}
-
 
   onLinkClicked(): void {
     this.linkClickEvent.emit(true);

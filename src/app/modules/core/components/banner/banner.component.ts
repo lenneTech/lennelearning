@@ -1,4 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
+import { StorageService } from '@lenne.tech/ng-base';
 import { EntryPointService } from '../../services/entry-point.service';
 
 @Component({
@@ -13,9 +15,20 @@ export class BannerComponent {
   @Input() showAcademyBtn: boolean;
   @Input() entryPointId: string;
 
-  constructor(private entryPointService: EntryPointService) {}
+  constructor(
+    private entryPointService: EntryPointService,
+    private router: Router,
+    private storageService: StorageService
+  ) {}
 
   setSelectedEntryPoint() {
     this.entryPointService.setEntryPointById(this.entryPointId);
+  }
+
+  onClick() {
+    if (this.router.url !== '/') {
+      this.storageService.remove('landingpage');
+      this.storageService.save('landingpage', this.router.url.slice(1));
+    }
   }
 }

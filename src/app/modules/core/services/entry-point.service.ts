@@ -40,7 +40,7 @@ export class EntryPointService {
       ],
     },
     {
-      id: 'berufserkunder',
+      id: 'berufsinteressierte',
       title: 'Berufsinteressierte',
       address: 'Berufsinteressierter',
       description:
@@ -49,12 +49,37 @@ export class EntryPointService {
       sections: ['beruf', 'html', 'css', 'bootstrap', 'git-basics', 'javascript'],
     },
     {
-      id: 'praktikant',
+      id: 'praktikanten',
       title: 'Praktikanten',
       address: 'Praktikant',
       description:
         'Du bist Schüler, Student, befindest dich in einer Weiterbildung und willst ein Praktikum bei uns machen? Dieser Lernpfad bereitet dich bestens darauf vor.',
       image: '../../assets/images/entry-point-images/praktikant.svg',
+      sections: [
+        'beruf',
+        'html',
+        'css',
+        'bootstrap',
+        'git-basics',
+        'javascript',
+        'git-experte',
+        'typescript',
+        'angular',
+        'ionic',
+        'docker-basics',
+        'nestjs',
+        'packages',
+        'design',
+        'cypress',
+      ],
+    },
+    {
+      id: 'unternehmen',
+      title: 'Unternehmen',
+      address: 'Unternehmen',
+      description:
+        'Dein Unternehmen sucht fähige App- und Webentwickler? Oder ihr möchtet gerne Anwendungsentwickler ausbilden?',
+      image: '../../assets/images/entry-point-images/company.svg',
       sections: [
         'beruf',
         'html',
