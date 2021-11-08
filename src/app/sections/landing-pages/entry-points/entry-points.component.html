@@ -18,6 +18,7 @@
             [title]="entryPoint.title"
             [imageUrl]="entryPoint.image"
             [description]="entryPoint.description"
+            [highlight]="entryPoint.id === landingPage"
             [route]="'/lernpfad'"
             (linkClickEvent)="setSelectedEntryPoint(entryPoint)"
           >

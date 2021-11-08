@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StorageService } from '@lenne.tech/ng-base';
 import { EntryPoint } from 'src/app/modules/core/interfaces/entry-point.interface';
 import { EntryPointService } from 'src/app/modules/core/services/entry-point.service';
 
@@ -13,11 +14,13 @@ export class EntryPointsComponent implements OnInit {
     'Bist du schon ziemlich erfahren oder noch ganz am Anfang deiner Karriere als Webentwickler?\n Hier in der Akademie ist das vollkommen egal. Wähle einfach den Lernpfad aus, der zu dir passt und starte mit deiner (Weiter)-Bildung in der Webentwicklung!';
   imageUrl = '../../assets/images/explanation-images/projekt.svg';
   entryPoints: EntryPoint[] = [];
+  landingPage: string;
 
-  constructor(private entryPointService: EntryPointService) {}
+  constructor(private entryPointService: EntryPointService, private storageService: StorageService) {}
 
   ngOnInit(): void {
     this.getAllEntryPoints();
+    this.getLandingPage();
   }
 
   getAllEntryPoints(): void {
@@ -26,5 +29,9 @@ export class EntryPointsComponent implements OnInit {
 
   setSelectedEntryPoint(entryPoint: EntryPoint): void {
     this.entryPointService.selectedEntryPoint = entryPoint;
+  }
+
+  getLandingPage() {
+    this.landingPage = this.storageService.load('landingpage');
   }
 }
