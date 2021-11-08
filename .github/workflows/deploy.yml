@@ -10,7 +10,7 @@ env:
 
 jobs:
   deploy:
-    runs-on: self-hosted
+    runs-on: [self-hosted, docker-landing]
     steps:
       - uses: actions/checkout@v1
       - name: Use Node.js 14.17
