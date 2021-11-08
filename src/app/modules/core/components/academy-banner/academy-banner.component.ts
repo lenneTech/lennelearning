@@ -19,9 +19,8 @@ export class AcademyBannerComponent {
     this.entryPointService.setEntryPointById(this.entryPointId);
   }
 
-  onClick() {
+  setLandingPage() {
     if (this.router.url !== '/') {
-      this.storageService.remove('landingpage');
       this.storageService.save('landingpage', this.router.url.slice(1));
     }
   }

@@ -33,6 +33,5 @@ export class EntryPointsComponent implements OnInit {
 
   getLandingPage() {
     this.landingPage = this.storageService.load('landingpage');
-    console.log(this.landingPage);
   }
 }
