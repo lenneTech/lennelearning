@@ -7,6 +7,7 @@ import { EntryPoint } from '../../modules/core/interfaces/entry-point.interface'
 import { Subscription } from 'rxjs';
 import { NbSidebarService } from '@nebular/theme';
 import { DialogService } from 'src/app/modules/core/services/dialog.service';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-academy',
@@ -33,7 +34,8 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     private sectionService: SectionService,
     private sidebarService: NbSidebarService,
     private ref: ChangeDetectorRef,
-    private dialogService: DialogService
+    private dialogService: DialogService,
+    private metaTagService: Meta
   ) {
     // Get current entry point
     this.subscriptions.add(
@@ -96,6 +98,14 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     }
     this.entryPoints = this.entryPointService.entryPoints();
     this.checkEntryPoint();
+
+    this.metaTagService.addTags([
+      { property: 'og:url', content: 'https://akademie.lenne.tech/' },
+      { property: 'og:image', content: '/assets/images/banner-images/ltakademie.png' },
+      { property: 'twitter:card', content: 'summary' },
+      { property: 'twitter:site', content: '@lenneTech' },
+      { property: 'twitter:creator', content: '@lenneTech' },
+    ]);
   }
 
   ngAfterContentChecked(): void {

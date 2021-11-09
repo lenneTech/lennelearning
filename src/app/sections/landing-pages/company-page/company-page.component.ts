@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 import { TextImageInterface } from '../../../modules/core/interfaces/text-image.interface';
 
 @Component({
@@ -6,7 +7,7 @@ import { TextImageInterface } from '../../../modules/core/interfaces/text-image.
   templateUrl: './company-page.component.html',
   styleUrls: ['./company-page.component.scss'],
 })
-export class CompanyPageComponent {
+export class CompanyPageComponent implements OnInit {
   title = 'Du suchst fähige Entwickler für dein Unternehmen?';
   subtitle =
     'Wir betreuen und evaluieren deine potenziellen Softwareentwickler im Web und App Bereich oder fördern dein Start-up.\n\n In unserer Akademie lernen sie, wie man mit aktuellen Technologien agile Web- und Appanwendungen professionell entwickelt und im Team effizient zusammenarbeitet.';
@@ -59,7 +60,35 @@ export class CompanyPageComponent {
     },
   ];
 
-  constructor() {}
+  constructor(private metaTagService: Meta) {}
+
+  ngOnInit(): void {
+    this.metaTagService.addTags([
+      { property: 'og:url', content: 'https://akademie.lenne.tech/unternehmen' },
+      { property: 'og:image', content: '/assets/images/banner-images/ltakademie.png' },
+      { property: 'twitter:card', content: 'summary' },
+      { property: 'twitter:site', content: '@lenneTech' },
+      { property: 'twitter:creator', content: '@lenneTech' },
+    ]);
+    this.metaTagService.updateTag({
+      property: 'og:title',
+      content: 'ltakadmie - Du suchst fähige Entwickler für dein Unternehmen?',
+    });
+    this.metaTagService.updateTag({
+      property: 'og:description',
+      content:
+        'Wir betreuen und evaluieren deine potenziellen Softwareentwickler im Web und App Bereich oder fördern dein Start-up.',
+    });
+    this.metaTagService.updateTag({
+      property: 'twitter:title',
+      content: 'ltakadmie - Du suchst fähige Entwickler für dein Unternehmen?',
+    });
+    this.metaTagService.updateTag({
+      property: 'twitter:description',
+      content:
+        'Wir betreuen und evaluieren deine potenziellen Softwareentwickler im Web und App Bereich oder fördern dein Start-up.',
+    });
+  }
 
   sendOffer(): void {
     window.open('mailto:info@lenne.tech');
