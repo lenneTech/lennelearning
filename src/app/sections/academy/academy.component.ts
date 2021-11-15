@@ -37,11 +37,8 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     private sidebarService: NbSidebarService,
     private ref: ChangeDetectorRef,
     private dialogService: DialogService,
-<<<<<<< HEAD
-    private metaTagService: Meta
-=======
+    private metaTagService: Meta,
     private storageService: StorageService
->>>>>>> 7274914 (added handling to show progress in sidebar)
   ) {
     // Get current entry point
     this.subscriptions.add(
@@ -144,42 +141,21 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     const sectionArray: Section[] = this.storageService.load('sections');
     if (this.sections) {
       for (const section of this.sections) {
-        let allTasksCompleted = true;
         let sectionStarted = false;
         if (sectionArray) {
           const currSection: Section = sectionArray.find((oneSection: Section) => oneSection[section]);
           if (currSection) {
             sectionStarted = true;
-            let i = 1;
-            for (const task of currSection[section]) {
-              if (!task[`task-${i}`] || task[`task-${i}`].completed !== true) {
-                allTasksCompleted = false;
-              }
-              i++;
-            }
-          } else {
-            allTasksCompleted = false;
           }
         }
-
-        if (allTasksCompleted) {
+        if (sectionStarted) {
           this.items.push({
             title: section,
             link: `/lernpfad/${section}`,
             expanded: true,
             badge: {
               dotMode: true,
-              status: 'success',
-            },
-          });
-        } else if (sectionStarted) {
-          this.items.push({
-            title: section,
-            link: `/lernpfad/${section}`,
-            expanded: true,
-            badge: {
-              dotMode: true,
-              status: 'warning',
+              status: 'primary',
             },
           });
         } else {

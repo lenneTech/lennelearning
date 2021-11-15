@@ -23,6 +23,7 @@ export class EntryPointService {
         'Das hier ist der Standard-Einstiegspunkt. Wenn du nicht weißt, was auf dich zukommt oder was dich interessiert, wähle diesen Lernpfad. Hier wird dir alles gezeigt.',
       image: '../../assets/images/explanation-images/discovery.svg',
       sections: [
+        'beruf',
         'html',
         'css',
         'bootstrap',
