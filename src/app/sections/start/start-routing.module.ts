@@ -32,7 +32,7 @@ const routes: Routes = [
     data: { matomoTitle: 'Berufsinteressiert' },
   },
   {
-    path: 'lernpfade',
+    path: 'lernpfade/:id',
     component: EntryPointsComponent,
     pathMatch: 'full',
     data: { matomoTitle: 'Lernpfade' },

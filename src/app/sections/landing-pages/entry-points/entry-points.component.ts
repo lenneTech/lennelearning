@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { StorageService } from '@lenne.tech/ng-base';
+import { Subscription } from 'rxjs';
 import { EntryPoint } from 'src/app/modules/core/interfaces/entry-point.interface';
 import { EntryPointService } from 'src/app/modules/core/services/entry-point.service';
 
@@ -15,8 +17,9 @@ export class EntryPointsComponent implements OnInit {
   imageUrl = '../../assets/images/explanation-images/projekt.svg';
   entryPoints: EntryPoint[] = [];
   landingPage: string;
+  routeSub: Subscription;
 
-  constructor(private entryPointService: EntryPointService, private storageService: StorageService) {}
+  constructor(private entryPointService: EntryPointService, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.getAllEntryPoints();
@@ -32,6 +35,8 @@ export class EntryPointsComponent implements OnInit {
   }
 
   getLandingPage() {
-    this.landingPage = this.storageService.load('landingpage');
+    this.routeSub = this.activatedRoute.paramMap.subscribe((params) => {
+      this.landingPage = params.get('id');
+    });
   }
 }
