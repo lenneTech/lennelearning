@@ -145,7 +145,15 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
         if (sectionArray) {
           const currSection: Section = sectionArray.find((oneSection: Section) => oneSection[section]);
           if (currSection) {
-            sectionStarted = true;
+            for (let i = 1; i <= currSection[section].length; i++) {
+              currSection[section].find((oneTask) => {
+                const taskId = Object.keys(oneTask).toString().substring(5, 6);
+
+                if (oneTask[`task-${taskId}`] && oneTask[`task-${taskId}`].completed) {
+                  sectionStarted = true;
+                }
+              });
+            }
           }
         }
         if (sectionStarted) {
@@ -167,7 +175,6 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
         }
       }
     }
-
     return this.items;
   }
 
