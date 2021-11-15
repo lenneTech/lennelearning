@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { StorageService } from '@lenne.tech/ng-base';
+import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { EntryPoint } from 'src/app/modules/core/interfaces/entry-point.interface';
 import { EntryPointService } from 'src/app/modules/core/services/entry-point.service';

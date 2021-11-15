@@ -37,6 +37,12 @@ const routes: Routes = [
     pathMatch: 'full',
     data: { matomoTitle: 'Lernpfade' },
   },
+  {
+    path: 'lernpfade',
+    component: EntryPointsComponent,
+    pathMatch: 'full',
+    data: { matomoTitle: 'Lernpfade' },
+  },
 ];
 
 @NgModule({

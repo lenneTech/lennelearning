@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { StorageService } from '@lenne.tech/ng-base';
 import { EntryPointService } from '../../services/entry-point.service';
 
 @Component({
@@ -25,7 +24,7 @@ export class BannerComponent {
     if (this.router.url !== '/') {
       this.router.navigate(['/lernpfade', this.router.url.slice(1)]);
     } else {
-      this.router.navigate(['/lernpfade', 'allgemein']);
+      this.router.navigate(['/lernpfade']);
     }
   }
 }

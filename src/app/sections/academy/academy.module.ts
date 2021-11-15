@@ -1,7 +1,5 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AcademyComponent } from './academy.component';
-import { AcademyRoutingModule } from './academy-routing.module';
+import { NgModule } from '@angular/core';
 import {
   NbButtonModule,
   NbCardModule,
@@ -13,47 +11,49 @@ import {
   NbSidebarService,
   NbStepperModule,
 } from '@nebular/theme';
-import { TaskVideoComponent } from './components/task-video/task-video.component';
-import { DescriptionDirective } from './directives/description.directive';
+import player from 'lottie-web';
+import { HighlightModule } from 'ngx-highlightjs';
+import { HighlightPlusModule } from 'ngx-highlightjs/plus';
+import { LottieModule } from 'ngx-lottie';
+import { TrophyComponent } from 'src/app/modules/core/components/trophy/trophy.component';
 import { CoreModule } from 'src/app/modules/core/core.module';
-import { HtmlComponent } from './sections/html/html.component';
-import { CssComponent } from './sections/css/css.component';
-import { JavascriptComponent } from './sections/javascript/javascript.component';
-import { TypescriptComponent } from './sections/typescript/typescript.component';
-import { JobComponent } from './sections/job/job.component';
-import { IonicComponent } from './sections/ionic/ionic.component';
-import { AngularComponent } from './sections/angular/angular.component';
+import { AcademyRoutingModule } from './academy-routing.module';
+import { AcademyComponent } from './academy.component';
+import { MilestoneComponent } from './components/milestone/milestone.component';
+import { QuestionsComponent } from './components/questions/questions.component';
+import { SectionComponent } from './components/section/section.component';
+import { TaskCodeComponent } from './components/task-code/task-code.component';
 import { TaskTextComponent } from './components/task-text/task-text.component';
+import { TaskVideoComponent } from './components/task-video/task-video.component';
+import { TaskComponent } from './components/task/task.component';
+import { DescriptionDirective } from './directives/description.directive';
+import { ExerciseListDirective } from './directives/exercise-list.directive';
+import { ExerciseDirective } from './directives/exercise.directive';
+import { ExtraQuestionDirective } from './directives/extra-question.directive';
+import { InfoListDirective } from './directives/info-list.directive';
+import { InfoDirective } from './directives/info.directive';
+import { LinkDirective } from './directives/link.directive';
+import { PageLinkDirective } from './directives/page-link.directive';
+import { QuestionListDirective } from './directives/question-list.directive';
+import { SidebarTitleDirective } from './directives/sidebar-title.directive';
 import { TitleDirective } from './directives/title.directive';
 import { VideoListDirective } from './directives/video-list.directive';
-import { ExerciseDirective } from './directives/exercise.directive';
-import { ExerciseListDirective } from './directives/exercise-list.directive';
-import { SectionComponent } from './components/section/section.component';
-import { QuestionsComponent } from './components/questions/questions.component';
-import { QuestionListDirective } from './directives/question-list.directive';
-import { ExtraQuestionDirective } from './directives/extra-question.directive';
+import { VideoPipe } from './pipes/video.pipe';
+import { AngularComponent } from './sections/angular/angular.component';
 import { BootstrapComponent } from './sections/bootstrap/bootstrap.component';
-import { LinkDirective } from './directives/link.directive';
-import { TaskComponent } from './components/task/task.component';
-import { HighlightPlusModule } from 'ngx-highlightjs/plus';
-import { HighlightModule } from 'ngx-highlightjs';
-import { TaskCodeComponent } from './components/task-code/task-code.component';
-import { PageLinkDirective } from './directives/page-link.directive';
-import { NestjsComponent } from './sections/nestjs/nestjs.component';
+import { CssComponent } from './sections/css/css.component';
+import { CypressComponent } from './sections/cypress/cypress.component';
+import { DesignComponent } from './sections/design/design.component';
+import { DockerBasicsComponent } from './sections/docker-basics/docker-basics.component';
 import { GitBasicsComponent } from './sections/git-basics/git-basics.component';
 import { GitExpertComponent } from './sections/git-expert/git-expert.component';
-import { InfoDirective } from './directives/info.directive';
-import { InfoListDirective } from './directives/info-list.directive';
-import { SidebarTitleDirective } from './directives/sidebar-title.directive';
-import { VideoPipe } from './pipes/video.pipe';
-import { MilestoneComponent } from './components/milestone/milestone.component';
-import { TrophyComponent } from 'src/app/modules/core/components/trophy/trophy.component';
-import { LottieModule } from 'ngx-lottie';
-import player from 'lottie-web';
+import { HtmlComponent } from './sections/html/html.component';
+import { IonicComponent } from './sections/ionic/ionic.component';
+import { JavascriptComponent } from './sections/javascript/javascript.component';
+import { JobComponent } from './sections/job/job.component';
+import { NestjsComponent } from './sections/nestjs/nestjs.component';
 import { PackagesComponent } from './sections/packages/packages.component';
-import { DesignComponent } from './sections/design/design.component';
-import { CypressComponent } from './sections/cypress/cypress.component';
-import { DockerBasicsComponent } from './sections/docker-basics/docker-basics.component';
+import { TypescriptComponent } from './sections/typescript/typescript.component';
 
 export function playerFactory() {
   return player;
