@@ -8,6 +8,8 @@ import { Subscription } from 'rxjs';
 import { NbSidebarService } from '@nebular/theme';
 import { DialogService } from 'src/app/modules/core/services/dialog.service';
 import { Meta } from '@angular/platform-browser';
+import { StorageService } from '@lenne.tech/ng-base';
+import { Section } from 'src/app/modules/core/interfaces/section.interface';
 
 @Component({
   selector: 'app-academy',
@@ -35,7 +37,8 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     private sidebarService: NbSidebarService,
     private ref: ChangeDetectorRef,
     private dialogService: DialogService,
-    private metaTagService: Meta
+    private metaTagService: Meta,
+    private storageService: StorageService
   ) {
     // Get current entry point
     this.subscriptions.add(
@@ -135,17 +138,43 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
   setSections(): NbMenuItem[] {
     this.sections = this.entryPointService.selectedEntryPointSections();
     this.items = [];
-
+    const sectionArray: Section[] = this.storageService.load('sections');
     if (this.sections) {
       for (const section of this.sections) {
-        this.items.push({
-          title: section,
-          link: `/lernpfad/${section}`,
-          expanded: true,
-        });
+        let sectionStarted = false;
+        if (sectionArray) {
+          const currSection: Section = sectionArray.find((oneSection: Section) => oneSection[section]);
+          if (currSection) {
+            for (let i = 1; i <= currSection[section].length; i++) {
+              currSection[section].find((oneTask) => {
+                const taskId = Object.keys(oneTask).toString().substring(5, 6);
+
+                if (oneTask[`task-${taskId}`] && oneTask[`task-${taskId}`].completed) {
+                  sectionStarted = true;
+                }
+              });
+            }
+          }
+        }
+        if (sectionStarted) {
+          this.items.push({
+            title: section,
+            link: `/lernpfad/${section}`,
+            expanded: true,
+            badge: {
+              dotMode: true,
+              status: 'primary',
+            },
+          });
+        } else {
+          this.items.push({
+            title: section,
+            link: `/lernpfad/${section}`,
+            expanded: true,
+          });
+        }
       }
     }
-
     return this.items;
   }
 
