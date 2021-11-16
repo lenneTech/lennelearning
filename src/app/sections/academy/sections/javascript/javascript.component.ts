@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { HighlightResult } from 'ngx-highlightjs';
 
 @Component({
   selector: 'app-javascript',

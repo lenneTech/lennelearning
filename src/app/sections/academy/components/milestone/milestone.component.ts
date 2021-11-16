@@ -1,8 +1,8 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { NbStepperComponent } from '@nebular/theme';
 import { Milestone } from 'src/app/modules/core/interfaces/milestone.interface';
 import { SectionService } from 'src/app/modules/core/services/section.service';
-import { NbStepperComponent } from '@nebular/theme';
 import { EntryPointService } from '../../../../modules/core/services/entry-point.service';
 
 @Component({

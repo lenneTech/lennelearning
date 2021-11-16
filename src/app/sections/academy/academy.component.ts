@@ -1,15 +1,14 @@
 import { AfterContentChecked, ChangeDetectorRef, Component, HostListener, OnDestroy, OnInit } from '@angular/core';
-import { EntryPointService } from '../../modules/core/services/entry-point.service';
-import { Router } from '@angular/router';
-import { NbMenuItem } from '@nebular/theme';
-import { SectionService } from '../../modules/core/services/section.service';
-import { EntryPoint } from '../../modules/core/interfaces/entry-point.interface';
-import { Subscription } from 'rxjs';
-import { NbSidebarService } from '@nebular/theme';
-import { DialogService } from 'src/app/modules/core/services/dialog.service';
 import { Meta } from '@angular/platform-browser';
+import { Router } from '@angular/router';
+import { NbMenuItem, NbSidebarService } from '@nebular/theme';
+import { Subscription } from 'rxjs';
+import { DialogService } from 'src/app/modules/core/services/dialog.service';
 import { StorageService } from '@lenne.tech/ng-base';
 import { Section } from 'src/app/modules/core/interfaces/section.interface';
+import { EntryPoint } from '../../modules/core/interfaces/entry-point.interface';
+import { EntryPointService } from '../../modules/core/services/entry-point.service';
+import { SectionService } from '../../modules/core/services/section.service';
 
 @Component({
   selector: 'app-academy',

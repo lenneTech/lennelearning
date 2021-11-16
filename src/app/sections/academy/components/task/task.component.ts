@@ -1,9 +1,9 @@
+import { animate, AUTO_STYLE, state, style, transition, trigger } from '@angular/animations';
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { StorageService } from '@lenne.tech/ng-base';
+import { SectionService } from 'src/app/modules/core/services/section.service';
 import { TaskService } from 'src/app/modules/core/services/task.service';
 import { DialogService } from '../../../../modules/core/services/dialog.service';
-import { animate, AUTO_STYLE, state, style, transition, trigger } from '@angular/animations';
-import { SectionService } from 'src/app/modules/core/services/section.service';
 
 @Component({
   selector: 'task',

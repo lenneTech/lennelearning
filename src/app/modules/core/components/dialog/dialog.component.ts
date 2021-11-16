@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { NbDialogRef } from '@nebular/theme';
 import { DialogBtnOptionsEnum } from '../../enumerators/dialog-btn-options.enum';
 
