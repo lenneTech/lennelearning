@@ -19,6 +19,7 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
   sections: string[] = [];
   items: NbMenuItem[] = [];
   currentEntryPoint: EntryPoint;
+  oldEntryPoint: EntryPoint;
   subscriptions = new Subscription();
   sidebarCollapsed = false;
   onlyParentRoute: boolean;
@@ -89,9 +90,12 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
 
   ngOnInit(): void {
     this.subscriptions.add(
-      this.entryPointService.selectedEntryPointObservable.subscribe(() => {
+      this.entryPointService.selectedEntryPointObservable.subscribe((entryPoint) => {
         const items = this.setSections();
-        this.router.navigate([`${items[0].link}`]);
+        if (this.oldEntryPoint !== undefined && entryPoint !== this.oldEntryPoint) {
+          this.router.navigate([`${items[0].link}`]);
+        }
+        this.oldEntryPoint = entryPoint;
       })
     );
     this.setSections();

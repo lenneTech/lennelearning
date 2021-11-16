@@ -45,7 +45,7 @@ export class EntryPointService {
       title: 'Berufsinteressierte',
       address: 'Berufsinteressierter',
       description:
-        'Du interessierst dich für Web- und Apptechnologien, weißt aber noch nicht, was dich im Beruf erwartet?',
+        'Du interessierst dich für Web- und Apptechnologien, weißt aber noch nicht, was dich im Beruf erwartet? Wähle diesen Pfad aus, um mehr zu erfahren.',
       image: '../../assets/images/entry-point-images/berufsinteressent.svg',
       sections: ['beruf', 'html', 'css', 'bootstrap', 'git-basics', 'javascript'],
     },
@@ -122,7 +122,7 @@ export class EntryPointService {
       title: 'Backend',
       address: 'Backend-Entwickler',
       description: 'Du möchtest dich größtenteils im Bereich Backend weiterbilden. Dann wähle diesen Lernpfad aus.',
-      image: '../../assets/images/entry-point-images/company.svg',
+      image: '../../assets/images/explanation-images/build_product.svg',
       sections: ['git-basics', 'git-experte', 'docker-basics', 'nestjs', 'packages', 'cypress'],
     },
     {
@@ -130,7 +130,7 @@ export class EntryPointService {
       title: 'Sprint',
       address: 'Sprinter',
       description:
-        'Du möchtest nicht vollkommen ins Detail gehen aber mitreden können, wenn es um Webdevelopement geht.',
+        'Du möchtest nicht vollkommen ins Detail gehen aber mitreden können, wenn es um Webdevelopement geht? Dann ist dieser Pfad der richtige für dich.',
       image: '../../assets/images/explanation-images/strategy.svg',
       sections: ['html', 'css', 'bootstrap', 'git-basics', 'javascript', 'typescript', 'angular', 'ionic', 'nestjs'],
     },
