@@ -15,14 +15,14 @@ export class EntryPointsComponent implements OnInit {
     'Bist du schon ziemlich erfahren oder noch ganz am Anfang deiner Karriere als Webentwickler?\n Hier in der Akademie ist das vollkommen egal. Wähle einfach den Lernpfad aus, der zu dir passt und starte mit deiner (Weiter)-Bildung in der Webentwicklung!';
   imageUrl = '../../assets/images/explanation-images/projekt.svg';
   entryPoints: EntryPoint[] = [];
-  landingPage: string;
+  recommendation: string;
   routeSub: Subscription;
 
   constructor(private entryPointService: EntryPointService, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.getAllEntryPoints();
-    this.getLandingPage();
+    this.getRecommendation();
   }
 
   getAllEntryPoints(): void {
@@ -33,9 +33,7 @@ export class EntryPointsComponent implements OnInit {
     this.entryPointService.selectedEntryPoint = entryPoint;
   }
 
-  getLandingPage() {
-    this.routeSub = this.activatedRoute.paramMap.subscribe((params) => {
-      this.landingPage = params.get('id');
-    });
+  getRecommendation() {
+    this.activatedRoute.queryParams.subscribe((value) => (this.recommendation = value.empfehlung));
   }
 }

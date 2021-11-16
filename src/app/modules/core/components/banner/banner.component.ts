@@ -20,9 +20,11 @@ export class BannerComponent {
     this.entryPointService.setEntryPointById(this.entryPointId);
   }
 
-  setLandingPage() {
+  setRecommendation() {
     if (this.router.url !== '/') {
-      this.router.navigate(['/lernpfade', this.router.url.slice(1)]);
+      this.router.navigate(['/lernpfade'], {
+        queryParams: { empfehlung: this.router.url.slice(1) },
+      });
     } else {
       this.router.navigate(['/lernpfade']);
     }

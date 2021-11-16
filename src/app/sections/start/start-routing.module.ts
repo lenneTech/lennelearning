@@ -32,12 +32,6 @@ const routes: Routes = [
     data: { matomoTitle: 'Berufsinteressiert' },
   },
   {
-    path: 'lernpfade/:id',
-    component: EntryPointsComponent,
-    pathMatch: 'full',
-    data: { matomoTitle: 'Lernpfade' },
-  },
-  {
     path: 'lernpfade',
     component: EntryPointsComponent,
     pathMatch: 'full',
