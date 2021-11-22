@@ -18,7 +18,7 @@ export class EntryPointService {
     {
       id: 'standard',
       title: 'Standard',
-      address: 'Nutzer',
+      address: 'Standard-Nutzer',
       description:
         'Das hier ist der Standard-Einstiegspunkt. Wenn du nicht weißt, was auf dich zukommt oder was dich interessiert, wähle diesen Lernpfad. Hier wird dir alles gezeigt.',
       image: '../../assets/images/explanation-images/discovery.svg',
@@ -54,7 +54,7 @@ export class EntryPointService {
       title: 'Praktikanten',
       address: 'Praktikant',
       description:
-        'Du bist Schüler, Student, befindest dich in einer Weiterbildung und willst ein Praktikum bei uns machen? Dieser Lernpfad bereitet dich bestens darauf vor.',
+        'Du bist Schüler, Student, oder befindest dich in einer Weiterbildung und willst ein Praktikum bei uns machen? Dieser Lernpfad bereitet dich bestens darauf vor.',
       image: '../../assets/images/entry-point-images/praktikant.svg',
       sections: [
         'beruf',
@@ -130,7 +130,7 @@ export class EntryPointService {
       title: 'Sprint',
       address: 'Sprinter',
       description:
-        'Du möchtest nicht vollkommen ins Detail gehen aber mitreden können, wenn es um Webdevelopement geht? Dann ist dieser Pfad der richtige für dich.',
+        'Du möchtest nicht vollkommen ins Detail gehen, aber mitreden können, wenn es um Webdevelopement geht? Dann ist dieser Pfad der richtige für dich.',
       image: '../../assets/images/explanation-images/strategy.svg',
       sections: ['html', 'css', 'bootstrap', 'git-basics', 'javascript', 'typescript', 'angular', 'ionic', 'nestjs'],
     },

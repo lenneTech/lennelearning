@@ -1,5 +1,5 @@
 <nb-layout>
-  <nb-layout-header fixed>
+  <nb-layout-header fixed class="mobile-spacing">
     <div class="container-fluid">
       <div class="d-flex justify-content-between header">
         <div class="d-flex align-items-center">
@@ -27,6 +27,18 @@
             (click)="toggleSidebar()"
           ></i>
         </div>
+      </div>
+      <div>
+        <span class="d-block d-md-none">
+          <nb-select placeholder="Select Showcase" [selected]="currentEntryPoint.id">
+            <nb-option
+              [value]="entryPoint.id"
+              *ngFor="let entryPoint of entryPoints"
+              (click)="switchEntryPoint(entryPoint)"
+              >{{ entryPoint.address }}</nb-option
+            >
+          </nb-select>
+        </span>
       </div>
     </div>
   </nb-layout-header>
