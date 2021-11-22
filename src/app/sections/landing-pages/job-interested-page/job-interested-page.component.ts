@@ -8,7 +8,7 @@ import { TextImageInterface } from '../../../modules/core/interfaces/text-image.
   styleUrls: ['./job-interested-page.component.scss'],
 })
 export class JobInterestedPageComponent implements OnInit {
-  title = 'Du interessierst dich für App- und Webentwicklung?';
+  title = 'Du interessierst dich für App- und Web&shy;entwicklung?';
   subtitle =
     'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.\n\n Gewinne in deinem Praktikum einen Einblick in den Berufsalltag im Bereich der Softwareentwicklung und entdecke dabei die grundlegenden Aspekte der Webentwicklung.';
   imageUrl = '../../assets/images/entry-point-images/berufsinteressent.svg';

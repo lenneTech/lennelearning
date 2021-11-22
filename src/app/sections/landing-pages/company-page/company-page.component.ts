@@ -8,7 +8,7 @@ import { TextImageInterface } from '../../../modules/core/interfaces/text-image.
   styleUrls: ['./company-page.component.scss'],
 })
 export class CompanyPageComponent implements OnInit {
-  title = 'Du suchst fähige Entwickler für dein Unternehmen?';
+  title = 'Du suchst fähige Entwickler für dein Unter&shy;nehmen?';
   subtitle =
     'Wir betreuen und evaluieren deine potenziellen Softwareentwickler im Web und App Bereich oder fördern dein Start-up.\n\n In unserer Akademie lernen sie, wie man mit aktuellen Technologien agile Web- und Appanwendungen professionell entwickelt und im Team effizient zusammenarbeitet.';
   imageUrl = '../../assets/images/entry-point-images/company.svg';
