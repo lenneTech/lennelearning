@@ -23,30 +23,43 @@ export class InternPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.metaTagService.addTags([
-      { property: 'og:url', content: 'https://akademie.lenne.tech/praktikanten' },
-      { property: 'og:image', content: '/assets/images/banner-images/ltakademie.png' },
+      { name: 'title', content: 'ltakademie - Du suchst noch ein Praktikum?' },
+      {
+        name: 'description',
+        content:
+          'Wir bieten Schülern, Studenten oder Webinteressierten die Möglichkeit, Web- und Appentwicklung in der Praxis zu erleben und mitzugestalten.',
+      },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: window.location.href },
+      { property: 'og:title', content: 'ltakademie - Du suchst noch ein Praktikum?' },
+      {
+        property: 'og:image',
+        content:
+          window.location.href.slice(0, window.location.href.lastIndexOf('/')) +
+          '/assets/images/banner-images/ltakademie.png',
+      },
+      {
+        property: 'og:description',
+        content:
+          'Wir bieten Schülern, Studenten oder Webinteressierten die Möglichkeit, Web- und Appentwicklung in der Praxis zu erleben und mitzugestalten.',
+      },
       { property: 'twitter:card', content: 'summary' },
+      { property: 'twitter:url', content: window.location.href },
+      { property: 'twitter:title', content: 'ltakademie - Du suchst noch ein Praktikum?' },
       { property: 'twitter:site', content: '@lenneTech' },
+      {
+        property: 'twitter:description',
+        content:
+          'Wir bieten Schülern, Studenten oder Webinteressierten die Möglichkeit, Web- und Appentwicklung in der Praxis zu erleben und mitzugestalten.',
+      },
       { property: 'twitter:creator', content: '@lenneTech' },
+      {
+        property: 'twitter:image',
+        content:
+          window.location.href.slice(0, window.location.href.lastIndexOf('/')) +
+          '/assets/images/banner-images/ltakademie.png',
+      },
     ]);
-    this.metaTagService.updateTag({
-      property: 'og:title',
-      content: 'ltakademie - Du suchst noch ein Praktikum?',
-    });
-    this.metaTagService.updateTag({
-      property: 'og:description',
-      content:
-        'Wir bieten Schülern, Studenten oder Webinteressierten die Möglichkeit, Web- und Appentwicklung in der Praxis zu erleben und mitzugestalten.',
-    });
-    this.metaTagService.updateTag({
-      property: 'twitter:title',
-      content: 'ltakadmie - Du suchst noch ein Praktikum?',
-    });
-    this.metaTagService.updateTag({
-      property: 'twitter:description',
-      content:
-        'Wir bieten Schülern, Studenten oder Webinteressierten die Möglichkeit, Web- und Appentwicklung in der Praxis zu erleben und mitzugestalten.',
-    });
   }
 
   sendApplication(): void {

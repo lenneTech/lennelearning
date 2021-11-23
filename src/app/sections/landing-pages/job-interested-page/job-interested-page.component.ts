@@ -36,28 +36,40 @@ export class JobInterestedPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.metaTagService.addTags([
-      { property: 'og:url', content: 'https://akademie.lenne.tech/berufsinteressierte' },
-      { property: 'og:image', content: '/assets/images/banner-images/ltakademie.png' },
+      { name: 'title', content: 'ltakademie - Du interessierst dich für App- und Webentwicklung?' },
+      {
+        name: 'description',
+        content: 'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.',
+      },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: window.location.href },
+      { property: 'og:title', content: 'ltakademie - Du interessierst dich für App- und Webentwicklung?' },
+      {
+        property: 'og:image',
+        content:
+          window.location.href.slice(0, window.location.href.lastIndexOf('/')) +
+          '/assets/images/banner-images/ltakademie.png',
+      },
+      {
+        property: 'og:description',
+        content: 'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.',
+      },
       { property: 'twitter:card', content: 'summary' },
+      { property: 'twitter:url', content: window.location.href },
+      { property: 'twitter:title', content: 'ltakademie - Du interessierst dich für App- und Webentwicklung?' },
       { property: 'twitter:site', content: '@lenneTech' },
+      {
+        property: 'twitter:description',
+        content: 'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.',
+      },
       { property: 'twitter:creator', content: '@lenneTech' },
+      {
+        property: 'twitter:image',
+        content:
+          window.location.href.slice(0, window.location.href.lastIndexOf('/')) +
+          '/assets/images/banner-images/ltakademie.png',
+      },
     ]);
-    this.metaTagService.updateTag({
-      property: 'og:title',
-      content: 'ltakademie - Du interessierst dich für App- und Webentwicklung?',
-    });
-    this.metaTagService.updateTag({
-      property: 'og:description',
-      content: 'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.',
-    });
-    this.metaTagService.updateTag({
-      property: 'twitter:title',
-      content: 'ltakadmie - Du interessierst dich für App- und Webentwicklung?',
-    });
-    this.metaTagService.updateTag({
-      property: 'twitter:description',
-      content: 'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.',
-    });
   }
 
   sendApplication(): void {

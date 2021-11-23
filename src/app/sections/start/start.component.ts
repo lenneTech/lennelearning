@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 import { SEOService } from '@lenne.tech/ng-base';
 
 @Component({
@@ -43,12 +44,36 @@ export class StartComponent {
       landingRoute: '/unternehmen',
     },
   ];
-  constructor(private seoService: SEOService) {
+  constructor(private seoService: SEOService, private metaTagService: Meta) {
     this.seoService.initPageForSEO(
       'ltakademie - Die online Akademie für Webtechnologien',
       'Die online Akademie für Webtechnologien',
       'academy, online, akademie, web, ltakademie'
     );
+    this.metaTagService.addTags([
+      { name: 'title', content: 'ltakademie - Die online Akademie für Webtechnologien' },
+      { name: 'description', content: 'Die online Akademie für Webtechnologien' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: window.location.href },
+      { property: 'og:title', content: 'ltakademie - Die online Akademie für Webtechnologien' },
+      {
+        property: 'og:image',
+        content:
+          window.location.href.slice(0, window.location.href.lastIndexOf('/')) +
+          '/assets/images/banner-images/ltakademie.png',
+      },
+      { property: 'og:description', content: 'Die online Akademie für Webtechnologien' },
+      { property: 'twitter:card', content: 'summary' },
+      { property: 'twitter:url', content: window.location.href },
+      { property: 'twitter:site', content: '@lenneTech' },
+      { property: 'twitter:creator', content: '@lenneTech' },
+      {
+        property: 'twitter:image',
+        content:
+          window.location.href.slice(0, window.location.href.lastIndexOf('/')) +
+          '/assets/images/banner-images/ltakademie.png',
+      },
+    ]);
   }
 
   openMail(): void {

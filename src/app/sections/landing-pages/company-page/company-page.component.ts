@@ -64,30 +64,43 @@ export class CompanyPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.metaTagService.addTags([
-      { property: 'og:url', content: 'https://akademie.lenne.tech/unternehmen' },
-      { property: 'og:image', content: '/assets/images/banner-images/ltakademie.png' },
+      { name: 'title', content: 'ltakadmie - Du suchst fähige Entwickler für dein Unternehmen?' },
+      {
+        name: 'description',
+        content:
+          'Wir betreuen und evaluieren deine potenziellen Softwareentwickler im Web und App Bereich oder fördern dein Start-up.',
+      },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: window.location.href },
+      { property: 'og:title', content: 'ltakadmie - Du suchst fähige Entwickler für dein Unternehmen?' },
+      {
+        property: 'og:image',
+        content:
+          window.location.href.slice(0, window.location.href.lastIndexOf('/')) +
+          '/assets/images/banner-images/ltakademie.png',
+      },
+      {
+        property: 'og:description',
+        content:
+          'Wir betreuen und evaluieren deine potenziellen Softwareentwickler im Web und App Bereich oder fördern dein Start-up.',
+      },
       { property: 'twitter:card', content: 'summary' },
+      { property: 'twitter:url', content: window.location.href },
+      { property: 'twitter:title', content: 'ltakadmie - Du suchst fähige Entwickler für dein Unternehmen?' },
       { property: 'twitter:site', content: '@lenneTech' },
+      {
+        property: 'twitter:description',
+        content:
+          'Wir betreuen und evaluieren deine potenziellen Softwareentwickler im Web und App Bereich oder fördern dein Start-up.',
+      },
       { property: 'twitter:creator', content: '@lenneTech' },
+      {
+        property: 'twitter:image',
+        content:
+          window.location.href.slice(0, window.location.href.lastIndexOf('/')) +
+          '/assets/images/banner-images/ltakademie.png',
+      },
     ]);
-    this.metaTagService.updateTag({
-      property: 'og:title',
-      content: 'ltakadmie - Du suchst fähige Entwickler für dein Unternehmen?',
-    });
-    this.metaTagService.updateTag({
-      property: 'og:description',
-      content:
-        'Wir betreuen und evaluieren deine potenziellen Softwareentwickler im Web und App Bereich oder fördern dein Start-up.',
-    });
-    this.metaTagService.updateTag({
-      property: 'twitter:title',
-      content: 'ltakadmie - Du suchst fähige Entwickler für dein Unternehmen?',
-    });
-    this.metaTagService.updateTag({
-      property: 'twitter:description',
-      content:
-        'Wir betreuen und evaluieren deine potenziellen Softwareentwickler im Web und App Bereich oder fördern dein Start-up.',
-    });
   }
 
   sendOffer(): void {
