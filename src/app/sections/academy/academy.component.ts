@@ -1,5 +1,4 @@
 import { AfterContentChecked, ChangeDetectorRef, Component, HostListener, OnDestroy, OnInit } from '@angular/core';
-import { Meta } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { NbMenuItem, NbSidebarService } from '@nebular/theme';
 import { Subscription } from 'rxjs';
@@ -37,7 +36,6 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     private sidebarService: NbSidebarService,
     private ref: ChangeDetectorRef,
     private dialogService: DialogService,
-    private metaTagService: Meta,
     private storageService: StorageService
   ) {
     // Get current entry point
@@ -104,14 +102,6 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     }
     this.entryPoints = this.entryPointService.entryPoints();
     this.checkEntryPoint();
-
-    this.metaTagService.addTags([
-      { property: 'og:url', content: 'https://akademie.lenne.tech/' },
-      { property: 'og:image', content: '/assets/images/banner-images/ltakademie.png' },
-      { property: 'twitter:card', content: 'summary' },
-      { property: 'twitter:site', content: '@lenneTech' },
-      { property: 'twitter:creator', content: '@lenneTech' },
-    ]);
   }
 
   ngAfterContentChecked(): void {

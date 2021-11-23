@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Meta } from '@angular/platform-browser';
+import { MetaService } from 'src/app/modules/core/services/meta.service';
 import { TextImageInterface } from '../../../modules/core/interfaces/text-image.interface';
 
 @Component({
@@ -32,32 +32,16 @@ export class JobInterestedPageComponent implements OnInit {
       alt: 'Bild von Menschen die einen Turm aus Bausteinen bauen.',
     },
   ];
-  constructor(private metaTagService: Meta) {}
+  constructor(private metaService: MetaService) {}
 
   ngOnInit(): void {
-    this.metaTagService.addTags([
-      { property: 'og:url', content: 'https://akademie.lenne.tech/berufsinteressierte' },
-      { property: 'og:image', content: '/assets/images/banner-images/ltakademie.png' },
-      { property: 'twitter:card', content: 'summary' },
-      { property: 'twitter:site', content: '@lenneTech' },
-      { property: 'twitter:creator', content: '@lenneTech' },
-    ]);
-    this.metaTagService.updateTag({
-      property: 'og:title',
-      content: 'ltakademie - Du interessierst dich für App- und Webentwicklung?',
-    });
-    this.metaTagService.updateTag({
-      property: 'og:description',
-      content: 'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.',
-    });
-    this.metaTagService.updateTag({
-      property: 'twitter:title',
-      content: 'ltakadmie - Du interessierst dich für App- und Webentwicklung?',
-    });
-    this.metaTagService.updateTag({
-      property: 'twitter:description',
-      content: 'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.',
-    });
+    this.metaService.updateMetaTags(
+      'ltakademie - Du interessierst dich für App- und Webentwicklung?',
+      'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.',
+      window.location.href.slice(0, window.location.href.lastIndexOf('/')) +
+        '/assets/images/banner-images/ltakademie.png',
+      window.location.href
+    );
   }
 
   sendApplication(): void {

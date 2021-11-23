@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SEOService } from '@lenne.tech/ng-base';
+import { MetaService } from 'src/app/modules/core/services/meta.service';
 
 @Component({
   selector: 'app-start',
@@ -43,11 +44,19 @@ export class StartComponent {
       landingRoute: '/unternehmen',
     },
   ];
-  constructor(private seoService: SEOService) {
+  constructor(private seoService: SEOService, private metaService: MetaService) {
     this.seoService.initPageForSEO(
       'ltakademie - Die online Akademie für Webtechnologien',
       'Die online Akademie für Webtechnologien',
       'academy, online, akademie, web, ltakademie'
+    );
+
+    this.metaService.updateMetaTags(
+      'ltakademie - Die online Akademie für Webtechnologien',
+      'Die online Akademie für Webtechnologien',
+      window.location.href.slice(0, window.location.href.lastIndexOf('/')) +
+        '/assets/images/banner-images/ltakademie.png',
+      window.location.href
     );
   }
 

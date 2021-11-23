@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Meta } from '@angular/platform-browser';
+import { MetaService } from 'src/app/modules/core/services/meta.service';
 import { TextImageInterface } from '../../../modules/core/interfaces/text-image.interface';
 
 @Component({
@@ -60,34 +60,16 @@ export class CompanyPageComponent implements OnInit {
     },
   ];
 
-  constructor(private metaTagService: Meta) {}
+  constructor(private metaService: MetaService) {}
 
   ngOnInit(): void {
-    this.metaTagService.addTags([
-      { property: 'og:url', content: 'https://akademie.lenne.tech/unternehmen' },
-      { property: 'og:image', content: '/assets/images/banner-images/ltakademie.png' },
-      { property: 'twitter:card', content: 'summary' },
-      { property: 'twitter:site', content: '@lenneTech' },
-      { property: 'twitter:creator', content: '@lenneTech' },
-    ]);
-    this.metaTagService.updateTag({
-      property: 'og:title',
-      content: 'ltakadmie - Du suchst fähige Entwickler für dein Unternehmen?',
-    });
-    this.metaTagService.updateTag({
-      property: 'og:description',
-      content:
-        'Wir betreuen und evaluieren deine potenziellen Softwareentwickler im Web und App Bereich oder fördern dein Start-up.',
-    });
-    this.metaTagService.updateTag({
-      property: 'twitter:title',
-      content: 'ltakadmie - Du suchst fähige Entwickler für dein Unternehmen?',
-    });
-    this.metaTagService.updateTag({
-      property: 'twitter:description',
-      content:
-        'Wir betreuen und evaluieren deine potenziellen Softwareentwickler im Web und App Bereich oder fördern dein Start-up.',
-    });
+    this.metaService.updateMetaTags(
+      'ltakadmie - Du suchst fähige Entwickler für dein Unternehmen?',
+      'Wir betreuen und evaluieren deine potenziellen Softwareentwickler im Web und App Bereich oder fördern dein Start-up.',
+      window.location.href.slice(0, window.location.href.lastIndexOf('/')) +
+        '/assets/images/banner-images/ltakademie.png',
+      window.location.href
+    );
   }
 
   sendOffer(): void {

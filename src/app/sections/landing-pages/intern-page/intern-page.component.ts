@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Meta } from '@angular/platform-browser';
+import { MetaService } from 'src/app/modules/core/services/meta.service';
 import { Review } from '../../../modules/core/interfaces/review.interface';
 
 @Component({
@@ -19,34 +19,16 @@ export class InternPageComponent implements OnInit {
     reviewerSubtitle: 'Praktikant - lenne.Tech GmbH',
   };
 
-  constructor(private metaTagService: Meta) {}
+  constructor(private metaService: MetaService) {}
 
   ngOnInit(): void {
-    this.metaTagService.addTags([
-      { property: 'og:url', content: 'https://akademie.lenne.tech/praktikanten' },
-      { property: 'og:image', content: '/assets/images/banner-images/ltakademie.png' },
-      { property: 'twitter:card', content: 'summary' },
-      { property: 'twitter:site', content: '@lenneTech' },
-      { property: 'twitter:creator', content: '@lenneTech' },
-    ]);
-    this.metaTagService.updateTag({
-      property: 'og:title',
-      content: 'ltakademie - Du suchst noch ein Praktikum?',
-    });
-    this.metaTagService.updateTag({
-      property: 'og:description',
-      content:
-        'Wir bieten Schülern, Studenten oder Webinteressierten die Möglichkeit, Web- und Appentwicklung in der Praxis zu erleben und mitzugestalten.',
-    });
-    this.metaTagService.updateTag({
-      property: 'twitter:title',
-      content: 'ltakadmie - Du suchst noch ein Praktikum?',
-    });
-    this.metaTagService.updateTag({
-      property: 'twitter:description',
-      content:
-        'Wir bieten Schülern, Studenten oder Webinteressierten die Möglichkeit, Web- und Appentwicklung in der Praxis zu erleben und mitzugestalten.',
-    });
+    this.metaService.updateMetaTags(
+      'ltakademie - Du suchst noch ein Praktikum?',
+      'Wir bieten Schülern, Studenten oder Webinteressierten die Möglichkeit, Web- und Appentwicklung in der Praxis zu erleben und mitzugestalten.',
+      window.location.href.slice(0, window.location.href.lastIndexOf('/')) +
+        '/assets/images/banner-images/ltakademie.png',
+      window.location.href
+    );
   }
 
   sendApplication(): void {
