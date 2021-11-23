@@ -22,6 +22,45 @@ export class InternPageComponent implements OnInit {
   constructor(private metaTagService: Meta) {}
 
   ngOnInit(): void {
+    const imageMetaTag = this.metaTagService.getTag("property='og:image'");
+    if (imageMetaTag) {
+      this.updateMetaTags();
+    } else {
+      this.addMetaTags();
+    }
+  }
+
+  updateMetaTags(): void {
+    this.metaTagService.updateTag({
+      name: 'title',
+      content: 'ltakademie - Du suchst noch ein Praktikum?',
+    });
+    this.metaTagService.updateTag({
+      property: 'og:title',
+      content: 'ltakademie - Du suchst noch ein Praktikum?',
+    });
+    this.metaTagService.updateTag({
+      property: 'twitter:title',
+      content: 'ltakademie - Du suchst noch ein Praktikum?',
+    });
+    this.metaTagService.updateTag({
+      name: 'description',
+      content:
+        'Wir bieten Schülern, Studenten oder Webinteressierten die Möglichkeit, Web- und Appentwicklung in der Praxis zu erleben und mitzugestalten.',
+    });
+    this.metaTagService.updateTag({
+      property: 'og:description',
+      content:
+        'Wir bieten Schülern, Studenten oder Webinteressierten die Möglichkeit, Web- und Appentwicklung in der Praxis zu erleben und mitzugestalten.',
+    });
+    this.metaTagService.updateTag({
+      property: 'twitter:description',
+      content:
+        'Wir bieten Schülern, Studenten oder Webinteressierten die Möglichkeit, Web- und Appentwicklung in der Praxis zu erleben und mitzugestalten.',
+    });
+  }
+
+  addMetaTags(): void {
     this.metaTagService.addTags([
       { name: 'title', content: 'ltakademie - Du suchst noch ein Praktikum?' },
       {

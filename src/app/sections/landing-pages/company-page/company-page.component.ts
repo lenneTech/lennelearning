@@ -63,6 +63,45 @@ export class CompanyPageComponent implements OnInit {
   constructor(private metaTagService: Meta) {}
 
   ngOnInit(): void {
+    const imageMetaTag = this.metaTagService.getTag("property='og:image'");
+    if (imageMetaTag) {
+      this.updateMetaTags();
+    } else {
+      this.addMetaTags();
+    }
+  }
+
+  updateMetaTags(): void {
+    this.metaTagService.updateTag({
+      name: 'title',
+      content: 'ltakadmie - Du suchst fähige Entwickler für dein Unternehmen?',
+    });
+    this.metaTagService.updateTag({
+      property: 'og:title',
+      content: 'ltakadmie - Du suchst fähige Entwickler für dein Unternehmen?',
+    });
+    this.metaTagService.updateTag({
+      property: 'twitter:title',
+      content: 'ltakadmie - Du suchst fähige Entwickler für dein Unternehmen?',
+    });
+    this.metaTagService.updateTag({
+      name: 'description',
+      content:
+        'Wir betreuen und evaluieren deine potenziellen Softwareentwickler im Web und App Bereich oder fördern dein Start-up.',
+    });
+    this.metaTagService.updateTag({
+      property: 'og:description',
+      content:
+        'Wir betreuen und evaluieren deine potenziellen Softwareentwickler im Web und App Bereich oder fördern dein Start-up.',
+    });
+    this.metaTagService.updateTag({
+      property: 'twitter:description',
+      content:
+        'Wir betreuen und evaluieren deine potenziellen Softwareentwickler im Web und App Bereich oder fördern dein Start-up.',
+    });
+  }
+
+  addMetaTags(): void {
     this.metaTagService.addTags([
       { name: 'title', content: 'ltakadmie - Du suchst fähige Entwickler für dein Unternehmen?' },
       {

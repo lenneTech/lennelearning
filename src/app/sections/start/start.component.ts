@@ -50,6 +50,43 @@ export class StartComponent {
       'Die online Akademie für Webtechnologien',
       'academy, online, akademie, web, ltakademie'
     );
+
+    const imageMetaTag = this.metaTagService.getTag("property='og:image'");
+    if (imageMetaTag) {
+      this.updateMetaTags();
+    } else {
+      this.addMetaTags();
+    }
+  }
+
+  updateMetaTags(): void {
+    this.metaTagService.updateTag({
+      name: 'title',
+      content: 'ltakademie - Die online Akademie für Webtechnologien',
+    });
+    this.metaTagService.updateTag({
+      property: 'og:title',
+      content: 'ltakademie - Die online Akademie für Webtechnologien',
+    });
+    this.metaTagService.updateTag({
+      property: 'twitter:title',
+      content: 'ltakademie - Die online Akademie für Webtechnologien',
+    });
+    this.metaTagService.updateTag({
+      name: 'description',
+      content: 'Die online Akademie für Webtechnologien',
+    });
+    this.metaTagService.updateTag({
+      property: 'og:description',
+      content: 'Die online Akademie für Webtechnologien',
+    });
+    this.metaTagService.updateTag({
+      property: 'twitter:description',
+      content: 'Die online Akademie für Webtechnologien',
+    });
+  }
+
+  addMetaTags(): void {
     this.metaTagService.addTags([
       { name: 'title', content: 'ltakademie - Die online Akademie für Webtechnologien' },
       { name: 'description', content: 'Die online Akademie für Webtechnologien' },

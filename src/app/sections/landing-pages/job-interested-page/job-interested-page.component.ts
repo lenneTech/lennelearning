@@ -35,6 +35,42 @@ export class JobInterestedPageComponent implements OnInit {
   constructor(private metaTagService: Meta) {}
 
   ngOnInit(): void {
+    const imageMetaTag = this.metaTagService.getTag("property='og:image'");
+    if (imageMetaTag) {
+      this.updateMetaTags();
+    } else {
+      this.addMetaTags();
+    }
+  }
+
+  updateMetaTags(): void {
+    this.metaTagService.updateTag({
+      name: 'title',
+      content: 'ltakademie - Du interessierst dich für App- und Webentwicklung?',
+    });
+    this.metaTagService.updateTag({
+      property: 'og:title',
+      content: 'ltakademie - Du interessierst dich für App- und Webentwicklung?',
+    });
+    this.metaTagService.updateTag({
+      property: 'twitter:title',
+      content: 'ltakademie - Du interessierst dich für App- und Webentwicklung?',
+    });
+    this.metaTagService.updateTag({
+      name: 'description',
+      content: 'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.',
+    });
+    this.metaTagService.updateTag({
+      property: 'og:description',
+      content: 'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.',
+    });
+    this.metaTagService.updateTag({
+      property: 'twitter:description',
+      content: 'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.',
+    });
+  }
+
+  addMetaTags(): void {
     this.metaTagService.addTags([
       { name: 'title', content: 'ltakademie - Du interessierst dich für App- und Webentwicklung?' },
       {
@@ -71,7 +107,6 @@ export class JobInterestedPageComponent implements OnInit {
       },
     ]);
   }
-
   sendApplication(): void {
     window.open('mailto:info@lenne.tech');
   }
