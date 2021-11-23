@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Meta } from '@angular/platform-browser';
+import { MetaService } from 'src/app/modules/core/services/meta.service';
 import { Review } from '../../../modules/core/interfaces/review.interface';
 
 @Component({
@@ -19,86 +19,16 @@ export class InternPageComponent implements OnInit {
     reviewerSubtitle: 'Praktikant - lenne.Tech GmbH',
   };
 
-  constructor(private metaTagService: Meta) {}
+  constructor(private metaService: MetaService) {}
 
   ngOnInit(): void {
-    const imageMetaTag = this.metaTagService.getTag("property='og:image'");
-    if (imageMetaTag) {
-      this.updateMetaTags();
-    } else {
-      this.addMetaTags();
-    }
-  }
-
-  updateMetaTags(): void {
-    this.metaTagService.updateTag({
-      name: 'title',
-      content: 'ltakademie - Du suchst noch ein Praktikum?',
-    });
-    this.metaTagService.updateTag({
-      property: 'og:title',
-      content: 'ltakademie - Du suchst noch ein Praktikum?',
-    });
-    this.metaTagService.updateTag({
-      property: 'twitter:title',
-      content: 'ltakademie - Du suchst noch ein Praktikum?',
-    });
-    this.metaTagService.updateTag({
-      name: 'description',
-      content:
-        'Wir bieten Schülern, Studenten oder Webinteressierten die Möglichkeit, Web- und Appentwicklung in der Praxis zu erleben und mitzugestalten.',
-    });
-    this.metaTagService.updateTag({
-      property: 'og:description',
-      content:
-        'Wir bieten Schülern, Studenten oder Webinteressierten die Möglichkeit, Web- und Appentwicklung in der Praxis zu erleben und mitzugestalten.',
-    });
-    this.metaTagService.updateTag({
-      property: 'twitter:description',
-      content:
-        'Wir bieten Schülern, Studenten oder Webinteressierten die Möglichkeit, Web- und Appentwicklung in der Praxis zu erleben und mitzugestalten.',
-    });
-  }
-
-  addMetaTags(): void {
-    this.metaTagService.addTags([
-      { name: 'title', content: 'ltakademie - Du suchst noch ein Praktikum?' },
-      {
-        name: 'description',
-        content:
-          'Wir bieten Schülern, Studenten oder Webinteressierten die Möglichkeit, Web- und Appentwicklung in der Praxis zu erleben und mitzugestalten.',
-      },
-      { property: 'og:type', content: 'website' },
-      { property: 'og:url', content: window.location.href },
-      { property: 'og:title', content: 'ltakademie - Du suchst noch ein Praktikum?' },
-      {
-        property: 'og:image',
-        content:
-          window.location.href.slice(0, window.location.href.lastIndexOf('/')) +
-          '/assets/images/banner-images/ltakademie.png',
-      },
-      {
-        property: 'og:description',
-        content:
-          'Wir bieten Schülern, Studenten oder Webinteressierten die Möglichkeit, Web- und Appentwicklung in der Praxis zu erleben und mitzugestalten.',
-      },
-      { property: 'twitter:card', content: 'summary' },
-      { property: 'twitter:url', content: window.location.href },
-      { property: 'twitter:title', content: 'ltakademie - Du suchst noch ein Praktikum?' },
-      { property: 'twitter:site', content: '@lenneTech' },
-      {
-        property: 'twitter:description',
-        content:
-          'Wir bieten Schülern, Studenten oder Webinteressierten die Möglichkeit, Web- und Appentwicklung in der Praxis zu erleben und mitzugestalten.',
-      },
-      { property: 'twitter:creator', content: '@lenneTech' },
-      {
-        property: 'twitter:image',
-        content:
-          window.location.href.slice(0, window.location.href.lastIndexOf('/')) +
-          '/assets/images/banner-images/ltakademie.png',
-      },
-    ]);
+    this.metaService.updateMetaTags(
+      'ltakademie - Du suchst noch ein Praktikum?',
+      'Wir bieten Schülern, Studenten oder Webinteressierten die Möglichkeit, Web- und Appentwicklung in der Praxis zu erleben und mitzugestalten.',
+      window.location.href.slice(0, window.location.href.lastIndexOf('/')) +
+        '/assets/images/banner-images/ltakademie.png',
+      window.location.href
+    );
   }
 
   sendApplication(): void {

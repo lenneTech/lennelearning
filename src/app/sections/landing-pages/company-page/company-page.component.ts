@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Meta } from '@angular/platform-browser';
+import { MetaService } from 'src/app/modules/core/services/meta.service';
 import { TextImageInterface } from '../../../modules/core/interfaces/text-image.interface';
 
 @Component({
@@ -60,86 +60,16 @@ export class CompanyPageComponent implements OnInit {
     },
   ];
 
-  constructor(private metaTagService: Meta) {}
+  constructor(private metaService: MetaService) {}
 
   ngOnInit(): void {
-    const imageMetaTag = this.metaTagService.getTag("property='og:image'");
-    if (imageMetaTag) {
-      this.updateMetaTags();
-    } else {
-      this.addMetaTags();
-    }
-  }
-
-  updateMetaTags(): void {
-    this.metaTagService.updateTag({
-      name: 'title',
-      content: 'ltakadmie - Du suchst fähige Entwickler für dein Unternehmen?',
-    });
-    this.metaTagService.updateTag({
-      property: 'og:title',
-      content: 'ltakadmie - Du suchst fähige Entwickler für dein Unternehmen?',
-    });
-    this.metaTagService.updateTag({
-      property: 'twitter:title',
-      content: 'ltakadmie - Du suchst fähige Entwickler für dein Unternehmen?',
-    });
-    this.metaTagService.updateTag({
-      name: 'description',
-      content:
-        'Wir betreuen und evaluieren deine potenziellen Softwareentwickler im Web und App Bereich oder fördern dein Start-up.',
-    });
-    this.metaTagService.updateTag({
-      property: 'og:description',
-      content:
-        'Wir betreuen und evaluieren deine potenziellen Softwareentwickler im Web und App Bereich oder fördern dein Start-up.',
-    });
-    this.metaTagService.updateTag({
-      property: 'twitter:description',
-      content:
-        'Wir betreuen und evaluieren deine potenziellen Softwareentwickler im Web und App Bereich oder fördern dein Start-up.',
-    });
-  }
-
-  addMetaTags(): void {
-    this.metaTagService.addTags([
-      { name: 'title', content: 'ltakadmie - Du suchst fähige Entwickler für dein Unternehmen?' },
-      {
-        name: 'description',
-        content:
-          'Wir betreuen und evaluieren deine potenziellen Softwareentwickler im Web und App Bereich oder fördern dein Start-up.',
-      },
-      { property: 'og:type', content: 'website' },
-      { property: 'og:url', content: window.location.href },
-      { property: 'og:title', content: 'ltakadmie - Du suchst fähige Entwickler für dein Unternehmen?' },
-      {
-        property: 'og:image',
-        content:
-          window.location.href.slice(0, window.location.href.lastIndexOf('/')) +
-          '/assets/images/banner-images/ltakademie.png',
-      },
-      {
-        property: 'og:description',
-        content:
-          'Wir betreuen und evaluieren deine potenziellen Softwareentwickler im Web und App Bereich oder fördern dein Start-up.',
-      },
-      { property: 'twitter:card', content: 'summary' },
-      { property: 'twitter:url', content: window.location.href },
-      { property: 'twitter:title', content: 'ltakadmie - Du suchst fähige Entwickler für dein Unternehmen?' },
-      { property: 'twitter:site', content: '@lenneTech' },
-      {
-        property: 'twitter:description',
-        content:
-          'Wir betreuen und evaluieren deine potenziellen Softwareentwickler im Web und App Bereich oder fördern dein Start-up.',
-      },
-      { property: 'twitter:creator', content: '@lenneTech' },
-      {
-        property: 'twitter:image',
-        content:
-          window.location.href.slice(0, window.location.href.lastIndexOf('/')) +
-          '/assets/images/banner-images/ltakademie.png',
-      },
-    ]);
+    this.metaService.updateMetaTags(
+      'ltakadmie - Du suchst fähige Entwickler für dein Unternehmen?',
+      'Wir betreuen und evaluieren deine potenziellen Softwareentwickler im Web und App Bereich oder fördern dein Start-up.',
+      window.location.href.slice(0, window.location.href.lastIndexOf('/')) +
+        '/assets/images/banner-images/ltakademie.png',
+      window.location.href
+    );
   }
 
   sendOffer(): void {

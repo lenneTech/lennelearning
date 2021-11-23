@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Meta } from '@angular/platform-browser';
+import { MetaService } from 'src/app/modules/core/services/meta.service';
 import { TextImageInterface } from '../../../modules/core/interfaces/text-image.interface';
 
 @Component({
@@ -32,81 +32,18 @@ export class JobInterestedPageComponent implements OnInit {
       alt: 'Bild von Menschen die einen Turm aus Bausteinen bauen.',
     },
   ];
-  constructor(private metaTagService: Meta) {}
+  constructor(private metaService: MetaService) {}
 
   ngOnInit(): void {
-    const imageMetaTag = this.metaTagService.getTag("property='og:image'");
-    if (imageMetaTag) {
-      this.updateMetaTags();
-    } else {
-      this.addMetaTags();
-    }
+    this.metaService.updateMetaTags(
+      'ltakademie - Du interessierst dich für App- und Webentwicklung?',
+      'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.',
+      window.location.href.slice(0, window.location.href.lastIndexOf('/')) +
+        '/assets/images/banner-images/ltakademie.png',
+      window.location.href
+    );
   }
 
-  updateMetaTags(): void {
-    this.metaTagService.updateTag({
-      name: 'title',
-      content: 'ltakademie - Du interessierst dich für App- und Webentwicklung?',
-    });
-    this.metaTagService.updateTag({
-      property: 'og:title',
-      content: 'ltakademie - Du interessierst dich für App- und Webentwicklung?',
-    });
-    this.metaTagService.updateTag({
-      property: 'twitter:title',
-      content: 'ltakademie - Du interessierst dich für App- und Webentwicklung?',
-    });
-    this.metaTagService.updateTag({
-      name: 'description',
-      content: 'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.',
-    });
-    this.metaTagService.updateTag({
-      property: 'og:description',
-      content: 'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.',
-    });
-    this.metaTagService.updateTag({
-      property: 'twitter:description',
-      content: 'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.',
-    });
-  }
-
-  addMetaTags(): void {
-    this.metaTagService.addTags([
-      { name: 'title', content: 'ltakademie - Du interessierst dich für App- und Webentwicklung?' },
-      {
-        name: 'description',
-        content: 'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.',
-      },
-      { property: 'og:type', content: 'website' },
-      { property: 'og:url', content: window.location.href },
-      { property: 'og:title', content: 'ltakademie - Du interessierst dich für App- und Webentwicklung?' },
-      {
-        property: 'og:image',
-        content:
-          window.location.href.slice(0, window.location.href.lastIndexOf('/')) +
-          '/assets/images/banner-images/ltakademie.png',
-      },
-      {
-        property: 'og:description',
-        content: 'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.',
-      },
-      { property: 'twitter:card', content: 'summary' },
-      { property: 'twitter:url', content: window.location.href },
-      { property: 'twitter:title', content: 'ltakademie - Du interessierst dich für App- und Webentwicklung?' },
-      { property: 'twitter:site', content: '@lenneTech' },
-      {
-        property: 'twitter:description',
-        content: 'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.',
-      },
-      { property: 'twitter:creator', content: '@lenneTech' },
-      {
-        property: 'twitter:image',
-        content:
-          window.location.href.slice(0, window.location.href.lastIndexOf('/')) +
-          '/assets/images/banner-images/ltakademie.png',
-      },
-    ]);
-  }
   sendApplication(): void {
     window.open('mailto:info@lenne.tech');
   }
