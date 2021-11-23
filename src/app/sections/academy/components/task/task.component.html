@@ -10,6 +10,9 @@
           class="bi cursor-pointer p-1"
           (click)="share()"
           [ngClass]="{ 'bi-clipboard': !check, 'bi-clipboard-check': check }"
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="Link zur Aufgabe kopieren"
         >
         </i>
         <i
