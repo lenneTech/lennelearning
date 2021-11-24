@@ -1,8 +1,9 @@
 .highlight {
-  border: 2px solid #f9a75a;
+  border: 2px solid #1050c0;
+  box-shadow: #292ce6e5 0px 2px 7px;
 
   &:hover {
-    box-shadow: #f9a75ae5 0px 5px 15px;
+    box-shadow: #292ce6e5 0px 5px 15px;
     transition: 0.3s;
   }
 }
