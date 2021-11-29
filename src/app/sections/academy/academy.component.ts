@@ -87,6 +87,16 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
       this.closeSidebar();
     }
   }
+  @HostListener('window:popstate', ['$event'])
+  onPopState(event) {
+    console.log('Back button pressed');
+    console.log(this.subscriptions);
+
+    this.subscriptions.unsubscribe();
+    console.log(this.subscriptions);
+
+    this.router.navigate(['/lernpfade']);
+  }
 
   ngOnInit(): void {
     this.subscriptions.add(
