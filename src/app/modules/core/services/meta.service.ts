@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -7,7 +8,7 @@ import { Meta } from '@angular/platform-browser';
 export class MetaService {
   constructor(private metaTagService: Meta) {}
 
-  updateMetaTags(title: string, description: string, image: string, url: string): void {
+  updateMetaTags(title: string, description: string): void {
     this.metaTagService.updateTag({
       name: 'title',
       content: title,
@@ -42,19 +43,19 @@ export class MetaService {
     });
     this.metaTagService.updateTag({
       property: 'og:image',
-      content: image,
+      content: environment.appUrl + 'assets/images/banner-images/ltakademie.png',
     });
     this.metaTagService.updateTag({
       property: 'twitter:image',
-      content: image,
+      content: environment.appUrl + 'assets/images/banner-images/ltakademie.png',
     });
     this.metaTagService.updateTag({
       property: 'og:url',
-      content: url,
+      content: environment.appUrl,
     });
     this.metaTagService.updateTag({
       property: 'twitter:url',
-      content: url,
+      content: environment.appUrl,
     });
   }
 }

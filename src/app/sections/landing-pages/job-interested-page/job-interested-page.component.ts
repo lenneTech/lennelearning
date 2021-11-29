@@ -37,10 +37,7 @@ export class JobInterestedPageComponent implements OnInit {
   ngOnInit(): void {
     this.metaService.updateMetaTags(
       'ltakademie - Du interessierst dich für App- und Webentwicklung?',
-      'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.',
-      window.location.href.slice(0, window.location.href.lastIndexOf('/')) +
-        '/assets/images/banner-images/ltakademie.png',
-      window.location.href
+      'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.'
     );
   }
 

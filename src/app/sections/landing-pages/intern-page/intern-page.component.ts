@@ -24,10 +24,7 @@ export class InternPageComponent implements OnInit {
   ngOnInit(): void {
     this.metaService.updateMetaTags(
       'ltakademie - Du suchst noch ein Praktikum?',
-      'Wir bieten Schülern, Studenten oder Webinteressierten die Möglichkeit, Web- und Appentwicklung in der Praxis zu erleben und mitzugestalten.',
-      window.location.href.slice(0, window.location.href.lastIndexOf('/')) +
-        '/assets/images/banner-images/ltakademie.png',
-      window.location.href
+      'Wir bieten Schülern, Studenten oder Webinteressierten die Möglichkeit, Web- und Appentwicklung in der Praxis zu erleben und mitzugestalten.'
     );
   }
 

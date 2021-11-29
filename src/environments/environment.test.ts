@@ -4,4 +4,5 @@ export const environment = {
   prefix: 'academy-test',
   apiUrl: '',
   matomoConfig: {},
+  appUrl: 'https://preview.akademie.lenne.tech/',
 };
