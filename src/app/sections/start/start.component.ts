@@ -53,10 +53,7 @@ export class StartComponent {
 
     this.metaService.updateMetaTags(
       'ltakademie - Die online Akademie für Webtechnologien',
-      'Die online Akademie für Webtechnologien',
-      window.location.href.slice(0, window.location.href.lastIndexOf('/')) +
-        '/assets/images/banner-images/ltakademie.png',
-      window.location.href
+      'Die online Akademie für Webtechnologien'
     );
   }
 

@@ -4,6 +4,7 @@ export const environment = {
   prefix: 'academy-dev',
   apiUrl: '',
   matomoConfig: {},
+  appUrl: 'http://localhost:4200/',
 };
 
 /*
