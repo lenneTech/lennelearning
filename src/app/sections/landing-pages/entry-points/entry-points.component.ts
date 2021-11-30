@@ -26,8 +26,6 @@ export class EntryPointsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    console.log('LernpfadAuswahlSeite');
-
     this.getAllEntryPoints();
     this.getRecommendation();
     this.getRedirectionLink();
