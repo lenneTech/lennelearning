@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { EntryPoint } from 'src/app/modules/core/interfaces/entry-point.interface';
 import { EntryPointService } from 'src/app/modules/core/services/entry-point.service';
@@ -16,13 +16,19 @@ export class EntryPointsComponent implements OnInit {
   imageUrl = '../../assets/images/explanation-images/projekt.svg';
   entryPoints: EntryPoint[] = [];
   recommendation: string;
+  redirectionLink: string;
   routeSub: Subscription;
 
-  constructor(private entryPointService: EntryPointService, private activatedRoute: ActivatedRoute) {}
+  constructor(
+    private entryPointService: EntryPointService,
+    private activatedRoute: ActivatedRoute,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.getAllEntryPoints();
     this.getRecommendation();
+    this.getRedirectionLink();
   }
 
   getAllEntryPoints(): void {
@@ -31,9 +37,18 @@ export class EntryPointsComponent implements OnInit {
 
   setSelectedEntryPoint(entryPoint: EntryPoint): void {
     this.entryPointService.selectedEntryPoint = entryPoint;
+    if (this.redirectionLink) {
+      this.router.navigateByUrl(this.redirectionLink);
+    }
   }
 
   getRecommendation() {
     this.activatedRoute.queryParams.subscribe((value) => (this.recommendation = value.empfehlung));
+  }
+
+  getRedirectionLink() {
+    this.activatedRoute.queryParams.subscribe((value) => {
+      this.redirectionLink = value.redirectTo;
+    });
   }
 }

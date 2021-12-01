@@ -28,6 +28,7 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
   nextSection: string;
   currentMileStoneUrl: string;
   entryPoints: EntryPoint[];
+  recievedUrl: string;
 
   constructor(
     private entryPointService: EntryPointService,
@@ -38,6 +39,7 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     private dialogService: DialogService,
     private storageService: StorageService
   ) {
+    this.recievedUrl = router.url;
     // Get current entry point
     this.subscriptions.add(
       this.entryPointService.selectedEntryPointObservable.subscribe((entrypoint) => {
@@ -182,7 +184,9 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
   checkEntryPoint(): void {
     //If there is no Entrypoint, navigate to the selectionpage
     if (!this.currentEntryPoint) {
-      this.router.navigate([`/lernpfade`]);
+      this.router.navigate([`/lernpfade`], {
+        queryParams: { redirectTo: this.recievedUrl },
+      });
     }
     this.imgAlt = this.currentEntryPoint.description;
     this.imgSrc = this.currentEntryPoint.image;
