@@ -45,13 +45,8 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe((event: NavigationEnd) => {
       this.previousUrl = this.currentUrl;
       this.currentUrl = event.url;
-      if (this.previousUrl) {
-        console.log(this.previousUrl);
-        console.log(this.currentUrl);
-
-        if (this.previousUrl.includes('lernpfad/') && this.currentUrl === '/lernpfad') {
-          this.router.navigateByUrl('/lernpfade');
-        }
+      if (this.previousUrl && this.previousUrl.includes('lernpfad/') && this.currentUrl === '/lernpfad') {
+        this.router.navigateByUrl('/lernpfade');
       }
     });
 
