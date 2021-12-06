@@ -1,7 +1,7 @@
 import { AfterContentChecked, ChangeDetectorRef, Component, HostListener, OnDestroy, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { NbMenuItem, NbSidebarService } from '@nebular/theme';
-import { Subscription } from 'rxjs';
+import { filter, Subscription } from 'rxjs';
 import { DialogService } from 'src/app/modules/core/services/dialog.service';
 import { StorageService } from '@lenne.tech/ng-base';
 import { Section } from 'src/app/modules/core/interfaces/section.interface';
@@ -29,6 +29,8 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
   currentMileStoneUrl: string;
   entryPoints: EntryPoint[];
   recievedUrl: string;
+  previousUrl: string = null;
+  currentUrl: string = null;
 
   constructor(
     private entryPointService: EntryPointService,
@@ -39,7 +41,18 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     private dialogService: DialogService,
     private storageService: StorageService
   ) {
+    // Handling if you want to go back to the selectionpage
+    this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe((event: NavigationEnd) => {
+      this.previousUrl = this.currentUrl;
+      this.currentUrl = event.url;
+      if (this.previousUrl && this.previousUrl.includes('lernpfad/') && this.currentUrl === '/lernpfad') {
+        this.router.navigateByUrl('/lernpfade');
+      }
+    });
+
+    // When you visit the academy through an task-link withoud selected an entrypoint, this Url gets stored and you get redirected after selecting an entrypoint
     this.recievedUrl = router.url;
+
     // Get current entry point
     this.subscriptions.add(
       this.entryPointService.selectedEntryPointObservable.subscribe((entrypoint) => {
