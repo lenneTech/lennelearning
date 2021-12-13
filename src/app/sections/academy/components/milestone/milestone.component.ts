@@ -54,7 +54,7 @@ export class MilestoneComponent implements OnInit {
         {
           text: 'Du kannst jetzt HTML Elemente stylen und somit Webseiten nach deinen Wünschen gestalten.',
           imageUrl: '../../../../../assets/images/milestone-images/css-1.png',
-          alt: 'Bild einer Webseite',
+          imageAlt: 'Bild einer Webseite',
           reference: 'https://emporiumpies.com/',
         },
       ],
@@ -68,13 +68,13 @@ export class MilestoneComponent implements OnInit {
         {
           text: 'Eigenschaften von Bootstrap überschreiben und für deine Webseite anpassen.',
           imageUrl: '../../../../../assets/images/milestone-images/Bootstrap-1.png',
-          alt: 'Bild einer Webseite',
+          imageAlt: 'Bild einer Webseite',
           reference: 'https://calenodrinks.com/',
         },
         {
           text: 'Mithilfe von Bootstrap Klassen deinen Webseiten in kurzer Zeit einen professionellen Look geben.',
           imageUrl: '../../../../../assets/images/milestone-images/Bootstrap-2.png',
-          alt: 'Bild einer Website',
+          imageAlt: 'Bild einer Website',
           reference: 'https://wildlifecoexistence.org/',
         },
       ],
@@ -106,13 +106,13 @@ export class MilestoneComponent implements OnInit {
           text: 'Webseiten für Probleme aller Art entwickeln.',
           imageUrl:
             'https://images.unsplash.com/photo-1527427337751-fdca2f128ce5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-          alt: 'Bild von Programmcode',
+          imageAlt: 'Bild von Programmcode',
         },
         {
           title: '',
           text: 'Deine eigenen Ideen umsetzen, Prototypen entwickeln oder schon vollständige Webprojekte fürs Frontend umsetzen.',
           imageUrl: '../../../../../assets/images/milestone-images/Javascript-1.png',
-          alt: 'Bild von Amazon',
+          imageAlt: 'Bild von Amazon',
           reference: 'https://www.amazon.de/',
         },
       ],
@@ -154,13 +154,13 @@ export class MilestoneComponent implements OnInit {
         {
           text: 'Dynamische Webseiten mit mehreren Pages, Routing, Animationen und vielem mehr erstellen.',
           imageUrl: '../../../../../assets/images/milestone-images/Angular-1.png',
-          alt: 'Bild einer Webseite',
+          imageAlt: 'Bild einer Webseite',
           reference: 'https://messages.google.com/',
         },
         {
           text: 'Erstellung von modernen Layouts, Formularen sowie Validierungen, um alles rund ums Frontend abzudecken.',
           imageUrl: '../../../../../assets/images/milestone-images/Angular-2.png',
-          alt: 'Bild einer Webseite',
+          imageAlt: 'Bild einer Webseite',
           reference: 'https://de.delta.com/eu/de',
         },
         {
@@ -178,7 +178,7 @@ export class MilestoneComponent implements OnInit {
           text: 'Du kannst Apps designen und funktional gestalten.',
           imageUrl:
             'https://images.unsplash.com/photo-1551650975-87deedd944c3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80',
-          alt: 'Bilder einer App',
+          imageAlt: 'Bilder einer App',
         },
         {
           text: 'Du kannst native Funktionen von Smartphones nutzen, um zum Beispiel Kamera-, Audio- oder GPS-Sensoren einzubinden.',
@@ -187,7 +187,7 @@ export class MilestoneComponent implements OnInit {
           text: 'Du hast gelernt, wie man Apps hybrid entwickelt und sowohl für Android als auch für IOS konzipiert.',
           imageUrl:
             'https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1192&q=80',
-          alt: 'Bild von zwei Smartphones',
+          imageAlt: 'Bild von zwei Smartphones',
         },
       ],
     },
@@ -207,12 +207,12 @@ export class MilestoneComponent implements OnInit {
           text: 'Du kannst jetzt Datenbanken an dein Frontend anbinden, um Daten abzuspeichern und zu analysieren.',
           imageUrl:
             'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-          alt: 'Bild einer Analyse-Webseite',
+          imageAlt: 'Bild einer Analyse-Webseite',
         },
         {
           text: 'Du hast gelernt, wie man moderne vollwertige Webapplikationen mit eigener Serverarchitektur wie die Big Player      entwickelt.',
           imageUrl: 'https://cdn.pixabay.com/photo/2015/12/11/09/30/mobile-phone-1087845_960_720.jpg',
-          alt: 'Bild mit mehreren Logos bekannter Unternehmen',
+          imageAlt: 'Bild mit mehreren Logos bekannter Unternehmen',
         },
       ],
     },

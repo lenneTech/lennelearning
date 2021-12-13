@@ -17,19 +17,19 @@ export class CompanyPageComponent implements OnInit {
       title: 'Vorbereitung',
       text: 'Im Rahmen der Akademie bereiten wir deine Kandidaten optimal auf ihr Praktikum oder den direkten Einstieg ins Team vor, sodass sie dich schnellstmöglich bei deinen Projekten unterstützen können.',
       imageUrl: '../../assets/images/explanation-images/academy.svg',
-      alt: 'Bild von einem Menschen der auf Büchern steht.',
+      imageAlt: 'Bild von einem Menschen der auf Büchern steht.',
     },
     {
       title: 'Evaluation',
       text: 'Durch die persönliche Betreuung und die wöchentlichen Meetings können wir den Lernstand der Akademie Teilnehmer gut einschätzen und evaluieren, inwiefern sich ein Kandidat für dein Unternehmen eignet.',
       imageUrl: '../../assets/images/explanation-images/strategy.svg',
-      alt: 'Bild von zwei diskutierenden Menschen.',
+      imageAlt: 'Bild von zwei diskutierenden Menschen.',
     },
     {
       title: 'Übernahme',
       text: 'Auch nach der Übernahme in dein Unternehmen können die Absolventen Teil der Community bleiben und unsere Akademie nutzen. Wir bleiben gerne in Kontakt und unterstützen euch bei euren Projekten.',
       imageUrl: '../../assets/images/explanation-images/community.svg',
-      alt: 'Bild von Menschen die Blöcke in einem Smartphone aufbauen.',
+      imageAlt: 'Bild von Menschen die Blöcke in einem Smartphone aufbauen.',
     },
   ];
   features: TextImageInterface[] = [
