@@ -72,6 +72,12 @@ export class TaskComponent implements OnInit {
     this.dialogService.openHelperDialog('Hilfe', this.hint, this.videoReference, this.solutionLink);
   }
 
+  openSolution(): void {
+    const task = `${window.location.href.split('#')[0]}#${this.id}`;
+
+    this.dialogService.openSolutionDialog('Lösung', this.solutionLink, task, this.id, this.section);
+  }
+
   showMilestoneBtn(): void {
     this.sectionService.setCurrentMileStone(this.section);
   }

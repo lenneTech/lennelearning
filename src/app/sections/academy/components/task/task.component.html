@@ -15,6 +15,7 @@
           title="Link zur Aufgabe kopieren"
         >
         </i>
+        <i class="bi bi-lightbulb cursor-pointer p-1" *ngIf="solutionLink && !completed" (click)="openSolution()"></i>
         <i
           *ngIf="(hint || videoReference || solutionLink) && !completed"
           class="bi bi-question-circle cursor-pointer p-1"
