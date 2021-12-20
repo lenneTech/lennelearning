@@ -5,7 +5,6 @@ export const environment = {
   apiUrl: '',
   matomoConfig: {},
   appUrl: 'http://localhost:4200/',
-  webHook: 'https://hooks.slack.com/services/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',
 };
 
 /*

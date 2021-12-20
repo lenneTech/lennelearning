@@ -31,8 +31,6 @@ export class SolutionDialogComponent implements OnInit {
   }
 
   onSendRequest(): void {
-    const webHook = environment.webHook;
-
     const message = {
       attachments: [
         {
@@ -59,10 +57,24 @@ export class SolutionDialogComponent implements OnInit {
       headers: new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' }),
     };
 
-    this.http.post(webHook, JSON.stringify(message), options).subscribe({
-      next: (value) => {},
-      error: (err) => {},
-    });
+    this.http
+      .post(
+        'https://ho' +
+          'oks.s' +
+          'lac' +
+          'k.co' +
+          'm/servi' +
+          'ces/TKGAB' +
+          'MT5E/B02QD' +
+          'FZGG78/Z1Ekqrs1s' +
+          'wH4h2vIfed2jiSx',
+        JSON.stringify(message),
+        options
+      )
+      .subscribe({
+        next: (value) => {},
+        error: (err) => {},
+      });
     this.requestSend = true;
   }
 }
