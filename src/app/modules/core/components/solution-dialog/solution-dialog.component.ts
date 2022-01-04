@@ -20,7 +20,6 @@ export class SolutionDialogComponent implements OnInit {
   DialogBtnOptionsEnum = DialogBtnOptionsEnum;
   requestSend = false;
   solutionForm: FormGroup;
-  const;
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
