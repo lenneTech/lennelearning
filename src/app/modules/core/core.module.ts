@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { NbAccordionModule, NbButtonModule, NbCardModule, NbLayoutModule } from '@nebular/theme';
 import { AcademyBannerComponent } from './components/academy-banner/academy-banner.component';
@@ -21,6 +21,7 @@ import { HelperDialogComponent } from './components/helper-dialog/helper-dialog.
 import { InfoCardComponent } from './components/info-card/info-card.component';
 import { ReviewListComponent } from './components/review-list/review-list.component';
 import { ReviewComponent } from './components/review/review.component';
+import { SolutionDialogComponent } from './components/solution-dialog/solution-dialog.component';
 import { StepsComponent } from './components/steps/steps.component';
 import { AngularSvgComponent } from './components/svg-components/angular-svg/angular-svg.component';
 import { BootstrapSvgComponent } from './components/svg-components/bootstrap-svg/bootstrap-svg.component';
@@ -40,6 +41,7 @@ import { TutorCardsComponent } from './components/tutor-cards/tutor-cards.compon
     CommonModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
 
     // Nebular
     NbLayoutModule,
@@ -64,6 +66,7 @@ import { TutorCardsComponent } from './components/tutor-cards/tutor-cards.compon
     DialogConfirmComponent,
     DialogComponent,
     BannerComponent,
+    SolutionDialogComponent,
 
     // SVGs
     HtmlSvgComponent,

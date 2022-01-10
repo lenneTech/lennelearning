@@ -4,6 +4,7 @@ import { NbDialogService } from '@nebular/theme';
 import { DialogConfirmComponent } from '../components/dialog-confirm/dialog-confirm.component';
 import { DialogComponent } from '../components/dialog/dialog.component';
 import { HelperDialogComponent } from '../components/helper-dialog/helper-dialog.component';
+import { SolutionDialogComponent } from '../components/solution-dialog/solution-dialog.component';
 import { EntryPointService } from './entry-point.service';
 
 @Injectable({
@@ -36,6 +37,26 @@ export class DialogService {
     instance.solutionLink = solutionLink;
     instance.cardWidth = width;
     instance.cardHeight = height;
+  }
+
+  openSolutionDialog(
+    title: string,
+    solutionLink: string,
+    task: string,
+    id: string,
+    section: string,
+    width?: string,
+    height?: string
+  ): void {
+    const dialog = this.nbDialogService.open(SolutionDialogComponent, { closeOnBackdropClick: true });
+    const instance = dialog.componentRef.instance;
+    instance.title = title;
+    instance.solutionLink = solutionLink;
+    instance.cardWidth = width;
+    instance.cardHeight = height;
+    instance.task = task;
+    instance.id = id;
+    instance.section = section;
   }
 
   openConfirmDialog() {

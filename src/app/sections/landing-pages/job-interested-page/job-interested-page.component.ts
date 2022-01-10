@@ -17,19 +17,19 @@ export class JobInterestedPageComponent implements OnInit {
       title: 'Berufsalltag',
       text: 'Erlebe den Berufsalltag in der Softwareentwicklung in Aktion. Komm für ein kurzes Praktikum vorbei und schau dir an, wie Softwareentwickler, Designer und Projektleiter an Webanwendungen arbeiten.',
       imageUrl: '../../assets/images/explanation-images/explore.svg',
-      alt: 'Bild von zwei Menschen, die die Natur erkunden.',
+      imageAlt: 'Bild von zwei Menschen, die die Natur erkunden.',
     },
     {
       title: 'Technologien',
       text: 'Bekomme einen Einblick in den Grundlagen der modernen Webentwicklung und entwickle mit HTML und CSS schon deine eigene kleine Website.',
       imageUrl: '../../assets/images/explanation-images/discovery.svg',
-      alt: 'Bild von zwei Menschen mit Laborwerkzeug.',
+      imageAlt: 'Bild von zwei Menschen mit Laborwerkzeug.',
     },
     {
       title: 'Projekte',
       text: 'Wir zeigen dir, an welchen Projekten wir aktuell arbeiten und wie kooperative Zusammenarbeit bei uns aussieht.',
       imageUrl: '../../assets/images/explanation-images/build_product.svg',
-      alt: 'Bild von Menschen die einen Turm aus Bausteinen bauen.',
+      imageAlt: 'Bild von Menschen die einen Turm aus Bausteinen bauen.',
     },
   ];
   constructor(private metaService: MetaService) {}

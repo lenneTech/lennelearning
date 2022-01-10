@@ -4,7 +4,7 @@ export interface TextImageInterface {
   subtitle?: string;
   contact?: string;
   imageUrl?: string;
-  alt?: string;
+  imageAlt?: string;
   iconClass?: string;
   reference?: string;
 }
