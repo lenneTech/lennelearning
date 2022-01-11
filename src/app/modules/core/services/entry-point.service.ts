@@ -31,6 +31,7 @@ export class EntryPointService {
         'javascript',
         'git-experte',
         'typescript',
+        'prototyping',
         'angular',
         'ionic',
         'docker-basics',

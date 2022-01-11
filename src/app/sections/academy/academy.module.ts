@@ -53,6 +53,7 @@ import { JavascriptComponent } from './sections/javascript/javascript.component'
 import { JobComponent } from './sections/job/job.component';
 import { NestjsComponent } from './sections/nestjs/nestjs.component';
 import { PackagesComponent } from './sections/packages/packages.component';
+import { PrototypingComponent } from './sections/prototyping/prototyping.component';
 import { TypescriptComponent } from './sections/typescript/typescript.component';
 
 export function playerFactory() {
@@ -73,6 +74,7 @@ export function playerFactory() {
     JavascriptComponent,
     TypescriptComponent,
     GitExpertComponent,
+    PrototypingComponent,
     AngularComponent,
     IonicComponent,
     NestjsComponent,
