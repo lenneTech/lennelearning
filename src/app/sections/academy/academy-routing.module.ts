@@ -18,6 +18,7 @@ import { PackagesComponent } from './sections/packages/packages.component';
 import { DesignComponent } from './sections/design/design.component';
 import { CypressComponent } from './sections/cypress/cypress.component';
 import { DockerBasicsComponent } from './sections/docker-basics/docker-basics.component';
+import { PrototypingComponent } from './sections/prototyping/prototyping.component';
 
 // ####################################################################
 // If you got a new section, add it to the routes-array like the others
@@ -74,6 +75,12 @@ const routes: Routes = [
         component: GitExpertComponent,
         canActivate: [SectionGuard],
         data: { matomoTitle: 'Git Experte' },
+      },
+      {
+        path: 'prototyping',
+        component: PrototypingComponent,
+        canActivate: [SectionGuard],
+        data: { matomoTitle: 'Prototyping' },
       },
       {
         path: 'angular',

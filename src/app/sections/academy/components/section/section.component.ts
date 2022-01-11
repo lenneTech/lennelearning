@@ -72,6 +72,9 @@ export class SectionComponent implements OnInit, AfterViewInit {
       ],
     },
     {
+      prototyping: [],
+    },
+    {
       angular: [
         { title: 'Angular Docs', url: 'https://angular.io/docs' },
         { title: 'ngBootstrap', url: 'https://ng-bootstrap.github.io/#/getting-started' },
@@ -143,6 +146,7 @@ export class SectionComponent implements OnInit, AfterViewInit {
         { url: 'https://training.github.com/downloads/github-git-cheat-sheet.pdf' },
       ],
     },
+    { prototyping: [] },
     { angular: [{ url: 'https://angular.io/guide/cheatsheet' }] },
     { ionic: [] },
     { 'docker-basics': [] },
