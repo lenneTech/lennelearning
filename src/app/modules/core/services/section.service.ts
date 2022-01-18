@@ -22,6 +22,7 @@ export class SectionService {
     'javascript',
     'git-experte',
     'typescript',
+    'prototyping',
     'angular',
     'ionic',
     'nestjs',
