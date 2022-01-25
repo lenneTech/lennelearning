@@ -27,6 +27,35 @@
   </task>
 
   <task id="task-2" section="angular">
+    <div title>Testen</div>
+    <task-text>
+      <div info>
+        Damit ein Projekt nach der Vollendung fehlerfrei funktionieren kann, muss es immer mal wieder getestet werden.
+        Das ist nicht nur in unserem Fall bei der Webentwicklung so, sondern das findet man auch überall anders wieder.
+        Wir unterteilen diese Tests in 3 Kategorien. <br />
+        Kurz gesagt unterscheiden sie sich wie folgt:
+        <div infolist>Level 1: Das Testen durch einen selbst.</div>
+        <div infolist>Level 2: Das Testen durch eine Person, die sich mit dem technischen Kontext auskennt.</div>
+        <div infolist>Level 3: Das Testen durch eine Person, die keine Ahnung vom Kontext oder der Technik hat.</div>
+      </div>
+      <div info>
+        Je höher das Level des bestandenen Tests, desto besser ist die Funktionsfähigkeit und Usability
+        (Nutzerfreundlichkeit) des Projekts. Da du bei Level 1 nur dich selbst als Testperson benötigst, ist dies die
+        leichteste Art zu testen. Mit dieser fangen wir auch nun an: <br />
+        Während deines Projekts solltest du immer mal wieder die Funktionalität deiner Anwendung testen. Dazu kannst du
+        einfach ein alltägliches Nutzungsverhalten mit deiner Software nachspielen. Klicke also auf die Knöpfe, log dich
+        ein, gib ein falsches Passwort ein usw., um zu testen, ob alles funktioniert. Für die zwei anderen Arten von
+        Tests kannst du dir schon einmal Personen überlegen, die dafür geeignet sind. <br />
+        Bei Level 2 könntest du jetzt schon zum Beispiel einen Tutor wissen lassen, dass du bald mit ihm einen Level 2
+        Test durchführen möchtest. <br />
+        Bei Level 3 kannst du in deiner Familie oder in deinem Freundeskreis eine Person fragen, die das in kommender
+        Zeit machen möchte. Vielleicht hast du ja auch einen Ansprechpartner im beruflichen Umfeld, welcher sich bereit
+        erklärt.
+      </div>
+    </task-text>
+  </task>
+
+  <task id="task-3" section="angular">
     <div title>Video</div>
     <div description>
       Nach jedem Abschnitt (Course Project - Abschnitt) überlegst du dir, ob etwas davon in dein Projekt passt und setzt
@@ -61,7 +90,7 @@
     </task-video>
   </task>
 
-  <task id="task-3" section="angular">
+  <task id="task-4" section="angular">
     <div title>Lennetaler</div>
 
     <task-text>
@@ -100,12 +129,59 @@
     </task-text>
   </task>
 
-  <task id="task-4" section="angular">
+  <task id="task-5" section="angular">
+    <div title>Level 2 Test</div>
+    <task-text>
+      <div exercise>
+        Nun ist es an der Zeit, deine Anwendung einen anspruchsvolleren Test durchlaufen zu lassen. Hierzu kannst du
+        einen Tutor anschreiben. Er wird mit dir gemeinsam die Funktionen der Software austesten, zusätzlich aber auch
+        in den Code schauen und auf Fehlersuche gehen. Dadurch wird dein Projekt verbessert und du lernst noch was dazu.
+      </div>
+    </task-text>
+  </task>
+
+  <task id="task-6" section="angular">
+    <div title>Level 3 Test</div>
+    <task-text>
+      <div exercise>
+        Um dein Projekt komplett auf Herz und Nieren überprüfen zu können, musst du es eine Person testen lassen, für
+        welche das Projekt fremd ist und keineen technischen Hintergrund zum Projekt hat. Dadurch werden Fehler
+        auffallen, die eher selten auftreten oder dir erst später aufgefallen wären. Diese kannst du dann beheben.
+        Außerdem wird dadurch die Usability, also die Nutzerfreundlichkeit deiner Webanwendung, deutlich. Wenn die
+        Testperson ohne Probleme von einem Punkt zum anderen navigieren kann und die Funktionen, die deine Software
+        bietet, sofort nutzen kann, ist dein Projekt auf einem sehr guten Niveau und könnte für einen Kunden finalisiert
+        werden.
+      </div>
+    </task-text>
+  </task>
+
+  <task id="task-7" section="angular">
     <div title>Zusammenfassung</div>
     <div description>
-      Du bist nun am Ende dieser Sektion angekommen. Hier noch eine kleine Zusammenfassung von all dem, was du in der
-      letzten Zeit gelernt hast.
+      Über Angular hast du nun alles kennengelernt, was man wissen sollte. Hier noch eine kleine Zusammenfassung von all
+      dem, was du in der letzten Zeit gelernt hast.
     </div>
     <task-video [youtubelink]="'https://www.youtube.com/embed/Ata9cSC2WpM'"> </task-video>
+  </task>
+
+  <task id="task-8" section="angular">
+    <div title>Linting</div>
+    <task-text>
+      <div info>
+        Innerhalb deines Codes können sich Fehler einschleichen, die sehr unscheinbar sind und die manchmal auch dein
+        Code Editor nicht erkennt. Gerade je größer dein Projekt wird, desto häufiger treten solche Fehler auf. Mithilfe
+        von Lintingverfahren können solche Probleme beseitigt werden. <br />
+        Unter Linting versteht man das Analysieren von Code, um potenzielle Fehler zu finden. Das können
+        HTML-Syntaxfehler bis hin zu Namings für Angular-Componenten sein. ESLint ist eines der Tools, mit dem so eine
+        Analyse vollzogen werden kann. In unseren Projekten wird das Linting mit dem Committen (<a
+          href="lernpfad/git-basics#task-1"
+          pageLink
+          >Git</a
+        >) gekoppelt. Somit kommt nur „fehlerfreier“ Code in das Projekt hinzu (im Bezug zur Syntax - ungewolltes
+        Verhalten des Systems kann man hiermit nicht überprüfen - dafür gibt es aber auch Lösungen - siehe
+        <a href="lernpfad/angular#task-2" pageLink>lvl 1/2/3-Tests</a> ). Für mehr Informationen dazu ist die
+        <a href="https://eslint.org/docs/user-guide/getting-started" taskLink>Dokumentation von ESLint</a> zu empfehlen.
+      </div>
+    </task-text>
   </task>
 </section>
