@@ -4,8 +4,34 @@
   [seoDescription]="'Lerne Package Handling mithilfe der ltakademie.'"
   [seoKeywords]="'packages, npm, nodejs, academy, online, learning, platform, akademie'"
 >
+  <task id="task-1" section="packages">
+    <div title>Einführung</div>
+    <task-text>
+      <div info>
+        Es gibt viele Webentwickler da draußen und dementsprechend gibt es viele Zeilen Code, die fast jeder Entwickler
+        in irgendeiner Form in seinen Projekten verwendet. Diese Grundbausteine oder Bausätze gibt es in Form von
+        Paketen (Packages) zur freien Verfügung. Mit diesen kannst du komplexeren Code in wenigen Zeilen vereinfacht
+        schreiben und das Package übernimmt die restliche Arbeit. Dies bringt einige Vorteile mit sich, hat aber auch
+        ein paar Nachteile:
+        <div infolist>
+          Du weißt nicht, wie sicher ein Package von einer fremden Person/Organisation ist. Wenn sie mit anderen
+          Schnittstellen arbeiten, können Sicherheitslücken entstehen, die auf den ersten Blick nicht erkennbar sind.
+        </div>
+        <div infolist>Die Performance kann unter Packages leiden, je nach dem, wie gut sie optimiert sind.</div>
+        <div infolist>
+          Packages können schnell veralten und wenn sie nicht vom Anbieter des Paketes geupdated werden, können dort
+          Fehler auftreten.
+        </div>
+      </div>
+      <div info>
+        Wenn du aber ungefähr weißt, wie du gute Pakete findest und sie von eher schlechteren unterscheiden kannst,
+        bringen Pakete deutlich mehr Vorteile. In diesem Abschnitt zeigen wir dir, wie du Pakete evaluieren kannst.
+      </div>
+    </task-text>
+  </task>
+
   <task
-    id="task-1"
+    id="task-2"
     section="packages"
     [image]="{
       url: '../../assets/images/academy-images/packages.png',
@@ -18,23 +44,53 @@
       <div info>
         Bei dem Einbeziehen von Packages musst du ein paar Sachen beachten, um die richtigen Pakete auszuwählen und die
         Performance deiner Anwendung nicht unnötig zu belasten.
+
+        <div infolist>
+          Beliebtheit auf npm - anhand der Anzahl der Downloads im letzten Monat oder der letzten Woche
+        </div>
+        <div infolist>Release Datum - je aktueller desto besser</div>
+        <div infolist>Anzahl der Releases - je häufiger geupdated wird desto besser</div>
+        <div infolist>
+          Tests - man kann überprüfen, inwiefern Tests eingebaut sind. Dabei sind Pakete, die durch Tests geprüft sind,
+          meistens weniger anfällig gegenüber Bugs als Pakete ohne Test.
+        </div>
+        <div infolist>Anzahl der offenen bzw. ungelösten Issues - je weniger desto besser</div>
+        <div infolist>Beliebtheit auf GitHub - Je mehr Sterne, Forks und Watches desto besser</div>
+        <div infolist>Anzahl der Contributors - Je mehr Leute am Code arbeiten, desto mehr Fehler fallen auf</div>
+        <div infolist>
+          Anzahl der Abhängigkeiten - Je weniger Abhängigkeiten das Paket von kleineren Paketen hat, desto besser
+        </div>
       </div>
-      <div infolist>Beliebtheit auf npm - anhand der Anzahl der Downloads</div>
-      <div infolist>Release Datum - je aktueller desto besser</div>
-      <div infolist>Anzahl der Releases - je häufiger geupdated wird desto besser</div>
-      <div infolist>
-        Tests - man kann überprüfen, inwiefern Tests eingebaut sind. Dabei sind Pakete, die durch Tests geprüft sind,
-        meistens weniger Buganfällig als Pakete ohne Test.
-      </div>
-      <div infolist>Anzahl der offenen bzw. ungelösten Issues - je weniger desto besser</div>
-      <div infolist>Beliebtheit auf GitHub - Je mehr Sterne, Forks und Watches desto besser</div>
-      <div infolist>Anzahl der Contributors - Je mehr Leute am Code arbeiten, desto mehr Fehler fallen auf</div>
-      <div infolist>
+      <div info>
         Am Beispiel von ng-bootstrap (siehe rechts) fällt auf, dass die Issues recht hoch ausfallen. Beim genaueren
-        betrachten der Issues bei GitHub sieht man jedoch auch, dass schon knapp 2000 Issues behandelt wur.
+        betrachten der Issues bei GitHub sieht man jedoch auch, dass schon knapp 2000 Issues behandelt wurden.
         Dementsprechend wird an dem Paket durchgängig weitergearbeitet und auf Probleme eingegangen. Also sollte man bei
         solchen Fällen bei den GitHub Issues genauer hinsehen, um einschätzen zu können, inwiefern die Entwickler auf
         neue Probleme eingehen.
+      </div>
+    </task-text>
+  </task>
+  <task id="task-3" section="packages">
+    <div title>Aufgabe</div>
+    <task-text>
+      <div exercise>
+        Binde ein Paket deiner Wahl in dein erstelltes Angularprojekt ein. Gehe dafür auf
+        <a href="npmjs.com" taskLink>npmjs</a> und suche nach einem Paket, welches dein Projekt verbessern oder
+        erweitern kann. Du kannst auch einen Tutor fragen, ob er dir ein Paket für deinen Kontext empfehlen kann.
+      </div>
+    </task-text>
+  </task>
+
+  <task id="task-4" section="packages">
+    <div title>Stay updated!</div>
+    <task-text>
+      <div info>
+        Bei einem Paket, welches zum jetzigen Zeitpunkt gut gewählt ist, kann schon in ein paar Monaten die Entwicklung
+        eingestellt werden. So etwas gilt stets überprüft zu werden. Das gilt auch für regelmäßige Updates des
+        jeweiligen Paketes. Daher solltest du immer mal wieder deine Pakete auf den aktuellsten Stand bringen und
+        überprüfen, ob sie immer noch die richtige Wahl für dein Projekt sind. Eine Möglichkeit, diese Überprüfung
+        umzusetzen, ist die Nutzung entsprechender Dependency-Manager. Ein Beispiel hierfür ist
+        <a href="https://www.npmjs.com/package/depcheck" taskLink>depcheck</a>.
       </div>
     </task-text>
   </task>
