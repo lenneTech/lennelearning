@@ -112,4 +112,78 @@
     </div>
     <task-video [youtubelink]="'https://www.youtube.com/embed/TIkZiaupFCY'"></task-video>
   </task>
+  <task id="task-6" section="git-experte">
+    <div title>Arbeiten als Team</div>
+    <div description>
+      Wenn du in einem Unternehmen arbeitest oder arbeiten willst, bist du im Normalfall Teil eines Teams. In jedem
+      Projekt werden verschiedene Teams benötigt, die diverse Arbeiten am Projekt erledigen. Aus diesem Grund ist es
+      wichtig, sich ein paar Dinge bewusst zu machen.
+    </div>
+  </task>
+  <task id="task-7" section="git-experte">
+    <div title>Workflow</div>
+    <div description>
+      Meist existiert ein vordefinierter Workflow in einem Betrieb. Anhand des gegebenen Workflows sieht man sehr
+      deutlich wie verschiedene Teams miteinander arbeiten sollen. Hier ist es wichtig sich bewusst zu machen, dass
+      nicht nur Entwickler an einem Projekt arbeiten. Ein Projekt geht von der Konzeption übers Design bis zur
+      Umsetzung. Das Team rund ums Design ist vermutlich nicht versiert mit dem Coding und das Team rund ums Coding
+      nicht mit dem Design. Genau deshalb ist es wichtig, dass man nach einem klaren Workflow agiert und sich an
+      vordefinierte Regeln hält. Am verlinkten Beispiel schlüsseln wir exemplarisch einen Workflow auf. <br /><br />
+      <a href="../assets/images/academy-images/workflow.png" taskLink>Link zur Abbildung eines Workflows</a>
+    </div>
+    <task-text>
+      <div exercise></div>
+      <div exerciselist>
+        Im Backlog werden die Ideen und Anforderungen gesammelt. Diese werden sortiert und priorisiert.
+      </div>
+      <div exerciselist>
+        In der Konzeption werden die Tickets für die Weiterbearbeitung konkretisiert. Abläufe, Datenbankmodelle und co
+        wird spezifiziert.
+      </div>
+      <div exerciselist>
+        Ist für ein Ticket ein Design nötig, werden im Schritt Design die UX/UI-Vorlagen erstellt. Diese werden mithilfe
+        eines Clickdummies auf Vollständigkeit geprüft und vom Kunden abgenommen.
+      </div>
+      <div exerciselist>
+        Im Schritt Development werden die Konzeption und die Design-Vorlage programmiertechnisch umgesetzt. Nicht zu
+        vergessen sind hier Level 2 Tests. Außerdem werden Lanting-Regeln, Unit-Tests und e2e-Tests erstellt.
+      </div>
+      <div exerciselist>Im Enduser-Test findet der Level 3 Test statt.</div>
+      <div exerciselist>
+        Abhängig vom Ergebnis des Level 3 Tests landet das Ticket in der Review oder wird rückschrittig verlagert.
+      </div>
+      <div exerciselist>In der Review findet eine finale Abnahme des Tickets statt.</div>
+      <div exerciselist>
+        Alle freigebenden Features landen in der Bereitstellung und werden Teil des nächsten Release sein.
+      </div>
+    </task-text>
+  </task>
+  <task id="task-8" section="git-experte">
+    <div title>Schnittstellen</div>
+    <div description>
+      Wenn man nach einem solchen <a href="../assets/images/academy-images/workflow.png" taskLink>Workflow</a> arbeitet
+      befinden sich zwischen den Schritten immer Übergangsschritte. Zum Design geht es nur über den Schritt ToDesign,
+      zur Review nur über den Schritt ToReview, etc. An solchen Übergangsschritten entstehen Schnittstellen zwischen den
+      einzelnen Teams. Entsprechend liegen besonders an diesen Schritten viele Fehlerquellen und potentielle
+      Prozessoptimierungen. Ergo ist hier besondere Sorgfalt geboten.
+    </div>
+    <task-text>
+      <div excercise></div>
+      <div exerciselist>
+        So wird beispielsweise im Schritt ToDesign das vollumfängliche Ticket mit Beschreibungen, Skizzen, Beispielen,
+        Hinweisen zu anderen Tickets für die weitere Verarbeitung als PDF hinterlegt. Tickets werden erst zum
+        Design-Team weitergegeben, wenn diese freigegeben wurden.
+      </div>
+      <div exerciselist>
+        Im Schritt ToDevelop liegen nun zusätzlich die abgenommenen Designvorlagen und der Clickdummy vor. Diese werden
+        an die Entwickler übergeben, sodass diese direkt alle Designs und wichtigen Abläufe entnehmen können. Auch zu
+        verwenden Bilder und Icons sollen direkt zur Verfügung stehen.
+      </div>
+      <div exerciselist>
+        Wie genau diese Schritte definiert sind hängt immer davon ab, wie ein Workflow und dessen Regeln definiert sind.
+        Es ist allerdings in jedem Fall wichtig, dass man sich an eben jenen hält, damit ein effizientes Arbeiten im
+        Team möglich ist.
+      </div>
+    </task-text></task
+  >
 </section>
