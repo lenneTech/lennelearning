@@ -40,6 +40,7 @@ import { TitleDirective } from './directives/title.directive';
 import { VideoListDirective } from './directives/video-list.directive';
 import { VideoPipe } from './pipes/video.pipe';
 import { AngularComponent } from './sections/angular/angular.component';
+import { AutomatedTestsComponent } from './sections/automated-tests/automated-tests.component';
 import { BootstrapComponent } from './sections/bootstrap/bootstrap.component';
 import { CssComponent } from './sections/css/css.component';
 import { CypressComponent } from './sections/cypress/cypress.component';
@@ -82,6 +83,7 @@ export function playerFactory() {
     PackagesComponent,
     DesignComponent,
     CypressComponent,
+    AutomatedTestsComponent,
     DockerBasicsComponent,
 
     // Components

@@ -19,6 +19,7 @@ import { DesignComponent } from './sections/design/design.component';
 import { CypressComponent } from './sections/cypress/cypress.component';
 import { DockerBasicsComponent } from './sections/docker-basics/docker-basics.component';
 import { PrototypingComponent } from './sections/prototyping/prototyping.component';
+import { AutomatedTestsComponent } from './sections/automated-tests/automated-tests.component';
 
 // ####################################################################
 // If you got a new section, add it to the routes-array like the others
@@ -123,6 +124,12 @@ const routes: Routes = [
         component: CypressComponent,
         canActivate: [SectionGuard],
         data: { matomoTitle: 'Cypress' },
+      },
+      {
+        path: 'automatisierte-tests',
+        component: AutomatedTestsComponent,
+        canActivate: [SectionGuard],
+        data: { matomoTitle: 'Automatisierte Tests' },
       },
       {
         path: 'meilenstein/:id',

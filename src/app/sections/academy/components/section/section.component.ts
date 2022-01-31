@@ -120,6 +120,9 @@ export class SectionComponent implements OnInit, AfterViewInit {
         },
       ],
     },
+    {
+      'automatisierte-tests': [],
+    },
   ];
   cheatSheet = [
     { beruf: [] },
@@ -154,6 +157,7 @@ export class SectionComponent implements OnInit, AfterViewInit {
     { packages: [] },
     { design: [] },
     { cypress: [] },
+    { 'automatisierte-tests': [] },
   ];
   linkList;
   cheatSheetList;

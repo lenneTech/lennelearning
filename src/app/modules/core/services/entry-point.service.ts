@@ -39,6 +39,7 @@ export class EntryPointService {
         'nestjs',
         'design',
         'cypress',
+        'automatisierte-tests',
       ],
     },
     {
@@ -96,6 +97,7 @@ export class EntryPointService {
         'nestjs',
         'design',
         'cypress',
+        'automatisierte-tests',
       ],
     },
     {
@@ -117,6 +119,7 @@ export class EntryPointService {
         'ionic',
         'design',
         'cypress',
+        'automatisierte-tests',
       ],
     },
     {
