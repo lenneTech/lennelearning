@@ -8,9 +8,9 @@ import { MetaService } from 'src/app/modules/core/services/meta.service';
   styleUrls: ['./start.component.scss'],
 })
 export class StartComponent {
-  title = 'Willkommen in der lenne.Tech Akademie';
+  title = 'Willkommen bei lenne.Learning!';
   subtitle =
-    'Wir bieten Lernangebote für Webinteressierte, Schüler, Studenten bis hin zu Berufserfahrenen.\n Wir bringen dich von 0 auf 100, du benötigst kein Vorwissen!\n Such dir den Lernpfad aus, der am besten zu dir passt.';
+    'In unserer ganzheitlichen Akademie für Softwareentwicklung bieten wir Lernangebote aus den Bereichen Konzeption, Design und Entwicklung für Webinteressierte, Schüler, Studenten bis hin zu Berufserfahrenen.\n Wir bringen dich von 0 auf 100, du benötigst kein Vorwissen!\n Such dir den Lernpfad aus, der am besten zu dir passt.';
   imageUrl = '../../assets/images/banner-images/start-banner.svg';
   landingPages = [
     {
