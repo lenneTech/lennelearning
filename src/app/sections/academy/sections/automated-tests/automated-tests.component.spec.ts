@@ -1,22 +1,22 @@
-/* eslint-disable no-unused-vars, @typescript-eslint/no-unused-vars */
+/* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { CypressComponent } from './cypress.component';
+import { AutomatedTestsComponent } from './automated-tests.component';
 
-describe('CypressComponent', () => {
-  let component: CypressComponent;
-  let fixture: ComponentFixture<CypressComponent>;
+describe('AutomatedTestsComponent', () => {
+  let component: AutomatedTestsComponent;
+  let fixture: ComponentFixture<AutomatedTestsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [CypressComponent],
+      declarations: [AutomatedTestsComponent],
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CypressComponent);
+    fixture = TestBed.createComponent(AutomatedTestsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

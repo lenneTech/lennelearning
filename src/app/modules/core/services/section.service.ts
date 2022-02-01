@@ -29,7 +29,7 @@ export class SectionService {
     'nestjs',
     'packages',
     'design',
-    'cypress',
+    'automatisierte-tests',
     'docker-basics',
   ];
   private _currentSectionMenuItems: BehaviorSubject<NbMenuItem[]> = new BehaviorSubject<NbMenuItem[]>(null);

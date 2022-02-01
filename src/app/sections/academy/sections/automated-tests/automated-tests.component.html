@@ -1,0 +1,115 @@
+<section
+  [pageTitle]="'Automatisierte Tests'"
+  [seoTitle]="'ltacademy - Automatisierte Tests'"
+  [seoDescription]="'Lerne automatisierte Tests mithilfe der ltacademy.'"
+  [seoKeywords]="'automatisierte Tests, academy, online, learning, platform'"
+>
+  <task
+    id="task-1"
+    section="automatisierte-tests"
+    [image]="{
+      url: '../../assets/images/academy-images/error.svg',
+      alt: 'Illustration einer Frau, die vor einem explodierenden Laptop steht'
+    }"
+  >
+    <div title>Inhalt</div>
+
+    <task-text>
+      <div info>
+        Wie man seine Projekte testen kann, hast du schon gelernt. Es gibt Level 1,2,3 Tests, die dein Projekt soweit
+        prüfen, dass es so gut wie fehlerfrei fertiggestellt werden kann. Im Bereich des Level 1 Tests gibt es aber eine
+        effizientere Alternative: das automatisierte Testen. <br />
+        Projekte, egal mit welchem Framework, werden mit der Zeit größer und damit komplexer und unübersichtlicher. Im
+        Regelfall testet man auch nur die Sektionen der Anwendung, die man unmittelbar vorher bearbeitet hat. Wenn diese
+        funktionieren, kann es aber dazu kommen, dass andere Teile des Systems nicht mehr funktionsfähig sind. Das fällt
+        dann erst viel zu spät auf und man ist sich unsicher, an welcher Stelle sich dieser Fehler eingeschlichen hat.
+        Um so einer Situation vorzubeugen, gibt es die Möglichkeit, Tests zu schreiben, die den Großteil der Applikation
+        abdecken und somit Fehler aufdecken können. Wie das geht, lernst du jetzt!
+      </div>
+    </task-text>
+  </task>
+
+  <task id="task-2" section="automatisierte-tests">
+    <div title>Cypress</div>
+    <task-text>
+      <div info>
+        Mit Cypress können wir Use-Cases testen, z. B. das Einloggen auf die Website usw. Diese Tests können von ihrer
+        Komplexität variieren. Um genauer zu verstehen, was Cypress ausmacht und wie du es verwenden kannst, hier die
+        <a href="https://docs.cypress.io/guides/overview/why-cypress" taskLink>Dokumentation von Cypress</a>.
+      </div>
+    </task-text>
+  </task>
+
+  <task id="task-3" section="automatisierte-tests">
+    <div title>Video - Cypress</div>
+    <div description>In diesen Videos wird dir gezeigt, was mit Cypress möglich ist.</div>
+
+    <task-video [youtubelink]="'https://www.youtube.com/embed/7N63cMKosIE'"> </task-video>
+    <task-video [youtubelink]="'https://www.youtube.com/embed/Txir3jAooMI'"> </task-video>
+  </task>
+
+  <task id="task-4" section="automatisierte-tests">
+    <div title>Jest</div>
+    <task-text>
+      <div info>
+        Jest ist ein anderes Tool, um Tests an deiner Anwendung vorzunehmen. Es wirbt mit ihrer einfachen und
+        performanten Handhabung. Wie es funktioniert und wie du es in deine Software einbindest, findest du in der
+        <a href="https://jestjs.io/docs/getting-started" taskLink>Dokumentation von Jest</a>.
+      </div>
+    </task-text>
+  </task>
+
+  <task id="task-5" section="automatisierte-tests">
+    <div title>Video - Jest</div>
+    <div description>In diesen Videos wird dir gezeigt, was mit Jest möglich ist.</div>
+
+    <task-video [youtubelink]="'https://www.youtube.com/embed/FgnxcUQ5vho'"> </task-video>
+    <task-video [youtubelink]="'https://www.youtube.com/embed/Dt8RtykEglo'"> </task-video>
+  </task>
+
+  <task id="task-6" section="automatisierte-tests">
+    <div title>Projekt</div>
+
+    <task-text>
+      <div exercise>
+        Füge Cypress zu deinem eigenen Projekt hinzu und starte einen Testdurchlauf. Guck dir dafür die
+        <a href="https://docs.cypress.io/guides/getting-started/installing-cypress" taskLink
+          >Dokumentation von Cypress</a
+        >
+        an. Folgende Situationen könntest du z. B. testen, sofern sie in deiner Anwendung vorhanden sind:
+      </div>
+      <div exerciselist>Navigiere einmal komplett durch deine Anwendung</div>
+      <div exerciselist>
+        Versuche auf Seiten deines Systems zu gelangen, die nicht für alle zugänglich sind und überprüfe das Verhalten.
+      </div>
+      <div exerciselist>
+        Prüfe, ob der Login richtig funktioniert und was passiert, wenn falsche Daten angegeben werden.
+      </div>
+      <div exerciselist>Lege Inhalte an und speichere sie ab.</div>
+      <div exerciselist>Bearbeite Inhalte und lösche diese.</div>
+      <div exerciselist>
+        Log dich aus und versuche danach auf eine gesicherte Seite innerhalb deiner Anwendung zu navigieren.
+      </div>
+    </task-text>
+  </task>
+
+  <task id="task-7" section="automatisierte-tests">
+    <div title>Cypress vs. Jest</div>
+    <task-text>
+      <div info>
+        Du hast nun zwei Testing-Tools kennengelernt und fragst dich sicherlich, welches das richtige für deine
+        Anwendung ist. Das solltest du wissen: <br />
+        Jest wird zum unit-testing verwendet, während Cypress die End-to-End workflows (E2E) testet. In vielen
+        Situationen können beide Tools für den selben Test verwendet werden. Manche Tests beschränken sich auf kleine
+        Bereiche deiner Anwendung - z. B. Den login oder das hinzufügen eines Produkt in einen Warenkorb. Hier hat Jest
+        seine Vorteile, aufgrund des schnelleren Feedback-Loops. Bei einem Test, der viele Komponenten beinhaltet, kommt
+        Jest an seine Grenzen. Auf solche Tests ist Cypress ausgelegt. <br />
+        <br />
+        Die Antwort auf die Frage, welches Tool auf deinen Fall zutrifft, ist: Es kommt darauf an. Je komplexer der
+        Test, desto sinnvoller wird Cypress. Je simpler der Test, desto sinnvoller ist Jest. Da du vermutlich beide
+        Arten von Tests in deiner Anwendung hast, bietet es sich an, beide Tools zu verwenden und je nach Test-Art zu
+        entscheiden.
+      </div>
+    </task-text>
+  </task>
+</section>

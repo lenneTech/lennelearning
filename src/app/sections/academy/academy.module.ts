@@ -41,9 +41,9 @@ import { VideoListDirective } from './directives/video-list.directive';
 import { VideoPipe } from './pipes/video.pipe';
 import { AngularComponent } from './sections/angular/angular.component';
 import { ArbeitsmethodenComponent } from './sections/arbeitsmethoden/arbeitsmethoden.component';
+import { AutomatedTestsComponent } from './sections/automated-tests/automated-tests.component';
 import { BootstrapComponent } from './sections/bootstrap/bootstrap.component';
 import { CssComponent } from './sections/css/css.component';
-import { CypressComponent } from './sections/cypress/cypress.component';
 import { DesignComponent } from './sections/design/design.component';
 import { DockerBasicsComponent } from './sections/docker-basics/docker-basics.component';
 import { GitBasicsComponent } from './sections/git-basics/git-basics.component';
@@ -83,7 +83,7 @@ export function playerFactory() {
     MilestoneComponent,
     PackagesComponent,
     DesignComponent,
-    CypressComponent,
+    AutomatedTestsComponent,
     DockerBasicsComponent,
 
     // Components
