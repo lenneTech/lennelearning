@@ -12,13 +12,13 @@ import { SectionGuard } from '../../modules/core/guards/section.guard';
 import { BootstrapComponent } from './sections/bootstrap/bootstrap.component';
 import { NestjsComponent } from './sections/nestjs/nestjs.component';
 import { GitBasicsComponent } from './sections/git-basics/git-basics.component';
-import { GitExpertComponent } from './sections/git-expert/git-expert.component';
 import { MilestoneComponent } from './components/milestone/milestone.component';
 import { PackagesComponent } from './sections/packages/packages.component';
 import { DesignComponent } from './sections/design/design.component';
 import { CypressComponent } from './sections/cypress/cypress.component';
 import { DockerBasicsComponent } from './sections/docker-basics/docker-basics.component';
 import { PrototypingComponent } from './sections/prototyping/prototyping.component';
+import { TeamWorkComponent } from './sections/teamwork/teamwork.component';
 
 // ####################################################################
 // If you got a new section, add it to the routes-array like the others
@@ -71,10 +71,10 @@ const routes: Routes = [
         data: { matomoTitle: 'TypeScript' },
       },
       {
-        path: 'git-experte',
-        component: GitExpertComponent,
+        path: 'teamwork',
+        component: TeamWorkComponent,
         canActivate: [SectionGuard],
-        data: { matomoTitle: 'Git Experte' },
+        data: { matomoTitle: 'Teamwork' },
       },
       {
         path: 'prototyping',
