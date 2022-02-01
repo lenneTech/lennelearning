@@ -55,6 +55,7 @@ import { PackagesComponent } from './sections/packages/packages.component';
 import { PrototypingComponent } from './sections/prototyping/prototyping.component';
 import { TeamWorkComponent } from './sections/teamwork/teamwork.component';
 import { TypescriptComponent } from './sections/typescript/typescript.component';
+import { ArbeitsmethodenComponent } from './sections/arbeitsmethoden/arbeitsmethoden.component';
 
 export function playerFactory() {
   return player;
@@ -73,7 +74,12 @@ export function playerFactory() {
     GitBasicsComponent,
     JavascriptComponent,
     TypescriptComponent,
+<<<<<<< HEAD
     TeamWorkComponent,
+=======
+    ArbeitsmethodenComponent,
+    GitExpertComponent,
+>>>>>>> 47cda76 (added arbeitsmethoden section and added content to readme.md)
     PrototypingComponent,
     AngularComponent,
     IonicComponent,

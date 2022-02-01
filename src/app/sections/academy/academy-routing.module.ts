@@ -19,6 +19,7 @@ import { CypressComponent } from './sections/cypress/cypress.component';
 import { DockerBasicsComponent } from './sections/docker-basics/docker-basics.component';
 import { PrototypingComponent } from './sections/prototyping/prototyping.component';
 import { TeamWorkComponent } from './sections/teamwork/teamwork.component';
+import { ArbeitsmethodenComponent } from './sections/arbeitsmethoden/arbeitsmethoden.component';
 
 // ####################################################################
 // If you got a new section, add it to the routes-array like the others
@@ -81,6 +82,12 @@ const routes: Routes = [
         component: PrototypingComponent,
         canActivate: [SectionGuard],
         data: { matomoTitle: 'Prototyping' },
+      },
+      {
+        path: 'arbeitsmethoden',
+        component: ArbeitsmethodenComponent,
+        canActivate: [SectionGuard],
+        data: { matomoTitle: 'Arbeitsmethoden' },
       },
       {
         path: 'angular',

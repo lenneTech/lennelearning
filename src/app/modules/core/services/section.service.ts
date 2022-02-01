@@ -23,6 +23,7 @@ export class SectionService {
     'teamwork',
     'typescript',
     'prototyping',
+    'arbeitsmethoden',
     'angular',
     'ionic',
     'nestjs',

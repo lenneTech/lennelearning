@@ -159,6 +159,18 @@ export class MilestoneComponent implements OnInit {
       ],
     },
     {
+      sectionTitle: 'arbeitsmethoden',
+      description: 'Bravo, du hast die Sektion Arbeitsmethoden erfolgreich beendet.',
+      exampleList: [
+        {
+          text: 'Du kannst nun mit nur wenigen Klicks und einer guten Idee eine Personengruppe mit einem Prototypen überzeugen.',
+        },
+        {
+          text: 'Du hast die Möglichkeit, schnell Feedback von vielen Personen zu bekommen, allein durch diesen Prototypen.',
+        },
+      ],
+    },
+    {
       sectionTitle: 'angular',
       logo: '../../../../../assets/images/brand-images/logos_angular-icon.svg',
       description:
