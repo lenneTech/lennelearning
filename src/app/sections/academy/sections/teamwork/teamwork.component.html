@@ -1,0 +1,189 @@
+<section
+  [pageTitle]="'Teamwork'"
+  [seoTitle]="'ltakademie - Teamwork'"
+  [seoDescription]="'Lerne Teamwork mithilfe der ltakademie.'"
+  [seoKeywords]="'teamwork, academy, online, learning, platform, akademie'"
+>
+  <task id="task-1" section="teamwork">
+    <div title>Arbeiten als Team</div>
+    <div sidebarTitle>Arbeiten</div>
+    <div description>
+      Wenn du in einem Unternehmen arbeitest oder arbeiten willst, bist du im Normalfall Teil eines Teams. In jedem
+      Projekt werden verschiedene Teams benötigt, die diverse Arbeiten am Projekt erledigen. Aus diesem Grund ist es
+      wichtig, sich ein paar Dinge bewusst zu machen.
+    </div>
+  </task>
+  <task id="task-2" section="teamwork">
+    <div title>Workflow</div>
+    <div description>
+      Meist existiert ein vordefinierter Workflow in einem Betrieb. Anhand des gegebenen Workflows sieht man sehr
+      deutlich wie verschiedene Teams miteinander arbeiten sollen. Hier ist es wichtig sich bewusst zu machen, dass
+      nicht nur Entwickler an einem Projekt arbeiten. Ein Projekt geht von der Konzeption übers Design bis zur
+      Umsetzung. Das Team rund ums Design ist vermutlich nicht versiert mit dem Coding und das Team rund ums Coding
+      nicht mit dem Design. Genau deshalb ist es wichtig, dass man nach einem klaren Workflow agiert und sich an
+      vordefinierte Regeln hält. Am verlinkten Beispiel schlüsseln wir exemplarisch einen Workflow auf. <br /><br />
+      <a href="../assets/images/academy-images/workflow.png" taskLink>Link zur Abbildung eines Workflows</a>
+    </div>
+    <task-text>
+      <div exercise></div>
+      <div exerciselist>
+        Im Backlog werden die Ideen und Anforderungen gesammelt. Diese werden sortiert und priorisiert.
+      </div>
+      <div exerciselist>
+        In der Konzeption werden die Tickets für die Weiterbearbeitung konkretisiert. Abläufe, Datenbankmodelle und co
+        werden spezifiziert.
+      </div>
+      <div exerciselist>
+        Ist für ein Ticket ein Design nötig, werden im Schritt Design die UX/UI-Vorlagen erstellt. Diese werden mithilfe
+        eines Clickdummies auf Vollständigkeit geprüft und vom Kunden abgenommen.
+      </div>
+      <div exerciselist>
+        Im Schritt Development werden die Konzeption und die Design-Vorlage programmiertechnisch umgesetzt. Nicht zu
+        vergessen sind hier Level 2 Tests. Außerdem werden Lanting-Regeln, Unit-Tests und e2e-Tests erstellt.
+      </div>
+      <div exerciselist>Im Enduser-Test findet der Level 3 Test statt.</div>
+      <div exerciselist>
+        Abhängig vom Ergebnis des Level 3 Tests landet das Ticket in der Review oder wird rückschrittig verlagert.
+      </div>
+      <div exerciselist>In der Review findet eine finale Abnahme des Tickets statt.</div>
+      <div exerciselist>
+        Alle freigebenden Features landen in der Bereitstellung und werden Teil des nächsten Release sein.
+      </div>
+    </task-text>
+  </task>
+  <task id="task-3" section="teamwork">
+    <div title>Schnittstellen</div>
+    <div description>
+      Wenn man nach einem solchen <a href="../assets/images/academy-images/workflow.png" taskLink>Workflow</a> arbeitet
+      befinden sich zwischen den Schritten immer Übergangsschritte. Zum Design geht es nur über den Schritt ToDesign,
+      zur Review nur über den Schritt ToReview, etc. An solchen Übergangsschritten entstehen Schnittstellen zwischen den
+      einzelnen Teams. Entsprechend liegen besonders an diesen Schritten viele Fehlerquellen und potentielle
+      Prozessoptimierungen. Ergo ist hier besondere Sorgfalt geboten.
+    </div>
+    <task-text>
+      <div excercise></div>
+      <div exerciselist>
+        So wird beispielsweise im Schritt ToDesign das vollumfängliche Ticket mit Beschreibungen, Skizzen, Beispielen,
+        Hinweisen zu anderen Tickets für die weitere Verarbeitung als PDF hinterlegt. Tickets werden erst zum
+        Design-Team weitergegeben, wenn diese freigegeben wurden.
+      </div>
+      <div exerciselist>
+        Im Schritt ToDevelop liegen nun zusätzlich die abgenommenen Designvorlagen und der Clickdummy vor. Diese werden
+        an die Entwickler übergeben, sodass diese direkt alle Designs und wichtigen Abläufe entnehmen können. Auch zu
+        verwenden Bilder und Icons sollen direkt zur Verfügung stehen.
+      </div>
+      <div exerciselist>
+        Wie genau diese Schritte definiert sind hängt immer davon ab, wie ein Workflow und dessen Regeln definiert sind.
+        Es ist allerdings in jedem Fall wichtig, dass man sich an eben jenen hält, damit ein effizientes Arbeiten im
+        Team möglich ist.
+      </div>
+    </task-text></task
+  >
+
+  <task
+    id="task-4"
+    section="teamwork"
+    [image]="{
+      url: '../../assets/images/academy-images/sprint-planning.svg',
+      alt: 'Illustration von drei Personen die zusammen vor einem Board ein Projekt planen'
+    }"
+  >
+    <div title>Git</div>
+
+    <task-text>
+      <div info>
+        Wenn man als Entwickler in einem Team arbeitet, bearbeitet man häufig gemeinsam den gleichen Code. Dabei können
+        viele Probleme auftreten: Mehrere arbeiten am gleichen Problem und damit verliert man Zeit oder du hast noch gar
+        nicht den neuesten Stand des Projekts. Um diese Probleme zu vermeiden, nutzen wir Git und die damit kommenden
+        Funktionen. In den nächsten Abschnitten erfährst du unter anderem, wie du Branches (Abzweigungen) des Hauptcodes
+        erstellst, damit arbeitest und diese später wieder zum Hauptstrang hinzufügst.
+      </div>
+    </task-text>
+  </task>
+
+  <task id="task-5" section="teamwork">
+    <div title>Video</div>
+    <div description>Schaue dir dieses Video an und komme danach wieder hier hin.</div>
+
+    <task-video [youtubelink]="'https://www.youtube.com/embed/ZVoSBA03Tdc?'"></task-video>
+  </task>
+
+  <task
+    id="task-6"
+    solutionLink="https://youtu.be/dnAy6aIbIWo"
+    hint="Manche Aufgabenstellungen im Spiel sind wirklich nicht eindeutig, daher ist es nicht schlimm danach zu googeln."
+    section="teamwork"
+  >
+    <div title>Oh My Git</div>
+    <div description>
+      Lade dir das Spiel <a href="https://ohmygit.org/" taskLink>Oh My Git</a> herunter, falls noch nicht geschehen und
+      spiele die Kapitel 'Branches' und 'Merge'. Du kannst natürlich auch die weiteren Übungen machen, wenn du noch mehr
+      lernen willst und es dir Spaß macht.
+    </div>
+  </task>
+
+  <task
+    id="task-7"
+    hint="Bei Fehlern werden dir in der Konsole häufig Lösungen angezeigt, die du verwenden kannst."
+    section="teamwork"
+    [image]="{
+      url: '../../assets/images/academy-images/newsletter.svg',
+      alt: 'Illustration einer Frau, die vor einem Board mit einem Brief steht'
+    }"
+  >
+    <div title>Gästebuch</div>
+
+    <task-text>
+      <div exercise>
+        Setze die gelernten Inhalte in die Praxis um. Deine Aufgabe ist es, einen Eintrag in unserem Gästebuch zu
+        hinterlassen. Hier eine kurze Anleitung:
+      </div>
+      <div exerciselist>
+        Klone das <a href="https://GitHub.com/lenneTech/guestbook" taskLink>GitHub-Repository</a> vom Gästebuch.
+      </div>
+      <div exerciselist>Erstelle einen neuen Branch mit dem Namen <b>student/[DeinName]</b> .</div>
+      <div exerciselist>Schreibe in das Gästebuch einen Eintrag mit deinem Namen.</div>
+      <div exerciselist>Führe <code>git add .</code> aus.</div>
+      <div exerciselist>Führe <code>git commit -m "rezension von [DeinName]"</code> aus.</div>
+      <div exerciselist>
+        Bevor du pushst, solltest du schauen, ob sich, während du gearbeitet hast, etwas an dem Hauptstrang geändert
+        hat. Es könnte zum Beispiel sein, dass ein anderes Akademiemitglied gleichzeitig eine Rezension schreibt. Dafür
+        machst du Folgendes:
+      </div>
+      <div exerciselist>Führe <code>git checkout main</code> aus, um in den Hauptzweig zu wechseln.</div>
+      <div exerciselist>
+        Führe <code>git fetch</code> aus, um zu prüfen, ob Daten, die nicht in deinem Ordner sind, auf GitHub liegen.
+      </div>
+      <div exerciselist>
+        Führe <code>git pull</code> aus, um die Daten, die nicht in deinem Ordner sind, von GitHub herunterzuladen.
+      </div>
+      <div exerciselist>Danach gehst du mit <code>git checkout student/[DeinName]</code> in deinen Branch</div>
+      <div exerciselist>
+        Und checkst mit <code>git rebase main</code> ob deine Änderungen ohne Konflikte bestehen bleiben können.
+      </div>
+      <div exerciselist>Wenn hier Konflikte auftreten, solltest du diese beheben.</div>
+      <div exerciselist>Danach mit <code>git push</code> das ganze in GitHub pushen.</div>
+      <div exerciselist>
+        Jetzt gehst du in GitHub auf das Repository, gehst in den Tab Pull requests und forderst ein Review von deinem
+        Tutor an.
+      </div>
+      <div exerciselist>
+        Wenn alles in Ordnung ist, bekommst du eine Bestätigungsmail, ansonsten eine Mail mit Änderungswünschen - das
+        alles siehst du auch auf GitHub.
+      </div>
+      <div exerciselist>
+        Wenn Änderungswünsche vorliegen, solltest du diese vollziehen und ein neues Review fordern.
+      </div>
+      <div exerciselist>Wenn alles bestätigt ist und gemerged wurde, bist du fertig.</div>
+    </task-text>
+  </task>
+  <task id="task-8" section="teamwork">
+    <div title>GitFlow</div>
+    <div description>
+      Dieses Video soll dir einen Einblick geben, wie du später in größeren Teams mithilfe von GitFlow organisiert
+      arbeiten kannst. Probier das Beispiel aus dem Video ruhig selber mal aus oder passe das Repository deines
+      Hauptprojektes so an, dass du nach diesem Schema arbeiten kannst.
+    </div>
+    <task-video [youtubelink]="'https://www.youtube.com/embed/TIkZiaupFCY'"></task-video>
+  </task>
+</section>

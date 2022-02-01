@@ -66,7 +66,7 @@ export class SectionComponent implements OnInit, AfterViewInit {
       ],
     },
     {
-      'git-experte': [
+      teamwork: [
         { title: 'Git', url: 'https://git-scm.com/downloads' },
         { title: 'GitHub', url: 'https://github.com/' },
       ],
@@ -141,7 +141,7 @@ export class SectionComponent implements OnInit, AfterViewInit {
     { javascript: [] },
     { typescript: [] },
     {
-      'git-experte': [
+      teamwork: [
         { url: 'https://www.badfv.de/files/Dokumente/tower_cheatsheet_dark_DE.pdf' },
         { url: 'https://training.github.com/downloads/github-git-cheat-sheet.pdf' },
       ],

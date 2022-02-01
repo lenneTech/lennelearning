@@ -20,7 +20,7 @@ export class SectionService {
     'bootstrap',
     'git-basics',
     'javascript',
-    'git-experte',
+    'teamwork',
     'typescript',
     'prototyping',
     'angular',
