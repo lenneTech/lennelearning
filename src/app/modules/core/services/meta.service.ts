@@ -43,11 +43,11 @@ export class MetaService {
     });
     this.metaTagService.updateTag({
       property: 'og:image',
-      content: environment.appUrl + 'assets/images/banner-images/ltakademie.png',
+      content: environment.appUrl + 'assets/images/banner-images/preview-black.png',
     });
     this.metaTagService.updateTag({
       property: 'twitter:image',
-      content: environment.appUrl + 'assets/images/banner-images/ltakademie.png',
+      content: environment.appUrl + 'assets/images/banner-images/preview-black.png',
     });
     this.metaTagService.updateTag({
       property: 'og:url',

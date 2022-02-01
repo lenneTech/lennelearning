@@ -1,14 +1,11 @@
 :host {
   width: 100%;
 }
+.container {
+  padding: 0 !important;
+}
 
-.title {
-  color: #1a1464;
-  font-weight: bold;
-  font-size: 20px;
-  .logo {
-    width: 25px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-  }
+.logo {
+  width: 180px;
+  cursor: pointer;
 }

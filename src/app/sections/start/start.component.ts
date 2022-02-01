@@ -46,13 +46,13 @@ export class StartComponent {
   ];
   constructor(private seoService: SEOService, private metaService: MetaService) {
     this.seoService.initPageForSEO(
-      'ltakademie - Die online Akademie für Webtechnologien',
+      'lenne.Learning - Die online Akademie für Webtechnologien',
       'Die online Akademie für Webtechnologien',
-      'academy, online, akademie, web, ltakademie'
+      'academy, online, akademie, web, learning'
     );
 
     this.metaService.updateMetaTags(
-      'ltakademie - Die online Akademie für Webtechnologien',
+      'lenne.Learning - Die online Akademie für Webtechnologien',
       'Die online Akademie für Webtechnologien'
     );
   }

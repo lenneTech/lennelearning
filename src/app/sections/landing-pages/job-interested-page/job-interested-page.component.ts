@@ -36,7 +36,7 @@ export class JobInterestedPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.metaService.updateMetaTags(
-      'ltakademie - Du interessierst dich für App- und Webentwicklung?',
+      'lenne.Learning - Du interessierst dich für App- und Webentwicklung?',
       'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.'
     );
   }
