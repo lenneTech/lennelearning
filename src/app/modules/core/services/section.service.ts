@@ -28,7 +28,6 @@ export class SectionService {
     'nestjs',
     'packages',
     'design',
-    'cypress',
     'automatisierte-tests',
     'docker-basics',
   ];

@@ -16,7 +16,6 @@ import { GitExpertComponent } from './sections/git-expert/git-expert.component';
 import { MilestoneComponent } from './components/milestone/milestone.component';
 import { PackagesComponent } from './sections/packages/packages.component';
 import { DesignComponent } from './sections/design/design.component';
-import { CypressComponent } from './sections/cypress/cypress.component';
 import { DockerBasicsComponent } from './sections/docker-basics/docker-basics.component';
 import { PrototypingComponent } from './sections/prototyping/prototyping.component';
 import { AutomatedTestsComponent } from './sections/automated-tests/automated-tests.component';
@@ -118,12 +117,6 @@ const routes: Routes = [
         component: DesignComponent,
         canActivate: [SectionGuard],
         data: { matomoTitle: 'Design' },
-      },
-      {
-        path: 'cypress',
-        component: CypressComponent,
-        canActivate: [SectionGuard],
-        data: { matomoTitle: 'Cypress' },
       },
       {
         path: 'automatisierte-tests',
