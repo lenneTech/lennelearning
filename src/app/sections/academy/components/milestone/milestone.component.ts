@@ -163,10 +163,7 @@ export class MilestoneComponent implements OnInit {
       description: 'Bravo, du hast die Sektion Arbeitsmethoden erfolgreich beendet.',
       exampleList: [
         {
-          text: 'Du kannst nun mit nur wenigen Klicks und einer guten Idee eine Personengruppe mit einem Prototypen überzeugen.',
-        },
-        {
-          text: 'Du hast die Möglichkeit, schnell Feedback von vielen Personen zu bekommen, allein durch diesen Prototypen.',
+          text: 'Nun kennst du einige Arbeitsmethoden mit denen du Projekte bearbeiten kannst.',
         },
       ],
     },
