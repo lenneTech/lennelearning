@@ -1,3 +1,14 @@
 :host {
   width: 100%;
 }
+
+.title {
+  color: #1a1464;
+  font-weight: bold;
+  font-size: 20px;
+  .logo {
+    width: 25px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+}

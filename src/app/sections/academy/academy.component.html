@@ -3,9 +3,10 @@
     <div class="container-fluid">
       <div class="d-flex justify-content-between header">
         <div class="d-flex align-items-center">
-          <a routerLink="/">
+          <app-header></app-header>
+          <!-- <a routerLink="/">
             <div class="title">lt<span class="color-primary">akademie</span></div>
-          </a>
+          </a> -->
           <i class="bi bi-door-open d-block d-md-none ms-2" (click)="resetEntryPoint()"></i>
         </div>
         <div class="d-flex align-items-center" *ngIf="currentEntryPoint">
