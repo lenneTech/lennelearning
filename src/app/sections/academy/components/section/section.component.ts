@@ -113,12 +113,7 @@ export class SectionComponent implements OnInit, AfterViewInit {
       ],
     },
     {
-      cypress: [
-        {
-          title: 'Cypress Docs',
-          url: 'https://docs.cypress.io/guides/getting-started/installing-cypress',
-        },
-      ],
+      'automatisierte-tests': [],
     },
   ];
   cheatSheet = [
@@ -153,7 +148,7 @@ export class SectionComponent implements OnInit, AfterViewInit {
     { nestjs: [] },
     { packages: [] },
     { design: [] },
-    { cypress: [] },
+    { 'automatisierte-tests': [] },
   ];
   linkList;
   cheatSheetList;

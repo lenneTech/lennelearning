@@ -15,9 +15,9 @@ import { GitBasicsComponent } from './sections/git-basics/git-basics.component';
 import { MilestoneComponent } from './components/milestone/milestone.component';
 import { PackagesComponent } from './sections/packages/packages.component';
 import { DesignComponent } from './sections/design/design.component';
-import { CypressComponent } from './sections/cypress/cypress.component';
 import { DockerBasicsComponent } from './sections/docker-basics/docker-basics.component';
 import { PrototypingComponent } from './sections/prototyping/prototyping.component';
+import { AutomatedTestsComponent } from './sections/automated-tests/automated-tests.component';
 import { TeamWorkComponent } from './sections/teamwork/teamwork.component';
 
 // ####################################################################
@@ -119,10 +119,10 @@ const routes: Routes = [
         data: { matomoTitle: 'Design' },
       },
       {
-        path: 'cypress',
-        component: CypressComponent,
+        path: 'automatisierte-tests',
+        component: AutomatedTestsComponent,
         canActivate: [SectionGuard],
-        data: { matomoTitle: 'Cypress' },
+        data: { matomoTitle: 'Automatisierte Tests' },
       },
       {
         path: 'meilenstein/:id',

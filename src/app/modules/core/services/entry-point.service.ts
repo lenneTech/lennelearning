@@ -38,7 +38,7 @@ export class EntryPointService {
         'docker-basics',
         'nestjs',
         'design',
-        'cypress',
+        'automatisierte-tests',
       ],
     },
     {
@@ -95,7 +95,7 @@ export class EntryPointService {
         'docker-basics',
         'nestjs',
         'design',
-        'cypress',
+        'automatisierte-tests',
       ],
     },
     {
@@ -116,7 +116,7 @@ export class EntryPointService {
         'packages',
         'ionic',
         'design',
-        'cypress',
+        'automatisierte-tests',
       ],
     },
     {
