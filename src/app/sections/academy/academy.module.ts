@@ -46,7 +46,6 @@ import { CssComponent } from './sections/css/css.component';
 import { DesignComponent } from './sections/design/design.component';
 import { DockerBasicsComponent } from './sections/docker-basics/docker-basics.component';
 import { GitBasicsComponent } from './sections/git-basics/git-basics.component';
-import { GitExpertComponent } from './sections/git-expert/git-expert.component';
 import { HtmlComponent } from './sections/html/html.component';
 import { IonicComponent } from './sections/ionic/ionic.component';
 import { JavascriptComponent } from './sections/javascript/javascript.component';
@@ -54,6 +53,7 @@ import { JobComponent } from './sections/job/job.component';
 import { NestjsComponent } from './sections/nestjs/nestjs.component';
 import { PackagesComponent } from './sections/packages/packages.component';
 import { PrototypingComponent } from './sections/prototyping/prototyping.component';
+import { TeamWorkComponent } from './sections/teamwork/teamwork.component';
 import { TypescriptComponent } from './sections/typescript/typescript.component';
 
 export function playerFactory() {
@@ -73,7 +73,7 @@ export function playerFactory() {
     GitBasicsComponent,
     JavascriptComponent,
     TypescriptComponent,
-    GitExpertComponent,
+    TeamWorkComponent,
     PrototypingComponent,
     AngularComponent,
     IonicComponent,

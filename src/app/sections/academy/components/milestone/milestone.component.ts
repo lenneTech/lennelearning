@@ -129,7 +129,7 @@ export class MilestoneComponent implements OnInit {
       ],
     },
     {
-      sectionTitle: 'git-experte',
+      sectionTitle: 'teamwork',
       logo: '../../../../../assets/images/brand-images/logos_github-icon.svg',
       description:
         'Sehr gut! Du hast jetzt die volle Kontrolle über deinen Code und kannst kooperativ mit anderen Softwareentwicklern zusammenarbeiten.',
