@@ -159,6 +159,15 @@ export class MilestoneComponent implements OnInit {
       ],
     },
     {
+      sectionTitle: 'arbeitsmethoden',
+      description: 'Bravo, du hast die Sektion Arbeitsmethoden erfolgreich beendet.',
+      exampleList: [
+        {
+          text: 'Nun kennst du einige Arbeitsmethoden mit denen du Projekte bearbeiten kannst.',
+        },
+      ],
+    },
+    {
       sectionTitle: 'angular',
       logo: '../../../../../assets/images/brand-images/logos_angular-icon.svg',
       description:

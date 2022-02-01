@@ -32,6 +32,7 @@ export class EntryPointService {
         'teamwork',
         'typescript',
         'prototyping',
+        'arbeitsmethoden',
         'angular',
         'packages',
         'ionic',

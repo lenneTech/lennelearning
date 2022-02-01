@@ -77,11 +77,11 @@ When everything is fine, your code will be in the next version of the project. O
 
 To add a section to the academy you need to follow these steps:
 
-1. Generate a new component with the name of your section.
+1. Generate a new component with the name of your section. (this requires you to use the "angular files" extension in VSCode, if you don't want to use the extension you manually add the section.component.html/scss/spec.ts/ts files to the src/app/sections/academy/sections directory)
 2. Declarate the new component inside the academy.module.ts file.
 3. Add the sectionname to the \_section-array in the section.service.ts file.
 4. Add the sectionname to each \_entryPoints-Object in the entry-point.service.ts file.
-5. Add objects to the cheatsheets and links arrays (inside section.component.ts file) in which the sectionname is declared as a property for an array and fill the array with useful links or cheatsheets related to the section topic
+5. Add objects to the cheatsheets and links arrays (inside section.component.ts file) in which the sectionname is declared as a property for an array and fill the array with useful links or cheatsheets related to the section topic. You have to do this even if you want don't to add any links or anything to the cheatsheet array.
 6. Add a path to the new component in the academy-routing.module.ts file.
 7. Inside the new generated component.html file you remove everything and start by adding a section with some directives:
    `<section [pageTitle]="'Sectionname'" [seoTitle]="'ltacademy - Sectionname'" [seoDescription]="'Lerne Sectionname mithilfe der ltacademy.'" [seoKeywords]="'sectionname, academy, online, learning, platform'" > `

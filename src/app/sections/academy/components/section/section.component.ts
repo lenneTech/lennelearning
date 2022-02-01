@@ -74,6 +74,7 @@ export class SectionComponent implements OnInit, AfterViewInit {
     {
       prototyping: [],
     },
+    { arbeitsmethoden: [] },
     {
       angular: [
         { title: 'Angular Docs', url: 'https://angular.io/docs' },
@@ -142,6 +143,7 @@ export class SectionComponent implements OnInit, AfterViewInit {
       ],
     },
     { prototyping: [] },
+    { arbeitsmethoden: [] },
     { angular: [{ url: 'https://angular.io/guide/cheatsheet' }] },
     { ionic: [] },
     { 'docker-basics': [] },
