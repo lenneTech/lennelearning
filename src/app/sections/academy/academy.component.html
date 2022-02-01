@@ -1,12 +1,9 @@
 <nb-layout>
-  <nb-layout-header fixed class="mobile-spacing">
+  <nb-layout-header fixed class="mobile-spacing border-bottom">
     <div class="container-fluid">
-      <div class="d-flex justify-content-between header">
+      <div class="d-flex justify-content-between header mobile-margin">
         <div class="d-flex align-items-center">
-          <a routerLink="/">
-            <div class="title">lt<span class="color-primary">akademie</span></div>
-          </a>
-          <i class="bi bi-door-open d-block d-md-none ms-2" (click)="resetEntryPoint()"></i>
+          <app-header></app-header>
         </div>
         <div class="d-flex align-items-center" *ngIf="currentEntryPoint">
           <span class="d-none d-md-block"
@@ -28,8 +25,8 @@
           ></i>
         </div>
       </div>
-      <div>
-        <span class="d-block d-md-none">
+      <div class="mobile-margin">
+        <span class="d-block d-md-none d-flex justify-content-between align-items-center pb-1">
           <nb-select placeholder="Wähle einen Lernpfad aus" [selected]="currentEntryPoint.id">
             <nb-option
               [value]="entryPoint.id"
@@ -38,6 +35,7 @@
               >{{ entryPoint.address }}</nb-option
             >
           </nb-select>
+          <i class="bi bi-door-open ms-2" (click)="resetEntryPoint()"></i>
         </span>
       </div>
     </div>

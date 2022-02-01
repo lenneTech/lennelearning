@@ -29,6 +29,19 @@ a {
   color: var(--color-warning-500);
 }
 
+.d-md-none {
+  .bi-door-open {
+    margin-right: 5px;
+    font-size: 25px;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--color-primary-500);
+      transition: 0.3s;
+    }
+  }
+}
+
 .bi-door-open {
   margin-left: 10px;
   font-size: 18px;
@@ -59,6 +72,11 @@ a {
   .mobile-spacing {
     padding-top: 10px;
     padding-bottom: 5px;
+  }
+
+  .mobile-margin {
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
 

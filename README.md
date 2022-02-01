@@ -84,7 +84,7 @@ To add a section to the academy you need to follow these steps:
 5. Add objects to the cheatsheets and links arrays (inside section.component.ts file) in which the sectionname is declared as a property for an array and fill the array with useful links or cheatsheets related to the section topic. You have to do this even if you want don't to add any links or anything to the cheatsheet array.
 6. Add a path to the new component in the academy-routing.module.ts file.
 7. Inside the new generated component.html file you remove everything and start by adding a section with some directives:
-   `<section [pageTitle]="'Sectionname'" [seoTitle]="'ltacademy - Sectionname'" [seoDescription]="'Lerne Sectionname mithilfe der ltacademy.'" [seoKeywords]="'sectionname, academy, online, learning, platform'" > `
+   `<section [pageTitle]="'Sectionname'" [seoTitle]="'lenne.Learning - Sectionname'" [seoDescription]="'Lerne Sectionname mithilfe von lenne.Learning.'" [seoKeywords]="'sectionname, academy, online, learning, platform'" > `
 8. The Section is ready to get filled with tasks.
 
 ---
