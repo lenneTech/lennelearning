@@ -15,7 +15,7 @@ export class ReviewListComponent {
       reviewerSubtitle: 'Praktikant - lenne.Tech GmbH',
     },
     {
-      imageUrl: 'https://lenne.tech/assets/images/team/florian-steinhanses.png',
+      imageUrl: 'https://lenne.tech/assets/images/team/florian_steinhanses.png',
       text: 'Im Rahmen meiner Bachelorarbeit habe ich zusammen mit lenne.Tech eine App zur Erfassung von Wissensinhalten in der Softwareentwicklung entwickelt. Ich hatte vor allem im Frontend Bereich schon Vorwissen, aber mir fehlte die praktische Erfahrung, um das Projekt eigenständig umzusetzen. An der Stelle haben mich Kai und Pascal hervorragend betreut und mir gezeigt wie man strukturiert an umfangreicheren Anwendungen arbeitet. Darüber hinaus wurde mir auch im wissenschaftlichen Bereich der Arbeit und bei der Vorbereitung auf das Kolloquium sehr gut geholfen. Nach meiner Bachelorarbeit wurde ich als Werkstudent übernommen und arbeite nun mit ihnen im Team zusammen.',
       reviewerTitle: 'Florian Steinhanses',
       reviewerSubtitle: 'Werkstudent - lenne.Tech GmbH',
