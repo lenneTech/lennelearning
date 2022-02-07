@@ -63,6 +63,7 @@ export class SectionComponent implements OnInit, AfterViewInit {
       typescript: [
         { title: 'MDN', url: 'https://developer.mozilla.org/de/' },
         { title: 'Stackoverflow', url: 'https://stackoverflow.com/' },
+        { title: 'Typescript Dokumentation', url: 'https://www.typescriptlang.org/docs/' },
       ],
     },
     {
@@ -72,7 +73,7 @@ export class SectionComponent implements OnInit, AfterViewInit {
       ],
     },
     {
-      prototyping: [],
+      prototyping: [{ title: 'Figma Ressourcen', url: 'https://www.figma.com/community/tag/free/files' }],
     },
     { arbeitsmethoden: [] },
     {
@@ -101,7 +102,7 @@ export class SectionComponent implements OnInit, AfterViewInit {
       ],
     },
     {
-      packages: [],
+      packages: [{ title: 'npm', url: 'https://www.npmjs.com/' }],
     },
     {
       design: [
@@ -114,7 +115,10 @@ export class SectionComponent implements OnInit, AfterViewInit {
       ],
     },
     {
-      'automatisierte-tests': [],
+      'automatisierte-tests': [
+        { title: 'Cypress Dokumentation', url: 'https://docs.cypress.io/guides/overview/why-cypress' },
+        { title: 'Jest Dokumentation', url: 'https://jestjs.io/docs/getting-started' },
+      ],
     },
   ];
   cheatSheet = [
@@ -135,7 +139,7 @@ export class SectionComponent implements OnInit, AfterViewInit {
       ],
     },
     { javascript: [] },
-    { typescript: [] },
+    { typescript: [{ title: 'Cheat Sheet 1', url: 'https://www.typescriptlang.org/cheatsheets' }] },
     {
       teamwork: [
         { url: 'https://www.badfv.de/files/Dokumente/tower_cheatsheet_dark_DE.pdf' },
