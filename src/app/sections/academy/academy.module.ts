@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import {
+  NbAccordionModule,
   NbButtonModule,
   NbCardModule,
   NbLayoutModule,
@@ -117,6 +118,7 @@ export function playerFactory() {
     CommonModule,
     NbLayoutModule,
     NbSidebarModule,
+    NbAccordionModule,
     NbButtonModule,
     NbCardModule,
     NbSelectModule,
