@@ -12,7 +12,7 @@ import { EntryPointService } from 'src/app/modules/core/services/entry-point.ser
 export class EntryPointsComponent implements OnInit {
   title = 'Die Lernpfade';
   subtitle =
-    'Bist du schon ziemlich erfahren oder stehst du noch ganz am Anfang deiner Karriere als Webentwickler?\n Hier in der Akademie ist das vollkommen egal. Wähle einfach den Lernpfad aus, der am besten zu dir passt und starte mit deiner (Weiter)-Bildung in der App- & Webentwicklung!';
+    'Bist Du schon ziemlich erfahren oder stehst Du noch ganz am Anfang deiner Karriere als Entwickler:in \n Bei lenne.Learning findest Du das passende Angebot. Wähle einfach den Lernpfad aus, der am besten zu Dir passt und starte durch!';
   imageUrl = '../../assets/images/explanation-images/projekt.svg';
   entryPoints: EntryPoint[] = [];
   recommendation: string;
