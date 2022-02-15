@@ -9,22 +9,22 @@ import { TextImageInterface } from '../../interfaces/text-image.interface';
 export class StepsComponent {
   @Input() steps: TextImageInterface[] = [
     {
-      title: 'Akademie',
-      text: 'Durch Tutorials in Form von Texten, Videokursen und Spielen bekommst du einen Einstieg in die Grundlagen der App- & Webentwicklung. Die Lern-Community und erfahrene Tutoren unterstützen dich dabei.',
+      title: 'Grundlagen',
+      text: 'Durch Tutorials in Form von Texten, Videokursen und Spielen bekommen die Teilnehmenden einen Einstieg in die Grundlagen der App- & Webentwicklung. Die Lerncommunity und erfahrene Tutor:innen unterstützen sie dabei.',
       imageUrl: '../../assets/images/explanation-images/academy.svg',
-      imageAlt: 'Bild von einem Menschen der auf Büchern steht.',
+      imageAlt: 'Bild von einem Menschen, der auf Büchern steht.',
     },
     {
       title: 'Eigenes Projekt',
-      text: 'Nachdem du dir die Grundlagen angeeignet hast, erstellst du mit dem erlangten Wissen dein erstes vollständiges Projekt. Es handelt sich dabei um kein Schubladenprojekt, sondern du bekommst echte Nutzer.',
+      text: 'Nachdem sie sich die Grundlagen angeeignet haben, erstellen sie mit dem erlangten Wissen ein erstes vollständiges Projekt. Es handelt sich dabei nicht um ein Schubladenprojekt, sondern es wird in der Praxis eingesetzt.',
       imageUrl: '../../assets/images/explanation-images/projekt.svg',
-      imageAlt: 'Bild von zwei diskutierenden Menschen am Tisch',
+      imageAlt: 'Bild von einem Menschen, der sein eine Applikation konzipiert.',
     },
     {
       title: 'Kooperation',
-      text: 'Hier lernst du zusammen mit uns, wie man gemeinsam an einem Quellcode arbeitet, Code testet, wie sich Verbesserungsvorschläge konstruktiv einbringen lassen und vieles mehr.',
+      text: 'Hier lernen die Teilnehmenden zusammen mit dem lenne.Learning-Team, wie gemeinsam an Quellcode gearbeitet wird, den Code zu testen, wie sich Verbesserungsvorschläge konstruktiv einbringen lassen und vieles mehr.',
       imageUrl: '../../assets/images/explanation-images/kooperation.svg',
-      imageAlt: 'Bild von Menschen die Puzzleteile vor einem großen Smartphone halten.',
+      imageAlt: 'Bild von Menschen, die Puzzleteile miteinander verbinden.',
     },
   ];
 

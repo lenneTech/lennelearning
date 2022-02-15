@@ -11,28 +11,28 @@ export class FeaturesComponent {
   @Input() features: TextImageInterface[] = [
     {
       title: 'Betreuung',
-      text: 'Als Mitglied unserer Akademie bekommst du eine individuelle Betreuung von unseren Tutoren. Wir helfen dir gerne, wenn du mal nicht weiterkommst oder Fragen hast.',
+      text: 'Die Teilnehmende werden individuell durch unsere erfahrenen und qualifizierte Tutor:innen betreut. Offene Fragen werden beantwortet und Blockaden gemeinsam beseitigt.',
       iconClass: 'bi-person-fill',
     },
     {
-      title: 'Community',
-      text: 'Tausche dich mit anderen Teilnehmern oder Absolventen der Akademie aus, entwickelt gemeinsam Ideen und unterstützt euch gegenseitig.',
-      iconClass: 'bi-people-fill',
-    },
-    {
-      title: 'MeetUps',
-      text: 'Im wöchentlichen Akademietreffen kannst du deinen derzeitigen Lernstand vorstellen, Probleme und Fragen ansprechen und dich inspirieren lassen.',
-      iconClass: 'bi-calendar-week',
-    },
-    {
-      title: 'Lernpfad',
-      text: 'Zusätzlich zu den Videokursen haben wir einen eigenen Aufgabenkatalog mit Tipps und Musterlösungen angefertigt, um dich auf deinen Lernpfad noch besser zu unterstützen.',
+      title: 'Lernpfade',
+      text: 'Zusätzlich zu den Videokursen fertigen wir auf den jeweiligen Lernpfad abgestimmte Aufgabenkataloge, Tipps und Muster-lösungen an, um die Teilnehmenden optimal zu unterstützen.',
       iconClass: 'bi-layout-text-sidebar-reverse',
     },
     {
+      title: 'Wochenmeeting',
+      text: 'Wöchentliche Akademietreffen für Q&A, Lernstandspräsentation und Impulsfragen der Tutor:innen. ',
+      iconClass: 'bi-calendar-week',
+    },
+    {
       title: 'Netzwerk',
-      text: 'In den letzten Jahren konnten wir mit einigen Unternehmen zusammenarbeiten und unser Netzwerk erweitern. Wenn du in der Akademie erfolgreich bist, empfehlen wir dich gerne in unserer Kooperative.',
+      text: 'Weiterempfehlung erfolgreicher Absolvent:innen an Unternehmen in unserem Netzwerk.',
       iconClass: 'bi-globe',
+    },
+    {
+      title: 'Community',
+      text: '(Digitaler) Austausch innerhalb der Community der Absolvent:innen und Teilnehmenden.',
+      iconClass: 'bi-people-fill',
     },
   ];
 

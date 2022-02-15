@@ -17,6 +17,7 @@ import { DialogComponent } from './components/dialog/dialog.component';
 import { EntryPointCardComponent } from './components/entry-point-card/entry-point-card.component';
 import { FeaturesComponent } from './components/features/features.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { GoalsComponent } from './components/goals/goals.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HelperDialogComponent } from './components/helper-dialog/helper-dialog.component';
 import { InfoCardComponent } from './components/info-card/info-card.component';
@@ -61,6 +62,7 @@ import { TutorCardsComponent } from './components/tutor-cards/tutor-cards.compon
     BrandBannerComponent,
     AcademyPictureComponent,
     AcademyBannerComponent,
+    GoalsComponent,
 
     // Dialogs
     HelperDialogComponent,
@@ -119,6 +121,7 @@ import { TutorCardsComponent } from './components/tutor-cards/tutor-cards.compon
     CompanyTestimonialComponent,
     AcademyPictureComponent,
     AcademyBannerComponent,
+    GoalsComponent,
   ],
 })
 export class CoreModule {}

@@ -1,17 +1,10 @@
 <div class="container">
-  <div class="row pb-5 pt-5">
-    <div class="col-12 col-lg-8">
-      <div class="row">
-        <div class="col-12 col-lg-4 pb-3 pt-3 mb-3 mt-3" *ngFor="let feature of features">
-          <h3 class="title"><i [class]="'bi ' + feature.iconClass"></i>{{ feature.title }}</h3>
-          <div class="text">
-            {{ feature.text }}
-          </div>
-        </div>
+  <div class="row">
+    <div class="col-12 col-lg-6 pb-3 pt-3 mb-3 mt-3 p-lg-10" *ngFor="let feature of features">
+      <h3 class="title"><i [class]="'bi ' + feature.iconClass"></i>{{ feature.title }}</h3>
+      <div class="text">
+        {{ feature.text }}
       </div>
-    </div>
-    <div class="col-12 col-lg-4">
-      <img loading="lazy" alt="Bild von Menschen auf Raketen." [src]="imageUrl" />
     </div>
   </div>
 </div>

@@ -8,9 +8,9 @@ import { MetaService } from 'src/app/modules/core/services/meta.service';
   styleUrls: ['./start.component.scss'],
 })
 export class StartComponent {
-  title = 'Willkommen bei lenne.Learning!';
+  title = 'Willkommen bei lenne.Learning';
   subtitle =
-    'In unserer ganzheitlichen Akademie für Softwareentwicklung bieten wir Lernangebote aus den Bereichen Konzeption, Design und Entwicklung für Webinteressierte, Schüler, Studenten bis hin zu Berufserfahrenen.\n Wir bringen dich von 0 auf 100, du benötigst kein Vorwissen!\n Such dir den Lernpfad aus, der am besten zu dir passt.';
+    'In unserer ganzheitlichen Akademie bieten wir Lernangebote aus den Bereichen Konzeption, Design und Entwicklung für Webinteressierte, Schüler:innen, Student:innen bis hin zu Berufserfahrenen. Wir bringen unsere Teilnehmenden von 0 auf 100. Vorwissen ist nicht nötig! Es gibt verschiedene Lernpfade, die auf die individuellen Bedürfnisse der Zielgruppen abgestimmt sind.\n\n Die Akademie ist außerdem ein <a href="https://github.com/lenneTech/academy" target="_blank">Open Source Projekt</a> und wir freuen uns über alle, die mal vorbeischauen oder sich beteiligen möchten.';
   imageUrl = '../../assets/images/banner-images/start-banner.svg';
   landingPages = [
     {
@@ -18,7 +18,7 @@ export class StartComponent {
       title: 'Berufsinteressierte',
       address: 'Berufsinteressierter',
       description:
-        'Du interessierst dich für Web- und Apptechnologien, weißt aber noch nicht, was dich im Beruf erwartet?',
+        'Du interessierst Dich für App- und Webtechnologien und möchtest die entsprechenden Berufsfelder erkunden, oder bist Du Student:in, möchtest aber schon Praxiserfahrung in der Softwareentwicklung sammeln?',
       image: '../../assets/images/entry-point-images/berufsinteressent.svg',
       text: 'Dieser Kurs ist für alle die sich für die Web- und Appentwicklung interessieren und einen Einblick in die Berufswelt von Softwareentwicklern bekommen wollen. Der Kurs beginnt dabei mit einer Berufsfeldserkundung, in der dir zunächst die verschiedenen Berufe rund um die Softwareentwiclkung sowie deren Berufslltag und Aufgabenfelder vorgestellt werden. Danach lernst du schon die Grundlagen der Webentwicklung, um schon eigene Webseiten erstellen zu können',
       landingRoute: '/berufsinteressierte',
@@ -28,7 +28,7 @@ export class StartComponent {
       title: 'Praktikanten',
       address: 'Praktikant',
       description:
-        'Du bist Schüler, Student, befindest dich in einer Weiterbildung oder suchst aus anderen Gründen noch ein Praktikum?',
+        'Du bist Schüler:in, Student:in, nimmst an einer Weiterbildungsmaßnahme teil oder absolvierst bzw. suchst aus anderen Gründen ein Praktikum?',
       image: '../../assets/images/entry-point-images/praktikant.svg',
       text: 'Wir bieten dir die Möglichkeit in bis zu 12 Wochen die Web- und Appentwicklung in der Praxis kennenzulernen. Zunächst arbeitest du in einer Vorbereitungsphase unsere Kurse durch, um im Praktikum direkt mit deinem eigenen Projekt durchstarten zu können. Wenn du schon Vorkenntnisse hast, kannst du natürlich unter Absprache verschiedene Teile überspringen und sofort loslegen.',
       landingRoute: '/praktikanten',
@@ -38,7 +38,7 @@ export class StartComponent {
       title: 'Unternehmen',
       address: 'Unternehmer',
       description:
-        'Dein Unternehmen sucht fähige App- und Webentwickler? Oder ihr möchtet gerne Anwendungsentwickler ausbilden?',
+        'Euer Unternehmen sucht fähige App- und Webentwickler:innen oder Ihr wollt Eure Mitarbeiter:innen aus- und weiterbilden?',
       image: '../../assets/images/entry-point-images/company.svg',
       text: 'Wir bieten deinem Unternehmen Weiterbildungsmöglichkeiten in der App- und Webentwicklung. Dabei bieten wir eine umfassende Betreuung mit wöchentlichen Meetings an. Dabei schätzen wir ebenso das Potenzial der einzelnen Akademie Teilnehmer ein, um die bestmöglichen Webentwickler für dein Unternehmen zu finden.',
       landingRoute: '/unternehmen',
