@@ -8,9 +8,9 @@ import { TextImageInterface } from '../../../modules/core/interfaces/text-image.
   styleUrls: ['./job-interested-page.component.scss'],
 })
 export class JobInterestedPageComponent implements OnInit {
-  title = 'Du interessierst dich für App- und Web&shy;entwicklung?';
+  title = 'Du interessierst Dich für App- und Web&shy;entwicklung?';
   subtitle =
-    'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.\n\n Gewinne in deinem Praktikum einen Einblick in den Berufsalltag im Bereich der Softwareentwicklung und entdecke dabei die grundlegenden Aspekte der Webentwicklung.';
+    'Wir bieten Berufsinteressierten wie Schüler:innen, Hobbyentwickler:innen und potenziellen Quereinsteiger:innen die Möglichkeit einen Einblick in die verschiedenen Berufsfelder und Anforderungen der Softwareentwicklung zu gewinnen.';
   imageUrl = '../../assets/images/entry-point-images/berufsinteressent.svg';
   @Input() steps: TextImageInterface[] = [
     {
@@ -36,7 +36,7 @@ export class JobInterestedPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.metaService.updateMetaTags(
-      'lenne.Learning - Du interessierst dich für App- und Webentwicklung?',
+      'lenne.Learning - Du interessierst Dich für App- und Webentwicklung?',
       'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.'
     );
   }
