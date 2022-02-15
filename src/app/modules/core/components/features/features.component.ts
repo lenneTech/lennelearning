@@ -11,7 +11,7 @@ export class FeaturesComponent {
   @Input() features: TextImageInterface[] = [
     {
       title: 'Betreuung',
-      text: 'Die Teilnehmende werden individuell durch unsere erfahrenen und qualifizierte Tutor:innen betreut. Offene Fragen werden beantwortet und Blockaden gemeinsam beseitigt.',
+      text: 'Die Teilnehmenden werden individuell durch unsere erfahrenen und qualifizierte Tutor:innen betreut. Offene Fragen werden beantwortet und Blockaden gemeinsam beseitigt.',
       iconClass: 'bi-person-fill',
     },
     {
