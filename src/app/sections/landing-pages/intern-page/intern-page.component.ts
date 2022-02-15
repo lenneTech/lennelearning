@@ -8,9 +8,9 @@ import { Review } from '../../../modules/core/interfaces/review.interface';
   styleUrls: ['./intern-page.component.scss'],
 })
 export class InternPageComponent implements OnInit {
-  title = 'Du suchst noch ein Praktikum?';
+  title = 'Du suchst nach einem Praktikum?';
   subtitle =
-    'Wir bieten Schülern, Studenten oder Webinteressierten die Möglichkeit, Web- und Appentwicklung in der Praxis zu erleben und mitzugestalten.\n\n Lerne in der Akademie die Grundlagen, setze dein eigenes Projekt um und arbeite mit an unseren Projekten.';
+    'Wir bieten Schüler:innen, Student:innen, Umschüler:innen und anderen Interessierten die Möglichkeit im Rahmen eines Praktikums App- und Webentwicklung in der Praxis zu erleben und mitzugestalten.    Außerdem betreuen wir auch Praktikant:innen anderer Unternehmen.    \n\n  Erlerne in der Akademie die Grundlagen und setze dann Dein eigenes Projekt um. Je nach Dauer des Praktikums wirst Du in ein bestehendes Team integriert und arbeitest aktiv an einem Projekt mit.';
   imageUrl = '../../assets/images/entry-point-images/praktikant.svg';
   review: Review = {
     imageUrl: '../../../assets/images/people-images/daniel_review.jpg',
