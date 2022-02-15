@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import packageInfo from '../../../../../../package.json';
+import { DialogService } from '../../services/dialog.service';
 
 @Component({
   selector: 'app-footer',
@@ -8,5 +9,9 @@ import packageInfo from '../../../../../../package.json';
 })
 export class FooterComponent {
   version: string = packageInfo.version;
-  constructor() {}
+  constructor(private dialogService: DialogService) {}
+
+  openVersionHistory() {
+    this.dialogService.openVersionDialog();
+  }
 }

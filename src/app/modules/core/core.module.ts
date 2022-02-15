@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { NbAccordionModule, NbButtonModule, NbCardModule, NbLayoutModule } from '@nebular/theme';
+import { VersionHistoryComponent } from 'src/app/sections/academy/components/version-history/version-history.component';
 import { AcademyBannerComponent } from './components/academy-banner/academy-banner.component';
 import { AcademyPictureComponent } from './components/academy-picture/academy-picture.component';
 import { BannerComponent } from './components/banner/banner.component';
@@ -67,6 +68,7 @@ import { TutorCardsComponent } from './components/tutor-cards/tutor-cards.compon
     DialogComponent,
     BannerComponent,
     SolutionDialogComponent,
+    VersionHistoryComponent,
 
     // SVGs
     HtmlSvgComponent,

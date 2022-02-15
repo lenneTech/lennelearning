@@ -1,6 +1,8 @@
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { NbDialogService } from '@nebular/theme';
+import { VersionHistoryComponent } from 'src/app/sections/academy/components/version-history/version-history.component';
 import { DialogConfirmComponent } from '../components/dialog-confirm/dialog-confirm.component';
 import { DialogComponent } from '../components/dialog/dialog.component';
 import { HelperDialogComponent } from '../components/helper-dialog/helper-dialog.component';
@@ -19,6 +21,10 @@ export class DialogService {
 
   openDialog(): void {
     this.nbDialogService.open(DialogComponent, { closeOnBackdropClick: true });
+  }
+
+  openVersionDialog(): void {
+    this.nbDialogService.open(VersionHistoryComponent, { closeOnBackdropClick: true });
   }
 
   openHelperDialog(
