@@ -16,38 +16,11 @@ export class EntryPointService {
   // #################################################################################
   private _entryPoints: EntryPoint[] = [
     {
-      id: 'standard',
-      title: 'Standard',
-      address: 'Standard-Nutzer',
-      description:
-        'Das hier ist der Standard-Einstiegspunkt. Wenn du nicht weißt, was auf dich zukommt oder was dich interessiert, wähle diesen Lernpfad. Hier wird dir alles gezeigt.',
-      image: '../../assets/images/explanation-images/discovery.svg',
-      sections: [
-        'beruf',
-        'html',
-        'css',
-        'bootstrap',
-        'git-basics',
-        'javascript',
-        'teamwork',
-        'typescript',
-        'prototyping',
-        'arbeitsmethoden',
-        'angular',
-        'packages',
-        'ionic',
-        'docker-basics',
-        'nestjs',
-        'design',
-        'automatisierte-tests',
-      ],
-    },
-    {
       id: 'berufsinteressierte',
-      title: 'Berufsinteressierte',
+      title: 'Berufsfelderkundung',
       address: 'Berufsinteressierter',
       description:
-        'Du interessierst dich für Web- und Apptechnologien, weißt aber noch nicht, was dich im Beruf erwartet? Wähle diesen Pfad aus, um mehr zu erfahren.',
+        'Du interessierst Dich für App- und Webtechnologien, weißt aber noch nicht, was Dich in diesem Berufsfeld erwartet? Wähle diesen Pfad aus, um mehr zu erfahren.',
       image: '../../assets/images/entry-point-images/berufsinteressent.svg',
       sections: ['beruf', 'html', 'css', 'bootstrap', 'git-basics', 'javascript'],
     },
@@ -56,7 +29,7 @@ export class EntryPointService {
       title: 'Praktikanten',
       address: 'Praktikant',
       description:
-        'Du bist Schüler, Student, oder befindest dich in einer Weiterbildung und willst ein Praktikum bei uns machen? Dieser Lernpfad bereitet dich bestens darauf vor.',
+        'Du bist Schüler:in, Student:in, nimmst an einer Weiterbildungsmaßnahme teil oder absolvierst bzw. suchst aus anderen Gründen ein Praktikum? Dieser Lernpfad hilft Dir weiter.',
       image: '../../assets/images/entry-point-images/praktikant.svg',
       sections: [
         'beruf',
@@ -80,7 +53,7 @@ export class EntryPointService {
       title: 'Unternehmen',
       address: 'Unternehmen',
       description:
-        'Dein Unternehmen sucht fähige App- und Webentwickler? Oder ihr möchtet gerne Anwendungsentwickler ausbilden?',
+        'Dein Unternehmen sucht fähige App- und Webentwickler:innen? Oder Ihr möchtet gerne Anwendungsentwickler:innen ausbilden? Dann ist dieser Lernpfad die richtige Wahl.',
       image: '../../assets/images/entry-point-images/company.svg',
       sections: [
         'html',
@@ -101,10 +74,19 @@ export class EntryPointService {
       ],
     },
     {
+      id: 'sprint',
+      title: 'Sprint',
+      address: 'Sprinter',
+      description:
+        'Du möchtest nicht vollkommen ins Detail gehen, aber mitreden können, wenn es um Webdevelopement geht? Dann ist dieser Pfad der richtige für Dich.',
+      image: '../../assets/images/explanation-images/strategy.svg',
+      sections: ['html', 'css', 'bootstrap', 'git-basics', 'javascript', 'typescript', 'angular', 'ionic', 'nestjs'],
+    },
+    {
       id: 'frontend',
       title: 'Frontend',
       address: 'Frontend-Entwickler',
-      description: 'Frontend ist dein Ding und hier willst du Neues lernen? Wähle diesen Lernpfad aus.',
+      description: 'Frontend ist Dein Ding und hier willst Du Neues lernen? Wähle diesen Lernpfad aus.',
       image: '../../assets/images/explanation-images/community.svg',
       sections: [
         'html',
@@ -126,7 +108,8 @@ export class EntryPointService {
       id: 'backend',
       title: 'Backend',
       address: 'Backend-Entwickler',
-      description: 'Du möchtest dich größtenteils im Bereich Backend weiterbilden? Dann wähle diesen Lernpfad aus.',
+      description:
+        'Du möchtest Dich größtenteils im Bereich Backend weiterbilden? Dann ist dieser Lernpfad der richtige.',
       image: '../../assets/images/explanation-images/build_product.svg',
       sections: [
         'javascript',
@@ -139,14 +122,33 @@ export class EntryPointService {
         'automatisierte-tests',
       ],
     },
+
     {
-      id: 'sprint',
-      title: 'Sprint',
-      address: 'Sprinter',
+      id: 'standard',
+      title: 'Standard',
+      address: 'Standard-Nutzer',
       description:
-        'Du möchtest nicht vollkommen ins Detail gehen, aber mitreden können, wenn es um Webdevelopement geht? Dann ist dieser Pfad der richtige für dich.',
-      image: '../../assets/images/explanation-images/strategy.svg',
-      sections: ['html', 'css', 'bootstrap', 'git-basics', 'javascript', 'typescript', 'angular', 'ionic', 'nestjs'],
+        'Das hier ist der Standard-Einstiegspunkt. Wenn Du Dir nicht sicher bist, was genau Dich interessiert oder ob einer der anderen Pfade zu Dir passt, dann wähle diesen Lernpfad. Hier wird dir alles gezeigt.',
+      image: '../../assets/images/explanation-images/discovery.svg',
+      sections: [
+        'beruf',
+        'html',
+        'css',
+        'bootstrap',
+        'git-basics',
+        'javascript',
+        'teamwork',
+        'typescript',
+        'prototyping',
+        'arbeitsmethoden',
+        'angular',
+        'packages',
+        'ionic',
+        'docker-basics',
+        'nestjs',
+        'design',
+        'automatisierte-tests',
+      ],
     },
   ];
 
