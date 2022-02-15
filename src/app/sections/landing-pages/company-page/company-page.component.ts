@@ -8,26 +8,26 @@ import { TextImageInterface } from '../../../modules/core/interfaces/text-image.
   styleUrls: ['./company-page.component.scss'],
 })
 export class CompanyPageComponent implements OnInit {
-  title = 'Du suchst fähige Entwickler für dein Unter&shy;nehmen?';
+  title = 'App- und Webentwicklung für verschiedenste unternehmerische Bedürfnisse';
   subtitle =
-    'Wir betreuen und evaluieren deine potenziellen Softwareentwickler im Web und App Bereich oder fördern dein Start-up.\n\n In unserer Akademie lernen sie, wie man mit aktuellen Technologien agile Web- und Appanwendungen professionell entwickelt und im Team effizient zusammenarbeitet.';
+    'Wir bieten Unternehmer:innen und Gründer:innen die Möglichkeit sich selbst ein technisches Basisverständnis anzueignen, um die Eignung potenzieller Mitarbeiter:innen oder Dienstleister:innen besser einschätzen und mit Ihnen kommunizieren zu können. \n\n    Für Praktikant:innen, Werkstudent:innen und Auszubildende können wir das Onboarding, die Aus- und Weiterbildung sowie bei Bedarf die Evaluation begleiten. \n\n        Ebenso profitieren Berufsanfänger:innen von unseren verschiedenen Angeboten. Sie erlangen eine solide Wissensbasis und sammeln praktische Erfahrungen, denn neben den technischen Grundlagen spielen eigenen Projekte sowie das gemeinsame Arbeiten an einem größeren Projekt eine zentrale Rolle. \n\n        Erfahrenere Entwickler:innen können Grundlagen wieder auffrischen und andere Bereiche vertiefen.    ';
   imageUrl = '../../assets/images/entry-point-images/company.svg';
   steps: TextImageInterface[] = [
     {
       title: 'Vorbereitung',
-      text: 'Im Rahmen der Akademie bereiten wir deine Kandidaten optimal auf ihr Praktikum oder den direkten Einstieg ins Team vor, sodass sie dich schnellstmöglich bei deinen Projekten unterstützen können.',
+      text: 'Wir bereiten optimal auf die späteren Einsatzbereiche und  Aufgaben vor. Dies kann die Suche nach passenden IT-Dienstleistungen sein, ein Praktikum oder der direkte Einstieg in ein Entwicklungs-Team sein, sodass jeder schnellstmöglich produktiv mitarbeiten kann.',
       imageUrl: '../../assets/images/explanation-images/academy.svg',
       imageAlt: 'Bild von einem Menschen der auf Büchern steht.',
     },
     {
       title: 'Evaluation',
-      text: 'Durch die persönliche Betreuung und die wöchentlichen Meetings können wir den Lernstand der Akademie Teilnehmer gut einschätzen und evaluieren, inwiefern sich ein Kandidat für dein Unternehmen eignet.',
+      text: 'Durch die persönliche Betreuung, die wöchentlichen Meetings sowie den Fortschritt in der Akademie und der Bearbeitung praktischer Projekte, können wir die Teilnehmenden für Dich  evaluieren. Diese Evaluation umfasst eine Einschätzung bzgl. des technischen Grundverständnisses, der Eigeninitiative, der Motivation, des Engagement, sowie der Kommunikations- und Teamfähigkeit der Teilnehmenden.',
       imageUrl: '../../assets/images/explanation-images/strategy.svg',
       imageAlt: 'Bild von zwei diskutierenden Menschen.',
     },
     {
-      title: 'Übernahme',
-      text: 'Auch nach der Übernahme in dein Unternehmen können die Absolventen Teil der Community bleiben und unsere Akademie nutzen. Wir bleiben gerne in Kontakt und unterstützen euch bei euren Projekten.',
+      title: 'Weiterbildung',
+      text: 'Neben den technsichen Grundlagen und den Erfahrungen in eigenen Projekten und der Arbeit in einem größeren Projektteam bietet lenne.Learning darüber hinaus die Möglichkeit Wissen aufzufrischen und sich in speziellen Bereichen stetig weiterzubilden.',
       imageUrl: '../../assets/images/explanation-images/community.svg',
       imageAlt: 'Bild von Menschen die Blöcke in einem Smartphone aufbauen.',
     },
