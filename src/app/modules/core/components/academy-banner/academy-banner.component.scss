@@ -1,16 +1,20 @@
 @import 'src/assets/scss/utils';
 .academy-banner {
   background-color: var(--color-primary-500);
+  min-height: 220px;
 }
 
 .hover-img {
   width: 175px;
   position: relative;
   right: -16px;
-  top: 32px;
+  top: 78px;
 }
 
 .banner-text {
+  justify-content: center;
+  text-align: center;
+
   & a {
     text-decoration: none;
   }
@@ -18,7 +22,6 @@
 
 .rocket-img {
   position: relative;
-  top: -30px;
   width: 280px;
 }
 
@@ -29,7 +32,15 @@
 
 @include media-breakpoint-up('xl') {
   .banner-text {
-    right: 100px;
+    right: 0px;
     position: relative;
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 1.5rem;
   }
+}
+
+.mt-5 {
+  margin-bottom: 2rem !important;
 }
