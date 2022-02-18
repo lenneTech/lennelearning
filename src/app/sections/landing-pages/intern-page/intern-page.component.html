@@ -25,7 +25,12 @@
         <app-text-image-list></app-text-image-list>
       </div>
     </div>
-    <app-academy-banner (buttonClicked)="openMail()"> </app-academy-banner>
+    <app-academy-banner
+      title="Melde Dich bei uns!"
+      text="Haben wir Dein Interesse geweckt und Du möchtest ein Praktikum bei uns absolvieren? Du machst bereits bei einem anderen Unternehmen ein Praktikum, aber möchtest trotzdem lenne.Learning nutzen?<br /> <br />Nimm Kontakt mit uns auf und wir klären gemeinsam die nötigen Einzelheiten."
+      (buttonClicked)="openMail()"
+    >
+    </app-academy-banner>
     <div class="container-fluid p-3">
       <h3 class="section-title">Das sagen unsere Teilnehmer:innen</h3>
       <div class="section">

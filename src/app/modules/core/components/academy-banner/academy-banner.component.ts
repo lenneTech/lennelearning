@@ -9,6 +9,9 @@ import { EntryPointService } from '../../services/entry-point.service';
 })
 export class AcademyBannerComponent {
   @Input() entryPointId: string;
+  @Input() title: string;
+  @Input() text: string;
+
   @Output() buttonClicked = new EventEmitter<boolean>();
 
   constructor(private entryPointService: EntryPointService, private router: Router) {}

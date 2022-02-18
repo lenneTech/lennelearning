@@ -6,12 +6,8 @@
       class="hover-img d-none d-xl-block"
     />
     <div class="banner-text align-self-center">
-      <h2 class="color-white">Melde Dich bei uns!</h2>
-      <p class="color-white fs-6 fw-light mb-8 mt-5">
-        Haben wir Dein Interesse geweckt und Du möchtest ein Praktikum bei uns absolvieren? Du machst bereits bei einem
-        anderen Unternehmen ein Praktikum, aber möchtest trotzdem lenne.Learning nutzen? <br /><br /><br />
-        Nimm Kontakt mit uns auf und wir klären gemeinsam die nötigen Einzelheiten.
-      </p>
+      <h2 class="color-white">{{ title }}</h2>
+      <p class="color-white fs-6 fw-light mb-8 mt-5" [innerHTML]="text"></p>
       <button class="mb-3" nbButton status="warning" (click)="onButtonClicked()">Kontakt</button>
     </div>
 
