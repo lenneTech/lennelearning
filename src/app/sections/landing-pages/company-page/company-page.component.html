@@ -19,35 +19,34 @@
       <app-brand-banner></app-brand-banner>
     </div>
 
-    <div class="container">
+    <div class="container mb-3 mt-3">
       <app-steps [steps]="steps"></app-steps>
     </div>
+    <app-academy-banner
+      title="Haben wir Dein Interesse geweckt?"
+      text="Dann nimm Kontakt mit uns auf und wir besprechen gemeinsam, welches unserer Angebot am besten zu Deinen Bedürfnissen passt.    "
+    >
+    </app-academy-banner>
 
-    <div class="container-fluid p-0 overflow-hidden bg-primary-500">
+    <div class="container-fluid p-0 mt-5 mb overflow-hidden">
+      <h1 class="text-center">Deine Vorteile auf einen Blick</h1>
       <div class="section">
         <app-features [features]="features"></app-features>
+        <img
+          src="../../../../../assets/images/banner-images/features.svg"
+          alt="Illustration einer Person auf einer Hoverboard-Rakete"
+          class="hover-img d-none d-xl-block mx-auto mb-3 mt-0"
+        />
       </div>
     </div>
-    <app-academy-banner [entryPointId]="'unternehmen'"></app-academy-banner>
-    <div class="conatiner-fluid">
+
+    <div class="container-fluid mt-5">
+      <h1 class="text-center font-weight-bold">Das sagen unsere Unternehmenskund:innen</h1>
       <div class="section">
         <app-company-testimonial></app-company-testimonial>
       </div>
     </div>
-
-    <div class="container">
-      <div class="section">
-        <app-contact-card
-          [title]="'Melde dich bei uns!'"
-          [text]="
-            'Haben wir dein Interesse geweckt?\n Dann bespreche deine Ziele mit uns.\n Wir freuen uns darauf, dich zu unterstützen!'
-          "
-          [image]="'../../assets/images/banner-images/contact.svg'"
-          [buttonText]="'Angebot Anfordern'"
-          (buttonClicked)="sendOffer()"
-        ></app-contact-card>
-      </div>
-    </div>
+    <app-work-with-us></app-work-with-us>
   </nb-layout-column>
   <nb-layout-footer fixed>
     <app-footer></app-footer>

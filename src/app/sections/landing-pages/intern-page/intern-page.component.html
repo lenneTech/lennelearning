@@ -24,33 +24,19 @@
         <app-text-image-list></app-text-image-list>
       </div>
     </div>
-    <app-academy-banner [entryPointId]="'praktikant'"></app-academy-banner>
-    <div class="container-fluid p-3 bg-brand-banner">
+    <app-academy-banner
+      title="Melde Dich bei uns!"
+      text="Haben wir Dein Interesse geweckt und Du möchtest ein Praktikum bei uns absolvieren? Du machst bereits bei einem anderen Unternehmen ein Praktikum, aber möchtest trotzdem lenne.Learning nutzen?<br /> <br />Nimm Kontakt mit uns auf und wir klären gemeinsam die nötigen Einzelheiten."
+      (buttonClicked)="openMail()"
+    >
+    </app-academy-banner>
+    <div class="container-fluid p-3">
+      <h3 class="section-title">Das sagen unsere Teil&shy;nehmer:innen</h3>
       <div class="section">
         <app-company-testimonial [review]="review"></app-company-testimonial>
       </div>
     </div>
-
-    <div class="container">
-      <div class="section">
-        <h2 class="section-title">Unsere Tutoren helfen dir gerne weiter</h2>
-        <app-tutor-cards></app-tutor-cards>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="section">
-        <app-contact-card
-          [title]="'Bewirb dich bei uns!'"
-          [text]="
-            'Haben wir dein Interesse geweckt?\n Dann melde dich bei uns und erzähl uns mehr über dich.\n Wir freuen uns darauf, dich kennenzulernen!'
-          "
-          [image]="'../../assets/images/banner-images/contact.svg'"
-          [buttonText]="'Bewerbung Senden'"
-          (buttonClicked)="sendApplication()"
-        ></app-contact-card>
-      </div>
-    </div>
+    <app-work-with-us></app-work-with-us>
   </nb-layout-column>
   <nb-layout-footer fixed>
     <app-footer></app-footer>

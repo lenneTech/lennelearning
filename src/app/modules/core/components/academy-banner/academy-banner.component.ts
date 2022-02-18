@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { EntryPointService } from '../../services/entry-point.service';
 
@@ -9,7 +9,16 @@ import { EntryPointService } from '../../services/entry-point.service';
 })
 export class AcademyBannerComponent {
   @Input() entryPointId: string;
+  @Input() title: string;
+  @Input() text: string;
+
+  @Output() buttonClicked = new EventEmitter<boolean>();
+
   constructor(private entryPointService: EntryPointService, private router: Router) {}
+  onButtonClicked(): void {
+    this.buttonClicked.emit(true);
+  }
+
   setSelectedEntryPoint() {
     this.entryPointService.setEntryPointById(this.entryPointId);
   }

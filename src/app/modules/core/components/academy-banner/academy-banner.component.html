@@ -1,4 +1,4 @@
-<div class="container-fluid academy-banner p-5 p-md-0">
+<div class="container-fluid academy-banner">
   <div class="container d-flex justify-content-around justify-content-md-between">
     <img
       src="../../../../../assets/images/banner-images/spaceboard.svg"
@@ -6,9 +6,9 @@
       class="hover-img d-none d-xl-block"
     />
     <div class="banner-text align-self-center">
-      <h2 class="color-white">Worauf wartest Du?</h2>
-      <p class="color-white fs-5 fw-light mb-5">Starte jetzt in unserer Akademie durch</p>
-      <a class="color-white mt-5 fs-5 banner-btn" (click)="setRecommendation()">Wähle deinen Lernpfad aus ❯</a>
+      <h2 class="banner-text-title">{{ title }}</h2>
+      <p [innerHTML]="text"></p>
+      <button nbButton status="warning" (click)="onButtonClicked()">Kontakt</button>
     </div>
 
     <img

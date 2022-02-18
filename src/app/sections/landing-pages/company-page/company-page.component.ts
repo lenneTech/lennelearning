@@ -35,28 +35,18 @@ export class CompanyPageComponent implements OnInit {
   features: TextImageInterface[] = [
     {
       title: 'Einfach',
-      text: 'Wir übernehmen die Vorbereitung auf das Praktikum oder den direkten Einstieg ins Team für dich. So kannst du Zeit sparen und dich aufs Wesentliche konzentrieren.',
+      text: 'Wir übernehmen für Dich die Einarbeitung, Betreuung, Weiterbildung  oder die Evaluation. Wir klären offene  Fragen und unterstützen die  Teilnehmenden bei der Arbeit an realen Projekten.',
       iconClass: 'bi-x-diamond-fill',
     },
     {
       title: 'Individuell',
-      text: 'Wir erstellen auch individuell Kurse für die Technologien, mit denen ihr arbeitet. So werden die Lernpläne der Kandidaten auf deine Ziele zugeschnitten.',
+      text: 'Wir erstellen je nach Möglichkeit auch individuelle Kurse für die Technologien, mit denen Ihr arbeitet. So werden die Lernpläne der Kandidaten auf die Ziele Deines Unternehmens zugeschnitten. ',
       iconClass: 'bi-person-lines-fill',
     },
     {
       title: 'Flexibel',
-      text: 'Die Akademie ist monatlich kündbar. So kannst du schon frühzeitig Kandidaten ins Team überführen, sobald sie bereit sind.',
+      text: 'Die lenne.Learning ist monatlich kündbar und kann flexibel gestaltet werden: Verschieden Lernpfade, persönliche Sprechstunden, individuelle Projekte und viel mehr ...',
       iconClass: 'bi-calendar2-week-fill',
-    },
-    {
-      title: 'Ausbildung',
-      text: 'Wir bilden unabhängig von der Akademie auch im Bereich der Anwendungsentwicklung aus. Wenn dein Unternehmen Fachinformatiker benötigt, können wir die Ausbildung begleiten.',
-      iconClass: 'bi-briefcase-fill',
-    },
-    {
-      title: 'Kooperation',
-      text: 'Bleibe auch in Zukunft mit uns in Kontakt und arbeite mit uns an spannenden Projekten. Wir unterstützen dich gerne!',
-      iconClass: 'bi-people-fill',
     },
   ];
 

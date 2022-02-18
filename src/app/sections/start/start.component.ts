@@ -25,7 +25,7 @@ export class StartComponent {
     },
     {
       id: 'praktikant',
-      title: 'Praktikanten',
+      title: 'Praktikant:innen',
       address: 'Praktikant',
       description:
         'Du bist Schüler:in, Student:in, nimmst an einer Weiterbildungsmaßnahme teil oder absolvierst bzw. suchst aus anderen Gründen ein Praktikum?',

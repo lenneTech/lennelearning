@@ -21,6 +21,7 @@ import { GoalsComponent } from './components/goals/goals.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HelperDialogComponent } from './components/helper-dialog/helper-dialog.component';
 import { InfoCardComponent } from './components/info-card/info-card.component';
+import { ProcessInterestedComponent } from './components/process-interested/process-interested.component';
 import { ReviewListComponent } from './components/review-list/review-list.component';
 import { ReviewComponent } from './components/review/review.component';
 import { SolutionDialogComponent } from './components/solution-dialog/solution-dialog.component';
@@ -35,6 +36,7 @@ import { NestSvgComponent } from './components/svg-components/nest-svg/nest-svg.
 import { TypescriptSvgComponent } from './components/svg-components/typescript-svg/typescript-svg.component';
 import { TextImageListComponent } from './components/text-image-list/text-image-list.component';
 import { TutorCardsComponent } from './components/tutor-cards/tutor-cards.component';
+import { WorkWithUsComponent } from './components/work-with-us/work-with-us.component';
 
 @NgModule({
   imports: [
@@ -63,6 +65,8 @@ import { TutorCardsComponent } from './components/tutor-cards/tutor-cards.compon
     AcademyPictureComponent,
     AcademyBannerComponent,
     GoalsComponent,
+    ProcessInterestedComponent,
+    WorkWithUsComponent,
 
     // Dialogs
     HelperDialogComponent,
@@ -122,6 +126,8 @@ import { TutorCardsComponent } from './components/tutor-cards/tutor-cards.compon
     AcademyPictureComponent,
     AcademyBannerComponent,
     GoalsComponent,
+    ProcessInterestedComponent,
+    WorkWithUsComponent,
   ],
 })
 export class CoreModule {}

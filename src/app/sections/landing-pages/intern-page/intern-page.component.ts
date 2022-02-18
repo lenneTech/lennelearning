@@ -16,7 +16,7 @@ export class InternPageComponent implements OnInit {
     imageUrl: '../../../assets/images/people-images/daniel_review.jpg',
     text: 'Im Praktikum habe ich einen sehr guten Einblick in den Beruf eines Webentwicklers bekommen. Ich bekam die Chance, an einem eigenen Projekt zu arbeiten, bei dem mich die Mitarbeiter täglich unterstützt haben. Auch bei unternehmensinternen Projekten durfte ich mitentwickeln und meine Meinung einbringen. Das Arbeiten im Team war super angenehm und offen, gerade vor Ort im Büro. Mir hat es sehr viel Spaß gemacht und ich konnte viele Erfahrungen sammeln.',
     reviewerTitle: 'Daniel König',
-    reviewerSubtitle: 'Praktikant - lenne.Tech GmbH',
+    reviewerSubtitle: 'Praktikant',
   };
 
   constructor(private metaService: MetaService) {}
@@ -29,6 +29,9 @@ export class InternPageComponent implements OnInit {
   }
 
   sendApplication(): void {
+    window.open('mailto:info@lenne.tech');
+  }
+  openMail(): void {
     window.open('mailto:info@lenne.tech');
   }
 }

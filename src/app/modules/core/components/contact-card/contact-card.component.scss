@@ -1,7 +1,5 @@
 .contact-card {
   background-color: var(--color-primary-500);
-  overflow: hidden;
-  box-shadow: 0 0 4px 0 #bdbdbd;
   border: none;
 
   &-title {
@@ -19,12 +17,16 @@
 
   &-image {
     height: 300px;
-    width: auto;
   }
 
   &-left {
-    padding-left: 3rem;
-    padding-top: 2rem;
+    padding: 3rem;
+  }
+
+  &-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
