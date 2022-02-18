@@ -1,4 +1,4 @@
-<div class="container-fluid academy-banner p-5 p-md-0">
+<div class="container-fluid academy-banner">
   <div class="container d-flex justify-content-around justify-content-md-between">
     <img
       src="../../../../../assets/images/banner-images/spaceboard.svg"
@@ -6,9 +6,9 @@
       class="hover-img d-none d-xl-block"
     />
     <div class="banner-text align-self-center">
-      <h2 class="color-white">{{ title }}</h2>
-      <p class="color-white fs-6 fw-light mb-8 mt-5" [innerHTML]="text"></p>
-      <button class="mb-3" nbButton status="warning" (click)="onButtonClicked()">Kontakt</button>
+      <h2 class="banner-text-title">{{ title }}</h2>
+      <p [innerHTML]="text"></p>
+      <button nbButton status="warning" (click)="onButtonClicked()">Kontakt</button>
     </div>
 
     <img

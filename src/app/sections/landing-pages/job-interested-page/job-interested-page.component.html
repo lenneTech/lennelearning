@@ -21,18 +21,16 @@
         <app-process-interested></app-process-interested>
       </div>
     </div>
-    <div class="container">
-      <div class="section">
-        <app-contact-card
-          [title]="'Melde dich bei uns!'"
-          [text]="
-            'Du hast Dir einen ersten Überblick verschafft und möchtest jetzt noch mehr erfahren, oder auch einen Einblick in die Praxis bekommen? Dann nimm Kontakt mit uns auf und wir besprechen gemeinsam, welches unserer Angebot am besten zu Deinen Bedürfnissen passt.'
-          "
-          [image]="'../../assets/images/banner-images/features.svg'"
-          [buttonText]="'Kontakt'"
-          (buttonClicked)="sendApplication()"
-        ></app-contact-card>
-      </div>
+    <div class="section">
+      <app-contact-card
+        [title]="'Melde dich bei uns!'"
+        [text]="
+          'Du hast Dir einen ersten Überblick verschafft und möchtest jetzt noch mehr erfahren, oder auch einen Einblick in die Praxis bekommen? Dann nimm Kontakt mit uns auf und wir besprechen gemeinsam, welches unserer Angebot am besten zu Deinen Bedürfnissen passt.'
+        "
+        [image]="'../../assets/images/banner-images/features.svg'"
+        [buttonText]="'Kontakt'"
+        (buttonClicked)="sendApplication()"
+      ></app-contact-card>
     </div>
   </nb-layout-column>
   <nb-layout-footer fixed>

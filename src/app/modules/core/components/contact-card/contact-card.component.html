@@ -1,18 +1,16 @@
-<div class="d-flex justify-content-center">
-  <nb-card class="contact-card">
-    <nb-card-body>
-      <div class="row">
-        <div class="col-12 col-lg-6 contact-card-left">
-          <h2 class="contact-card-title">{{ title }}</h2>
-          <div class="contact-card-text mt-3">{{ text }}</div>
-          <button class="mt-5" nbButton status="warning" (click)="onButtonClicked()">{{ buttonText }}</button>
-        </div>
-        <div class="col-12 col-lg-6">
-          <div class="contact-card-image-div">
-            <img loading="lazy" class="contact-card-image" [src]="image" alt="Kontakt Illustration" />
-          </div>
+<div class="contact-card">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-6 contact-card-left">
+        <h2 class="contact-card-title">{{ title }}</h2>
+        <div class="contact-card-text mt-3">{{ text }}</div>
+        <button class="mt-5" nbButton status="warning" (click)="onButtonClicked()">{{ buttonText }}</button>
+      </div>
+      <div class="col-12 col-lg-6 contact-card-right">
+        <div class="contact-card-image-div">
+          <img loading="lazy" class="contact-card-image" [src]="image" alt="Kontakt Illustration" />
         </div>
       </div>
-    </nb-card-body>
-  </nb-card>
+    </div>
+  </div>
 </div>
