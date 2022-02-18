@@ -10,7 +10,7 @@ export class StepsComponent {
   @Input() steps: TextImageInterface[] = [
     {
       title: 'Grundlagen',
-      text: 'Durch Tutorials in Form von Texten, Videokursen und Spielen bekommen die Teilnehmenden einen Einstieg in die Grundlagen der App- & Webentwicklung. Die Lerncommunity und erfahrene Tutor:innen unterstützen sie dabei.',
+      text: 'Durch Tutorials in Form von Texten, Videokursen und Spielen bekommen die Teilnehmenden einen Einstieg in die Grundlagen der App- und Webentwicklung. Die Lerncommunity und erfahrene Tutor:innen unterstützen sie dabei.',
       imageUrl: '../../assets/images/explanation-images/academy.svg',
       imageAlt: 'Bild von einem Menschen, der auf Büchern steht.',
     },
@@ -22,7 +22,7 @@ export class StepsComponent {
     },
     {
       title: 'Kooperation',
-      text: 'Hier lernen die Teilnehmenden zusammen mit dem lenne.Learning-Team, wie gemeinsam an Quellcode gearbeitet wird, den Code zu testen, wie sich Verbesserungsvorschläge konstruktiv einbringen lassen und vieles mehr.',
+      text: 'Hier lernen die Teilnehmenden zusammen mit dem lenne.Learning-Team, wie gemeinsam an Quellcode gearbeitet wird, wie sie den Code testen, wie sich Verbesserungsvorschläge konstruktiv einbringen lassen und vieles mehr.',
       imageUrl: '../../assets/images/explanation-images/kooperation.svg',
       imageAlt: 'Bild von Menschen, die Puzzleteile miteinander verbinden.',
     },

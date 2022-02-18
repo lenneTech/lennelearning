@@ -21,6 +21,7 @@ import { GoalsComponent } from './components/goals/goals.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HelperDialogComponent } from './components/helper-dialog/helper-dialog.component';
 import { InfoCardComponent } from './components/info-card/info-card.component';
+import { ProcessInterestedComponent } from './components/process-interested/process-interested.component';
 import { ReviewListComponent } from './components/review-list/review-list.component';
 import { ReviewComponent } from './components/review/review.component';
 import { SolutionDialogComponent } from './components/solution-dialog/solution-dialog.component';
@@ -63,6 +64,7 @@ import { TutorCardsComponent } from './components/tutor-cards/tutor-cards.compon
     AcademyPictureComponent,
     AcademyBannerComponent,
     GoalsComponent,
+    ProcessInterestedComponent,
 
     // Dialogs
     HelperDialogComponent,
@@ -122,6 +124,7 @@ import { TutorCardsComponent } from './components/tutor-cards/tutor-cards.compon
     AcademyPictureComponent,
     AcademyBannerComponent,
     GoalsComponent,
+    ProcessInterestedComponent,
   ],
 })
 export class CoreModule {}
