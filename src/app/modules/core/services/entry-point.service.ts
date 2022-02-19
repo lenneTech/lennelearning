@@ -26,7 +26,7 @@ export class EntryPointService {
     },
     {
       id: 'praktikanten',
-      title: 'Praktikanten',
+      title: 'Praktikum',
       address: 'Praktikant',
       description:
         'Du bist Schüler:in, Student:in, nimmst an einer Weiterbildungsmaßnahme teil oder absolvierst bzw. suchst aus anderen Gründen ein Praktikum? Dieser Lernpfad hilft Dir weiter.',

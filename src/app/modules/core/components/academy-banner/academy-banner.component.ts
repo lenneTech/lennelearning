@@ -12,11 +12,9 @@ export class AcademyBannerComponent {
   @Input() title: string;
   @Input() text: string;
 
-  @Output() buttonClicked = new EventEmitter<boolean>();
-
   constructor(private entryPointService: EntryPointService, private router: Router) {}
   onButtonClicked(): void {
-    this.buttonClicked.emit(true);
+    window.open('mailto:info@lenne.tech');
   }
 
   setSelectedEntryPoint() {
