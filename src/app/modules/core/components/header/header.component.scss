@@ -1,11 +1,75 @@
+@import 'src/assets/scss/utils';
 :host {
   width: 100%;
 }
-.container {
-  padding: 0 !important;
+.background {
+  background-color: white;
 }
+.container {
+  // padding: 0 !important;
 
-.logo {
-  width: 180px;
-  cursor: pointer;
+  .logo {
+    width: 180px;
+    cursor: pointer;
+    margin-bottom: 3px;
+  }
+
+  .nav-toggler {
+    background-color: #fff;
+    border: none;
+    box-shadow: none;
+    outline: none;
+
+    & .bi-list {
+      font-size: 30px;
+    }
+
+    & .bi-x-lg {
+      font-size: 20px;
+    }
+  }
+
+  .nav-item {
+    font-size: 18px;
+    font-weight: 500;
+
+    .dropdown-menu {
+      border: none;
+
+      & li:nth-of-type(2) {
+        margin: 7px 0;
+      }
+
+      .dropdown-item {
+        font-size: 16px;
+
+        &:active {
+          background-color: #0f50be;
+        }
+      }
+      .dropdown-item.active {
+        color: black;
+        background-color: white;
+      }
+    }
+  }
+
+  .active {
+    // border-bottom: 4px solid #fab85a;
+
+    text-decoration: underline #fab85a;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 5px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    .nav-item {
+      margin-left: 60px;
+    }
+    .dropdown-item {
+      font-size: 16px;
+      text-align: center;
+      padding: 15px;
+    }
+  }
 }
