@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.3](https://github.com/lenneTech/academy/compare/v1.3.2...v1.3.3) (2022-02-22)
+
+### Bug Fixes
+
+- Center footer text ([44fc41c](https://github.com/lenneTech/academy/commit/44fc41caf61ed19da678833bef7ab67b7207b8a6))
+- **LTAK-13:** fixed a typo ([fea8cd2](https://github.com/lenneTech/academy/commit/fea8cd2a061dcdf5a0fdb6c2729704da6dad3f02))
+- **LTAK-13:** text corrections ([7a47a10](https://github.com/lenneTech/academy/commit/7a47a10e08f19e41aac27f88d191bdd2edbf9c44))
+
 ### [1.3.2](https://github.com/lenneTech/academy/compare/v1.3.1...v1.3.2) (2022-02-19)
 
 ### [1.3.1](https://github.com/lenneTech/academy/compare/v1.3.0...v1.3.1) (2022-02-03)
