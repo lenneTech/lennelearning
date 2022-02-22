@@ -18,7 +18,7 @@ export class EntryPointService {
     {
       id: 'berufsinteressierte',
       title: 'Berufsfelderkundung',
-      address: 'Berufsinteressierter',
+      address: 'Beruf',
       description:
         'Du interessierst Dich für App- und Webtechnologien, weißt aber noch nicht, was Dich in diesem Berufsfeld erwartet? Wähle diesen Pfad aus, um mehr zu erfahren.',
       image: '../../assets/images/entry-point-images/berufsinteressent.svg',
@@ -27,7 +27,7 @@ export class EntryPointService {
     {
       id: 'praktikanten',
       title: 'Praktikum',
-      address: 'Praktikant',
+      address: 'Praktikum',
       description:
         'Du bist Schüler:in, Student:in, nimmst an einer Weiterbildungsmaßnahme teil oder absolvierst bzw. suchst aus anderen Gründen ein Praktikum? Dieser Lernpfad hilft Dir weiter.',
       image: '../../assets/images/entry-point-images/praktikant.svg',
@@ -76,7 +76,7 @@ export class EntryPointService {
     {
       id: 'sprint',
       title: 'Sprint',
-      address: 'Sprinter',
+      address: 'Sprint',
       description:
         'Du möchtest nicht vollkommen ins Detail gehen, aber mitreden können, wenn es um Webdevelopement geht? Dann ist dieser Pfad der richtige für Dich.',
       image: '../../assets/images/explanation-images/strategy.svg',
@@ -85,7 +85,7 @@ export class EntryPointService {
     {
       id: 'frontend',
       title: 'Frontend',
-      address: 'Frontend-Entwickler',
+      address: 'Frontend',
       description: 'Frontend ist Dein Ding und hier willst Du Neues lernen? Wähle diesen Lernpfad aus.',
       image: '../../assets/images/explanation-images/community.svg',
       sections: [
@@ -107,7 +107,7 @@ export class EntryPointService {
     {
       id: 'backend',
       title: 'Backend',
-      address: 'Backend-Entwickler',
+      address: 'Backend',
       description:
         'Du möchtest Dich größtenteils im Bereich Backend weiterbilden? Dann ist dieser Lernpfad der richtige.',
       image: '../../assets/images/explanation-images/build_product.svg',
@@ -126,7 +126,7 @@ export class EntryPointService {
     {
       id: 'standard',
       title: 'Standard',
-      address: 'Standard-Nutzer',
+      address: 'Standard',
       description:
         'Das hier ist der Standard-Einstiegspunkt. Wenn Du Dir nicht sicher bist, was genau Dich interessiert oder ob einer der anderen Pfade zu Dir passt, dann wähle diesen Lernpfad. Hier wird dir alles gezeigt.',
       image: '../../assets/images/explanation-images/discovery.svg',
