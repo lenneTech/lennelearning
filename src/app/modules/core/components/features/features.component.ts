@@ -16,7 +16,7 @@ export class FeaturesComponent {
     },
     {
       title: 'Lernpfade',
-      text: 'Zusätzlich zu den Videokursen fertigen wir auf den jeweiligen Lernpfad abgestimmte Aufgabenkataloge, Tipps und Muster-lösungen an, um die Teilnehmenden optimal zu unterstützen.',
+      text: 'Zusätzlich zu den Videokursen fertigen wir auf den jeweiligen Lernpfad abgestimmte Aufgabenkataloge, Tipps und Musterlösungen an, um die Teilnehmenden optimal zu unterstützen.',
       iconClass: 'bi-layout-text-sidebar-reverse',
     },
     {
