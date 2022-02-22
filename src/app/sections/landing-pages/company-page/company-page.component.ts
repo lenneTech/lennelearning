@@ -15,7 +15,7 @@ export class CompanyPageComponent implements OnInit {
   steps: TextImageInterface[] = [
     {
       title: 'Vorbereitung',
-      text: 'Wir bereiten optimal auf die späteren Einsatzbereiche und  Aufgaben vor. Dies kann die Suche nach passenden IT-Dienstleistungen sein, ein Praktikum oder der direkte Einstieg in einteam sein, sodass jeder schnellstmöglich produktiv mitarbeiten kann.',
+      text: 'Wir bereiten optimal auf die späteren Einsatzbereiche und  Aufgaben vor. Dies kann die Suche nach passenden IT-Dienstleistungen sein, ein Praktikum oder der direkte Einstieg in ein Entwicklungsteam sein, sodass jeder schnellstmöglich produktiv mitarbeiten kann.',
       imageUrl: '../../assets/images/explanation-images/academy.svg',
       imageAlt: 'Bild von einem Menschen der auf Büchern steht.',
     },
