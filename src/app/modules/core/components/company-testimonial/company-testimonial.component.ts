@@ -13,6 +13,12 @@ export class CompanyTestimonialComponent {
     reviewerTitle: 'Christopher Klein & Jens Helbig \n Gründer und Geschäftsführer',
     reviewerSubtitle: 'Buuk GmbH',
   };
+  @Input() review_two: Review = {
+    imageUrl: '',
+    text: 'Ich arbeite seit mehreren Monaten mit den Jungs zusammen. Zu Beginn haben wir über mein App-Design gesprochen. Mittlerweile gehe ich die ganze Akademie im Schnelldurchlauf durch mithilfe des schnellen Pfades für Start-Ups und erhalte so in kurzer Zeit einen Einblick in alle technischen Themen. Im Gegensatz zu anderen, vorgefertigten Programmen wird hier bei der lenne.Learning jeder individuell nach vorne gebracht',
+    reviewerTitle: 'Julian Kutza \n Gründer und Geschäftsführer',
+    reviewerSubtitle: 'Firework Network UG',
+  };
 
   constructor() {}
 }
