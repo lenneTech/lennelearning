@@ -19,6 +19,5 @@ export class CompanyTestimonialComponent {
     reviewerTitle: 'Julian Kutza \n Gründer und Geschäftsführer',
     reviewerSubtitle: 'Firework Network UG',
   };
-
   constructor() {}
 }
