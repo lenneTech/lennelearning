@@ -8,19 +8,14 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
   openDropdown = false;
-  activatedRoute = false;
-  constructor(private router: Router) {
-    console.log(this.router.url);
-    if (
-      this.router.url === '/berufsinteressierte' ||
-      this.router.url === '/praktikanten' ||
-      this.router.url === '/unternehmen'
-    ) {
-      this.activatedRoute = true;
-    }
-  }
+  currentRoute: string;
+  constructor(private router: Router) {}
 
   switch() {
     this.openDropdown = !this.openDropdown;
+  }
+
+  getCurrentRoute() {
+    return this.router.url;
   }
 }

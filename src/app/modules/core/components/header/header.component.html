@@ -33,7 +33,7 @@
         <ul class="navbar-nav">
           <li class="nav-item dropdown">
             <a
-              class="nav-link dropdown-toggle {{ activatedRoute ? 'active' : '' }}"
+              class="nav-link dropdown-toggle"
               href="#"
               id="navbarDropdownMenuLink"
               role="button"
@@ -43,28 +43,30 @@
               Unser Angebot
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li>
+              <li class="item">
                 <a class="dropdown-item" routerLink="/berufsinteressierte" routerLinkActive="active"
-                  >Berufsinteressierte
-                </a>
+                  >Berufsinteressierte </a
+                ><app-underline-animation
+                  currentRoute="{{ getCurrentRoute() === '/berufsinteressierte' }}"
+                ></app-underline-animation>
               </li>
-              <li>
-                <a class="dropdown-item" routerLink="/praktikanten" routerLinkActive="active">Praktikant:innen</a>
+              <li class="item">
+                <a class="dropdown-item" routerLink="/praktikanten" routerLinkActive="active">Praktikant:innen</a
+                ><app-underline-animation
+                  currentRoute="{{ getCurrentRoute() === '/praktikanten' }}"
+                ></app-underline-animation>
               </li>
-              <li><a class="dropdown-item" routerLink="/unternehmen" routerLinkActive="active">Unternehmen</a></li>
+              <li class="item">
+                <a class="dropdown-item" routerLink="/unternehmen" routerLinkActive="active">Unternehmen</a>
+                <app-underline-animation
+                  currentRoute="{{ getCurrentRoute() === '/unternehmen' }}"
+                ></app-underline-animation>
+              </li>
             </ul>
           </li>
-          <li class="nav-item">
+          <li class="nav-item item">
             <a class="nav-link scroll-link" routerLinkActive="active" routerLink="/lernpfade">Lernpfade</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link scroll-link" routerLinkActive="active" routerLink="team">Team</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link scroll-link" routerLinkActive="active" routerLink="preise">Preise</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link scroll-link" routerLinkActive="active" routerLink="kontakt">Kontakt</a>
+            <app-underline-animation currentRoute="{{ getCurrentRoute() === '/lernpfade' }}"></app-underline-animation>
           </li>
         </ul>
       </div>
