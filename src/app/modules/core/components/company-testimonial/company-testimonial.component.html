@@ -1,15 +1,14 @@
 <div class="container">
   <div class="row d-flex justify-content-center mb">
+    <img
+      src="../../../../../assets/images/quote illust orange.svg"
+      alt="Anführungszeichen umranded von einem orangenen Kreis"
+      class="quote"
+    />
     <div class="col-12 col-md-8 d-flex flex-column align-items-center">
-      <div class="review-text mb-1">„{{ review.text }}“</div>
-      <div class="d-flex flex-column align-items-center p-2 mb-1">
-        <academy-picture
-          *ngIf="review?.imageUrl"
-          [image]="review.imageUrl"
-          alt="Bild von einem Menschen"
-          imgClass="d-block image-circle"
-        ></academy-picture>
-        <div class="reviewer-text mt-3">
+      <div class="review-text mb-1">{{ review.text }}</div>
+      <div class="d-flex flex-column align-items-center p-2 mb-1 ms-auto">
+        <div class="reviewer-text mt-3 ms-auto">
           {{ review.reviewerTitle }}
           <br />
           <b>{{ review.reviewerSubtitle }}</b>

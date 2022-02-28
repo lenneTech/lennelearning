@@ -17,6 +17,11 @@ export class InternPageComponent implements OnInit {
     reviewerTitle: 'Daniel König',
     reviewerSubtitle: 'Praktikant',
   };
+  review_two: Review = {
+    text: 'Im Rahmen meiner Bachelorarbeit habe ich zusammen mit lenne.Tech eine App zur Erfassung von Wissensinhalten in der Softwareentwicklung entwickelt. Ich hatte vor allem im Frontend Bereich schon Vorwissen, aber mir fehlte die praktische Erfahrung, um das Projekt eigenständig umzusetzen. An der Stelle haben mich Kai und Pascal hervorragend betreut und mir gezeigt wie man strukturiert an umfangreicheren Anwendungen arbeitet. Darüber hinaus wurde mir auch im wissenschaftlichen Bereich der Arbeit und bei der Vorbereitung auf das Kolloquium sehr gut geholfen. Nach meiner Bachelorarbeit wurde ich als Werkstudent übernommen und arbeite nun mit ihnen im Team zusammen.',
+    reviewerTitle: 'Florian Steinhanses',
+    reviewerSubtitle: 'Praktikant und Abschlussarbeitskandidat',
+  };
 
   constructor(private metaService: MetaService) {}
 
