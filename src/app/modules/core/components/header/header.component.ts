@@ -15,7 +15,7 @@ export class HeaderComponent {
     this.openDropdown = !this.openDropdown;
   }
 
-  getCurrentRoute() {
+  getCurrentRoute(): string {
     return this.router.url;
   }
 }

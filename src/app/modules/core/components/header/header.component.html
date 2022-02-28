@@ -38,10 +38,24 @@
               id="navbarDropdownMenuLink"
               role="button"
               data-bs-toggle="dropdown"
-              routerLinkActive="active"
+              [ngStyle]="{
+                color:
+                  getCurrentRoute() === '/berufsinteressierte' ||
+                  getCurrentRoute() === '/praktikanten' ||
+                  getCurrentRoute() === '/unternehmen'
+                    ? 'rgba(0, 0, 0, 0.9)'
+                    : 'rgba(0, 0, 0, 0.55)'
+              }"
             >
               Unser Angebot
             </a>
+            <app-underline-animation
+              currentRoute="{{
+                getCurrentRoute() === '/berufsinteressierte' ||
+                  getCurrentRoute() === '/praktikanten' ||
+                  getCurrentRoute() === '/unternehmen'
+              }}"
+            ></app-underline-animation>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li class="item">
                 <a class="dropdown-item" routerLink="/berufsinteressierte" routerLinkActive="active"

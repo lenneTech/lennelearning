@@ -6,8 +6,6 @@
   background-color: white;
 }
 .container {
-  // padding: 0 !important;
-
   .logo {
     width: 180px;
     cursor: pointer;
@@ -55,11 +53,9 @@
   }
 
   .active {
-    // border-bottom: 4px solid #fab85a;
-
-    // text-decoration: underline #fab85a;
-    // text-decoration-thickness: 4px;
-    // text-underline-offset: 5px;
+    text-decoration: underline $orange;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 5px;
   }
 
   @include media-breakpoint-up(lg) {
@@ -70,6 +66,9 @@
       font-size: 16px;
       text-align: center;
       padding: 15px;
+    }
+    .active {
+      text-decoration: none;
     }
   }
 }
