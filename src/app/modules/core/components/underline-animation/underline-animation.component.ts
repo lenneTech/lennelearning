@@ -1,7 +1,4 @@
-import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { NavigationStart, Router } from '@angular/router';
-
-import { Subscription } from 'rxjs';
+import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-underline-animation',
@@ -17,10 +14,11 @@ export class UnderlineAnimationComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     if (this.currentRoute.toString() === 'true') {
+      //This timeout is set to run the animation properly - due to performance-issues after reloading the page its currently set to 700ms
       setTimeout(() => {
         this.lineLeft.nativeElement.classList.add('line-left-expanded');
         this.lineRight.nativeElement.classList.add('line-right-expanded');
-      }, 100);
+      }, 700);
     }
   }
 }
