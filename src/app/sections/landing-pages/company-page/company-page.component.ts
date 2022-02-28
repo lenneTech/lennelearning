@@ -49,7 +49,7 @@ export class CompanyPageComponent implements OnInit {
       iconClass: 'bi-calendar2-week-fill',
     },
   ];
-  @Input() review: Review = {
+  review: Review = {
     text: 'Was uns an lenne.Tech und der Akademie besonders beeindruckt hat, ist die Effektivität in der Umsetzung. Die natürliche Auslese beim Durchlaufen der Akademie sorgt für den höchstmöglichen Eignungsgrad der Bewerber:innen. Wir haben uns so nicht nur etliche Stunden Aufwand bei der Evaluierung von Bewerbern gespart, sondern auch jede Menge Nerven beim Onboarding.',
     reviewerTitle: 'Christopher Klein & Jens Helbig \n Gründer und Geschäftsführer',
     reviewerSubtitle: 'Buuk GmbH',
