@@ -36,6 +36,7 @@ import { NestSvgComponent } from './components/svg-components/nest-svg/nest-svg.
 import { TypescriptSvgComponent } from './components/svg-components/typescript-svg/typescript-svg.component';
 import { TextImageListComponent } from './components/text-image-list/text-image-list.component';
 import { TutorCardsComponent } from './components/tutor-cards/tutor-cards.component';
+import { UnderlineAnimationComponent } from './components/underline-animation/underline-animation.component';
 import { WorkWithUsComponent } from './components/work-with-us/work-with-us.component';
 
 @NgModule({
@@ -67,6 +68,7 @@ import { WorkWithUsComponent } from './components/work-with-us/work-with-us.comp
     GoalsComponent,
     ProcessInterestedComponent,
     WorkWithUsComponent,
+    UnderlineAnimationComponent,
 
     // Dialogs
     HelperDialogComponent,

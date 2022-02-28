@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  constructor() {}
+  openDropdown = false;
+  currentRoute: string;
+  constructor(private router: Router) {}
+
+  switch() {
+    this.openDropdown = !this.openDropdown;
+  }
+
+  getCurrentRoute(): string {
+    return this.router.url;
+  }
 }
