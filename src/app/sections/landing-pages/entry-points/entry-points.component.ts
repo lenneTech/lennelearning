@@ -39,7 +39,7 @@ export class EntryPointsComponent implements OnInit {
     this.getAllEntryPoints();
     this.getRecommendation();
     this.getRedirectionLink();
-    this.onButtonClicked(EntryPointMode.ALL);
+    this.onSwitchSelection(EntryPointMode.ALL);
   }
 
   getAllEntryPoints(): void {
@@ -62,13 +62,10 @@ export class EntryPointsComponent implements OnInit {
       this.redirectionLink = value.redirectTo;
     });
   }
-  onButtonClicked(mode: EntryPointMode) {
+  onSwitchSelection(mode: EntryPointMode) {
     this.mode = mode;
-    console.log(this.entryPoints);
     this.filteredArray = this.entryPoints.filter((el) => {
-      console.log(el.tag.includes(mode));
       if (el.tag.includes(mode)) return el;
     });
-    console.log(this.filteredArray);
   }
 }

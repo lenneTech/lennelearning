@@ -9,40 +9,37 @@
         <app-banner [title]="title" [subtitle]="subtitle" [imageUrl]="imageUrl" [showAcademyBtn]="false"></app-banner>
       </div>
     </div>
-    <div class="container-fluid bg-primary-500">
+    <div class="container-fluid pe-0 ps-0 pb-3 pt-3 bg-primary-500 mb-5">
       <div class="container">
-        <div class="row pb-3 pt-3 mb-5 entrypoint-selection align-items-center">
-          <div
-            class="col-md-3 d-flex justify-content-center selection"
-            (click)="onButtonClicked(EntryPointMode.ALL)"
+        <ul class="d-flex selection align-items-center">
+          <li
             [ngStyle]="{ color: mode === EntryPointMode.ALL ? 'orange' : 'white' }"
+            (click)="onSwitchSelection(EntryPointMode.ALL)"
           >
             Alle
-          </div>
-          <div
-            class="col-md-3 d-flex justify-content-center selection"
-            (click)="onButtonClicked(EntryPointMode.JOB_INTERESTED)"
+          </li>
+          <li
             [ngStyle]="{ color: mode === EntryPointMode.JOB_INTERESTED ? 'orange' : 'white' }"
+            (click)="onSwitchSelection(EntryPointMode.JOB_INTERESTED)"
           >
             Berufsinteressierte
-          </div>
-          <div
-            class="col-md-3 d-flex justify-content-center selection"
-            (click)="onButtonClicked(EntryPointMode.INTERN)"
+          </li>
+          <li
             [ngStyle]="{ color: mode === EntryPointMode.INTERN ? 'orange' : 'white' }"
+            (click)="onSwitchSelection(EntryPointMode.INTERN)"
           >
             Praktikant:innen & Hobbyentwickler:innen
-          </div>
-          <div
-            class="col-md-3 d-flex justify-content-center selection"
-            (click)="onButtonClicked(EntryPointMode.COMPANY)"
+          </li>
+          <li
             [ngStyle]="{ color: mode === EntryPointMode.COMPANY ? 'orange' : 'white' }"
+            (click)="onSwitchSelection(EntryPointMode.COMPANY)"
           >
             Unternehmen & Gründer:innen
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
     </div>
+
     <div class="container">
       <div class="row" [ltMatchHeight]="['card-container', 'card', 'card-text']">
         <div
