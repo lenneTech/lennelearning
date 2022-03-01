@@ -23,6 +23,7 @@ export class EntryPointService {
         'Du interessierst Dich für App- und Webtechnologien, weißt aber noch nicht, was Dich in diesem Berufsfeld erwartet? Wähle diesen Pfad aus, um mehr zu erfahren.',
       image: '../../assets/images/entry-point-images/berufsinteressent.svg',
       sections: ['beruf', 'html', 'css', 'bootstrap', 'git-basics', 'javascript'],
+      tag: ['ALL', 'JOB_INTERESTED', 'INTERN'],
     },
     {
       id: 'praktikanten',
@@ -47,6 +48,7 @@ export class EntryPointService {
         'nestjs',
         'design',
       ],
+      tag: ['ALL', 'INTERN'],
     },
     {
       id: 'unternehmen',
@@ -72,6 +74,7 @@ export class EntryPointService {
         'design',
         'automatisierte-tests',
       ],
+      tag: ['ALL', 'COMPANY'],
     },
     {
       id: 'sprint',
@@ -81,6 +84,7 @@ export class EntryPointService {
         'Du möchtest nicht vollkommen ins Detail gehen, aber mitreden können, wenn es um Webdevelopement geht? Dann ist dieser Pfad der richtige für Dich.',
       image: '../../assets/images/explanation-images/strategy.svg',
       sections: ['html', 'css', 'bootstrap', 'git-basics', 'javascript', 'typescript', 'angular', 'ionic', 'nestjs'],
+      tag: ['ALL', 'INTERN', 'COMPANY'],
     },
     {
       id: 'frontend',
@@ -103,6 +107,7 @@ export class EntryPointService {
         'design',
         'automatisierte-tests',
       ],
+      tag: ['ALL', 'INTERN', 'COMPANY'],
     },
     {
       id: 'backend',
@@ -121,6 +126,33 @@ export class EntryPointService {
         'packages',
         'automatisierte-tests',
       ],
+      tag: ['ALL', 'INTERN', 'COMPANY'],
+    },
+
+    {
+      id: 'praktikanten',
+      title: 'Praktikum',
+      address: 'Praktikum',
+      description:
+        'Du bist Schüler:in, Student:in, nimmst an einer Weiterbildungsmaßnahme teil oder absolvierst bzw. suchst aus anderen Gründen ein Praktikum? Dieser Lernpfad hilft Dir weiter.',
+      image: '../../assets/images/entry-point-images/praktikant.svg',
+      sections: [
+        'beruf',
+        'html',
+        'css',
+        'bootstrap',
+        'git-basics',
+        'javascript',
+        'teamwork',
+        'typescript',
+        'prototyping',
+        'angular',
+        'packages',
+        'docker-basics',
+        'nestjs',
+        'design',
+      ],
+      tag: ['COMPANY'],
     },
 
     {
@@ -149,6 +181,7 @@ export class EntryPointService {
         'design',
         'automatisierte-tests',
       ],
+      tag: ['ALL', 'INTERN', 'COMPANY'],
     },
   ];
 

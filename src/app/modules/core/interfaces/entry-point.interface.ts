@@ -5,4 +5,5 @@ export interface EntryPoint {
   description: string;
   image: string;
   sections: string[];
+  tag: string[];
 }
