@@ -1,0 +1,11 @@
+@import 'src/assets/scss/utils/';
+.selection {
+  color: white;
+  font-size: 20px;
+  transition: 0.3s;
+
+  &:hover {
+    color: $orange !important;
+    cursor: pointer;
+  }
+}

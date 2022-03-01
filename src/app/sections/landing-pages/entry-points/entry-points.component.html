@@ -8,11 +8,46 @@
       <div class="section">
         <app-banner [title]="title" [subtitle]="subtitle" [imageUrl]="imageUrl" [showAcademyBtn]="false"></app-banner>
       </div>
-
+    </div>
+    <div class="container-fluid bg-primary-500">
+      <div class="container">
+        <div class="row pb-3 pt-3 mb-5 entrypoint-selection align-items-center">
+          <div
+            class="col-md-3 d-flex justify-content-center selection"
+            (click)="onButtonClicked(EntryPointMode.ALL)"
+            [ngStyle]="{ color: mode === EntryPointMode.ALL ? 'orange' : 'white' }"
+          >
+            Alle
+          </div>
+          <div
+            class="col-md-3 d-flex justify-content-center selection"
+            (click)="onButtonClicked(EntryPointMode.JOB_INTERESTED)"
+            [ngStyle]="{ color: mode === EntryPointMode.JOB_INTERESTED ? 'orange' : 'white' }"
+          >
+            Berufsinteressierte
+          </div>
+          <div
+            class="col-md-3 d-flex justify-content-center selection"
+            (click)="onButtonClicked(EntryPointMode.INTERN)"
+            [ngStyle]="{ color: mode === EntryPointMode.INTERN ? 'orange' : 'white' }"
+          >
+            Praktikant:innen & Hobbyentwickler:innen
+          </div>
+          <div
+            class="col-md-3 d-flex justify-content-center selection"
+            (click)="onButtonClicked(EntryPointMode.COMPANY)"
+            [ngStyle]="{ color: mode === EntryPointMode.COMPANY ? 'orange' : 'white' }"
+          >
+            Unternehmen & Gründer:innen
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
       <div class="row" [ltMatchHeight]="['card-container', 'card', 'card-text']">
         <div
           class="col-12 col-md-6 col-xl-4 mb-5 d-flex justify-content-around card-container"
-          *ngFor="let entryPoint of entryPoints"
+          *ngFor="let entryPoint of filteredArray"
         >
           <app-entry-point-card
             [title]="entryPoint.title"
