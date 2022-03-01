@@ -81,7 +81,7 @@ export class EntryPointService {
       title: 'Sprint',
       address: 'Sprint',
       description:
-        'Du möchtest nicht vollkommen ins Detail gehen, aber mitreden können, wenn es um Webdevelopement geht? Dann ist dieser Pfad der richtige für Dich.',
+        'Du möchtest nicht vollkommen ins Detail gehen, aber mitreden können, wenn es um Webdevelopment geht? Dann ist dieser Pfad der richtige für Dich.',
       image: '../../assets/images/explanation-images/strategy.svg',
       sections: ['html', 'css', 'bootstrap', 'git-basics', 'javascript', 'typescript', 'angular', 'ionic', 'nestjs'],
       tag: ['ALL', 'INTERN', 'COMPANY'],
@@ -161,7 +161,7 @@ export class EntryPointService {
       title: 'Standard',
       address: 'Standard',
       description:
-        'Das hier ist der Standard-Einstiegspunkt. Wenn Du Dir nicht sicher bist, was genau Dich interessiert oder ob einer der anderen Pfade zu Dir passt, dann wähle diesen Lernpfad. Hier wird dir alles gezeigt.',
+        'Das hier ist der Standard-Einstiegspunkt. Wenn Du Dir nicht sicher bist, was genau Dich interessiert oder ob einer der anderen Pfade zu Dir passt, dann wähle diesen Lernpfad. Hier wird Dir alles gezeigt.',
       image: '../../assets/images/explanation-images/discovery.svg',
       sections: [
         'beruf',
