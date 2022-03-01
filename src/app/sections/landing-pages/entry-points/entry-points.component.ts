@@ -39,7 +39,7 @@ export class EntryPointsComponent implements OnInit {
     this.getAllEntryPoints();
     this.getRecommendation();
     this.getRedirectionLink();
-    this.onSwitchSelection(EntryPointMode.ALL);
+    this.onSwitchSelection();
   }
 
   getAllEntryPoints(): void {
@@ -62,10 +62,32 @@ export class EntryPointsComponent implements OnInit {
       this.redirectionLink = value.redirectTo;
     });
   }
-  onSwitchSelection(mode: EntryPointMode) {
-    this.mode = mode;
+  onSwitchSelection(mode?: EntryPointMode) {
+    if (mode) {
+      this.mode = mode;
+    } else if (this.recommendation) {
+      switch (this.recommendation) {
+        case 'berufsinteressierte':
+          this.mode = EntryPointMode.JOB_INTERESTED;
+
+          break;
+        case 'praktikanten':
+          this.mode = EntryPointMode.INTERN;
+
+          break;
+        case 'unternehmen':
+          this.mode = EntryPointMode.COMPANY;
+
+          break;
+
+        default:
+          this.mode = EntryPointMode.ALL;
+          break;
+      }
+    }
+
     this.filteredArray = this.entryPoints.filter((el) => {
-      if (el.tag.includes(mode)) return el;
+      if (el.tag.includes(this.mode)) return el;
     });
   }
 }

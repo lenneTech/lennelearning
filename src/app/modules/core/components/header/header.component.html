@@ -40,9 +40,9 @@
               data-bs-toggle="dropdown"
               [ngStyle]="{
                 color:
-                  getCurrentRoute() === '/berufsinteressierte' ||
-                  getCurrentRoute() === '/praktikanten' ||
-                  getCurrentRoute() === '/unternehmen'
+                  getCurrentRoute().includes('/berufsinteressierte') ||
+                  getCurrentRoute().includes('/praktikanten') ||
+                  getCurrentRoute().includes('/unternehmen')
                     ? 'rgba(0, 0, 0, 0.9)'
                     : 'rgba(0, 0, 0, 0.55)'
               }"
@@ -51,9 +51,9 @@
             </a>
             <app-underline-animation
               currentRoute="{{
-                getCurrentRoute() === '/berufsinteressierte' ||
-                  getCurrentRoute() === '/praktikanten' ||
-                  getCurrentRoute() === '/unternehmen'
+                getCurrentRoute().includes('/berufsinteressierte') ||
+                  getCurrentRoute().includes('/praktikanten') ||
+                  getCurrentRoute().includes('/unternehmen')
               }}"
             ></app-underline-animation>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -61,26 +61,28 @@
                 <a class="dropdown-item" routerLink="/berufsinteressierte" routerLinkActive="active"
                   >Berufsinteressierte </a
                 ><app-underline-animation
-                  currentRoute="{{ getCurrentRoute() === '/berufsinteressierte' }}"
+                  currentRoute="{{ getCurrentRoute().includes('/berufsinteressierte') }}"
                 ></app-underline-animation>
               </li>
               <li class="item">
                 <a class="dropdown-item" routerLink="/praktikanten" routerLinkActive="active">Praktikant:innen</a
                 ><app-underline-animation
-                  currentRoute="{{ getCurrentRoute() === '/praktikanten' }}"
+                  currentRoute="{{ getCurrentRoute().includes('/praktikanten') }}"
                 ></app-underline-animation>
               </li>
               <li class="item">
                 <a class="dropdown-item" routerLink="/unternehmen" routerLinkActive="active">Unternehmen</a>
                 <app-underline-animation
-                  currentRoute="{{ getCurrentRoute() === '/unternehmen' }}"
+                  currentRoute="{{ getCurrentRoute().includes('/unternehmen') }}"
                 ></app-underline-animation>
               </li>
             </ul>
           </li>
           <li class="nav-item item">
             <a class="nav-link scroll-link" routerLinkActive="active" routerLink="/lernpfade">Lernpfade</a>
-            <app-underline-animation currentRoute="{{ getCurrentRoute() === '/lernpfade' }}"></app-underline-animation>
+            <app-underline-animation
+              currentRoute="{{ getCurrentRoute().includes('/lernpfade') }}"
+            ></app-underline-animation>
           </li>
         </ul>
       </div>
