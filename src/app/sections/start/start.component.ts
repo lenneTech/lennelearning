@@ -20,7 +20,7 @@ export class StartComponent {
       description:
         'Du interessierst Dich für App- und Webtechnologien und möchtest die entsprechenden Berufsfelder erkunden, oder bist Du Student:in, möchtest aber schon Praxiserfahrung in der Softwareentwicklung sammeln?',
       image: '../../assets/images/entry-point-images/berufsinteressent.svg',
-      text: 'Dieser Kurs ist für alle die sich für die Web- und Appentwicklung interessieren und einen Einblick in die Berufswelt von Softwareentwicklern bekommen wollen. Der Kurs beginnt dabei mit einer Berufsfeldserkundung, in der dir zunächst die verschiedenen Berufe rund um die Softwareentwiclkung sowie deren Berufslltag und Aufgabenfelder vorgestellt werden. Danach lernst du schon die Grundlagen der Webentwicklung, um schon eigene Webseiten erstellen zu können',
+      text: 'Dieser Kurs ist für alle die sich für die Web- und Appentwicklung interessieren und einen Einblick in die Berufswelt von Softwareentwicklern bekommen wollen. Der Kurs beginnt dabei mit einer Berufsfeldserkundung, in der Dir zunächst die verschiedenen Berufe rund um die Softwareentwiclkung sowie deren Berufslltag und Aufgabenfelder vorgestellt werden. Danach lernst Du schon die Grundlagen der Webentwicklung, um schon eigene Webseiten erstellen zu können',
       landingRoute: '/berufsinteressierte',
     },
     {
@@ -30,7 +30,7 @@ export class StartComponent {
       description:
         'Du bist Schüler:in, Student:in, nimmst an einer Weiterbildungsmaßnahme teil oder absolvierst bzw. suchst aus anderen Gründen ein Praktikum?',
       image: '../../assets/images/entry-point-images/praktikant.svg',
-      text: 'Wir bieten dir die Möglichkeit in bis zu 12 Wochen die Web- und Appentwicklung in der Praxis kennenzulernen. Zunächst arbeitest du in einer Vorbereitungsphase unsere Kurse durch, um im Praktikum direkt mit deinem eigenen Projekt durchstarten zu können. Wenn du schon Vorkenntnisse hast, kannst du natürlich unter Absprache verschiedene Teile überspringen und sofort loslegen.',
+      text: 'Wir bieten Dir die Möglichkeit in bis zu 12 Wochen die Web- und Appentwicklung in der Praxis kennenzulernen. Zunächst arbeitest Du in einer Vorbereitungsphase unsere Kurse durch, um im Praktikum direkt mit deinem eigenen Projekt durchstarten zu können. Wenn Du schon Vorkenntnisse hast, kannst Du natürlich unter Absprache verschiedene Teile überspringen und sofort loslegen.',
       landingRoute: '/praktikanten',
     },
     {

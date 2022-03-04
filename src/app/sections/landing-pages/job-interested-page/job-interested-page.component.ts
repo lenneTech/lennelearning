@@ -15,7 +15,7 @@ export class JobInterestedPageComponent implements OnInit {
   @Input() steps: TextImageInterface[] = [
     {
       title: 'Berufsalltag',
-      text: 'Erlebe den Berufsalltag in der Softwareentwicklung in Aktion. Komm für ein kurzes Praktikum vorbei und schau dir an, wie Softwareentwickler, Designer und Projektleiter an Webanwendungen arbeiten.',
+      text: 'Erlebe den Berufsalltag in der Softwareentwicklung in Aktion. Komm für ein kurzes Praktikum vorbei und schau Dir an, wie Softwareentwickler, Designer und Projektleiter an Webanwendungen arbeiten.',
       imageUrl: '../../assets/images/explanation-images/explore.svg',
       imageAlt: 'Bild von zwei Menschen, die die Natur erkunden.',
     },
@@ -27,7 +27,7 @@ export class JobInterestedPageComponent implements OnInit {
     },
     {
       title: 'Projekte',
-      text: 'Wir zeigen dir, an welchen Projekten wir aktuell arbeiten und wie kooperative Zusammenarbeit bei uns aussieht.',
+      text: 'Wir zeigen Dir, an welchen Projekten wir aktuell arbeiten und wie kooperative Zusammenarbeit bei uns aussieht.',
       imageUrl: '../../assets/images/explanation-images/build_product.svg',
       imageAlt: 'Bild von Menschen die einen Turm aus Bausteinen bauen.',
     },

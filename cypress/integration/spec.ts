@@ -5,7 +5,7 @@ describe('Page Testing', () => {
   });
   it('Visits the job interested page', () => {
     cy.get('.learn-more').first().click();
-    cy.contains('Du interessierst dich für App- und Webentwicklung?');
+    cy.contains('Du interessierst Dich für App- und Webentwicklung?');
   });
   it('Visits the intern page', () => {
     cy.visit('/');
