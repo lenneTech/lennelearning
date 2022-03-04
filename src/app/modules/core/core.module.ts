@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { NbAccordionModule, NbButtonModule, NbCardModule, NbLayoutModule } from '@nebular/theme';
+import { SwiperModule } from 'swiper/angular';
 import { VersionHistoryComponent } from 'src/app/sections/academy/components/version-history/version-history.component';
 import { AcademyBannerComponent } from './components/academy-banner/academy-banner.component';
 import { AcademyPictureComponent } from './components/academy-picture/academy-picture.component';
@@ -47,6 +48,7 @@ import { WorkWithUsComponent } from './components/work-with-us/work-with-us.comp
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    SwiperModule,
 
     // Nebular
     NbLayoutModule,
