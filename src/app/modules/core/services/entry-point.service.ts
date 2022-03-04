@@ -129,6 +129,7 @@ export class EntryPointService {
       tag: ['ALL', 'INTERN', 'COMPANY'],
     },
 
+    // this section is not a duplicate but is unique to the company-section to give it a meaningful order. Without it, the entrypoint "Praktikum" would appear first in the list
     {
       id: 'praktikanten',
       title: 'Praktikum',
