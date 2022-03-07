@@ -4,26 +4,14 @@ services:
   lennelearning:
     build:
       context: .
-      dockerfile: Dockerfile.prod
-    image: localhost:5000/lennelearning-develop:latest
+      dockerfile: Dockerfile.develop
+    image: localhost:5000/lennelearning:develop
     restart: unless-stopped
     container_name: lennelearning-develop
     networks:
       - traefik-public
     entrypoint: ['/bin/sh', '-c']
     deploy:
-      update_config:
-        order: start-first
-        failure_action: rollback
-        delay: 10s
-      rollback_config:
-        parallelism: 0
-        order: stop-first
-      restart_policy:
-        condition: any
-        delay: 5s
-        max_attempts: 3
-        window: 120s
       labels:
         - traefik.enable=true
         - traefik.docker.network=traefik-public
