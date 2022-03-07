@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.prod
-    image: localhost:5000/lennelearning:develop
+    image: localhost:5000/lennelearning-develop:latest
     restart: unless-stopped
     container_name: lennelearning-develop
     networks:
