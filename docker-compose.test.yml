@@ -1,13 +1,13 @@
 version: '3.7'
 
 services:
-  lennelearning-test:
+  lennelearning:
     build:
       context: .
       dockerfile: Dockerfile.prod
     image: localhost:5000/lennelearning:test
     restart: unless-stopped
-    container_name: lennelearning-preview
+    container_name: lennelearning-test
     networks:
       - traefik-public
     entrypoint: ['/bin/sh', '-c']
