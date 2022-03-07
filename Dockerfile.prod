@@ -4,6 +4,8 @@ RUN mkdir -p /var/www/
 
 COPY ./dist/academy ./var/www
 
+HEALTHCHECK CMD curl --fail http://localhost:4000/ || exit 1
+
 WORKDIR /var/www/server
 
 EXPOSE 4000
