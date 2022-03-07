@@ -1,0 +1,52 @@
+version: '3.7'
+
+services:
+  lennelearning-develop:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    image: localhost:5000/lennelearning:develop
+    restart: unless-stopped
+    container_name: lennelearning-develop
+    networks:
+      - traefik-public
+    entrypoint: ['/bin/sh', '-c']
+    deploy:
+      update_config:
+        order: start-first
+        failure_action: rollback
+        delay: 10s
+      rollback_config:
+        parallelism: 0
+        order: stop-first
+      restart_policy:
+        condition: any
+        delay: 5s
+        max_attempts: 3
+        window: 120s
+      labels:
+        - traefik.enable=true
+        - traefik.docker.network=traefik-public
+        - traefik.constraint-label=traefik-public
+        - traefik.http.routers.lennelearning-develop-app-http.rule=Host(`develop.lennelearning.de`, `www.develop.lennelearning.de`)
+        - traefik.http.routers.lennelearning-develop-app-http.entrypoints=http
+        - traefik.http.routers.lennelearning-develop-app-http.middlewares=https-redirect
+        - traefik.http.routers.lennelearning-develop-app-https.rule=Host(`develop.lennelearning.de`, `www.develop.lennelearning.de`)
+        - traefik.http.routers.lennelearning-develop-app-https.entrypoints=https
+        - traefik.http.routers.lennelearning-develop-app-https.tls=true
+        - traefik.http.routers.lennelearning-develop-app-https.tls.certresolver=le
+        - traefik.http.middlewares.lennelearning-develop-redirect.redirectregex.regex=^https?://www.develop.lennelearning.de/(.*)
+        - traefik.http.middlewares.lennelearning-develop-redirect.redirectregex.replacement=https://develop.lennelearning.de/$${1}
+        - traefik.http.middlewares.lennelearning-develop-redirect.redirectregex.permanent=true
+        - traefik.http.services.lennelearning-develop-app.loadbalancer.server.port=4000
+        - traefik.http.routers.lennelearning-develop-app-https.middlewares=lennelearning-develop-redirect
+    command:
+      - |
+        NODE_ENV="develop" SMTP_USER=${SMTP_USER} SMTP_PW=${SMTP_PW} npx node main.js
+
+volumes:
+  node_modules:
+
+networks:
+  traefik-public:
+    external: true

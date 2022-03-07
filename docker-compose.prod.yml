@@ -5,28 +5,44 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.prod
-    image: localhost:5000/academy:prod
+    image: localhost:5000/lennelearning:prod
     restart: unless-stopped
-    container_name: academy-prod
+    container_name: lennelearning-prod
     networks:
       - traefik-public
     entrypoint: ['/bin/sh', '-c']
     deploy:
+      update_config:
+        order: start-first
+        failure_action: rollback
+        delay: 10s
+      rollback_config:
+        parallelism: 0
+        order: stop-first
+      restart_policy:
+        condition: any
+        delay: 5s
+        max_attempts: 3
+        window: 120s
       labels:
         - traefik.enable=true
         - traefik.docker.network=traefik-public
         - traefik.constraint-label=traefik-public
-        - traefik.http.routers.academy-http.rule=Host(`akademie.lenne.tech`)
-        - traefik.http.routers.academy-http.entrypoints=http
-        - traefik.http.routers.academy-http.middlewares=https-redirect
-        - traefik.http.routers.academy-https.rule=Host(`akademie.lenne.tech`)
-        - traefik.http.routers.academy-https.entrypoints=https
-        - traefik.http.routers.academy-https.tls=true
-        - traefik.http.routers.academy-https.tls.certresolver=le
-        - traefik.http.services.academy.loadbalancer.server.port=4000
+        - traefik.http.routers.lennelearning-prod-app-http.rule=Host(`lennelearning.de`, `www.lennelearning.de`)
+        - traefik.http.routers.lennelearning-prod-app-http.entrypoints=http
+        - traefik.http.routers.lennelearning-prod-app-http.middlewares=https-redirect
+        - traefik.http.routers.lennelearning-prod-app-https.rule=Host(`lennelearning.de`, `www.lennelearning.de`)
+        - traefik.http.routers.lennelearning-prod-app-https.entrypoints=https
+        - traefik.http.routers.lennelearning-prod-app-https.tls=true
+        - traefik.http.routers.lennelearning-prod-app-https.tls.certresolver=le
+        - traefik.http.middlewares.lennelearning-prod-redirect.redirectregex.regex=^https?://www.lennelearning.de/(.*)
+        - traefik.http.middlewares.lennelearning-prod-redirect.redirectregex.replacement=https://lennelearning.de/$${1}
+        - traefik.http.middlewares.lennelearning-prod-redirect.redirectregex.permanent=true
+        - traefik.http.services.lennelearning-prod-app.loadbalancer.server.port=4000
+        - traefik.http.routers.lennelearning-prod-app-https.middlewares=lennelearning-prod-redirect
     command:
       - |
-        npx node main.js
+        NODE_ENV="production" SMTP_USER=${SMTP_USER} SMTP_PW=${SMTP_PW} npx node main.js
 
 volumes:
   node_modules:

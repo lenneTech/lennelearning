@@ -15,5 +15,5 @@ export const environment = {
       enable: true,
     },
   },
-  appUrl: 'https://akademie.lenne.tech/',
+  appUrl: 'https://lennelearning.de/',
 };

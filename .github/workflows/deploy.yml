@@ -7,32 +7,34 @@ on:
 
 env:
   SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+  SMTP_USER: ${{ secrets.SMTP_USER }}
+  SMTP_PW: ${{ secrets.SMTP_PW }}
 
 jobs:
   deploy:
-    runs-on: [self-hosted, docker-landing]
+    runs-on: [self-hosted, docker-live]
     steps:
       - uses: actions/checkout@v1
-      - name: Use Node.js 14.17
+      - name: Use Node.js 16.13.0
         uses: actions/setup-node@v1
         with:
-          node-version: 14.17.1
+          node-version: 16.13.0
       - name: Install
         run: npm install
       - name: Build app
         run: npm run build:ssr
       - name: Build docker
-        run: docker-compose -f docker-compose.prod.yml build
+        run: SMTP_USER=$SMTP_USER SMTP_PW=$SMTP_PW docker-compose -f docker-compose.prod.yml build
       - name: Push docker
-        run: docker-compose -f docker-compose.prod.yml push
+        run: SMTP_USER=$SMTP_USER SMTP_PW=$SMTP_PW docker-compose -f docker-compose.prod.yml push
       - name: Deploy
-        run: docker stack deploy -c docker-compose.prod.yml --with-registry-auth academy-prod
+        run: SMTP_USER=$SMTP_USER SMTP_PW=$SMTP_PW docker stack deploy -c docker-compose.prod.yml --with-registry-auth lennelearning-prod
       - name: Deploy notification
         if: always()
         uses: adamkdean/simple-slack-notify@master
         with:
           channel: '#akademie-tutoren'
           status: ${{ job.status }}
-          success_text: 'Version (#${{github.event.release.tag_name}}) der Akademie wurde erfolgreich released.'
+          success_text: 'Version (#${{github.event.release.tag_name}}) von lenne.learning wurde erfolgreich released.'
           failure_text: 'Release (#${{github.event.release.tag_name}}) failed'
           cancelled_text: 'Release (#${{github.event.release.tag_name}}) was cancelled'

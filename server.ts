@@ -84,6 +84,10 @@ export function app() {
 function run() {
   const port = process.env.PORT || 4000;
 
+  console.log('Starts in environment: ', process.env['NODE' + '_ENV']);
+  console.log('Used SMTP user: ', process.env['SMTP' + '_USER']);
+  console.log('Used SMTP pw: ', process.env['SMTP' + '_PW']);
+
   // Start up the Node server
   const server = app();
   server.listen(port, () => {

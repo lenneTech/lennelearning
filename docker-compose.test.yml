@@ -1,0 +1,52 @@
+version: '3.7'
+
+services:
+  lennelearning-test:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    image: localhost:5000/lennelearning:test
+    restart: unless-stopped
+    container_name: lennelearning-preview
+    networks:
+      - traefik-public
+    entrypoint: ['/bin/sh', '-c']
+    deploy:
+      update_config:
+        order: start-first
+        failure_action: rollback
+        delay: 10s
+      rollback_config:
+        parallelism: 0
+        order: stop-first
+      restart_policy:
+        condition: any
+        delay: 5s
+        max_attempts: 3
+        window: 120s
+      labels:
+        - traefik.enable=true
+        - traefik.docker.network=traefik-public
+        - traefik.constraint-label=traefik-public
+        - traefik.http.routers.lennelearning-test-app-http.rule=Host(`test.lennelearning.de`, `www.test.lennelearning.de`)
+        - traefik.http.routers.lennelearning-test-app-http.entrypoints=http
+        - traefik.http.routers.lennelearning-test-app-http.middlewares=https-redirect
+        - traefik.http.routers.lennelearning-test-app-https.rule=Host(`test.lennelearning.de`, `www.test.lennelearning.de`)
+        - traefik.http.routers.lennelearning-test-app-https.entrypoints=https
+        - traefik.http.routers.lennelearning-test-app-https.tls=true
+        - traefik.http.routers.lennelearning-test-app-https.tls.certresolver=le
+        - traefik.http.middlewares.lennelearning-test-redirect.redirectregex.regex=^https?://www.test.lennelearning.de/(.*)
+        - traefik.http.middlewares.lennelearning-test-redirect.redirectregex.replacement=https://test.lennelearning.de/$${1}
+        - traefik.http.middlewares.lennelearning-test-redirect.redirectregex.permanent=true
+        - traefik.http.services.lennelearning-test-app.loadbalancer.server.port=4000
+        - traefik.http.routers.lennelearning-test-app-https.middlewares=lennelearning-test-redirect
+    command:
+      - |
+        NODE_ENV="test" SMTP_USER=${SMTP_USER} SMTP_PW=${SMTP_PW} npx node main.js
+
+volumes:
+  node_modules:
+
+networks:
+  traefik-public:
+    external: true

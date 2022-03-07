@@ -81,6 +81,40 @@
                 }
               ]
             },
+            "develop": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.develop.ts"
+                }
+              ],
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "optimization": {
+                "scripts": true,
+                "styles": {
+                  "minify": true,
+                  "inlineCritical": false
+                },
+                "fonts": true
+              },
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            },
             "test": {
               "fileReplacements": [
                 {
@@ -125,6 +159,12 @@
           "configurations": {
             "production": {
               "browserTarget": "academy:build:production"
+            },
+            "test": {
+              "browserTarget": "academy:build:test"
+            },
+            "develop": {
+              "browserTarget": "academy:build:develop"
             }
           }
         },
@@ -162,6 +202,12 @@
           "configurations": {
             "production": {
               "devServerTarget": "academy:serve:production"
+            },
+            "test": {
+              "devServerTarget": "academy:serve:test"
+            },
+            "develop": {
+              "devServerTarget": "academy:serve:develop"
             }
           }
         },
@@ -196,6 +242,17 @@
               ],
               "sourceMap": false,
               "optimization": true
+            },
+            "develop": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.develop.ts"
+                }
+              ],
+              "sourceMap": false,
+              "optimization": true
             }
           }
         },
@@ -213,6 +270,10 @@
             "test": {
               "browserTarget": "academy:build:test",
               "serverTarget": "academy:server:test"
+            },
+            "develop": {
+              "browserTarget": "academy:build:develop",
+              "serverTarget": "academy:server:develop"
             }
           }
         },
