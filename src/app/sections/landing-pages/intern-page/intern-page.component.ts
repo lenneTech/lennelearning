@@ -2,6 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { MetaService } from 'src/app/modules/core/services/meta.service';
 import { Review } from '../../../modules/core/interfaces/review.interface';
 
+// import Swiper core and required modules
+import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper';
+
+// install Swiper modules
+SwiperCore.use([Navigation, Pagination, Autoplay]);
+
 @Component({
   selector: 'app-intern-page',
   templateUrl: './intern-page.component.html',

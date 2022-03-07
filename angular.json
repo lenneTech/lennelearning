@@ -34,7 +34,9 @@
             "styles": [
               "src/assets/scss/main.scss",
               "node_modules/highlight.js/styles/monokai.css",
-              "node_modules/bootstrap-icons/font/bootstrap-icons.css"
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+              "node_modules/swiper/swiper.scss",
+              "node_modules/swiper/modules/navigation/navigation.scss"
             ],
             "scripts": ["node_modules/bootstrap/dist/js/bootstrap.min.js"],
             "vendorChunk": true,

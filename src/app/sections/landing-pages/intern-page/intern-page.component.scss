@@ -1,4 +1,46 @@
+@import 'src/assets/scss/utils';
+
 .section-title {
   margin-top: 4rem;
+  margin-bottom: 0px;
   text-align: center;
+}
+
+.testimonials {
+  margin-top: 70px;
+  margin-bottom: 70px;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+
+  .col-left {
+    @include media-breakpoint-up(lg) {
+      padding-left: 80px !important;
+    }
+  }
+
+  .col-right {
+    padding-left: 80px !important;
+    padding-right: 80px !important;
+
+    @include media-breakpoint-up(lg) {
+      padding-left: 60px !important;
+    }
+  }
+
+  .description {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 180%;
+    margin-bottom: 0;
+    justify-content: center !important;
+    &-name {
+      font-size: 16px;
+      text-align: right;
+      margin-top: 2rem;
+    }
+  }
 }

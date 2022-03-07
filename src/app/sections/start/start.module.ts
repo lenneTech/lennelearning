@@ -9,6 +9,7 @@ import { InternPageComponent } from '../landing-pages/intern-page/intern-page.co
 import { JobInterestedPageComponent } from '../landing-pages/job-interested-page/job-interested-page.component';
 import { BaseModule } from '@lenne.tech/ng-base';
 import { EntryPointsComponent } from '../landing-pages/entry-points/entry-points.component';
+import { SwiperModule } from 'swiper/angular';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,15 @@ import { EntryPointsComponent } from '../landing-pages/entry-points/entry-points
     JobInterestedPageComponent,
     EntryPointsComponent,
   ],
-  imports: [StartRoutingModule, CommonModule, CoreModule, NbLayoutModule, NbButtonModule, NbCardModule, BaseModule],
+  imports: [
+    StartRoutingModule,
+    CommonModule,
+    CoreModule,
+    NbLayoutModule,
+    NbButtonModule,
+    NbCardModule,
+    BaseModule,
+    SwiperModule,
+  ],
 })
 export class StartModule {}

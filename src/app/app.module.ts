@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SwiperModule } from 'swiper/angular';
 
 import { CoreModule } from './modules/core/core.module';
 import { AppRoutingModule } from './app-routing.module';
@@ -32,6 +33,7 @@ import { MatomoModule } from 'ngx-matomo';
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BaseModule.forRoot(environment),
     AppRoutingModule,
+    SwiperModule,
 
     // Forms
     FormsModule,

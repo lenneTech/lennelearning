@@ -20,13 +20,13 @@ export class MilestoneComponent implements OnInit {
       sectionTitle: 'beruf',
       logo: '../../../../../assets/images/explanation-images/strategy.svg',
       description:
-        'Du hast den Beruf des Webentwicklers nun schon einmal kennengelernt. Jetzt ist es an der Zeit, dir die einzelnen Fertigkeiten anzueignen.',
+        'Du hast den Beruf des Webentwicklers nun schon einmal kennengelernt. Jetzt ist es an der Zeit, Dir die einzelnen Fertigkeiten anzueignen.',
       exampleList: [
         {
-          text: 'Du hast den Alltag von Softwareentwicklern kennengelernt und kannst dir vorstellen, was ein Softwareentwickler für Aufgaben hat.',
+          text: 'Du hast den Alltag von Softwareentwicklern kennengelernt und kannst Dir vorstellen, was ein Softwareentwickler für Aufgaben hat.',
         },
         {
-          text: 'Du hast gelernt, wie man ein Softwareentwickler wird, mit welchen Gehältern man durchschnittlich rechnen kann und in welchen Branchen du später tätig sein kannst.',
+          text: 'Du hast gelernt, wie man ein Softwareentwickler wird, mit welchen Gehältern man durchschnittlich rechnen kann und in welchen Branchen Du später tätig sein kannst.',
         },
         {
           text: 'Du hast die Softwareentwicklung im App und Web Bereich kennengelernt und hast verstanden, was Frontend, Backend und Full Stack sind.',
@@ -37,7 +37,7 @@ export class MilestoneComponent implements OnInit {
       sectionTitle: 'html',
       logo: '../../../../../assets/images/brand-images/logos_html-5.svg',
       description:
-        'Super, du hast HTML verstanden und kannst jetzt schon eigene kleine Webseiten erstellen. In der nächsten Sektion geht es weiter mit dem Styling deiner Webseite.',
+        'Super, Du hast HTML verstanden und kannst jetzt schon eigene kleine Webseiten erstellen. In der nächsten Sektion geht es weiter mit dem Styling deiner Webseite.',
       exampleList: [
         { text: 'Webseiten erstellen und die Grundstruktur fürs Layout und Styling vorgeben.' },
         {
@@ -49,7 +49,7 @@ export class MilestoneComponent implements OnInit {
       sectionTitle: 'css',
       logo: '../../../../../assets/images/brand-images/logos_css-3.svg',
       description:
-        'Klasse Leistung! Mit dieser Sektion bist du deiner eigenen wunderschönen Webseite ein Stück näher gekommen.',
+        'Klasse Leistung! Mit dieser Sektion bist Du deiner eigenen wunderschönen Webseite ein Stück näher gekommen.',
       exampleList: [
         {
           text: 'Du kannst jetzt HTML Elemente stylen und somit Webseiten nach deinen Wünschen gestalten.',
@@ -63,7 +63,7 @@ export class MilestoneComponent implements OnInit {
       sectionTitle: 'bootstrap',
       logo: '../../../../../assets/images/brand-images/logos_bootstrap.svg',
       description:
-        'Jetzt hast du eine Möglichkeit kennengelernt, eines der meist genutzten CSS-Frameworks zu verwenden, dass dir viel Arbeit beim Stylen abnehmen kann.',
+        'Jetzt hast Du eine Möglichkeit kennengelernt, eines der meist genutzten CSS-Frameworks zu verwenden, dass Dir viel Arbeit beim Stylen abnehmen kann.',
       exampleList: [
         {
           text: 'Eigenschaften von Bootstrap überschreiben und für deine Webseite anpassen.',
@@ -83,16 +83,16 @@ export class MilestoneComponent implements OnInit {
       sectionTitle: 'git-basics',
       logo: '../../../../../assets/images/brand-images/logos_git.svg',
       description:
-        'Du hast nun die Grundlagen von Git kennengelernt. Grundlegende Versionsverwaltung ist für dich kein Problem mehr und du bist in der Lage, deine Projekte remote abzusichern.',
+        'Du hast nun die Grundlagen von Git kennengelernt. Grundlegende Versionsverwaltung ist für Dich kein Problem mehr und Du bist in der Lage, deine Projekte remote abzusichern.',
       exampleList: [
         {
-          text: 'Mithilfe von Commits kannst du neuen Code strukturiert in dein Projekt Repository pushen.',
+          text: 'Mithilfe von Commits kannst Du neuen Code strukturiert in dein Projekt Repository pushen.',
         },
         {
-          text: 'Du kannst von jedem Rechner aus an deinem Code weiterarbeiten, da du jeder Zeit dein Projekt klonen und Änderungen vornehmen kannst.',
+          text: 'Du kannst von jedem Rechner aus an deinem Code weiterarbeiten, da Du jeder Zeit dein Projekt klonen und Änderungen vornehmen kannst.',
         },
         {
-          text: 'Wenn du mal Probleme hast, kannst du nun einfach dein GitHub Repository an andere Softwareentwickler weitergeben, die dir helfen können.',
+          text: 'Wenn Du mal Probleme hast, kannst Du nun einfach dein GitHub Repository an andere Softwareentwickler weitergeben, die Dir helfen können.',
         },
       ],
     },
@@ -100,7 +100,7 @@ export class MilestoneComponent implements OnInit {
       sectionTitle: 'javascript',
       logo: '../../../../../assets/images/brand-images/logos_javascript.svg',
       description:
-        'Super Leistung! Jetzt kannst du mit HTML, CSS, Bootstrap und Javascript deine eigene Webseite mit Styling und Funktionalität entwickeln. Damit hast du bereits die wichtigsten Bausteine der Webentwicklung kennengelernt.',
+        'Super Leistung! Jetzt kannst Du mit HTML, CSS, Bootstrap und Javascript deine eigene Webseite mit Styling und Funktionalität entwickeln. Damit hast Du bereits die wichtigsten Bausteine der Webentwicklung kennengelernt.',
       exampleList: [
         {
           text: 'Webseiten für Probleme aller Art entwickeln.',
@@ -121,10 +121,10 @@ export class MilestoneComponent implements OnInit {
       sectionTitle: 'typescript',
       logo: '../../../../../assets/images/brand-images/logos_typescript-icon.svg',
       description:
-        'Du hast jetzt eine Erweiterung von Javascript kennengelernt, die dir unter anderem mit Typisierungen das Leben erleichtern soll und strukturierteres Coden ermöglicht.',
+        'Du hast jetzt eine Erweiterung von Javascript kennengelernt, die Dir unter anderem mit Typisierungen das Leben erleichtern soll und strukturierteres Coden ermöglicht.',
       exampleList: [
         {
-          text: 'Mithilfe von Typescript hast du die Grundlage für moderne Webframeworks wie Angular gelernt und kannst nun voll durchstarten.',
+          text: 'Mithilfe von Typescript hast Du die Grundlage für moderne Webframeworks wie Angular gelernt und kannst nun voll durchstarten.',
         },
       ],
     },
@@ -138,17 +138,17 @@ export class MilestoneComponent implements OnInit {
           text: 'Du kannst nun für verschiedene Aufgaben Branches auschecken und somit separiert an deinen Projektaufgaben arbeiten.',
         },
         {
-          text: 'Mithilfe von Pull Requests kannst du deine Änderungen am Code kontrollieren und in den Main Branch eingliedern lassen.',
+          text: 'Mithilfe von Pull Requests kannst Du deine Änderungen am Code kontrollieren und in den Main Branch eingliedern lassen.',
         },
         {
-          text: 'Mithilfe von Rebases kannst du deine Branches aktuell halten und gegebenenfalls Merge Konflikte lösen.',
+          text: 'Mithilfe von Rebases kannst Du deine Branches aktuell halten und gegebenenfalls Merge Konflikte lösen.',
         },
       ],
     },
     {
       sectionTitle: 'prototyping',
       logo: '../../../../../assets/images/brand-images/logos_figma.svg',
-      description: 'Bravo, du hast die Sektion Prototyping erfolgreich beendet.',
+      description: 'Bravo, Du hast die Sektion Prototyping erfolgreich beendet.',
       exampleList: [
         {
           text: 'Du kannst nun mit nur wenigen Klicks und einer guten Idee eine Personengruppe mit einem Prototypen überzeugen.',
@@ -160,10 +160,10 @@ export class MilestoneComponent implements OnInit {
     },
     {
       sectionTitle: 'arbeitsmethoden',
-      description: 'Bravo, du hast die Sektion Arbeitsmethoden erfolgreich beendet.',
+      description: 'Bravo, Du hast die Sektion Arbeitsmethoden erfolgreich beendet.',
       exampleList: [
         {
-          text: 'Nun kennst du einige Arbeitsmethoden mit denen du Projekte bearbeiten kannst.',
+          text: 'Nun kennst Du einige Arbeitsmethoden mit denen Du Projekte bearbeiten kannst.',
         },
       ],
     },
@@ -194,7 +194,7 @@ export class MilestoneComponent implements OnInit {
       sectionTitle: 'ionic',
       logo: '../../../../../assets/images/brand-images/logos_ionic-icon.svg',
       description:
-        'Der Appentwicklung steht nun nichts mehr im Wege. Den Bereich Frontend hast du nun komplett abgeschlossen. Das Einzige, was dir jetzt noch fehlt, ist das Backend.',
+        'Der Appentwicklung steht nun nichts mehr im Wege. Den Bereich Frontend hast Du nun komplett abgeschlossen. Das Einzige, was Dir jetzt noch fehlt, ist das Backend.',
       exampleList: [
         {
           text: 'Du kannst Apps designen und funktional gestalten.',
@@ -217,13 +217,13 @@ export class MilestoneComponent implements OnInit {
       sectionTitle: 'docker-basics',
       logo: '../../../../../assets/images/brand-images/logos_docker.svg',
       description:
-        'Jetzt hast du Docker kennengelernt. Du weißt jetzt zum Beispiel, was Container und Images sind. Das reicht erst mal für die nächsten Sektionen. Der Expertenteil folgt.',
+        'Jetzt hast Du Docker kennengelernt. Du weißt jetzt zum Beispiel, was Container und Images sind. Das reicht erst mal für die nächsten Sektionen. Der Expertenteil folgt.',
     },
     {
       sectionTitle: 'nestjs',
       logo: '../../../../../assets/images/brand-images/logos_nestjs.svg',
       description:
-        'Du weißt jetzt auch, wie man ein Backend mit einer Datenbank und Endpunkten erstellt. Damit kannst du dich selbst nun einen Fullstack-Developer nennen.',
+        'Du weißt jetzt auch, wie man ein Backend mit einer Datenbank und Endpunkten erstellt. Damit kannst Du Dich selbst nun einen Fullstack-Developer nennen.',
       exampleList: [
         {
           text: 'Du kannst jetzt Datenbanken an dein Frontend anbinden, um Daten abzuspeichern und zu analysieren.',
@@ -242,13 +242,13 @@ export class MilestoneComponent implements OnInit {
       sectionTitle: 'packages',
       logo: '../../../../../assets/images/brand-images/logos_npm.svg',
       description:
-        'Jetzt weißt du Bescheid, nach welchen Kriterien man Packages auswählen sollte und kannst zukünftig in deinen Projekten bedachter Pakete einbinden.',
+        'Jetzt weißt Du Bescheid, nach welchen Kriterien man Packages auswählen sollte und kannst zukünftig in deinen Projekten bedachter Pakete einbinden.',
     },
     {
       sectionTitle: 'design',
       logo: '../../../../../assets/images/brand-images/logos_figma.svg',
       description:
-        'Jetzt hast du gelernt, wie man designtechnisch an ein Projekt herangeht. Mit Figma oder anderen Tools kannst du deine Webseite also nun schon vorab designen.',
+        'Jetzt hast Du gelernt, wie man designtechnisch an ein Projekt herangeht. Mit Figma oder anderen Tools kannst Du deine Webseite also nun schon vorab designen.',
     },
     {
       sectionTitle: 'automatisierte-tests',

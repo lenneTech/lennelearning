@@ -29,12 +29,103 @@
       text="Haben wir Dein Interesse geweckt und Du möchtest ein Praktikum bei uns absolvieren? Du machst bereits bei einem anderen Unternehmen ein Praktikum, aber möchtest trotzdem lenne.Learning nutzen?<br /> <br />Nimm Kontakt mit uns auf und wir klären gemeinsam die nötigen Einzelheiten."
     >
     </app-academy-banner>
-    <div class="container-fluid p-3">
-      <h3 class="section-title">Das sagen unsere Teil&shy;nehmer:innen</h3>
-      <div class="section">
-        <app-company-testimonial [review]="review"></app-company-testimonial>
-        <app-company-testimonial [review]="review_two"></app-company-testimonial>
-      </div>
+
+    <div class="container-fluid">
+      <section class="testimonials">
+        <h3 class="section-title mb-5">Das sagen unsere Teil&shy;nehmer:innen</h3>
+        <div class="container">
+          <swiper
+            [slidesPerView]="1"
+            [spaceBetween]="20"
+            [navigation]="true"
+            [centeredSlides]="true"
+            [autoplay]="{ delay: 15000 }"
+            [loop]="true"
+          >
+            <ng-template swiperSlide>
+              <div class="d-flex">
+                <div class="row mb-0 d-flex justify-content-center">
+                  <div class="col-12 col-lg-8 col-right">
+                    <p class="description">
+                      "In meinem Praktikum habe ich einen Einblick in den Bereich der Webentwicklung erlangen können.
+                      Ich habe die Akademie absolviert und durfte zusammen mit einer anderen Praktikantin an einem
+                      Projekt arbeiten, wobei wir die verschiedensten Seiten der Webentwicklung zu sehen bekamen. Dabei
+                      war für mich das Miteinander am Arbeitsplatz sehr hilfreich, bei dem man sich direkt wie ein Teil
+                      des Teams gefühlt hat. Auch die Projekte der Mitarbeiter konnte ich sehen und meine Meinung dazu
+                      äußern. Insgesamt durfte ich viele Erfahrungen sammeln und durch die gemeinsame Arbeit am Projekt
+                      hatte ich auch viel Spaß dabei."
+                    </p>
+                    <p class="description-name">
+                      Torben Steinhanses <br />
+                      studentischer Praktikant
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template swiperSlide>
+              <div class="d-flex">
+                <div class="row mb-0 d-flex justify-content-center">
+                  <div class="col-12 col-lg-8 col-right">
+                    <p class="description">
+                      "Im Praktikum habe ich einen sehr guten Einblick in den Beruf eines Webentwicklers bekommen. Ich
+                      bekam die Chance, an einem eigenen Projekt zu arbeiten, bei dem mich die Mitarbeiter täglich
+                      unterstützt haben. Auch bei unternehmensinternen Projekten durfte ich mitentwickeln und meine
+                      Meinung einbringen. Das Arbeiten im Team war superangenehm und offen, gerade vor Ort im Büro. Mir
+                      hat es sehr viel Spaß gemacht und ich konnte viele Erfahrungen sammeln."
+                    </p>
+                    <p class="description-name">
+                      Daniel König <br />
+                      studentischer Praktikant
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template swiperSlide>
+              <div class="d-flex">
+                <div class="row mb-0 d-flex justify-content-center">
+                  <div class="col-12 col-lg-8 col-right">
+                    <p class="description">
+                      "Im Rahmen meiner Bachelorarbeit habe ich zusammen mit lenne.Tech eine App zur Erfassung von
+                      Wissensinhalten in der Softwareentwicklung entwickelt. Ich hatte vor allem im Frontend Bereich
+                      schon Vorwissen, aber mir fehlte die praktische Erfahrung, um das Projekt eigenständig umzusetzen.
+                      An der Stelle haben mich Kai und Pascal hervorragend betreut und mir gezeigt wie man strukturiert
+                      an umfangreicheren Anwendungen arbeitet. Darüber hinaus wurde mir auch im wissenschaftlichen
+                      Bereich der Arbeit und bei der Vorbereitung auf das Kolloquium sehr gut geholfen. Nach meiner
+                      Bachelorarbeit wurde ich als Werkstudent übernommen und arbeite nun mit ihnen im Team zusammen."
+                    </p>
+                    <p class="description-name">
+                      Florian Steinhanses <br />
+                      Abschlussarbeitskandidat
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template swiperSlide>
+              <div class="d-flex">
+                <div class="row mb-0 d-flex justify-content-center">
+                  <div class="col-12 col-lg-8 col-right">
+                    <p class="description">
+                      "In meinem vierwöchigen Praktikum bei lenne.Tech habe ich mithilfe der Akademie sehr viel im
+                      Bereich Webentwicklung gelernt. Ich habe HTML, CSS, Javascript und Bootstrap mit den Video-Kursen
+                      kennengelernt und bei Rückfragen war jeder immer für mich da um diese zu klären. Sowohl beim
+                      wöchentlichen Meeting der Akademieteilnehmer:innen, aber auch vor Ort im Büro. Ich bleibe auch
+                      nach dem Praktikum weiter in der Akademie und möchte beim Thema Webentwicklung mehr lernen um
+                      nebenbei Webseiten zu entwickeln."
+                    </p>
+                    <p class="description-name">
+                      Steven Shenouda<br />
+                      Schülerpraktikant
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </swiper>
+        </div>
+      </section>
     </div>
     <app-work-with-us></app-work-with-us>
   </nb-layout-column>

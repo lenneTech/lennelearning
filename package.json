@@ -59,9 +59,11 @@
     "ngx-highlightjs": "4.1.4",
     "ngx-lottie": "7.0.3",
     "ngx-matomo": "1.0.0-rc.1",
+    "ngx-swiper-wrapper": "^8.0.2",
     "nodemailer": "6.6.3",
     "rxjs": "7.3.0",
     "standard-version": "^9.3.2",
+    "swiper": "^8.0.7",
     "tslib": "2.3.1",
     "zone.js": "0.11.4"
   },
