@@ -4,9 +4,6 @@ import { Review } from '../../../modules/core/interfaces/review.interface';
 
 // import Swiper core and required modules
 import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper';
-import { TimeComponents } from 'src/app/modules/core/interfaces/time-components.interface';
-import { interval, map, Observable, shareReplay } from 'rxjs';
-import { calcDateDiff } from 'src/app/modules/core/functions/datediff';
 
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination, Autoplay]);
