@@ -5,6 +5,10 @@ on:
     branches:
       - develop
 
+env:
+  SMTP_USER: ${{ secrets.SMTP_USER }}
+  SMTP_PW: ${{ secrets.SMTP_PW }}
+
 jobs:
   deploy:
     runs-on: [self-hosted, docker]
@@ -14,9 +18,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 16.13.0
-      - env:
-          SMTP_USER: ${{ secrets.SMTP_USER }}
-          SMTP_PW: ${{ secrets.SMTP_PW }}
       - name: Install
         run: npm install
       - name: Build app
