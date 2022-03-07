@@ -13,10 +13,13 @@ jobs:
     runs-on: [self-hosted, docker-live]
     steps:
       - uses: actions/checkout@v1
-      - name: Use Node.js 14.17
+      - name: Use Node.js 16.13.0
         uses: actions/setup-node@v1
         with:
-          node-version: 14.17.1
+          node-version: 16.13.0
+      - env:
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PW: ${{ secrets.SMTP_PW }}
       - name: Install
         run: npm install
       - name: Build app
