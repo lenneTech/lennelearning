@@ -1,0 +1,24 @@
+<nb-card status="primary">
+  <nb-card-header class="title">History</nb-card-header>
+  <nb-card-body>
+    <div>
+      <nb-accordion>
+        <nb-accordion-item *ngFor="let version of versions">
+          <nb-accordion-item-header>Version {{ version.version }}</nb-accordion-item-header>
+          <nb-accordion-item-body>
+            <ul>
+              <li *ngFor="let change of version.changes">{{ change }}</li>
+            </ul>
+          </nb-accordion-item-body>
+        </nb-accordion-item>
+      </nb-accordion>
+    </div>
+  </nb-card-body>
+  <nb-card-footer>
+    <div class="row justify-content-around">
+      <div class="col-4 d-flex justify-content-around">
+        <button class="ms-2" nbButton status="primary" (click)="onAbortBtnClick()">Ok</button>
+      </div>
+    </div>
+  </nb-card-footer>
+</nb-card>
