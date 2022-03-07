@@ -28,18 +28,18 @@ services:
         - traefik.enable=true
         - traefik.docker.network=traefik-public
         - traefik.constraint-label=traefik-public
-        - traefik.http.routers.${STACK_NAME?Variable not set}-${IMAGE_TAG}-app-http.rule=Host(`test.lennelearning.de`, `www.test.lennelearning.de`)
-        - traefik.http.routers.${STACK_NAME?Variable not set}-${IMAGE_TAG}-app-http.entrypoints=http
-        - traefik.http.routers.${STACK_NAME?Variable not set}-${IMAGE_TAG}-app-http.middlewares=https-redirect
-        - traefik.http.routers.${STACK_NAME?Variable not set}-${IMAGE_TAG}-app-https.rule=Host(`test.lennelearning.de`, `www.test.lennelearning.de`)
-        - traefik.http.routers.${STACK_NAME?Variable not set}-${IMAGE_TAG}-app-https.entrypoints=https
-        - traefik.http.routers.${STACK_NAME?Variable not set}-${IMAGE_TAG}-app-https.tls=true
-        - traefik.http.routers.${STACK_NAME?Variable not set}-${IMAGE_TAG}-app-https.tls.certresolver=le
-        - traefik.http.middlewares.${STACK_NAME?Variable not set}-${IMAGE_TAG}-redirect.redirectregex.regex=^https?://www.test.lennelearning.de/(.*)
-        - traefik.http.middlewares.${STACK_NAME?Variable not set}-${IMAGE_TAG}-redirect.redirectregex.replacement=https://test.lennelearning.de/$${1}
-        - traefik.http.middlewares.${STACK_NAME?Variable not set}-${IMAGE_TAG}-redirect.redirectregex.permanent=true
-        - traefik.http.services.${STACK_NAME?Variable not set}-${IMAGE_TAG}-app.loadbalancer.server.port=4000
-        - traefik.http.routers.${STACK_NAME?Variable not set}-${IMAGE_TAG}-app-https.middlewares=${STACK_NAME?Variable not set}-${IMAGE_TAG}-redirect
+        - traefik.http.routers.lennelearning-test-app-http.rule=Host(`test.lennelearning.de`, `www.test.lennelearning.de`)
+        - traefik.http.routers.lennelearning-test-app-http.entrypoints=http
+        - traefik.http.routers.lennelearning-test-app-http.middlewares=https-redirect
+        - traefik.http.routers.lennelearning-test-app-https.rule=Host(`test.lennelearning.de`, `www.test.lennelearning.de`)
+        - traefik.http.routers.lennelearning-test-app-https.entrypoints=https
+        - traefik.http.routers.lennelearning-test-app-https.tls=true
+        - traefik.http.routers.lennelearning-test-app-https.tls.certresolver=le
+        - traefik.http.middlewares.lennelearning-test-redirect.redirectregex.regex=^https?://www.test.lennelearning.de/(.*)
+        - traefik.http.middlewares.lennelearning-test-redirect.redirectregex.replacement=https://test.lennelearning.de/$${1}
+        - traefik.http.middlewares.lennelearning-test-redirect.redirectregex.permanent=true
+        - traefik.http.services.lennelearning-test-app.loadbalancer.server.port=4000
+        - traefik.http.routers.lennelearning-test-app-https.middlewares=lennelearning-test-redirect
     command:
       - |
         NODE_ENV="test" SMTP_USER=${SMTP_USER} SMTP_PW=${SMTP_PW} npx node main.js
