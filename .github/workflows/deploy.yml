@@ -10,7 +10,7 @@ env:
 
 jobs:
   deploy:
-    runs-on: [self-hosted, docker-landing]
+    runs-on: [self-hosted, docker-live]
     steps:
       - uses: actions/checkout@v1
       - name: Use Node.js 14.17
@@ -22,17 +22,17 @@ jobs:
       - name: Build app
         run: npm run build:ssr
       - name: Build docker
-        run: docker-compose -f docker-compose.prod.yml build
+        run: SMTP_USER=$SMTP_USER SMTP_PW=$SMTP_PW docker-compose -f docker-compose.prod.yml build
       - name: Push docker
-        run: docker-compose -f docker-compose.prod.yml push
+        run: SMTP_USER=$SMTP_USER SMTP_PW=$SMTP_PW docker-compose -f docker-compose.prod.yml push
       - name: Deploy
-        run: docker stack deploy -c docker-compose.prod.yml --with-registry-auth academy-prod
+        run: SMTP_USER=$SMTP_USER SMTP_PW=$SMTP_PW docker stack deploy -c docker-compose.prod.yml --with-registry-auth lennelearning-prod
       - name: Deploy notification
         if: always()
         uses: adamkdean/simple-slack-notify@master
         with:
           channel: '#akademie-tutoren'
           status: ${{ job.status }}
-          success_text: 'Version (#${{github.event.release.tag_name}}) der Akademie wurde erfolgreich released.'
+          success_text: 'Version (#${{github.event.release.tag_name}}) von lenne.learning wurde erfolgreich released.'
           failure_text: 'Release (#${{github.event.release.tag_name}}) failed'
           cancelled_text: 'Release (#${{github.event.release.tag_name}}) was cancelled'

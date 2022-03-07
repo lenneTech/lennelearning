@@ -1,13 +1,13 @@
 version: '3.7'
 
 services:
-  academy-preview:
+  lennelearning-test:
     build:
       context: .
       dockerfile: Dockerfile.prod
-    image: localhost:5000/lennelearning:prod
+    image: localhost:5000/lennelearning:test
     restart: unless-stopped
-    container_name: lennelearning-prod
+    container_name: lennelearning-preview
     networks:
       - traefik-public
     entrypoint: ['/bin/sh', '-c']
@@ -28,21 +28,21 @@ services:
         - traefik.enable=true
         - traefik.docker.network=traefik-public
         - traefik.constraint-label=traefik-public
-        - traefik.http.routers.${STACK_NAME?Variable not set}-${IMAGE_TAG}-app-http.rule=Host(`lennelearning.de`, `www.lennelearning.de`)
+        - traefik.http.routers.${STACK_NAME?Variable not set}-${IMAGE_TAG}-app-http.rule=Host(`test.lennelearning.de`, `www.test.lennelearning.de`)
         - traefik.http.routers.${STACK_NAME?Variable not set}-${IMAGE_TAG}-app-http.entrypoints=http
         - traefik.http.routers.${STACK_NAME?Variable not set}-${IMAGE_TAG}-app-http.middlewares=https-redirect
-        - traefik.http.routers.${STACK_NAME?Variable not set}-${IMAGE_TAG}-app-https.rule=Host(`lennelearning.de`, `www.lennelearning.de`)
+        - traefik.http.routers.${STACK_NAME?Variable not set}-${IMAGE_TAG}-app-https.rule=Host(`test.lennelearning.de`, `www.test.lennelearning.de`)
         - traefik.http.routers.${STACK_NAME?Variable not set}-${IMAGE_TAG}-app-https.entrypoints=https
         - traefik.http.routers.${STACK_NAME?Variable not set}-${IMAGE_TAG}-app-https.tls=true
         - traefik.http.routers.${STACK_NAME?Variable not set}-${IMAGE_TAG}-app-https.tls.certresolver=le
-        - traefik.http.middlewares.${STACK_NAME?Variable not set}-${IMAGE_TAG}-redirect.redirectregex.regex=^https?://www.lennelearning.de/(.*)
-        - traefik.http.middlewares.${STACK_NAME?Variable not set}-${IMAGE_TAG}-redirect.redirectregex.replacement=https://lennelearning.de/$${1}
+        - traefik.http.middlewares.${STACK_NAME?Variable not set}-${IMAGE_TAG}-redirect.redirectregex.regex=^https?://www.test.lennelearning.de/(.*)
+        - traefik.http.middlewares.${STACK_NAME?Variable not set}-${IMAGE_TAG}-redirect.redirectregex.replacement=https://test.lennelearning.de/$${1}
         - traefik.http.middlewares.${STACK_NAME?Variable not set}-${IMAGE_TAG}-redirect.redirectregex.permanent=true
         - traefik.http.services.${STACK_NAME?Variable not set}-${IMAGE_TAG}-app.loadbalancer.server.port=4000
         - traefik.http.routers.${STACK_NAME?Variable not set}-${IMAGE_TAG}-app-https.middlewares=${STACK_NAME?Variable not set}-${IMAGE_TAG}-redirect
     command:
       - |
-        NODE_ENV="production" SMTP_USER=${SMTP_USER} SMTP_PW=${SMTP_PW} npx node main.js
+        NODE_ENV="test" SMTP_USER=${SMTP_USER} SMTP_PW=${SMTP_PW} npx node main.js
 
 volumes:
   node_modules:

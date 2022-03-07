@@ -1,0 +1,29 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  deploy:
+    runs-on: [self-hosted, docker]
+    steps:
+      - env:
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PW: ${{ secrets.SMTP_PW }}
+      - uses: actions/checkout@v1
+      - name: Use Node.js 14.17
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.17.1
+      - name: Install
+        run: npm install
+      - name: Build app
+        run: npm run build:test:ssr
+      - name: Build docker
+        run: SMTP_USER=$SMTP_USER SMTP_PW=$SMTP_PW docker-compose -f docker-compose.develop.yml build
+      - name: Push docker
+        run: SMTP_USER=$SMTP_USER SMTP_PW=$SMTP_PW docker-compose -f docker-compose.develop.yml push
+      - name: Deploy
+        run: SMTP_USER=$SMTP_USER SMTP_PW=$SMTP_PW docker stack deploy -c docker-compose.develop.yml --with-registry-auth lennelearning-develop

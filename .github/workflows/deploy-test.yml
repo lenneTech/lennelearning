@@ -3,7 +3,7 @@ name: Deploy
 on:
   push:
     branches:
-      - main
+      - test
 
 jobs:
   deploy:
@@ -19,8 +19,8 @@ jobs:
       - name: Build app
         run: npm run build:test:ssr
       - name: Build docker
-        run: docker-compose -f docker-compose.prev.yml build
+        run: SMTP_USER=$SMTP_USER SMTP_PW=$SMTP_PW docker-compose -f docker-compose.test.yml build
       - name: Push docker
-        run: docker-compose -f docker-compose.prev.yml push
+        run: SMTP_USER=$SMTP_USER SMTP_PW=$SMTP_PW docker-compose -f docker-compose.test.yml push
       - name: Deploy
-        run: docker stack deploy -c docker-compose.prev.yml --with-registry-auth academy-preview
+        run: SMTP_USER=$SMTP_USER SMTP_PW=$SMTP_PW docker stack deploy -c docker-compose.test.yml --with-registry-auth lennelearning-test
