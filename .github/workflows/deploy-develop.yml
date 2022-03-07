@@ -20,7 +20,7 @@ jobs:
       - name: Install
         run: npm install
       - name: Build app
-        run: npm run build:test:ssr
+        run: npm run build:develop:ssr
       - name: Build docker
         run: SMTP_USER=$SMTP_USER SMTP_PW=$SMTP_PW docker-compose -f docker-compose.develop.yml build
       - name: Push docker

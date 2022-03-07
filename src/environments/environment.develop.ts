@@ -1,8 +1,8 @@
 export const environment = {
   name: 'test',
   production: true,
-  prefix: 'lennelearning-test',
+  prefix: 'lennelearning-develop',
   apiUrl: '',
   matomoConfig: {},
-  appUrl: 'https://test.lennelearning.de/',
+  appUrl: 'https://develop.lennelearning.de/',
 };

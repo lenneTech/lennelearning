@@ -1,7 +1,7 @@
 export const environment = {
   name: 'dev',
   production: false,
-  prefix: 'academy-dev',
+  prefix: 'lennelearning-dev',
   apiUrl: '',
   matomoConfig: {},
   appUrl: 'http://localhost:4200/',
