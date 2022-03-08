@@ -37,9 +37,11 @@
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
+    line-height: 2;
 
     @media (max-width: 767.98px) {
       font-size: 14px;
+      line-height: 1.5;
     }
   }
 
