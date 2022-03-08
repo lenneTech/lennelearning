@@ -28,10 +28,10 @@ services:
         - traefik.enable=true
         - traefik.docker.network=traefik-public
         - traefik.constraint-label=traefik-public
-        - traefik.http.routers.lennelearning-prod-app-http.rule=Host(`lennelearning.de`, `www.lennelearning.de`)
+        - traefik.http.routers.lennelearning-prod-app-http.rule=Host(`www.akademie.lenne.tech`, `akademie.lenne.tech`, `lennelearning.de`, `www.lennelearning.de`)
         - traefik.http.routers.lennelearning-prod-app-http.entrypoints=http
         - traefik.http.routers.lennelearning-prod-app-http.middlewares=https-redirect
-        - traefik.http.routers.lennelearning-prod-app-https.rule=Host(`lennelearning.de`, `www.lennelearning.de`)
+        - traefik.http.routers.lennelearning-prod-app-https.rule=Host(`www.akademie.lenne.tech`, `akademie.lenne.tech`, `lennelearning.de`, `www.lennelearning.de`)
         - traefik.http.routers.lennelearning-prod-app-https.entrypoints=https
         - traefik.http.routers.lennelearning-prod-app-https.tls=true
         - traefik.http.routers.lennelearning-prod-app-https.tls.certresolver=le
