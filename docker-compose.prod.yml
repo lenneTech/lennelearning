@@ -38,8 +38,14 @@ services:
         - traefik.http.middlewares.lennelearning-prod-redirect.redirectregex.regex=^https?://www.lennelearning.de/(.*)
         - traefik.http.middlewares.lennelearning-prod-redirect.redirectregex.replacement=https://lennelearning.de/$${1}
         - traefik.http.middlewares.lennelearning-prod-redirect.redirectregex.permanent=true
+        - traefik.http.middlewares.lennelearning-prod-redirect2.redirectregex.regex=^https?://www.akademie.lenne.tech/(.*)
+        - traefik.http.middlewares.lennelearning-prod-redirect2.redirectregex.replacement=https://lennelearning.de/$${1}
+        - traefik.http.middlewares.lennelearning-prod-redirect2.redirectregex.permanent=true
+        - traefik.http.middlewares.lennelearning-prod-redirect3.redirectregex.regex=^https?://akademie.lenne.tech/(.*)
+        - traefik.http.middlewares.lennelearning-prod-redirect3.redirectregex.replacement=https://lennelearning.de/$${1}
+        - traefik.http.middlewares.lennelearning-prod-redirect3.redirectregex.permanent=true
         - traefik.http.services.lennelearning-prod-app.loadbalancer.server.port=4000
-        - traefik.http.routers.lennelearning-prod-app-https.middlewares=lennelearning-prod-redirect
+        - traefik.http.routers.lennelearning-prod-app-https.middlewares=lennelearning-prod-redirect, lennelearning-prod-redirect2, lennelearning-prod-redirect3
     command:
       - |
         NODE_ENV="production" SMTP_USER=${SMTP_USER} SMTP_PW=${SMTP_PW} npx node main.js
