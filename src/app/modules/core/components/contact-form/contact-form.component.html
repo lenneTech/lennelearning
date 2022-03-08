@@ -1,0 +1,122 @@
+<div class="contact-wrapper" [id]="content.id">
+  <div class="container">
+    <form class="row" [formGroup]="contactForm" (submit)="contact()">
+      <div class="col-12 col-lg-5 d-flex flex-column align-items-start justify-content-between mt-3 mb-3">
+        <div class="d-flex justify-content-start align-items-center mb-lg-0 mb-4">
+          <i class="bi bi-geo-alt-fill"></i>
+          <p class="content-text">
+            {{ content.company }} <br />
+            {{ content.street }} <br />
+            {{ content.postcode }} {{ content.city }}
+          </p>
+        </div>
+        <div class="d-flex justify-content-start align-items-center mb-lg-0 mb-4">
+          <i class="bi bi-telephone-fill"></i>
+          <a class="content-text" href="tel:+{{ content.phone }}">{{ content.phone }}</a>
+        </div>
+        <div class="d-flex justify-content-start align-items-center">
+          <i class="bi bi-envelope-fill"></i>
+          <a class="content-text" [href]="'mailto:' + content.email">{{ content.email }}</a>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-7 d-flex flex-column align-items-start mb-lg-0 mb-4">
+        <div class="d-flex flex-column flex-lg-row w-100">
+          <div class="form-group me-lg-1">
+            <input
+              class="form-control"
+              type="text"
+              [placeholder]="content.namePlaceholder"
+              formControlName="name"
+              [ngClass]="{ 'is-invalid': contactForm.get('name').invalid && contactForm.get('name').touched }"
+            />
+            <div
+              class="invalid-feedback m-2"
+              [ngClass]="{ 'd-block': contactForm.get('name').invalid && contactForm.get('name').touched }"
+              [innerHTML]="content.requiredMsg"
+            ></div>
+          </div>
+          <div class="form-group ms-lg-1">
+            <input
+              class="form-control"
+              type="text"
+              [placeholder]="content.emailPlaceholder"
+              formControlName="email"
+              [ngClass]="{ 'is-invalid': contactForm.get('email').invalid && contactForm.get('email').touched }"
+            />
+            <div
+              class="invalid-feedback m-2"
+              [ngClass]="{ 'd-block': contactForm.get('email').invalid && contactForm.get('email').touched }"
+              [innerHTML]="content.requiredMsg + ' Gib eine gültige E-Mail an!'"
+            ></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            [placeholder]="content.subjectPlaceholder"
+            formControlName="subject"
+            [ngClass]="{ 'is-invalid': contactForm.get('subject').invalid && contactForm.get('subject').touched }"
+          />
+          <div
+            class="invalid-feedback m-2"
+            [ngClass]="{ 'd-block': contactForm.get('subject').invalid && contactForm.get('subject').touched }"
+            [innerHTML]="content.requiredMsg"
+          ></div>
+        </div>
+
+        <div class="form-group">
+          <textarea
+            class="form-control"
+            rows="5"
+            [placeholder]="content.msgPlaceholder"
+            formControlName="message"
+            [ngClass]="{ 'is-invalid': contactForm.get('message').invalid && contactForm.get('message').touched }"
+          ></textarea>
+          <div
+            class="invalid-feedback m-2"
+            [ngClass]="{ 'd-block': contactForm.get('message').invalid && contactForm.get('message').touched }"
+            [innerHTML]="content.requiredMsg"
+          ></div>
+        </div>
+      </div>
+      <div class="col-12 d-flex mt-lg-5 ms-lg-5">
+        <div class="form-check me-3">
+          <input
+            class="form-check-input cursor-pointer"
+            type="checkbox"
+            id="dataPolicy"
+            formControlName="dataPolicy"
+            [ngClass]="{ 'is-invalid': contactForm.get('dataPolicy').invalid && contactForm.get('dataPolicy').touched }"
+          />
+        </div>
+        <div>
+          <label class="content-text data-policy cursor-pointer" for="dataPolicy" [innerHTML]="content.dataPolicy">
+          </label>
+          <div
+            class="invalid-feedback m-2"
+            [ngClass]="{ 'd-block': contactForm.get('dataPolicy').invalid && contactForm.get('dataPolicy').touched }"
+            [innerHTML]="content.requiredMsg"
+          ></div>
+        </div>
+      </div>
+      <div class="col-12 d-flex justify-content-between mt-5">
+        <div class="mt-3 notification">
+          <p class="notification-error" [innerHTML]="content.errorMsg" *ngIf="error"></p>
+        </div>
+        <button class="btn btn-secondary ps-5 pe-5 mx-auto mx-md-0" *ngIf="!isLoading" type="submit">
+          {{ content.buttonText }}
+        </button>
+        <button
+          class="btn btn-secondary ps-5 pe-5 d-flex align-items-center mx-auto mx-md-0"
+          disabled
+          *ngIf="isLoading"
+        >
+          <span>{{ content.buttonText }} </span>
+          <span class="spinner spinner-border spinner-border-sm ms-3" role="status" aria-hidden="true"></span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
