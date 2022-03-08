@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/lenneTech/academy/compare/v1.3.3-hoffix-1...v1.4.0) (2022-03-08)
+
+### Features
+
+- Add redirect from akademie.lenne.tech to lennelearning.de ([09f77b0](https://github.com/lenneTech/academy/commit/09f77b039af4076f9ed3cb8f61f5d6bfd8833486))
+
 ### [1.3.3](https://github.com/lenneTech/academy/compare/v1.3.2...v1.3.3) (2022-02-22)
 
 ### Bug Fixes
