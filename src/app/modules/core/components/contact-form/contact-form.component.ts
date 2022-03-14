@@ -25,6 +25,7 @@ export class ContactFormComponent implements OnInit {
 
   ngOnInit() {
     this.initForm();
+    this.dialogService.openMailSentDialog();
   }
 
   initForm() {
@@ -43,6 +44,8 @@ export class ContactFormComponent implements OnInit {
       return;
     }
     this.isLoading = true;
+    //declare type for the email-output
+    this.contactForm.value.type = 'contact';
     this.mailService.sendMail(this.contactForm.value).subscribe({
       next: () => {
         this.dialogService.openMailSentDialog();
@@ -50,7 +53,6 @@ export class ContactFormComponent implements OnInit {
       error: () => {
         this.error = true;
         this.isLoading = false;
-        this.dialogService.openMailSentDialog();
         setTimeout(() => {
           this.error = false;
         }, 3000);
