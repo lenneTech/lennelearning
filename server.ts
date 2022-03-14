@@ -85,6 +85,9 @@ export function app() {
 function run() {
   const port = process.env.PORT || 4000;
 
+  if (!process.env['NODE' + '_ENV']) {
+    process.env['NODE' + '_ENV'] = 'development';
+  }
   console.log('Starts in environment: ', process.env['NODE' + '_ENV']);
   console.log('Used SMTP user: ', process.env['SMTP' + '_USER']);
   console.log('Used SMTP pw: ', process.env['SMTP' + '_PW']);

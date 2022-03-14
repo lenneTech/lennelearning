@@ -12,8 +12,8 @@ export class MailHelper {
       port: 587,
       secure: false, // true for 465, false for other ports
       auth: {
-        user: '', // User
-        pass: '', // Pass
+        user: process.env['SMTP' + '_USER'], // User
+        pass: process.env['SMTP' + '_PW'], // Pass
       },
     });
 
@@ -24,7 +24,7 @@ export class MailHelper {
       // if the mail gets send via the contact-page
       info = await transporter.sendMail({
         from: 'noreply@lenne.tech', // sender address
-        to: ['lenne.learning@lenne.tech'], // list of receivers
+        to: ['lenne.learning@lenne.tech', 'pascal.klesse@lenne.tech'], // list of receivers
         subject: `Neue Kontaktanfrage von ${postData.name}`, // Subject line
         text:
           `<h1>Neue Kontaktanfrage von ${postData.name}:</h1>` +
@@ -70,6 +70,13 @@ export class MailHelper {
     // Check data
     if (!postData.dataPolicy) {
       res.send(JSON.stringify({ status: 'invalid' }));
+      return;
+    }
+
+    // TODO: Log result for dev and dont try to send an mail
+    if (process.env['NODE' + '_ENV'] === 'development') {
+      console.log('postData', postData);
+      res.send(JSON.stringify({ status: 'success' }));
       return;
     }
 
