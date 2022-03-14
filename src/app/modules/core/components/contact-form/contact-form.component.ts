@@ -25,7 +25,6 @@ export class ContactFormComponent implements OnInit {
 
   ngOnInit() {
     this.initForm();
-    this.dialogService.openMailSentDialog();
   }
 
   initForm() {
@@ -59,6 +58,7 @@ export class ContactFormComponent implements OnInit {
       },
       complete: () => {
         this.isLoading = false;
+        this.contactForm.reset();
       },
     });
   }

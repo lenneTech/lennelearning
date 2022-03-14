@@ -43,7 +43,7 @@ export class MailHelper {
           `<h1>Neue Aboanfrage von ${postData.name}:</h1>` +
           `<p><b>E-Mail:</b> ${postData.email}</p>` +
           `<p><b>Name:</b> ${postData.name}</p>` +
-          `<p><b>Betreff: </b>${postData.subject}</p>` +
+          `<p><b>Abo: </b>${postData.subscription}</p>` +
           `<p><b>Nachricht: </b><br>${postData.message}</p>`,
       });
     }
@@ -65,6 +65,9 @@ export class MailHelper {
       message: req.body.message,
       type: req.body.type,
       dataPolicy: req.body.dataPolicy,
+
+      //Subscription
+      subscription: req.body.subscription,
     };
 
     // Check data
