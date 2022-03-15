@@ -26,7 +26,7 @@ export class MailHelper {
         from: 'noreply@lenne.tech', // sender address
         to: ['lenne.learning@lenne.tech', 'pascal.klesse@lenne.tech'], // list of receivers
         subject: `Neue Kontaktanfrage von ${postData.name}`, // Subject line
-        text:
+        html:
           `<h1>Neue Kontaktanfrage von ${postData.name}:</h1>` +
           `<p><b>E-Mail:</b> ${postData.email}</p>` +
           `<p><b>Name:</b> ${postData.name}</p>` +
@@ -39,7 +39,7 @@ export class MailHelper {
         from: 'noreply@lenne.tech', // sender address
         to: ['lenne.learning@lenne.tech'], // list of receivers
         subject: `Neue Aboanfrage von ${postData.name}`, // Subject line
-        text:
+        html:
           `<h1>Neue Aboanfrage von ${postData.name}:</h1>` +
           `<p><b>E-Mail:</b> ${postData.email}</p>` +
           `<p><b>Name:</b> ${postData.name}</p>` +
