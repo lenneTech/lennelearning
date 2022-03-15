@@ -33,21 +33,21 @@
 
     <task-questions>
       <div questionlist>
-        Wie bindest Du Bootstrap in deiner Website ein? Was benötigst Du, um Bootstrap vollständig nutzen zu können?
+        Wie bindest Du Bootstrap in Deiner Webseite ein? Was benötigst Du, um Bootstrap vollständig nutzen zu können?
       </div>
       <div questionlist>
         Mit Bootstrap lassen sich Inhalte gut positionieren und strukturieren. Welche Bootstrapklassen verwendet
         Bootstrap für die Gestaltung des Layouts?
       </div>
       <div questionlist>
-        Bootstrap bietet Dir die Möglichkeit, deine Website responsive zu gestalten. Mit welchen Bootstrap Klassen
+        Bootstrap bietet Dir die Möglichkeit, Deine Webseite responsive zu gestalten. Mit welchen Bootstrap Klassen
         kannst Du dein Layout für verschiedene Bildschirmgrößen anpassen?
       </div>
       <div questionlist>
         Bootstrap hat verschiedene Farben vordefiniert. Nenne die verschiedenen Typen und erkläre deren Vorteile.
       </div>
       <div questionlist>
-        Welche Hilfsklassen bietet Dir Bootstrap, um einem HTML Element Padding, Margin und eine Border zu geben?
+        Welche Hilfsklassen bietet Dir Bootstrap, um einem HTML Element Padding, Margin sowie eine Border zu geben?
       </div>
     </task-questions>
   </task>
@@ -63,16 +63,16 @@
 
     <task-text>
       <div exercise>
-        Die Privatbrauerei Lennetaler braucht eine neue Website. Zunächst soll die Website rein gestalterisch mit
+        Die Privatbrauerei Lennetaler braucht eine neue Webseite. Zunächst soll die Webseite rein gestalterisch mit
         Bootstrap umgesetzt werden. Folgende Anforderungen werden gestellt:
       </div>
       <div exerciselist>
         Eine Navbar mit Logo und Name, die Navigationsmöglichkeiten zur „Startseite“, „Shop“ und „Kontakt“, eine
-        Suchzeile, um die Website (nicht funktional) nach Inhalten durchsuchen zu können und einen Warenkorb, der sich
+        Suchzeile, um die Webseite (nicht funktional) nach Inhalten durchsuchen zu können und einen Warenkorb, der sich
         ausklappen lässt und ausgewählte Produkte beinhaltet.
       </div>
       <div exerciselist>
-        Eine Startseite, die den Nutzer mit einem Begrüßungstext Willkommen heißt (Nutze dazu z. B. einen „Jumbotron“).
+        Eine Startseite, die den Nutzer mit einem Begrüßungstext Willkommen heißt (nutze dazu z. B. einen „Jumbotron“).
       </div>
       <div exerciselist>
         Eine Shopseite mit einer Diashow von unternehmensspezifischen Bildern on top und einer Auflistung der
@@ -91,7 +91,7 @@
   <task id="task-4" section="bootstrap">
     <div title>Responsive Webdesign</div>
     <div sidebarTitle>Video</div>
-    <div description>In diesem Video wird Dir kurz erklärt, was man unter responsive Webdesign versteht.</div>
+    <div description>In diesem Video wird Dir kurz erklärt, was man unter Responsive Webdesign versteht.</div>
     <task-video [youtubelink]="'https://www.youtube.com/embed/ZaZclNNP70U'"> </task-video>
   </task>
 
@@ -105,7 +105,7 @@
         Zugang zu Webseiten ist es nötig, diese nicht nur für Desktop-Ansichten, sondern auch für die mobile Nutzung zu
         entwickeln und zu optimieren, da es ansonsten zu einer Reihe von Darstellungsproblemen kommt und somit die User
         Experience enorm beeinträchtigt wird. Responsive Webdesign kann als Ansatz verstanden werden, Webdesign so zu
-        entwickeln und zu gestalten, dass sie flexible auf die Eigenschaften und Größenverhältnisse der verwendeten
+        entwickeln und zu gestalten, dass sie flexibel auf die Eigenschaften und Größenverhältnisse der verwendeten
         Bildschirmgrößen- und Devices optimiert dargestellt werden. Durch Responsive Webdesign wird ein Arbeitsergebnis
         erstrebt, bei dem die Benutzerfreundlichkeit über alle Instanzen hinweg gewährleistet wird und die User,
         unabhängig vom verwendeten Endgerät, uneingeschränkten Zugang zu einer Webseite haben.
@@ -114,8 +114,8 @@
   </task>
 
   <task id="task-6" section="bootstrap">
-    <div title>Warum Responsive UX Webdesign</div>
-    <div sidebarTitle>Warum UX Design</div>
+    <div title>Warum Responsive UX Webdesign?</div>
+    <div sidebarTitle>Warum UX Design?</div>
 
     <task-text>
       <div info>
@@ -134,7 +134,7 @@
     <task-text>
       <div info>
         Den „einen richtigen Weg“ ein Webdesign responsive umzusetzen, gibt es nicht. Es gibt viele unterschiedliche
-        Methoden, Strategien und Tools, mit deren Hilfe ein responsive Webdesign umgesetzt werden kann. Folgende
+        Methoden, Strategien und Tools, mit deren Hilfe ein Responsive Webdesign umgesetzt werden kann. Folgende
         Begrifflichkeiten treten immer wieder im Zusammenhang mit der technischen Umsetzung auf:
       </div>
       <div infolist>HTML5</div>
@@ -153,21 +153,21 @@
 
     <task-text>
       <div info>
-        Wir schauen uns nun vor Allem die Begrifflichkeiten Breakpoints und Bootstrap an. Durch Bootstrap bekommen wir
+        Wir schauen uns nun vor allem die Begrifflichkeiten Breakpoints und Bootstrap an. Durch Bootstrap bekommen wir
         die Möglichkeit, mit dem Zuweisen einer Klasse, mehrere vorgefertigte Styles abzurufen und auf den jeweiligen
         HTML-Tag anzuwenden. Darüber hinaus bietet Bootstrap sogenannte Breakpoints. Diese verändern die Darstellung der
         einzelnen Inhalte der Webseite je nach Bildschirmgröße. <br /><br />
         Zum Beispiel: <br />
-        Eine Bildergalerie soll 4 Spalten zur Darstellung haben. Dies ist mit Bootstrap schnell gelöst in dem man die
-        col-Klasse verwendet und auf alle 4 Spalten anwendet: <code>class:"col-3"</code>. In der mobilen Ansicht wird
-        dieser Inhalt jedoch sehr unschön aussehen, da nun immer noch 4 Bilder in der selben Reihe vorliegen. Hier
-        kommen die Breakpoints zum Einsatz: Nun verwenden wir <code>class:"col-md-3 col-12"</code> wodurch bei allen
-        Displays kleiner als 768px (entspricht md) für jede Spalte eine Reihe erstellt wird. Für Displays ≥768px sind es
-        4 Spalten. Eventuell überlappen die Bilder direkt am Breakpoint noch. Das kann behoben werden, indem man an
-        weiteren Stellen Breakpoints hinzufügt: <code>class:"col-lg-3 col-md-4 col-12"</code>. Nun sind in einer Reihe 4
-        Spalten auf ganz großen Displays, 3 Spalten auf etwas kleineren und 1 Spalte auf mobiler Ansicht. Das ist nur
-        ein kleiner Teil der Möglichkeiten, die Bootstrap im Bereich des responsive Design mit sich bringt. Für mehr
-        Informationen darüber ist die
+        Eine Bildergalerie soll vier Spalten zur Darstellung haben. Dies ist mit Bootstrap schnell gelöst, in dem man
+        die col-Klasse verwendet und auf alle vier Spalten anwendet: <code>class:"col-3"</code>. In der mobilen Ansicht
+        wird dieser Inhalt jedoch sehr unschön aussehen, da nun immer noch vier Bilder in der selben Reihe vorliegen.
+        Hier kommen die Breakpoints zum Einsatz: Nun verwenden wir <code>class:"col-md-3 col-12"</code> wodurch bei
+        allen Displays kleiner als 768px (entspricht md) für jede Spalte eine Reihe erstellt wird. Für Displays ≥ 768px
+        sind es vier Spalten. Eventuell überlappen die Bilder direkt am Breakpoint noch. Das kann behoben werden, indem
+        man an weiteren Stellen Breakpoints hinzufügt: <code>class:"col-lg-3 col-md-4 col-12"</code>. Nun sind in einer
+        Reihe vier Spalten auf ganz großen Displays, drei Spalten auf etwas kleineren und eine Spalte auf mobiler
+        Ansicht. Das ist nur ein kleiner Teil der Möglichkeiten, die Bootstrap im Bereich des Responsive Design mit sich
+        bringt. Für mehr Informationen darüber ist die
         <a href="https://getbootstrap.com/docs/5.1/getting-started/introduction/" taskLink
           >Dokumentation von Bootstrap</a
         >
