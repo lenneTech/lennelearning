@@ -39,6 +39,8 @@ import { TextImageListComponent } from './components/text-image-list/text-image-
 import { TutorCardsComponent } from './components/tutor-cards/tutor-cards.component';
 import { UnderlineAnimationComponent } from './components/underline-animation/underline-animation.component';
 import { WorkWithUsComponent } from './components/work-with-us/work-with-us.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { MailSentDialogComponent } from './components/mail-sent-dialog/mail-sent-dialog.component';
 
 @NgModule({
   imports: [
@@ -71,6 +73,7 @@ import { WorkWithUsComponent } from './components/work-with-us/work-with-us.comp
     ProcessInterestedComponent,
     WorkWithUsComponent,
     UnderlineAnimationComponent,
+    ContactFormComponent,
 
     // Dialogs
     HelperDialogComponent,
@@ -101,6 +104,7 @@ import { WorkWithUsComponent } from './components/work-with-us/work-with-us.comp
     FeaturesComponent,
     TutorCardsComponent,
     CompanyTestimonialComponent,
+    MailSentDialogComponent,
   ],
   exports: [
     // Components
@@ -132,6 +136,7 @@ import { WorkWithUsComponent } from './components/work-with-us/work-with-us.comp
     GoalsComponent,
     ProcessInterestedComponent,
     WorkWithUsComponent,
+    ContactFormComponent,
   ],
 })
 export class CoreModule {}

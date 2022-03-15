@@ -9,6 +9,7 @@ import { AppServerModule } from './src/main.server';
 import { APP_BASE_HREF } from '@angular/common';
 import { existsSync } from 'fs';
 import { ngExpressEngine } from '@nguniversal/express-engine';
+import { MailHelper } from 'server/mail-helper';
 // import { MailHelper } from './server/mail-helper';
 
 // ----------------------------------------------
@@ -53,15 +54,15 @@ export function app() {
   //   res.end();
   // });
 
-  // // Process messages
-  // server.use(express.json());
-  // server.post('/api/messages/add', (req, res) => {
-  //   res.setHeader('Access-Control-Allow-Origin', '*');
-  //   res.setHeader('Access-Control-Request-Method', '*');
-  //   res.setHeader('Access-Control-Allow-Methods', '*');
-  //   res.setHeader('Access-Control-Allow-Headers', '*');
-  //   MailHelper.processMessage(req, res);
-  // });
+  // Process messages
+  server.use(express.json());
+  server.post('/api/send/mail', async (req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Request-Method', '*');
+    res.setHeader('Access-Control-Allow-Methods', '*');
+    res.setHeader('Access-Control-Allow-Headers', '*');
+    await MailHelper.processMessage(req, res);
+  });
 
   // Example Express Rest API endpoints
   // app.get('/api/**', (req, res) => { });
@@ -84,6 +85,9 @@ export function app() {
 function run() {
   const port = process.env.PORT || 4000;
 
+  if (!process.env['NODE' + '_ENV']) {
+    process.env['NODE' + '_ENV'] = 'development';
+  }
   console.log('Starts in environment: ', process.env['NODE' + '_ENV']);
   console.log('Used SMTP user: ', process.env['SMTP' + '_USER']);
   console.log('Used SMTP pw: ', process.env['SMTP' + '_PW']);

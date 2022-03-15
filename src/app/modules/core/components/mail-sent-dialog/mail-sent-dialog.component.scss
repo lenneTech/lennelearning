@@ -1,0 +1,25 @@
+@import '~src/assets/scss/utils';
+
+.title {
+  color: $orange;
+}
+.subtitle {
+  font-size: 21px;
+  text-align: center;
+}
+
+.flying-letter {
+  width: 40px;
+  margin-right: 50px;
+  object-fit: contain;
+}
+
+.thumbs-up {
+  width: 60px;
+}
+.customer-support {
+  max-width: 450px;
+}
+
+@include media-breakpoint-up('md') {
+}
