@@ -1,0 +1,20 @@
+<nb-layout>
+  <nb-layout-header>
+    <app-header></app-header>
+  </nb-layout-header>
+
+  <nb-layout-column class="p-0">
+    <div class="container">
+      <div class="section">
+        <app-banner [title]="title" [subtitle]="subtitle" [imageUrl]="imageUrl"></app-banner>
+      </div>
+    </div>
+    <div class="container-fluid bg-primary-500">
+      <h2 class="banner-title">Melde dich bei uns!</h2>
+    </div>
+    <app-contact-form [content]="contactType"></app-contact-form>
+  </nb-layout-column>
+  <nb-layout-footer fixed>
+    <app-footer></app-footer>
+  </nb-layout-footer>
+</nb-layout>
