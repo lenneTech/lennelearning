@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MetaService } from 'src/app/modules/core/services/meta.service';
-import { TextImageInterface } from '../../../modules/core/interfaces/text-image.interface';
 
 @Component({
   selector: 'app-subscription-page',
@@ -12,6 +11,7 @@ export class SubscriptionPageComponent implements OnInit {
   subtitle =
     'Du willst nur mal reinschnuppern? Du möchtest Dich neben Schule, Studium oder Beruf weiterbilden? Du suchst die passende Betreuung und Weiterbildung im unternehmerischen Kontext?   \n \n    Kein Problem, wir haben die passendenden Aktionen, Angebote und Abomodelle. Für individuellere Fragen und Wünsche kontaktiere uns gerne direkt.';
   imageUrl = '../../assets/images/banner-images/Analytics.svg';
+  selection = true;
   specificsIntern: string[] = [
     'Onlinevideos',
     'Aufgabenkatalog, Musterlösungen und Tipps zu allen Lernpfaden',
@@ -25,6 +25,10 @@ export class SubscriptionPageComponent implements OnInit {
     'Zugang zur Community',
     'Wochenmeeting',
     'Aufgabenkatalog, Musterlösungen und Tipps zu allen Lernpfaden',
+  ];
+  specificsCamp: string[] = [
+    'Tägliches 4-stündiges Intensivtraining mit individueller tutorieller Betreuung in unseren Schulungsräumlichkeiten (Mo-Fr)',
+    'Begleitmaterial für das Selbststudium: Onlinevideos, Aufgabenkataloge, Tipps und Musterlösungen',
   ];
 
   constructor(private metaService: MetaService) {}

@@ -15,21 +15,22 @@
         ></app-banner>
       </div>
     </div>
-    <div class="container-fluid pe-0 ps-0 pb-3 pt-3 pr-0 bg-primary-500 mb-5">
+    <div class="container-fluid mb-5">
       <div class="row">
-        <div class="col abos">Abos</div>
-        <div class="col aktionen">Aktionen</div>
+        <div class="col pb-3 pt-3 bg-primary-200 abos" (click)="selection = true">Abos</div>
+        <div class="col pb-3 pt-3 bg-primary-200 aktionen" (click)="selection = false">Aktionen</div>
       </div>
     </div>
     <div class="container">
       <div class="row d-flex justify-content-center" [ltMatchHeight]="['card-container', 'card', 'card-text']">
-        <div class="col d-flex flex-wrap justify-content-around card-container">
+        <div class="col d-flex flex-wrap justify-content-around card-container" *ngIf="selection">
           <app-price-card
             cardTitle="Free"
             cardDescription="Erste Einblicke in das Berufsfeld und Elemente der Softwareentwicklung im Rahmen des Lernpfades Berufsfelderkundung."
             cardPrice="0€"
             [cardSpecifics]="['Texte, Aufgabenkatalog & Tipps zum Lernpfad Berufsfelderkundung']"
             cardImageUrl="../../assets/images/entry-point-images/berufsinteressent.svg"
+            s
           >
           </app-price-card>
 
@@ -49,6 +50,18 @@
             [cardSpecifics]="specificsCompany"
             cardPriceDetails="für Unternehmer:innen, Gründer:innen, Auszubildende, Werkstudent:innen und Mitarbeiter:innen."
             cardImageUrl="../../assets/images/entry-point-images/company.svg"
+          >
+          </app-price-card>
+        </div>
+        <div class="col d-flex flex-wrap justify-content-around card-container" *ngIf="!selection">
+          <app-price-card
+            cardPreTitle="Unser Angebot für Dein Unternehmen"
+            cardTitle="Azubi Sommercamp 2022"
+            cardDescription="In einem 4-wöchigen Intensivtraining von 27.06 - 22.07.2022 bereiten wir angehende Auszubildende im Entwicklungsbereich auf die Unternehmenspraxis vor."
+            cardPrice="2000€"
+            cardPriceDetails="Pro Person"
+            [cardSpecifics]="specificsCamp"
+            cardImageUrl="../../assets/images/entry-point-images/berufsinteressent.svg"
           >
           </app-price-card>
         </div>
