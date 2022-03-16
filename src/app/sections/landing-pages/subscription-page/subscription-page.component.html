@@ -1,0 +1,68 @@
+<nb-layout>
+  <nb-layout-header>
+    <app-header></app-header>
+  </nb-layout-header>
+
+  <nb-layout-column class="p-0">
+    <div class="container">
+      <div class="section">
+        <app-banner
+          [title]="title"
+          [subtitle]="subtitle"
+          [imageUrl]="imageUrl"
+          [showContactBtn]="true"
+          [entryPointId]="'unternehmen'"
+        ></app-banner>
+      </div>
+    </div>
+    <div class="container-fluid pe-0 ps-0 pb-3 pt-3 pr-0 bg-primary-500 mb-5">
+      <div class="row">
+        <div class="col abos">Abos</div>
+        <div class="col aktionen">Aktionen</div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row d-flex justify-content-center" [ltMatchHeight]="['card-container', 'card', 'card-text']">
+        <div class="col d-flex flex-wrap justify-content-around card-container">
+          <app-price-card
+            cardTitle="Free"
+            cardDescription="Erste Einblicke in das Berufsfeld und Elemente der Softwareentwicklung im Rahmen des Lernpfades Berufsfelderkundung."
+            cardPrice="0€"
+            [cardSpecifics]="['Texte, Aufgabenkatalog & Tipps zum Lernpfad Berufsfelderkundung']"
+            cardImageUrl="../../assets/images/entry-point-images/berufsinteressent.svg"
+          >
+          </app-price-card>
+
+          <app-price-card
+            cardTitle="Praktikum"
+            cardDescription="Je nach Art und Dauer des Praktikums sowie den jeweiligen Vorkenntnissen der Praktikant:innen können unterschiedliche Lernpfade geeignet sein: Berufsfeld, Praktikum, Sprint, Frontend, Backend oder Standard."
+            cardPrice="0€ / kostenpflichtig"
+            cardPriceDetails="0€ für unsere eigenen Praktikant:innen, kostenpflichtig für externe Praktikant:innen.          "
+            [cardSpecifics]="specificsIntern"
+            cardImageUrl="../../assets/images/entry-point-images/praktikant.svg"
+          >
+          </app-price-card>
+          <app-price-card
+            cardTitle="Unternehmen"
+            cardDescription="Für alle, die sich oder Ihre Unternehmensangehörigen weiterbilden möchten: Je nach Zielsetzung und Vorwissen eignen sich die Lernpfade:  Sprint, Praktikum, Unternehmen, Frontend, Backend oder Standard."
+            cardPrice="kostenpflichtig"
+            [cardSpecifics]="specificsCompany"
+            cardPriceDetails="für Unternehmer:innen, Gründer:innen, Auszubildende, Werkstudent:innen und Mitarbeiter:innen."
+            cardImageUrl="../../assets/images/entry-point-images/company.svg"
+          >
+          </app-price-card>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid banner">
+      <app-price-banner
+        textBanner="** Ihr sucht gut ausgebildete Nachwuchskräfte und möchtet daher Teil    unseres Unternehmensnetzwerkes werden?   Nehmt Kontakt mit uns auf und informiert Euch über die     Rahmenbedingungen.'"
+      >
+      </app-price-banner>
+    </div>
+  </nb-layout-column>
+
+  <nb-layout-footer fixed>
+    <app-footer></app-footer>
+  </nb-layout-footer>
+</nb-layout>

@@ -12,12 +12,17 @@ export class BannerComponent {
   @Input() subtitle: string;
   @Input() imageUrl: string;
   @Input() showAcademyBtn: boolean;
+  @Input() showContactBtn: boolean;
   @Input() entryPointId: string;
 
   constructor(private entryPointService: EntryPointService, private router: Router) {}
 
   setSelectedEntryPoint() {
     this.entryPointService.setEntryPointById(this.entryPointId);
+  }
+
+  sendOffer(): void {
+    window.open('mailto:info@lenne.tech');
   }
 
   setRecommendation() {

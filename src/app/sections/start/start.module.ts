@@ -11,6 +11,7 @@ import { BaseModule } from '@lenne.tech/ng-base';
 import { EntryPointsComponent } from '../landing-pages/entry-points/entry-points.component';
 import { SwiperModule } from 'swiper/angular';
 import { ContactPageComponent } from '../landing-pages/contact-page/contact-page.component';
+import { SubscriptionPageComponent } from '../landing-pages/subscription-page/subscription-page.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ContactPageComponent } from '../landing-pages/contact-page/contact-page
     JobInterestedPageComponent,
     EntryPointsComponent,
     ContactPageComponent,
+    SubscriptionPageComponent,
   ],
   imports: [
     StartRoutingModule,

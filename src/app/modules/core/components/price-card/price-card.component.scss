@@ -1,0 +1,90 @@
+@import 'src/assets/scss/utils';
+
+.card-subtitle {
+  font-weight: bold;
+  align-self: center;
+}
+
+.pricecard {
+  max-width: none;
+}
+.card {
+  max-width: 400px;
+  box-shadow: 0 0 4px 0 #bdbdbd;
+  border: none;
+  border-radius: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  &-img {
+    height: 245px;
+    width: 350px;
+    object-fit: cover;
+  }
+
+  &-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  &-subtitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  &-text {
+    font-size: 18px;
+    line-height: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    text-align: center;
+  }
+  &-specifics {
+    font-size: 20px;
+    line-height: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    text-align: center;
+  }
+  &-price {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: $orange;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  &-details {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+.price-button {
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  align-content: center;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.list-item {
+  background: url(/assets/images/bulletpoint.svg) no-repeat top left !important;
+  margin: 0;
+  margin-top: 15px !important;
+  padding: 4px 20px 4px 40px;
+  list-style: none;
+  text-align: left;
+}
