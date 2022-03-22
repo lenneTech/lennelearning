@@ -43,6 +43,7 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
 import { MailSentDialogComponent } from './components/mail-sent-dialog/mail-sent-dialog.component';
 import { PriceCardComponent } from './components/price-card/price-card.component';
 import { PriceBannerComponent } from './components/price-banner/price-banner.component';
+import { InquiryComponent } from './components/inquiry/inquiry.component';
 
 @NgModule({
   imports: [
@@ -78,6 +79,7 @@ import { PriceBannerComponent } from './components/price-banner/price-banner.com
     UnderlineAnimationComponent,
     ContactFormComponent,
     PriceBannerComponent,
+    InquiryComponent,
 
     // Dialogs
     HelperDialogComponent,
@@ -143,6 +145,7 @@ import { PriceBannerComponent } from './components/price-banner/price-banner.com
     WorkWithUsComponent,
     ContactFormComponent,
     PriceBannerComponent,
+    InquiryComponent,
   ],
 })
 export class CoreModule {}

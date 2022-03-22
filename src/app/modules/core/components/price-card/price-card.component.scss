@@ -6,11 +6,11 @@
 }
 
 .pricecard {
-  max-width: 350px !important;
+  max-width: none;
 }
 .card {
   max-width: 350px;
-  @include media-breakpoint-up('md') {
+  @include media-breakpoint-up('lg') {
     max-width: 400px;
   }
 
@@ -24,7 +24,7 @@
     height: auto;
     width: 300px;
     object-fit: cover;
-    @include media-breakpoint-up('md') {
+    @include media-breakpoint-up('lg') {
       width: 350px;
       height: auto;
       max-height: 245px;

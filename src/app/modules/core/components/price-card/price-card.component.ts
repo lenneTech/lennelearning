@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { DialogService } from '../../../../modules/core/services/dialog.service';
 
 @Component({
   selector: 'app-price-card',
@@ -14,14 +15,11 @@ export class PriceCardComponent {
   @Input() cardPriceDetails: string;
   @Input() cardSpecifics: string[];
   @Input() cardRoute: string;
+  @Input() subscriptionType: string;
 
-  @Output() linkClickEvent = new EventEmitter<boolean>();
+  constructor(private dialogService: DialogService) {}
 
-  constructor() {}
-  onLinkClicked(): void {
-    this.linkClickEvent.emit(true);
-  }
-  onButtonClicked(): void {
-    window.open('mailto:info@lenne.tech');
+  openInquiry(): void {
+    this.dialogService.openInquiryDialog(this.subscriptionType);
   }
 }

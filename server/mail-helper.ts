@@ -44,7 +44,8 @@ export class MailHelper {
           `<p><b>E-Mail:</b> ${postData.email}</p>` +
           `<p><b>Name:</b> ${postData.name}</p>` +
           `<p><b>Abo: </b>${postData.subscription}</p>` +
-          `<p><b>Nachricht: </b><br>${postData.message}</p>`,
+          `<p><b>Telefon: </b>${postData.phoneNumber}</p>` +
+          `<p><b>Unternehmen: </b><br>${postData.company}</p>`,
       });
     }
 
@@ -65,6 +66,8 @@ export class MailHelper {
       message: req.body.message,
       type: req.body.type,
       dataPolicy: req.body.dataPolicy,
+      company: req.body.company,
+      phoneNumber: req.body.phoneNumber,
 
       //Subscription
       subscription: req.body.subscription,
