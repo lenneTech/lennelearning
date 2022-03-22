@@ -6,6 +6,7 @@ import { VersionHistoryComponent } from 'src/app/sections/academy/components/ver
 import { DialogConfirmComponent } from '../components/dialog-confirm/dialog-confirm.component';
 import { DialogComponent } from '../components/dialog/dialog.component';
 import { HelperDialogComponent } from '../components/helper-dialog/helper-dialog.component';
+import { InquiryComponent } from '../components/inquiry/inquiry.component';
 import { MailSentDialogComponent } from '../components/mail-sent-dialog/mail-sent-dialog.component';
 import { SolutionDialogComponent } from '../components/solution-dialog/solution-dialog.component';
 import { EntryPointService } from './entry-point.service';
@@ -81,6 +82,13 @@ export class DialogService {
   }
 
   openMailSentDialog() {
-    this.nbDialogService.open(MailSentDialogComponent, { closeOnBackdropClick: true });
+    this.nbDialogService.open(MailSentDialogComponent, { closeOnBackdropClick: true, hasScroll: true });
+  }
+
+  openInquiryDialog(subscription: string) {
+    const dialog = this.nbDialogService.open(InquiryComponent, { closeOnBackdropClick: true });
+    const instance = dialog.componentRef.instance;
+
+    instance.subscription = subscription;
   }
 }

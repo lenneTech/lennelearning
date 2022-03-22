@@ -41,6 +41,9 @@ import { UnderlineAnimationComponent } from './components/underline-animation/un
 import { WorkWithUsComponent } from './components/work-with-us/work-with-us.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { MailSentDialogComponent } from './components/mail-sent-dialog/mail-sent-dialog.component';
+import { PriceCardComponent } from './components/price-card/price-card.component';
+import { PriceBannerComponent } from './components/price-banner/price-banner.component';
+import { InquiryComponent } from './components/inquiry/inquiry.component';
 
 @NgModule({
   imports: [
@@ -61,6 +64,7 @@ import { MailSentDialogComponent } from './components/mail-sent-dialog/mail-sent
   ],
   declarations: [
     // Components
+    PriceCardComponent,
     EntryPointCardComponent,
     InfoCardComponent,
     ReviewComponent,
@@ -74,6 +78,8 @@ import { MailSentDialogComponent } from './components/mail-sent-dialog/mail-sent
     WorkWithUsComponent,
     UnderlineAnimationComponent,
     ContactFormComponent,
+    PriceBannerComponent,
+    InquiryComponent,
 
     // Dialogs
     HelperDialogComponent,
@@ -108,6 +114,7 @@ import { MailSentDialogComponent } from './components/mail-sent-dialog/mail-sent
   ],
   exports: [
     // Components
+    PriceCardComponent,
     EntryPointCardComponent,
     InfoCardComponent,
     ReviewComponent,
@@ -137,6 +144,8 @@ import { MailSentDialogComponent } from './components/mail-sent-dialog/mail-sent
     ProcessInterestedComponent,
     WorkWithUsComponent,
     ContactFormComponent,
+    PriceBannerComponent,
+    InquiryComponent,
   ],
 })
 export class CoreModule {}

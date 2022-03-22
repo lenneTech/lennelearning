@@ -15,7 +15,7 @@ describe('Page Testing', () => {
   it('Visits the company page', () => {
     cy.visit('/');
     cy.get('.learn-more').last().click();
-    cy.contains('Du suchst fähige Entwickler für dein Unternehmen?');
+    cy.contains('Du suchst fähige Entwickler für Dein Unternehmen?');
   });
   it('Navigate to Academy Pages from Home Page', () => {
     cy.visit('/');

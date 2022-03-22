@@ -1,7 +1,8 @@
 import { AfterContentChecked, ChangeDetectorRef, Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { NbMenuItem, NbSidebarService } from '@nebular/theme';
-import { filter, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
+import { filter } from 'rxjs/operators';
 import { DialogService } from 'src/app/modules/core/services/dialog.service';
 import { StorageService } from '@lenne.tech/ng-base';
 import { Section } from 'src/app/modules/core/interfaces/section.interface';

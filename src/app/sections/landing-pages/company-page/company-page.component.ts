@@ -64,12 +64,8 @@ export class CompanyPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.metaService.updateMetaTags(
-      'lenne.Learning - Du suchst fähige Entwickler für dein Unternehmen?',
-      'Wir betreuen und evaluieren deine potenziellen Softwareentwickler im Web und App Bereich oder fördern dein Start-up.'
+      'lenne.Learning - Du suchst fähige Entwickler für Dein Unternehmen?',
+      'Wir betreuen und evaluieren Deine potenziellen Softwareentwickler im Web und App Bereich oder fördern Dein Start-up.'
     );
-  }
-
-  sendOffer(): void {
-    window.open('mailto:info@lenne.tech');
   }
 }
