@@ -13,9 +13,6 @@ export class AcademyBannerComponent {
   @Input() text: string;
 
   constructor(private entryPointService: EntryPointService, private router: Router) {}
-  onButtonClicked(): void {
-    window.open('mailto:info@lenne.tech');
-  }
 
   setSelectedEntryPoint() {
     this.entryPointService.setEntryPointById(this.entryPointId);

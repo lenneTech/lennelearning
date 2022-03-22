@@ -6,6 +6,7 @@ import { InternPageComponent } from '../landing-pages/intern-page/intern-page.co
 import { JobInterestedPageComponent } from '../landing-pages/job-interested-page/job-interested-page.component';
 import { EntryPointsComponent } from '../landing-pages/entry-points/entry-points.component';
 import { ContactPageComponent } from '../landing-pages/contact-page/contact-page.component';
+import { SubscriptionPageComponent } from '../landing-pages/subscription-page/subscription-page.component';
 
 const routes: Routes = [
   {
@@ -43,6 +44,12 @@ const routes: Routes = [
     component: ContactPageComponent,
     pathMatch: 'full',
     data: { matomoTitle: 'Kontakt' },
+  },
+  {
+    path: 'abbonements',
+    component: SubscriptionPageComponent,
+    pathMatch: 'full',
+    data: { matomoTitle: 'Abbonements' },
   },
 ];
 

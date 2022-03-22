@@ -10,11 +10,6 @@ export class ContactCardComponent {
   @Input() title: string;
   @Input() text: string;
   @Input() buttonText: string;
-  @Output() buttonClicked = new EventEmitter<boolean>();
 
   constructor() {}
-
-  onButtonClicked(): void {
-    this.buttonClicked.emit(true);
-  }
 }

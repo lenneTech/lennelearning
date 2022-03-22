@@ -45,19 +45,15 @@ export class StartComponent {
     },
   ];
   constructor(private seoService: SEOService, private metaService: MetaService) {
-    this.seoService.initPageForSEO(
-      'lenne.Learning - Die online Akademie für Webtechnologien',
-      'Die online Akademie für Webtechnologien',
-      'academy, online, akademie, web, learning'
-    );
+    this.seoService.initPageForSEO({
+      title: 'lenne.Learning - Die online Akademie für Webtechnologien',
+      description: 'Die online Akademie für Webtechnologien',
+      keywords: 'academy, online, akademie, web, learning',
+    });
 
     this.metaService.updateMetaTags(
       'lenne.Learning - Die online Akademie für Webtechnologien',
       'Die online Akademie für Webtechnologien'
     );
-  }
-
-  openMail(): void {
-    window.open('mailto:info@lenne.tech');
   }
 }

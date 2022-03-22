@@ -1,0 +1,24 @@
+<nb-card class="card pricecard" [ngClass]="{ pricecard: cardMaxWidth }">
+  <nb-card-body class="d-flex align-items-top justify-content-around">
+    <div class="d-flex flex-column align-items-center">
+      <img loading="lazy" class="card-img" [src]="cardImageUrl" alt="Preis Illustration" />
+      <div class="card-PreTitle">{{ cardPreTitle }}</div>
+      <h3 class="card-title">{{ cardTitle }}</h3>
+      <div class="card-text">{{ cardDescription }}</div>
+      <div class="card-price">{{ cardPrice }}</div>
+      <div class="card-details">{{ cardPriceDetails }}</div>
+
+      <div class="card-subtitle">Was ist inbegriffen?</div>
+      <div class="card-specifics">
+        <ul class="list">
+          <li class="list-item" *ngFor="let item of cardSpecifics">{{ item }}</li>
+        </ul>
+      </div>
+    </div>
+  </nb-card-body>
+  <nb-card-footer>
+    <div class="d-flex justify-content-center">
+      <button class="price-button" nbButton status="warning" (click)="openInquiry()">Anfrage senden</button>
+    </div>
+  </nb-card-footer>
+</nb-card>
