@@ -82,7 +82,7 @@ export class DialogService {
   }
 
   openMailSentDialog() {
-    this.nbDialogService.open(MailSentDialogComponent, { closeOnBackdropClick: true });
+    this.nbDialogService.open(MailSentDialogComponent, { closeOnBackdropClick: true, hasScroll: true });
   }
 
   openInquiryDialog(subscription: string) {
