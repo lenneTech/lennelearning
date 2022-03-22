@@ -15,6 +15,7 @@ export class TeamPageComponent {
       imageUrl: 'https://lenne.tech/assets/images/team/inga_haase.png',
       imageAlt: 'Bild von Inga Haase',
       contact: 'inga.haase@lenne.tech',
+      phoneNumber: '02723 - 928 93 2',
     },
   ];
   tutors = [

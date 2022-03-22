@@ -17,7 +17,6 @@
     </div>
     <div>
       <nb-accordion multi="true">
-        <!-- durch das multi="true wird der erste Accordion-Bereich unperformant" -->
         <nb-accordion-item expanded="true">
           <nb-accordion-item-header> Koordination </nb-accordion-item-header>
           <nb-accordion-item-body class="container p-0">
@@ -32,8 +31,10 @@
                         imgClass="card-img"
                       ></academy-picture>
                       <h3 class="card-title mt-3">{{ member.title }}</h3>
-
-                      <a [href]="'mailto:' + member.contact" class="mail-link mt-3 mb-3">
+                      <a [href]="'tel:' + member.phoneNumber" class="link mt-2 mb-2">
+                        <i class="bi bi-telephone-fill"></i> <span>{{ member.phoneNumber }}</span></a
+                      >
+                      <a [href]="'mailto:' + member.contact" class="link mt-2 mb-2">
                         <i class="bi bi-envelope-fill"></i> <span>{{ member.contact }}</span></a
                       >
                     </div>
@@ -76,7 +77,7 @@
                 </nb-card>
               </div>
               <div class="specialty-card col-lg-6">
-                <h3 class="specialty-title">Für diese Dinge bin ich die richtige Ansprechpartnerin:</h3>
+                <h3 class="specialty-title">Für diese Dinge bin ich der richtige Ansprechpartner:</h3>
                 <div class="row justify-content-around mt-5">
                   <div class="col-6 mb-5">
                     <h4 class="specialty-header">Frontend</h4>
@@ -121,7 +122,7 @@
                 </nb-card>
               </div>
               <div class="specialty-card col-lg-6">
-                <h3 class="specialty-title">Für diese Dinge bin ich die richtige Ansprechpartnerin:</h3>
+                <h3 class="specialty-title">Für diese Dinge bin ich der richtige Ansprechpartner:</h3>
                 <div class="row justify-content-around mt-5">
                   <div class="col-6 mb-5">
                     <h4 class="specialty-header">Frontend</h4>
@@ -165,7 +166,7 @@
                 </nb-card>
               </div>
               <div class="specialty-card col-lg-6">
-                <h3 class="specialty-title">Für diese Dinge bin ich die richtige Ansprechpartnerin:</h3>
+                <h3 class="specialty-title">Für diese Dinge bin ich der richtige Ansprechpartner:</h3>
                 <div class="row mt-5">
                   <div class="col-6 mb-5">
                     <h4 class="specialty-header">Design</h4>

@@ -1,10 +1,11 @@
 @import 'src/assets/scss/utils';
-.bi-envelope-fill {
+.bi-envelope-fill,
+.bi-telephone-fill {
   color: $orange;
   margin-right: 20px;
 }
 
-.mail-link {
+.link {
   text-decoration: none;
   color: #8c8c8c;
 }
@@ -20,7 +21,7 @@
 
 .specialty-card {
   background-color: #f8f8f8;
-  padding: 10px 40px;
+  padding: 15px 40px;
   border-radius: 0.25rem;
 }
 
@@ -40,5 +41,6 @@ nb-card-body {
 }
 
 .specialty-image {
-  width: 20px;
+  width: 30px;
+  height: 30px;
 }
