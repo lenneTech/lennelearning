@@ -15,6 +15,7 @@ export class PriceCardComponent {
   @Input() cardPriceDetails: string;
   @Input() cardSpecifics: string[];
   @Input() cardRoute: string;
+  @Input() cardMaxWidth: boolean;
   @Input() subscriptionType: string;
 
   constructor(private dialogService: DialogService) {}

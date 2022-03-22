@@ -23,16 +23,7 @@
     color: lightgrey;
   }
 
-  .form-select {
-    border-radius: 0;
-    color: #b3b3b3;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 160%;
-  }
-
   .form-control,
-  .form-select,
   .form-check-input:focus {
     box-shadow: none;
   }
@@ -64,15 +55,6 @@
   .form-check-input:checked {
     background-color: $orange;
   }
-
-  .spinner {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-
-  .notification {
-    font-size: 18px;
-  }
 }
 
 .btn {
@@ -93,10 +75,6 @@
   }
   font-weight: bold;
   text-align: center;
-}
-
-.image {
-  max-width: 800px;
 }
 
 .container-inquiry {

@@ -162,7 +162,11 @@ export class SectionComponent implements OnInit, AfterViewInit {
   constructor(private seoService: SEOService, private sectionService: SectionService, private router: Router) {}
 
   ngOnInit(): void {
-    this.seoService.initPageForSEO(this.seoTitle, this.seoDescription, this.seoKeywords);
+    this.seoService.initPageForSEO({
+      title: this.seoTitle,
+      description: this.seoDescription,
+      keywords: this.seoKeywords,
+    });
 
     const url = this.router.url.split('#')[0].split('/');
     const section = url[url.length - 1];

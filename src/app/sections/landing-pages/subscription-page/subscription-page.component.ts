@@ -39,8 +39,4 @@ export class SubscriptionPageComponent implements OnInit {
       'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.'
     );
   }
-
-  sendApplication(): void {
-    window.open('mailto:info@lenne.tech');
-  }
 }

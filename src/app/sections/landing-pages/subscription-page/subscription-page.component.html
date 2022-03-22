@@ -34,7 +34,7 @@
       </div>
     </div>
     <div class="container">
-      <div class="row d-flex justify-content-center" [ltMatchHeight]="['card-container', 'card', 'card-text']">
+      <div class="row d-flex justify-content-center" [ltMatchHeight]="['card', 'card-text', 'card-details']">
         <div class="col d-flex flex-wrap justify-content-around card-container" *ngIf="selection">
           <app-price-card
             cardTitle="Free"
@@ -76,8 +76,10 @@
             cardPrice="2000€"
             cardPriceDetails="Pro Person"
             [cardSpecifics]="specificsCamp"
-            cardImageUrl="../../assets/images/entry-point-images/berufsinteressent.svg"
+            cardImageUrl="../../assets/images/banner-images/getstarted.svg"
+            [cardMaxWidth]="true"
             subscriptionType="Sommercamp 2022"
+            class="d-flex justify-content-center"
           >
           </app-price-card>
         </div>

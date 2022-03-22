@@ -21,10 +21,6 @@ export class BannerComponent {
     this.entryPointService.setEntryPointById(this.entryPointId);
   }
 
-  sendOffer(): void {
-    window.open('mailto:info@lenne.tech');
-  }
-
   setRecommendation() {
     if (this.router.url !== '/') {
       this.router.navigate(['/lernpfade'], {

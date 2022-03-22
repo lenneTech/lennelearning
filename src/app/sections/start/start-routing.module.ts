@@ -46,10 +46,10 @@ const routes: Routes = [
     data: { matomoTitle: 'Kontakt' },
   },
   {
-    path: 'preis',
+    path: 'abbonements',
     component: SubscriptionPageComponent,
     pathMatch: 'full',
-    data: { matomoTitle: 'Preis' },
+    data: { matomoTitle: 'Abbonements' },
   },
 ];
 

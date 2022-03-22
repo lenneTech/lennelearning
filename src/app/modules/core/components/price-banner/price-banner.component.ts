@@ -11,8 +11,5 @@ export class PriceBannerComponent {
   @Input() textBanner: string;
   @Input() titleBanner: string;
 
-  constructor(private entryPointService: EntryPointService, private router: Router) {}
-  onButtonClicked(): void {
-    window.open('mailto:info@lenne.tech');
-  }
+  constructor() {}
 }

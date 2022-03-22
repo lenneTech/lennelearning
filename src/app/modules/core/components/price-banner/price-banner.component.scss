@@ -42,12 +42,6 @@
     text-decoration: none;
   }
 }
-.banner-contact {
-  margin-bottom: 20px;
-  @include media-breakpoint-up(md) {
-    margin-bottom: 0px;
-  }
-}
 
 .rocket-img {
   position: relative;

@@ -11,7 +11,6 @@ import { MailService } from '../../services/mail.service';
   styleUrls: ['./inquiry.component.scss'],
 })
 export class InquiryComponent implements OnInit {
-  @Input() content;
   contactForm: FormGroup;
   isLoading = false;
   error = false;

@@ -68,8 +68,4 @@ export class CompanyPageComponent implements OnInit {
       'Wir betreuen und evaluieren deine potenziellen Softwareentwickler im Web und App Bereich oder fördern dein Start-up.'
     );
   }
-
-  sendOffer(): void {
-    window.open('mailto:info@lenne.tech');
-  }
 }
