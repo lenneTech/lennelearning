@@ -20,8 +20,8 @@
         <nb-accordion-item expanded="true">
           <nb-accordion-item-header> Koordination </nb-accordion-item-header>
           <nb-accordion-item-body class="container p-0">
-            <div class="row justify-content-between mb-5 mt-5" *ngFor="let member of coordination">
-              <div class="col-lg-4">
+            <div class="row justify-content-between member" *ngFor="let member of coordination">
+              <div class="col-lg-4 d-flex justify-content-center">
                 <nb-card class="card">
                   <nb-card-body class="d-flex align-items-top justify-content-around">
                     <div class="d-flex flex-column align-items-center">
@@ -57,8 +57,8 @@
         <nb-accordion-item>
           <nb-accordion-item-header> Tutoren in der Akademie </nb-accordion-item-header>
           <nb-accordion-item-body class="container p-0">
-            <div class="row justify-content-between mb-5 mt-5" *ngFor="let member of tutors">
-              <div class="col-lg-4">
+            <div class="row justify-content-between member" *ngFor="let member of tutors">
+              <div class="col-lg-4 d-flex justify-content-center">
                 <nb-card class="card">
                   <nb-card-body class="d-flex align-items-top justify-content-around">
                     <div class="d-flex flex-column align-items-center">
@@ -69,7 +69,7 @@
                       ></academy-picture>
                       <h3 class="card-title mt-3">{{ member.title }}</h3>
 
-                      <a [href]="'mailto:' + member.contact" class="mail-link mt-3 mb-3">
+                      <a [href]="'mailto:' + member.contact" class="link mt-3 mb-3">
                         <i class="bi bi-envelope-fill"></i> <span>{{ member.contact }}</span></a
                       >
                     </div>
@@ -79,14 +79,14 @@
               <div class="specialty-card col-lg-6">
                 <h3 class="specialty-title">Für diese Dinge bin ich der richtige Ansprechpartner:</h3>
                 <div class="row justify-content-around mt-5">
-                  <div class="col-6 mb-5">
+                  <div class="col-6">
                     <h4 class="specialty-header">Frontend</h4>
                     <div class="d-flex align-items-center mt-4 mb-4" *ngFor="let item of member.frontend">
                       <img [src]="item.imageUrl" [alt]="item.imageAlt" class="specialty-image" />
                       <span class="ms-2">{{ item.title }}</span>
                     </div>
                   </div>
-                  <div class="col-6 mb-5">
+                  <div class="col-6">
                     <h4 class="specialty-header">Backend</h4>
                     <div class="d-flex align-items-center mt-4 mb-4" *ngFor="let item of member.backend">
                       <img [src]="item.imageUrl" [alt]="item.imageAlt" class="specialty-image" />
@@ -102,8 +102,8 @@
         <nb-accordion-item>
           <nb-accordion-item-header> Betreuer für den Bereich der eigenen Projekte </nb-accordion-item-header>
           <nb-accordion-item-body class="container p-0">
-            <div class="row justify-content-between mb-5 mt-5" *ngFor="let member of supervisorProjects">
-              <div class="col-lg-4">
+            <div class="row justify-content-between member" *ngFor="let member of supervisorProjects">
+              <div class="col-lg-4 d-flex justify-content-center">
                 <nb-card class="card">
                   <nb-card-body class="d-flex align-items-top justify-content-around">
                     <div class="d-flex flex-column align-items-center">
@@ -114,7 +114,7 @@
                       ></academy-picture>
                       <h3 class="card-title mt-3">{{ member.title }}</h3>
 
-                      <a [href]="'mailto:' + member.contact" class="mail-link mt-3 mb-3">
+                      <a [href]="'mailto:' + member.contact" class="link mt-3 mb-3">
                         <i class="bi bi-envelope-fill"></i> <span>{{ member.contact }}</span></a
                       >
                     </div>
@@ -124,14 +124,14 @@
               <div class="specialty-card col-lg-6">
                 <h3 class="specialty-title">Für diese Dinge bin ich der richtige Ansprechpartner:</h3>
                 <div class="row justify-content-around mt-5">
-                  <div class="col-6 mb-5">
+                  <div class="col-6">
                     <h4 class="specialty-header">Frontend</h4>
                     <div class="d-flex align-items-center mt-4 mb-4" *ngFor="let item of member.frontend">
                       <img [src]="item.imageUrl" [alt]="item.imageAlt" class="specialty-image" />
                       <span class="ms-2">{{ item.title }}</span>
                     </div>
                   </div>
-                  <div class="col-6 mb-5">
+                  <div class="col-6">
                     <h4 class="specialty-header">Backend</h4>
                     <div class="d-flex align-items-center mt-4 mb-4" *ngFor="let item of member.backend">
                       <img [src]="item.imageUrl" [alt]="item.imageAlt" class="specialty-image" />
@@ -143,11 +143,11 @@
             </div>
           </nb-accordion-item-body>
         </nb-accordion-item>
-        <nb-accordion-item>
+        <nb-accordion-item expanded="true">
           <nb-accordion-item-header> Betreuer:innen für den Bereich der Kooperationsprojekt </nb-accordion-item-header>
           <nb-accordion-item-body class="container p-0">
-            <div class="row justify-content-between mb-5 mt-5" *ngFor="let member of design">
-              <div class="col-lg-4">
+            <div class="row justify-content-between member" *ngFor="let member of design">
+              <div class="col-lg-4 d-flex justify-content-center">
                 <nb-card class="card">
                   <nb-card-body class="d-flex align-items-top justify-content-around">
                     <div class="d-flex flex-column align-items-center">
@@ -158,7 +158,7 @@
                       ></academy-picture>
                       <h3 class="card-title mt-3">{{ member.title }}</h3>
 
-                      <a [href]="'mailto:' + member.contact" class="mail-link mt-3 mb-3">
+                      <a [href]="'mailto:' + member.contact" class="link mt-3 mb-3">
                         <i class="bi bi-envelope-fill"></i> <span>{{ member.contact }}</span></a
                       >
                     </div>
@@ -168,19 +168,27 @@
               <div class="specialty-card col-lg-6">
                 <h3 class="specialty-title">Für diese Dinge bin ich der richtige Ansprechpartner:</h3>
                 <div class="row mt-5">
-                  <div class="col-6 mb-5">
+                  <div class="row">
                     <h4 class="specialty-header">Design</h4>
-                    <div class="d-flex align-items-center mt-4 mb-4" *ngFor="let item of member.design">
-                      <img [src]="item.imageUrl" [alt]="item.imageAlt" class="specialty-image" />
-                      <span class="ms-2">{{ item.title }}</span>
+                    <div class="col-6">
+                      <div class="d-flex align-items-center mt-4 mb-4" *ngFor="let item of member.design | slice: 0:3">
+                        <img [src]="item.imageUrl" [alt]="item.imageAlt" class="specialty-image" />
+                        <span class="ms-2">{{ item.title }}</span>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="d-flex align-items-center mt-4 mb-4" *ngFor="let item of member.design | slice: 3:6">
+                        <img [src]="item.imageUrl" [alt]="item.imageAlt" class="specialty-image" />
+                        <span class="ms-2">{{ item.title }}</span>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="row justify-content-between mb-5 mt-5" *ngFor="let member of supervisorCoop">
-              <div class="col-lg-4">
+            <div class="row justify-content-between member" *ngFor="let member of supervisorCoop">
+              <div class="col-lg-4 d-flex justify-content-center">
                 <nb-card class="card">
                   <nb-card-body class="d-flex align-items-top justify-content-around">
                     <div class="d-flex flex-column align-items-center">
@@ -191,7 +199,7 @@
                       ></academy-picture>
                       <h3 class="card-title mt-3">{{ member.title }}</h3>
 
-                      <a [href]="'mailto:' + member.contact" class="mail-link mt-3 mb-3">
+                      <a [href]="'mailto:' + member.contact" class="link mt-3 mb-3">
                         <i class="bi bi-envelope-fill"></i> <span>{{ member.contact }}</span></a
                       >
                     </div>
@@ -201,14 +209,14 @@
               <div class="specialty-card col-lg-6">
                 <h3 class="specialty-title">Für diese Dinge bin ich die richtige Ansprechpartnerin:</h3>
                 <div class="row justify-content-around mt-5">
-                  <div class="col-6 mb-5">
+                  <div class="col-6">
                     <h4 class="specialty-header">Frontend</h4>
                     <div class="d-flex align-items-center mt-4 mb-4" *ngFor="let item of member.frontend">
                       <img [src]="item.imageUrl" [alt]="item.imageAlt" class="specialty-image" />
                       <span class="ms-2">{{ item.title }}</span>
                     </div>
                   </div>
-                  <div class="col-6 mb-5">
+                  <div class="col-6">
                     <h4 class="specialty-header">Backend</h4>
                     <div class="d-flex align-items-center mt-4 mb-4" *ngFor="let item of member.backend">
                       <img [src]="item.imageUrl" [alt]="item.imageAlt" class="specialty-image" />

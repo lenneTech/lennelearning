@@ -231,11 +231,6 @@ export class TeamPageComponent {
           title: 'Affinity Designer',
         },
         {
-          imageUrl: '../../assets/images/brand-images/logo_affinity-photo.svg',
-          imageAlt: 'Logo von Affinity Photo',
-          title: 'Affinity Photo',
-        },
-        {
           imageUrl: '../../assets/images/brand-images/logo_adobe-photoshop.svg',
           imageAlt: 'Logo von Adobe Photoshop',
           title: 'Adobe Photoshop',
