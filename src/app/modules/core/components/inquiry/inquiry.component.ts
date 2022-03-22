@@ -16,7 +16,7 @@ export class InquiryComponent implements OnInit {
   error = false;
   @Input() subscription: string;
   dataPolicy =
-    'Ich habe die Datenschutzerklärung zur Kenntnis genommen. Ich stimme zu, dass meine Angaben und Daten zur Beantwortung meiner Anfrage elektronisch erhoben und gespeichert werden. Hinweis: Du kannst deine Einwilligung jederzeit für die Zukunft per E-Mail an info@lenne.tech widerrufen. *';
+    'Ich habe die Datenschutzerklärung zur Kenntnis genommen. Ich stimme zu, dass meine Angaben und Daten zur Beantwortung meiner Anfrage elektronisch erhoben und gespeichert werden. Hinweis: Du kannst Deine Einwilligung jederzeit für die Zukunft per E-Mail an info@lenne.tech widerrufen. *';
 
   constructor(
     private mailService: MailService,
