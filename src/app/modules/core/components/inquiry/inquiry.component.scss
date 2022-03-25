@@ -71,8 +71,8 @@ i {
 
 .container-inquiry {
   max-width: 800px;
-  max-height: calc(100vh - 120px);
-  overflow-y: auto;
+  max-height: (100vh);
+  margin-bottom: 50px;
 }
 
 .inquiry-button {
