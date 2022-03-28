@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NbDialogRef } from '@nebular/theme';
+import { DialogBtnOptionsEnum } from '../../enumerators/dialog-btn-options.enum';
 import { DialogService } from '../../services/dialog.service';
 import { FormsService } from '../../services/forms.service';
 import { MailService } from '../../services/mail.service';
@@ -11,6 +13,7 @@ import { MailService } from '../../services/mail.service';
   styleUrls: ['./inquiry.component.scss'],
 })
 export class InquiryComponent implements OnInit {
+  DialogBtnOptionsEnum = DialogBtnOptionsEnum;
   contactForm: FormGroup;
   isLoading = false;
   error = false;
@@ -22,7 +25,8 @@ export class InquiryComponent implements OnInit {
     private mailService: MailService,
     private formsService: FormsService,
     private router: Router,
-    private dialogService: DialogService
+    private dialogService: DialogService,
+    protected dialogRef: NbDialogRef<any>
   ) {}
   ngOnInit() {
     this.initForm();
@@ -49,6 +53,7 @@ export class InquiryComponent implements OnInit {
     this.contactForm.value.subscription = this.subscription;
     this.mailService.sendMail(this.contactForm.value).subscribe({
       next: () => {
+        this.dialogRef.close();
         this.dialogService.openMailSentDialog();
       },
       error: () => {
@@ -63,5 +68,8 @@ export class InquiryComponent implements OnInit {
         this.contactForm.reset();
       },
     });
+  }
+  closeModal() {
+    this.dialogRef.close();
   }
 }

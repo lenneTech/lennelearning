@@ -34,41 +34,48 @@
       </div>
     </div>
     <div class="container">
-      <div class="row d-flex justify-content-center" [ltMatchHeight]="['card', 'card-text', 'card-details']">
-        <div class="col d-flex flex-wrap justify-content-around card-container" *ngIf="selection">
-          <app-price-card
-            cardTitle="Free"
-            cardDescription="Erste Einblicke in das Berufsfeld und Elemente der Softwareentwicklung im Rahmen des Lernpfades Berufsfelderkundung."
-            cardPrice="0€"
-            [cardSpecifics]="['Texte, Aufgabenkatalog & Tipps zum Lernpfad Berufsfelderkundung']"
-            cardImageUrl="../../assets/images/entry-point-images/berufsinteressent.svg"
-            s
-            subscriptionType="Free"
-          >
-          </app-price-card>
+      <div
+        class="row d-flex justify-content-center"
+        [ltMatchHeight]="!mobile ? ['card', 'card-description', 'card-price', 'card-details'] : null"
+        *ngIf="selection"
+      >
+        <app-price-card
+          class="col-lg-4 d-flex justify-content-center"
+          cardTitle="Free"
+          cardDescription="Erste Einblicke in das Berufsfeld und Elemente der Softwareentwicklung im Rahmen des Lernpfades Berufsfelderkundung."
+          cardPrice="0€"
+          [cardSpecifics]="['Texte, Aufgabenkatalog & Tipps zum Lernpfad Berufsfelderkundung']"
+          cardImageUrl="../../assets/images/entry-point-images/berufsinteressent.svg"
+          s
+          subscriptionType="Free"
+        >
+        </app-price-card>
 
-          <app-price-card
-            cardTitle="Praktikum"
-            cardDescription="Je nach Art und Dauer des Praktikums sowie den jeweiligen Vorkenntnissen der Praktikant:innen können unterschiedliche Lernpfade geeignet sein: Berufsfeld, Praktikum, Sprint, Frontend, Backend oder Standard."
-            cardPrice="0€ / kostenpflichtig"
-            cardPriceDetails="0€ für unsere eigenen Praktikant:innen, kostenpflichtig für externe Praktikant:innen.          "
-            [cardSpecifics]="specificsIntern"
-            cardImageUrl="../../assets/images/entry-point-images/praktikant.svg"
-            subscriptionType="Praktikum"
-          >
-          </app-price-card>
-          <app-price-card
-            cardTitle="Unternehmen"
-            cardDescription="Für alle, die sich oder Ihre Unternehmensangehörigen weiterbilden möchten: Je nach Zielsetzung und Vorwissen eignen sich die Lernpfade:  Sprint, Praktikum, Unternehmen, Frontend, Backend oder Standard."
-            cardPrice="kostenpflichtig"
-            [cardSpecifics]="specificsCompany"
-            cardPriceDetails="für Unternehmer:innen, Gründer:innen, Auszubildende, Werkstudent:innen und Mitarbeiter:innen."
-            cardImageUrl="../../assets/images/entry-point-images/company.svg"
-            subscriptionType="Unternehmen"
-          >
-          </app-price-card>
-        </div>
-        <div class="col d-flex flex-wrap justify-content-around card-container" *ngIf="!selection">
+        <app-price-card
+          class="col-lg-4 d-flex justify-content-center"
+          cardTitle="Praktikum"
+          cardDescription="Je nach Art und Dauer des Praktikums sowie den jeweiligen Vorkenntnissen der Praktikant:innen können unterschiedliche Lernpfade geeignet sein: Berufsfeld, Praktikum, Sprint, Frontend, Backend oder Standard."
+          cardPrice="0€ / kostenpflichtig"
+          cardPriceDetails="0€ für unsere eigenen Praktikant:innen, kostenpflichtig für externe Praktikant:innen.          "
+          [cardSpecifics]="specificsIntern"
+          cardImageUrl="../../assets/images/entry-point-images/praktikant.svg"
+          subscriptionType="Praktikum"
+        >
+        </app-price-card>
+        <app-price-card
+          class="col-lg-4 d-flex justify-content-center"
+          cardTitle="Unternehmen"
+          cardDescription="Für alle, die sich oder Ihre Unternehmensangehörigen weiterbilden möchten: Je nach Zielsetzung und Vorwissen eignen sich die Lernpfade:  Sprint, Praktikum, Unternehmen, Frontend, Backend oder Standard."
+          cardPrice="kostenpflichtig"
+          [cardSpecifics]="specificsCompany"
+          cardPriceDetails="für Unternehmer:innen, Gründer:innen, Auszubildende, Werkstudent:innen und Mitarbeiter:innen."
+          cardImageUrl="../../assets/images/entry-point-images/company.svg"
+          subscriptionType="Unternehmen"
+        >
+        </app-price-card>
+      </div>
+      <div class="row" *ngIf="!selection">
+        <div class="d-flex flex-wrap justify-content-around card-container">
           <app-price-card
             cardPreTitle="Unser Angebot für Dein Unternehmen"
             cardTitle="Azubi Sommercamp 2022"

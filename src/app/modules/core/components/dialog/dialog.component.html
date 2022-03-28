@@ -6,7 +6,7 @@
       <ng-content select="[confirm-dialog]"> </ng-content>
     </div>
   </nb-card-body>
-  <nb-card-footer>
+  <nb-card-footer *ngIf="!DialogBntOptionsEnum.MAIL">
     <div class="row justify-content-around">
       <div class="col-4 d-flex justify-content-around" *ngIf="dialogBtnOptions === DialogBntOptionsEnum.DECISION">
         <button class="me-2" nbButton status="success" data-test-id="dialog-confirm" (click)="onAcceptBtnClick()">

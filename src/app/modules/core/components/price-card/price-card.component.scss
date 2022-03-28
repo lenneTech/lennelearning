@@ -21,12 +21,12 @@
   margin-right: 20px;
 
   &-img {
-    height: auto;
-    width: 300px;
+    height: 260px;
+    max-width: 260px;
     object-fit: cover;
     @include media-breakpoint-up('lg') {
-      width: 350px;
-      height: auto;
+      max-width: 320px;
+      height: 320px;
       max-height: 245px;
     }
   }
@@ -53,7 +53,7 @@
     text-align: center;
   }
 
-  &-text {
+  &-description {
     font-size: 18px;
     line-height: 1.5rem;
     padding-left: 1.5rem;
