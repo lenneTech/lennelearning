@@ -15,23 +15,24 @@
         ></app-banner>
       </div>
     </div>
-    <div class="container-fluid mb-5">
-      <div class="row">
-        <div
-          [ngClass]="{ selectioncolor: selection }"
-          class="col pb-3 pt-3 bg-primary-200 abos"
-          (click)="selection = true"
-        >
-          Abos
-        </div>
-        <div
-          [ngClass]="{ selectioncolor: !selection }"
-          class="col pb-3 pt-3 bg-primary-200 aktionen"
-          (click)="selection = false"
-        >
-          Aktionen
-        </div>
+
+    <div class="container-fluid mb-5 d-flex p-0 banner-container">
+      <div class="d-flex align-items-center">
+        <span class="text-left" (click)="selection = true">Abos</span>
+        <span class="text-right" (click)="selection = false">Aktionen</span>
       </div>
+
+      <div
+        class="left bg-primary-200 cursor-pointer"
+        [ngClass]="{ 'left-active': selection }"
+        (click)="selection = true"
+      ></div>
+
+      <div
+        class="right bg-primary-200 cursor-pointer"
+        [ngClass]="{ 'right-active': !selection }"
+        (click)="selection = false"
+      ></div>
     </div>
     <div class="container">
       <div
