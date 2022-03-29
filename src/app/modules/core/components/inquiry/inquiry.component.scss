@@ -54,6 +54,7 @@ i {
   color: white;
   font-weight: 600;
 }
+
 .btn-close {
   float: right;
 }
@@ -65,18 +66,21 @@ i {
 .title {
   color: $orange;
   font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+
   @include media-breakpoint-up(lg) {
     font-size: 35px;
   }
-  font-weight: bold;
-  text-align: center;
 }
 
 .inquiry-button {
   margin-top: 20px;
 }
+
 .data-policy {
   font-size: 10px;
+
   @include media-breakpoint-up(lg) {
     font-size: 16px;
   }

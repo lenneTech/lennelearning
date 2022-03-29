@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { environment } from 'src/environments/environment';
-import { DialogBtnOptionsEnum } from '../../enumerators/dialog-btn-options.enum';
+import { DialogModeEnum } from '../../enumerators/dialog-mode.enum';
 
 @Component({
   selector: 'app-solution-dialog',
@@ -17,7 +17,7 @@ export class SolutionDialogComponent implements OnInit {
   @Input() task: string;
   @Input() id: string;
   @Input() section: string;
-  DialogBtnOptionsEnum = DialogBtnOptionsEnum;
+  DialogModeEnum = DialogModeEnum;
   requestSend = false;
   solutionForm: FormGroup;
   constructor(private http: HttpClient) {}

@@ -1,9 +1,5 @@
-<app-dialog
-  [dialogBtnOptions]="DialogBtnOptionsEnum.MAIL"
-  title="Schick uns Deine Anfrage zu und wir melden uns bei Dir!"
->
+<app-dialog [dialogMode]="DialogModeEnum.MAIL" title="Schick uns Deine Anfrage zu und wir melden uns bei Dir!">
   <ng-container confirm-dialog>
-    <button class="btn btn-close mx-auto mx-md-0 mb-3" (click)="closeModal()"></button>
     <form class="row inquiry" [formGroup]="contactForm" (submit)="contact()">
       <div class="col-12 col-lg-12 d-flex flex-column align-items-center mb-lg-0 mb-4 p-5">
         <div class="d-flex flex-column flex-lg-row w-100">

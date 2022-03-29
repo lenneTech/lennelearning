@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NbDialogRef } from '@nebular/theme';
-import { DialogBtnOptionsEnum } from '../../enumerators/dialog-btn-options.enum';
+import { DialogModeEnum } from '../../enumerators/dialog-mode.enum';
 import { DialogService } from '../../services/dialog.service';
 import { FormsService } from '../../services/forms.service';
 import { MailService } from '../../services/mail.service';
@@ -13,7 +13,7 @@ import { MailService } from '../../services/mail.service';
   styleUrls: ['./inquiry.component.scss'],
 })
 export class InquiryComponent implements OnInit {
-  DialogBtnOptionsEnum = DialogBtnOptionsEnum;
+  DialogModeEnum = DialogModeEnum;
   contactForm: FormGroup;
   isLoading = false;
   error = false;
@@ -68,8 +68,5 @@ export class InquiryComponent implements OnInit {
         this.contactForm.reset();
       },
     });
-  }
-  closeModal() {
-    this.dialogRef.close();
   }
 }

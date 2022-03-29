@@ -1,8 +1,9 @@
 <app-dialog
   [title]="title"
-  [dialogBtnOptions]="DialogBtnOptionsEnum.DECISION"
+  [dialogMode]="DialogModeEnum.DECISION"
   [cardWidth]="cardWidth"
   [cardHeight]="cardHeight"
+  [hideCloseButton]="true"
 >
   <ng-container confirm-dialog>
     <div class="card-text">Bist Du sicher, dass Du Deinen Lernstand zurücksetzen möchtest?</div>

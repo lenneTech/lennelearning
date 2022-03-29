@@ -18,27 +18,27 @@
 
     <div class="container-fluid mb-5 d-flex p-0 banner-container">
       <div class="d-flex align-items-center">
-        <span class="text-left" (click)="selection = true">Abos</span>
-        <span class="text-right" (click)="selection = false">Aktionen</span>
+        <span class="text-left" (click)="isAboActive = true">Abos</span>
+        <span class="text-right" (click)="isAboActive = false">Aktionen</span>
       </div>
 
       <div
-        class="left bg-primary-200 cursor-pointer"
-        [ngClass]="{ 'left-active': selection }"
-        (click)="selection = true"
+        class="selection-banner bg-primary-200 cursor-pointer"
+        [ngClass]="{ 'left-active': isAboActive }"
+        (click)="isAboActive = true"
       ></div>
 
       <div
-        class="right bg-primary-200 cursor-pointer"
-        [ngClass]="{ 'right-active': !selection }"
-        (click)="selection = false"
+        class="selection-banner bg-primary-200 cursor-pointer"
+        [ngClass]="{ 'right-active': !isAboActive }"
+        (click)="isAboActive = false"
       ></div>
     </div>
     <div class="container">
       <div
         class="row d-flex justify-content-center"
         [ltMatchHeight]="!mobile ? ['card', 'card-description', 'card-price', 'card-details'] : null"
-        *ngIf="selection"
+        *ngIf="isAboActive"
       >
         <app-price-card
           class="col-lg-4 d-flex justify-content-center"
@@ -47,7 +47,6 @@
           cardPrice="0€"
           [cardSpecifics]="['Texte, Aufgabenkatalog & Tipps zum Lernpfad Berufsfelderkundung']"
           cardImageUrl="../../assets/images/entry-point-images/berufsinteressent.svg"
-          s
           subscriptionType="Free"
         >
         </app-price-card>
@@ -57,7 +56,7 @@
           cardTitle="Praktikum"
           cardDescription="Je nach Art und Dauer des Praktikums sowie den jeweiligen Vorkenntnissen der Praktikant:innen können unterschiedliche Lernpfade geeignet sein: Berufsfeld, Praktikum, Sprint, Frontend, Backend oder Standard."
           cardPrice="0€ / kostenpflichtig"
-          cardPriceDetails="0€ für unsere eigenen Praktikant:innen, kostenpflichtig für externe Praktikant:innen.          "
+          cardPriceDetails="0€ für unsere eigenen Praktikant:innen, kostenpflichtig für externe Praktikant:innen."
           [cardSpecifics]="specificsIntern"
           cardImageUrl="../../assets/images/entry-point-images/praktikant.svg"
           subscriptionType="Praktikum"
@@ -75,7 +74,7 @@
         >
         </app-price-card>
       </div>
-      <div class="row" *ngIf="!selection">
+      <div class="row" *ngIf="!isAboActive">
         <div class="d-flex flex-wrap justify-content-around card-container">
           <app-price-card
             cardPreTitle="Unser Angebot für Dein Unternehmen"
