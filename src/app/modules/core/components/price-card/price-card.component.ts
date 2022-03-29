@@ -7,7 +7,7 @@ import { DialogService } from '../../../../modules/core/services/dialog.service'
   styleUrls: ['./price-card.component.scss'],
 })
 export class PriceCardComponent {
-  @Input() cardPreTitle: string;
+  @Input() cardPreTitle?: string;
   @Input() cardTitle: string;
   @Input() cardDescription: string;
   @Input() cardImageUrl: string;

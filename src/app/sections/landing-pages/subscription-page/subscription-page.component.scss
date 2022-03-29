@@ -1,9 +1,5 @@
 @import 'src/assets/scss/utils';
 
-::ng-deep.banner-img {
-  width: 100%;
-  margin-top: -15% !important;
-}
 .banner {
   padding-left: 0;
   padding-right: 0;
@@ -15,6 +11,7 @@
   flex-wrap: wrap;
   padding-left: 0;
   justify-content: center;
+
   & li {
     text-align: center;
     color: white;
@@ -22,9 +19,11 @@
     font-weight: 600;
     cursor: pointer;
     margin: 10px 0;
+
     &:nth-child(2n) {
       flex-basis: 100%;
     }
+
     &:hover {
       color: $orange !important;
     }
@@ -72,14 +71,6 @@
   margin: 0;
   padding: 4px 0 4px 20px;
   list-style: none;
-}
-
-.card-container {
-  flex: wrap;
-}
-
-::ng-deep.rocket-img {
-  display: none !important;
 }
 
 .banner {

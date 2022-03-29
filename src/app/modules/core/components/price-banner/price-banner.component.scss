@@ -1,22 +1,20 @@
 @import 'src/assets/scss/utils';
-.academy-banner {
-  background-color: var(--color-primary-500);
-  min-height: 300px;
-  padding: 25px;
+
+.price-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .hover-img {
   width: 175px;
   position: relative;
   right: -16px;
-  top: 20px;
-  justify-content: flex-start !important  ;
+  top: 40px;
   z-index: 1000;
 }
 
 .banner-text {
   text-align: center;
-  max-width: auto;
   align-self: center;
   flex-wrap: nowrap;
   margin-left: auto;
@@ -39,22 +37,12 @@
     margin-bottom: 30px;
   }
 
-  & a {
+  a {
     text-decoration: none;
   }
 }
 
-.rocket-img {
-  position: relative;
-  width: 280px;
-}
-
-.banner-btn {
-  cursor: pointer;
-  padding: 10px 10px 10px 0;
-}
-
-@include media-breakpoint-up('xl') {
+@include media-breakpoint-up(xl) {
   .banner-text {
     right: 0;
     position: relative;
@@ -63,7 +51,8 @@
 
 .price-banner {
   max-height: none;
-  @include media-breakpoint-up('xl') {
+
+  @include media-breakpoint-up(xl) {
     max-height: 200px;
   }
 }

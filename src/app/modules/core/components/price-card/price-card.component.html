@@ -1,8 +1,8 @@
-<nb-card class="card pricecard" [ngClass]="{ pricecard: cardMaxWidth }">
+<nb-card class="card" [ngClass]="{ 'price-card': cardMaxWidth }">
   <nb-card-body class="d-flex align-items-top justify-content-around">
     <div class="d-flex flex-column align-items-center">
-      <img loading="lazy" class="card-img" [src]="cardImageUrl" alt="Preis Illustration" />
-      <div class="card-PreTitle">{{ cardPreTitle }}</div>
+      <img loading="lazy" class="card-img" [src]="cardImageUrl" alt="Illustration eines Preises" />
+      <div class="card-pre-title" *ngIf="cardPreTitle">{{ cardPreTitle }}</div>
       <h3 class="card-title">{{ cardTitle }}</h3>
       <div class="card-description">{{ cardDescription }}</div>
       <div class="card-price">{{ cardPrice }}</div>

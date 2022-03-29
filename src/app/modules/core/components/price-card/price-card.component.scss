@@ -5,25 +5,27 @@
   align-self: center;
 }
 
-.pricecard {
+.price-card {
   max-width: 75% !important;
 }
+
 .card {
   max-width: 350px;
-  @include media-breakpoint-up('lg') {
-    max-width: 400px;
-  }
-
   box-shadow: 0 0 4px 0 #bdbdbd;
   border: none;
   border-radius: 0;
   margin-left: 20px;
   margin-right: 20px;
 
+  @include media-breakpoint-up('lg') {
+    max-width: 400px;
+  }
+
   &-img {
     height: 260px;
     max-width: 260px;
     object-fit: cover;
+
     @include media-breakpoint-up('lg') {
       max-width: 320px;
       height: 320px;
@@ -31,13 +33,14 @@
     }
   }
 
-  &-PreTitle {
+  &-pre-title {
     font-size: 20px;
     font-weight: bold;
     margin-top: 4rem;
     margin-bottom: 2rem;
     text-align: center;
   }
+
   &-title {
     font-size: 20px;
     font-weight: bold;
@@ -45,6 +48,7 @@
     margin-bottom: 1rem;
     text-align: center;
   }
+
   &-subtitle {
     font-size: 20px;
     font-weight: bold;
@@ -60,6 +64,7 @@
     padding-right: 1.5rem;
     text-align: center;
   }
+
   &-specifics {
     font-size: 20px;
     line-height: 1.5rem;
@@ -67,6 +72,7 @@
     padding-right: 1.5rem;
     text-align: center;
   }
+
   &-price {
     font-size: 20px;
     font-weight: bold;
@@ -75,6 +81,7 @@
     margin-top: 20px;
     margin-bottom: 20px;
   }
+
   &-details {
     font-size: 16px;
     text-align: center;
@@ -97,10 +104,14 @@
 }
 
 .list-item {
-  background: url(/assets/images/bulletpoint.svg) no-repeat top left !important;
+  background: url('/assets/images/bulletpoint.svg') no-repeat top left;
   margin: 0;
   margin-top: 15px !important;
   padding: 4px 20px 4px 40px;
   list-style: none;
   text-align: left;
+}
+
+nb-card-body {
+  overflow-x: hidden;
 }

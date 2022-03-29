@@ -19,7 +19,7 @@ export class InquiryComponent implements OnInit {
   error = false;
   @Input() subscription: string;
   dataPolicy =
-    'Ich habe die Datenschutzerklärung zur Kenntnis genommen. Ich stimme zu, dass meine Angaben und Daten zur Beantwortung meiner Anfrage elektronisch erhoben und gespeichert werden. Hinweis: Du kannst Deine Einwilligung jederzeit für die Zukunft per E-Mail an info@lenne.tech widerrufen. *';
+    'Ich habe die <a href="/datenschutz" target="_blank">Datenschutzerklärung</a> zur Kenntnis genommen. Ich stimme zu, dass meine Angaben und Daten zur Beantwortung meiner Anfrage elektronisch erhoben und gespeichert werden. Hinweis: Du kannst Deine Einwilligung jederzeit für die Zukunft per E-Mail an <a href="mailto:info@lenne.tech">info@lenne.tech</a> widerrufen. *';
 
   constructor(
     private mailService: MailService,
@@ -28,6 +28,7 @@ export class InquiryComponent implements OnInit {
     private dialogService: DialogService,
     protected dialogRef: NbDialogRef<any>
   ) {}
+
   ngOnInit() {
     this.initForm();
   }

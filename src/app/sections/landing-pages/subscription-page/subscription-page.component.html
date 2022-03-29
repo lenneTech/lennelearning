@@ -41,7 +41,7 @@
         *ngIf="isAboActive"
       >
         <app-price-card
-          class="col-lg-4 d-flex justify-content-center"
+          class="col-12 col-md-6 col-lg-6 col-xl-4 d-flex justify-content-center"
           cardTitle="Free"
           cardDescription="Erste Einblicke in das Berufsfeld und Elemente der Softwareentwicklung im Rahmen des Lernpfades Berufsfelderkundung."
           cardPrice="0€"
@@ -52,7 +52,7 @@
         </app-price-card>
 
         <app-price-card
-          class="col-lg-4 d-flex justify-content-center"
+          class="col-12 col-md-6 col-lg-6 col-xl-4 d-flex justify-content-center"
           cardTitle="Praktikum"
           cardDescription="Je nach Art und Dauer des Praktikums sowie den jeweiligen Vorkenntnissen der Praktikant:innen können unterschiedliche Lernpfade geeignet sein: Berufsfeld, Praktikum, Sprint, Frontend, Backend oder Standard."
           cardPrice="0€ / kostenpflichtig"
@@ -63,7 +63,7 @@
         >
         </app-price-card>
         <app-price-card
-          class="col-lg-4 d-flex justify-content-center"
+          class="col-12 col-md-6 col-lg-6 col-xl-4 d-flex justify-content-center"
           cardTitle="Unternehmen"
           cardDescription="Für alle, die sich oder Ihre Unternehmensangehörigen weiterbilden möchten: Je nach Zielsetzung und Vorwissen eignen sich die Lernpfade:  Sprint, Praktikum, Unternehmen, Frontend, Backend oder Standard."
           cardPrice="kostenpflichtig"
@@ -92,12 +92,11 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid banner">
-      <app-price-banner
-        textBanner="** Ihr sucht gut ausgebildete Nachwuchskräfte und möchtet daher Teil    unseres Unternehmensnetzwerkes werden?   Nehmt Kontakt mit uns auf und informiert Euch über die     Rahmenbedingungen.'"
-      >
-      </app-price-banner>
-    </div>
+
+    <app-price-banner
+      textBanner="** Ihr sucht gut ausgebildete Nachwuchskräfte und möchtet daher Teil unseres Unternehmensnetzwerkes werden? Nehmt Kontakt mit uns auf und informiert Euch über die Rahmenbedingungen."
+    >
+    </app-price-banner>
   </nb-layout-column>
 
   <nb-layout-footer fixed>
