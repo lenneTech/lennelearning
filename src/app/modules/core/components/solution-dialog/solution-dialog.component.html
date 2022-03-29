@@ -1,9 +1,4 @@
-<app-dialog
-  [title]="title"
-  [dialogBtnOptions]="DialogBtnOptionsEnum.SINGLE"
-  [cardWidth]="cardWidth"
-  [cardHeight]="cardHeight"
->
+<app-dialog [title]="title" [dialogMode]="DialogModeEnum.SINGLE" [cardWidth]="cardWidth" [cardHeight]="cardHeight">
   <ng-container helper-dialog>
     <div class="card-text">
       Für den Fall, dass Du nicht mehr weiterkommst oder Deine Ergebnisse vergleichen möchtest, bekommst Du hier die

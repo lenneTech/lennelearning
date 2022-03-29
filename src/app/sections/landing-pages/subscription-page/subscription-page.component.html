@@ -15,60 +15,67 @@
         ></app-banner>
       </div>
     </div>
-    <div class="container-fluid mb-5">
-      <div class="row">
-        <div
-          [ngClass]="{ selectioncolor: selection }"
-          class="col pb-3 pt-3 bg-primary-200 abos"
-          (click)="selection = true"
-        >
-          Abos
-        </div>
-        <div
-          [ngClass]="{ selectioncolor: !selection }"
-          class="col pb-3 pt-3 bg-primary-200 aktionen"
-          (click)="selection = false"
-        >
-          Aktionen
-        </div>
+
+    <div class="container-fluid mb-5 d-flex p-0 banner-container">
+      <div class="d-flex align-items-center">
+        <span class="text-left" (click)="isAboActive = true">Abos</span>
+        <span class="text-right" (click)="isAboActive = false">Aktionen</span>
       </div>
+
+      <div
+        class="selection-banner bg-primary-200 cursor-pointer"
+        [ngClass]="{ 'left-active': isAboActive }"
+        (click)="isAboActive = true"
+      ></div>
+
+      <div
+        class="selection-banner bg-primary-200 cursor-pointer"
+        [ngClass]="{ 'right-active': !isAboActive }"
+        (click)="isAboActive = false"
+      ></div>
     </div>
     <div class="container">
-      <div class="row d-flex justify-content-center" [ltMatchHeight]="['card', 'card-text', 'card-details']">
-        <div class="col d-flex flex-wrap justify-content-around card-container" *ngIf="selection">
-          <app-price-card
-            cardTitle="Free"
-            cardDescription="Erste Einblicke in das Berufsfeld und Elemente der Softwareentwicklung im Rahmen des Lernpfades Berufsfelderkundung."
-            cardPrice="0€"
-            [cardSpecifics]="['Texte, Aufgabenkatalog & Tipps zum Lernpfad Berufsfelderkundung']"
-            cardImageUrl="../../assets/images/entry-point-images/berufsinteressent.svg"
-            s
-            subscriptionType="Free"
-          >
-          </app-price-card>
+      <div
+        class="row d-flex justify-content-center"
+        [ltMatchHeight]="!mobile ? ['card', 'card-description', 'card-price', 'card-details'] : null"
+        *ngIf="isAboActive"
+      >
+        <app-price-card
+          class="col-12 col-md-6 col-lg-6 col-xl-4 d-flex justify-content-center"
+          cardTitle="Free"
+          cardDescription="Erste Einblicke in das Berufsfeld und Elemente der Softwareentwicklung im Rahmen des Lernpfades Berufsfelderkundung."
+          cardPrice="0€"
+          [cardSpecifics]="['Texte, Aufgabenkatalog & Tipps zum Lernpfad Berufsfelderkundung']"
+          cardImageUrl="../../assets/images/entry-point-images/berufsinteressent.svg"
+          subscriptionType="Free"
+        >
+        </app-price-card>
 
-          <app-price-card
-            cardTitle="Praktikum"
-            cardDescription="Je nach Art und Dauer des Praktikums sowie den jeweiligen Vorkenntnissen der Praktikant:innen können unterschiedliche Lernpfade geeignet sein: Berufsfeld, Praktikum, Sprint, Frontend, Backend oder Standard."
-            cardPrice="0€ / kostenpflichtig"
-            cardPriceDetails="0€ für unsere eigenen Praktikant:innen, kostenpflichtig für externe Praktikant:innen.          "
-            [cardSpecifics]="specificsIntern"
-            cardImageUrl="../../assets/images/entry-point-images/praktikant.svg"
-            subscriptionType="Praktikum"
-          >
-          </app-price-card>
-          <app-price-card
-            cardTitle="Unternehmen"
-            cardDescription="Für alle, die sich oder Ihre Unternehmensangehörigen weiterbilden möchten: Je nach Zielsetzung und Vorwissen eignen sich die Lernpfade:  Sprint, Praktikum, Unternehmen, Frontend, Backend oder Standard."
-            cardPrice="kostenpflichtig"
-            [cardSpecifics]="specificsCompany"
-            cardPriceDetails="für Unternehmer:innen, Gründer:innen, Auszubildende, Werkstudent:innen und Mitarbeiter:innen."
-            cardImageUrl="../../assets/images/entry-point-images/company.svg"
-            subscriptionType="Unternehmen"
-          >
-          </app-price-card>
-        </div>
-        <div class="col d-flex flex-wrap justify-content-around card-container" *ngIf="!selection">
+        <app-price-card
+          class="col-12 col-md-6 col-lg-6 col-xl-4 d-flex justify-content-center"
+          cardTitle="Praktikum"
+          cardDescription="Je nach Art und Dauer des Praktikums sowie den jeweiligen Vorkenntnissen der Praktikant:innen können unterschiedliche Lernpfade geeignet sein: Berufsfeld, Praktikum, Sprint, Frontend, Backend oder Standard."
+          cardPrice="0€ / kostenpflichtig"
+          cardPriceDetails="0€ für unsere eigenen Praktikant:innen, kostenpflichtig für externe Praktikant:innen."
+          [cardSpecifics]="specificsIntern"
+          cardImageUrl="../../assets/images/entry-point-images/praktikant.svg"
+          subscriptionType="Praktikum"
+        >
+        </app-price-card>
+        <app-price-card
+          class="col-12 col-md-6 col-lg-6 col-xl-4 d-flex justify-content-center"
+          cardTitle="Unternehmen"
+          cardDescription="Für alle, die sich oder Ihre Unternehmensangehörigen weiterbilden möchten: Je nach Zielsetzung und Vorwissen eignen sich die Lernpfade:  Sprint, Praktikum, Unternehmen, Frontend, Backend oder Standard."
+          cardPrice="kostenpflichtig"
+          [cardSpecifics]="specificsCompany"
+          cardPriceDetails="für Unternehmer:innen, Gründer:innen, Auszubildende, Werkstudent:innen und Mitarbeiter:innen."
+          cardImageUrl="../../assets/images/entry-point-images/company.svg"
+          subscriptionType="Unternehmen"
+        >
+        </app-price-card>
+      </div>
+      <div class="row" *ngIf="!isAboActive">
+        <div class="d-flex flex-wrap justify-content-around card-container">
           <app-price-card
             cardPreTitle="Unser Angebot für Dein Unternehmen"
             cardTitle="Azubi Sommercamp 2022"
@@ -77,7 +84,7 @@
             cardPriceDetails="Pro Person"
             [cardSpecifics]="specificsCamp"
             cardImageUrl="../../assets/images/banner-images/getstarted.svg"
-            [cardMaxWidth]="true"
+            [isActionCard]="true"
             subscriptionType="Sommercamp 2022"
             class="d-flex justify-content-center"
           >
@@ -85,12 +92,11 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid banner">
-      <app-price-banner
-        textBanner="** Ihr sucht gut ausgebildete Nachwuchskräfte und möchtet daher Teil    unseres Unternehmensnetzwerkes werden?   Nehmt Kontakt mit uns auf und informiert Euch über die     Rahmenbedingungen.'"
-      >
-      </app-price-banner>
-    </div>
+
+    <app-price-banner
+      textBanner="** Ihr sucht gut ausgebildete Nachwuchskräfte und möchtet daher Teil unseres Unternehmensnetzwerkes werden? Nehmt Kontakt mit uns auf und informiert Euch über die Rahmenbedingungen."
+    >
+    </app-price-banner>
   </nb-layout-column>
 
   <nb-layout-footer fixed>

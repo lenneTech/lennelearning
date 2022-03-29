@@ -1,6 +1,5 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { NbDialogRef } from '@nebular/theme';
-import { DialogBtnOptionsEnum } from 'src/app/modules/core/enumerators/dialog-btn-options.enum';
 
 @Component({
   selector: 'app-version-history',

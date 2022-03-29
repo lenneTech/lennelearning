@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NbDialogRef } from '@nebular/theme';
+import { DialogModeEnum } from '../../enumerators/dialog-mode.enum';
 import { DialogService } from '../../services/dialog.service';
 import { FormsService } from '../../services/forms.service';
 import { MailService } from '../../services/mail.service';
@@ -11,19 +13,22 @@ import { MailService } from '../../services/mail.service';
   styleUrls: ['./inquiry.component.scss'],
 })
 export class InquiryComponent implements OnInit {
+  DialogModeEnum = DialogModeEnum;
   contactForm: FormGroup;
   isLoading = false;
   error = false;
   @Input() subscription: string;
   dataPolicy =
-    'Ich habe die Datenschutzerklärung zur Kenntnis genommen. Ich stimme zu, dass meine Angaben und Daten zur Beantwortung meiner Anfrage elektronisch erhoben und gespeichert werden. Hinweis: Du kannst Deine Einwilligung jederzeit für die Zukunft per E-Mail an info@lenne.tech widerrufen. *';
+    'Ich habe die <a href="/datenschutz" target="_blank">Datenschutzerklärung</a> zur Kenntnis genommen. Ich stimme zu, dass meine Angaben und Daten zur Beantwortung meiner Anfrage elektronisch erhoben und gespeichert werden. Hinweis: Du kannst Deine Einwilligung jederzeit für die Zukunft per E-Mail an <a href="mailto:info@lenne.tech">info@lenne.tech</a> widerrufen. *';
 
   constructor(
     private mailService: MailService,
     private formsService: FormsService,
     private router: Router,
-    private dialogService: DialogService
+    private dialogService: DialogService,
+    protected dialogRef: NbDialogRef<any>
   ) {}
+
   ngOnInit() {
     this.initForm();
   }
@@ -49,6 +54,7 @@ export class InquiryComponent implements OnInit {
     this.contactForm.value.subscription = this.subscription;
     this.mailService.sendMail(this.contactForm.value).subscribe({
       next: () => {
+        this.dialogRef.close();
         this.dialogService.openMailSentDialog();
       },
       error: () => {

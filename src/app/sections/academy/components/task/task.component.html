@@ -5,14 +5,14 @@
         <ng-content select="[title]"></ng-content>
       </div>
       <div class="col-5 d-flex justify-content-end align-items-center">
-        <div #popLink class="pop-link">Link zur Aufgabe kopiert!</div>
+        <div #popLink class="pop-link">Link zu diesem Abschnitt kopiert!</div>
         <i
           class="bi cursor-pointer p-1"
           (click)="share()"
           [ngClass]="{ 'bi-clipboard': !check, 'bi-clipboard-check': check }"
           data-bs-toggle="tooltip"
           data-bs-placement="top"
-          title="Link zur Aufgabe kopieren"
+          title="Link zu diesem Abschnitt kopieren"
         >
         </i>
         <i

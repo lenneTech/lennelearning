@@ -14,11 +14,11 @@ export class UnderlineAnimationComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     if (this.currentRoute.toString() === 'true') {
-      //This timeout is set to run the animation properly - due to performance-issues after reloading the page its currently set to 700ms
+      //This timeout is set to run the animation properly
       setTimeout(() => {
         this.lineLeft.nativeElement.classList.add('line-left-expanded');
         this.lineRight.nativeElement.classList.add('line-right-expanded');
-      }, 700);
+      }, 200);
     }
   }
 }

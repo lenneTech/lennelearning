@@ -1,10 +1,8 @@
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { NbDialogService } from '@nebular/theme';
 import { VersionHistoryComponent } from 'src/app/sections/academy/components/version-history/version-history.component';
 import { DialogConfirmComponent } from '../components/dialog-confirm/dialog-confirm.component';
-import { DialogComponent } from '../components/dialog/dialog.component';
 import { HelperDialogComponent } from '../components/helper-dialog/helper-dialog.component';
 import { InquiryComponent } from '../components/inquiry/inquiry.component';
 import { MailSentDialogComponent } from '../components/mail-sent-dialog/mail-sent-dialog.component';
@@ -15,18 +13,15 @@ import { EntryPointService } from './entry-point.service';
   providedIn: 'root',
 })
 export class DialogService {
+  defaultModalOptions = { closeOnBackdropClick: true, autoFocus: false };
   constructor(
     private nbDialogService: NbDialogService,
     private entryPointService: EntryPointService,
     private router: Router
   ) {}
 
-  openDialog(): void {
-    this.nbDialogService.open(DialogComponent, { closeOnBackdropClick: true });
-  }
-
   openVersionDialog(): void {
-    this.nbDialogService.open(VersionHistoryComponent, { closeOnBackdropClick: true });
+    this.nbDialogService.open(VersionHistoryComponent, this.defaultModalOptions);
   }
 
   openHelperDialog(
@@ -37,7 +32,7 @@ export class DialogService {
     width?: string,
     height?: string
   ): void {
-    const dialog = this.nbDialogService.open(HelperDialogComponent, { closeOnBackdropClick: true });
+    const dialog = this.nbDialogService.open(HelperDialogComponent, this.defaultModalOptions);
     const instance = dialog.componentRef.instance;
     instance.title = title;
     instance.videoReference = videoReference;
@@ -56,7 +51,7 @@ export class DialogService {
     width?: string,
     height?: string
   ): void {
-    const dialog = this.nbDialogService.open(SolutionDialogComponent, { closeOnBackdropClick: true });
+    const dialog = this.nbDialogService.open(SolutionDialogComponent, this.defaultModalOptions);
     const instance = dialog.componentRef.instance;
     instance.title = title;
     instance.solutionLink = solutionLink;
@@ -68,7 +63,7 @@ export class DialogService {
   }
 
   openConfirmDialog() {
-    this.nbDialogService.open(DialogConfirmComponent, { closeOnBackdropClick: true }).onClose.subscribe(
+    this.nbDialogService.open(DialogConfirmComponent, this.defaultModalOptions).onClose.subscribe(
       (confirmed) => {
         if (confirmed) {
           this.entryPointService.reset();
@@ -82,11 +77,16 @@ export class DialogService {
   }
 
   openMailSentDialog() {
-    this.nbDialogService.open(MailSentDialogComponent, { closeOnBackdropClick: true, hasScroll: true });
+    this.nbDialogService.open(MailSentDialogComponent, {
+      ...this.defaultModalOptions,
+      ...{
+        hasScroll: true,
+      },
+    });
   }
 
   openInquiryDialog(subscription: string) {
-    const dialog = this.nbDialogService.open(InquiryComponent, { closeOnBackdropClick: true });
+    const dialog = this.nbDialogService.open(InquiryComponent, this.defaultModalOptions);
     const instance = dialog.componentRef.instance;
 
     instance.subscription = subscription;

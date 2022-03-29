@@ -53,10 +53,10 @@ const routes: Routes = [
     data: { matomoTitle: 'Kontakt' },
   },
   {
-    path: 'abbonements',
+    path: 'abonnements',
     component: SubscriptionPageComponent,
     pathMatch: 'full',
-    data: { matomoTitle: 'Abbonements' },
+    data: { matomoTitle: 'Abonnements' },
   },
 ];
 
