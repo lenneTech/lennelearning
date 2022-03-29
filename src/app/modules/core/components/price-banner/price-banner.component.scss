@@ -15,10 +15,15 @@
 
 .banner-text {
   text-align: center;
-  align-self: center;
   flex-wrap: nowrap;
-  margin-left: auto;
-  margin-right: 25%;
+  margin: 0 auto;
+  width: 90%;
+
+  @include media-breakpoint-up(md) {
+    margin-left: auto;
+    margin-right: 25%;
+    width: 50%;
+  }
 
   p {
     font-style: normal;

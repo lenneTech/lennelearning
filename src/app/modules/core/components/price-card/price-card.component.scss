@@ -3,6 +3,7 @@
 .card-subtitle {
   font-weight: bold;
   align-self: center;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .price-card {
@@ -10,32 +11,23 @@
 }
 
 .card {
-  max-width: 350px;
   box-shadow: 0 0 4px 0 #bdbdbd;
   border: none;
   border-radius: 0;
   margin-left: 20px;
   margin-right: 20px;
 
-  @include media-breakpoint-up('lg') {
+  @include media-breakpoint-up(lg) {
     max-width: 400px;
   }
 
   &-img {
-    height: 260px;
-    max-width: 260px;
-    object-fit: cover;
-
-    @include media-breakpoint-up('lg') {
-      max-width: 320px;
-      height: 320px;
-      max-height: 245px;
-    }
+    max-height: 207px;
+    object-fit: contain;
   }
 
   &-pre-title {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 18px;
     margin-top: 4rem;
     margin-bottom: 2rem;
     text-align: center;
@@ -54,7 +46,6 @@
     font-weight: bold;
     margin-top: 4rem;
     margin-bottom: 2rem;
-    text-align: center;
   }
 
   &-description {
@@ -66,11 +57,24 @@
   }
 
   &-specifics {
+    width: 100%;
     font-size: 20px;
     line-height: 1.5rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     text-align: center;
+  }
+
+  &-specifics-action {
+    width: 100%;
+
+    @include media-breakpoint-up(lg) {
+      width: 70%;
+    }
+
+    @include media-breakpoint-up(xl) {
+      width: 50%;
+    }
   }
 
   &-price {
@@ -82,19 +86,31 @@
     margin-bottom: 20px;
   }
 
+  &-price-action {
+    margin: 50px 0;
+    color: black;
+    font-size: 42px;
+    font-weight: bold;
+  }
+
   &-details {
     font-size: 16px;
     text-align: center;
     margin-top: 10px;
   }
+
+  &-extra {
+    font-size: 18px;
+    text-align: center;
+  }
 }
 
 .price-button {
-  font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
   text-align: center;
   align-content: center;
+  font-size: 18px;
 }
 
 .list {
@@ -110,6 +126,8 @@
   padding: 4px 20px 4px 40px;
   list-style: none;
   text-align: left;
+  line-height: 25px;
+  font-size: 18px;
 }
 
 nb-card-body {

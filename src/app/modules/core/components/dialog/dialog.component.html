@@ -1,6 +1,6 @@
 <nb-card status="primary" [ngStyle]="{ width: cardWidth, height: cardHeight }">
-  <nb-card-header class="title"
-    >{{ title }}
+  <nb-card-header class="title">
+    <div class="header-title-text">{{ title }}</div>
     <div class="d-flex align-items-center close-modal-button" *ngIf="!hideCloseButton">
       <button class="btn-close btn-close-white mx-auto mx-md-0" (click)="close()"></button>
     </div>
