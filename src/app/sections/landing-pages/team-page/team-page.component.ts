@@ -43,14 +43,14 @@ export class TeamPageComponent {
       ],
       backend: [
         {
-          imageUrl: '../../assets/images/brand-images/logo_graphql.svg',
-          imageAlt: 'Logo von GraphQl',
-          title: 'GraphQl',
-        },
-        {
           imageUrl: '../../assets/images/brand-images/logo_nestjs.svg',
           imageAlt: 'Logo von NestJS',
           title: 'NestJS',
+        },
+        {
+          imageUrl: '../../assets/images/brand-images/logo_graphql.svg',
+          imageAlt: 'Logo von GraphQl',
+          title: 'GraphQl',
         },
         {
           imageUrl: '../../assets/images/brand-images/logo_mongodb.svg',
@@ -120,14 +120,14 @@ export class TeamPageComponent {
       ],
       backend: [
         {
-          imageUrl: '../../assets/images/brand-images/logo_graphql.svg',
-          imageAlt: 'Logo von GraphQl',
-          title: 'GraphQl',
-        },
-        {
           imageUrl: '../../assets/images/brand-images/logo_nestjs.svg',
           imageAlt: 'Logo von NestJS',
           title: 'NestJS',
+        },
+        {
+          imageUrl: '../../assets/images/brand-images/logo_graphql.svg',
+          imageAlt: 'Logo von GraphQl',
+          title: 'GraphQl',
         },
         {
           imageUrl: '../../assets/images/brand-images/logo_mongodb.svg',
@@ -319,19 +319,19 @@ export class TeamPageComponent {
       ],
       backend: [
         {
-          imageUrl: '../../assets/images/brand-images/logo_docker.svg',
-          imageAlt: 'Logo von Docker',
-          title: 'Docker',
-        },
-        {
           imageUrl: '../../assets/images/brand-images/logo_websocket.svg',
           imageAlt: 'Logo von Websocket',
           title: 'Websocket',
         },
         {
-          imageUrl: '../../assets/images/brand-images/logo_mongodb.svg',
-          imageAlt: 'Logo von MongoDB',
-          title: 'MongoDB',
+          imageUrl: '../../assets/images/brand-images/logo_graphql.svg',
+          imageAlt: 'Logo von GraphQL',
+          title: 'GraphQL',
+        },
+        {
+          imageUrl: '../../assets/images/brand-images/logo_docker.svg',
+          imageAlt: 'Logo von Docker',
+          title: 'Docker',
         },
       ],
     },

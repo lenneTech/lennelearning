@@ -12,6 +12,7 @@
 
 .specialty-title {
   font-size: 20px;
+  font-weight: lighter;
 }
 .specialty-header {
   font-size: 25px;
@@ -22,7 +23,7 @@
 .specialty-card {
   background-color: #f8f8f8;
   padding: 15px 40px;
-  border-radius: 0.25rem;
+  border-radius: 5px;
 }
 
 .member:not(:last-child) {
@@ -35,6 +36,7 @@
 .card {
   margin-bottom: 25px !important;
   min-width: 350px;
+  border-radius: 5px;
 
   @include media-breakpoint-up('lg') {
     margin-bottom: 0 !important;
