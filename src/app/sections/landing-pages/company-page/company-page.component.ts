@@ -1,7 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MetaService } from 'src/app/modules/core/services/meta.service';
 import { TextImageInterface } from '../../../modules/core/interfaces/text-image.interface';
 import { Review } from 'src/app/modules/core/interfaces/review.interface';
+
 @Component({
   selector: 'app-company-page',
   templateUrl: './company-page.component.html',

@@ -28,3 +28,11 @@
   color: black;
   font-size: 13px;
 }
+
+.team-img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  display: inline-block;
+  object-fit: cover;
+}
