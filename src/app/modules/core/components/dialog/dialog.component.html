@@ -1,20 +1,25 @@
 <nb-card status="primary" [ngStyle]="{ width: cardWidth, height: cardHeight }">
-  <nb-card-header class="title">{{ title }}</nb-card-header>
+  <nb-card-header class="title">
+    <div class="header-title-text">{{ title }}</div>
+    <div class="d-flex align-items-center close-modal-button" *ngIf="!hideCloseButton">
+      <button class="btn-close btn-close-white mx-auto mx-md-0" (click)="close()"></button>
+    </div>
+  </nb-card-header>
   <nb-card-body>
     <div class="container">
       <ng-content select="[helper-dialog]"> </ng-content>
       <ng-content select="[confirm-dialog]"> </ng-content>
     </div>
   </nb-card-body>
-  <nb-card-footer>
+  <nb-card-footer *ngIf="dialogMode !== DialogBntOptionsEnum.MAIL">
     <div class="row justify-content-around">
-      <div class="col-4 d-flex justify-content-around" *ngIf="dialogBtnOptions === DialogBntOptionsEnum.DECISION">
+      <div class="col-4 d-flex justify-content-around" *ngIf="dialogMode === DialogBntOptionsEnum.DECISION">
         <button class="me-2" nbButton status="success" data-test-id="dialog-confirm" (click)="onAcceptBtnClick()">
           Bestätigen
         </button>
         <button class="ms-2" nbButton status="danger" (click)="onAbortBtnClick()">Abbrechen</button>
       </div>
-      <div class="col-4 d-flex justify-content-around" *ngIf="dialogBtnOptions === DialogBntOptionsEnum.SINGLE">
+      <div class="col-4 d-flex justify-content-around" *ngIf="dialogMode === DialogBntOptionsEnum.SINGLE">
         <button nbButton status="primary" data-test-id="dialog-ok" (click)="close()">Verstanden</button>
       </div>
     </div>

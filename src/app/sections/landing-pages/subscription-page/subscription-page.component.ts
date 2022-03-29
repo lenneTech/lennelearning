@@ -7,11 +7,12 @@ import { MetaService } from 'src/app/modules/core/services/meta.service';
   styleUrls: ['./subscription-page.component.scss'],
 })
 export class SubscriptionPageComponent implements OnInit {
+  mobile: boolean;
   title = 'Abos und Aktionen';
   subtitle =
     'Du willst nur mal reinschnuppern? Du möchtest Dich neben Schule, Studium oder Beruf weiterbilden? Du suchst die passende Betreuung und Weiterbildung im unternehmerischen Kontext?   \n \n    Kein Problem, wir haben die passendenden Aktionen, Angebote und Abomodelle. Für individuellere Fragen und Wünsche kontaktiere uns gerne direkt.';
   imageUrl = '../../assets/images/banner-images/Analytics.svg';
-  selection = true;
+  isAboActive = true;
   specificsIntern: string[] = [
     'Onlinevideos',
     'Aufgabenkatalog, Musterlösungen und Tipps zu allen Lernpfaden',
@@ -38,5 +39,6 @@ export class SubscriptionPageComponent implements OnInit {
       'lenne.Learning - Du interessierst Dich für App- und Webentwicklung?',
       'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.'
     );
+    this.mobile = window.innerWidth < 992;
   }
 }

@@ -3,41 +3,36 @@
 .card-subtitle {
   font-weight: bold;
   align-self: center;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.pricecard {
+.price-card {
   max-width: 75% !important;
 }
-.card {
-  max-width: 350px;
-  @include media-breakpoint-up('lg') {
-    max-width: 400px;
-  }
 
+.card {
   box-shadow: 0 0 4px 0 #bdbdbd;
   border: none;
   border-radius: 0;
   margin-left: 20px;
   margin-right: 20px;
 
-  &-img {
-    height: auto;
-    width: 300px;
-    object-fit: cover;
-    @include media-breakpoint-up('lg') {
-      width: 350px;
-      height: auto;
-      max-height: 245px;
-    }
+  @include media-breakpoint-up(lg) {
+    max-width: 400px;
   }
 
-  &-PreTitle {
-    font-size: 20px;
-    font-weight: bold;
+  &-img {
+    max-height: 207px;
+    object-fit: contain;
+  }
+
+  &-pre-title {
+    font-size: 18px;
     margin-top: 4rem;
     margin-bottom: 2rem;
     text-align: center;
   }
+
   &-title {
     font-size: 20px;
     font-weight: bold;
@@ -45,28 +40,43 @@
     margin-bottom: 1rem;
     text-align: center;
   }
+
   &-subtitle {
     font-size: 20px;
     font-weight: bold;
     margin-top: 4rem;
     margin-bottom: 2rem;
-    text-align: center;
   }
 
-  &-text {
+  &-description {
     font-size: 18px;
     line-height: 1.5rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     text-align: center;
   }
+
   &-specifics {
+    width: 100%;
     font-size: 20px;
     line-height: 1.5rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     text-align: center;
   }
+
+  &-specifics-action {
+    width: 100%;
+
+    @include media-breakpoint-up(lg) {
+      width: 70%;
+    }
+
+    @include media-breakpoint-up(xl) {
+      width: 50%;
+    }
+  }
+
   &-price {
     font-size: 20px;
     font-weight: bold;
@@ -75,19 +85,32 @@
     margin-top: 20px;
     margin-bottom: 20px;
   }
+
+  &-price-action {
+    margin: 50px 0;
+    color: black;
+    font-size: 42px;
+    font-weight: bold;
+  }
+
   &-details {
     font-size: 16px;
     text-align: center;
     margin-top: 10px;
   }
+
+  &-extra {
+    font-size: 18px;
+    text-align: center;
+  }
 }
 
 .price-button {
-  font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
   text-align: center;
   align-content: center;
+  font-size: 18px;
 }
 
 .list {
@@ -97,10 +120,16 @@
 }
 
 .list-item {
-  background: url(/assets/images/bulletpoint.svg) no-repeat top left !important;
+  background: url('/assets/images/bulletpoint.svg') no-repeat top left;
   margin: 0;
   margin-top: 15px !important;
   padding: 4px 20px 4px 40px;
   list-style: none;
   text-align: left;
+  line-height: 25px;
+  font-size: 18px;
+}
+
+nb-card-body {
+  overflow-x: hidden;
 }

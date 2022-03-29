@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { DialogBtnOptionsEnum } from '../../enumerators/dialog-btn-options.enum';
+import { DialogModeEnum } from '../../enumerators/dialog-mode.enum';
 
 @Component({
   selector: 'app-helper-dialog',
@@ -13,7 +13,7 @@ export class HelperDialogComponent {
   @Input() videoReference?: string;
   @Input() hint?: string;
   @Input() solutionLink?: string;
-  DialogBtnOptionsEnum = DialogBtnOptionsEnum;
+  DialogModeEnum = DialogModeEnum;
 
   constructor() {}
 }

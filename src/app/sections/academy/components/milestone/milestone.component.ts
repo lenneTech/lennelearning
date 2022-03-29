@@ -35,7 +35,7 @@ export class MilestoneComponent implements OnInit {
     },
     {
       sectionTitle: 'html',
-      logo: '../../../../../assets/images/brand-images/logos_html-5.svg',
+      logo: '../../../../../assets/images/brand-images/logo_html-5.svg',
       description:
         'Super, Du hast HTML verstanden und kannst jetzt schon eigene kleine Webseiten erstellen. In der nächsten Sektion geht es weiter mit dem Styling Deiner Webseite.',
       exampleList: [
@@ -47,7 +47,7 @@ export class MilestoneComponent implements OnInit {
     },
     {
       sectionTitle: 'css',
-      logo: '../../../../../assets/images/brand-images/logos_css-3.svg',
+      logo: '../../../../../assets/images/brand-images/logo_css-3.svg',
       description:
         'Klasse Leistung! Mit dieser Sektion bist Du Deiner eigenen wunderschönen Webseite ein Stück näher gekommen.',
       exampleList: [
@@ -61,7 +61,7 @@ export class MilestoneComponent implements OnInit {
     },
     {
       sectionTitle: 'bootstrap',
-      logo: '../../../../../assets/images/brand-images/logos_bootstrap.svg',
+      logo: '../../../../../assets/images/brand-images/logo_bootstrap.svg',
       description:
         'Jetzt hast Du eine Möglichkeit kennengelernt, eines der meist genutzten CSS-Frameworks zu verwenden, dass Dir viel Arbeit beim Stylen abnehmen kann.',
       exampleList: [
@@ -81,7 +81,7 @@ export class MilestoneComponent implements OnInit {
     },
     {
       sectionTitle: 'git-basics',
-      logo: '../../../../../assets/images/brand-images/logos_git.svg',
+      logo: '../../../../../assets/images/brand-images/logo_git.svg',
       description:
         'Du hast nun die Grundlagen von Git kennengelernt. Grundlegende Versionsverwaltung ist für Dich kein Problem mehr und Du bist in der Lage, Deine Projekte remote abzusichern.',
       exampleList: [
@@ -98,7 +98,7 @@ export class MilestoneComponent implements OnInit {
     },
     {
       sectionTitle: 'javascript',
-      logo: '../../../../../assets/images/brand-images/logos_javascript.svg',
+      logo: '../../../../../assets/images/brand-images/logo_javascript.svg',
       description:
         'Super Leistung! Jetzt kannst Du mit HTML, CSS, Bootstrap und Javascript Deine eigene Webseite mit Styling und Funktionalität entwickeln. Damit hast Du bereits die wichtigsten Bausteine der Webentwicklung kennengelernt.',
       exampleList: [
@@ -119,7 +119,7 @@ export class MilestoneComponent implements OnInit {
     },
     {
       sectionTitle: 'typescript',
-      logo: '../../../../../assets/images/brand-images/logos_typescript-icon.svg',
+      logo: '../../../../../assets/images/brand-images/logo_typescript.svg',
       description:
         'Du hast jetzt eine Erweiterung von Javascript kennengelernt, die Dir unter anderem mit Typisierungen das Leben erleichtern soll und strukturierteres Coden ermöglicht.',
       exampleList: [
@@ -130,7 +130,7 @@ export class MilestoneComponent implements OnInit {
     },
     {
       sectionTitle: 'teamwork',
-      logo: '../../../../../assets/images/brand-images/logos_github-icon.svg',
+      logo: '../../../../../assets/images/brand-images/logo_github.svg',
       description:
         'Sehr gut! Du hast jetzt die volle Kontrolle über Deinen Code und kannst kooperativ mit anderen Softwareentwicklern zusammenarbeiten.',
       exampleList: [
@@ -147,7 +147,7 @@ export class MilestoneComponent implements OnInit {
     },
     {
       sectionTitle: 'prototyping',
-      logo: '../../../../../assets/images/brand-images/logos_figma.svg',
+      logo: '../../../../../assets/images/brand-images/logo_figma.svg',
       description: 'Bravo, Du hast die Sektion Prototyping erfolgreich beendet.',
       exampleList: [
         {
@@ -169,7 +169,7 @@ export class MilestoneComponent implements OnInit {
     },
     {
       sectionTitle: 'angular',
-      logo: '../../../../../assets/images/brand-images/logos_angular-icon.svg',
+      logo: '../../../../../assets/images/brand-images/logo_angular.svg',
       description:
         'Du bist jetzt ein zertifizierter Angularentwickler und kannst agile Single Page Anwendungen entwickeln.',
       exampleList: [
@@ -192,7 +192,7 @@ export class MilestoneComponent implements OnInit {
     },
     {
       sectionTitle: 'ionic',
-      logo: '../../../../../assets/images/brand-images/logos_ionic-icon.svg',
+      logo: '../../../../../assets/images/brand-images/logo_ionic.svg',
       description:
         'Der Appentwicklung steht nun nichts mehr im Wege. Den Bereich Frontend hast Du nun komplett abgeschlossen. Das Einzige, was Dir jetzt noch fehlt, ist das Backend.',
       exampleList: [
@@ -215,13 +215,13 @@ export class MilestoneComponent implements OnInit {
     },
     {
       sectionTitle: 'docker-basics',
-      logo: '../../../../../assets/images/brand-images/logos_docker.svg',
+      logo: '../../../../../assets/images/brand-images/logo_docker.svg',
       description:
         'Jetzt hast Du Docker kennengelernt. Du weißt jetzt zum Beispiel, was Container und Images sind. Das reicht erst mal für die nächsten Sektionen. Der Expertenteil folgt.',
     },
     {
       sectionTitle: 'nestjs',
-      logo: '../../../../../assets/images/brand-images/logos_nestjs.svg',
+      logo: '../../../../../assets/images/brand-images/logo_nestjs.svg',
       description:
         'Du weißt jetzt auch, wie man ein Backend mit einer Datenbank und Endpunkten erstellt. Damit kannst Du Dich selbst nun einen Fullstack-Developer nennen.',
       exampleList: [
@@ -234,25 +234,25 @@ export class MilestoneComponent implements OnInit {
         {
           text: 'Du hast gelernt, wie man moderne vollwertige Webapplikationen mit eigener Serverarchitektur wie die Big Player      entwickelt.',
           imageUrl: 'https://cdn.pixabay.com/photo/2015/12/11/09/30/mobile-phone-1087845_960_720.jpg',
-          imageAlt: 'Bild mit mehreren Logos bekannter Unternehmen',
+          imageAlt: 'Bild mit mehreren logo bekannter Unternehmen',
         },
       ],
     },
     {
       sectionTitle: 'packages',
-      logo: '../../../../../assets/images/brand-images/logos_npm.svg',
+      logo: '../../../../../assets/images/brand-images/logo_npm.svg',
       description:
         'Jetzt weißt Du Bescheid, nach welchen Kriterien man Packages auswählen sollte und kannst zukünftig in Deinen Projekten bedachter Pakete einbinden.',
     },
     {
       sectionTitle: 'design',
-      logo: '../../../../../assets/images/brand-images/logos_figma.svg',
+      logo: '../../../../../assets/images/brand-images/logo_figma.svg',
       description:
         'Jetzt hast Du gelernt, wie man designtechnisch an ein Projekt herangeht. Mit Figma oder anderen Tools kannst Du Deine Webseite also nun schon vorab designen.',
     },
     {
       sectionTitle: 'automatisierte-tests',
-      logo: '../../../../../assets/images/brand-images/logos_cypress.svg',
+      logo: '../../../../../assets/images/brand-images/logo_cypress.svg',
       description:
         'Du weißt jetzt, wie automatisierte Tests funktionierten und kannst testen, ob das eigene System noch vollständig funktionsfähig ist.',
     },

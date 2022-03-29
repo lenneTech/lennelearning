@@ -7,7 +7,7 @@ import { DialogService } from '../../../../modules/core/services/dialog.service'
   styleUrls: ['./price-card.component.scss'],
 })
 export class PriceCardComponent {
-  @Input() cardPreTitle: string;
+  @Input() cardPreTitle?: string;
   @Input() cardTitle: string;
   @Input() cardDescription: string;
   @Input() cardImageUrl: string;
@@ -15,7 +15,7 @@ export class PriceCardComponent {
   @Input() cardPriceDetails: string;
   @Input() cardSpecifics: string[];
   @Input() cardRoute: string;
-  @Input() cardMaxWidth: boolean;
+  @Input() isActionCard: boolean;
   @Input() subscriptionType: string;
 
   constructor(private dialogService: DialogService) {}
