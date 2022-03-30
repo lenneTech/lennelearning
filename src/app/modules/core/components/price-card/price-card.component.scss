@@ -6,8 +6,10 @@
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.price-card {
-  max-width: 75% !important;
+@include media-breakpoint-up(lg) {
+  .price-card {
+    max-width: 75% !important;
+  }
 }
 
 .card {
@@ -122,7 +124,7 @@
 .list-item {
   background: url('/assets/images/bulletpoint.svg') no-repeat top left;
   margin: 0;
-  margin-top: 15px !important;
+  margin-top: 15px;
   padding: 4px 20px 4px 40px;
   list-style: none;
   text-align: left;
