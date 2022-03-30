@@ -86,7 +86,12 @@ export class DialogService {
   }
 
   openInquiryDialog(subscription: string) {
-    const dialog = this.nbDialogService.open(InquiryComponent, this.defaultModalOptions);
+    const dialog = this.nbDialogService.open(InquiryComponent, {
+      ...this.defaultModalOptions,
+      ...{
+        hasScroll: true,
+      },
+    });
     const instance = dialog.componentRef.instance;
 
     instance.subscription = subscription;
