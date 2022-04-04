@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatomoTracker } from 'ngx-matomo';
+import { MatomoTracker } from 'sinsunsan-ngx-matomo';
 
 @Component({
   selector: 'app-root',

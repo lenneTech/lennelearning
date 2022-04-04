@@ -2,13 +2,13 @@
 
 ## Dependencies
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.5.  
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.  
 Libraries used:  
-[Nebular](https://akveo.github.io/nebular/) version 7.0.0  
-[Bootstrap](https://getbootstrap.com/) version 5.0.1  
-[Bootstrap Icons](https://icons.getbootstrap.com/) version 1.5.0  
-[Ngx-HighlightJS](https://www.npmjs.com/package/ngx-highlightjs) version 4.1.4  
-[Ngx-Lottie](https://www.npmjs.com/package/ngx-lottie) version 7.0.3
+[Nebular](https://akveo.github.io/nebular/) version 9.0.1  
+[Bootstrap](https://getbootstrap.com/) version 5.1.3  
+[Bootstrap Icons](https://icons.getbootstrap.com/) version 1.8.1  
+[Ngx-HighlightJS](https://www.npmjs.com/package/ngx-highlightjs) version 6.1.2  
+[Ngx-Lottie](https://www.npmjs.com/package/ngx-lottie) version 8.0.1
 
 ---
 
