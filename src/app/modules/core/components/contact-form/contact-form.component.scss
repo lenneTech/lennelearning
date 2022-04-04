@@ -42,15 +42,14 @@
     box-shadow: none;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   i {
     color: $orange;
     font-size: 28px;
     margin-right: 30px;
-  }
-
-  ::ng-deep a {
-    text-decoration: none !important;
-    color: var(--text-basic-color) !important;
   }
 
   .content-text {

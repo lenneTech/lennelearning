@@ -43,13 +43,13 @@
   <task id="task-3" section="ionic">
     <div title>Dokumentation</div>
     <div description>
-      Schau Dir mal die Ionic <a href="https://ionicframework.com/docs/" taskLink>Dokumentation</a> an, um noch eine
-      bessere Vorstellung von Ionic zu bekommen.
+      Schau Dir die Ionic <a href="https://ionicframework.com/docs/" taskLink>Dokumentation</a> an, um noch eine bessere
+      Vorstellung von Ionic zu bekommen.
     </div>
     <task-text>
       <div info>
-        Klick Dich mal durch die verschiedenen Komponenten durch und schau, wie die Ionic Komponenten für IOS und
-        Android aussehen.<br />
+        Klick Dich durch die verschiedenen Komponenten und schau, wie die Ionic Komponenten für IOS und Android
+        aussehen.<br />
         Dabei kannst Du Dich inspirieren lassen und Ideen für Dein Ionic Projekt sammeln.
       </div>
     </task-text>
@@ -62,7 +62,7 @@
     </div>
     <task-text>
       <div info>
-        Dadurch, dass Du an dieser Stelle schon mit nodeJS, npm und Angular gearbeitet haben solltest, setzen wir
+        Dadurch, dass Du an dieser Stelle schon mit NodeJS, npm und Angular gearbeitet haben solltest, setzen wir
         voraus, dass Du diese Pakete bereits installiert hast. Damit Deine Ionic Projekte auf nativen Mobilgeräten
         installiert werden können, müssen sie für die einzelnen Plattformen kompiliert werden. Dazu benötigst Du
         <a href="https://developer.android.com/studio" taskLink>Android Studio</a> für Android Applikationen und
@@ -72,8 +72,8 @@
       </div>
       <div infolist>
         Öffne Android Studio, klicke unten rechts auf <b>Configure</b> und wähle <b>SDK Manager</b> aus. Hier können
-        alle SDK (Software Development Kit) Versionen eingesehen, installiert oder Deinstalliert werden. Installiere am
-        besten verschiedene SDKs mit einem Api Level von mindestens 21. Je höher das Api Level, desto aktueller ist die
+        alle SDK (Software Development Kit) Versionen eingesehen, installiert oder deinstalliert werden. Installiere am
+        besten verschiedene SDKs mit einem API Level von mindestens 21. Je höher das API Level, desto aktueller ist die
         Version des SDKs.
       </div>
       <div infolist>Daraufhin kannst Du die Ionic CLI mit <code>npm install -g @ionic/cli</code> installieren</div>
@@ -89,7 +89,7 @@
   >
     <div title>Initialisierung</div>
     <task-text>
-      <div info>Erstelle Dein eigenes Projekt wie folgt:</div>
+      <div info>Erstelle Dein eigenes Projekt wie hier beschrieben:</div>
       <div infolist>
         Gehe in den Texteditor Deiner Wahl (VSCode, PhpStorm, etc.), öffne das Terminal und navigiere an den Ort, an dem
         Du Deine App speichern möchtest.
@@ -126,7 +126,7 @@
     <div title>Android</div>
     <task-text>
       <div info>
-        Dadurch, dass Android Applikationen auf Java basieren, musst Du im Vorhinein
+        Da Android Applikationen auf Java basieren, musst Du im Vorhinein
         <a taskLink href="https://www.java.com/de/">Java</a> auf Deinem System installiert haben. <br />
         Um Deine erstellte Ionic App auf Android-Geräten installieren zu können, gehe im Terminal Deines Texteditors
         (VSCode, PhpStorm, etc.) wie folgt vor:
@@ -173,7 +173,7 @@
         Führe <code>ionic capacitor run ios -l --external</code> in Deinem Projekt aus, um die Anwendung auf einem IOS
         Emulator zu installieren und auszuführen.<br />
         Durch <b>-l</b> wird live reloading aktiviert, sodass bei Änderungen im Code die App automatisch neu kompiliert
-        wird und <b>--external</b> öffnet automatisch XCode und einen Emulator.
+        wird. <b>--external</b> öffnet automatisch XCode und einen Emulator.
       </div>
     </task-text>
   </task>
@@ -182,11 +182,11 @@
     <task-text>
       <div exercise>
         Nach der Installation und Initialisierung Deines Projekts bist Du nun bereit, Deine eigene App zu entwickeln. An
-        dieser Stelle kannst Du auch gerne Deine eigenen Ideen entwickeln und unter Absprache mit Deinem Tutor Deinen
+        dieser Stelle kannst Du auch gerne Deine eigenen Ideen entwickeln und in Absprache mit Deinem Tutor Deinen
         eigenen Projektrahmen festlegen.<br />
         Wenn Du keine eigene Idee hast, kannst Du unser Musterprojekt entwickeln, um Ionic und die nativen Funktionen
-        besser zu verstehen. Dazu sollst Du eine App entwickeln, mit der man eigene Rezepte erstellen und digitalisiert
-        abspeichern kann.<br />
+        besser zu verstehen. Dazu sollst Du eine App entwickeln, mit der eigene Rezepte erstellt und digitalisiert
+        abgespeichert werden können.<br />
         Deine zuvor erstellte App hat standardmäßig drei verschiedene Menü Tabs. Wir brauchen für unsere Anwendung nur
         zwei Tabs, wirf dementsprechend einen raus.<br />
         Der linke Tab soll eine Rezeptliste beinhalten und im rechten Tab sollen neue Rezepte angelegt werden können.
@@ -196,7 +196,7 @@
         <div exerciselist>Mache Dich zunächst mit der Fotofunktion (Ionic MediaCapture) vertraut.</div>
         <div exerciselist>
           Implementiere ein Formular, in dem der Rezepttitel, eine Zutatenliste sowie eine kurze Kochanleitung angegeben
-          werden kann (nutze dafür Ionic Components).
+          werden können (nutze dafür Ionic Components).
         </div>
         <div exerciselist>
           Unter dem Formular soll es einen Button geben, mit dem ein Foto von dem Gericht aufgenommen werden kann.
@@ -206,7 +206,7 @@
           betätigt wird, soll das neu aufgenommene Foto das alte Foto überschreiben.
         </div>
         <div exerciselist>
-          Wenn das Formal komplett ist, soll ein Speicher Button erscheinen, mit dem das Rezept zunächst im Local
+          Wenn das Formular komplett ist, soll ein Speicherbutton erscheinen, mit dem das Rezept zunächst im Local
           Storage abgespeichert wird.
         </div>
       </div>
@@ -222,7 +222,7 @@
         </div>
         <div exerciselist>Abgespeicherte Rezepte sollen dabei sowohl bearbeitet als auch gelöscht werden können.</div>
         <div exerciselist>
-          Zusatzaufgabe: Binde die Ionic Share Api ein und implementiere eine Funktion, mit der Rezepte zum Beispiel
+          Zusatzaufgabe: Binde die Ionic Share API ein und implementiere eine Funktion, mit der Rezepte zum Beispiel
           über Whatsapp oder andere Social Media Plattformen versendet werden können.
         </div>
       </div>

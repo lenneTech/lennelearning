@@ -24,7 +24,7 @@ export class TaskComponent implements OnInit {
   @Input() solutionLink?: string;
   @Input() id: string;
   @Input() section: string;
-  @Input() image: { url: string; alt: string; reference: string };
+  @Input() image: { url: string; alt: string; reference?: string };
   @ViewChild('popLink') popLink: ElementRef;
 
   completed = false;
