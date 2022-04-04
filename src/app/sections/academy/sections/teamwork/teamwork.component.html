@@ -8,20 +8,48 @@
     <div title>Arbeiten als Team</div>
     <div sidebarTitle>Arbeiten</div>
     <div description>
-      Wenn Du in einem Unternehmen arbeitest oder arbeiten willst, bist Du im Normalfall Teil eines Teams. In jedem
-      Projekt werden verschiedene Teams benötigt, die diverse Arbeiten am Projekt erledigen. Aus diesem Grund ist es
-      wichtig, sich ein paar Dinge bewusst zu machen.
+      Wenn Du in einem Unternehmen arbeitest, bist Du im Normalfall Teil eines Teams. In jedem Projekt werden
+      verschiedene Teams und Personen benötigt, die diverse Arbeiten am Projekt erledigen. Je nach Größe des
+      Unternehmens kann auch die Größe und Zusammensetzung der Teams variieren. Daher gibt es verschiedene Aspekte im
+      Hinblick auf den Ablauf und die Organisation eines gemeinsamen Projekts, die es zu beachten gilt. Dazu zählen die
+      Arbeitsweise z. B. Scrum, die verwendeten Tools wie z. B. Jira und der vorgegebene Workflow. Diese Aspekte können
+      sich je nach Unternehmen unterscheiden.
     </div>
   </task>
+
   <task id="task-2" section="teamwork">
+    <div title>Methoden und Tools</div>
+    <div sidebarTitle>Methoden und Tools</div>
+    <div description>
+      Für die Durchführung eines Projekts und die Zusammenarbeit nach den Vorgaben der Workflows haben Unternehmen meist
+      bestimmte Tools und Methoden festgelegt, die verwendet werden sollen. Dabei sind vor allem agile Methoden wie z.
+      B. Scrum bei Softwareprojekten sehr beliebt. Durch kurze Entwicklungszyklen, sogenannte Sprints, lassen sich
+      Projekte flexibel steuern und anpassen. Ein Sprint dauert in der Regel ein bis vier Wochen. Für die Definition und
+      Festlegung der Vorgänge, die innerhalb eines Sprints abgearbeitet werden sollen, können unterschiedliche Tools wie
+      z. B. Jira verwendet werden. In den folgenden Videos bekommst Du einen kurzen Einblick in das Arbeiten mit Scrum
+      und Jira.
+    </div>
+  </task>
+
+  <task id="task-3" section="teamwork">
+    <div title>Videos</div>
+    <div description>Schaue Dir diese Videos an und komme danach wieder hier her.</div>
+
+    <task-video [youtubelink]="'https://www.youtube.com/embed/Ibz9STVjtzI'"></task-video>
+    <task-video [youtubelink]="'https://www.youtube.com/embed/4J3EAEdHs_E'"></task-video>
+  </task>
+
+  <task id="task-4" section="teamwork">
     <div title>Workflow</div>
     <div description>
-      Meist existiert ein vordefinierter Workflow in einem Betrieb. Anhand des gegebenen Workflows sieht man sehr
-      deutlich wie verschiedene Teams miteinander arbeiten sollen. Hier ist es wichtig sich bewusst zu machen, dass
-      nicht nur Entwickler:innen an einem Projekt arbeiten. Ein Projekt geht von der Konzeption übers Design bis zur
-      Umsetzung. Das Team rund ums Design ist vermutlich nicht versiert mit dem Coding und das Team rund ums Coding
-      nicht mit dem Designen. Genau deshalb ist es wichtig, dass man nach einem klaren Workflow agiert und sich an
-      vordefinierte Regeln hält. Am verlinkten Beispiel schlüsseln wir exemplarisch einen Workflow auf. <br /><br />
+      Meist existiert ein vordefinierter Workflow in einem Betrieb. Anhand eines Workflows wird einfach gesagt deutlich,
+      wie verschiedene Personen und Teams zusammenarbeiten sollen. Ein Projekt umfasst in der Regel drei verschiedene
+      Phasen:Konzeption, Design und Entwicklung (Umsetzung). Bedenke, dass nicht nur Entwickler:innen an einem Projekt
+      arbeiten, sondern auch Personen aus anderen (nicht-technischen) Unternehmensbereichen. So haben bspw.
+      Designer:innen vermutlich keine Programmierkenntnisse und den Entwickler:innen fehlt die Designexpertise. Genau
+      deshalb ist es wichtig, entsprechend des Workflows zu agieren, sich um eine klare Kommunikation und gute
+      Dokumentation zu bemühen z. B. durch die Projektseiten und Tickets in einem Projektboard sowie vordefinierte
+      Regeln einzuhalten. Am verlinkten Beispiel schlüsseln wir exemplarisch einen Workflow auf.
     </div>
     <nb-accordion>
       <nb-accordion-item>
@@ -47,7 +75,7 @@
       </div>
       <div infolist>
         Ist für ein Ticket ein Design nötig, werden im Schritt Design die UX/UI-Vorlagen erstellt. Diese werden mithilfe
-        eines Clickdummies auf Vollständigkeit geprüft und vom Kunden abgenommen.
+        eines Clickdummies auf Vollständigkeit geprüft und von den Kund:innen abgenommen.
       </div>
       <div infolist>
         Im Schritt Development werden die Konzeption und die Designvorlage programmiertechnisch umgesetzt. Nicht zu
@@ -63,19 +91,19 @@
       </div>
     </task-text>
   </task>
-  <task id="task-3" section="teamwork">
+  <task id="task-5" section="teamwork">
     <div title>Schnittstellen</div>
     <div description>
-      Wenn man nach einem solchen Workflow arbeitet, befinden sich zwischen den Schritten immer Übergangsschritte. Zum
-      Design geht es nur über den Schritt ToDesign, zur Review nur über den Schritt ToReview, etc. An solchen
-      Übergangsschritten entstehen Schnittstellen zwischen den einzelnen Teams. Entsprechend liegen besonders an diesen
-      Schritten viele Fehlerquellen und potentielle Prozessoptimierungen. Ergo ist hier besondere Sorgfalt geboten.
+      Wird nach einem solchen Workflow gearbeitet, gibt es zwischen den Phasen immer Übergangsschritte. Zum Design geht
+      es nur über den Schritt ToDesign, zur Review nur über den Schritt ToReview, etc. Diese Übergangsschritte sind die
+      Schnittstellen zwischen den einzelnen Teams. Solche Schnittstellen sind in der Regel anfällig für Fehler, bergen
+      aber auch häufig Potenzial für Prozessoptimierungen. Entsprechend sorgfältig sollte hier agiert werden.
     </div>
     <task-text>
       <div info></div>
       <div infolist>
-        So wird beispielsweise im Schritt ToDesign das vollumfängliche Ticket mit Beschreibungen, Skizzen, Beispielen
-        sowie Hinweisen zu anderen Tickets für die weitere Verarbeitung als PDF hinterlegt. Tickets werden erst zum
+        So wird bspw. im Schritt ToDesign das vollumfängliche Ticket mit Beschreibungen, Skizzen, Beispielen sowie
+        Hinweisen zu anderen Tickets für die weitere Verarbeitung als PDF hinterlegt. Tickets werden erst zum
         Design-Team weitergegeben, wenn diese freigegeben wurden.
       </div>
       <div infolist>
@@ -88,11 +116,11 @@
         Es ist allerdings in jedem Fall wichtig, dass man sich an eben jenen hält, damit ein effizientes Arbeiten im
         Team möglich ist.
       </div>
-    </task-text></task
-  >
+    </task-text>
+  </task>
 
   <task
-    id="task-4"
+    id="task-6"
     section="teamwork"
     [image]="{
       url: '../../assets/images/academy-images/sprint-planning.svg',
@@ -112,15 +140,15 @@
     </task-text>
   </task>
 
-  <task id="task-5" section="teamwork">
+  <task id="task-7" section="teamwork">
     <div title>Video</div>
-    <div description>Schaue Dir dieses Video an und komme danach wieder hier hin.</div>
+    <div description>Schaue Dir dieses Video an und komme danach wieder hier her.</div>
 
     <task-video [youtubelink]="'https://www.youtube.com/embed/ZVoSBA03Tdc?'"></task-video>
   </task>
 
   <task
-    id="task-6"
+    id="task-8"
     solutionLink="https://youtu.be/dnAy6aIbIWo"
     hint="Manche Aufgabenstellungen im Spiel sind wirklich nicht eindeutig, daher ist es nicht schlimm danach zu googeln."
     section="teamwork"
@@ -134,7 +162,7 @@
   </task>
 
   <task
-    id="task-7"
+    id="task-9"
     hint="Bei Fehlern werden Dir in der Konsole häufig Lösungen angezeigt, die Du verwenden kannst."
     section="teamwork"
     [image]="{
@@ -149,9 +177,9 @@
         Setze die gelernten Inhalte in die Praxis um. Deine Aufgabe ist es, einen Eintrag in unserem Gästebuch zu
         hinterlassen. Wichtig ist, dass es hier prinzipiell verschiedene Methoden gibt, wie Du an und mit Repositories
         arbeiten kannst. Bist Du Teil eines Teams auf Github, so kannst Du in Repositories dieses Teams arbeiten. Bist
-        Du dies nicht, musst Du das Repository forken und dann anschließend eine Pull request erstellen, mit welcher
-        Dein Fork in das ursprüngliche Repository aufgenommen wird. In diesem Fall musst Du das Repository des
-        Gästebuches erst forken. <br />
+        Du das nicht, musst Du das Repository forken und dann anschließend eine Pull Request erstellen, mit welcher Dein
+        Fork in das ursprüngliche Repository aufgenommen wird. In diesem Fall musst Du das Repository des Gästebuches
+        erst forken. <br />
         Hier eine kurze Anleitung:
       </div>
       <div exerciselist>
@@ -174,7 +202,7 @@
     </task-text>
   </task>
   <task
-    id="task-8"
+    id="task-10"
     hint="Bei Fehlern werden Dir in der Konsole häufig Lösungen angezeigt, die Du verwenden kannst."
     section="teamwork"
   >
@@ -183,7 +211,7 @@
     <task-text>
       <div exercise>
         Wie gerade schon erwähnt gibt es auch die Möglichkeit, dass Du als Teil eines Teams Repositories bearbeitest.
-        Sollte dies der Fall sein, folgt hier noch einmal die Anleitung, wie Du in diesem Fall am Repository arbeitest
+        Sollte dies der Fall sein, folgt hier noch einmal die Anleitung dazu
       </div>
       <div exerciselist>Klone das GitHub-Repository des Projekts.</div>
       <div exerciselist>Erstelle einen neuen Branch, in welchem Deine Änderungen stattfinden werden.</div>
@@ -193,7 +221,7 @@
         <code> git commit -m "hier kommt eine aussagekräftige Beschreibung rein"</code>.
       </div>
       <div exerciselist>
-        Bevor Du Deine Änderungen pusht, gleichst Du nochmal Deinen Branch mit dem Hauptbranch ab. Dies machst Du um
+        Bevor Du Deine Änderungen pushst, gleichst Du nochmal Deinen Branch mit dem Hauptbranch ab. Dies machst Du um
         Mergekonflikte präventiv zu verhindern.
       </div>
       <div exerciselist>
@@ -215,7 +243,7 @@
       </div>
     </task-text>
   </task>
-  <task id="task-9" section="teamwork">
+  <task id="task-11" section="teamwork">
     <div title>GitFlow</div>
     <div description>
       Dieses Video soll Dir einen Einblick geben, wie Du später in größeren Teams mithilfe von GitFlow organisiert

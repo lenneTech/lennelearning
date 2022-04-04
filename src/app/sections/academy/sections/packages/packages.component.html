@@ -8,13 +8,13 @@
     <div title>Einführung</div>
     <task-text>
       <div info>
-        Es gibt viele Webentwickler:innen da draußen und dementsprechend gibt es viele Zeilen Code, die fast alle
-        Entwickler:innen in irgenDeiner Form in seinen Projekten verwendet. Diese Grundbausteine oder Bausätze gibt es
-        in Form von Paketen (Packages) zur freien Verfügung. Mit diesen kannst Du komplexeren Code in wenigen Zeilen
-        vereinfacht schreiben und das Package übernimmt die restliche Arbeit. Dies bringt einige Vorteile mit sich, hat
-        aber auch ein paar Nachteile:
+        Es gibt viele Webentwickler:innen da draußen und dementsprechend gibt es auch viele Zeilen Code, die von fast
+        alle Entwickler:innen in irgendeiner Form in ihren Projekten verwendet werden. Diese Grundbausteine oder
+        Bausätze stehen in Form von Paketen (Packages) zur freien Verfügung. Mit ihnen kannst Du komplexeren Code
+        vereinfacht und mit nur wenigen Zeilen schreiben und das Package übernimmt die restliche Arbeit. Dies bringt
+        einige Vorteile mit sich, hat aber auch ein paar Nachteile:
         <div infolist>
-          Du weißt nicht, wie sicher ein Package von einer fremden Person/Organisation ist. Wenn sie mit anderen
+          Du weißt nicht, wie sicher ein Package von einer fremden Person / Organisation ist. Wenn sie mit anderen
           Schnittstellen arbeiten, können Sicherheitslücken entstehen, die auf den ersten Blick nicht erkennbar sind.
         </div>
         <div infolist>Die Performance kann unter Packages leiden, je nach dem, wie gut sie optimiert sind.</div>
@@ -24,8 +24,9 @@
         </div>
       </div>
       <div info>
-        Wenn Du aber ungefähr weißt, wie Du gute Pakete findest und sie von eher schlechteren unterscheiden kannst,
-        bringen Pakete deutlich mehr Vorteile. In diesem Abschnitt zeigen wir Dir, wie Du Pakete evaluieren kannst.
+        Wenn Du aber ungefähr weißt, wo und wie Du gute Pakete findest und sie von eher schlechteren unterscheiden
+        kannst, bringen Pakete deutlich mehr Vorteile als Nachteile. In diesem Abschnitt zeigen wir Dir, wie Du Pakete
+        evaluieren kannst.
       </div>
     </task-text>
   </task>
@@ -42,7 +43,7 @@
     <div title>Evaluation</div>
     <task-text>
       <div info>
-        Bei dem Einbeziehen von Packages musst Du ein paar Sachen beachten, um die richtigen Pakete auszuwählen und die
+        Bei der Einbeziehung von Packages musst Du ein paar Dinge beachten, um die richtigen Pakete auszuwählen und die
         Performance Deiner Anwendung nicht unnötig zu belasten.
 
         <div infolist>
@@ -52,7 +53,7 @@
         <div infolist>Anzahl der Releases - je häufiger geupdated wird, desto besser.</div>
         <div infolist>
           Tests - man kann überprüfen, inwiefern Tests eingebaut sind. Dabei sind Pakete, die durch Tests geprüft sind,
-          meistens weniger anfällig gegenüber Bugs als Pakete ohne Test.
+          meistens weniger anfällig gegenüber Bugs (Fehlern) als Pakete ohne Test.
         </div>
         <div infolist>Anzahl der offenen bzw. ungelösten Issues - je weniger, desto besser.</div>
         <div infolist>Beliebtheit auf GitHub - je mehr Sterne, Forks und Watches, desto besser.</div>
@@ -63,10 +64,10 @@
       </div>
       <div info>
         Am Beispiel von ng-bootstrap (siehe rechts) fällt auf, dass die Issues recht hoch ausfallen. Beim genaueren
-        Betrachten der Issues bei GitHub sieht man jedoch auch, dass schon knapp 2000 Issues behandelt wurden.
-        Dementsprechend wird an dem Paket durchgängig weitergearbeitet und auf Probleme eingegangen. Also sollte man bei
-        solchen Fällen bei den GitHub Issues genauer hinsehen, um einschätzen zu können, inwiefern die Entwickler auf
-        neue Probleme eingehen.
+        Betrachten der Issues bei GitHub siehst Du jedoch auch, dass schon knapp 2000 Issues behandelt wurden.
+        Dementsprechend wird an dem Paket durchgängig weitergearbeitet und auf Probleme eingegangen. Also solltest Du
+        bei solchen Fällen bei GitHub Issues genauer hinsehen, um einschätzen zu können, inwiefern die Entwickler:innen
+        auf neue Probleme eingehen.
       </div>
     </task-text>
   </task>
@@ -75,8 +76,8 @@
     <task-text>
       <div exercise>
         Binde ein Paket Deiner Wahl in Dein erstelltes Angularprojekt ein. Gehe dafür auf
-        <a href="https://www.npmjs.com/" taskLink>npmjs</a> und suche nach einem Paket, welches Dein Projekt verbessern
-        oder erweitern kann. Du kannst auch einen Tutor fragen, ob er Dir ein Paket für Deinen Kontext empfehlen kann.
+        <a href="https://www.npmjs.com/" taskLink>npmjs</a> und suche nach einem Paket, das Dein Projekt verbessern oder
+        erweitern kann. Du kannst auch einen Tutor fragen, ob er Dir ein Paket für Deinen Kontext empfehlen kann.
       </div>
     </task-text>
   </task>
@@ -85,11 +86,11 @@
     <div title>Stay updated!</div>
     <task-text>
       <div info>
-        Bei einem Paket, welches zum jetzigen Zeitpunkt gut gewählt ist, kann schon in ein paar Monaten die Entwicklung
+        Bei einem Paket, das zum jetzigen Zeitpunkt gut gewählt ist, kann schon in ein paar Monaten die Entwicklung
         eingestellt werden. So etwas sollte stets überprüft werden. Das gilt auch für regelmäßige Updates des jeweiligen
-        Pakets. Daher solltest Du immer mal wieder Deine Pakete auf den aktuellsten Stand bringen und überprüfen, ob sie
-        immer noch die richtige Wahl für Dein Projekt sind. Eine Möglichkeit, diese Überprüfung umzusetzen, ist die
-        Nutzung entsprechender Dependency-Manager. Ein Beispiel hierfür ist
+        Pakets. Daher solltest Du regelmäßig Deine Pakete auf den aktuellsten Stand bringen und überprüfen, ob sie immer
+        noch die richtige Wahl für Dein Projekt sind. Eine Möglichkeit, diese Überprüfung umzusetzen, ist die Nutzung
+        entsprechender Dependency-Manager. Ein Beispiel hierfür ist
         <a href="https://www.npmjs.com/package/depcheck" taskLink>depcheck</a>.
       </div>
     </task-text>
