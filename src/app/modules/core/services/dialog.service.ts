@@ -67,7 +67,7 @@ export class DialogService {
       (confirmed) => {
         if (confirmed) {
           this.entryPointService.reset();
-          this.router.navigate(['/']);
+          this.router.navigate(['/lernpfade']);
         }
       },
       (err) => {
