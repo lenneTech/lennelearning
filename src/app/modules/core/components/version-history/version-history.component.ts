@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NbDialogRef } from '@nebular/theme';
-import { DialogBtnOptionsEnum } from '../../enumerators/dialog-btn-options.enum';
+import packageInfo from '../../../../../../package.json';
 import { VersionHistory } from '../../interfaces/version-history.interface';
 
 @Component({
@@ -9,12 +9,20 @@ import { VersionHistory } from '../../interfaces/version-history.interface';
   styleUrls: ['./version-history.component.scss'],
 })
 export class VersionHistoryComponent {
-  DialogBtnOptionsEnum = DialogBtnOptionsEnum;
+  version: string = packageInfo.version;
   versions: VersionHistory[] = [
-    //the newest change on top - gets displayed first
     {
-      version: '1.3.4',
-      //the newest change on top - gets displayed first
+      version: this.version, // the newest version and its changes is set right here
+      changes: [
+        'Visuelle und textuelle Anpassungen',
+        'Genutzte Pakete aktualisiert',
+        'Seite "Kontakt" hinzugefügt',
+        'Seite "Team" hinzugefügt',
+        'Seite "Abos & Aktionen" hinzugefügt',
+      ],
+    },
+    {
+      version: '1.4.0',
       changes: [
         'Textkorrektur',
         'Navigationsleiste hinzugefügt',
