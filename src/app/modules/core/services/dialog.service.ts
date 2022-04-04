@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { NbDialogService } from '@nebular/theme';
-import { VersionHistoryComponent } from 'src/app/sections/academy/components/version-history/version-history.component';
+import { VersionHistoryComponent } from 'src/app/modules/core/components/version-history/version-history.component';
 import { DialogConfirmComponent } from '../components/dialog-confirm/dialog-confirm.component';
 import { HelperDialogComponent } from '../components/helper-dialog/helper-dialog.component';
 import { InquiryComponent } from '../components/inquiry/inquiry.component';
