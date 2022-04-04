@@ -13,8 +13,8 @@
           </div>
         </div>
         <div class="d-flex align-items-center" *ngIf="currentEntryPoint">
-          <span class="d-none d-md-block"
-            >In
+          <div class="d-none d-md-flex align-items-center">
+            <span class="me-1">In</span>
             <nb-select placeholder="Wähle einen Lernpfad aus" [selected]="currentEntryPoint.id">
               <nb-option
                 [value]="entryPoint.id"
@@ -23,8 +23,9 @@
                 >{{ entryPoint.address }}</nb-option
               >
             </nb-select>
-            eingecheckt. <i class="bi bi-door-open" (click)="resetEntryPoint()"></i
-          ></span>
+            <span class="ms-1">eingecheckt.</span>
+            <i class="bi bi-door-open" (click)="resetEntryPoint()" title="Hilfefenster öffnen"></i>
+          </div>
           <i
             class="d-block d-md-none bi"
             [ngClass]="{ 'bi-list': sidebarCollapsed, 'bi-x': !sidebarCollapsed }"
@@ -42,7 +43,7 @@
               >{{ entryPoint.address }}</nb-option
             >
           </nb-select>
-          <i class="bi bi-door-open ms-2" (click)="resetEntryPoint()"></i>
+          <i class="bi bi-door-open ms-2" (click)="resetEntryPoint()" title="Hilfefenster öffnen"></i>
         </span>
       </div>
     </div>
