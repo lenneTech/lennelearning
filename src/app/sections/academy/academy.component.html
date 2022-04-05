@@ -24,7 +24,12 @@
               >
             </nb-select>
             <span class="ms-1">eingecheckt.</span>
-            <i class="bi bi-door-open" (click)="resetEntryPoint()" title="Lernpfad zurücksetzen"></i>
+            <i
+              class="bi bi-door-open"
+              (click)="resetEntryPoint()"
+              title="Lernpfad zurücksetzen"
+              data-cy="reset-entrypoint"
+            ></i>
           </div>
           <i
             class="d-block d-md-none bi"
@@ -63,19 +68,26 @@
 
     <div class="row mt-4 mb-4" *ngIf="!onlyParentRoute && checkBottomNavbar()">
       <div class="col-4 d-flex justify-content-start">
-        <button nbButton status="dark" class="nav-btn" (click)="onBack()" *ngIf="prevSection">
+        <button nbButton status="dark" class="nav-btn" (click)="onBack()" *ngIf="prevSection" data-cy="nav-btn-prev">
           ❮ {{ prevSection }}
         </button>
       </div>
 
       <div class="col-4 d-flex justify-content-center">
-        <button nbButton status="dark" class="nav-btn" *ngIf="currentMileStoneUrl" (click)="onMileStone()">
+        <button
+          nbButton
+          status="dark"
+          class="nav-btn"
+          *ngIf="currentMileStoneUrl"
+          (click)="onMileStone()"
+          data-cy="milestone-btn"
+        >
           <span class="d-md-flex d-none">Zur Trophäe</span> <i class="bi bi-trophy-fill"></i>
         </button>
       </div>
 
       <div class="col-4 d-flex justify-content-end" *ngIf="checkBottomNavbar()">
-        <button nbButton status="dark" class="nav-btn" (click)="onForward()" *ngIf="nextSection">
+        <button nbButton status="dark" class="nav-btn" (click)="onForward()" *ngIf="nextSection" data-cy="nav-btn-next">
           {{ nextSection }} ❯
         </button>
       </div>

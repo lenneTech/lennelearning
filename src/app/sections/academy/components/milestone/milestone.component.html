@@ -44,16 +44,18 @@
       <nb-card-footer>
         <div class="row d-flex justify-content-between">
           <div class="col-6">
-            <button nbButton class="nav-btn" (click)="prevStep()" *ngIf="checkPrev()">❮ Zurück</button>
+            <button nbButton class="nav-btn" (click)="prevStep()" *ngIf="checkPrev()" data-cy="milestone-prev">
+              ❮ Zurück
+            </button>
           </div>
           <div class="col-6 d-flex justify-content-end">
-            <button nbButton class="nav-btn" data-test-id="milestone-next" (click)="nextStep()" *ngIf="checkNext()">
+            <button nbButton class="nav-btn" data-cy="milestone-next" (click)="nextStep()" *ngIf="checkNext()">
               Weiter ❯
             </button>
             <button
               nbButton
               class="nav-btn"
-              data-test-id="milestone-next-section"
+              data-cy="milestone-next-section"
               (click)="navigateToNextSection()"
               *ngIf="!checkNext() && nextSection"
             >
