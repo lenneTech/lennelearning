@@ -26,12 +26,14 @@
         class="selection-banner bg-primary-200 cursor-pointer"
         [ngClass]="{ 'left-active': isAboActive }"
         (click)="isAboActive = true"
+        data-cy="subscription-select"
       ></div>
 
       <div
         class="selection-banner bg-primary-200 cursor-pointer"
         [ngClass]="{ 'right-active': !isAboActive }"
         (click)="isAboActive = false"
+        data-cy="subscription-select"
       ></div>
     </div>
     <div class="container">

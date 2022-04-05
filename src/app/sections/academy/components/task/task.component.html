@@ -13,6 +13,7 @@
           data-bs-toggle="tooltip"
           data-bs-placement="top"
           title="Link zu diesem Abschnitt kopieren"
+          data-cy="task-share-icon"
         >
         </i>
         <i
@@ -20,18 +21,21 @@
           *ngIf="solutionLink && !completed"
           (click)="openSolution()"
           title="Lösung"
+          data-cy="task-solution-icon"
         ></i>
         <i
           *ngIf="(hint || videoReference || solutionLink) && !completed"
           class="bi bi-question-circle cursor-pointer p-1"
           (click)="openHelp()"
           title="Hilfefenster öffnen"
+          data-cy="task-help-icon"
         ></i>
         <i
           class="bi p-1 cursor-pointer"
           [ngClass]="{ 'bi-check-circle': !completed, 'bi-check': completed }"
           (click)="onComplete()"
           title="Abschnitt abgeschlossen"
+          data-cy="task-complete-icon"
         ></i>
       </div>
     </div>
