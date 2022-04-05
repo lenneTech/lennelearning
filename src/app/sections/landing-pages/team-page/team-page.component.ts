@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
 })
 export class TeamPageComponent {
   title = 'Das Team';
-  subtitle = 'Lerne das Team von lenne.Learning kennen und finde die richtigen Ansprechpartner:innen für Deine Fragen.';
+  subtitle =
+    'Lerne das Team von lenne.Learning kennen und finde die richtigen Ansprechpartner:innen für Deine Fragen rund um Koordination, Akademie oder Projektarbeit.';
   imageUrl = '../../assets/images/banner-images/WELCOME.svg';
   coordination = [
     {
