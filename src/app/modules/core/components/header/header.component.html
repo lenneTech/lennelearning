@@ -38,6 +38,7 @@
               id="navbarDropdownMenuLink"
               role="button"
               data-bs-toggle="dropdown"
+              data-cy="dropdown-menu"
               [ngStyle]="{
                 color:
                   getCurrentRoute().includes('/berufsinteressierte') ||
@@ -58,20 +59,27 @@
             ></app-underline-animation>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li class="item">
-                <a class="dropdown-item" routerLink="/berufsinteressierte" routerLinkActive="active"
+                <a
+                  class="dropdown-item"
+                  routerLink="/berufsinteressierte"
+                  routerLinkActive="active"
+                  data-cy="dropdown-item"
                   >Berufsinteressierte </a
                 ><app-underline-animation
                   currentRoute="{{ getCurrentRoute().includes('/berufsinteressierte') }}"
                 ></app-underline-animation>
               </li>
               <li class="item">
-                <a class="dropdown-item" routerLink="/praktikanten" routerLinkActive="active">Praktikant:innen</a
+                <a class="dropdown-item" routerLink="/praktikanten" routerLinkActive="active" data-cy="dropdown-item"
+                  >Praktikant:innen</a
                 ><app-underline-animation
                   currentRoute="{{ getCurrentRoute().includes('/praktikanten') }}"
                 ></app-underline-animation>
               </li>
               <li class="item">
-                <a class="dropdown-item" routerLink="/unternehmen" routerLinkActive="active">Unternehmen</a>
+                <a class="dropdown-item" routerLink="/unternehmen" routerLinkActive="active" data-cy="dropdown-item"
+                  >Unternehmen</a
+                >
                 <app-underline-animation
                   currentRoute="{{ getCurrentRoute().includes('/unternehmen') }}"
                 ></app-underline-animation>
@@ -79,25 +87,31 @@
             </ul>
           </li>
           <li class="nav-item item">
-            <a class="nav-link scroll-link" routerLinkActive="active" routerLink="/lernpfade">Lernpfade</a>
+            <a class="nav-link scroll-link" routerLinkActive="active" routerLink="/lernpfade" data-cy="nav-item"
+              >Lernpfade</a
+            >
             <app-underline-animation
               currentRoute="{{ getCurrentRoute().includes('/lernpfade') }}"
             ></app-underline-animation>
           </li>
           <li class="nav-item item">
-            <a class="nav-link scroll-link" routerLinkActive="active" routerLink="/team">Team</a>
+            <a class="nav-link scroll-link" routerLinkActive="active" routerLink="/team" data-cy="nav-item">Team</a>
             <app-underline-animation currentRoute="{{ getCurrentRoute().includes('/team') }}"></app-underline-animation>
           </li>
 
           <li class="nav-item item">
-            <a class="nav-link scroll-link" routerLinkActive="active" routerLink="/abonnements">Abos & Aktionen</a>
+            <a class="nav-link scroll-link" routerLinkActive="active" routerLink="/abonnements" data-cy="nav-item"
+              >Abos & Aktionen</a
+            >
             <app-underline-animation
               currentRoute="{{ getCurrentRoute().includes('/abonnements') }}"
             ></app-underline-animation>
           </li>
 
           <li class="nav-item item">
-            <a class="nav-link scroll-link" routerLinkActive="active" routerLink="/kontakt">Kontakt</a>
+            <a class="nav-link scroll-link" routerLinkActive="active" routerLink="/kontakt" data-cy="nav-item"
+              >Kontakt</a
+            >
             <app-underline-animation
               currentRoute="{{ getCurrentRoute().includes('/kontakt') }}"
             ></app-underline-animation>

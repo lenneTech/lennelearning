@@ -3,10 +3,19 @@
     <div class="banner-text">
       <h1 class="title" [innerHTML]="title"></h1>
       <h2 class="subtitle" [innerHTML]="subtitle"></h2>
-      <button class="mt-3" nbButton status="primary" *ngIf="showAcademyBtn" (click)="setRecommendation()">
+      <button
+        class="mt-3"
+        nbButton
+        status="primary"
+        *ngIf="showAcademyBtn"
+        (click)="setRecommendation()"
+        data-cy="entry-point-btn"
+      >
         Wähle Deinen Lernpfad
       </button>
-      <button class="mt-3" nbButton status="warning" *ngIf="showContactBtn" routerLink="/kontakt">Kontakt</button>
+      <button class="mt-3" nbButton status="warning" *ngIf="showContactBtn" routerLink="/kontakt" data-cy="contact-btn">
+        Kontakt
+      </button>
     </div>
   </div>
   <div class="d-none col-xl-6 d-xl-flex justify-content-end">
