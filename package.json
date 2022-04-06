@@ -25,7 +25,9 @@
     "prepare": "husky install",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "release": "standard-version && git push --follow-tags origin main"
+    "release": "standard-version && git push --follow-tags origin develop",
+    "release:minor": "standard-version --release-as minor -follow-tags origin develop",
+    "release:major": "standard-version --release-as major -follow-tags origin develop"
   },
   "repository": {
     "type": "git",
