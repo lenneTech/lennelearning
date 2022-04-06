@@ -1,6 +1,6 @@
 {
   "name": "academy",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "author": "lenne.Tech <info@lenne.tech> (https://lenne.tech)",
   "homepage": "https://github.com/lenneTech/academy",
   "license": "MIT",
@@ -25,7 +25,9 @@
     "prepare": "husky install",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "release": "standard-version && git push --follow-tags origin main"
+    "release": "standard-version && git push --follow-tags origin develop",
+    "release:minor": "standard-version --release-as minor && git push --follow-tags origin develop",
+    "release:major": "standard-version --release-as major && git push --follow-tags origin develop"
   },
   "repository": {
     "type": "git",
