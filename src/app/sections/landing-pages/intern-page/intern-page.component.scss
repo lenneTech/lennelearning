@@ -9,6 +9,9 @@
 .testimonials {
   margin-top: 70px;
   margin-bottom: 70px;
+  line-height: 180%;
+  margin-bottom: 0;
+  justify-content: center !important;
 
   @include media-breakpoint-up(lg) {
     margin-top: 70px;
@@ -34,13 +37,24 @@
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    line-height: 180%;
-    margin-bottom: 0;
-    justify-content: center !important;
-    &-name {
-      font-size: 16px;
-      text-align: right;
-      margin-top: 2rem;
+    line-height: 2;
+
+    @media (max-width: 767.98px) {
+      font-size: 14px;
+      line-height: 1.5;
     }
   }
+
+  .description-name {
+    font-size: 16px;
+    margin-top: 2rem;
+    text-align: right;
+    @media (max-width: 767.98px) {
+      font-size: 14px;
+    }
+  }
+}
+.quote {
+  margin-bottom: auto;
+  margin-right: 1rem;
 }

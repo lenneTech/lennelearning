@@ -21,7 +21,7 @@ export class JobInterestedPageComponent implements OnInit {
     },
     {
       title: 'Technologien',
-      text: 'Bekomme einen Einblick in den Grundlagen der modernen Webentwicklung und entwickle mit HTML und CSS schon deine eigene kleine Website.',
+      text: 'Bekomme einen Einblick in den Grundlagen der modernen Webentwicklung und entwickle mit HTML und CSS schon Deine eigene kleine Website.',
       imageUrl: '../../assets/images/explanation-images/discovery.svg',
       imageAlt: 'Bild von zwei Menschen mit Laborwerkzeug.',
     },
@@ -39,9 +39,5 @@ export class JobInterestedPageComponent implements OnInit {
       'lenne.Learning - Du interessierst Dich für App- und Webentwicklung?',
       'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.'
     );
-  }
-
-  sendApplication(): void {
-    window.open('mailto:info@lenne.tech');
   }
 }

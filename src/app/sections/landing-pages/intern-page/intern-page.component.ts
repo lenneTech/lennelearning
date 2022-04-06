@@ -37,8 +37,4 @@ export class InternPageComponent implements OnInit {
       'Wir bieten Schülern, Studenten oder Webinteressierten die Möglichkeit, Web- und Appentwicklung in der Praxis zu erleben und mitzugestalten.'
     );
   }
-
-  sendApplication(): void {
-    window.open('mailto:info@lenne.tech');
-  }
 }

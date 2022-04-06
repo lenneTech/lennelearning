@@ -5,7 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { NbAccordionModule, NbButtonModule, NbCardModule, NbLayoutModule } from '@nebular/theme';
 import { SwiperModule } from 'swiper/angular';
-import { VersionHistoryComponent } from 'src/app/sections/academy/components/version-history/version-history.component';
+import { VersionHistoryComponent } from 'src/app/modules/core/components/version-history/version-history.component';
 import { AcademyBannerComponent } from './components/academy-banner/academy-banner.component';
 import { AcademyPictureComponent } from './components/academy-picture/academy-picture.component';
 import { BannerComponent } from './components/banner/banner.component';
@@ -39,6 +39,11 @@ import { TextImageListComponent } from './components/text-image-list/text-image-
 import { TutorCardsComponent } from './components/tutor-cards/tutor-cards.component';
 import { UnderlineAnimationComponent } from './components/underline-animation/underline-animation.component';
 import { WorkWithUsComponent } from './components/work-with-us/work-with-us.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { MailSentDialogComponent } from './components/mail-sent-dialog/mail-sent-dialog.component';
+import { PriceBannerComponent } from './components/price-banner/price-banner.component';
+import { InquiryComponent } from './components/inquiry/inquiry.component';
+import { PriceCardComponent } from './components/price-card/price-card.component';
 
 @NgModule({
   imports: [
@@ -59,6 +64,7 @@ import { WorkWithUsComponent } from './components/work-with-us/work-with-us.comp
   ],
   declarations: [
     // Components
+    PriceCardComponent,
     EntryPointCardComponent,
     InfoCardComponent,
     ReviewComponent,
@@ -71,6 +77,9 @@ import { WorkWithUsComponent } from './components/work-with-us/work-with-us.comp
     ProcessInterestedComponent,
     WorkWithUsComponent,
     UnderlineAnimationComponent,
+    ContactFormComponent,
+    PriceBannerComponent,
+    InquiryComponent,
 
     // Dialogs
     HelperDialogComponent,
@@ -101,9 +110,11 @@ import { WorkWithUsComponent } from './components/work-with-us/work-with-us.comp
     FeaturesComponent,
     TutorCardsComponent,
     CompanyTestimonialComponent,
+    MailSentDialogComponent,
   ],
   exports: [
     // Components
+    PriceCardComponent,
     EntryPointCardComponent,
     InfoCardComponent,
     ReviewComponent,
@@ -132,6 +143,9 @@ import { WorkWithUsComponent } from './components/work-with-us/work-with-us.comp
     GoalsComponent,
     ProcessInterestedComponent,
     WorkWithUsComponent,
+    ContactFormComponent,
+    PriceBannerComponent,
+    InquiryComponent,
   ],
 })
 export class CoreModule {}

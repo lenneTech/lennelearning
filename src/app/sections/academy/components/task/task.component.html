@@ -5,26 +5,37 @@
         <ng-content select="[title]"></ng-content>
       </div>
       <div class="col-5 d-flex justify-content-end align-items-center">
-        <div #popLink class="pop-link">Link zur Aufgabe kopiert!</div>
+        <div #popLink class="pop-link">Link zu diesem Abschnitt kopiert!</div>
         <i
           class="bi cursor-pointer p-1"
           (click)="share()"
           [ngClass]="{ 'bi-clipboard': !check, 'bi-clipboard-check': check }"
           data-bs-toggle="tooltip"
           data-bs-placement="top"
-          title="Link zur Aufgabe kopieren"
+          title="Link zu diesem Abschnitt kopieren"
+          data-cy="task-share-icon"
         >
         </i>
-        <i class="bi bi-lightbulb cursor-pointer p-1" *ngIf="solutionLink && !completed" (click)="openSolution()"></i>
+        <i
+          class="bi bi-lightbulb cursor-pointer p-1"
+          *ngIf="solutionLink && !completed"
+          (click)="openSolution()"
+          title="Lösung"
+          data-cy="task-solution-icon"
+        ></i>
         <i
           *ngIf="(hint || videoReference || solutionLink) && !completed"
           class="bi bi-question-circle cursor-pointer p-1"
           (click)="openHelp()"
+          title="Hilfefenster öffnen"
+          data-cy="task-help-icon"
         ></i>
         <i
           class="bi p-1 cursor-pointer"
           [ngClass]="{ 'bi-check-circle': !completed, 'bi-check': completed }"
           (click)="onComplete()"
+          title="Abschnitt abgeschlossen"
+          data-cy="task-complete-icon"
         ></i>
       </div>
     </div>
@@ -39,7 +50,7 @@
         <div class="col-12 col-xl-5 overflow-hidden d-flex justify-content-center mt-xl-0 mt-3" *ngIf="image">
           <div *ngIf="image.reference" class="d-flex flex-column align-items-center">
             <img [src]="image.url" [alt]="image.alt" loading="lazy" />
-            <div>
+            <div *ngIf="image?.reference">
               <a [href]="image.reference" class="reference-link" target="_blank">Quelle: {{ image.reference }}</a>
             </div>
           </div>

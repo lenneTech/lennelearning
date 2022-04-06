@@ -1,0 +1,27 @@
+<nb-card class="card" [ngClass]="{ 'price-card': isActionCard }">
+  <nb-card-body class="d-flex align-items-top justify-content-around">
+    <div class="d-flex flex-column align-items-center w-100">
+      <img loading="lazy" class="card-img" [src]="cardImageUrl" alt="Illustration eines Preises" />
+      <div class="card-pre-title" *ngIf="cardPreTitle">{{ cardPreTitle }}</div>
+      <h3 class="card-title">{{ cardTitle }}</h3>
+      <div class="card-description">{{ cardDescription }}</div>
+      <div [ngClass]="{ 'card-price': !isActionCard, 'card-price-action': isActionCard }">{{ cardPrice }}</div>
+      <div class="card-details">{{ cardPriceDetails }}</div>
+
+      <div class="card-subtitle">Was ist inbegriffen?</div>
+      <div [ngClass]="{ 'card-specifics': !isActionCard, 'card-specifics-action': isActionCard }">
+        <ul class="list">
+          <li class="list-item" *ngFor="let item of cardSpecifics">{{ item }}</li>
+        </ul>
+      </div>
+      <div class="card-extra mt-3" *ngIf="isActionCard">Begrenzte Teilnehmerzahl, jetzt Plätze reservieren.</div>
+    </div>
+  </nb-card-body>
+  <nb-card-footer>
+    <div class="d-flex justify-content-center">
+      <button class="price-button" nbButton status="warning" (click)="openInquiry()" data-cy="price-card-btn">
+        Anfrage senden
+      </button>
+    </div>
+  </nb-card-footer>
+</nb-card>

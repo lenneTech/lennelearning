@@ -23,7 +23,7 @@
     <div class="container">
       <div class="section">
         <h2 class="section-title">Wer profitiert von unserem Angebot?</h2>
-        <div class="row" [ltMatchHeight]="['card-container', 'card', 'card-text']">
+        <div class="row" [ltMatchHeight]="['card', 'card-text', 'card-link']">
           <div
             class="col-12 col-xl-4 d-flex justify-content-center card-container"
             *ngFor="let landingPage of landingPages"
@@ -55,7 +55,7 @@
 
     <div class="container p-0 overflow-hidden">
       <div class="section">
-        <h2 class="section-title">Die Vorteile auf einen Blick</h2>
+        <h2 class="section-title">Vorteile auf einen Blick</h2>
         <app-features></app-features>
       </div>
     </div>
@@ -69,7 +69,6 @@
           "
           [image]="'../../assets/images/banner-images/contact.svg'"
           [buttonText]="'Kontakt'"
-          (buttonClicked)="openMail()"
         ></app-contact-card>
       </div>
     </div>

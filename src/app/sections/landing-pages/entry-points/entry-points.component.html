@@ -15,24 +15,28 @@
           <li
             [ngStyle]="{ color: mode === EntryPointMode.ALL ? 'orange' : 'white' }"
             (click)="onSwitchSelection(EntryPointMode.ALL)"
+            data-cy="entry-point-select"
           >
             Alle
           </li>
           <li
             [ngStyle]="{ color: mode === EntryPointMode.JOB_INTERESTED ? 'orange' : 'white' }"
             (click)="onSwitchSelection(EntryPointMode.JOB_INTERESTED)"
+            data-cy="entry-point-select"
           >
             Berufsinteressierte
           </li>
           <li
             [ngStyle]="{ color: mode === EntryPointMode.INTERN ? 'orange' : 'white' }"
             (click)="onSwitchSelection(EntryPointMode.INTERN)"
+            data-cy="entry-point-select"
           >
             Praktikant:innen & Hobbyentwickler:innen
           </li>
           <li
             [ngStyle]="{ color: mode === EntryPointMode.COMPANY ? 'orange' : 'white' }"
             (click)="onSwitchSelection(EntryPointMode.COMPANY)"
+            data-cy="entry-point-select"
           >
             Unternehmen & Gründer:innen
           </li>

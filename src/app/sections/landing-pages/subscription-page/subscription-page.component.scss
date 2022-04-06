@@ -1,0 +1,133 @@
+@import 'src/assets/scss/utils';
+
+.banner {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.selection {
+  list-style: none;
+  margin: 0;
+  flex-wrap: wrap;
+  padding-left: 0;
+  justify-content: center;
+
+  & li {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 10px 0;
+
+    &:nth-child(2n) {
+      flex-basis: 100%;
+    }
+
+    &:hover {
+      color: $orange !important;
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .selection {
+    justify-content: space-between !important;
+    & li {
+      white-space: nowrap;
+      &:nth-child(2n) {
+        flex-basis: 0 !important;
+      }
+    }
+  }
+}
+
+.abos {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.aktionen {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.list-li {
+  background: url(/assets/images/bulletpoint.svg) no-repeat top left !important;
+  margin: 0;
+  padding: 4px 0 4px 20px;
+  list-style: none;
+}
+
+.banner {
+  max-height: 400px;
+}
+
+.selection-banner {
+  width: 100%;
+  height: 65px;
+}
+
+.banner-container {
+  height: 65px;
+  overflow: hidden;
+}
+
+.left-active,
+.right-active {
+  width: 62%;
+  background-color: var(--color-primary-500);
+  z-index: 100;
+}
+
+.left-active {
+  margin-left: -10%;
+  margin-right: -45%;
+  transform: skewX(45deg);
+
+  @include media-breakpoint-up(xl) {
+    margin-left: -5%;
+  }
+}
+
+.right-active {
+  margin-right: -10%;
+  margin-left: -45%;
+  transform: skewX(-45deg);
+
+  @include media-breakpoint-up(xl) {
+    margin-right: -5%;
+  }
+}
+
+.text-left,
+.text-right {
+  position: absolute;
+  color: white;
+  z-index: 1000;
+  margin: 0;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.text-right {
+  left: 65%;
+}
+.text-left {
+  left: 20%;
+}

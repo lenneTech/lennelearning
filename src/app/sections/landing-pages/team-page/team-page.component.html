@@ -1,0 +1,242 @@
+<nb-layout>
+  <nb-layout-header>
+    <app-header></app-header>
+  </nb-layout-header>
+
+  <nb-layout-column class="p-0">
+    <div class="container">
+      <div class="section">
+        <app-banner
+          [title]="title"
+          [subtitle]="subtitle"
+          [imageUrl]="imageUrl"
+          [showAcademyBtn]="false"
+          [entryPointId]="'berufserkunder'"
+        ></app-banner>
+      </div>
+    </div>
+    <div>
+      <nb-accordion multi="true">
+        <nb-accordion-item expanded="true" data-cy="accordion-item">
+          <nb-accordion-item-header> Koordination </nb-accordion-item-header>
+          <nb-accordion-item-body class="container p-0">
+            <div class="row justify-content-between member" *ngFor="let member of coordination">
+              <div class="col-lg-4 d-flex justify-content-center">
+                <nb-card class="card">
+                  <nb-card-body class="d-flex align-items-top justify-content-around">
+                    <div class="d-flex flex-column align-items-center">
+                      <academy-picture [image]="member.imageUrl" [alt]="member.imageAlt" imgClass="team-img">
+                      </academy-picture>
+                      <h3 class="card-title mt-3">{{ member.title }}</h3>
+                      <a [href]="'tel:' + member.phoneNumber" class="link mt-2 mb-2">
+                        <i class="bi bi-telephone-fill"></i> <span>{{ member.phoneNumber }}</span></a
+                      >
+                      <a [href]="'mailto:' + member.contact" class="link mt-2 mb-2">
+                        <i class="bi bi-envelope-fill"></i> <span>{{ member.contact }}</span></a
+                      >
+                    </div>
+                  </nb-card-body>
+                </nb-card>
+              </div>
+              <div class="specialty-card col-lg-6">
+                <h3 class="specialty-title">
+                  Für alle Fragen rund um die folgenden Themenbereiche bin ich die richtige Ansprechpartnerin und helfe
+                  Dir gerne weiter:
+                </h3>
+                <div class="row justify-content-around mt-5">
+                  <div class="col-lg-6 mb-5">
+                    <h4 class="specialty-header">Abonnements</h4>
+                  </div>
+                  <div class="col-lg-6 mb-5">
+                    <h4 class="specialty-header">Konzeption</h4>
+                  </div>
+                  <div class="col-lg-6 mb-5">
+                    <h4 class="specialty-header">Organisation</h4>
+                  </div>
+                  <div class="col-lg-6 mb-5">
+                    <h4 class="specialty-header">Bewerbungen</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nb-accordion-item-body>
+        </nb-accordion-item>
+
+        <nb-accordion-item data-cy="accordion-item">
+          <nb-accordion-item-header> Tutoren in der Akademie </nb-accordion-item-header>
+          <nb-accordion-item-body class="container p-0">
+            <div class="row justify-content-between member" *ngFor="let member of tutors">
+              <div class="col-lg-4 d-flex justify-content-center">
+                <nb-card class="card">
+                  <nb-card-body class="d-flex align-items-top justify-content-around">
+                    <div class="d-flex flex-column align-items-center">
+                      <academy-picture [image]="member.imageUrl" [alt]="member.imageAlt" imgClass="team-img">
+                      </academy-picture>
+                      <h3 class="card-title mt-3">{{ member.title }}</h3>
+
+                      <a [href]="'mailto:' + member.contact" class="link mt-3 mb-3">
+                        <i class="bi bi-envelope-fill"></i> <span>{{ member.contact }}</span></a
+                      >
+                    </div>
+                  </nb-card-body>
+                </nb-card>
+              </div>
+              <div class="specialty-card col-lg-6">
+                <h3 class="specialty-title">
+                  Im Rahmen der Akademie helfe ich Dir gerne bei Fragen rund um die folgenden Themen weiter:
+                </h3>
+                <div class="row justify-content-around mt-5">
+                  <div class="col-6">
+                    <h4 class="specialty-header">Frontend</h4>
+                    <div class="d-flex align-items-center mt-4 mb-4" *ngFor="let item of member.frontend">
+                      <img [src]="item.imageUrl" [alt]="item.imageAlt" class="specialty-image" />
+                      <span class="ms-2">{{ item.title }}</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <h4 class="specialty-header">Backend</h4>
+                    <div class="d-flex align-items-center mt-4 mb-4" *ngFor="let item of member.backend">
+                      <img [src]="item.imageUrl" [alt]="item.imageAlt" class="specialty-image" />
+                      <span class="ms-2">{{ item.title }}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nb-accordion-item-body>
+        </nb-accordion-item>
+
+        <nb-accordion-item data-cy="accordion-item">
+          <nb-accordion-item-header> Betreuer für den Bereich der eigenen Projekte </nb-accordion-item-header>
+          <nb-accordion-item-body class="container p-0">
+            <div class="row justify-content-between member" *ngFor="let member of supervisorProjects">
+              <div class="col-lg-4 d-flex justify-content-center">
+                <nb-card class="card">
+                  <nb-card-body class="d-flex align-items-top justify-content-around">
+                    <div class="d-flex flex-column align-items-center">
+                      <academy-picture [image]="member.imageUrl" [alt]="member.imageAlt" imgClass="team-img">
+                      </academy-picture>
+                      <h3 class="card-title mt-3">{{ member.title }}</h3>
+
+                      <a [href]="'mailto:' + member.contact" class="link mt-3 mb-3">
+                        <i class="bi bi-envelope-fill"></i> <span>{{ member.contact }}</span></a
+                      >
+                    </div>
+                  </nb-card-body>
+                </nb-card>
+              </div>
+              <div class="specialty-card col-lg-6">
+                <h3 class="specialty-title">
+                  Wenn Du Dein eigenes Projekt bearbeitest, bin ich bei folgenden Tools und Technologien der richtige
+                  Ansprechpartner:
+                </h3>
+                <div class="row justify-content-around mt-5">
+                  <div class="col-6">
+                    <h4 class="specialty-header">Frontend</h4>
+                    <div class="d-flex align-items-center mt-4 mb-4" *ngFor="let item of member.frontend">
+                      <img [src]="item.imageUrl" [alt]="item.imageAlt" class="specialty-image" />
+                      <span class="ms-2">{{ item.title }}</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <h4 class="specialty-header">Backend</h4>
+                    <div class="d-flex align-items-center mt-4 mb-4" *ngFor="let item of member.backend">
+                      <img [src]="item.imageUrl" [alt]="item.imageAlt" class="specialty-image" />
+                      <span class="ms-2">{{ item.title }}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nb-accordion-item-body>
+        </nb-accordion-item>
+        <nb-accordion-item data-cy="accordion-item">
+          <nb-accordion-item-header> Betreuer:innen für den Bereich der Kooperationsprojekt </nb-accordion-item-header>
+          <nb-accordion-item-body class="container p-0">
+            <div class="row justify-content-between member" *ngFor="let member of design">
+              <div class="col-lg-4 d-flex justify-content-center">
+                <nb-card class="card">
+                  <nb-card-body class="d-flex align-items-top justify-content-around">
+                    <div class="d-flex flex-column align-items-center">
+                      <academy-picture [image]="member.imageUrl" [alt]="member.imageAlt" imgClass="team-img">
+                      </academy-picture>
+                      <h3 class="card-title mt-3">{{ member.title }}</h3>
+
+                      <a [href]="'mailto:' + member.contact" class="link mt-3 mb-3">
+                        <i class="bi bi-envelope-fill"></i> <span>{{ member.contact }}</span></a
+                      >
+                    </div>
+                  </nb-card-body>
+                </nb-card>
+              </div>
+              <div class="specialty-card col-lg-6">
+                <h3 class="specialty-title">
+                  Bei Designfragen rund um Dein Projekt und die folgenden Tools sprich mich gerne an:
+                </h3>
+                <div class="row mt-5">
+                  <div class="row">
+                    <h4 class="specialty-header">Design</h4>
+                    <div class="col-6">
+                      <div class="d-flex align-items-center mt-4 mb-4" *ngFor="let item of member.design | slice: 0:3">
+                        <img [src]="item.imageUrl" [alt]="item.imageAlt" class="specialty-image" />
+                        <span class="ms-2">{{ item.title }}</span>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="d-flex align-items-center mt-4 mb-4" *ngFor="let item of member.design | slice: 3:6">
+                        <img [src]="item.imageUrl" [alt]="item.imageAlt" class="specialty-image" />
+                        <span class="ms-2">{{ item.title }}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row justify-content-between member" *ngFor="let member of supervisorCoop">
+              <div class="col-lg-4 d-flex justify-content-center">
+                <nb-card class="card">
+                  <nb-card-body class="d-flex align-items-top justify-content-around">
+                    <div class="d-flex flex-column align-items-center">
+                      <academy-picture [image]="member.imageUrl" [alt]="member.imageAlt" imgClass="team-img">
+                      </academy-picture>
+                      <h3 class="card-title mt-3">{{ member.title }}</h3>
+
+                      <a [href]="'mailto:' + member.contact" class="link mt-3 mb-3">
+                        <i class="bi bi-envelope-fill"></i> <span>{{ member.contact }}</span></a
+                      >
+                    </div>
+                  </nb-card-body>
+                </nb-card>
+              </div>
+              <div class="specialty-card col-lg-6">
+                <h3 class="specialty-title">
+                  Hast Du Fragen rund um Dein Kooperationsprojekt, helfe ich Dir in folgenden Bereichen gerne weiter:
+                </h3>
+                <div class="row justify-content-around mt-5">
+                  <div class="col-6">
+                    <h4 class="specialty-header">Frontend</h4>
+                    <div class="d-flex align-items-center mt-4 mb-4" *ngFor="let item of member.frontend">
+                      <img [src]="item.imageUrl" [alt]="item.imageAlt" class="specialty-image" />
+                      <span class="ms-2">{{ item.title }}</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <h4 class="specialty-header">Backend</h4>
+                    <div class="d-flex align-items-center mt-4 mb-4" *ngFor="let item of member.backend">
+                      <img [src]="item.imageUrl" [alt]="item.imageAlt" class="specialty-image" />
+                      <span class="ms-2">{{ item.title }}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nb-accordion-item-body>
+        </nb-accordion-item>
+      </nb-accordion>
+    </div>
+  </nb-layout-column>
+  <nb-layout-footer fixed>
+    <app-footer></app-footer>
+  </nb-layout-footer>
+</nb-layout>

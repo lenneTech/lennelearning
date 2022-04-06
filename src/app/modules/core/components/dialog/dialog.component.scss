@@ -1,8 +1,28 @@
 nb-card {
   border: none;
+  max-height: 100vh;
+}
+
+.header-title-text {
+  width: 95%;
 }
 
 .title {
   font-size: 1.25rem;
   text-align: center;
+}
+
+nb-card-header {
+  position: relative;
+
+  .close-modal-button {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+
+    .btn {
+      color: white;
+    }
+  }
 }

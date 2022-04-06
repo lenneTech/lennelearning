@@ -1,7 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MetaService } from 'src/app/modules/core/services/meta.service';
 import { TextImageInterface } from '../../../modules/core/interfaces/text-image.interface';
 import { Review } from 'src/app/modules/core/interfaces/review.interface';
+
 @Component({
   selector: 'app-company-page',
   templateUrl: './company-page.component.html',
@@ -10,7 +11,7 @@ import { Review } from 'src/app/modules/core/interfaces/review.interface';
 export class CompanyPageComponent implements OnInit {
   title = 'App- und Webentwicklung für verschiedenste unternehmerische Bedürfnisse';
   subtitle =
-    'Wir bieten Unternehmer:innen und Gründer:innen die Möglichkeit sich selbst ein technisches Basisverständnis anzueignen, um die Eignung potenzieller Mitarbeiter:innen oder Dienstleister:innen besser einschätzen und mit Ihnen kommunizieren zu können. \n\n    Für Praktikant:innen, Werkstudent:innen und Auszubildende können wir das Onboarding, die Aus- und Weiterbildung sowie bei Bedarf die Evaluation begleiten. \n\n        Ebenso profitieren Berufsanfänger:innen von unseren verschiedenen Angeboten. Sie erlangen eine solide Wissensbasis und sammeln praktische Erfahrungen, denn neben den technischen Grundlagen spielen eigene Projekte sowie das gemeinsame Arbeiten an einem größeren Projekt eine zentrale Rolle. \n\n        Erfahrenere Entwickler:innen können Grundlagen wieder auffrischen und andere Bereiche vertiefen.    ';
+    'Für Deine Praktikant:innen, Werkstudent:innen und Auszubildende können wir das Onboarding, die Aus- und Weiterbildung begleiten sowie bei Bedarf Evaluationen vornehmen. \n\n Ebenso bieten wir verschiedene Lernpfade für Nachwuchskräfte. Sie erlangen eine solide Wissensbasis und sammeln praktische Erfahrungen, denn neben den technischen Grundlagen spielen eigene Projekte sowie das gemeinsame Arbeiten im Team eine zentrale Rolle. \n\nErfahrenere Entwickler:innen können Grundlagen wieder auffrischen und andere Bereiche vertiefen. \n\nWir bieten auch Unternehmer:innen und Gründer:innen die Möglichkeit sich selbst ein technisches Basisverständnis anzueignen, um die Eignung potenzieller Mitarbeiter:innen oder Dienstleister:innen besser einschätzen und mit Ihnen kommunizieren zu können.';
   imageUrl = '../../assets/images/entry-point-images/company.svg';
   steps: TextImageInterface[] = [
     {
@@ -64,12 +65,8 @@ export class CompanyPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.metaService.updateMetaTags(
-      'lenne.Learning - Du suchst fähige Entwickler für dein Unternehmen?',
-      'Wir betreuen und evaluieren deine potenziellen Softwareentwickler im Web und App Bereich oder fördern dein Start-up.'
+      'lenne.Learning - Du suchst fähige Entwickler für Dein Unternehmen?',
+      'Wir betreuen und evaluieren Deine potenziellen Softwareentwickler im Web und App Bereich oder fördern Dein Start-up.'
     );
-  }
-
-  sendOffer(): void {
-    window.open('mailto:info@lenne.tech');
   }
 }

@@ -27,4 +27,4 @@ jobs:
       - name: Push docker
         run: SMTP_USER=$SMTP_USER SMTP_PW=$SMTP_PW docker-compose -f docker-compose.test.yml push
       - name: Deploy
-        run: SMTP_USER=$SMTP_USER SMTP_PW=$SMTP_PW docker stack deploy -c docker-compose.test.yml --with-registry-auth lennelearning-test
+        run: SMTP_USER=$SMTP_USER SMTP_PW=$SMTP_PW docker stack deploy --with-registry-auth -c docker-compose.test.yml lennelearning-test

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StartComponent } from './start.component';
 import { StartRoutingModule } from './start-routing.module';
-import { NbButtonModule, NbCardModule, NbLayoutModule } from '@nebular/theme';
+import { NbAccordionModule, NbButtonModule, NbCardModule, NbLayoutModule } from '@nebular/theme';
 import { CoreModule } from '../../modules/core/core.module';
 import { CompanyPageComponent } from '../landing-pages/company-page/company-page.component';
 import { InternPageComponent } from '../landing-pages/intern-page/intern-page.component';
@@ -10,6 +10,9 @@ import { JobInterestedPageComponent } from '../landing-pages/job-interested-page
 import { BaseModule } from '@lenne.tech/ng-base';
 import { EntryPointsComponent } from '../landing-pages/entry-points/entry-points.component';
 import { SwiperModule } from 'swiper/angular';
+import { ContactPageComponent } from '../landing-pages/contact-page/contact-page.component';
+import { SubscriptionPageComponent } from '../landing-pages/subscription-page/subscription-page.component';
+import { TeamPageComponent } from '../landing-pages/team-page/team-page.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +21,9 @@ import { SwiperModule } from 'swiper/angular';
     InternPageComponent,
     JobInterestedPageComponent,
     EntryPointsComponent,
+    ContactPageComponent,
+    SubscriptionPageComponent,
+    TeamPageComponent,
   ],
   imports: [
     StartRoutingModule,
@@ -28,6 +34,7 @@ import { SwiperModule } from 'swiper/angular';
     NbCardModule,
     BaseModule,
     SwiperModule,
+    NbAccordionModule,
   ],
 })
 export class StartModule {}

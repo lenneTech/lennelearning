@@ -16,7 +16,7 @@ import { HighlightOptions, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { InprintComponent } from './pages/inprint/inprint.component';
 import { PrivacyComponent } from './pages/privacy/privacy.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { MatomoModule } from 'ngx-matomo';
+import { MatomoModule } from 'sinsunsan-ngx-matomo';
 
 @NgModule({
   declarations: [

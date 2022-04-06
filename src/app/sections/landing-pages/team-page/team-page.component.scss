@@ -1,0 +1,60 @@
+@import 'src/assets/scss/utils';
+.bi-envelope-fill,
+.bi-telephone-fill {
+  color: $orange;
+  margin-right: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: #8c8c8c;
+}
+
+.specialty-title {
+  font-size: 20px;
+  font-weight: lighter;
+}
+.specialty-header {
+  font-size: 25px;
+  color: $orange;
+  font-weight: 600;
+}
+
+.specialty-card {
+  background-color: #f8f8f8;
+  padding: 15px 40px;
+  border-radius: 5px;
+}
+
+.member:not(:last-child) {
+  margin-bottom: 100px;
+  @include media-breakpoint-up('lg') {
+    margin-bottom: 50px;
+  }
+}
+
+.card {
+  margin-bottom: 25px !important;
+  min-width: 350px;
+  border-radius: 5px;
+
+  @include media-breakpoint-up('lg') {
+    margin-bottom: 0 !important;
+  }
+}
+
+nb-accordion-item-header {
+  font-size: 20px;
+  color: white;
+  justify-content: center;
+  background-color: var(--color-primary-500);
+}
+
+nb-card-body {
+  padding: 10px 0;
+}
+
+.specialty-image {
+  width: 30px;
+  height: 30px;
+}

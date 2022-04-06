@@ -30,7 +30,7 @@ export class StartComponent {
       description:
         'Du bist Schüler:in, Student:in, nimmst an einer Weiterbildungsmaßnahme teil oder absolvierst bzw. suchst aus anderen Gründen ein Praktikum?',
       image: '../../assets/images/entry-point-images/praktikant.svg',
-      text: 'Wir bieten Dir die Möglichkeit in bis zu 12 Wochen die Web- und Appentwicklung in der Praxis kennenzulernen. Zunächst arbeitest Du in einer Vorbereitungsphase unsere Kurse durch, um im Praktikum direkt mit deinem eigenen Projekt durchstarten zu können. Wenn Du schon Vorkenntnisse hast, kannst Du natürlich unter Absprache verschiedene Teile überspringen und sofort loslegen.',
+      text: 'Wir bieten Dir die Möglichkeit in bis zu 12 Wochen die Web- und Appentwicklung in der Praxis kennenzulernen. Zunächst arbeitest Du in einer Vorbereitungsphase unsere Kurse durch, um im Praktikum direkt mit Deinem eigenen Projekt durchstarten zu können. Wenn Du schon Vorkenntnisse hast, kannst Du natürlich unter Absprache verschiedene Teile überspringen und sofort loslegen.',
       landingRoute: '/praktikanten',
     },
     {
@@ -40,24 +40,20 @@ export class StartComponent {
       description:
         'Euer Unternehmen sucht fähige App- und Webentwickler:innen oder Ihr wollt Eure Mitarbeiter:innen aus- und weiterbilden?',
       image: '../../assets/images/entry-point-images/company.svg',
-      text: 'Wir bieten deinem Unternehmen Weiterbildungsmöglichkeiten in der App- und Webentwicklung. Dabei bieten wir eine umfassende Betreuung mit wöchentlichen Meetings an. Dabei schätzen wir ebenso das Potenzial der einzelnen Akademie Teilnehmer ein, um die bestmöglichen Webentwickler für dein Unternehmen zu finden.',
+      text: 'Wir bieten Deinem Unternehmen Weiterbildungsmöglichkeiten in der App- und Webentwicklung. Dabei bieten wir eine umfassende Betreuung mit wöchentlichen Meetings an. Dabei schätzen wir ebenso das Potenzial der einzelnen Akademie Teilnehmer ein, um die bestmöglichen Webentwickler für Dein Unternehmen zu finden.',
       landingRoute: '/unternehmen',
     },
   ];
   constructor(private seoService: SEOService, private metaService: MetaService) {
-    this.seoService.initPageForSEO(
-      'lenne.Learning - Die online Akademie für Webtechnologien',
-      'Die online Akademie für Webtechnologien',
-      'academy, online, akademie, web, learning'
-    );
+    this.seoService.initPageForSEO({
+      title: 'lenne.Learning - Die online Akademie für Webtechnologien',
+      description: 'Die online Akademie für Webtechnologien',
+      keywords: 'academy, online, akademie, web, learning',
+    });
 
     this.metaService.updateMetaTags(
       'lenne.Learning - Die online Akademie für Webtechnologien',
       'Die online Akademie für Webtechnologien'
     );
-  }
-
-  openMail(): void {
-    window.open('mailto:info@lenne.tech');
   }
 }

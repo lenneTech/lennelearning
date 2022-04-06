@@ -16,15 +16,15 @@
 
     <task-text>
       <div info>
-        Wie man seine Projekte testen kann, hast Du schon gelernt. Es gibt Level 1,2,3 Tests, die dein Projekt soweit
-        prüfen, dass es so gut wie fehlerfrei fertiggestellt werden kann. Im Bereich des Level 1 Tests gibt es aber eine
-        effizientere Alternative: das automatisierte Testen. <br />
+        Wie Du Deine Projekte testen kannst, hast Du schon gelernt. Es gibt Level 1,2 und 3 Tests, die Dein Projekt
+        soweit prüfen, dass es so gut wie fehlerfrei fertiggestellt werden kann. Im Bereich des Level 1 Tests gibt es
+        aber eine effizientere Alternative: das automatisierte Testen. <br />
         Projekte, egal mit welchem Framework, werden mit der Zeit größer und damit komplexer und unübersichtlicher. Im
-        Regelfall testet man auch nur die Sektionen der Anwendung, die man unmittelbar vorher bearbeitet hat. Wenn diese
-        funktionieren, kann es aber dazu kommen, dass andere Teile des Systems nicht mehr funktionsfähig sind. Das fällt
-        dann erst viel zu spät auf und man ist sich unsicher, an welcher Stelle sich dieser Fehler eingeschlichen hat.
-        Um so einer Situation vorzubeugen, gibt es die Möglichkeit, Tests zu schreiben, die den Großteil der Applikation
-        abdecken und somit Fehler aufdecken können. Wie das geht, lernst Du jetzt!
+        Regelfall wird auch nur die Sektionen der Anwendung getestet, die unmittelbar vorher bearbeitet wurde. Wenn
+        diese funktionieren, kann es aber dazu kommen, dass andere Teile nicht mehr funktionsfähig sind. Das fällt dann
+        z. T. erst zu spät auf und es ist nicht klar erkennbar, an welcher Stelle sich dieser Fehler eingeschlichen hat.
+        Um so einer Situation vorzubeugen, können Tests geschrieben werden, die den Großteil der Applikation abdecken
+        und Fehler direkt identifizieren können. Wie das geht, lernst Du jetzt!
       </div>
     </task-text>
   </task>
@@ -52,8 +52,8 @@
     <div title>Jest</div>
     <task-text>
       <div info>
-        Jest ist ein anderes Tool, um Tests an deiner Anwendung vorzunehmen. Es wirbt mit ihrer einfachen und
-        performanten Handhabung. Wie es funktioniert und wie Du es in deine Software einbindest, findest Du in der
+        Jest ist ein anderes Tool, um Deine Anwendung zu testen. Es wirbt mit einer einfachen und performanten
+        Handhabung. Wie es funktioniert und wie Du es in Deine Software einbindest, findest Du in der
         <a href="https://jestjs.io/docs/getting-started" taskLink>Dokumentation von Jest</a>.
       </div>
     </task-text>
@@ -72,23 +72,23 @@
 
     <task-text>
       <div exercise>
-        Füge Cypress zu deinem eigenen Projekt hinzu und starte einen Testdurchlauf. Guck Dir dafür die
+        Füge Cypress zu Deinem eigenen Projekt hinzu und starte einen Testdurchlauf. Guck Dir dafür die
         <a href="https://docs.cypress.io/guides/getting-started/installing-cypress" taskLink
           >Dokumentation von Cypress</a
         >
-        an. Folgende Situationen könntest Du z. B. testen, sofern sie in deiner Anwendung vorhanden sind:
+        an. Folgende Situationen könntest Du z. B. testen, sofern sie in Deiner Anwendung vorhanden sind:
       </div>
-      <div exerciselist>Navigiere einmal komplett durch deine Anwendung</div>
+      <div exerciselist>Navigiere einmal komplett durch Deine Anwendung.</div>
       <div exerciselist>
-        Versuche auf Seiten deines Systems zu gelangen, die nicht für alle zugänglich sind und überprüfe das Verhalten.
+        Versuche auf Seiten Deines Systems zu gelangen, die nicht für alle zugänglich sind und überprüfe das Verhalten.
       </div>
       <div exerciselist>
         Prüfe, ob der Login richtig funktioniert und was passiert, wenn falsche Daten angegeben werden.
       </div>
       <div exerciselist>Lege Inhalte an und speichere sie ab.</div>
-      <div exerciselist>Bearbeite Inhalte und lösche diese.</div>
+      <div exerciselist>Bearbeite Inhalte und lösche sie.</div>
       <div exerciselist>
-        Log Dich aus und versuche danach auf eine gesicherte Seite innerhalb deiner Anwendung zu navigieren.
+        Log Dich aus und versuche danach auf eine gesicherte Seite innerhalb Deiner Anwendung zu navigieren.
       </div>
     </task-text>
   </task>
@@ -97,17 +97,17 @@
     <div title>Cypress vs. Jest</div>
     <task-text>
       <div info>
-        Du hast nun zwei Testing-Tools kennengelernt und fragst Dich sicherlich, welches das richtige für deine
-        Anwendung ist. Das solltest Du wissen: <br />
+        Du hast nun zwei Testing-Tools kennengelernt und fragst Dich sicherlich, welches das richtige für Deine
+        Anwendung ist. Dazu solltest Du Folgendes wissen: <br />
         Jest wird zum unit-testing verwendet, während Cypress die End-to-End workflows (E2E) testet. In vielen
         Situationen können beide Tools für den selben Test verwendet werden. Manche Tests beschränken sich auf kleine
-        Bereiche deiner Anwendung - z. B. Den login oder das hinzufügen eines Produkt in einen Warenkorb. Hier hat Jest
+        Bereiche Deiner Anwendung - z. B. den Login oder das Hinzufügen eines Produkts in einen Warenkorb. Hier hat Jest
         seine Vorteile, aufgrund des schnelleren Feedback-Loops. Bei einem Test, der viele Komponenten beinhaltet, kommt
         Jest an seine Grenzen. Auf solche Tests ist Cypress ausgelegt. <br />
         <br />
-        Die Antwort auf die Frage, welches Tool auf deinen Fall zutrifft, ist: Es kommt darauf an. Je komplexer der
+        Die Antwort auf die Frage, welches Tool auf Deinen Fall zutrifft, ist: es kommt darauf an. Je komplexer der
         Test, desto sinnvoller wird Cypress. Je simpler der Test, desto sinnvoller ist Jest. Da Du vermutlich beide
-        Arten von Tests in deiner Anwendung hast, bietet es sich an, beide Tools zu verwenden und je nach Test-Art zu
+        Arten von Tests in Deiner Anwendung hast, bietet es sich an, beide Tools zu verwenden und je nach Testart zu
         entscheiden.
       </div>
     </task-text>

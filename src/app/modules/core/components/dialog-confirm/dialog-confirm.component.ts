@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { DialogBtnOptionsEnum } from '../../enumerators/dialog-btn-options.enum';
+import { DialogModeEnum } from '../../enumerators/dialog-mode.enum';
 
 @Component({
   selector: 'app-dialog-confirm',
@@ -11,6 +11,6 @@ export class DialogConfirmComponent {
   @Input() cardWidth: string;
   @Input() cardHeight: string;
 
-  DialogBtnOptionsEnum = DialogBtnOptionsEnum;
+  DialogModeEnum = DialogModeEnum;
   constructor() {}
 }

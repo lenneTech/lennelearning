@@ -1,0 +1,82 @@
+@import '~src/assets/scss/utils';
+
+.form-group {
+  width: 100% !important;
+}
+
+.form-control {
+  margin: 10px 0;
+  border-radius: 0;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 160%;
+}
+
+.form-control::placeholder {
+  color: lightgrey;
+}
+
+.form-control,
+.form-check-input:focus {
+  box-shadow: none;
+}
+
+i {
+  color: $orange;
+  font-size: 28px;
+  margin-right: 30px;
+}
+
+.content-text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-basic-color);
+}
+
+.form-check-input {
+  border-radius: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.form-check-input:checked {
+  background-color: $orange;
+}
+
+.btn-secondary {
+  background-color: $orange;
+  color: white;
+  font-weight: 600;
+}
+
+.btn-close {
+  float: right;
+}
+
+.inquiry {
+  background-color: white;
+}
+
+.title {
+  color: $orange;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 35px;
+  }
+}
+
+.inquiry-button {
+  margin-top: 20px;
+}
+
+.data-policy {
+  font-size: 10px;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 16px;
+  }
+}

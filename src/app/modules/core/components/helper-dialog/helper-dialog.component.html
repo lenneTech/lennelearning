@@ -1,16 +1,11 @@
-<app-dialog
-  [title]="title"
-  [dialogBtnOptions]="DialogBtnOptionsEnum.SINGLE"
-  [cardWidth]="cardWidth"
-  [cardHeight]="cardHeight"
->
+<app-dialog [title]="title" [dialogMode]="DialogModeEnum.SINGLE" [cardWidth]="cardWidth" [cardHeight]="cardHeight">
   <ng-container helper-dialog>
     <div class="card-text">
-      Bevor Du Dich bei deinem Tutor meldest, versuche das Problem erst einmal selber zu lösen.
+      Bevor Du Dich bei Deinem Tutor meldest, versuche das Problem erst einmal selbst zu lösen.
     </div>
     <nb-accordion>
       <nb-accordion-item *ngIf="videoReference">
-        <nb-accordion-item-header>Video Verweis</nb-accordion-item-header>
+        <nb-accordion-item-header>Videoverweis</nb-accordion-item-header>
         <nb-accordion-item-body>
           <div class="accordion-text" *ngIf="videoReference">
             Wenn Google Dir nicht weiterhelfen kann, dann schau Dir folgenden Abschnitt noch einmal an: <br />
@@ -35,9 +30,9 @@
           <div>
             <div class="accordion-text">
               Du kommst immer noch nicht weiter? <br />
-              Dann schau in unser FAQ, ob deine oder eine ähnliche Frage schon einmal beantwortet wurde. <br />
-              Wenn alle Stränge reißen, kannst Du Dich natürlich auch in unseren Akademie Channel schreiben oder im
-              nächsten Akademie Meeting deine Frage stellen.
+              Dann schau in unser FAQ, ob Deine oder eine ähnliche Frage schon einmal beantwortet wurde. <br />
+              Wenn alle Stränge reißen, kannst Du natürlich auch in unseren Akademie Channel schreiben oder im nächsten
+              Akademie Meeting Deine Frage stellen.
             </div>
           </div>
         </nb-accordion-item-body>

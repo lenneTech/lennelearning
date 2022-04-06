@@ -1,13 +1,9 @@
-<app-dialog
-  [title]="title"
-  [dialogBtnOptions]="DialogBtnOptionsEnum.SINGLE"
-  [cardWidth]="cardWidth"
-  [cardHeight]="cardHeight"
->
+<app-dialog [title]="title" [dialogMode]="DialogModeEnum.SINGLE" [cardWidth]="cardWidth" [cardHeight]="cardHeight">
   <ng-container helper-dialog>
     <div class="card-text">
-      Hier bekommst Du die Lösung, für den Fall, dass Du nicht mehr weiterkommst oder die Lösung vergleichen möchtest.
-      Versuche erst, mit den Hinweisen im Fragezeichen-Icon auf eine Lösung zu kommen. Danach komm wieder hier her.
+      Für den Fall, dass Du nicht mehr weiterkommst oder Deine Ergebnisse vergleichen möchtest, bekommst Du hier die
+      Lösung. Versuche aber erst mit den Hinweisen im Fragezeichen-Icon eine Lösung zu finden. Kommst du dann immer noch
+      nicht weiter, komm hierher zurück.
     </div>
     <nb-accordion>
       <nb-accordion-item *ngIf="solutionLink">
@@ -15,8 +11,8 @@
         <nb-accordion-item-body>
           <div *ngIf="!requestSend">
             <p class="text-center card-text">
-              Gib hier deinen Namen und den Grund an, warum Du auf die Lösung zugreifen möchtest. Ein Grund wäre zum
-              Beispiel, um diese mit deiner Lösung zu vergleichen.
+              Gib hier Deinen Namen und den Grund an, warum Du auf die Lösung zugreifen möchtest. Ein Grund wäre zum
+              Beispiel, um diese mit Deiner Lösung zu vergleichen.
             </p>
             <form [formGroup]="solutionForm" (ngSubmit)="onSendRequest()" class="row mx-md-5">
               <div class="col mt-3 p-3">
