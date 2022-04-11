@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { EntryPoint } from 'src/app/modules/core/interfaces/entry-point.interface';
 import { EntryPointService } from 'src/app/modules/core/services/entry-point.service';
+import { MetaService } from 'src/app/modules/core/services/meta.service';
 
 enum EntryPointMode {
   ALL = 'ALL',
@@ -32,7 +33,8 @@ export class EntryPointsComponent implements OnInit {
   constructor(
     private entryPointService: EntryPointService,
     private activatedRoute: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private metaService: MetaService
   ) {}
 
   ngOnInit(): void {
@@ -40,6 +42,11 @@ export class EntryPointsComponent implements OnInit {
     this.getRecommendation();
     this.getRedirectionLink();
     this.onSwitchSelection();
+    this.metaService.updateMetaTags(
+      'lenne.Learning - Du interessierst Dich für App- und Webentwicklung?',
+      'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.',
+      'academy, online, akademie, web, lernpfade'
+    );
   }
 
   getAllEntryPoints(): void {

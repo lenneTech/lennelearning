@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MetaService } from 'src/app/modules/core/services/meta.service';
 
 @Component({
   selector: 'app-team-page',
@@ -377,4 +378,14 @@ export class TeamPageComponent {
       ],
     },
   ];
+
+  constructor(private metaService: MetaService) {}
+
+  ngOnInit(): void {
+    this.metaService.updateMetaTags(
+      'lenne.Learning - Du interessierst Dich für App- und Webentwicklung?',
+      'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.',
+      'academy, online, akademie, web, team'
+    );
+  }
 }
