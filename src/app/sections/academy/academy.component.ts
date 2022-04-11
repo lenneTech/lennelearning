@@ -4,7 +4,7 @@ import { NbMenuItem, NbMenuService, NbSidebarService } from '@nebular/theme';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
 import { DialogService } from 'src/app/modules/core/services/dialog.service';
-import { StorageService } from '@lenne.tech/ng-base';
+import { ScrollService, StorageService } from '@lenne.tech/ng-base';
 import { Section } from 'src/app/modules/core/interfaces/section.interface';
 import { EntryPoint } from '../../modules/core/interfaces/entry-point.interface';
 import { EntryPointService } from '../../modules/core/services/entry-point.service';
@@ -32,6 +32,9 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
   recievedUrl: string;
   previousUrl: string = null;
   currentUrl: string = null;
+  activeId = null;
+  menuIds: string[] = [];
+  children = null;
 
   constructor(
     private entryPointService: EntryPointService,
@@ -41,14 +44,16 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     private ref: ChangeDetectorRef,
     private dialogService: DialogService,
     private storageService: StorageService,
-    private menu: NbMenuService
+    private menu: NbMenuService,
+    private scorllService: ScrollService
   ) {
-    // does not get activated on resize but thats not necessary imo
-    if (window.innerWidth < 768) {
-      menu.onItemClick().subscribe((value) => {
+    menu.onItemClick().subscribe((value) => {
+      // does not get activated on resize but thats not necessary imo
+      if (window.innerWidth < 768) {
         this.closeSidebar();
-      });
-    }
+      }
+    });
+
     // Handling if you want to go back to the selectionpage
     this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe((event: NavigationEnd) => {
       this.previousUrl = this.currentUrl;
@@ -107,6 +112,18 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     } else {
       this.closeSidebar();
     }
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event) {
+    this.activeId = this.scorllService.getLastActiveElement(this.menuIds);
+    this.children.forEach((childElement) => {
+      if (this.scorllService.getLastActiveElement(this.menuIds) === childElement.fragment) {
+        childElement.selected = true;
+      } else {
+        childElement.selected = false;
+      }
+    });
   }
 
   ngOnInit(): void {
@@ -198,6 +215,13 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     const menuItem: NbMenuItem = this.items.find((item) => item.title === this.sectionService.currentSection);
     if (menuItem && window.screen.width >= 768) {
       menuItem.children = items;
+      this.children = menuItem.children;
+      this.menuIds = [];
+
+      menuItem.children.forEach((element) => {
+        this.menuIds.push(element.fragment);
+      });
+
       return menuItem;
     }
   }
