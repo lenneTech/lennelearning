@@ -1,6 +1,6 @@
 import { AfterContentChecked, ChangeDetectorRef, Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import { NbMenuItem, NbSidebarService } from '@nebular/theme';
+import { NbMenuItem, NbMenuService, NbSidebarService } from '@nebular/theme';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
 import { DialogService } from 'src/app/modules/core/services/dialog.service';
@@ -40,8 +40,15 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     private sidebarService: NbSidebarService,
     private ref: ChangeDetectorRef,
     private dialogService: DialogService,
-    private storageService: StorageService
+    private storageService: StorageService,
+    private menu: NbMenuService
   ) {
+    // does not get activated on resize but thats not necessary imo
+    if (window.innerWidth < 768) {
+      menu.onItemClick().subscribe((value) => {
+        this.closeSidebar();
+      });
+    }
     // Handling if you want to go back to the selectionpage
     this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe((event: NavigationEnd) => {
       this.previousUrl = this.currentUrl;
@@ -213,7 +220,7 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
   initSidebarCollapse(): void {
     // closed on mobile
     this.sidebarCollapsed = false;
-    if (window.screen.width < 768) {
+    if (window.innerWidth < 768) {
       this.closeSidebar();
     }
   }
