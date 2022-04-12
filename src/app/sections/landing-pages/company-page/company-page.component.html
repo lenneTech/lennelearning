@@ -43,8 +43,7 @@
     <div class="container-fluid mt-5">
       <h1 class="text-center font-weight-bold">Das sagen unsere Unternehmenskund:innen</h1>
       <div class="section">
-        <app-company-testimonial [review]="review"></app-company-testimonial>
-        <app-company-testimonial [review]="review_two"></app-company-testimonial>
+        <app-company-testimonial [review]="review" *ngFor="let review of reviews"></app-company-testimonial>
       </div>
     </div>
     <app-work-with-us></app-work-with-us>
