@@ -10,8 +10,8 @@ export class SubscriptionPageComponent implements OnInit {
   mobile: boolean;
   title = 'Abos und Aktionen';
   subtitle =
-    'Du willst nur mal reinschnuppern? Du möchtest Dich neben Schule, Studium oder Beruf weiterbilden? Du suchst die passende Betreuung und Weiterbildung im unternehmerischen Kontext?   \n \n    Kein Problem, wir haben die passenden Aktionen, Angebote und Abomodelle. Für individuellere Fragen und Wünsche kontaktiere uns gerne direkt.';
-  imageUrl = '../../assets/images/banner-images/Analytics.svg';
+    'Du willst nur mal reinschnuppern? Du möchtest Dich neben Schule, Studium oder Beruf weiterbilden? Du suchst die passende Betreuung und Weiterbildung im unternehmerischen Kontext?   \n \n    Kein Problem, wir haben die passendenden Aktionen, Angebote und Abomodelle. Für individuellere Fragen und Wünsche kontaktiere uns gerne direkt.';
+  imageUrl = '../../assets/images/banner-images/analytics.svg';
   isAboActive = true;
   specificsIntern: string[] = [
     'Onlinevideos',

@@ -27,6 +27,4 @@ export class StepsComponent {
       imageAlt: 'Bild von Menschen, die Puzzleteile miteinander verbinden.',
     },
   ];
-
-  constructor() {}
 }

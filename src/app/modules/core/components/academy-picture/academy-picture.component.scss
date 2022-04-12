@@ -1,3 +1,4 @@
+@import 'src/assets/scss/utils';
 .image-circle {
   width: 150px;
   height: 150px;
@@ -35,4 +36,15 @@
   border-radius: 50%;
   display: inline-block;
   object-fit: cover;
+}
+
+.academy-img {
+  max-width: 600px;
+  height: auto;
+  object-fit: cover;
+}
+@media (max-width: 1900px) {
+  .academy-img {
+    max-width: 100%;
+  }
 }
