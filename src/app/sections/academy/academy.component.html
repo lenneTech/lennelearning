@@ -18,7 +18,7 @@
             <nb-select placeholder="Wähle einen Lernpfad aus" [selected]="currentEntryPoint.id">
               <nb-option
                 [value]="entryPoint.id"
-                *ngFor="let entryPoint of entryPoints"
+                *ngFor="let entryPoint of entryPoints | removeDuplicate"
                 (click)="switchEntryPoint(entryPoint)"
                 >{{ entryPoint.address }}</nb-option
               >

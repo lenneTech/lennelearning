@@ -77,6 +77,7 @@ export class SectionService {
       result.push({
         title: taskTitle,
         link: `/lernpfad/${this.currentSection}`,
+        pathMatch: 'full',
         fragment: node.id,
       });
     });
