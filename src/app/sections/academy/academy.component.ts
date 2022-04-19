@@ -35,6 +35,8 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
   activeId = null;
   menuIds: string[] = [];
   children = null;
+  clickedOnMenuItem = false;
+  private timeout: any;
 
   constructor(
     private entryPointService: EntryPointService,
@@ -48,6 +50,10 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     private scorllService: ScrollService
   ) {
     menu.onItemClick().subscribe((value) => {
+      // only if the menuitem is a task, this value gets changed
+      if (value.item.fragment) {
+        this.clickedOnMenuItem = true;
+      }
       // does not get activated on resize but thats not necessary imo
       if (window.innerWidth < 768) {
         this.closeSidebar();
@@ -115,15 +121,26 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
   }
 
   @HostListener('window:scroll', ['$event'])
-  onScroll(event) {
-    this.activeId = this.scorllService.getLastActiveElement(this.menuIds);
-    this.children.forEach((childElement) => {
-      if (this.scorllService.getLastActiveElement(this.menuIds) === childElement.fragment) {
-        childElement.selected = true;
-      } else {
-        childElement.selected = false;
-      }
-    });
+  onScroll(event: Event): void {
+    // if the menuitem gets clicked u automatically sroll to the corresponding content. When its finished scrolling the value resets and the other case gets launched
+    if (this.clickedOnMenuItem) {
+      const y = window.scrollY;
+      clearTimeout(this.timeout);
+      this.timeout = setTimeout(() => {
+        if (y === window.scrollY) {
+          this.clickedOnMenuItem = false;
+        }
+      }, 30);
+    } else {
+      this.activeId = this.scorllService.getLastActiveElement(this.menuIds);
+      this.children.forEach((childElement) => {
+        if (this.scorllService.getLastActiveElement(this.menuIds) === childElement.fragment) {
+          childElement.selected = true;
+        } else {
+          childElement.selected = false;
+        }
+      });
+    }
   }
 
   ngOnInit(): void {
