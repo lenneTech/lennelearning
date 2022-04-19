@@ -39,6 +39,7 @@ import { QuestionListDirective } from './directives/question-list.directive';
 import { SidebarTitleDirective } from './directives/sidebar-title.directive';
 import { TitleDirective } from './directives/title.directive';
 import { VideoListDirective } from './directives/video-list.directive';
+import { RemoveDuplicatePipe } from './pipes/remove-duplicate.pipe';
 import { VideoPipe } from './pipes/video.pipe';
 import { AngularComponent } from './sections/angular/angular.component';
 import { ArbeitsmethodenComponent } from './sections/arbeitsmethoden/arbeitsmethoden.component';
@@ -112,6 +113,7 @@ export function playerFactory() {
 
     // Pipes
     VideoPipe,
+    RemoveDuplicatePipe,
   ],
   imports: [
     AcademyRoutingModule,
