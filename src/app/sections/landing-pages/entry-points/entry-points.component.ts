@@ -43,9 +43,9 @@ export class EntryPointsComponent implements OnInit {
     this.getRedirectionLink();
     this.onSwitchSelection();
     this.metaService.updateMetaTags(
-      'lenne.Learning - Du interessierst Dich für App- und Webentwicklung?',
-      'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.',
-      'academy, online, akademie, web, lernpfade'
+      'Die Lernpfade - Wähle den Pfad, der am besten zu Dir passt!',
+      'Bist Du schon ziemlich erfahren oder stehst Du als Entwickler noch ganz am Anfang? Wähle einfach den Lernpfad aus, der am besten zu Dir passt und starte durch!',
+      'lenne.learning, lennelearning, academy, online, akademie, web, lernpfade'
     );
   }
 

@@ -65,9 +65,9 @@ export class CompanyPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.metaService.updateMetaTags(
-      'lenne.Learning - Du suchst fähige Entwickler für Dein Unternehmen?',
-      'Wir betreuen und evaluieren Deine potenziellen Softwareentwickler im Web und App Bereich oder fördern Dein Start-up.',
-      'academy, online, akademie, web, unternehmen'
+      'App- und Webentwicklung für unternehmerische Bedürfnisse',
+      'Für Deine Praktikanten, Werkstudenten und Auszubildende können wir das Onboarding, die Aus- und Weiterbildung begleiten sowie bei Bedarf Evaluationen vornehmen.',
+      'lenne.learning, lennelearning, weiterbildung, onboarding, nachwuchskräfte, mitarbeiter, academy, online, akademie, web, unternehmen'
     );
   }
 }

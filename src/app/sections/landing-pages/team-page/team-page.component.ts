@@ -383,9 +383,9 @@ export class TeamPageComponent {
 
   ngOnInit(): void {
     this.metaService.updateMetaTags(
-      'lenne.Learning - Du interessierst Dich für App- und Webentwicklung?',
-      'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.',
-      'academy, online, akademie, web, team'
+      'Das Team - Lerne hier das Team von lenne.Learning kennen!',
+      'Lerne die Teammitglieder von lenne.Learning kennen und finde die richtigen Ansprechpartner für Deine Fragen rund um Koordination, Akademie oder Projektarbeit.',
+      'lenne.learning, lennelearning, ansprechpartner, academy, online, akademie, web, team'
     );
   }
 }

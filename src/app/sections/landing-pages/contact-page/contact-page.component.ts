@@ -31,9 +31,9 @@ export class ContactPageComponent {
 
   ngOnInit(): void {
     this.metaService.updateMetaTags(
-      'lenne.Learning - Du interessierst Dich für App- und Webentwicklung?',
-      'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.',
-      'academy, online, akademie, web, kontakt'
+      'Kontakt - Du interessierst Dich für App- und Webentwicklung?',
+      'Du hast Fragen zum Angebot von lenne.Learning? Du möchtest einen Gesprächstermin vereinbaren oder Dich für ein Praktikum bewerben? Wir helfen Dir gerne weiter.',
+      'academy, online, akademie, web, kontakt, Adresse, Kontaktformular, Lennestadt'
     );
   }
 }
