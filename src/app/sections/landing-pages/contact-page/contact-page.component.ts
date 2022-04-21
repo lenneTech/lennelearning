@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MetaService } from 'src/app/modules/core/services/meta.service';
 
 @Component({
   selector: 'app-contact-page',
@@ -26,5 +27,13 @@ export class ContactPageComponent {
     buttonText: 'Senden',
     requiredMsg: 'Dieses Feld ist ein Pflichtfeld!',
   };
-  constructor() {}
+  constructor(private metaService: MetaService) {}
+
+  ngOnInit(): void {
+    this.metaService.updateMetaTags(
+      'Kontakt - Du interessierst Dich für App- und Webentwicklung?',
+      'Du hast Fragen zum Angebot von lenne.Learning? Du möchtest einen Gesprächstermin vereinbaren oder Dich für ein Praktikum bewerben? Wir helfen Dir gerne weiter.',
+      'academy, online, akademie, web, kontakt, Adresse, Kontaktformular, Lennestadt'
+    );
+  }
 }

@@ -36,8 +36,9 @@ export class SubscriptionPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.metaService.updateMetaTags(
-      'lenne.Learning - Du interessierst Dich für App- und Webentwicklung?',
-      'Lerne bei uns die Berufsfelder rund um die Entwicklung von modernen Anwendungen kennen.'
+      'Alles rund um die Abos und Aktionen bei lenne.Learning!',
+      'Dein Unternehmen sucht nach Weiterbildungsmöglichkeiten rund um das Thema Softwareentwicklung? Kein Problem, wir haben die passendenden Abos und Aktionen.',
+      'lenne.learning, lennelearning, aktionen, academy, online, akademie, web, abo'
     );
     this.mobile = window.innerWidth < 992;
   }
