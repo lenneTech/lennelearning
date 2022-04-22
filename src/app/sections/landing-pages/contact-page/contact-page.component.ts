@@ -9,7 +9,7 @@ import { MetaService } from 'src/app/modules/core/services/meta.service';
 export class ContactPageComponent {
   title = 'Kontakt';
   subtitle =
-    'Du hast eine Frage zu unseren Angeboten? Du möchtest einen Gesprächstermin vereinbaren oder Dich für ein Praktikum bewerben? \n\n  Schick uns eine Nachricht, oder ruf uns an. Wir helfen Dir gerne weiter. \n \n Auch Anmerkungen oder Ergänzungswünsche zum Inhalt der Akademie sind uns immer willkommen!';
+    'Du hast eine Frage zu unseren Angeboten? Du möchtest einen Gesprächstermin vereinbaren oder Dich für ein Praktikum bewerben? \n\n  Schick uns eine Nachricht oder ruf uns an. Wir helfen Dir gerne weiter. \n \n Auch Anmerkungen oder Ergänzungswünsche zum Inhalt der Akademie sind bei uns immer willkommen!';
   imageUrl = '../../assets/images/academy-images/letter.svg';
   contactType = {
     company: 'lenne.Tech GmbH',
