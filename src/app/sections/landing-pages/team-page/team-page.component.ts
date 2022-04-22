@@ -181,8 +181,8 @@ export class TeamPageComponent {
       frontend: [
         {
           imageUrl: '/assets/images/brand-images/logo_javascript.svg',
-          imageAlt: 'Logo von JavasScript',
-          title: 'JavasScript',
+          imageAlt: 'Logo von JavaScript',
+          title: 'JavaScript',
         },
         {
           imageUrl: '/assets/images/brand-images/logo_ionic.svg',
@@ -345,8 +345,8 @@ export class TeamPageComponent {
       frontend: [
         {
           imageUrl: '/assets/images/brand-images/logo_javascript.svg',
-          imageAlt: 'Logo von JavasScript',
-          title: 'JavasScript',
+          imageAlt: 'Logo von JavaScript',
+          title: 'JavaScript',
         },
         {
           imageUrl: '/assets/images/brand-images/logo_ionic.svg',
