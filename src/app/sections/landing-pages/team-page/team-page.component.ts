@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MetaService } from 'src/app/modules/core/services/meta.service';
 
 @Component({
   selector: 'app-team-page',
@@ -180,8 +181,8 @@ export class TeamPageComponent {
       frontend: [
         {
           imageUrl: '/assets/images/brand-images/logo_javascript.svg',
-          imageAlt: 'Logo von JavasScript',
-          title: 'JavasScript',
+          imageAlt: 'Logo von JavaScript',
+          title: 'JavaScript',
         },
         {
           imageUrl: '/assets/images/brand-images/logo_ionic.svg',
@@ -344,8 +345,8 @@ export class TeamPageComponent {
       frontend: [
         {
           imageUrl: '/assets/images/brand-images/logo_javascript.svg',
-          imageAlt: 'Logo von JavasScript',
-          title: 'JavasScript',
+          imageAlt: 'Logo von JavaScript',
+          title: 'JavaScript',
         },
         {
           imageUrl: '/assets/images/brand-images/logo_ionic.svg',
@@ -377,4 +378,14 @@ export class TeamPageComponent {
       ],
     },
   ];
+
+  constructor(private metaService: MetaService) {}
+
+  ngOnInit(): void {
+    this.metaService.updateMetaTags(
+      'Das Team - Lerne hier das Team von lenne.Learning kennen!',
+      'Lerne die Teammitglieder von lenne.Learning kennen und finde die richtigen Ansprechpartner für Deine Fragen rund um Koordination, Akademie oder Projektarbeit.',
+      'lenne.learning, lennelearning, ansprechpartner, academy, online, akademie, web, team'
+    );
+  }
 }

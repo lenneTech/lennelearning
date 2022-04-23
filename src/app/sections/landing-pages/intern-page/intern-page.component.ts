@@ -33,8 +33,9 @@ export class InternPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.metaService.updateMetaTags(
-      'lenne.Learning - Du suchst noch ein Praktikum?',
-      'Wir bieten Schülern, Studenten oder Webinteressierten die Möglichkeit, Web- und Appentwicklung in der Praxis zu erleben und mitzugestalten.'
+      'Du suchst ein Praktikum im Bereich Softwareentwicklung?',
+      'Wir bieten Schülern, Studenten oder Webinteressierten die Möglichkeit, Web- und Appentwicklung in der Praxis zu erleben und mitzugestalten.',
+      'praktikum, softwareentwicklung, academy, online, akademie, web, internship'
     );
   }
 }
