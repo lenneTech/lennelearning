@@ -184,6 +184,32 @@ export class EntryPointService {
       ],
       tag: ['ALL', 'INTERN'],
     },
+    {
+      id: 'nachwuchskräfte',
+      title: 'Nachwuchskräfte',
+      address: 'Nachwuchs',
+      description: 'Platzhalter Text. To be changed.',
+      image: '../../assets/images/entry-point-images/berufsinteressent.svg',
+      sections: [
+        'html',
+        'css',
+        'design',
+        'bootstrap',
+        'git-basics',
+        'teamwork',
+        'arbeitsmethoden',
+        'javascript',
+        'typescript',
+        'prototyping',
+        'angular',
+        'automatisierte-tests',
+        'packages',
+        'ionic',
+        'docker-basics',
+        'nestjs',
+      ],
+      tag: ['ALL', 'COMPANY'],
+    },
   ];
 
   constructor(private storageService: StorageService, private sectionService: SectionService, private router: Router) {
