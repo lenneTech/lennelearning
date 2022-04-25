@@ -24,10 +24,7 @@
       <div class="section">
         <h2 class="section-title">Wer profitiert von unserem Angebot?</h2>
         <div class="row" [ltMatchHeight]="['card', 'card-text', 'card-link']">
-          <div
-            class="col-12 col-xl-4 d-flex justify-content-center card-container"
-            *ngFor="let landingPage of landingPages"
-          >
+          <div class="col-12 col-xl-4 d-flex justify-content-center mb-5" *ngFor="let landingPage of landingPages">
             <app-info-card
               [title]="landingPage.title"
               [imageUrl]="landingPage.image"
