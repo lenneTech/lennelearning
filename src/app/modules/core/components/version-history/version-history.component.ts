@@ -14,6 +14,16 @@ export class VersionHistoryComponent {
     {
       version: this.version, // the newest version and its changes is set right here
       changes: [
+        'Textanpassungen',
+        'Visuelles Highlighting beim Scrolling durch die Lernpfade',
+        'Reihenfolge der Sektionen innerhalb der Lernpfade angepasst',
+        'Kleinere Fehler wurden behoben',
+        'Weitere Optimierungen'
+      ],
+    },
+    {
+      version: '1.5.0',
+      changes: [
         'Visuelle und textuelle Anpassungen',
         'Genutzte Pakete aktualisiert',
         'Seite "Kontakt" hinzugefügt',

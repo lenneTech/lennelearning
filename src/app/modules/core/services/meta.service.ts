@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 export class MetaService {
   constructor(private metaTagService: Meta) {}
 
-  updateMetaTags(title: string, description: string): void {
+  updateMetaTags(title: string, description: string, keywords: string): void {
     this.metaTagService.updateTag({
       name: 'title',
       content: title,
@@ -57,5 +57,7 @@ export class MetaService {
       property: 'twitter:url',
       content: environment.appUrl,
     });
+
+    this.metaTagService.updateTag({ property: 'keywords', content: keywords });
   }
 }

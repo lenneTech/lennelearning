@@ -1,10 +1,10 @@
 import { AfterContentChecked, ChangeDetectorRef, Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import { NbMenuItem, NbSidebarService } from '@nebular/theme';
+import { NbMenuItem, NbMenuService, NbSidebarService } from '@nebular/theme';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
 import { DialogService } from 'src/app/modules/core/services/dialog.service';
-import { StorageService } from '@lenne.tech/ng-base';
+import { ScrollService, StorageService } from '@lenne.tech/ng-base';
 import { Section } from 'src/app/modules/core/interfaces/section.interface';
 import { EntryPoint } from '../../modules/core/interfaces/entry-point.interface';
 import { EntryPointService } from '../../modules/core/services/entry-point.service';
@@ -32,6 +32,11 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
   recievedUrl: string;
   previousUrl: string = null;
   currentUrl: string = null;
+  activeId = null;
+  menuIds: string[] = [];
+  children = null;
+  clickedOnMenuItem = false;
+  private timeout: any;
 
   constructor(
     private entryPointService: EntryPointService,
@@ -40,8 +45,21 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     private sidebarService: NbSidebarService,
     private ref: ChangeDetectorRef,
     private dialogService: DialogService,
-    private storageService: StorageService
+    private storageService: StorageService,
+    private menu: NbMenuService,
+    private scorllService: ScrollService
   ) {
+    menu.onItemClick().subscribe((value) => {
+      // only if the menuitem is a task, this value gets changed
+      if (value.item.fragment) {
+        this.clickedOnMenuItem = true;
+      }
+      // does not get activated on resize but thats not necessary imo
+      if (window.innerWidth < 768) {
+        this.closeSidebar();
+      }
+    });
+
     // Handling if you want to go back to the selectionpage
     this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe((event: NavigationEnd) => {
       this.previousUrl = this.currentUrl;
@@ -99,6 +117,29 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
       this.openSidebar();
     } else {
       this.closeSidebar();
+    }
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event: Event): void {
+    // if the menuitem gets clicked u automatically sroll to the corresponding content. When its finished scrolling the value resets and the other case gets launched
+    if (this.clickedOnMenuItem) {
+      const y = window.scrollY;
+      clearTimeout(this.timeout);
+      this.timeout = setTimeout(() => {
+        if (y === window.scrollY) {
+          this.clickedOnMenuItem = false;
+        }
+      }, 30);
+    } else {
+      this.activeId = this.scorllService.getLastActiveElement(this.menuIds);
+      this.children.forEach((childElement) => {
+        if (this.scorllService.getLastActiveElement(this.menuIds) === childElement.fragment) {
+          childElement.selected = true;
+        } else {
+          childElement.selected = false;
+        }
+      });
     }
   }
 
@@ -191,6 +232,13 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     const menuItem: NbMenuItem = this.items.find((item) => item.title === this.sectionService.currentSection);
     if (menuItem && window.screen.width >= 768) {
       menuItem.children = items;
+      this.children = menuItem.children;
+      this.menuIds = [];
+
+      menuItem.children.forEach((element) => {
+        this.menuIds.push(element.fragment);
+      });
+
       return menuItem;
     }
   }
@@ -213,7 +261,7 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
   initSidebarCollapse(): void {
     // closed on mobile
     this.sidebarCollapsed = false;
-    if (window.screen.width < 768) {
+    if (window.innerWidth < 768) {
       this.closeSidebar();
     }
   }

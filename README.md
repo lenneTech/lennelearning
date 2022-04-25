@@ -1,4 +1,4 @@
-# academy
+# lennelearning
 
 ## Dependencies
 
@@ -16,10 +16,10 @@ Libraries used:
 
 ```
 # Clone the project
-$ git clone https://github.com/lenneTech/academy.git
+$ git clone https://github.com/lenneTech/lennelearning.git
 
 # Navigate to the created folder
-$ cd academy
+$ cd lennelearning
 
 # Install all dependencies
 $ npm install
@@ -64,7 +64,7 @@ Now you can change things or add new [sections](#How-to-add-Sections) or [tasks]
 ```
 # Push your changes
 $ git add .
-$ git commit -m"message"
+$ git commit -m"feat: message"
 $ git push
 ```
 

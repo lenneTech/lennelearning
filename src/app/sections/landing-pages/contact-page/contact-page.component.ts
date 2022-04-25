@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MetaService } from 'src/app/modules/core/services/meta.service';
 
 @Component({
   selector: 'app-contact-page',
@@ -8,7 +9,7 @@ import { Component } from '@angular/core';
 export class ContactPageComponent {
   title = 'Kontakt';
   subtitle =
-    'Du hast eine Frage zu unseren Angeboten? Du möchtest einen Gesprächstermin vereinbaren oder Dich für ein Praktikum bewerben? \n\n  Schick uns eine Nachricht, oder ruf uns an. Wir helfen Dir gerne weiter. \n \n Auch Anmerkungen oder Ergänzungswünsche zum Inhalt der Akademie sind uns immer willkommen!';
+    'Du hast eine Frage zu unseren Angeboten? Du möchtest einen Gesprächstermin vereinbaren oder Dich für ein Praktikum bewerben? \n\n  Schick uns eine Nachricht oder ruf uns an. Wir helfen Dir gerne weiter. \n \n Auch Anmerkungen oder Ergänzungswünsche zum Inhalt der Akademie sind bei uns immer willkommen!';
   imageUrl = '../../assets/images/academy-images/letter.svg';
   contactType = {
     company: 'lenne.Tech GmbH',
@@ -26,5 +27,13 @@ export class ContactPageComponent {
     buttonText: 'Senden',
     requiredMsg: 'Dieses Feld ist ein Pflichtfeld!',
   };
-  constructor() {}
+  constructor(private metaService: MetaService) {}
+
+  ngOnInit(): void {
+    this.metaService.updateMetaTags(
+      'Kontakt - Du interessierst Dich für App- und Webentwicklung?',
+      'Du hast Fragen zum Angebot von lenne.Learning? Du möchtest einen Gesprächstermin vereinbaren oder Dich für ein Praktikum bewerben? Wir helfen Dir gerne weiter.',
+      'academy, online, akademie, web, kontakt, Adresse, Kontaktformular, Lennestadt'
+    );
+  }
 }
