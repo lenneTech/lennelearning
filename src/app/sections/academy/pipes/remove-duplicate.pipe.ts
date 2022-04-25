@@ -9,11 +9,7 @@ export class RemoveDuplicatePipe implements PipeTransform {
     if (value !== undefined && value !== null) {
       value.forEach((item) => {
         const sameId = result.find((value) => {
-          if (value.id === item.id) {
-            return true;
-          } else {
-            return false;
-          }
+          return value.id === item.id;
         });
 
         if (!sameId) {
