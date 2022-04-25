@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/lenneTech/academy/compare/v1.5.0...v1.6.0) (2022-04-25)
+
+### Features
+
+- **LTAK-47:** changed section order for backend entrypoint and removed "nachwuchskräfte" ([#289](https://github.com/lenneTech/academy/issues/289)) ([a027950](https://github.com/lenneTech/academy/commit/a02795053bfd8886d338053dc0fc140cc2fd73bd))
+- **LTAK-49:** added a new entrypoint and changed the section order ([#287](https://github.com/lenneTech/academy/issues/287)) ([e867f3a](https://github.com/lenneTech/academy/commit/e867f3a4f498f6a27c9abeb6ad9859ce60285bfc))
+
+### Bug Fixes
+
+- Fix missing pipe on mobile ([4b114bd](https://github.com/lenneTech/academy/commit/4b114bd41f153fdce245a500d046ff55785ffe40))
+- **LTAK-53:** fixed a typo ([#290](https://github.com/lenneTech/academy/issues/290)) ([bc174fc](https://github.com/lenneTech/academy/commit/bc174fccbc39786ffc874b3b202fc8f7f14adaa6))
+- **LTAK-54:** fixed typos on the contact page ([#291](https://github.com/lenneTech/academy/issues/291)) ([04892ed](https://github.com/lenneTech/academy/commit/04892ed4dbe96cff309cd59a1da5276f191c8b58))
+- removed the nachwuchskräfte entrypoint ([b75b4b1](https://github.com/lenneTech/academy/commit/b75b4b19d269b9bbf5a693cbf2a7b6568b446863))
+
 ## [1.5.0](https://github.com/lenneTech/academy/compare/v1.4.0...v1.5.0) (2022-04-06)
 
 ### Features
