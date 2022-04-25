@@ -17,6 +17,8 @@ export class VersionHistoryComponent {
         'Textanpassungen',
         'Visuelles Highlighting beim Scrolling durch die Lernpfade',
         'Reihenfolge der Sektionen innerhalb der Lernpfade angepasst',
+        'Kleinere Fehler wurden behoben',
+        'Weitere Optimierungen'
       ],
     },
     {
