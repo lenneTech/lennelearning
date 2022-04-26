@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MetaService } from 'src/app/modules/core/services/meta.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { MetaService } from 'src/app/modules/core/services/meta.service';
   templateUrl: './contact-page.component.html',
   styleUrls: ['./contact-page.component.scss'],
 })
-export class ContactPageComponent {
+export class ContactPageComponent implements OnInit {
   title = 'Kontakt';
   subtitle =
     'Du hast eine Frage zu unseren Angeboten? Du möchtest einen Gesprächstermin vereinbaren oder Dich für ein Praktikum bewerben? \n\n  Schick uns eine Nachricht oder ruf uns an. Wir helfen Dir gerne weiter. \n \n Auch Anmerkungen oder Ergänzungswünsche zum Inhalt der Akademie sind bei uns immer willkommen!';
