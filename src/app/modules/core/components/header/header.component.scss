@@ -30,6 +30,7 @@
   .nav-item {
     font-size: 18px;
     font-weight: 500;
+    margin-bottom: 0;
 
     .dropdown-menu {
       border: none;
@@ -58,7 +59,7 @@
     text-underline-offset: 5px;
   }
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(xl) {
     .nav-item {
       margin-left: 60px;
     }

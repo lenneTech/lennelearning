@@ -1,14 +1,19 @@
 <div class="row" *ngFor="let element of listElements; let i = index">
   <div
-    class="col-12 col-lg-7 d-flex align-items-center order-last order-lg-first"
+    class="col-12 col-lg-6 d-flex align-items-center order-last order-lg-first"
     [ngClass]="{ 'order-lg-last': i % 2 === 0 }"
   >
     <div>
       <h3 class="title">{{ element.title }}</h3>
       <div class="text" [innerHtml]="element.text"></div>
+      <div class="d-flex justify-content-center mt-5">
+        <button nbButton status="warning" *ngIf="element.showBtn" (click)="openInquiry(element.subscriptionType)">
+          Anfrage senden
+        </button>
+      </div>
     </div>
   </div>
-  <div class="col-12 col-lg-5">
-    <img loading="lazy" [src]="element.imageUrl" [alt]="element.alt" />
+  <div class="col-12 col-lg-6 d-flex align-items-center justify-content-center">
+    <img loading="lazy" [src]="element.imageUrl" [alt]="element.alt" class="img-fluid" />
   </div>
 </div>
