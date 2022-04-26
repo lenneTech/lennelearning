@@ -10,7 +10,6 @@ import { AcademyBannerComponent } from './components/academy-banner/academy-bann
 import { AcademyPictureComponent } from './components/academy-picture/academy-picture.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { BrandBannerComponent } from './components/brand-banner/brand-banner.component';
-import { CarouselComponent } from './components/carousel/carousel.component';
 import { CompanyTestimonialComponent } from './components/company-testimonial/company-testimonial.component';
 import { ContactCardComponent } from './components/contact-card/contact-card.component';
 import { DialogConfirmComponent } from './components/dialog-confirm/dialog-confirm.component';
@@ -65,7 +64,6 @@ import { PriceCardComponent } from './components/price-card/price-card.component
     PriceCardComponent,
     EntryPointCardComponent,
     InfoCardComponent,
-    CarouselComponent,
     TextImageListComponent,
     BrandBannerComponent,
     AcademyPictureComponent,
@@ -114,7 +112,6 @@ import { PriceCardComponent } from './components/price-card/price-card.component
     EntryPointCardComponent,
     InfoCardComponent,
     BannerComponent,
-    CarouselComponent,
     TextImageListComponent,
     FooterComponent,
     HeaderComponent,

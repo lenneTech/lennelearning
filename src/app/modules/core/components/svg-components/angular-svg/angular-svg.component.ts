@@ -4,6 +4,4 @@ import { Component } from '@angular/core';
   selector: 'app-angular-svg',
   templateUrl: './angular.svg',
 })
-export class AngularSvgComponent {
-  constructor() {}
-}
+export class AngularSvgComponent {}
