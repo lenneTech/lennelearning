@@ -8,6 +8,7 @@ import { EntryPointsComponent } from '../landing-pages/entry-points/entry-points
 import { ContactPageComponent } from '../landing-pages/contact-page/contact-page.component';
 import { SubscriptionPageComponent } from '../landing-pages/subscription-page/subscription-page.component';
 import { TeamPageComponent } from '../landing-pages/team-page/team-page.component';
+import { WorkshopsComponent } from '../landing-pages/workshops/workshops.component';
 
 const routes: Routes = [
   {
@@ -57,6 +58,12 @@ const routes: Routes = [
     component: SubscriptionPageComponent,
     pathMatch: 'full',
     data: { matomoTitle: 'Abonnements' },
+  },
+  {
+    path: 'workshops',
+    component: WorkshopsComponent,
+    pathMatch: 'full',
+    data: { matomoTitle: 'Workshops' },
   },
 ];
 

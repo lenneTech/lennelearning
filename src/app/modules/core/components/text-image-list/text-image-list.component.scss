@@ -1,11 +1,12 @@
+@import 'src/assets/scss/utils';
 .row {
   margin-bottom: 3rem;
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: 25px;
   font-family: Open Sans, sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 1.25rem;
 }
 
@@ -13,6 +14,7 @@
   white-space: pre-line;
   font-family: Open Sans, sans-serif;
   font-weight: 200;
+  font-size: 18px;
 
   .link {
     text-decoration: underline;
@@ -23,4 +25,15 @@
       color: var(--color-info-500);
     }
   }
+}
+
+li {
+  font-weight: 200;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.btn-orange {
+  background-color: $orange;
+  color: white;
 }
