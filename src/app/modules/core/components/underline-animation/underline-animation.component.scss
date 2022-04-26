@@ -1,6 +1,6 @@
 @import 'src/assets/scss/utils';
 
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(xl) {
   .line-right {
     position: relative;
     left: 50%;
@@ -31,7 +31,7 @@
   }
 }
 ::ng-deep.item:hover {
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(xl) {
     .line-left {
       width: 50%;
       left: 0%;
