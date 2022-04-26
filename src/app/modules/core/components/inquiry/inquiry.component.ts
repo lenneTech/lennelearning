@@ -38,9 +38,14 @@ export class InquiryComponent implements OnInit {
       name: new FormControl(null, [Validators.required]),
       email: new FormControl(null, [Validators.required, Validators.email]),
       phoneNumber: new FormControl(null),
-      company: new FormControl(null, [Validators.required]),
+      company: new FormControl(null),
       dataPolicy: new FormControl(false, [Validators.requiredTrue]),
     });
+    if (!this.subscription.toLowerCase().includes('workshop')) {
+      this.contactForm.controls['company'].setValidators([Validators.required]);
+    } else {
+      this.contactForm.controls['company'].setValidators(null);
+    }
   }
 
   contact() {
