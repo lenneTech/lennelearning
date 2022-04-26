@@ -8,4 +8,5 @@ export interface TextImageInterface {
   iconClass?: string;
   reference?: string;
   showBtn?: boolean;
+  subscriptionType?: string;
 }

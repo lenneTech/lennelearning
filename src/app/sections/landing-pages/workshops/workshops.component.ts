@@ -20,6 +20,7 @@ export class WorkshopsComponent implements OnInit {
       imageUrl: '../../assets/images/banner-images/Analytics.svg',
       imageAlt: 'Illustration eines Mannes der auf Büchern steht.',
       showBtn: true,
+      subscriptionType: 'Workshop - Fachkräftesicherung durch digitale Aus- und Weiterbildung',
     },
     {
       title: 'Praxis meets Wissenschaft - Agile Methoden für den Hochschulkontext',
@@ -27,6 +28,7 @@ export class WorkshopsComponent implements OnInit {
       imageUrl: '../../assets/images/banner-images/getstarted-inverted.svg',
       imageAlt: 'Illustration eines Mannes der auf Büchern steht.',
       showBtn: true,
+      subscriptionType: 'Workshop - Praxis meets Wissenschaft - Agile Methoden für den Hochschulkontext',
     },
   ];
 

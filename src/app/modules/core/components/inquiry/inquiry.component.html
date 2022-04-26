@@ -41,7 +41,7 @@
             <input
               class="form-control"
               type="text"
-              placeholder="Unternehmen*"
+              [placeholder]="subscription.toLowerCase().includes('workshop') ? 'Unternehmen' : 'Unternehmen*'"
               formControlName="company"
               [ngClass]="{ 'is-invalid': contactForm.get('company').invalid && contactForm.get('company').touched }"
             />
