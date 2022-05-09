@@ -35,11 +35,10 @@ export class WorkshopsComponent implements OnInit {
   constructor(private metaService: MetaService) {}
 
   ngOnInit(): void {
-    // will be submitted later (LTAK-65)
     this.metaService.updateMetaTags(
-      'Du suchst ein Praktikum im Bereich Softwareentwicklung?',
-      'Wir bieten Schülern, Studenten oder Webinteressierten die Möglichkeit, Web- und Appentwicklung in der Praxis zu erleben und mitzugestalten.',
-      'praktikum, softwareentwicklung, academy, online, akademie, web, internship'
+      'Agile Methoden und Softwareentwicklung für jeden Kontext',
+      'Auf der Suche nach Workshops rund um die Themen agile Methoden, Softwareentwicklung und Fachkräftesicherung? Dann bist Du auf dieser Seite genau richtig.',
+      'Agile Methoden, Softwareentwicklung, Workshop, Workshops, Wissenschaft, Fachkräfte, Fachkräftesicherung, Doktorarbeit, Paper, Forschungsanträge, Anträge'
     );
   }
 }
