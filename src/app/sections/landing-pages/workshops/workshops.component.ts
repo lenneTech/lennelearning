@@ -17,7 +17,7 @@ export class WorkshopsComponent implements OnInit {
     {
       title: 'Fachkräftesicherung durch digitale Aus- und Weiterbildung',
       text: 'Der Fokus dieses Workshops liegt auf der digitalen Aus- und Weiterbildung am Beispiel von Softwareentwicklung und IT sowie den notwendigen Tools und Arbeitsbedingungen. Gerade in diesem Bereich fehlt es in in vielen Regionen aktuell an Fachkräften. Die vorhandenen Fachkräfte zu binden und weiterzubilden ist die eine Herausforderung, die andere besteht darin, junge Menschen für diese Themen zu interessieren und sie entsprechend frühzeitig zu motivieren und auszubilden. <br> <br> Digitale Aus- und Weiterbildung <ul> <li> Für wen, warum und wie? </li> <li>  Inhouse Akademie vs. externe Angebote</li> <li>  Praxisbeispiel lenne.Learning</li> <li>  How-To</li> </ul> Für Wen? <ul> <li> Geschäftsführende, HR-Verantwortliche</li> <li>  max. 10-15 Teilnehmende</li>  </ul>  Dauer? <ul> <li>  1 Stunde </li> </ul> Wo? <ul> <li> Vor Ort </li> <li>  Digital </li>  </ul>',
-      imageUrl: '../../assets/images/banner-images/Analytics.svg',
+      imageUrl: '../../assets/images/banner-images/analytics.svg',
       imageAlt: 'Illustration eines Mannes der auf Büchern steht.',
       showBtn: true,
       subscriptionType: 'Workshop - Fachkräftesicherung durch digitale Aus- und Weiterbildung',
