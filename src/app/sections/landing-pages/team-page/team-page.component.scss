@@ -28,7 +28,7 @@
 
 .member:not(:last-child) {
   margin-bottom: 100px;
-  @include media-breakpoint-up('lg') {
+  @include media-breakpoint-up(lg) {
     margin-bottom: 50px;
   }
 }
@@ -38,7 +38,7 @@
   min-width: 350px;
   border-radius: 5px;
 
-  @include media-breakpoint-up('lg') {
+  @include media-breakpoint-up(lg) {
     margin-bottom: 0 !important;
   }
 }

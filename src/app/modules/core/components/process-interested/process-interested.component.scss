@@ -2,28 +2,10 @@
   margin-bottom: 3rem;
 }
 
-.title {
-  font-size: 42px;
-  font-family: Open Sans, sans-serif;
-  font-weight: 700;
-  margin-bottom: 1.25rem;
-  text-align: center;
-}
-
 .text {
   white-space: pre-line;
   font-family: Open Sans, sans-serif;
   font-weight: 200;
   font-size: 18px;
   text-align: center;
-
-  .link {
-    text-decoration: underline;
-    color: var(--card-text-color);
-
-    &:hover {
-      text-decoration: none;
-      color: var(--color-info-500);
-    }
-  }
 }

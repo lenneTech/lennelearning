@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { SEOService } from '@lenne.tech/ng-base';
 import { MetaService } from 'src/app/modules/core/services/meta.service';
 
 @Component({
@@ -44,7 +43,7 @@ export class StartComponent {
       landingRoute: '/unternehmen',
     },
   ];
-  constructor(private seoService: SEOService, private metaService: MetaService) {
+  constructor(private metaService: MetaService) {
     this.metaService.updateMetaTags(
       'lenne.Learning - Die online Akademie für Webtechnologien',
       'Die online Akademie für Webtechnologien',

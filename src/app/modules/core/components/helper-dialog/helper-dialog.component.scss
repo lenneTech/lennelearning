@@ -1,3 +1,4 @@
+@import 'src/assets/scss/utils';
 .card-text {
   font-size: 1rem;
   line-height: 2rem;
@@ -12,9 +13,14 @@ a {
   color: var(--link-text-color);
 }
 
-@media screen and (max-width: 576px) {
+nb-accordion {
+  overflow: scroll;
+  position: absolute;
+}
+
+@include media-breakpoint-up(sm) {
   nb-accordion {
-    overflow: scroll;
-    position: absolute;
+    overflow: auto;
+    position: relative;
   }
 }

@@ -4,6 +4,4 @@ import { Component } from '@angular/core';
   selector: 'app-html-svg',
   templateUrl: './html.svg',
 })
-export class HtmlSvgComponent {
-  constructor() {}
-}
+export class HtmlSvgComponent {}

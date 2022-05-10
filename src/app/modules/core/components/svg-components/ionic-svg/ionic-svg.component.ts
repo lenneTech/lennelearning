@@ -4,6 +4,4 @@ import { Component } from '@angular/core';
   selector: 'app-ionic-svg',
   templateUrl: './ionic.svg',
 })
-export class IonicSvgComponent {
-  constructor() {}
-}
+export class IonicSvgComponent {}

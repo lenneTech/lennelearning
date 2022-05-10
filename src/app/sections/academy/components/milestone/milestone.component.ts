@@ -160,6 +160,7 @@ export class MilestoneComponent implements OnInit {
     },
     {
       sectionTitle: 'arbeitsmethoden',
+      logo: '../../../../../assets/images/brand-images/logo_google-developers.svg',
       description: 'Bravo, Du hast die Sektion Arbeitsmethoden erfolgreich beendet.',
       exampleList: [
         {

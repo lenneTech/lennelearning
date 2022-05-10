@@ -12,7 +12,7 @@ i {
   padding-right: 8px;
 }
 
-@include media-breakpoint-up('xl') {
+@include media-breakpoint-up(xl) {
   .p-lg-10 {
     padding: 100px;
   }

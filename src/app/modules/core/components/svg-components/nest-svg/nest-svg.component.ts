@@ -4,6 +4,4 @@ import { Component } from '@angular/core';
   selector: 'app-nest-svg',
   templateUrl: './nest.svg',
 })
-export class NestSvgComponent {
-  constructor() {}
-}
+export class NestSvgComponent {}

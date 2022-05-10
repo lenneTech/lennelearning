@@ -10,7 +10,6 @@ import { AcademyBannerComponent } from './components/academy-banner/academy-bann
 import { AcademyPictureComponent } from './components/academy-picture/academy-picture.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { BrandBannerComponent } from './components/brand-banner/brand-banner.component';
-import { CarouselComponent } from './components/carousel/carousel.component';
 import { CompanyTestimonialComponent } from './components/company-testimonial/company-testimonial.component';
 import { ContactCardComponent } from './components/contact-card/contact-card.component';
 import { DialogConfirmComponent } from './components/dialog-confirm/dialog-confirm.component';
@@ -23,8 +22,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { HelperDialogComponent } from './components/helper-dialog/helper-dialog.component';
 import { InfoCardComponent } from './components/info-card/info-card.component';
 import { ProcessInterestedComponent } from './components/process-interested/process-interested.component';
-import { ReviewListComponent } from './components/review-list/review-list.component';
-import { ReviewComponent } from './components/review/review.component';
 import { SolutionDialogComponent } from './components/solution-dialog/solution-dialog.component';
 import { StepsComponent } from './components/steps/steps.component';
 import { AngularSvgComponent } from './components/svg-components/angular-svg/angular-svg.component';
@@ -67,8 +64,6 @@ import { PriceCardComponent } from './components/price-card/price-card.component
     PriceCardComponent,
     EntryPointCardComponent,
     InfoCardComponent,
-    ReviewComponent,
-    CarouselComponent,
     TextImageListComponent,
     BrandBannerComponent,
     AcademyPictureComponent,
@@ -105,7 +100,6 @@ import { PriceCardComponent } from './components/price-card/price-card.component
     // Dialogs
     HelperDialogComponent,
     DialogComponent,
-    ReviewListComponent,
     StepsComponent,
     FeaturesComponent,
     TutorCardsComponent,
@@ -117,9 +111,7 @@ import { PriceCardComponent } from './components/price-card/price-card.component
     PriceCardComponent,
     EntryPointCardComponent,
     InfoCardComponent,
-    ReviewComponent,
     BannerComponent,
-    CarouselComponent,
     TextImageListComponent,
     FooterComponent,
     HeaderComponent,
@@ -133,7 +125,6 @@ import { PriceCardComponent } from './components/price-card/price-card.component
     IonicSvgComponent,
     NestSvgComponent,
     ContactCardComponent,
-    ReviewListComponent,
     StepsComponent,
     FeaturesComponent,
     TutorCardsComponent,

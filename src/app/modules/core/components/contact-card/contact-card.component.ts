@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-contact-card',
@@ -10,6 +10,4 @@ export class ContactCardComponent {
   @Input() title: string;
   @Input() text: string;
   @Input() buttonText: string;
-
-  constructor() {}
 }

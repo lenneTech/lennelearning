@@ -1,12 +1,13 @@
+@import 'src/assets/scss/utils';
 h1 {
   margin-bottom: 50px;
   font-weight: bold;
-  font-size: 72px;
+  font-size: 40px;
 }
 
-@media screen and (max-width: 768px) {
+@include media-breakpoint-up(md) {
   h1 {
-    font-size: 40px;
+    font-size: 72px;
   }
 }
 
