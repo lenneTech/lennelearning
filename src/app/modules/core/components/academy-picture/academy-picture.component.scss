@@ -48,7 +48,7 @@
   height: auto;
   object-fit: cover;
 }
-@include media-breakpoint-up('xl') {
+@include media-breakpoint-up(xl) {
   .academy-img {
     max-width: 600px;
   }
