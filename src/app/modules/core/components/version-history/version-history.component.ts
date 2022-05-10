@@ -13,12 +13,16 @@ export class VersionHistoryComponent {
   versions: VersionHistory[] = [
     {
       version: this.version, // the newest version and its changes is set right here
+      changes: ['Workshops-Seite hinzugefügt', 'Kleinere Anpassungen und Optimierungen'],
+    },
+    {
+      version: '1.6.0',
       changes: [
         'Textanpassungen',
         'Visuelles Highlighting beim Scrolling durch die Lernpfade',
         'Reihenfolge der Sektionen innerhalb der Lernpfade angepasst',
         'Kleinere Fehler wurden behoben',
-        'Weitere Optimierungen'
+        'Weitere Optimierungen',
       ],
     },
     {
