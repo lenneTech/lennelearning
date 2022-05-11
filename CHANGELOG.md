@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.6.1](https://github.com/lenneTech/academy/compare/v1.6.0...v1.6.1) (2022-05-11)
+
+### Bug Fixes
+
+- **LTAK-55:** fixed all issues mentioned in this ticket ([d3271db](https://github.com/lenneTech/academy/commit/d3271dba466b2fbb6eb33d4085d65cc67afbbe53))
+- **LTAK-58:** typo fix ([f3d0c5c](https://github.com/lenneTech/academy/commit/f3d0c5c79403a91fd8dd2f4b6775d1f43feb8352))
+
 ## [1.6.0](https://github.com/lenneTech/academy/compare/v1.5.0...v1.6.0) (2022-04-25)
 
 ### Features
