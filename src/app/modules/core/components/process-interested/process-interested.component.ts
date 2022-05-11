@@ -16,6 +16,4 @@ export class ProcessInterestedComponent {
       imageAlt: 'Illustration eines Mannes der auf Büchern steht.',
     },
   ];
-
-  constructor() {}
 }

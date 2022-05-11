@@ -21,7 +21,7 @@ export class EntryPointsComponent implements OnInit {
   title = 'Die Lernpfade';
   subtitle =
     'Bist Du schon ziemlich erfahren oder stehst Du noch ganz am Anfang Deiner Karriere als Entwickler:in? \n Bei lenne.Learning findest Du das passende Angebot. Wähle einfach den Lernpfad aus, der am besten zu Dir passt und starte durch!';
-  imageUrl = '../../assets/images/banner-images/SETTINGS.svg';
+  imageUrl = '../../assets/images/banner-images/settings.svg';
   entryPoints: EntryPoint[] = [];
   recommendation: string;
   redirectionLink: string;

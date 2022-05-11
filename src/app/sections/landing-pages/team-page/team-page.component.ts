@@ -10,7 +10,7 @@ export class TeamPageComponent implements OnInit {
   title = 'Das Team';
   subtitle =
     'Lerne das Team von lenne.Learning kennen und finde die richtigen Ansprechpartner:innen für Deine Fragen rund um Koordination, Akademie oder Projektarbeit.';
-  imageUrl = '/assets/images/banner-images/WELCOME.svg';
+  imageUrl = '/assets/images/banner-images/welcome.svg';
   coordination = [
     {
       title: 'Dr. Inga Haase',
