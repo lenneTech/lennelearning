@@ -7,4 +7,6 @@ export interface TextImageInterface {
   imageAlt?: string;
   iconClass?: string;
   reference?: string;
+  showBtn?: boolean;
+  subscriptionType?: string;
 }

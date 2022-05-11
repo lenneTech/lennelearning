@@ -1,56 +1,44 @@
 @import 'src/assets/scss/utils';
 
-.section-title {
-  margin-top: 4rem;
-  margin-bottom: 0px;
-  text-align: center;
-}
-
 .testimonials {
   margin-top: 70px;
   margin-bottom: 70px;
   line-height: 180%;
   margin-bottom: 0;
-  justify-content: center !important;
+  justify-content: center;
 
   @include media-breakpoint-up(lg) {
     margin-top: 70px;
     margin-bottom: 70px;
   }
 
-  .col-left {
-    @include media-breakpoint-up(lg) {
-      padding-left: 80px !important;
-    }
-  }
-
   .col-right {
-    padding-left: 80px !important;
-    padding-right: 80px !important;
+    padding-left: 80px;
+    padding-right: 80px;
 
     @include media-breakpoint-up(lg) {
-      padding-left: 60px !important;
+      padding-left: 60px;
     }
   }
 
   .description {
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
-    line-height: 2;
+    font-size: 14px;
+    line-height: 1.5;
 
-    @media (max-width: 767.98px) {
-      font-size: 14px;
-      line-height: 1.5;
+    @include media-breakpoint-up(md) {
+      font-size: 20px;
+      line-height: 2;
     }
   }
 
   .description-name {
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 2rem;
     text-align: right;
-    @media (max-width: 767.98px) {
-      font-size: 14px;
+    @include media-breakpoint-up(md) {
+      font-size: 16px;
     }
   }
 }

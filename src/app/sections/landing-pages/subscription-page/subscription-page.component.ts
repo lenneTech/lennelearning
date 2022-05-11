@@ -11,7 +11,7 @@ export class SubscriptionPageComponent implements OnInit {
   title = 'Abos und Aktionen';
   subtitle =
     'Du willst nur mal reinschnuppern? Du möchtest Dich neben Schule, Studium oder Beruf weiterbilden? Du suchst die passende Betreuung und Weiterbildung im unternehmerischen Kontext?   \n \n    Kein Problem, wir haben die passendenden Aktionen, Angebote und Abomodelle. Für individuellere Fragen und Wünsche kontaktiere uns gerne direkt.';
-  imageUrl = '../../assets/images/banner-images/Analytics.svg';
+  imageUrl = '../../assets/images/banner-images/analytics.svg';
   isAboActive = true;
   specificsIntern: string[] = [
     'Onlinevideos',
@@ -28,7 +28,7 @@ export class SubscriptionPageComponent implements OnInit {
     'Aufgabenkatalog, Musterlösungen und Tipps zu allen Lernpfaden',
   ];
   specificsCamp: string[] = [
-    'Tägliches 4-stündiges Intensivtraining mit individueller tutorieller Betreuung in unseren Schulungsräumlichkeiten (Mo-Fr)',
+    'Tägliches vierstündiges Intensivtraining mit individueller tutorieller Betreuung in unseren Schulungsräumlichkeiten (Mo. - Fr.)',
     'Begleitmaterial für das Selbststudium: Onlinevideos, Aufgabenkataloge, Tipps und Musterlösungen',
   ];
 

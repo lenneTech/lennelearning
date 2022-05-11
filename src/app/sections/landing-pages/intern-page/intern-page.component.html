@@ -21,7 +21,7 @@
     <div class="container">
       <div class="section">
         <h2 class="section-title">Das ist der Ablauf</h2>
-        <app-text-image-list></app-text-image-list>
+        <app-text-image-list [listElements]="listElements"></app-text-image-list>
       </div>
     </div>
     <app-academy-banner
@@ -42,7 +42,7 @@
             [autoplay]="{ delay: 15000 }"
             [loop]="true"
           >
-            <ng-template swiperSlide>
+            <ng-template swiperSlide *ngFor="let review of reviews">
               <div class="d-flex">
                 <div class="row mb-0 d-flex justify-content-center">
                   <div class="col-12 col-lg-8 col-right d-flex">
@@ -53,99 +53,11 @@
                     />
                     <div>
                       <p class="description">
-                        In meinem Praktikum habe ich einen Einblick in den Bereich der Webentwicklung erlangen können.
-                        Ich habe die Akademie absolviert und durfte zusammen mit einer anderen Praktikantin an einem
-                        Projekt arbeiten, wobei wir die verschiedensten Seiten der Webentwicklung zu sehen bekamen.
-                        Dabei war für mich das Miteinander am Arbeitsplatz sehr hilfreich, bei dem man sich direkt wie
-                        ein Teil des Teams gefühlt hat. Auch die Projekte der Mitarbeiter konnte ich sehen und meine
-                        Meinung dazu äußern. Insgesamt durfte ich viele Erfahrungen sammeln und durch die gemeinsame
-                        Arbeit am Projekt hatte ich auch viel Spaß dabei.
+                        {{ review.text }}
                       </p>
                       <p class="description-name">
-                        Torben Steinhanses <br />
-                        <b>studentischer Praktikant</b>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </ng-template>
-            <ng-template swiperSlide>
-              <div class="d-flex">
-                <div class="row mb-0 d-flex justify-content-center">
-                  <div class="col-12 col-lg-8 col-right d-flex">
-                    <img
-                      src="../../../../../assets/images/quote_illust_orange.svg"
-                      alt="Anführungszeichen umranded von einem orangenen Kreis"
-                      class="quote d-md-flex d-none"
-                    />
-                    <div>
-                      <p class="description">
-                        Im Praktikum habe ich einen sehr guten Einblick in den Beruf eines Webentwicklers bekommen. Ich
-                        bekam die Chance, an einem eigenen Projekt zu arbeiten, bei dem mich die Mitarbeiter täglich
-                        unterstützt haben. Auch bei unternehmensinternen Projekten durfte ich mitentwickeln und meine
-                        Meinung einbringen. Das Arbeiten im Team war superangenehm und offen, gerade vor Ort im Büro.
-                        Mir hat es sehr viel Spaß gemacht und ich konnte viele Erfahrungen sammeln.
-                      </p>
-                      <p class="description-name">
-                        Daniel König <br />
-                        <b>studentischer Praktikant</b>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </ng-template>
-            <ng-template swiperSlide>
-              <div class="d-flex">
-                <div class="row mb-0 d-flex justify-content-center">
-                  <div class="col-12 col-lg-8 col-right d-flex">
-                    <img
-                      src="../../../../../assets/images/quote_illust_orange.svg"
-                      alt="Anführungszeichen umranded von einem orangenen Kreis"
-                      class="quote d-md-flex d-none"
-                    />
-                    <div>
-                      <p class="description">
-                        Im Rahmen meiner Bachelorarbeit habe ich zusammen mit lenne.Tech eine App zur Erfassung von
-                        Wissensinhalten in der Softwareentwicklung entwickelt. Ich hatte vor allem im Frontend Bereich
-                        schon Vorwissen, aber mir fehlte die praktische Erfahrung, um das Projekt eigenständig
-                        umzusetzen. An der Stelle haben mich Kai und Pascal hervorragend betreut und mir gezeigt wie man
-                        strukturiert an umfangreicheren Anwendungen arbeitet. Darüber hinaus wurde mir auch im
-                        wissenschaftlichen Bereich der Arbeit und bei der Vorbereitung auf das Kolloquium sehr gut
-                        geholfen. Nach meiner Bachelorarbeit wurde ich als Werkstudent übernommen und arbeite nun mit
-                        ihnen im Team zusammen.
-                      </p>
-                      <p class="description-name">
-                        Florian Steinhanses <br />
-                        <b>Abschlussarbeitskandidat</b>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </ng-template>
-            <ng-template swiperSlide>
-              <div class="d-flex">
-                <div class="row mb-0 d-flex justify-content-center">
-                  <div class="col-12 col-lg-8 col-right d-flex">
-                    <img
-                      src="../../../../../assets/images/quote_illust_orange.svg"
-                      alt="Anführungszeichen umranded von einem orangenen Kreis"
-                      class="quote d-md-flex d-none"
-                    />
-                    <div>
-                      <p class="description">
-                        In meinem vierwöchigen Praktikum bei lenne.Tech habe ich mithilfe der Akademie sehr viel im
-                        Bereich Webentwicklung gelernt. Ich habe HTML, CSS, Javascript und Bootstrap mit den
-                        Video-Kursen kennengelernt und bei Rückfragen war jeder immer für mich da um diese zu klären.
-                        Sowohl beim wöchentlichen Meeting der Akademieteilnehmer:innen, aber auch vor Ort im Büro. Ich
-                        bleibe auch nach dem Praktikum weiter in der Akademie und möchte beim Thema Webentwicklung mehr
-                        lernen um nebenbei Webseiten zu entwickeln.
-                      </p>
-                      <p class="description-name">
-                        Steven Shenouda<br />
-                        <b>Schülerpraktikant</b>
+                        {{ review.title }} <br />
+                        <b>{{ review.subtitle }}</b>
                       </p>
                     </div>
                   </div>

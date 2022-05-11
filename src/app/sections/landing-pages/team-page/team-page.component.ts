@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MetaService } from 'src/app/modules/core/services/meta.service';
 
 @Component({
@@ -6,11 +6,11 @@ import { MetaService } from 'src/app/modules/core/services/meta.service';
   templateUrl: './team-page.component.html',
   styleUrls: ['./team-page.component.scss'],
 })
-export class TeamPageComponent {
+export class TeamPageComponent implements OnInit {
   title = 'Das Team';
   subtitle =
     'Lerne das Team von lenne.Learning kennen und finde die richtigen Ansprechpartner:innen für Deine Fragen rund um Koordination, Akademie oder Projektarbeit.';
-  imageUrl = '/assets/images/banner-images/WELCOME.svg';
+  imageUrl = '/assets/images/banner-images/welcome.svg';
   coordination = [
     {
       title: 'Dr. Inga Haase',

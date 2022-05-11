@@ -35,13 +35,12 @@
           der Gestaltung und sollte wohl überlegt sein. Die Auswahl einer Schriftart beeinflusst die Wirkung und
           Wahrnehmung der Inhalte enorm, so kann derselbe Inhalt mit zwei unterschiedlich gewählten Schriften z. B. ein
           Lächeln oder einen mißtrauischen Blick über die Schulter zur Folge haben:
-          <img
-            src="/assets/images/academy-images/fonts-matter.jpg"
-            title="Fonts matter"
-            alt="Zwei Fonts im Vergleich"
-            width="500"
-            height="500"
-          />
+          <academy-picture
+            [image]="'/assets/images/academy-images/fonts-matter.jpg'"
+            [alt]="'Zwei Fonts im Vergleich'"
+            imgClass="s-500"
+          >
+          </academy-picture>
           <a href="https://i.pinimg.com/originals/b2/4a/f9/b24af93a17f1fdfba5819f32dced8f5b.jpg" taskLink
             >[pinterest.com]</a
           >
@@ -71,7 +70,7 @@
     id="task-3"
     section="design"
     [image]="{
-      url: '../../assets/images/academy-images/flat-design.png',
+      url: '../../assets/images/academy-images/flat_design.png',
       alt: 'Screenshot der Microsoft Webseite',
       reference: 'https://www.microsoft.com/de-de/store/apps/windows'
     }"
@@ -219,8 +218,8 @@
     id="task-9"
     section="design"
     [image]="{
-      url: '../../assets/images/academy-images/farbschemas.png',
-      alt: 'Gegenüberstellung von Farbschemas'
+      url: '../../assets/images/academy-images/farbschemata.png',
+      alt: 'Gegenüberstellung von Farbschemata'
     }"
   >
     <div title>Farbschemata</div>

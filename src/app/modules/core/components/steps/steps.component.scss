@@ -15,7 +15,7 @@
 }
 
 .step-space-top {
-  @include media-breakpoint-up('lg') {
+  @include media-breakpoint-up(lg) {
     margin-top: 180px;
   }
 }

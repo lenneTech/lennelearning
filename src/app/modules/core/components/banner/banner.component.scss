@@ -22,7 +22,7 @@
   height: auto;
 }
 
-@include media-breakpoint-up('md') {
+@include media-breakpoint-up(md) {
   .banner-text {
     margin-top: 52px;
     white-space: pre-line;

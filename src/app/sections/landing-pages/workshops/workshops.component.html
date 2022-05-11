@@ -1,0 +1,32 @@
+<nb-layout>
+  <nb-layout-header>
+    <app-header></app-header>
+  </nb-layout-header>
+
+  <nb-layout-column class="p-0">
+    <div class="container">
+      <div class="section">
+        <app-banner
+          [title]="title"
+          [subtitle]="subtitle"
+          [imageUrl]="imageUrl"
+          [entryPointId]="'praktikant'"
+          [showContactBtn]="true"
+        ></app-banner>
+      </div>
+    </div>
+    <div class="container-fluid pb-4 pt-5 bg-primary-300"></div>
+    <div class="container">
+      <div class="section">
+        <app-text-image-list [listElements]="listElements"></app-text-image-list>
+      </div>
+    </div>
+    <app-price-banner
+      textBanner="Ist der passende Workshop nicht dabei? Dann nimm Kontakt mit uns auf und wir besprechen gemeinsam, wie wir Dir weiterhelfen können."
+    >
+    </app-price-banner>
+  </nb-layout-column>
+  <nb-layout-footer fixed>
+    <app-footer></app-footer>
+  </nb-layout-footer>
+</nb-layout>
