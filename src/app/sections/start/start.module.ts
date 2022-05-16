@@ -14,6 +14,7 @@ import { ContactPageComponent } from '../landing-pages/contact-page/contact-page
 import { SubscriptionPageComponent } from '../landing-pages/subscription-page/subscription-page.component';
 import { TeamPageComponent } from '../landing-pages/team-page/team-page.component';
 import { WorkshopsComponent } from '../landing-pages/workshops/workshops.component';
+import { SponsorsPageComponent } from '../landing-pages/sponsors-page/sponsors-page.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { WorkshopsComponent } from '../landing-pages/workshops/workshops.compone
     SubscriptionPageComponent,
     TeamPageComponent,
     WorkshopsComponent,
+    SponsorsPageComponent,
   ],
   imports: [
     StartRoutingModule,

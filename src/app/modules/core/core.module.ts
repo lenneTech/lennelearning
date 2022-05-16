@@ -41,6 +41,7 @@ import { MailSentDialogComponent } from './components/mail-sent-dialog/mail-sent
 import { PriceBannerComponent } from './components/price-banner/price-banner.component';
 import { InquiryComponent } from './components/inquiry/inquiry.component';
 import { PriceCardComponent } from './components/price-card/price-card.component';
+import { SponsorsCardComponent } from './components/sponsors-card/sponsors-card.component';
 
 @NgModule({
   imports: [
@@ -75,6 +76,7 @@ import { PriceCardComponent } from './components/price-card/price-card.component
     ContactFormComponent,
     PriceBannerComponent,
     InquiryComponent,
+    SponsorsCardComponent,
 
     // Dialogs
     HelperDialogComponent,
@@ -137,6 +139,7 @@ import { PriceCardComponent } from './components/price-card/price-card.component
     ContactFormComponent,
     PriceBannerComponent,
     InquiryComponent,
+    SponsorsCardComponent,
   ],
 })
 export class CoreModule {}
