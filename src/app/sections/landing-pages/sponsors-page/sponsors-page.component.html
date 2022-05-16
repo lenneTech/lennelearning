@@ -1,0 +1,27 @@
+<nb-layout>
+  <nb-layout-header>
+    <app-header></app-header>
+  </nb-layout-header>
+
+  <nb-layout-column class="p-0">
+    <div class="container">
+      <div class="section">
+        <app-banner [title]="title" [subtitle]="subtitle" [imageUrl]="imageUrl" [showContactBtn]="true"></app-banner>
+      </div>
+    </div>
+    <div class="container-fluid bg-primary-500">
+      <h2 class="banner-title">Die Unternehmen</h2>
+    </div>
+    <div class="section container d-flex justify-content-lg-between justify-content-center flex-wrap">
+      <app-sponsors-card *ngFor="let sponsor of sponsors" [sponsor]="sponsor"></app-sponsors-card>
+    </div>
+    <app-price-banner
+      textBanner="Ihr möchtet die Aus- und Weiterbildung sowie die Fachkräftesicherung im Bereich Softwareentwicklung in unserer Region fördern und sucht gut ausgebildete Nachwuchskräfte? <br> <br>Nehmt Kontakt mit uns auf und informiert Euch über die Rahmenbedingungen und werdet Teil unseres Unternehmensnetzwerks."
+      imageHeight="200"
+    >
+    </app-price-banner>
+  </nb-layout-column>
+  <nb-layout-footer fixed>
+    <app-footer></app-footer>
+  </nb-layout-footer>
+</nb-layout>
