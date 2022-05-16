@@ -15,7 +15,7 @@ export class SponsorsPageComponent implements OnInit {
 
   sponsors: Sponsor[] = [
     {
-      imageUrl: '../../assets/images/sponsor-images/tracto.png',
+      imageUrl: '../../assets/images/sponsor-images/tracto.svg',
       imageAlt: 'Logo von Tracto',
       title: 'Wir suchen Nachwuchs im Bereich Entwicklung',
       careerType: ['Werkstudierende', 'Auszubildende', 'Praktikant:innen'],
@@ -25,7 +25,7 @@ export class SponsorsPageComponent implements OnInit {
       isOnlySponsor: false,
     },
     {
-      imageUrl: '../../assets/images/sponsor-images/mennekes.png',
+      imageUrl: '../../assets/images/sponsor-images/mennekes.svg',
       imageAlt: 'Logo von Mennekes',
       title: 'Wir suchen Nachwuchs im Bereich Entwicklung',
       careerType: ['Werkstudierende', 'Auszubildende', 'Praktikant:innen'],
@@ -35,7 +35,7 @@ export class SponsorsPageComponent implements OnInit {
       isOnlySponsor: false,
     },
     {
-      imageUrl: '../../assets/images/sponsor-images/ontavio.png',
+      imageUrl: '../../assets/images/sponsor-images/ontavio.svg',
       imageAlt: 'Logo von Ontavio',
       title: 'Wir suchen Nachwuchs im Bereich Entwicklung',
       careerType: ['Werkstudierende', 'Auszubildende', 'Praktikant:innen'],
