@@ -41,9 +41,9 @@
               data-cy="dropdown-menu"
               [ngStyle]="{
                 color:
-                  getCurrentRoute().includes('/berufsinteressierte') ||
-                  getCurrentRoute().includes('/praktikanten') ||
-                  getCurrentRoute().includes('/unternehmen')
+                  getCurrentRoute().endsWith('/berufsinteressierte') ||
+                  getCurrentRoute().endsWith('/praktikanten') ||
+                  getCurrentRoute().endsWith('/unternehmen')
                     ? 'rgba(0, 0, 0, 0.9)'
                     : 'rgba(0, 0, 0, 0.55)'
               }"
@@ -52,9 +52,9 @@
             </a>
             <app-underline-animation
               currentRoute="{{
-                getCurrentRoute().includes('/berufsinteressierte') ||
-                  getCurrentRoute().includes('/praktikanten') ||
-                  getCurrentRoute().includes('/unternehmen')
+                getCurrentRoute().endsWith('/berufsinteressierte') ||
+                  getCurrentRoute().endsWith('/praktikanten') ||
+                  getCurrentRoute().endsWith('/unternehmen')
               }}"
             ></app-underline-animation>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -66,14 +66,14 @@
                   data-cy="dropdown-item"
                   >Berufsinteressierte </a
                 ><app-underline-animation
-                  currentRoute="{{ getCurrentRoute().includes('/berufsinteressierte') }}"
+                  currentRoute="{{ getCurrentRoute().endsWith('/berufsinteressierte') }}"
                 ></app-underline-animation>
               </li>
               <li class="item">
                 <a class="dropdown-item" routerLink="/praktikanten" routerLinkActive="active" data-cy="dropdown-item"
                   >Praktikant:innen</a
                 ><app-underline-animation
-                  currentRoute="{{ getCurrentRoute().includes('/praktikanten') }}"
+                  currentRoute="{{ getCurrentRoute().endsWith('/praktikanten') }}"
                 ></app-underline-animation>
               </li>
               <li class="item">
@@ -81,7 +81,7 @@
                   >Unternehmen</a
                 >
                 <app-underline-animation
-                  currentRoute="{{ getCurrentRoute().includes('/unternehmen') }}"
+                  currentRoute="{{ getCurrentRoute().endsWith('/unternehmen') }}"
                 ></app-underline-animation>
               </li>
             </ul>
@@ -99,12 +99,12 @@
               >Workshops</a
             >
             <app-underline-animation
-              currentRoute="{{ getCurrentRoute().includes('/workshops') }}"
+              currentRoute="{{ getCurrentRoute().endsWith('/workshops') }}"
             ></app-underline-animation>
           </li>
           <li class="nav-item item">
             <a class="nav-link scroll-link" routerLinkActive="active" routerLink="/team" data-cy="nav-item">Team</a>
-            <app-underline-animation currentRoute="{{ getCurrentRoute().includes('/team') }}"></app-underline-animation>
+            <app-underline-animation currentRoute="{{ getCurrentRoute().endsWith('/team') }}"></app-underline-animation>
           </li>
 
           <li class="nav-item item">
@@ -112,7 +112,19 @@
               >Abos & Aktionen</a
             >
             <app-underline-animation
-              currentRoute="{{ getCurrentRoute().includes('/abonnements') }}"
+              currentRoute="{{ getCurrentRoute().endsWith('/abonnements') }}"
+            ></app-underline-animation>
+          </li>
+          <li class="nav-item item">
+            <a
+              class="nav-link scroll-link"
+              routerLinkActive="active"
+              routerLink="/unternehmensnetzwerk"
+              data-cy="nav-item"
+              >Unternehmensnetzwerk</a
+            >
+            <app-underline-animation
+              currentRoute="{{ getCurrentRoute().endsWith('/unternehmensnetzwerk') }}"
             ></app-underline-animation>
           </li>
 
@@ -121,7 +133,7 @@
               >Kontakt</a
             >
             <app-underline-animation
-              currentRoute="{{ getCurrentRoute().includes('/kontakt') }}"
+              currentRoute="{{ getCurrentRoute().endsWith('/kontakt') }}"
             ></app-underline-animation>
           </li>
         </ul>
