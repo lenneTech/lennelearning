@@ -30,7 +30,7 @@
             "stylePreprocessorOptions": {
               "includePaths": ["src/assets/scss"]
             },
-            "assets": ["src/favicon.ico", "src/assets", "src/robots.txt"],
+            "assets": ["src/favicon.ico", "src/assets", "src/robots.txt", "src/sitemap.xml"],
             "styles": [
               "src/assets/scss/main.scss",
               "node_modules/highlight.js/styles/monokai.css",
