@@ -12,7 +12,6 @@ export class AcademyPictureComponent implements OnInit {
   @Input() reference: string;
   webpImage: string;
   imageType: string;
-  constructor() {}
 
   ngOnInit() {
     switch (this.image.slice(this.image.lastIndexOf('.') + 1)) {

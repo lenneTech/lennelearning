@@ -12,5 +12,4 @@ export class DialogConfirmComponent {
   @Input() cardHeight: string;
 
   DialogModeEnum = DialogModeEnum;
-  constructor() {}
 }

@@ -7,5 +7,4 @@ import { Component, ViewChild } from '@angular/core';
 })
 export class QuestionsComponent {
   @ViewChild('extraQuestion') extraQuestion;
-  constructor() {}
 }

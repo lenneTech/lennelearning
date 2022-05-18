@@ -33,6 +33,4 @@ export class TutorCardsComponent {
       contact: 'florian.steinhanses@lenne.tech',
     },
   ];
-
-  constructor() {}
 }

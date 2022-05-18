@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
 })
 export class GoalsComponent {
   imageUrl = '../../assets/images/banner-images/features.svg';
-  constructor() {}
 }

@@ -10,8 +10,6 @@ export class UnderlineAnimationComponent implements AfterViewInit {
   @ViewChild('lineLeft') lineLeft: ElementRef<HTMLDivElement>;
   @ViewChild('lineRight') lineRight: ElementRef<HTMLDivElement>;
 
-  constructor() {}
-
   ngAfterViewInit(): void {
     if (this.currentRoute.toString() === 'true') {
       //This timeout is set to run the animation properly
