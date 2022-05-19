@@ -53,3 +53,24 @@
     max-width: 600px;
   }
 }
+.flying-letter {
+  width: 40px;
+  margin-right: 50px;
+  object-fit: contain;
+}
+.img-rounded {
+  object-fit: cover;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s;
+  &:hover {
+    box-shadow: rgb(0 0 0 / 15%) 0px 0px 15px 11px;
+    transition: 0.5s;
+  }
+}
+.accordion-image {
+  width: 100%;
+  height: auto;
+}
