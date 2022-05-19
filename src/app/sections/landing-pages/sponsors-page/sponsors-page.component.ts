@@ -48,11 +48,10 @@ export class SponsorsPageComponent implements OnInit {
   constructor(private metaService: MetaService) {}
 
   ngOnInit(): void {
-    //MetaTags will be updated due to LTAK-77
     this.metaService.updateMetaTags(
-      'lenne.Learning - Du interessierst Dich für App- und Webentwicklung?',
-      'Wir bieten Berufsinteressierten, Schülern, Hobbyentwicklern und Quereinsteigern Einblicke in verschiedene Berufsfelder und Anforderungen der Softwareentwicklung.',
-      'lenne.learning, lennelearning, beruf, academy, online, akademie, web, interested'
+      'Das lenne.Learning Unternehmensnetzwerk - sei dabei!',
+      'Gemeinsam fördern die beteiligten Unternehmen in unserer Region die Aus- und Weiterbildung sowie die Fachkräftesicherung im Bereich der Softwareentwicklung.',
+      'Unternehmensnetzwerk, Softwareentwicklung, Ausbildung, Weiterbildung, Wissenschaft, Fachkräftesicherung, Nachwuchs'
     );
   }
 }
