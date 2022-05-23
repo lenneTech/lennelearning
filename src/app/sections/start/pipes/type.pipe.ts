@@ -5,8 +5,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class TypePipe implements PipeTransform {
   transform(value: any, args?: any): any {
-    return value.filter((member) => {
-      return member.type.includes(args);
+    return value.filter((item) => {
+      return item.type.includes(args);
     });
   }
 }

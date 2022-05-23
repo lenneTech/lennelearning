@@ -38,53 +38,27 @@
       >
         <app-price-card
           class="col-12 col-md-6 col-lg-6 col-xl-4 d-flex justify-content-center"
-          cardTitle="Free"
-          cardDescription="Erste Einblicke in das Berufsfeld und Elemente der Softwareentwicklung im Rahmen des Lernpfades Berufsfelderkundung."
-          cardPrice="0 €"
-          [cardSpecifics]="['Texte, Aufgabenkatalog & Tipps zum Lernpfad Berufsfelderkundung']"
-          cardImageUrl="../../assets/images/entry-point-images/berufsinteressent.svg"
-          subscriptionType="Free"
-        >
-        </app-price-card>
-
-        <app-price-card
-          class="col-12 col-md-6 col-lg-6 col-xl-4 d-flex justify-content-center"
-          cardTitle="Praktikum"
-          cardDescription="Je nach Art und Dauer des Praktikums sowie den jeweiligen Vorkenntnissen der Praktikant:innen können unterschiedliche Lernpfade geeignet sein: Berufsfeld, Praktikum, Sprint, Frontend, Backend oder Standard."
-          cardPrice="0 € / kostenpflichtig"
-          cardPriceDetails="0 € für unsere eigenen Praktikant:innen, kostenpflichtig für externe Praktikant:innen."
-          [cardSpecifics]="specificsIntern"
-          cardImageUrl="../../assets/images/entry-point-images/praktikant.svg"
-          subscriptionType="Praktikum"
+          [subscription]="subscriptions[0]"
         >
         </app-price-card>
         <app-price-card
           class="col-12 col-md-6 col-lg-6 col-xl-4 d-flex justify-content-center"
-          cardTitle="Unternehmen"
-          cardDescription="Für alle, die sich oder ihre Unternehmensangehörigen weiterbilden möchten: Je nach Zielsetzung und Vorwissen können unterschiedliche Lernpfade gewählt werden:  Sprint, Praktikum, Unternehmen, Frontend, Backend oder Standard."
-          cardPrice="kostenpflichtig"
-          [cardSpecifics]="specificsCompany"
-          cardPriceDetails="für Unternehmer:innen, Gründer:innen, Auszubildende, Werkstudent:innen und Mitarbeiter:innen."
-          cardImageUrl="../../assets/images/entry-point-images/company.svg"
-          subscriptionType="Unternehmen"
+          [subscription]="subscriptions[1]"
+        >
+        </app-price-card>
+        <app-price-card
+          class="col-12 col-md-6 col-lg-6 col-xl-4 d-flex justify-content-center"
+          [subscription]="subscriptions[2]"
         >
         </app-price-card>
       </div>
       <div class="row" *ngIf="!isAboActive">
         <div class="card-container">
           <app-price-card
-            cardPreTitle="Unser Angebot für Dein Unternehmen"
-            cardTitle="Azubi Sommercamp 2022"
-            cardDescription="In einem vierwöchigen Intensivtraining vom 27.06 - 22.07.2022 bereiten wir angehende Auszubildende im Entwicklungsbereich auf die Unternehmenspraxis vor."
-            cardPrice="2000 €"
-            cardPriceDetails="Pro Person"
-            [cardSpecifics]="specificsCamp"
-            cardImageUrl="../../assets/images/banner-images/getstarted.svg"
+            [subscription]="actions[0]"
             [isActionCard]="true"
-            subscriptionType="Sommercamp 2022"
             class="d-flex justify-content-center"
-          >
-          </app-price-card>
+          ></app-price-card>
         </div>
       </div>
     </div>
