@@ -20,14 +20,14 @@
         <nb-accordion-item expanded="true" data-cy="accordion-item">
           <nb-accordion-item-header> Koordination </nb-accordion-item-header>
           <nb-accordion-item-body class="container p-0">
-            <div class="row justify-content-between member" *ngFor="let member of coordination">
+            <div class="row justify-content-between member" *ngFor="let member of team | type: 'Coordination'">
               <div class="col-lg-4 d-flex justify-content-center">
                 <nb-card class="card">
                   <nb-card-body class="d-flex align-items-top justify-content-around">
                     <div class="d-flex flex-column align-items-center">
                       <academy-picture [image]="member.imageUrl" [alt]="member.imageAlt" imgClass="team-img">
                       </academy-picture>
-                      <h3 class="card-title mt-3">{{ member.title }}</h3>
+                      <h3 class="card-title mt-3">{{ member.name }}</h3>
                       <a [href]="'tel:' + member.phoneNumber" class="link mt-2 mb-2">
                         <i class="bi bi-telephone-fill"></i> <span>{{ member.phoneNumber }}</span></a
                       >
@@ -65,14 +65,14 @@
         <nb-accordion-item data-cy="accordion-item">
           <nb-accordion-item-header> Tutoren in der Akademie </nb-accordion-item-header>
           <nb-accordion-item-body class="container p-0">
-            <div class="row justify-content-between member" *ngFor="let member of tutors">
+            <div class="row justify-content-between member" *ngFor="let member of team | type: 'Tutor'">
               <div class="col-lg-4 d-flex justify-content-center">
                 <nb-card class="card">
                   <nb-card-body class="d-flex align-items-top justify-content-around">
                     <div class="d-flex flex-column align-items-center">
                       <academy-picture [image]="member.imageUrl" [alt]="member.imageAlt" imgClass="team-img">
                       </academy-picture>
-                      <h3 class="card-title mt-3">{{ member.title }}</h3>
+                      <h3 class="card-title mt-3">{{ member.name }}</h3>
 
                       <a [href]="'mailto:' + member.contact" class="link mt-3 mb-3">
                         <i class="bi bi-envelope-fill"></i> <span>{{ member.contact }}</span></a
@@ -109,40 +109,42 @@
         <nb-accordion-item data-cy="accordion-item">
           <nb-accordion-item-header> Betreuer für den Bereich der eigenen Projekte </nb-accordion-item-header>
           <nb-accordion-item-body class="container p-0">
-            <div class="row justify-content-between member" *ngFor="let member of supervisorProjects">
-              <div class="col-lg-4 d-flex justify-content-center">
-                <nb-card class="card">
-                  <nb-card-body class="d-flex align-items-top justify-content-around">
-                    <div class="d-flex flex-column align-items-center">
-                      <academy-picture [image]="member.imageUrl" [alt]="member.imageAlt" imgClass="team-img">
-                      </academy-picture>
-                      <h3 class="card-title mt-3">{{ member.title }}</h3>
+            <div>
+              <div class="row justify-content-between member" *ngFor="let member of team | type: 'SupervisorProjects'">
+                <div class="col-lg-4 d-flex justify-content-center">
+                  <nb-card class="card">
+                    <nb-card-body class="d-flex align-items-top justify-content-around">
+                      <div class="d-flex flex-column align-items-center">
+                        <academy-picture [image]="member.imageUrl" [alt]="member.imageAlt" imgClass="team-img">
+                        </academy-picture>
+                        <h3 class="card-title mt-3">{{ member.name }}</h3>
 
-                      <a [href]="'mailto:' + member.contact" class="link mt-3 mb-3">
-                        <i class="bi bi-envelope-fill"></i> <span>{{ member.contact }}</span></a
-                      >
+                        <a [href]="'mailto:' + member.contact" class="link mt-3 mb-3">
+                          <i class="bi bi-envelope-fill"></i> <span>{{ member.contact }}</span></a
+                        >
+                      </div>
+                    </nb-card-body>
+                  </nb-card>
+                </div>
+                <div class="specialty-card col-lg-6">
+                  <h3 class="specialty-title">
+                    Wenn Du Dein eigenes Projekt bearbeitest, bin ich bei folgenden Tools und Technologien der richtige
+                    Ansprechpartner:
+                  </h3>
+                  <div class="row justify-content-around mt-5">
+                    <div class="col-6">
+                      <h4 class="specialty-header">Frontend</h4>
+                      <div class="d-flex align-items-center mt-4 mb-4" *ngFor="let item of member.frontend">
+                        <img loading="lazy" [src]="item.imageUrl" [alt]="item.imageAlt" class="specialty-image" />
+                        <span class="ms-2">{{ item.title }}</span>
+                      </div>
                     </div>
-                  </nb-card-body>
-                </nb-card>
-              </div>
-              <div class="specialty-card col-lg-6">
-                <h3 class="specialty-title">
-                  Wenn Du Dein eigenes Projekt bearbeitest, bin ich bei folgenden Tools und Technologien der richtige
-                  Ansprechpartner:
-                </h3>
-                <div class="row justify-content-around mt-5">
-                  <div class="col-6">
-                    <h4 class="specialty-header">Frontend</h4>
-                    <div class="d-flex align-items-center mt-4 mb-4" *ngFor="let item of member.frontend">
-                      <img loading="lazy" [src]="item.imageUrl" [alt]="item.imageAlt" class="specialty-image" />
-                      <span class="ms-2">{{ item.title }}</span>
-                    </div>
-                  </div>
-                  <div class="col-6">
-                    <h4 class="specialty-header">Backend</h4>
-                    <div class="d-flex align-items-center mt-4 mb-4" *ngFor="let item of member.backend">
-                      <img loading="lazy" [src]="item.imageUrl" [alt]="item.imageAlt" class="specialty-image" />
-                      <span class="ms-2">{{ item.title }}</span>
+                    <div class="col-6">
+                      <h4 class="specialty-header">Backend</h4>
+                      <div class="d-flex align-items-center mt-4 mb-4" *ngFor="let item of member.backend">
+                        <img loading="lazy" [src]="item.imageUrl" [alt]="item.imageAlt" class="specialty-image" />
+                        <span class="ms-2">{{ item.title }}</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -153,14 +155,14 @@
         <nb-accordion-item data-cy="accordion-item">
           <nb-accordion-item-header> Betreuer:innen für den Bereich der Kooperationsprojekte </nb-accordion-item-header>
           <nb-accordion-item-body class="container p-0">
-            <div class="row justify-content-between member" *ngFor="let member of design">
+            <div class="row justify-content-between member" *ngFor="let member of team | type: 'Design'">
               <div class="col-lg-4 d-flex justify-content-center">
                 <nb-card class="card">
                   <nb-card-body class="d-flex align-items-top justify-content-around">
                     <div class="d-flex flex-column align-items-center">
                       <academy-picture [image]="member.imageUrl" [alt]="member.imageAlt" imgClass="team-img">
                       </academy-picture>
-                      <h3 class="card-title mt-3">{{ member.title }}</h3>
+                      <h3 class="card-title mt-3">{{ member.name }}</h3>
 
                       <a [href]="'mailto:' + member.contact" class="link mt-3 mb-3">
                         <i class="bi bi-envelope-fill"></i> <span>{{ member.contact }}</span></a
@@ -193,14 +195,14 @@
               </div>
             </div>
 
-            <div class="row justify-content-between member" *ngFor="let member of supervisorCoop">
+            <div class="row justify-content-between member" *ngFor="let member of team | type: 'SupervisorCoop'">
               <div class="col-lg-4 d-flex justify-content-center">
                 <nb-card class="card">
                   <nb-card-body class="d-flex align-items-top justify-content-around">
                     <div class="d-flex flex-column align-items-center">
                       <academy-picture [image]="member.imageUrl" [alt]="member.imageAlt" imgClass="team-img">
                       </academy-picture>
-                      <h3 class="card-title mt-3">{{ member.title }}</h3>
+                      <h3 class="card-title mt-3">{{ member.name }}</h3>
 
                       <a [href]="'mailto:' + member.contact" class="link mt-3 mb-3">
                         <i class="bi bi-envelope-fill"></i> <span>{{ member.contact }}</span></a
