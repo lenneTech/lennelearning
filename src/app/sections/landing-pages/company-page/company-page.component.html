@@ -19,7 +19,7 @@
       <app-brand-banner></app-brand-banner>
     </div>
 
-    <div class="container mb-3 mt-3">
+    <div class="container mb-80 mt-3">
       <app-steps [steps]="steps"></app-steps>
     </div>
     <app-academy-banner
@@ -28,20 +28,20 @@
     >
     </app-academy-banner>
 
-    <div class="container-fluid p-0 mt-5 mb overflow-hidden">
+    <div class="container-fluid p-0 mt-96 mb overflow-hidden">
       <h2 class="text-center">Deine Vorteile auf einen Blick</h2>
       <div class="section">
         <app-features [features]="features"></app-features>
         <img
           src="../../../../../assets/images/banner-images/features.svg"
           alt="Illustration einer Person auf einer Hoverboard-Rakete"
-          class="hover-img d-none d-xl-block mx-auto mb-3 mt-0"
+          class="hover-img d-none d-xl-block mx-auto mb-80 mt-0"
           loading="lazy"
         />
       </div>
     </div>
 
-    <div class="container-fluid mt-5">
+    <div class="container-fluid mt-96">
       <h2 class="text-center fw-bold">Das sagen unsere Unternehmenskund:innen</h2>
       <div class="section">
         <app-company-testimonial [review]="review" *ngFor="let review of reviews"></app-company-testimonial>

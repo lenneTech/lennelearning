@@ -53,13 +53,11 @@
         </app-price-card>
       </div>
       <div class="row" *ngIf="!isAboActive">
-        <div class="card-container">
-          <app-price-card
-            [subscription]="actions[0]"
-            [isActionCard]="true"
-            class="d-flex justify-content-center"
-          ></app-price-card>
-        </div>
+        <app-price-card
+          [subscription]="actions[0]"
+          [isActionCard]="true"
+          class="d-flex justify-content-center"
+        ></app-price-card>
       </div>
     </div>
 
