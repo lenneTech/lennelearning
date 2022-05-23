@@ -38,10 +38,10 @@ export class SponsorsPageComponent implements OnInit {
       imageUrl: '../../assets/images/sponsor-images/ontavio.svg',
       imageAlt: 'Logo von Ontavio',
       title: 'Wir suchen Nachwuchs im Bereich Entwicklung',
-      careerType: ['Werkstudierende', 'Auszubildende', 'Praktikant:innen'],
+      careerType: ['Werkstudierende', 'Auszubildende', 'Praktikant:innen', 'Trainees', 'Juniorentwickler:innen'],
       link: 'https://www.ontavio.de/karriere',
       statement:
-        'Statement warum Aus- und Weiterbildung und Fachkräftesicherung im Bereich der Softwareentwicklung wichtig ist.',
+        'Durch unseren Software-Stack aus modernen Web-Technologien ist es heute deutlich anspruchsvoller, qualifizierte Fachkräfte mit passendem Background zu finden. Ein fundiertes Onboarding, interne Traineeprogramme sowie fortlaufende Aus- und Weiterbildungsmaßnahmen sind deshalb elementar für uns, um eine gleichbleibend hohe Teamqualität zu gewährleisten.',
       isOnlySponsor: true,
     },
   ];
