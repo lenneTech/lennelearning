@@ -4,7 +4,7 @@ import { NbMenuItem, NbMenuService, NbSidebarService } from '@nebular/theme';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
 import { DialogService } from 'src/app/modules/core/services/dialog.service';
-import { ScrollService, StorageService } from '@lenne.tech/ng-base';
+import { ScrollService, StorageService } from '@lenne.tech/ng-base/shared';
 import { Section } from 'src/app/modules/core/interfaces/section.interface';
 import { EntryPoint } from '../../modules/core/interfaces/entry-point.interface';
 import { EntryPointService } from '../../modules/core/services/entry-point.service';

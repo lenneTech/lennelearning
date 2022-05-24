@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { StorageService } from '@lenne.tech/ng-base';
+import { StorageService } from '@lenne.tech/ng-base/shared';
 import { EntryPoint } from '../interfaces/entry-point.interface';
 import { SectionService } from './section.service';
 import { Router } from '@angular/router';

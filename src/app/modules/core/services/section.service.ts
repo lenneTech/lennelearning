@@ -1,6 +1,6 @@
 import { ElementRef, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { StorageService } from '@lenne.tech/ng-base';
+import { StorageService } from '@lenne.tech/ng-base/shared';
 import { NbMenuItem } from '@nebular/theme';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Section } from '../interfaces/section.interface';
