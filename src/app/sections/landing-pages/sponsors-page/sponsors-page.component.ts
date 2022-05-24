@@ -24,16 +24,16 @@ export class SponsorsPageComponent implements OnInit {
         'Wir erleben bei Tracto tagtäglich welchen immer größeren Stellenwert Software auf unseren Maschinen, aber auch bei angeschlossenen Dienste einnimmt. Eine entsprechende Aus- und Weiterbildung in dem Bereich ist für unsere Mitarbeiter daher unabdingbar.',
       isOnlySponsor: false,
     },
-    {
-      imageUrl: '../../assets/images/sponsor-images/mennekes.svg',
-      imageAlt: 'Logo von Mennekes',
-      title: 'Wir suchen Nachwuchs im Bereich Entwicklung',
-      careerType: ['Werkstudierende', 'Auszubildende', 'Praktikant:innen'],
-      link: 'https://www.mennekes.de/karriere/ueberblick/',
-      statement:
-        'Statement warum Aus- und Weiterbildung und Fachkräftesicherung im Bereich der Softwareentwicklung wichtig ist.',
-      isOnlySponsor: false,
-    },
+    // {
+    //   imageUrl: '../../assets/images/sponsor-images/mennekes.svg',
+    //   imageAlt: 'Logo von Mennekes',
+    //   title: 'Wir suchen Nachwuchs im Bereich Entwicklung',
+    //   careerType: ['Werkstudierende', 'Auszubildende', 'Praktikant:innen'],
+    //   link: 'https://www.mennekes.de/karriere/ueberblick/',
+    //   statement:
+    //     'Statement warum Aus- und Weiterbildung und Fachkräftesicherung im Bereich der Softwareentwicklung wichtig ist.',
+    //   isOnlySponsor: false,
+    // },
     {
       imageUrl: '../../assets/images/sponsor-images/ontavio.svg',
       imageAlt: 'Logo von Ontavio',

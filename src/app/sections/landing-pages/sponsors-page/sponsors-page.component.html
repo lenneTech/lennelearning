@@ -16,9 +16,7 @@
       class="section container d-flex flex-wrap justify-content-center justify-content-lg-evenly"
       [ltMatchHeight]="!mobile ? ['card', 'card-title', 'list', 'career-btn', 'card-statement'] : null"
     >
-      <app-sponsors-card [sponsor]="sponsors[0]"></app-sponsors-card>
-      <!-- <app-sponsors-card [sponsor]="sponsors[1]"></app-sponsors-card> -->
-      <app-sponsors-card [sponsor]="sponsors[2]"></app-sponsors-card>
+      <app-sponsors-card *ngFor="let sponsor of sponsors" [sponsor]="sponsor"></app-sponsors-card>
     </div>
     <app-price-banner
       textBanner="Ihr möchtet die Aus- und Weiterbildung sowie die Fachkräftesicherung im Bereich Softwareentwicklung in unserer Region fördern und sucht gut ausgebildete Nachwuchskräfte? <br> <br>Nehmt Kontakt mit uns auf und informiert Euch über die Rahmenbedingungen und werdet Teil unseres Unternehmensnetzwerks."
