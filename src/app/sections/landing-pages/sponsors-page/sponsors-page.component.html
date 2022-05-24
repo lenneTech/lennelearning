@@ -12,7 +12,10 @@
     <div class="container-fluid bg-primary-500">
       <h2 class="banner-title">Die Unternehmen</h2>
     </div>
-    <div class="section container d-flex justify-content-lg-between justify-content-center flex-wrap">
+    <div
+      class="section container d-flex flex-wrap justify-content-center justify-content-lg-evenly"
+      [ltMatchHeight]="!mobile ? ['card', 'card-title', 'list', 'career-btn', 'card-statement'] : null"
+    >
       <app-sponsors-card *ngFor="let sponsor of sponsors" [sponsor]="sponsor"></app-sponsors-card>
     </div>
     <app-price-banner

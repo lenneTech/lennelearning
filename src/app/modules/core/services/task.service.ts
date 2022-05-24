@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { StorageService } from '@lenne.tech/ng-base';
+import { StorageService } from '@lenne.tech/ng-base/shared';
 import { Section } from '../interfaces/section.interface';
 
 @Injectable({
