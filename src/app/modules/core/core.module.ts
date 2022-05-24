@@ -23,14 +23,6 @@ import { HelperDialogComponent } from './components/helper-dialog/helper-dialog.
 import { InfoCardComponent } from './components/info-card/info-card.component';
 import { SolutionDialogComponent } from './components/solution-dialog/solution-dialog.component';
 import { StepsComponent } from './components/steps/steps.component';
-import { AngularSvgComponent } from './components/svg-components/angular-svg/angular-svg.component';
-import { BootstrapSvgComponent } from './components/svg-components/bootstrap-svg/bootstrap-svg.component';
-import { CssSvgComponent } from './components/svg-components/css-svg/css-svg.component';
-import { HtmlSvgComponent } from './components/svg-components/html-svg/html-svg.component';
-import { IonicSvgComponent } from './components/svg-components/ionic-svg/ionic-svg.component';
-import { JavascriptSvgComponent } from './components/svg-components/javascript-svg/javascript-svg.component';
-import { NestSvgComponent } from './components/svg-components/nest-svg/nest-svg.component';
-import { TypescriptSvgComponent } from './components/svg-components/typescript-svg/typescript-svg.component';
 import { TextImageListComponent } from './components/text-image-list/text-image-list.component';
 import { UnderlineAnimationComponent } from './components/underline-animation/underline-animation.component';
 import { WorkWithUsComponent } from './components/work-with-us/work-with-us.component';
@@ -83,15 +75,6 @@ import { SponsorsCardComponent } from './components/sponsors-card/sponsors-card.
     SolutionDialogComponent,
     VersionHistoryComponent,
 
-    // SVGs
-    HtmlSvgComponent,
-    CssSvgComponent,
-    JavascriptSvgComponent,
-    TypescriptSvgComponent,
-    AngularSvgComponent,
-    BootstrapSvgComponent,
-    IonicSvgComponent,
-    NestSvgComponent,
     ContactCardComponent,
     FooterComponent,
     HeaderComponent,
@@ -114,14 +97,6 @@ import { SponsorsCardComponent } from './components/sponsors-card/sponsors-card.
     FooterComponent,
     HeaderComponent,
     BrandBannerComponent,
-    HtmlSvgComponent,
-    CssSvgComponent,
-    JavascriptSvgComponent,
-    TypescriptSvgComponent,
-    AngularSvgComponent,
-    BootstrapSvgComponent,
-    IonicSvgComponent,
-    NestSvgComponent,
     ContactCardComponent,
     StepsComponent,
     FeaturesComponent,
