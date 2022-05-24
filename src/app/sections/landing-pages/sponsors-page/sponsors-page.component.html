@@ -12,8 +12,13 @@
     <div class="container-fluid bg-primary-500">
       <h2 class="banner-title">Die Unternehmen</h2>
     </div>
-    <div class="section container d-flex justify-content-lg-between justify-content-center flex-wrap">
-      <app-sponsors-card *ngFor="let sponsor of sponsors" [sponsor]="sponsor"></app-sponsors-card>
+    <div
+      class="section container d-flex flex-wrap justify-content-center justify-content-lg-between"
+      [ltMatchHeight]="!mobile ? ['card', 'card-title', 'list', 'career-btn', 'card-statement'] : null"
+    >
+      <app-sponsors-card [sponsor]="sponsors[0]"></app-sponsors-card>
+      <app-sponsors-card [sponsor]="sponsors[1]"></app-sponsors-card>
+      <app-sponsors-card [sponsor]="sponsors[2]"></app-sponsors-card>
     </div>
     <app-price-banner
       textBanner="Ihr möchtet die Aus- und Weiterbildung sowie die Fachkräftesicherung im Bereich Softwareentwicklung in unserer Region fördern und sucht gut ausgebildete Nachwuchskräfte? <br> <br>Nehmt Kontakt mit uns auf und informiert Euch über die Rahmenbedingungen und werdet Teil unseres Unternehmensnetzwerks."
