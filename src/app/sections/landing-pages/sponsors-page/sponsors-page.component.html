@@ -13,11 +13,11 @@
       <h2 class="banner-title">Die Unternehmen</h2>
     </div>
     <div
-      class="section container d-flex flex-wrap justify-content-center justify-content-lg-between"
+      class="section container d-flex flex-wrap justify-content-center justify-content-lg-evenly"
       [ltMatchHeight]="!mobile ? ['card', 'card-title', 'list', 'career-btn', 'card-statement'] : null"
     >
       <app-sponsors-card [sponsor]="sponsors[0]"></app-sponsors-card>
-      <app-sponsors-card [sponsor]="sponsors[1]"></app-sponsors-card>
+      <!-- <app-sponsors-card [sponsor]="sponsors[1]"></app-sponsors-card> -->
       <app-sponsors-card [sponsor]="sponsors[2]"></app-sponsors-card>
     </div>
     <app-price-banner
