@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './goals.component.html',
   styleUrls: ['./goals.component.scss'],
 })
-export class GoalsComponent {
-  imageUrl = '../../assets/images/banner-images/features.svg';
-}
+export class GoalsComponent {}

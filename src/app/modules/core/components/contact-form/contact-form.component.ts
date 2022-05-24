@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 import { DialogService } from '../../services/dialog.service';
 import { FormsService } from '../../services/forms.service';
 import { MailService } from '../../services/mail.service';
@@ -19,7 +18,6 @@ export class ContactFormComponent implements OnInit {
   constructor(
     private mailService: MailService,
     private formsService: FormsService,
-    private router: Router,
     private dialogService: DialogService
   ) {}
 

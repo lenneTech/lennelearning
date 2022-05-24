@@ -43,11 +43,6 @@
   width: 280px;
 }
 
-.banner-btn {
-  cursor: pointer;
-  padding: 10px 10px 10px 0;
-}
-
 @include media-breakpoint-up(xl) {
   .banner-text {
     right: 0;
