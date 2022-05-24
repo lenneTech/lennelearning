@@ -19,11 +19,6 @@ a {
   cursor: pointer;
 }
 
-::ng-deep .route-tabset {
-  overflow: scroll;
-  margin-bottom: 3rem !important;
-}
-
 .bi-trophy-fill {
   margin-left: 10px;
   font-size: 24px;
@@ -56,8 +51,8 @@ a {
 }
 
 .nav-btn {
-  border: none !important;
-  background: transparent !important;
+  border: none;
+  background: transparent;
 }
 
 .nav-btn:focus {
@@ -66,10 +61,12 @@ a {
 
 @include media-breakpoint-down(md) {
   ::ng-deep .expanded {
-    width: 100% !important;
     .main-container {
       width: 100%;
     }
+  }
+  nb-sidebar.expanded {
+    width: 100%;
   }
   .mobile-spacing {
     padding-top: 10px;

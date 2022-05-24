@@ -1,9 +1,5 @@
 @import 'src/assets/scss/utils';
 
-.layout-svg {
-  max-width: 250px;
-}
-
 .review-text {
   color: #252525;
   font-family: Open Sans, sans-serif;
@@ -21,38 +17,7 @@
   white-space: pre-line;
 }
 
-.reviewer-sm {
-  &-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  &-image {
-    border-radius: 50%;
-    display: inline-block;
-    object-fit: cover;
-    height: 80px;
-    width: 80px;
-    margin-right: 20px;
-  }
-
-  &-text {
-    line-height: 20px;
-    font-size: 16px;
-    color: #252525;
-    text-align: center;
-  }
-}
-
 .quote {
   width: auto;
   align-self: flex-start;
-}
-
-@include media-breakpoint-down(md) {
-  .image-circle {
-    height: 100px !important;
-    width: 100px !important;
-  }
 }

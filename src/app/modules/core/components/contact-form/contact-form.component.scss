@@ -13,7 +13,7 @@
   }
 
   .form-group {
-    width: 100% !important;
+    width: 100%;
   }
 
   .form-control {
@@ -28,16 +28,7 @@
     color: $orange;
   }
 
-  .form-select {
-    border-radius: 0;
-    color: #b3b3b3;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 160%;
-  }
-
   .form-control,
-  .form-select,
   .form-check-input:focus {
     box-shadow: none;
   }

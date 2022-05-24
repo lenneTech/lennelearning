@@ -7,8 +7,11 @@
 }
 
 @include media-breakpoint-up(lg) {
-  .price-card {
-    max-width: 75% !important;
+  .w-75 {
+    max-width: 75%;
+  }
+  .w-400 {
+    max-width: 400px;
   }
 }
 
@@ -18,10 +21,6 @@
   border-radius: 0;
   margin-left: 20px;
   margin-right: 20px;
-
-  @include media-breakpoint-up(lg) {
-    max-width: 400px;
-  }
 
   &-img {
     max-height: 207px;
