@@ -5,7 +5,7 @@ import { FormGroup, FormControl } from '@angular/forms';
   providedIn: 'root',
 })
 export class FormsService {
-  public validateAllFormFields(formGroup: FormGroup) {
+  public validateAllFormFields(formGroup: FormGroup): void {
     Object.keys(formGroup.controls).forEach((field) => {
       const control = formGroup.get(field);
       if (control instanceof FormControl) {

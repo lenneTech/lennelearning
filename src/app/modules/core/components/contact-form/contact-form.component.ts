@@ -21,11 +21,11 @@ export class ContactFormComponent implements OnInit {
     private dialogService: DialogService
   ) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.initForm();
   }
 
-  initForm() {
+  initForm(): void {
     this.contactForm = new FormGroup({
       name: new FormControl(null, [Validators.required]),
       email: new FormControl(null, [Validators.required, Validators.email]),
@@ -35,7 +35,7 @@ export class ContactFormComponent implements OnInit {
     });
   }
 
-  contact() {
+  contact(): void {
     if (this.contactForm.invalid) {
       this.formsService.validateAllFormFields(this.contactForm);
       return;

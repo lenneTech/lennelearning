@@ -19,17 +19,17 @@ export class DialogComponent {
 
   constructor(protected dialogRef: NbDialogRef<any>) {}
 
-  onAcceptBtnClick() {
+  onAcceptBtnClick(): void {
     this.acceptBtnClicked.emit(true);
     this.dialogRef.close(true);
   }
 
-  onAbortBtnClick() {
+  onAbortBtnClick(): void {
     this.abortBtnClicked.emit(true);
     this.dialogRef.close(false);
   }
 
-  close() {
+  close(): void {
     this.dialogRef.close(false);
   }
 }

@@ -60,11 +60,11 @@ export class EntryPointsComponent implements OnInit {
     }
   }
 
-  getRecommendation() {
+  getRecommendation(): void {
     this.activatedRoute.queryParams.subscribe((value) => (this.recommendation = value.empfehlung));
   }
 
-  getRedirectionLink() {
+  getRedirectionLink(): void {
     this.activatedRoute.queryParams.subscribe((value) => {
       this.redirectionLink = value.redirectTo;
     });

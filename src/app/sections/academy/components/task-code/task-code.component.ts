@@ -9,7 +9,7 @@ export class TaskCodeComponent implements OnInit {
   @Input() url: string;
   snippetUrl: string;
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.snippetUrl = window.location.origin + this.url;
   }
 }

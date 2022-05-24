@@ -56,7 +56,7 @@ export class TaskComponent implements OnInit {
     }
   }
 
-  onComplete() {
+  onComplete(): void {
     if (!this.completed) {
       this.taskService.completeTask(this.id, this.section);
       if (this.sectionService.checkMileStone()) {
@@ -82,7 +82,7 @@ export class TaskComponent implements OnInit {
     this.sectionService.setCurrentMileStone(this.section);
   }
 
-  share() {
+  share(): void {
     const shareUrl = `${window.location.href.split('#')[0]}#${this.id}`;
     this.popLink.nativeElement.style.display = 'block';
     const selBox = document.createElement('textarea');

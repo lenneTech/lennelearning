@@ -268,13 +268,13 @@ export class MilestoneComponent implements OnInit {
     private entryPointService: EntryPointService
   ) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id');
     this.setMileStoneContent();
     this.nextSection = this.entryPointService.getNextSectionByEntryPoint();
   }
 
-  setMileStoneContent() {
+  setMileStoneContent(): void {
     this.milestones.find((section) => {
       if (section.sectionTitle === this.id) {
         this.mileStoneSection = section;
@@ -282,33 +282,33 @@ export class MilestoneComponent implements OnInit {
     });
   }
 
-  nextStep() {
+  nextStep(): void {
     this.stepper.next();
     this.currentIndex++;
   }
 
-  prevStep() {
+  prevStep(): void {
     this.stepper.previous();
     this.currentIndex--;
   }
 
-  checkPrev() {
+  checkPrev(): boolean {
     return this.currentIndex > 0;
   }
 
-  checkNext() {
+  checkNext(): boolean {
     if (this.stepper) {
       return this.currentIndex < this.stepper.steps.length - 1;
     }
   }
 
-  check() {
+  check(): void {
     if (this.stepper) {
       this.content.nativeElement.classList.add('noblur');
     }
   }
 
-  navigateToNextSection() {
+  navigateToNextSection(): void {
     this.router.navigate([`/lernpfad/${this.nextSection}`]);
   }
 }

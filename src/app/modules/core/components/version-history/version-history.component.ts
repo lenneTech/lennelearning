@@ -95,7 +95,7 @@ export class VersionHistoryComponent {
   ];
   constructor(protected dialogRef: NbDialogRef<any>) {}
 
-  onAbortBtnClick() {
+  onAbortBtnClick(): void {
     this.dialogRef.close(false);
   }
 }
