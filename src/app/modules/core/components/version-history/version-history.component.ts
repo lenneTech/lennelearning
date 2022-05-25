@@ -13,6 +13,14 @@ export class VersionHistoryComponent {
   versions: VersionHistory[] = [
     {
       version: this.version, // the newest version and its changes is set right here
+      changes: [
+        'Unternehmensnetzwerk-Seite hinzugefügt',
+        'Ergänzung von Vorschaubildern für Social Media',
+        'Optimierungsarbeiten',
+      ],
+    },
+    {
+      version: '1.6.1',
       changes: ['Workshops-Seite hinzugefügt', 'Kleinere Anpassungen und Optimierungen'],
     },
     {
@@ -95,7 +103,7 @@ export class VersionHistoryComponent {
   ];
   constructor(protected dialogRef: NbDialogRef<any>) {}
 
-  onAbortBtnClick(): void {
+  onClose(): void {
     this.dialogRef.close(false);
   }
 }
