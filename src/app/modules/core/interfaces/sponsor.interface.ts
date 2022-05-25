@@ -3,7 +3,8 @@ export interface Sponsor {
   imageAlt: string;
   title: string;
   careerType: string[];
-  link: string;
+  careerLink: string;
+  mainPageLink: string;
   statement: string;
   isOnlySponsor: boolean;
 }
