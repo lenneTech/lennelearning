@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './arbeitsmethoden.component.html',
   styleUrls: ['./arbeitsmethoden.component.scss'],
 })
-export class ArbeitsmethodenComponent {
-  constructor() {}
-}
+export class ArbeitsmethodenComponent {}

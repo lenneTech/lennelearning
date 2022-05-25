@@ -21,19 +21,9 @@ import { GoalsComponent } from './components/goals/goals.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HelperDialogComponent } from './components/helper-dialog/helper-dialog.component';
 import { InfoCardComponent } from './components/info-card/info-card.component';
-import { ProcessInterestedComponent } from './components/process-interested/process-interested.component';
 import { SolutionDialogComponent } from './components/solution-dialog/solution-dialog.component';
 import { StepsComponent } from './components/steps/steps.component';
-import { AngularSvgComponent } from './components/svg-components/angular-svg/angular-svg.component';
-import { BootstrapSvgComponent } from './components/svg-components/bootstrap-svg/bootstrap-svg.component';
-import { CssSvgComponent } from './components/svg-components/css-svg/css-svg.component';
-import { HtmlSvgComponent } from './components/svg-components/html-svg/html-svg.component';
-import { IonicSvgComponent } from './components/svg-components/ionic-svg/ionic-svg.component';
-import { JavascriptSvgComponent } from './components/svg-components/javascript-svg/javascript-svg.component';
-import { NestSvgComponent } from './components/svg-components/nest-svg/nest-svg.component';
-import { TypescriptSvgComponent } from './components/svg-components/typescript-svg/typescript-svg.component';
 import { TextImageListComponent } from './components/text-image-list/text-image-list.component';
-import { TutorCardsComponent } from './components/tutor-cards/tutor-cards.component';
 import { UnderlineAnimationComponent } from './components/underline-animation/underline-animation.component';
 import { WorkWithUsComponent } from './components/work-with-us/work-with-us.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
@@ -70,7 +60,6 @@ import { SponsorsCardComponent } from './components/sponsors-card/sponsors-card.
     AcademyPictureComponent,
     AcademyBannerComponent,
     GoalsComponent,
-    ProcessInterestedComponent,
     WorkWithUsComponent,
     UnderlineAnimationComponent,
     ContactFormComponent,
@@ -86,15 +75,6 @@ import { SponsorsCardComponent } from './components/sponsors-card/sponsors-card.
     SolutionDialogComponent,
     VersionHistoryComponent,
 
-    // SVGs
-    HtmlSvgComponent,
-    CssSvgComponent,
-    JavascriptSvgComponent,
-    TypescriptSvgComponent,
-    AngularSvgComponent,
-    BootstrapSvgComponent,
-    IonicSvgComponent,
-    NestSvgComponent,
     ContactCardComponent,
     FooterComponent,
     HeaderComponent,
@@ -104,7 +84,6 @@ import { SponsorsCardComponent } from './components/sponsors-card/sponsors-card.
     DialogComponent,
     StepsComponent,
     FeaturesComponent,
-    TutorCardsComponent,
     CompanyTestimonialComponent,
     MailSentDialogComponent,
   ],
@@ -118,23 +97,13 @@ import { SponsorsCardComponent } from './components/sponsors-card/sponsors-card.
     FooterComponent,
     HeaderComponent,
     BrandBannerComponent,
-    HtmlSvgComponent,
-    CssSvgComponent,
-    JavascriptSvgComponent,
-    TypescriptSvgComponent,
-    AngularSvgComponent,
-    BootstrapSvgComponent,
-    IonicSvgComponent,
-    NestSvgComponent,
     ContactCardComponent,
     StepsComponent,
     FeaturesComponent,
-    TutorCardsComponent,
     CompanyTestimonialComponent,
     AcademyPictureComponent,
     AcademyBannerComponent,
     GoalsComponent,
-    ProcessInterestedComponent,
     WorkWithUsComponent,
     ContactFormComponent,
     PriceBannerComponent,

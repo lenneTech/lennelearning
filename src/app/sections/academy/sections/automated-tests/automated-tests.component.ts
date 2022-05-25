@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './automated-tests.component.html',
   styleUrls: ['./automated-tests.component.scss'],
 })
-export class AutomatedTestsComponent {
-  constructor() {}
-}
+export class AutomatedTestsComponent {}

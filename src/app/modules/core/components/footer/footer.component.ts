@@ -11,7 +11,7 @@ export class FooterComponent {
   version: string = packageInfo.version;
   constructor(private dialogService: DialogService) {}
 
-  openVersionHistory() {
+  openVersionHistory(): void {
     this.dialogService.openVersionDialog();
   }
 }

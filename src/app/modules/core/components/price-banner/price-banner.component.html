@@ -1,8 +1,8 @@
 <div
   class="container-fluid bg-primary-500 price-container"
   [ngStyle]="{
-    'padding-top': imageHeight === '200' ? '15px' : '60px',
-    'padding-bottom': imageHeight === '200' ? '15px' : '40'
+    'padding-top': differentHeight ? '15px' : '60px',
+    'padding-bottom': differentHeight ? '15px' : '40'
   }"
 >
   <div class="container d-flex price-banner flex-column flex-md-row">
@@ -12,7 +12,7 @@
         src="../../../../../assets/images/banner-images/spaceboard.svg"
         alt="Illustration einer Person auf einer Hoverboard-Rakete"
         class="hover-img d-none d-lg-block"
-        [ngStyle]="{ height: imageHeight === '200' ? '200%' : 'none', top: imageHeight === '200' ? '-70px' : '-80px' }"
+        [ngStyle]="{ height: differentHeight ? '200%' : 'none', top: differentHeight ? '-70px' : '-80px' }"
       />
     </div>
 

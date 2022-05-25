@@ -26,20 +26,27 @@
   border-radius: 5px;
 }
 
+.specialty-image {
+  width: 30px;
+  height: 30px;
+}
+
 .member:not(:last-child) {
   margin-bottom: 100px;
-  @include media-breakpoint-up(lg) {
-    margin-bottom: 50px;
-  }
 }
 
 .card {
-  margin-bottom: 25px !important;
+  margin-bottom: 25px;
   min-width: 350px;
   border-radius: 5px;
+}
 
-  @include media-breakpoint-up(lg) {
-    margin-bottom: 0 !important;
+@include media-breakpoint-up(lg) {
+  .card {
+    margin-bottom: 0;
+  }
+  .member:not(:last-child) {
+    margin-bottom: 50px;
   }
 }
 
@@ -52,9 +59,4 @@ nb-accordion-item-header {
 
 nb-card-body {
   padding: 10px 0;
-}
-
-.specialty-image {
-  width: 30px;
-  height: 30px;
 }

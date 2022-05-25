@@ -19,11 +19,6 @@ a {
   cursor: pointer;
 }
 
-::ng-deep .route-tabset {
-  overflow: scroll;
-  margin-bottom: 3rem !important;
-}
-
 .bi-trophy-fill {
   margin-left: 10px;
   font-size: 24px;
@@ -56,35 +51,53 @@ a {
 }
 
 .nav-btn {
-  border: none !important;
-  background: transparent !important;
+  border: none;
+  background: transparent;
 }
 
 .nav-btn:focus {
   box-shadow: none;
 }
 
-@include media-breakpoint-down(md) {
-  ::ng-deep .expanded {
-    width: 100% !important;
-    .main-container {
-      width: 100%;
-    }
+::ng-deep .expanded {
+  .main-container {
+    width: 100%;
   }
-  .mobile-spacing {
-    padding-top: 10px;
-    padding-bottom: 5px;
-  }
+}
+nb-sidebar.expanded {
+  width: 100%;
+}
+.mobile-spacing {
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
 
-  .mobile-margin {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
+.mobile-margin {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 @include media-breakpoint-up(md) {
   ::ng-deep .layout-container .fixed {
     position: relative !important;
+  }
+
+  ::ng-deep .expanded {
+    .main-container {
+      width: var(--sidebar-width);
+    }
+  }
+  nb-sidebar.expanded {
+    width: var(--sidebar-width);
+  }
+  .mobile-spacing {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .mobile-margin {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 

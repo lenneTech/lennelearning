@@ -14,6 +14,4 @@ export class HelperDialogComponent {
   @Input() hint?: string;
   @Input() solutionLink?: string;
   DialogModeEnum = DialogModeEnum;
-
-  constructor() {}
 }

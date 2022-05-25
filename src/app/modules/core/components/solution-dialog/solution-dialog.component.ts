@@ -22,7 +22,7 @@ export class SolutionDialogComponent implements OnInit {
   solutionForm: FormGroup;
   constructor(private http: HttpClient) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.solutionForm = new FormGroup({
       name: new FormControl('', Validators.required),
       reason: new FormControl('', Validators.required),

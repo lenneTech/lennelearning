@@ -10,6 +10,4 @@ export class InfoCardComponent {
   @Input() description: string;
   @Input() imageUrl: string;
   @Input() showMoreRoute: string;
-
-  constructor() {}
 }

@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './ionic.component.html',
   styleUrls: ['./ionic.component.scss'],
 })
-export class IonicComponent {
-  constructor() {}
-}
+export class IonicComponent {}

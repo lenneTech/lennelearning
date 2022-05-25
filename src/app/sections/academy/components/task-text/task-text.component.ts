@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './task-text.component.html',
   styleUrls: ['./task-text.component.scss'],
 })
-export class TaskTextComponent {
-  constructor() {}
-}
+export class TaskTextComponent {}

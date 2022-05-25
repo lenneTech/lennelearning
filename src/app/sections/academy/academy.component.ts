@@ -266,20 +266,20 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     }
   }
 
-  onForward() {
+  onForward(): void {
     this.router.navigate([`/lernpfad/${this.nextSection}`]);
   }
 
-  onBack() {
+  onBack(): void {
     this.router.navigate([`/lernpfad/${this.prevSection}`]);
   }
 
-  onMileStone() {
+  onMileStone(): void {
     this.router.navigate([this.currentMileStoneUrl]);
     this.currentMileStoneUrl = '';
   }
 
-  checkBottomNavbar() {
+  checkBottomNavbar(): boolean {
     return !window.location.href.includes('meilenstein');
   }
 

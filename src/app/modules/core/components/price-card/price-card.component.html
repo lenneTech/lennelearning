@@ -1,17 +1,22 @@
-<nb-card class="card" [ngClass]="{ 'price-card': isActionCard }">
+<nb-card class="card" [ngClass]="{ 'w-75': isActionCard, 'w-400': !isActionCard }">
   <nb-card-body class="d-flex align-items-top justify-content-around">
     <div class="d-flex flex-column align-items-center w-100">
-      <img loading="lazy" class="card-img" [src]="cardImageUrl" alt="Illustration eines Preises" />
-      <div class="card-pre-title" *ngIf="cardPreTitle">{{ cardPreTitle }}</div>
-      <h3 class="card-title">{{ cardTitle }}</h3>
-      <div class="card-description">{{ cardDescription }}</div>
-      <div [ngClass]="{ 'card-price': !isActionCard, 'card-price-action': isActionCard }">{{ cardPrice }}</div>
-      <div class="card-details">{{ cardPriceDetails }}</div>
+      <img
+        loading="lazy"
+        class="card-img"
+        [src]="subscription.imageUrl"
+        [alt]="!isActionCard ? 'Illustration eines Abos' : 'Illustration einer Aktion'"
+      />
+      <div class="card-pre-title" *ngIf="subscription.preTitle">{{ subscription.preTitle }}</div>
+      <h3 class="card-title">{{ subscription.title }}</h3>
+      <div class="card-description">{{ subscription.description }}</div>
+      <div [ngClass]="{ 'card-price': !isActionCard, 'card-price-action': isActionCard }">{{ subscription.price }}</div>
+      <div class="card-details">{{ subscription.priceDetails }}</div>
 
       <div class="card-subtitle">Was ist inbegriffen?</div>
       <div [ngClass]="{ 'card-specifics': !isActionCard, 'card-specifics-action': isActionCard }">
         <ul class="list">
-          <li class="list-item" *ngFor="let item of cardSpecifics">{{ item }}</li>
+          <li class="list-item" *ngFor="let item of subscription.specifics">{{ item }}</li>
         </ul>
       </div>
       <div class="card-extra mt-3" *ngIf="isActionCard">Begrenzte Teilnehmerzahl, jetzt Plätze reservieren.</div>
