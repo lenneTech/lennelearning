@@ -1,14 +1,17 @@
 import { Injectable } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class MetaService {
-  constructor(private metaTagService: Meta) {}
+  constructor(private metaTagService: Meta, private router: Router) {}
 
   updateMetaTags(title: string, description: string, keywords: string): void {
+    const imageUrl = 'https://api.lennus.lenne.tech/ogimage?url=' + environment.appUrl + this.router.url.slice(1);
+
     this.metaTagService.updateTag({
       name: 'title',
       content: title,
@@ -43,11 +46,11 @@ export class MetaService {
     });
     this.metaTagService.updateTag({
       property: 'og:image',
-      content: environment.appUrl + 'assets/images/banner-images/preview-black.png',
+      content: imageUrl,
     });
     this.metaTagService.updateTag({
       property: 'twitter:image',
-      content: environment.appUrl + 'assets/images/banner-images/preview-black.png',
+      content: imageUrl,
     });
     this.metaTagService.updateTag({
       property: 'og:url',

@@ -1,6 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { EntryPointService } from '../../services/entry-point.service';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-price-banner',
@@ -10,6 +8,5 @@ import { EntryPointService } from '../../services/entry-point.service';
 export class PriceBannerComponent {
   @Input() textBanner: string;
   @Input() titleBanner: string;
-
-  constructor() {}
+  @Input() differentHeight: boolean;
 }

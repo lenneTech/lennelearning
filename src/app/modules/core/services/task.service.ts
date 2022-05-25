@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { StorageService } from '@lenne.tech/ng-base';
+import { StorageService } from '@lenne.tech/ng-base/shared';
 import { Section } from '../interfaces/section.interface';
 
 @Injectable({
@@ -13,7 +13,7 @@ export class TaskService {
    * @param section e.g 'html'
    * Stores the completed Tasks in local storage
    */
-  completeTask(id, section) {
+  completeTask(id: string, section: string): void {
     let sections = this.storageService.load('sections');
 
     if (!sections) {
@@ -42,7 +42,7 @@ export class TaskService {
     this.storageService.save('sections', sections);
   }
 
-  uncompleteTask(id, section) {
+  uncompleteTask(id: string, section: string): void {
     const sections = this.storageService.load('sections');
     const currSection = sections.find((oneSection) => oneSection[section]);
 

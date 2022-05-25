@@ -17,11 +17,11 @@ export class BannerComponent {
 
   constructor(private entryPointService: EntryPointService, private router: Router) {}
 
-  setSelectedEntryPoint() {
+  setSelectedEntryPoint(): void {
     this.entryPointService.setEntryPointById(this.entryPointId);
   }
 
-  setRecommendation() {
+  setRecommendation(): void {
     if (this.router.url !== '/') {
       this.router.navigate(['/lernpfade'], {
         queryParams: { empfehlung: this.router.url.slice(1) },

@@ -1,6 +1,6 @@
 import { animate, AUTO_STYLE, state, style, transition, trigger } from '@angular/animations';
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { StorageService } from '@lenne.tech/ng-base';
+import { StorageService } from '@lenne.tech/ng-base/shared';
 import { SectionService } from 'src/app/modules/core/services/section.service';
 import { TaskService } from 'src/app/modules/core/services/task.service';
 import { DialogService } from '../../../../modules/core/services/dialog.service';
@@ -56,7 +56,7 @@ export class TaskComponent implements OnInit {
     }
   }
 
-  onComplete() {
+  onComplete(): void {
     if (!this.completed) {
       this.taskService.completeTask(this.id, this.section);
       if (this.sectionService.checkMileStone()) {
@@ -82,7 +82,7 @@ export class TaskComponent implements OnInit {
     this.sectionService.setCurrentMileStone(this.section);
   }
 
-  share() {
+  share(): void {
     const shareUrl = `${window.location.href.split('#')[0]}#${this.id}`;
     this.popLink.nativeElement.style.display = 'block';
     const selBox = document.createElement('textarea');

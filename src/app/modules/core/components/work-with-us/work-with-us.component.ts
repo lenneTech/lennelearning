@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
 })
 export class WorkWithUsComponent {
   imageUrl = '../../assets/images/banner-images/features.svg';
-  constructor() {}
 }

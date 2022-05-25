@@ -62,7 +62,7 @@ export class DialogService {
     instance.section = section;
   }
 
-  openConfirmDialog() {
+  openConfirmDialog(): void {
     this.nbDialogService.open(DialogConfirmComponent, this.defaultModalOptions).onClose.subscribe(
       (confirmed) => {
         if (confirmed) {
@@ -76,7 +76,7 @@ export class DialogService {
     );
   }
 
-  openMailSentDialog() {
+  openMailSentDialog(): void {
     this.nbDialogService.open(MailSentDialogComponent, {
       ...this.defaultModalOptions,
       ...{
@@ -85,7 +85,7 @@ export class DialogService {
     });
   }
 
-  openInquiryDialog(subscription: string) {
+  openInquiryDialog(subscription: string): void {
     const dialog = this.nbDialogService.open(InquiryComponent, {
       ...this.defaultModalOptions,
       ...{

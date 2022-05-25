@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { DialogService } from '../../../../modules/core/services/dialog.service';
+import { Subscription } from '../../interfaces/subscription.interface';
 
 @Component({
   selector: 'app-price-card',
@@ -7,20 +8,12 @@ import { DialogService } from '../../../../modules/core/services/dialog.service'
   styleUrls: ['./price-card.component.scss'],
 })
 export class PriceCardComponent {
-  @Input() cardPreTitle?: string;
-  @Input() cardTitle: string;
-  @Input() cardDescription: string;
-  @Input() cardImageUrl: string;
-  @Input() cardPrice: string;
-  @Input() cardPriceDetails: string;
-  @Input() cardSpecifics: string[];
-  @Input() cardRoute: string;
   @Input() isActionCard: boolean;
-  @Input() subscriptionType: string;
+  @Input() subscription: Subscription;
 
   constructor(private dialogService: DialogService) {}
 
   openInquiry(): void {
-    this.dialogService.openInquiryDialog(this.subscriptionType);
+    this.dialogService.openInquiryDialog(this.subscription.title);
   }
 }

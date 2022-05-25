@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/lenneTech/academy/compare/v1.6.1...v1.7.0) (2022-05-25)
+
+### Features
+
+- **LTAK-52:** added link to main page ([91626a1](https://github.com/lenneTech/academy/commit/91626a1f9bbc74094815a5c259e3b3146d4af5e2))
+- **LTAK-77:** added metatags to sponsors page ([4fec354](https://github.com/lenneTech/academy/commit/4fec354ccaf794b7558dc272f52b01bb92af491e))
+- **LTAK-81:** changed imageurl of metatags ([ef4188f](https://github.com/lenneTech/academy/commit/ef4188fb2a659c69975730f33f298c55af323f48))
+
 ### [1.6.1](https://github.com/lenneTech/academy/compare/v1.6.0...v1.6.1) (2022-05-11)
 
 ### Bug Fixes

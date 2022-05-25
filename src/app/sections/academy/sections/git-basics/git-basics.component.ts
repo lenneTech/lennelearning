@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './git-basics.component.html',
   styleUrls: ['./git-basics.component.scss'],
 })
-export class GitBasicsComponent {
-  constructor() {}
-}
+export class GitBasicsComponent {}

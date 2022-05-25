@@ -11,7 +11,7 @@ export class HeaderComponent {
   currentRoute: string;
   constructor(private router: Router) {}
 
-  switch() {
+  switch(): void {
     this.openDropdown = !this.openDropdown;
   }
 

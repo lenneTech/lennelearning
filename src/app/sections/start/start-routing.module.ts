@@ -9,6 +9,7 @@ import { ContactPageComponent } from '../landing-pages/contact-page/contact-page
 import { SubscriptionPageComponent } from '../landing-pages/subscription-page/subscription-page.component';
 import { TeamPageComponent } from '../landing-pages/team-page/team-page.component';
 import { WorkshopsComponent } from '../landing-pages/workshops/workshops.component';
+import { SponsorsPageComponent } from '../landing-pages/sponsors-page/sponsors-page.component';
 
 const routes: Routes = [
   {
@@ -64,6 +65,12 @@ const routes: Routes = [
     component: WorkshopsComponent,
     pathMatch: 'full',
     data: { matomoTitle: 'Workshops' },
+  },
+  {
+    path: 'unternehmensnetzwerk',
+    component: SponsorsPageComponent,
+    pathMatch: 'full',
+    data: { matomoTitle: 'Unternehmensnetzwerk' },
   },
 ];
 
