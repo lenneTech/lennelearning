@@ -1,3 +1,38 @@
+@import '../../../../../assets/scss/utils';
 ul {
   list-style-type: '- ';
+}
+nb-card-header {
+  position: relative;
+
+  .close-modal-button {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+
+    .btn {
+      color: white;
+    }
+  }
+}
+
+nb-accordion {
+  overflow: scroll;
+  position: absolute;
+}
+
+nb-card {
+  width: 100vw;
+  height: 50vh;
+}
+
+@include media-breakpoint-up(sm) {
+  nb-accordion {
+    overflow: auto;
+    position: relative;
+  }
+  nb-card {
+    width: 75vw;
+  }
 }

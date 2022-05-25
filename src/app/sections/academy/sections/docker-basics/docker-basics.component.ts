@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './docker-basics.component.html',
   styleUrls: ['./docker-basics.component.scss'],
 })
-export class DockerBasicsComponent {
-  constructor() {}
-}
+export class DockerBasicsComponent {}

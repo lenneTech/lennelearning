@@ -19,7 +19,8 @@ export class SponsorsPageComponent implements OnInit {
       imageAlt: 'Logo von Tracto',
       title: 'Wir suchen Nachwuchs im Bereich Entwicklung',
       careerType: ['Werkstudierende', 'Auszubildende', 'Praktikant:innen'],
-      link: 'https://karriere.tracto.com/',
+      careerLink: 'https://karriere.tracto.com/',
+      mainPageLink: 'https://tracto.com/de#gref',
       statement:
         'Wir erleben bei Tracto tagtäglich welchen immer größeren Stellenwert Software auf unseren Maschinen, aber auch bei angeschlossenen Dienste einnimmt. Eine entsprechende Aus- und Weiterbildung in dem Bereich ist für unsere Mitarbeiter daher unabdingbar.',
       isOnlySponsor: false,
@@ -29,7 +30,8 @@ export class SponsorsPageComponent implements OnInit {
     //   imageAlt: 'Logo von Mennekes',
     //   title: 'Wir suchen Nachwuchs im Bereich Entwicklung',
     //   careerType: ['Werkstudierende', 'Auszubildende', 'Praktikant:innen'],
-    //   link: 'https://www.mennekes.de/karriere/ueberblick/',
+    //   careerLink: 'https://www.mennekes.de/karriere/ueberblick/',
+    //   mainPageLink: 'https://www.mennekes.de/',
     //   statement:
     //     'Statement warum Aus- und Weiterbildung und Fachkräftesicherung im Bereich der Softwareentwicklung wichtig ist.',
     //   isOnlySponsor: false,
@@ -39,7 +41,8 @@ export class SponsorsPageComponent implements OnInit {
       imageAlt: 'Logo von Ontavio',
       title: 'Wir suchen Nachwuchs im Bereich Entwicklung',
       careerType: ['Werkstudierende', 'Auszubildende', 'Praktikant:innen', 'Trainees', 'Juniorentwickler:innen'],
-      link: 'https://www.ontavio.de/karriere',
+      careerLink: 'https://www.ontavio.de/karriere',
+      mainPageLink: 'https://www.ontavio.de/',
       statement:
         'Durch unseren Software-Stack aus modernen Web-Technologien ist es heute deutlich anspruchsvoller, qualifizierte Fachkräfte mit passendem Background zu finden. Ein fundiertes Onboarding, interne Traineeprogramme sowie fortlaufende Aus- und Weiterbildungsmaßnahmen sind deshalb elementar für uns, um eine gleichbleibend hohe Teamqualität zu gewährleisten.',
       isOnlySponsor: true,

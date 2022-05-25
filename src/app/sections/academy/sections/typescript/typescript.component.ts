@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './typescript.component.html',
   styleUrls: ['./typescript.component.scss'],
 })
-export class TypescriptComponent {
-  constructor() {}
-}
+export class TypescriptComponent {}

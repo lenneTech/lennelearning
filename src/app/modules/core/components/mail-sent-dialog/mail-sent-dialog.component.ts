@@ -8,5 +8,4 @@ import { DialogModeEnum } from '../../enumerators/dialog-mode.enum';
 })
 export class MailSentDialogComponent {
   DialogModeEnum = DialogModeEnum;
-  constructor() {}
 }

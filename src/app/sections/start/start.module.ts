@@ -15,6 +15,7 @@ import { SubscriptionPageComponent } from '../landing-pages/subscription-page/su
 import { TeamPageComponent } from '../landing-pages/team-page/team-page.component';
 import { WorkshopsComponent } from '../landing-pages/workshops/workshops.component';
 import { SponsorsPageComponent } from '../landing-pages/sponsors-page/sponsors-page.component';
+import { TypePipe } from './pipes/type.pipe';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { SponsorsPageComponent } from '../landing-pages/sponsors-page/sponsors-p
     TeamPageComponent,
     WorkshopsComponent,
     SponsorsPageComponent,
+    TypePipe,
   ],
   imports: [
     StartRoutingModule,

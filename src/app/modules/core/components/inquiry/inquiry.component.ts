@@ -29,11 +29,11 @@ export class InquiryComponent implements OnInit {
     protected dialogRef: NbDialogRef<any>
   ) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.initForm();
   }
 
-  initForm() {
+  initForm(): void {
     this.contactForm = new FormGroup({
       name: new FormControl(null, [Validators.required]),
       email: new FormControl(null, [Validators.required, Validators.email]),
@@ -48,7 +48,7 @@ export class InquiryComponent implements OnInit {
     }
   }
 
-  contact() {
+  contact(): void {
     if (this.contactForm.invalid) {
       this.formsService.validateAllFormFields(this.contactForm);
       return;

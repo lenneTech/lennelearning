@@ -10,6 +10,7 @@ import { DialogService } from '../../services/dialog.service';
 })
 export class TextImageListComponent {
   @Input() listElements: TextImageInterface[];
+  @Input() centerText: boolean;
 
   constructor(private dialogService: DialogService) {}
 

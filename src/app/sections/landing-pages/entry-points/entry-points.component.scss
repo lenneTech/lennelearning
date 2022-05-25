@@ -24,11 +24,11 @@
 
 @include media-breakpoint-up(xl) {
   .selection {
-    justify-content: space-between !important;
+    justify-content: space-between;
     & li {
       white-space: nowrap;
       &:nth-child(2n) {
-        flex-basis: 0 !important;
+        flex-basis: 0;
       }
     }
   }

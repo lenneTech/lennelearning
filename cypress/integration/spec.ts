@@ -40,53 +40,65 @@ describe('Testing accessibility of all main pages', () => {
     cy.contains('Datenschutzerklärung');
   });
 });
-
 describe('Testing navigation through header and footer', () => {
   it('Visits the Home page', () => {
     cy.visit('/');
     cy.contains('Willkommen');
   });
   it('Navigate to job interest page', () => {
+    cy.viewport(1200, 1224);
     cy.get('[data-cy="dropdown-menu"]').click();
     cy.get('[data-cy="dropdown-item"]').first().click();
     cy.contains('Du interessierst');
   });
   it('Navigate to intern page', () => {
+    cy.viewport(1200, 1224);
     cy.get('[data-cy="dropdown-menu"]').click();
     cy.get('[data-cy="dropdown-item"]').eq(1).click();
     cy.contains('Du suchst');
   });
   it('Navigate to company', () => {
+    cy.viewport(1200, 1224);
     cy.get('[data-cy="dropdown-menu"]').click();
     cy.get('[data-cy="dropdown-item"]').eq(2).click();
     cy.contains('App- und Webentwicklung');
   });
   it('Navigate to entrypoints page', () => {
+    cy.viewport(1200, 1224);
     cy.get('[data-cy="nav-item"]').eq(0).click();
     cy.contains('Die Lernpfade');
   });
-  it('Navigate to team page', () => {
+  it('Navigate to workshops page', () => {
+    cy.viewport(1200, 1224);
     cy.get('[data-cy="nav-item"]').eq(1).click();
+    cy.contains('Workshops');
+  });
+  it('Navigate to team page', () => {
+    cy.viewport(1200, 1224);
+    cy.get('[data-cy="nav-item"]').eq(2).click();
     cy.contains('Das Team');
   });
   it('Navigate to subscription page', () => {
-    cy.get('[data-cy="nav-item"]').eq(2).click();
+    cy.viewport(1200, 1224);
+    cy.get('[data-cy="nav-item"]').eq(3).click();
     cy.contains('Abos und Aktionen');
   });
   it('Navigate to contact page', () => {
-    cy.get('[data-cy="nav-item"]').eq(3).click();
+    cy.viewport(1200, 1224);
+    cy.get('[data-cy="nav-item"]').eq(4).click();
     cy.contains('Kontakt');
   });
   it('Navigate to imprint page', () => {
+    cy.viewport(1200, 1224);
     cy.get('[data-cy="imprint-btn"]').click();
     cy.contains('Impressum');
   });
   it('Navigate to privacy page', () => {
+    cy.viewport(1200, 1224);
     cy.get('[data-cy="privacy-btn"]').click();
     cy.contains('Datenschutzerklärung');
   });
 });
-
 describe('Testing all buttons on main page', () => {
   it('Visits the home page', () => {
     cy.visit('/');
@@ -117,7 +129,6 @@ describe('Testing all buttons on main page', () => {
     cy.contains('Kontakt');
   });
 });
-
 describe('Testing all buttons on job interest page', () => {
   it('Visit job Interest page', () => {
     cy.visit('/berufsinteressierte');
@@ -133,7 +144,6 @@ describe('Testing all buttons on job interest page', () => {
     cy.contains('Kontakt');
   });
 });
-
 describe('Testing all buttons on intern page', () => {
   it('Visit job Interest page', () => {
     cy.visit('/praktikanten');
@@ -157,7 +167,6 @@ describe('Testing all buttons on intern page', () => {
     cy.contains('Daniel König').should('be.visible');
   });
 });
-
 describe('Testing all buttons on entrypoints page', () => {
   it('Visit entrypoints page', () => {
     cy.visit('/lernpfade');
@@ -181,8 +190,28 @@ describe('Testing all buttons on entrypoints page', () => {
   });
 });
 
+describe('Testing all buttons on workshop page', () => {
+  it('Visit Workshops page', () => {
+    cy.visit('/workshops');
+    cy.contains('Auf der Suche');
+  });
+  it('Checks contact button in Header', () => {
+    cy.get('[data-cy="contact-btn"]').eq(0).click({ force: true });
+    cy.contains('Du hast eine Frage');
+  });
+  it('Navigate back and open inquiry modal', () => {
+    cy.visit('/workshops');
+    cy.get('[data-cy="inquiry-btn"]').eq(0).click({ force: true });
+    cy.contains('Schick uns');
+    cy.get('[data-cy="send-mail-btn"]').eq(0).click({ force: true });
+    cy.contains('Dieses Feld ist ein Pflichtfeld');
+    cy.get('[data-cy="dialog-close"]').eq(0).click({ force: true });
+    cy.contains('Schick uns').should('not.exist');
+  });
+});
+
 describe('Testing all buttons on team page', () => {
-  it('Visit entrypoints page and check if the first accordion is already open and the others closed', () => {
+  it('Visit Team page and check if the first accordion is already open and the others closed', () => {
     cy.visit('/team');
     cy.contains('Das Team');
     cy.contains('Dr. Inga Haase').should('be.visible');
@@ -200,8 +229,7 @@ describe('Testing all buttons on team page', () => {
     cy.contains('Pascal Klesse').should('be.visible');
   });
 });
-
-describe('Testing all buttons on substription page', () => {
+describe('Testing all buttons on subscription page', () => {
   it('Visit entrypoints page', () => {
     cy.visit('/abonnements');
     cy.contains('Abos und Aktionen');
@@ -227,7 +255,6 @@ describe('Testing all buttons on substription page', () => {
     cy.contains('Dieses Feld ist ein Pflichtfeld');
   });
 });
-
 describe('Testing all buttons on contact page', () => {
   it('Visit entrypoints page', () => {
     cy.visit('/kontakt');
@@ -238,7 +265,6 @@ describe('Testing all buttons on contact page', () => {
     cy.contains('Dieses Feld ist ein Pflichtfeld');
   });
 });
-
 describe('Testing entrypoint standard', () => {
   it('Visit entrypoints page', () => {
     cy.visit('/lernpfade');

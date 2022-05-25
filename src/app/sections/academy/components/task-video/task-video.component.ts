@@ -9,6 +9,4 @@ export class TaskVideoComponent {
   @Input() link?: string;
   @Input() youtubelink?: string;
   @Input() videoPreview?: string;
-
-  constructor() {}
 }

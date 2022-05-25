@@ -1,7 +1,7 @@
 @import '~src/assets/scss/utils';
 
 .form-group {
-  width: 100% !important;
+  width: 100%;
 }
 
 .form-control {
@@ -19,12 +19,6 @@
 .form-control,
 .form-check-input:focus {
   box-shadow: none;
-}
-
-i {
-  color: $orange;
-  font-size: 28px;
-  margin-right: 30px;
 }
 
 .content-text {
@@ -50,23 +44,8 @@ i {
   font-weight: 600;
 }
 
-.btn-close {
-  float: right;
-}
-
 .inquiry {
   background-color: white;
-}
-
-.title {
-  color: $orange;
-  font-size: 25px;
-  font-weight: bold;
-  text-align: center;
-
-  @include media-breakpoint-up(lg) {
-    font-size: 35px;
-  }
 }
 
 .inquiry-button {

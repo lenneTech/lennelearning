@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './inprint.component.html',
   styleUrls: ['./inprint.component.scss'],
 })
-export class InprintComponent {
-  constructor() {}
-}
+export class InprintComponent {}

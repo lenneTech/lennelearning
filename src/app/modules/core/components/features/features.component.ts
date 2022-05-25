@@ -35,6 +35,4 @@ export class FeaturesComponent {
       iconClass: 'bi-people-fill',
     },
   ];
-
-  constructor() {}
 }

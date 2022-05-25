@@ -12,8 +12,6 @@ export class EntryPointCardComponent {
   @Input() route: string;
   @Output() linkClickEvent = new EventEmitter<boolean>();
 
-  constructor() {}
-
   onLinkClicked(): void {
     this.linkClickEvent.emit(true);
   }

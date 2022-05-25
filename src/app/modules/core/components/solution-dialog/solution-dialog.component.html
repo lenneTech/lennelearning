@@ -44,12 +44,13 @@
           </div>
           <div *ngIf="requestSend" class="d-flex align-items-center flex-column">
             <p class="card-text">Hier ist die Musterlösung!</p>
-            <a [href]="solutionLink" target="_blank"
-              ><img
-                src="../../../../../assets/images/academy-images/solution.jpg"
+            <a [href]="solutionLink" target="_blank">
+              <academy-picture
+                image="../../../../../assets/images/academy-images/solution.jpg"
                 alt="Bild einer Glühbirne"
-                class="img-rounded"
-            /></a>
+                imgClass="img-rounded"
+              ></academy-picture
+            ></a>
           </div>
         </nb-accordion-item-body>
       </nb-accordion-item>

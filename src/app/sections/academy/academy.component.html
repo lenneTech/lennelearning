@@ -6,9 +6,10 @@
           <div class="container">
             <img
               src="../../../../../assets/images/banner-images/icon+name-schub.svg"
-              alt=""
+              alt="Logo von lenne.Learning"
               class="logo"
               routerLink="/"
+              loading="lazy"
             />
           </div>
         </div>
@@ -62,7 +63,7 @@
     <div *ngIf="onlyParentRoute">
       <h1 class="text-center">Dein Lernpfad als {{ currentEntryPoint.address }}</h1>
       <h2 class="text-center mt-3">Wähle in der Sidebar einen Abschnitt aus</h2>
-      <img class="mx-auto d-block img-fluid" [src]="imgSrc" alt="Illustration des Lernpfades" />
+      <img loading="lazy" class="mx-auto d-block img-fluid" [src]="imgSrc" alt="Illustration des Lernpfades" />
     </div>
     <router-outlet class="d-none d-md-block"></router-outlet>
 
