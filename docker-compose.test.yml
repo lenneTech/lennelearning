@@ -42,7 +42,7 @@ services:
         - traefik.http.middlewares.lennelearning-test-redirect.redirectregex.replacement=https://test.lennelearning.de/$${1}
         - traefik.http.middlewares.lennelearning-test-redirect.redirectregex.permanent=true
         - traefik.http.services.lennelearning-test-app.loadbalancer.server.port=4000
-        - traefik.http.routers.lennelearning-test-app-https.middlewares=lennelearning-test-redirect
+        - traefik.http.routers.lennelearning-test-app-https.middlewares=lennelearning-test-redirect, admin-auth
     command:
       - |
         NODE_ENV="test" SMTP_USER=${SMTP_USER} SMTP_PW=${SMTP_PW} npx node main.js
