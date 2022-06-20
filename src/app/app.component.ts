@@ -13,27 +13,5 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.matomoTracker.disableCookies();
-    //startEdit
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        // console.log(event.url);
-        console.log(event.url.slice(0, event.url.indexOf('#')));
-        console.log(this.lastUrl);
-
-        if (event.url.slice(0, event.url.indexOf('#')) !== this.lastUrl.slice(0, event.url.indexOf('#'))) {
-          console.log('top');
-
-          window.scrollTo({ left: 0, top: 0, behavior: 'auto' });
-        } else {
-          console.log('nav');
-        }
-
-        // if (event.url.includes('#')) {
-        //   document.getElementById(event.url.slice(event.url.indexOf('#'))).scrollIntoView({ behavior: 'smooth' });
-        // }
-        this.lastUrl = event.url;
-      }
-    });
-    //endEdit
   }
 }

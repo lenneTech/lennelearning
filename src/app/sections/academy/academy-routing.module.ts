@@ -1,25 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AcademyComponent } from './academy.component';
-import { HtmlComponent } from './sections/html/html.component';
-import { CssComponent } from './sections/css/css.component';
-import { JavascriptComponent } from './sections/javascript/javascript.component';
-import { TypescriptComponent } from './sections/typescript/typescript.component';
-import { JobComponent } from './sections/job/job.component';
-import { IonicComponent } from './sections/ionic/ionic.component';
-import { AngularComponent } from './sections/angular/angular.component';
 import { SectionGuard } from '../../modules/core/guards/section.guard';
-import { BootstrapComponent } from './sections/bootstrap/bootstrap.component';
-import { NestjsComponent } from './sections/nestjs/nestjs.component';
-import { GitBasicsComponent } from './sections/git-basics/git-basics.component';
+import { AcademyComponent } from './academy.component';
 import { MilestoneComponent } from './components/milestone/milestone.component';
-import { PackagesComponent } from './sections/packages/packages.component';
+import { AngularComponent } from './sections/angular/angular.component';
+import { ArbeitsmethodenComponent } from './sections/arbeitsmethoden/arbeitsmethoden.component';
+import { AutomatedTestsComponent } from './sections/automated-tests/automated-tests.component';
+import { BootstrapComponent } from './sections/bootstrap/bootstrap.component';
+import { CssComponent } from './sections/css/css.component';
 import { DesignComponent } from './sections/design/design.component';
 import { DockerBasicsComponent } from './sections/docker-basics/docker-basics.component';
+import { GitBasicsComponent } from './sections/git-basics/git-basics.component';
+import { HtmlComponent } from './sections/html/html.component';
+import { IonicComponent } from './sections/ionic/ionic.component';
+import { JavascriptComponent } from './sections/javascript/javascript.component';
+import { JobComponent } from './sections/job/job.component';
+import { NestjsComponent } from './sections/nestjs/nestjs.component';
+import { PackagesComponent } from './sections/packages/packages.component';
 import { PrototypingComponent } from './sections/prototyping/prototyping.component';
-import { AutomatedTestsComponent } from './sections/automated-tests/automated-tests.component';
 import { TeamWorkComponent } from './sections/teamwork/teamwork.component';
-import { ArbeitsmethodenComponent } from './sections/arbeitsmethoden/arbeitsmethoden.component';
+import { TypescriptComponent } from './sections/typescript/typescript.component';
 
 // ####################################################################
 // If you got a new section, add it to the routes-array like the others

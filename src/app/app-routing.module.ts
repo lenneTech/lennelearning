@@ -28,20 +28,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(
-      routes
-      //startEdit
-      //   , {anchorScrolling: 'enabled',
-      //   onSameUrlNavigation: 'reload',
-      //   scrollPositionRestoration: 'top',
-      //   initialNavigation: 'enabled',
-      //   relativeLinkResolution: 'legacy',
-      //   scrollOffset: [0, 80],
-      // }
-      //endEdit
-    ),
-  ],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
