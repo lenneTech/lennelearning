@@ -29,14 +29,18 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, {
-      anchorScrolling: 'enabled',
-      onSameUrlNavigation: 'reload',
-      scrollPositionRestoration: 'top',
-      initialNavigation: 'enabled',
-      relativeLinkResolution: 'legacy',
-      scrollOffset: [0, 80],
-    }),
+    RouterModule.forRoot(
+      routes
+      //startEdit
+      //   , {anchorScrolling: 'enabled',
+      //   onSameUrlNavigation: 'reload',
+      //   scrollPositionRestoration: 'top',
+      //   initialNavigation: 'enabled',
+      //   relativeLinkResolution: 'legacy',
+      //   scrollOffset: [0, 80],
+      // }
+      //endEdit
+    ),
   ],
   exports: [RouterModule],
 })
