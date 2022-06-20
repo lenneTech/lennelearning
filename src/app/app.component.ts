@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
 import { MatomoTracker } from 'sinsunsan-ngx-matomo';
 
 @Component({
@@ -8,8 +7,7 @@ import { MatomoTracker } from 'sinsunsan-ngx-matomo';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  lastUrl: string;
-  constructor(private matomoTracker: MatomoTracker, private router: Router) {}
+  constructor(private matomoTracker: MatomoTracker) {}
 
   ngOnInit() {
     this.matomoTracker.disableCookies();
