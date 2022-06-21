@@ -1,11 +1,20 @@
-import { AfterContentChecked, ChangeDetectorRef, Component, HostListener, OnDestroy, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import {
+  AfterContentChecked,
+  ChangeDetectorRef,
+  Component,
+  HostListener,
+  Inject,
+  OnDestroy,
+  OnInit,
+} from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { ScrollService, StorageService } from '@lenne.tech/ng-base/shared';
 import { NbMenuItem, NbMenuService, NbSidebarService } from '@nebular/theme';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
-import { DialogService } from 'src/app/modules/core/services/dialog.service';
-import { ScrollService, StorageService } from '@lenne.tech/ng-base/shared';
 import { Section } from 'src/app/modules/core/interfaces/section.interface';
+import { DialogService } from 'src/app/modules/core/services/dialog.service';
 import { EntryPoint } from '../../modules/core/interfaces/entry-point.interface';
 import { EntryPointService } from '../../modules/core/services/entry-point.service';
 import { SectionService } from '../../modules/core/services/section.service';
@@ -47,8 +56,24 @@ export class AcademyComponent implements OnInit, OnDestroy, AfterContentChecked 
     private dialogService: DialogService,
     private storageService: StorageService,
     private menu: NbMenuService,
-    private scorllService: ScrollService
+    private scorllService: ScrollService,
+    @Inject(DOCUMENT) document: Document
   ) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        if (event.urlAfterRedirects.indexOf('#') !== -1) {
+          // needed because of waiting for loading the html content
+          setTimeout(() => {
+            const id = event.urlAfterRedirects.slice(event.urlAfterRedirects.indexOf('#') + 1);
+            const element = document.getElementById(id);
+            const y = element.getBoundingClientRect().top + window.scrollY - 80;
+
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }, 200);
+        }
+      }
+    });
+
     menu.onItemClick().subscribe((value) => {
       // only if the menuitem is a task, this value gets changed
       if (value.item.fragment) {
