@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/lenneTech/academy/compare/v1.7.0...v1.8.0) (2022-06-22)
+
+### Features
+
+- Add password protection for test systems ([e5ccb01](https://github.com/lenneTech/academy/commit/e5ccb01f1bdcdf77dd9b4ff694783c85f54a954c))
+- added version-infos for new release ([5d40006](https://github.com/lenneTech/academy/commit/5d400060d2e4662c0a0db15ab74e14798b62ab88))
+
+### Bug Fixes
+
+- **LTAK-96:** hide image on mobile ([#337](https://github.com/lenneTech/academy/issues/337)) ([9b2fd22](https://github.com/lenneTech/academy/commit/9b2fd22e314f92349a4c11d0c05aa95beb3b3b86))
+
 ## [1.7.0](https://github.com/lenneTech/academy/compare/v1.6.1...v1.7.0) (2022-05-25)
 
 ### Features
