@@ -30,7 +30,7 @@ services:
         - traefik.http.middlewares.lennelearning-develop-redirect.redirectregex.replacement=https://develop.lennelearning.de/$${1}
         - traefik.http.middlewares.lennelearning-develop-redirect.redirectregex.permanent=true
         - traefik.http.services.lennelearning-develop-app.loadbalancer.server.port=4000
-        - traefik.http.routers.lennelearning-develop-app-https.middlewares=lennelearning-develop-redirect
+        - traefik.http.routers.lennelearning-develop-app-https.middlewares=lennelearning-develop-redirect, admin-auth
     command:
       - |
         NODE_ENV="develop" SMTP_USER=${SMTP_USER} SMTP_PW=${SMTP_PW} npx node main.js
