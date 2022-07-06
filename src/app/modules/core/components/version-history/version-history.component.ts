@@ -13,6 +13,10 @@ export class VersionHistoryComponent {
   versions: VersionHistory[] = [
     {
       version: this.version, // the newest version and its changes is set right here
+      changes: ['Integration eines Design Kurses'],
+    },
+    {
+      version: '1.8.0',
       changes: ['Start Integration CodeCombat', 'Fehlerbehebungen'],
     },
     {
