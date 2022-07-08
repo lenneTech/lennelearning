@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.0](https://github.com/lenneTech/academy/compare/v1.8.0...v1.9.0) (2022-07-08)
+
+### Features
+
+- added version-infos for new release ([#347](https://github.com/lenneTech/academy/issues/347)) ([affdcb3](https://github.com/lenneTech/academy/commit/affdcb3d18c9feba2e750197085e910fb82e04f8))
+- **LTAK-104:** linked to the design course ([#345](https://github.com/lenneTech/academy/issues/345)) ([87b5512](https://github.com/lenneTech/academy/commit/87b55120cc7ccb02118359a600af384e9ac54000))
+
 ## [1.8.0](https://github.com/lenneTech/academy/compare/v1.7.0...v1.8.0) (2022-06-22)
 
 ### Features
